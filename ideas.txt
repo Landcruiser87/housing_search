@@ -10,6 +10,7 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 
 - Plan of attack. 
 - Scrape Zillow, rent.com, and apartments.com
+- Identify surrounding neighborhoods for Ravenswood.
 - somehow combine them by MLS id.  
 - Store results in a google sheet.
 
