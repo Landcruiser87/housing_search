@@ -20,5 +20,3 @@ This repo is meant to coalesce different housing resources to aide in searching 
 - [] - [Zillow](https://www.zillow.com)
 - [] - [Apartments.com](https://www.apartments.com)
 - [] - [rent.com](https://www.rent.com)
-
-
