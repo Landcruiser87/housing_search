@@ -17,11 +17,15 @@ cities = [
 	'Lincoln Square',
 	'Ravenswood Gardens',
 	'Budlong Woods',
-	'Andersonville',
+	'Bowmanville',
+	'Winnemac'
 ]
 
 #Set the header for pulling
 header = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" }
+
+#Results list
+results = []
 
 for city in cities:
 	time.sleep(3)
@@ -29,7 +33,7 @@ for city in cities:
 	response = requests.get(base_url, headers = header )
 
 	resp_json = response.json()
-
+	results.append(resp_json)
 	# print(resp_json)
 	# print(resp_json['searchResults']['listResults'][0]['hdpUrl'])
 
