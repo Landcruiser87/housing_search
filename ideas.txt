@@ -2,17 +2,36 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 
 - Email/Text alerts possibly for when new houses pop up. 
 - Be able to include ameninities filtering
-- Walk to nearest train station.  
+- Walk to nearest train station.
+    - Or perhaps just distance as getting a walk time
+	- will require an extra google API. 
+
 - Search by zip code. 
 - Check scraped sites for API
 - Could store in google sheet from each source.
 - Make dashboard that pulls up new ones with link to source listing. 
 
 - Plan of attack. 
-- Scrape Zillow, rent.com, and apartments.com
-- Identify surrounding neighborhoods for Ravenswood.
-- somehow combine them by MLS id.  
-- Store results in a google sheet.
+- [] Scrape Zillow, rent.com, and craigslist.com
+- [x] Identify surrounding neighborhoods for Ravenswood.
+- [] somehow combine them by MLS id.  
+- [] Store results in a google sheet.
+
+-Extra Items needed
+-lat/long coords for
+    - [] GPS box of desired search area
+	    - Tried to match up neighborhoods, but proving 
+		- to be alot of discrepenacy between google and zillows
+		- bounding boxes. 
+
+	- [] neighborhoods
+	    - Make manual defined boxes of what Bex considers an area
+		
+	- [] all train stops in the area
+	- [] all grocery stores in the area
+	- [] Probably will need to hit the googlesearchAPI for this
+	- [] Need to set up a project for it to make a call. 
+
 
 
 
