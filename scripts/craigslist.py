@@ -14,16 +14,18 @@ import os
 from craigslist import CraigslistHousing
 
 #Data pull from craigslist
-response = CraigslistHousing(site='chicago', 
-					area='chc', 
-					filters={
-						'max_price': 2300, 
-						'min_price': 500,
-						'min_bedrooms': 2,
-						'has_image': True,
-						'dogs_ok': True,
-					'laundry': {'w/d in unit','laundry in bldg', 'laundry on site'},
-			})
+response = CraigslistHousing(
+	site='chicago', 
+	area='chc', 
+	filters={
+		'max_price': 2300, 
+		'min_price': 500,
+		'min_bedrooms': 2,
+		'has_image': True,
+		'dogs_ok': True,
+		'laundry': {'w/d in unit','laundry in bldg', 'laundry on site'},
+	}
+)
 
 
 #results are going to be huge, so probably need to chunk out the results. 
