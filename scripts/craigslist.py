@@ -35,7 +35,7 @@ MAX_RECORDS = int(response.get_results_approx_count())
 
 #Don't want to piss off craigslist.  so put a limit. 
 if MAX_RECORDS > 3000:
-	MAX_RECORDS = 1000
+	MAX_RECORDS = 100
 
 listings = response.get_results(sort_by='newest', geotagged=True, limit = 20)
 
