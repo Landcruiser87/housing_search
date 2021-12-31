@@ -11,9 +11,8 @@ import os
 from craigslist import CraigslistHousing
 
 #Data pull from craigslist
-sample = CraigslistHousing(site='chicago', 
+response = CraigslistHousing(site='chicago', 
 							area='chc', 
-							category='apa', 
 							filters={'max_price': 2300, 
 									 'min_price': 500,
 									 'min_bedrooms': 2,
@@ -26,15 +25,19 @@ sample = CraigslistHousing(site='chicago',
 #results are going to be huge, so probably need to chunk out the results. 
 
 #Max record count. 
-MAX_RECORDS = int(sample.get_results_approx_count())
+MAX_RECORDS = int(response.get_results_approx_count())
 
-listings = sample.get_results(sort_by='newest', geotagged=True, limit = 50)
+
+listings = response.get_results(sort_by='newest', geotagged=True, limit = 50)
 
 with open('./data/total_search_area.txt', 'r') as search_coords:
 	
 for listing in listings:
 
 
+
+#Chunk out the pages into probably 20 records, 
+#Process the results that are within the serach area. 
 
 
 
