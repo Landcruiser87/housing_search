@@ -8,29 +8,29 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 
 - Search by zip code. 
 - Check scraped sites for API
-- Could store in google sheet from each source.
-- Make dashboard that pulls up new ones with link to source listing. 
 
 - Plan of attack. 
 - [] Scrape Zillow, rent.com, and craigslist.com
 - [x] Identify surrounding neighborhoods for Ravenswood.
 - [] somehow combine them by MLS id.  
-- [] Store results in a google sheet.
+- [] Store results in sqllite database.
+- [] Post any updated listings to discord channel in TestServerAnaki
+
 
 -Extra Items needed
 -lat/long coords for
-    - [] GPS box of desired search area
+    - [x] GPS box of desired search area
 	    - Tried to match up neighborhoods, but proving 
 		- to be alot of discrepenacy between google and zillows
 		- bounding boxes. 
 
-	- [] neighborhoods
+	- [x] neighborhoods
 	    - Make manual defined boxes of what Bex considers an area
 		
-	- [] all train stops in the area
+	- [x] all train stops in the area
 	- [] all grocery stores in the area
-	- [] Probably will need to hit the googlesearchAPI for this
-	- [] Need to set up a project for it to make a call. 
+		- [] Probably will need to hit the googlesearchAPI for this
+		- [] Need to set up a project for it to make a call. 
 
 
 
