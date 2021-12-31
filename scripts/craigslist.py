@@ -1,4 +1,7 @@
-#%%
+# Resources
+# https://betterprogramming.pub/how-i-built-a-python-scraper-to-analyze-housing-locations-on-craigslist-part-1-18d264b0ec4b
+# https://www.dataquest.io/blog/apartment-finding-slackbot/
+
 
 import requests
 import numpy as np
@@ -12,14 +15,15 @@ from craigslist import CraigslistHousing
 
 #Data pull from craigslist
 response = CraigslistHousing(site='chicago', 
-							area='chc', 
-							filters={'max_price': 2300, 
-									 'min_price': 500,
-									 'min_bedrooms': 2,
-									 'has_image': True,
-									 'dogs_ok': True,
-									 'laundry': {'w/d in unit','laundry in bldg', 'laundry on site'},
-								})
+					area='chc', 
+					filters={
+						'max_price': 2300, 
+						'min_price': 500,
+						'min_bedrooms': 2,
+						'has_image': True,
+						'dogs_ok': True,
+					'laundry': {'w/d in unit','laundry in bldg', 'laundry on site'},
+			})
 
 
 #results are going to be huge, so probably need to chunk out the results. 
@@ -27,17 +31,25 @@ response = CraigslistHousing(site='chicago',
 #Max record count. 
 MAX_RECORDS = int(response.get_results_approx_count())
 
+#Don't want to piss off craigslist.  so put a limit. 
+if MAX_RECORDS > 3000:
+	MAX_RECORDS = 1000
 
-listings = response.get_results(sort_by='newest', geotagged=True, limit = 50)
+listings = response.get_results(sort_by='newest', geotagged=True, limit = 20)
 
-with open('./data/total_search_area.txt', 'r') as search_coords:
-	
-for listing in listings:
+with open('../data/total_search_area.txt', 'r') as search_coords:
+	data = search_coords.read().splitlines()[0]
+	lat1, lng1, lat2, lng2 = eval(data)
+
+
+# for listing in listings:
+# 	pass
 
 
 
-#Chunk out the pages into probably 20 records, 
-#Process the results that are within the serach area. 
+#Pull out all the results at once.  Sort by newest. 
+#remove listings that aren't in the total search bound box. 
+#
 
 
 

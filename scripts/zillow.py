@@ -11,14 +11,7 @@ import os
 
 #%%
 
-cities = [
-	'Ravenswood',
-	'Lincoln Square',
-	'Ravenswood Gardens',
-	'Budlong Woods',
-	'Bowmanville',
-	'Winnemac'
-]
+
 
 state = 'IL'
 zip = '60640'
