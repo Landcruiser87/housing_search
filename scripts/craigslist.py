@@ -59,8 +59,15 @@ response = requests.get('https://chicago.craigslist.org/search/chc/apa', headers
 bs4ob = BeautifulSoup(response.text, 'lxml')
 links = []
 
-for link in soup.find_all('li', {'class': 'result-row'}):
+for link in bs4ob.find_all('li', {'class': 'result-row'}):
 	links.append(link.get('href'))
+
+#Todo - add function to extract geo coords.
+#Todo - add function to extract price.
+#Todo - add function to extract address.
+#Todo - add function to extract date.
+#Todo - add function to extract number of bedrooms.
+#Todo - add function to extract number of bathrooms.
 
 
 
