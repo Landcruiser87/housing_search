@@ -35,6 +35,12 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 		- [] Probably will need to hit the googlesearchAPI for this
 		- [] Need to set up a project for it to make a call. 
 
+- Plotly map of new results
+    - Idea is to have the script automatically upload an HTML
+	- plot of the new listings that it finds in the area to git.
+	- Or could just email me the rendered plot too? 
+	- Think more on this.  
+	
 
 
 
