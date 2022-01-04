@@ -129,14 +129,12 @@ results = pd.DataFrame(
 #Get individual listing data
 for x in range(0, totalcount, len(links)):
 	response = requests.get(links[x], headers=headers, cookies=cookies)
-	bs4ob = BeautifulSoup(response.text, 'lxml')
+	bs4_home_ob = BeautifulSoup(response.text, 'lxml')
 
 	#Easy one's to get
-	results.loc[x, 'lat'] = bs4ob.find('div', class_='viewposting').get('data-latitude').text
-	results.loc[x, 'lon'] = bs4ob.find('div', class_='viewposting').get('data-longitude').text
-	results.loc[x, 'price'] = bs4ob.find('span', class_='price').text
-	results.loc[x, 'address'] = bs4ob.find('div', class_='mapaddress').text
-	results.loc[x, 'hood'] = bs4ob.find('span', )
+	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude').text
+	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude').text
+	results.loc[x, 'address'] = bs4_home_ob.find('div', class_='mapaddress').text
 	_temp = bs4ob.find('p', class_='attrgroup')
 
 	#Harder ones to get
@@ -163,7 +161,7 @@ with open('../data/total_search_area.txt', 'r') as search_coords:
 
 #? - get all listing links. 
 #? - Get all the posting id's
-#Todo - add function to extract geo coords. (might not be available)
+#? - add function to extract geo coords. (might not be available)
 #Todo - add function to extract price.
 #Todo - add function to extract address (might not be available)
 #Todo - add function to extract post creation date.
