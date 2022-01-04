@@ -9,17 +9,16 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-import json
 from datetime import date, datetime
 import time
 import sys
 import os
 
 
-cookies = {
-    'cl_b': '4|01390574a6c854a2c021189123aa48e017cc4d1d|1641081102E_6YY',
-    'cl_tocmode': 'hhh%3Agrid',
-}
+# cookies = {
+#     'cl_b': '4|01390574a6c854a2c021189123aa48e017cc4d1d|1641081102E_6YY',
+#     'cl_tocmode': 'hhh%3Agrid',
+# }
 
 headers = {
     'Connection': 'keep-alive',
@@ -49,14 +48,24 @@ params = (
     ('sale_date', 'all dates'),
 )
 
-response = requests.get('https://chicago.craigslist.org/search/chc/apa', headers=headers, params=params, cookies=cookies)
+#! TODO - Once you get the sqllite database up, adjust the parameter to only search todays postings
+#? Will cut down significantly on the number of requests you make. 
 
+
+
+response = requests.get('https://chicago.craigslist.org/search/chc/apa', headers=headers, params=params)
+
+if response.status_code != 200:
+	print(f'Status code: {response.status_code}')
+	print(f'Reason: {response.reason}')
+        
 
 #NB. Original query string below. It seems impossible to parse and
 #reproduce query strings 100% accurately so the one below is given
 #in case the reproduced version is not "correct".
 # response = requests.get('https://chicago.craigslist.org/search/chc/apa?hasPic=1&min_price=500&max_price=2400&min_bedrooms=2&availabilityMode=0&pets_dog=1&laundry=1&laundry=4&laundry=2&laundry=3&sale_date=all+dates', headers=headers, cookies=cookies)
 
+time.sleep(np.random.randint(5, 9))
 
 #Get the HTML
 bs4ob = BeautifulSoup(response.text, 'lxml')
@@ -64,8 +73,6 @@ bs4ob = BeautifulSoup(response.text, 'lxml')
 
 
 #%%
-
-
 # Need to iterate the total number of pages.  
 totalcount = int(bs4ob.find('span', class_='totalcount').text)
 
@@ -79,7 +86,7 @@ def get_posting_ids(bs4ob, links:list)->list:
 		ids.append(int(link.split("/")[-1].strip(".html")))
 	return ids
 
-def get_meta_data(bs4ob, ids:list)->(list, list, list, list, list):
+def get_meta_data(bs4ob, ids:list)->(list, list, list):
 
 	#Maybe do a quick check to make sure the listing is the same as the find_all
 	#They also include commas in the price.  Might want to remove.  But can process all that after
@@ -89,36 +96,36 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list, list, list):
 		if _tempid in ids:
 			price.append(meta_data.find('span', class_='result-price').text)
 			title.append(meta_data.find('a', class_='result-title hdrlnk').text)
-			bedrooms.append(meta_data.find('span', class_='housing').text.strip())
 			hood.append(meta_data.find('span', class_='result-hood').text)
-			postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
+			#postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
+			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
+	return price, title, hood
 
-	return price, title, bedrooms, hood, postdatetime
 
-
-links, ids, price, bedrooms, hood, title, postdatetime = [], [], [], [], [], [], []
+links, ids, price, hood, title, = [], [], [], [], []
 links = get_listings(bs4ob)
 ids = get_posting_ids(bs4ob, links)
 
-price, title, bedrooms, hood, postdatetime = get_meta_data(bs4ob, ids)
+price, title, hood = get_meta_data(bs4ob, ids)
 
 #Need a check here on previous data to make sure i'm not looking at old listings. 
 #TODO Still need to implement SQLLite DB to store results. 
-
 
 #Create results DF
 results = pd.DataFrame(
 	{
 		"id": ids, 
-		"post_date": postdatetime,
 		"title": title,
 		"price": price,
-		"bedrooms": bedrooms,
 		"hood": hood,	
 		"link": links, 
-		"source": "craigslist"
+		"source": "craigslist", 
+		"amenities": np.nan,
 	}
 )
+
+#!Probably will have to fuck with datatypes at some point
+results['amenities'] = results['amenities'].astype(object)
 
 #Checkin nulls
 # [print(col, ":\t", results[col].isnull().sum()) for col in results.columns]
@@ -126,32 +133,60 @@ results = pd.DataFrame(
 
 #%%
 
-#Get individual listing data
-for x in range(0, totalcount, len(links)):
-	response = requests.get(links[x], headers=headers, cookies=cookies)
+
+for x in range(0, 30): #len(links)
+
+	response = requests.get(links[x], headers=headers)
 	bs4_home_ob = BeautifulSoup(response.text, 'lxml')
 
 	#Easy one's to get
-	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude').text
-	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude').text
-	results.loc[x, 'address'] = bs4_home_ob.find('div', class_='mapaddress').text
-	_temp = bs4ob.find('p', class_='attrgroup')
+	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude')
+	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude')
+	
+	#? Could put the bounding box check here to save the extra processing of shit below
+	#Todo - Check the bounding box.  Makes sense. 
 
-	#Harder ones to get
-	results.loc[x, 'sqft'] = _temp.find('span', class_='housing_movin_now property date shared-line-bubble').text
-	# results.loc[x, 'amenities']
-	# _temp = bs4ob.find('div', class_='attrgroup').text
-	# kids = _temp.findChildren('span', recursive=False)
-	# for kid in kids:
-	# 	print(kid)
 
-	results.loc[x, 'beds'] = bs4ob.find('span', class_='housing_bedrooms').text
-	results.loc[x, 'baths'] = bs4ob.find('span', class_='housing_bathrooms').text
-	results.loc[x, 'posting_date'] = bs4ob.find('time', class_='date timeago').get('datetime')
 
+	address = bs4_home_ob.find('div', class_='mapaddress')
+	if address:
+		results.loc[x, 'address'] = bs4_home_ob.find('div', class_='mapaddress').text
+	else:
+		results.loc[x, 'address'] = np.nan
+
+	#Pulling property details.
+	#These two groups almost always exist.  Hard coded group order. 
+	groups = bs4_home_ob.find_all('p', class_='attrgroup')
+	if groups:
+		#Group1 - beds/baths + sqft + available
+		hous_stats = groups[0].find_all('span')
+		if hous_stats:
+			for stat in hous_stats:
+				if 'ft' in stat.text:
+					results.loc[x, 'sqft'] = stat.text
+
+				elif 'BR' in stat.text or 'Ba' in stat.text:
+					for b_tag in stat.find_all('b'):
+						if b_tag.text.endswith('BR'):
+							results.loc[x, 'bedrooms'] = stat.text.split(' / ')[0][0]
+						elif b_tag.text.endswith('Ba'):
+							results.loc[x, 'bathrooms'] = stat.text.split(' / ')[1][0]
+
+				elif stat.has_attr('data-date'):		
+					results.loc[x, 'postdate'] = stat.get('data-date')
+					
+		#Group2 - Random amenities
+		amenities = groups[1].find_all('span')
+		if amenities:
+			amen = [amenity.text for amenity in amenities]
+			results.at[x, 'amenities'] = amen
 
 	print(f'{x} of {len(links)}')
 	time.sleep(np.random.randint(5, 9))
+
+
+
+#%%
 
 
 with open('../data/total_search_area.txt', 'r') as search_coords:
