@@ -34,7 +34,7 @@ headers = {
 params = (
 	('hasPic', '1'),
 	('min_price', '500'),
-	('max_price', '2400'),
+	('max_price', '2600'),
 	('min_bedrooms', '2'),
 	('availabilityMode', '0'),
 	('pets_dog', '1'),
@@ -59,17 +59,17 @@ if response.status_code != 200:
 #reproduce query strings 100% accurately so the one below is given
 #in case the reproduced version is not "correct".
 # response = requests.get('https://chicago.craigslist.org/search/chc/apa?hasPic=1&min_price=500&max_price=2400&min_bedrooms=2&availabilityMode=0&pets_dog=1&laundry=1&laundry=4&laundry=2&laundry=3&sale_date=all+dates', headers=headers, cookies=cookies)
-
-time.sleep(np.random.randint(5, 9))
-
 #Get the HTML
 bs4ob = BeautifulSoup(response.text, 'lxml')
 
+# Need to iterate the total number of pages.  
+totalcount = int(bs4ob.find('span', class_='totalcount').text)
+
+time.sleep(np.random.randint(5, 9))
 
 
 #%%
-# Need to iterate the total number of pages.  
-totalcount = int(bs4ob.find('span', class_='totalcount').text)
+
 
 def get_listings(bs4ob)->list:
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
@@ -112,7 +112,6 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 			return True
 
 	return False
-
 
 
 links, ids, price, hood, title, = [], [], [], [], []
@@ -167,10 +166,10 @@ for x in range(0, len(links)): #len(links)
 		#Worried indexes might get fucked if i drop rows mid row.  
 			#Or just put a continue in to the next iteration.
 	results.loc[x, 'in_search_area'] = in_bounding_box(bounding_box, 
-															float(results.loc[x,'lat']), 
-															float(results.loc[x, 'lon']))
+														float(results.loc[x,'lat']), 
+														float(results.loc[x, 'lon']))
 
-
+	#!Cleanup
 	address = bs4_home_ob.find('div', class_='mapaddress')
 	if address:
 		results.loc[x, 'address'] = bs4_home_ob.find('div', class_='mapaddress').text
@@ -201,6 +200,7 @@ for x in range(0, len(links)): #len(links)
 		#Group2 - Random amenities
 		amenities = groups[1].find_all('span')
 		if amenities:
+			#!Cleanup
 			amen = [amenity.text for amenity in amenities]
 			results.at[x, 'amenities'] = amen
 
@@ -220,4 +220,11 @@ for x in range(0, len(links)): #len(links)
 #? - add function to extract post creation date.
 #? - add function to extract number of bedrooms.
 #? - add function to extract number of bathrooms.
-#TODO - Check bounding box area search. 
+#? - Check bounding box area search. 
+#TODO - Clean variables
+#TODO - Implement SQLLite DB to store results. 
+#TODO - 
+
+
+# df.groupby(['web_Product_Desc']).agg({"price_Orig":[min,max,"count",np.mean],"quantity_On_Hand":[np.sum]})
+
