@@ -128,14 +128,14 @@ results['amenities'] = results['amenities'].astype(object)
 
 #%%
 
-def in_search_area_coords(bounding_box:list, lat:float, lon:float)->bool:
+def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 	"""
 	Check if location is in the bounding box for an area
 	"""
 		
 	bb_lat_low = bounding_box[0]
-	bb_lat_up = bounding_box[1]
-	bb_lon_low = bounding_box[2]
+	bb_lat_up = bounding_box[2]
+	bb_lon_low = bounding_box[1]
 	bb_lon_up = bounding_box[3]
 
 	if bb_lat_low < lat < bb_lat_up:
@@ -150,7 +150,7 @@ with open('../data/total_search_area.txt', 'r') as search_coords:
 for i in range(30):
 	lat = float(results.loc[i, 'lat'])
 	lon = float(results.loc[i, 'lon'])
-	print(in_search_area_coords(bounding_box, lat, lon))
+	print(in_bounding_box(bounding_box, lat, lon))
 
 #%%
 
@@ -170,15 +170,15 @@ for x in range(0, 30): #len(links)
 	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude')
 	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude')
 
-	#? Could put the bounding box check here to save the extra processing of shit below
 	#Todo - Check the bounding box.  Makes sense. 
-	#Might want to just boolean if its in the area.  Can drop it later too.  
-	#Worried indexes might get fucked if i drop rows mid row.  
+		#Might want to just boolean if its in the area.  Can drop it later too.  
+		#Worried indexes might get fucked if i drop rows mid row.  
 			#Or just put a continue in to the next iteration.
-	with open('../data/total_search_area.txt', 'r') as search_coords:
-		bounding_box = eval(search_coords.read().splitlines()[0])
+
+	# with open('../data/total_search_area.txt', 'r') as search_coords:
+	# 	bounding_box = eval(search_coords.read().splitlines()[0])
 	
-	results.loc[x, 'in_search_area'] = in_search_area_coords(bounding_box, results.loc[x,'lat'], results.loc[x, 'lon'])
+	# results.loc[x, 'in_search_area'] = in_search_area_coords(bounding_box, results.loc[x,'lat'], results.loc[x, 'lon'])
 
 
 	address = bs4_home_ob.find('div', class_='mapaddress')
