@@ -64,12 +64,12 @@ bs4ob = BeautifulSoup(response.text, 'lxml')
 
 # Need to iterate the total number of pages.  
 totalcount = int(bs4ob.find('span', class_='totalcount').text)
+totalpages = int(round(totalcount/120))
 
 time.sleep(np.random.randint(5, 9))
 
 
 #%%
-
 
 def get_listings(bs4ob)->list:
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
@@ -89,13 +89,18 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list):
 		#Probably unecessary to check, but want to make sure i'm lined up on the right listing
 		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
 		if _tempid in ids:
-			price.append(meta_data.find('span', class_='result-price').text)
+			price.append(money_launderer(meta_data.find('span', class_='result-price').text))
 			title.append(meta_data.find('a', class_='result-title hdrlnk').text)
 			hood.append(meta_data.find('span', class_='result-hood').text)
-			#postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
+			# postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
 			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
 	return price, title, hood
-
+	
+def money_launderer(price:list):
+	# Strip dollar signs and commas
+	if isinstance(price, str):
+		return float(price.replace("$", "").replace(",", ""))
+	return price
 
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 	"""
@@ -121,7 +126,6 @@ ids = get_posting_ids(bs4ob, links)
 price, title, hood = get_meta_data(bs4ob, ids)
 
 #Need a check here on previous data to make sure i'm not looking at old listings. 
-#TODO Still need to implement SQLLite DB to store results. 
 
 #Create results DF
 results = pd.DataFrame(
@@ -136,8 +140,18 @@ results = pd.DataFrame(
 	}
 )
 
-#!Probably will have to fuck with datatypes at some point
-results['amenities'] = results['amenities'].astype(object)
+#set the dtypes
+data_types = {
+	"id": "Int64",
+	"title": str,
+	"price": str,
+	"hood": str,
+	"link": str,
+	"source": str,
+	"amenities": object,
+}
+
+results = results.astype(data_types)
 
 #Checkin nulls
 # [print(col, ":\t", results[col].isnull().sum()) for col in results.columns]
@@ -207,8 +221,6 @@ for x in range(0, len(links)): #len(links)
 	print(f'{x} of {len(links)}')
 	time.sleep(np.random.randint(5, 18))
 
-
-
 #%%
 
 
@@ -221,10 +233,16 @@ for x in range(0, len(links)): #len(links)
 #? - add function to extract number of bedrooms.
 #? - add function to extract number of bathrooms.
 #? - Check bounding box area search. 
-#TODO - Clean variables
+#TODO - Clean/add variables: money, nearest L stop, distance to nearest L stop
+#TODO - True values for outer search area, assign to neighborhood GPS coords.
 #TODO - Implement SQLLite DB to store results. 
-#TODO - 
 
 
 # df.groupby(['web_Product_Desc']).agg({"price_Orig":[min,max,"count",np.mean],"quantity_On_Hand":[np.sum]})
+
+#Program overview
+#1. Pull the first page to get a total count for search
+#2. Iterate through each page creating a df for each page
+#3. Merge all those bastards into one big df
+
 
