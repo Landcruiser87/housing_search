@@ -93,6 +93,10 @@ params = (
 
 #! TODO - Once you get the sqllite database up, adjust the parameter to only search todays postings
 #? Will cut down significantly on the number of requests you make. 
+# Request order
+	# 1. Request first page to get total count of listings. 
+	# 2. Iterate through all summary pages and scrape their links
+	# 3. Iterate through each link and 
 
 
 url = 'https://chicago.craigslist.org/search/chc/apa'
@@ -184,18 +188,6 @@ if totalpages > 1:
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
-
-#! Need to put the outer search over all pages here. 
-# Request order
-	# 1. Request first page to get total count of listings. 
-	#		-Could just request the first page, check count, then request the following pages to build
-	#		the full list of links.  
-
-	# 2. If page count < 1, use that initial request to build df
-	# 3. If page count > 1, iterate through chunks of url adding s=startNum
-
-
-
 for x in range(0, len(links)): #len(links)
 
 	response = requests.get(links[x], headers=headers)
@@ -253,7 +245,7 @@ for x in range(0, len(links)): #len(links)
 			results.at[x, 'amenities'] = amen
 
 	print(f'{x} of {len(links)}')
-	time.sleep(np.random.randint(5, 18))
+	time.sleep(np.random.randint(5, 13))
 
 #%%
 
