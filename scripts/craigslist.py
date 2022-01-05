@@ -14,38 +14,32 @@ import time
 import sys
 import os
 
-
-# cookies = {
-#     'cl_b': '4|01390574a6c854a2c021189123aa48e017cc4d1d|1641081102E_6YY',
-#     'cl_tocmode': 'hhh%3Agrid',
-# }
-
 headers = {
-    'Connection': 'keep-alive',
-    'Pragma': 'no-cache',
-    'Cache-Control': 'no-cache',
-    'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    'Sec-Fetch-Site': 'none',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-User': '?1',
-    'Sec-Fetch-Dest': 'document',
-    'Accept-Language': 'en-US,en;q=0.9',
+	'Connection': 'keep-alive',
+	'Pragma': 'no-cache',
+	'Cache-Control': 'no-cache',
+	'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"',
+	'sec-ch-ua-mobile': '?0',
+	'sec-ch-ua-platform': '"Windows"',
+	'Upgrade-Insecure-Requests': '1',
+	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
+	'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+	'Sec-Fetch-Site': 'none',
+	'Sec-Fetch-Mode': 'navigate',
+	'Sec-Fetch-User': '?1',
+	'Sec-Fetch-Dest': 'document',
+	'Accept-Language': 'en-US,en;q=0.9',
 }
 
 params = (
-    ('hasPic', '1'),
-    ('min_price', '500'),
-    ('max_price', '2400'),
-    ('min_bedrooms', '2'),
-    ('availabilityMode', '0'),
-    ('pets_dog', '1'),
-    ('laundry', ['1', '4', '2', '3']),
-    ('sale_date', 'all dates'),
+	('hasPic', '1'),
+	('min_price', '500'),
+	('max_price', '2400'),
+	('min_bedrooms', '2'),
+	('availabilityMode', '0'),
+	('pets_dog', '1'),
+	('laundry', ['1', '4', '2', '3']),
+	('sale_date', 'all dates'),
 )
 
 #! TODO - Once you get the sqllite database up, adjust the parameter to only search todays postings
@@ -55,10 +49,11 @@ params = (
 
 response = requests.get('https://chicago.craigslist.org/search/chc/apa', headers=headers, params=params)
 
+#Just in case we piss someone off
 if response.status_code != 200:
 	print(f'Status code: {response.status_code}')
 	print(f'Reason: {response.reason}')
-        
+		
 
 #NB. Original query string below. It seems impossible to parse and
 #reproduce query strings 100% accurately so the one below is given
@@ -133,19 +128,57 @@ results['amenities'] = results['amenities'].astype(object)
 
 #%%
 
+def in_search_area_coords(bounding_box:list, lat:float, lon:float)->bool:
+	"""
+	Check if location is in the bounding box for an area
+	"""
+		
+	bb_lat_low = bounding_box[0]
+	bb_lat_up = bounding_box[1]
+	bb_lon_low = bounding_box[2]
+	bb_lon_up = bounding_box[3]
+
+	if bb_lat_low < lat < bb_lat_up:
+		if bb_lon_low < lon < bb_lon_up:
+			return True
+
+	return False
+
+with open('../data/total_search_area.txt', 'r') as search_coords:
+	bounding_box = eval(search_coords.read().splitlines()[0])
+
+for i in range(30):
+	lat = float(results.loc[i, 'lat'])
+	lon = float(results.loc[i, 'lon'])
+	print(in_search_area_coords(bounding_box, lat, lon))
+
+#%%
+
+
+
 
 for x in range(0, 30): #len(links)
 
 	response = requests.get(links[x], headers=headers)
+	#Just in case we piss someone off
+	if response.status_code != 200:
+		print(f'Status code: {response.status_code}')
+		print(f'Reason: {response.reason}')
 	bs4_home_ob = BeautifulSoup(response.text, 'lxml')
 
 	#Easy one's to get
 	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude')
 	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude')
-	
+
 	#? Could put the bounding box check here to save the extra processing of shit below
 	#Todo - Check the bounding box.  Makes sense. 
-
+	#Might want to just boolean if its in the area.  Can drop it later too.  
+	#Worried indexes might get fucked if i drop rows mid row.  
+			#Or just put a continue in to the next iteration.
+	with open('../data/total_search_area.txt', 'r') as search_coords:
+		bounding_box = eval(search_coords.read().splitlines()[0])
+	
+	results.loc[x, 'in_search_area'] = in_search_area_coords(bounding_box, results.loc[x,'lat'], results.loc[x, 'lon'])
 
 
 	address = bs4_home_ob.find('div', class_='mapaddress')
@@ -189,83 +222,12 @@ for x in range(0, 30): #len(links)
 #%%
 
 
-with open('../data/total_search_area.txt', 'r') as search_coords:
-	data = search_coords.read().splitlines()[0]
-	lat1, lng1, lat2, lng2 = eval(data)
-
-
 #? - get all listing links. 
 #? - Get all the posting id's
 #? - add function to extract geo coords. (might not be available)
-#Todo - add function to extract price.
-#Todo - add function to extract address (might not be available)
-#Todo - add function to extract post creation date.
-#Todo - add function to extract number of bedrooms.
-#Todo - add function to extract number of bathrooms.
-
-
-
-
-
-
-
-#%%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #Data pull from craigslist
-# response = CraigslistHousing(
-# 	site='chicago', 
-# 	area='chc', 
-# 	filters={
-# 		'max_price': 2300, 
-# 		'min_price': 500,
-# 		'min_bedrooms': 2,
-# 		'has_image': True,
-# 		'dogs_ok': True,
-# 		'laundry': {'w/d in unit','laundry in bldg', 'laundry on site'},
-# 	}
-# )
-
-
-# #results are going to be huge, so probably need to chunk out the results. 
-
-# #Max record count. 
-# MAX_RECORDS = int(response.get_results_approx_count())
-
-# #Don't want to piss off craigslist.  so put a limit. 
-# if MAX_RECORDS > 3000:
-# 	MAX_RECORDS = 100
-
-# listings = response.get_results(sort_by='newest', geotagged=True, limit = 20)
+#? - add function to extract price.
+#? - add function to extract address (might not be available)
+#? - add function to extract post creation date.
+#? - add function to extract number of bedrooms.
+#? - add function to extract number of bathrooms.
+#TODO - Check bounding box area search. 
