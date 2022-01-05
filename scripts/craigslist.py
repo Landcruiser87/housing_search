@@ -71,7 +71,7 @@ bs4ob = BeautifulSoup(response.text, 'lxml')
 # Need to iterate the total number of pages.  
 totalcount = int(bs4ob.find('span', class_='totalcount').text)
 
-def get_listings(bs4ob):
+def get_listings(bs4ob)->list:
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
 		links.append(link.get('href'))
 	return links
@@ -95,6 +95,24 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list):
 			#postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
 			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
 	return price, title, hood
+
+
+def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
+	"""
+	Check if location is in the bounding box for an area
+	"""
+		
+	bb_lat_low = bounding_box[0]
+	bb_lat_up = bounding_box[2]
+	bb_lon_low = bounding_box[1]
+	bb_lon_up = bounding_box[3]
+
+	if bb_lat_low < lat < bb_lat_up:
+		if bb_lon_low < lon < bb_lon_up:
+			return True
+
+	return False
+
 
 
 links, ids, price, hood, title, = [], [], [], [], []
@@ -127,37 +145,11 @@ results['amenities'] = results['amenities'].astype(object)
 
 
 #%%
-
-def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
-	"""
-	Check if location is in the bounding box for an area
-	"""
-		
-	bb_lat_low = bounding_box[0]
-	bb_lat_up = bounding_box[2]
-	bb_lon_low = bounding_box[1]
-	bb_lon_up = bounding_box[3]
-
-	if bb_lat_low < lat < bb_lat_up:
-		if bb_lon_low < lon < bb_lon_up:
-			return True
-
-	return False
-
+#establish boundary of interest (GPS coordinates)
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
-for i in range(30):
-	lat = float(results.loc[i, 'lat'])
-	lon = float(results.loc[i, 'lon'])
-	print(in_bounding_box(bounding_box, lat, lon))
-
-#%%
-
-
-
-
-for x in range(0, 30): #len(links)
+for x in range(0, len(links)): #len(links)
 
 	response = requests.get(links[x], headers=headers)
 	#Just in case we piss someone off
@@ -174,11 +166,9 @@ for x in range(0, 30): #len(links)
 		#Might want to just boolean if its in the area.  Can drop it later too.  
 		#Worried indexes might get fucked if i drop rows mid row.  
 			#Or just put a continue in to the next iteration.
-
-	# with open('../data/total_search_area.txt', 'r') as search_coords:
-	# 	bounding_box = eval(search_coords.read().splitlines()[0])
-	
-	# results.loc[x, 'in_search_area'] = in_search_area_coords(bounding_box, results.loc[x,'lat'], results.loc[x, 'lon'])
+	results.loc[x, 'in_search_area'] = in_bounding_box(bounding_box, 
+															float(results.loc[x,'lat']), 
+															float(results.loc[x, 'lon']))
 
 
 	address = bs4_home_ob.find('div', class_='mapaddress')
@@ -215,7 +205,7 @@ for x in range(0, 30): #len(links)
 			results.at[x, 'amenities'] = amen
 
 	print(f'{x} of {len(links)}')
-	time.sleep(np.random.randint(5, 9))
+	time.sleep(np.random.randint(5, 18))
 
 
 
