@@ -14,6 +14,55 @@ import time
 import sys
 import os
 
+def get_listings(bs4ob)->list:
+	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
+		links.append(link.get('href'))
+	return links
+
+def get_posting_ids(bs4ob, links:list)->list:
+	for link in links:
+		ids.append(int(link.split("/")[-1].strip(".html")))
+	return ids
+
+def get_meta_data(bs4ob, ids:list)->(list, list, list):
+
+	#Maybe do a quick check to make sure the listing is the same as the find_all
+	#They also include commas in the price.  Might want to remove.  But can process all that after
+	for meta_data in bs4ob.find_all('div', class_='result-info'):
+		#Probably unecessary to check, but want to make sure i'm lined up on the right listing
+		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
+		if _tempid in ids:
+			price.append(money_launderer(meta_data.find('span', class_='result-price').text))
+			title.append(meta_data.find('a', class_='result-title hdrlnk').text)
+			hood.append(meta_data.find('span', class_='result-hood').text)
+			# postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
+			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
+	return price, title, hood
+	
+def money_launderer(price:list):
+	# Strip dollar signs and commas
+	if isinstance(price, str):
+		return float(price.replace("$", "").replace(",", ""))
+	return price
+
+
+def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
+	"""
+	Check if location is in the bounding box for an area
+	"""
+		
+	bb_lat_low = bounding_box[0]
+	bb_lat_up = bounding_box[2]
+	bb_lon_low = bounding_box[1]
+	bb_lon_up = bounding_box[3]
+
+	if bb_lat_low < lat < bb_lat_up:
+		if bb_lon_low < lon < bb_lon_up:
+			return True
+
+	return False
+
+
 headers = {
 	'Connection': 'keep-alive',
 	'Pragma': 'no-cache',
@@ -46,86 +95,27 @@ params = (
 #? Will cut down significantly on the number of requests you make. 
 
 
+url = 'https://chicago.craigslist.org/search/chc/apa'
 
-response = requests.get('https://chicago.craigslist.org/search/chc/apa', headers=headers, params=params)
+response = requests.get(url, headers=headers, params=params)
 
 #Just in case we piss someone off
 if response.status_code != 200:
 	print(f'Status code: {response.status_code}')
 	print(f'Reason: {response.reason}')
-		
 
-#NB. Original query string below. It seems impossible to parse and
-#reproduce query strings 100% accurately so the one below is given
-#in case the reproduced version is not "correct".
-# response = requests.get('https://chicago.craigslist.org/search/chc/apa?hasPic=1&min_price=500&max_price=2400&min_bedrooms=2&availabilityMode=0&pets_dog=1&laundry=1&laundry=4&laundry=2&laundry=3&sale_date=all+dates', headers=headers, cookies=cookies)
 #Get the HTML
 bs4ob = BeautifulSoup(response.text, 'lxml')
 
 # Need to iterate the total number of pages.  
 totalcount = int(bs4ob.find('span', class_='totalcount').text)
-totalpages = int(round(totalcount/120))
-
-time.sleep(np.random.randint(5, 9))
-
-
-#%%
-
-def get_listings(bs4ob)->list:
-	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
-		links.append(link.get('href'))
-	return links
-
-def get_posting_ids(bs4ob, links:list)->list:
-	for link in links:
-		ids.append(int(link.split("/")[-1].strip(".html")))
-	return ids
-
-def get_meta_data(bs4ob, ids:list)->(list, list, list):
-
-	#Maybe do a quick check to make sure the listing is the same as the find_all
-	#They also include commas in the price.  Might want to remove.  But can process all that after
-	for meta_data in bs4ob.find_all('div', class_='result-info'):
-		#Probably unecessary to check, but want to make sure i'm lined up on the right listing
-		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
-		if _tempid in ids:
-			price.append(money_launderer(meta_data.find('span', class_='result-price').text))
-			title.append(meta_data.find('a', class_='result-title hdrlnk').text)
-			hood.append(meta_data.find('span', class_='result-hood').text)
-			# postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
-			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
-	return price, title, hood
-	
-def money_launderer(price:list):
-	# Strip dollar signs and commas
-	if isinstance(price, str):
-		return float(price.replace("$", "").replace(",", ""))
-	return price
-
-def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
-	"""
-	Check if location is in the bounding box for an area
-	"""
-		
-	bb_lat_low = bounding_box[0]
-	bb_lat_up = bounding_box[2]
-	bb_lon_low = bounding_box[1]
-	bb_lon_up = bounding_box[3]
-
-	if bb_lat_low < lat < bb_lat_up:
-		if bb_lon_low < lon < bb_lon_up:
-			return True
-
-	return False
-
+totalpages = int(round(totalcount//120)) + 1
 
 links, ids, price, hood, title, = [], [], [], [], []
 links = get_listings(bs4ob)
 ids = get_posting_ids(bs4ob, links)
 
 price, title, hood = get_meta_data(bs4ob, ids)
-
-#Need a check here on previous data to make sure i'm not looking at old listings. 
 
 #Create results DF
 results = pd.DataFrame(
@@ -153,6 +143,38 @@ data_types = {
 
 results = results.astype(data_types)
 
+
+if totalpages > 1:
+	for page in range(1, totalpages):
+		links, ids, price, hood, title, = [], [], [], [], []
+		url_page = url + '?s=' + str(page*120)
+		response = requests.get(url_page, headers=headers, params=params)
+		
+		#Get the HTML
+		bs4ob = BeautifulSoup(response.text, 'lxml')
+
+		links = get_listings(bs4ob)
+		ids = get_posting_ids(bs4ob, links)
+
+		price, title, hood = get_meta_data(bs4ob, ids)
+
+		#Append to results DF
+		add_results = pd.DataFrame(
+				{
+		"id": ids, 
+		"title": title,
+		"price": price,
+		"hood": hood,	
+		"link": links, 
+		"source": "craigslist", 
+		"amenities": np.nan,
+				}
+		).astype(data_types)
+
+		results = pd.concat([results, add_results], ignore_index=True)
+
+		time.sleep(np.random.randint(5, 9))
+
 #Checkin nulls
 # [print(col, ":\t", results[col].isnull().sum()) for col in results.columns]
 
@@ -161,6 +183,18 @@ results = results.astype(data_types)
 #establish boundary of interest (GPS coordinates)
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
+
+
+#! Need to put the outer search over all pages here. 
+# Request order
+	# 1. Request first page to get total count of listings. 
+	#		-Could just request the first page, check count, then request the following pages to build
+	#		the full list of links.  
+
+	# 2. If page count < 1, use that initial request to build df
+	# 3. If page count > 1, iterate through chunks of url adding s=startNum
+
+
 
 for x in range(0, len(links)): #len(links)
 
