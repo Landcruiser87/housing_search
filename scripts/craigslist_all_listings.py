@@ -40,6 +40,10 @@ def money_launderer(price:list):
 	return price
 
 
+
+
+#%%
+
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 	"""
 	Check if location is in the bounding box for an area
@@ -56,6 +60,23 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 
 	return False
 
+def inner_neighborhood(lat, lon):
+	with open('../data/neighborhoods.txt', 'r') as nbh:
+		neighborhoods = nbh.read().splitlines()
+		inner_hood_dict = {hood.split(':')[0].strip() : eval(hood.split(':')[1]) for hood in neighborhoods[:5]}
+
+		for hood, coords in inner_hood_dict.items():
+			if in_bounding_box(coords, lat, lon):
+				return hood
+		return np.nan
+
+# for i in in_ravens.index:
+# 	lat = in_ravens.loc[i, 'lat']	
+# 	lon = in_ravens.loc[i, 'lon']
+
+# 	print(inner_neighborhood(lat, lon))
+
+#%%
 
 headers = {
 	'Connection': 'keep-alive',
@@ -239,7 +260,8 @@ for x in range(475, results.shape[0]+1):
 
 				elif stat.has_attr('data-date'):		
 					results.loc[x, 'postdate'] = stat.get('data-date')
-					
+				#! postddate isn't gettingpulled in all the time.  Look for a different marker
+
 		#Group2 - Random amenities
 		amenities = groups[1].find_all('span')
 		if amenities:
@@ -251,11 +273,9 @@ for x in range(475, results.shape[0]+1):
 	time.sleep(np.random.randint(5, 13))
 
 #%%
-in_ravens = results[results['in_search_area']==True]
+in_outer_area = results[results['in_search_area']==True]
 
-in_ravens.to_csv('../data/craigslist_results.csv', index=False)
-
-
+in_outer_area.to_csv('../data/craigslist_results.csv', index=False)
 
 
 #? - get all listing links. 
