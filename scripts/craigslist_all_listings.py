@@ -1,9 +1,4 @@
 #%%
-# Resources
-# https://betterprogramming.pub/how-i-built-a-python-scraper-to-analyze-housing-locations-on-craigslist-part-1-18d264b0ec4b
-# https://www.dataquest.io/blog/apartment-finding-slackbot/
-# https://github.com/lewi0622/Housing_Search
-
 
 import requests
 from bs4 import BeautifulSoup
@@ -11,8 +6,7 @@ import numpy as np
 import pandas as pd
 from datetime import date, datetime
 import time
-import sys
-import os
+
 
 def get_listings(bs4ob)->list:
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
@@ -188,9 +182,9 @@ if totalpages > 1:
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
-for x in range(0, len(links)): #len(links)
+for x in range(475, results.shape[0]+1):
 
-	response = requests.get(links[x], headers=headers)
+	response = requests.get(results.loc[x, 'link'], headers=headers)
 	#Just in case we piss someone off
 	if response.status_code != 200:
 		print(f'Status code: {response.status_code}')
@@ -198,8 +192,17 @@ for x in range(0, len(links)): #len(links)
 	bs4_home_ob = BeautifulSoup(response.text, 'lxml')
 
 	#Easy one's to get
-	results.loc[x, 'lat'] = bs4_home_ob.find('div', class_='viewposting').get('data-latitude')
-	results.loc[x, 'lon'] = bs4_home_ob.find('div', class_='viewposting').get('data-longitude')
+	lat = bs4_home_ob.find('div', class_='viewposting').get('data-latitude')
+	if lat:
+		results.loc[x, 'lat'] = lat
+	else:
+		results.loc[x, 'lat'] = np.nan
+
+	lon = bs4_home_ob.find('div', class_='viewposting').get('data-longitude')
+	if lon:
+		results.loc[x, 'lon'] = lon
+	else:
+		results.loc[x, 'lon'] = np.nan
 
 	#Todo - Check the bounding box.  Makes sense. 
 		#Might want to just boolean if its in the area.  Can drop it later too.  
@@ -244,10 +247,15 @@ for x in range(0, len(links)): #len(links)
 			amen = [amenity.text for amenity in amenities]
 			results.at[x, 'amenities'] = amen
 
-	print(f'{x} of {len(links)}')
+	print(f'{x} of {results.shape[0]}')
 	time.sleep(np.random.randint(5, 13))
 
 #%%
+in_ravens = results[results['in_search_area']==True]
+
+in_ravens.to_csv('../data/craigslist_results.csv', index=False)
+
+
 
 
 #? - get all listing links. 
@@ -263,6 +271,7 @@ for x in range(0, len(links)): #len(links)
 #TODO - True values for outer search area, assign to neighborhood GPS coords.
 #TODO - Implement SQLLite DB to store results. 
 
+#!Something up on line 245.  Probably a deleted post. 
 
 # df.groupby(['web_Product_Desc']).agg({"price_Orig":[min,max,"count",np.mean],"quantity_On_Hand":[np.sum]})
 
@@ -270,5 +279,10 @@ for x in range(0, len(links)): #len(links)
 #1. Pull the first page to get a total count for search
 #2. Iterate through each page creating a df for each page
 #3. Merge all those bastards into one big df
+
+# Resources
+# https://betterprogramming.pub/how-i-built-a-python-scraper-to-analyze-housing-locations-on-craigslist-part-1-18d264b0ec4b
+# https://www.dataquest.io/blog/apartment-finding-slackbot/
+# https://github.com/lewi0622/Housing_Search
 
 
