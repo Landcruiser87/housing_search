@@ -277,6 +277,10 @@ in_outer_area = results[results['in_search_area']==True]
 
 in_outer_area.to_csv('../data/craigslist_results.csv', index=False)
 
+def find_nearest_L():
+	#For each listing, find the nearest L stop. 
+	L_stops = pd.read_csv('../data/L_stops.csv')
+	
 
 #? - get all listing links. 
 #? - Get all the posting id's

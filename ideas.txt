@@ -34,7 +34,14 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 	- [] all grocery stores in the area
 		- [] Probably will need to hit the googlesearchAPI for this
 		- [] Need to set up a project for it to make a call. 
-
+	- [] all crime in the area
+		- [] Look for a way to source the crime data from the police API.  (too big to store locally)
+		- [] For each property, set up a radius of x miles 
+		- [] Aggregate number of crimes within that radius
+		- [] Segement the crimes by type. 
+		- [] Score the property based on the number of crimes within that radius.
+	
+	
 - Plotly map of new results
     - Idea is to have the script automatically upload an HTML
 	- plot of the new listings that it finds in the area to git.
