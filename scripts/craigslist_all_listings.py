@@ -251,15 +251,13 @@ for x in range(0, results.shape[0]+1):
 						elif b_tag.text.endswith('Ba'):
 							results.loc[x, 'bathrooms'] = stat.text.split(' / ')[1][0]
 
-				elif stat.has_attr('data-date'):		
-					results.loc[x, 'postdate'] = stat.get('data-date')
-				#! postddate isn't gettingpulled in all the time.  Look for a different marker
 		#Group2 - Random amenities
 		amenities = groups[1].find_all('span')
 		if amenities:
 			#!Cleanup
 			amen = [amenity.text for amenity in amenities]
 			results.at[x, 'amenities'] = amen
+	
 	#Get the date posted
 	posting_info = bs4_home_ob.find('div', class_='postinginfos')
 	if posting_info:
