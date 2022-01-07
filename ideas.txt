@@ -40,8 +40,9 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 		- [] Aggregate number of crimes within that radius
 		- [] Segement the crimes by type. 
 		- [] Score the property based on the number of crimes within that radius.
+		- [] Could do a clustering here too 
 	
-	
+
 - Plotly map of new results
     - Idea is to have the script automatically upload an HTML
 	- plot of the new listings that it finds in the area to git.
