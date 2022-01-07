@@ -39,11 +39,6 @@ def money_launderer(price:list):
 		return float(price.replace("$", "").replace(",", ""))
 	return price
 
-
-
-
-#%%
-
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 	"""
 	Check if location is in the bounding box for an area
@@ -203,7 +198,7 @@ if totalpages > 1:
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
-for x in range(475, results.shape[0]+1):
+for x in range(0, results.shape[0]+1):
 
 	response = requests.get(results.loc[x, 'link'], headers=headers)
 	#Just in case we piss someone off
@@ -225,23 +220,21 @@ for x in range(475, results.shape[0]+1):
 	else:
 		results.loc[x, 'lon'] = np.nan
 
-	#Todo - Check the bounding box.  Makes sense. 
-		#Might want to just boolean if its in the area.  Can drop it later too.  
-		#Worried indexes might get fucked if i drop rows mid row.  
-			#Or just put a continue in to the next iteration.
+	#Checking if home is in the bounding box of search area.
 	results.loc[x, 'in_search_area'] = in_bounding_box(bounding_box, 
 														float(results.loc[x,'lat']), 
 														float(results.loc[x, 'lon']))
 
-	#!Cleanup
+	#Get the address
 	address = bs4_home_ob.find('div', class_='mapaddress')
 	if address:
 		results.loc[x, 'address'] = bs4_home_ob.find('div', class_='mapaddress').text
 	else:
 		results.loc[x, 'address'] = np.nan
 
-	#Pulling property details.
-	#These two groups almost always exist.  Hard coded group order. 
+	#Get the property details
+	#Note:These next two groups almost always exist.  Hard coded group order. 
+
 	groups = bs4_home_ob.find_all('p', class_='attrgroup')
 	if groups:
 		#Group1 - beds/baths + sqft + available
@@ -261,26 +254,84 @@ for x in range(475, results.shape[0]+1):
 				elif stat.has_attr('data-date'):		
 					results.loc[x, 'postdate'] = stat.get('data-date')
 				#! postddate isn't gettingpulled in all the time.  Look for a different marker
-
 		#Group2 - Random amenities
 		amenities = groups[1].find_all('span')
 		if amenities:
 			#!Cleanup
 			amen = [amenity.text for amenity in amenities]
 			results.at[x, 'amenities'] = amen
+	#Get the date posted
+	posting_info = bs4_home_ob.find('div', class_='postinginfos')
+	if posting_info:
+		results.loc[x, 'postdate'] = posting_info.find('time').get('title')
 
 	print(f'{x} of {results.shape[0]}')
 	time.sleep(np.random.randint(5, 13))
 
+# %%
+
 #%%
-in_outer_area = results[results['in_search_area']==True]
+# in_outer_area = results[results['in_search_area']==True]
 
-in_outer_area.to_csv('../data/craigslist_results.csv', index=False)
+def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
+	from math import radians, cos, sin, asin, sqrt
+	"""[Uses the haversine formula to calculate the distance between 
+	two points on a sphere]
 
-def find_nearest_L():
-	#For each listing, find the nearest L stop. 
-	L_stops = pd.read_csv('../data/L_stops.csv')
+	Args:
+		lat1 (float): [latitude of first point]
+		lon1 (float): [longitude of first point]
+		lat2 (float): [latitude of second point]
+		lon2 (float): [latitue of second point]
+
+	Returns:
+		float: [description]
+
+	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
+	"""	
+	# convert decimal degrees to radians 
+	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+	# haversine formula 
+	dlon = lon2 - lon1 
+	dlat = lat2 - lat1 
+	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+	c = 2 * asin(sqrt(a)) 
+	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
+	return c * r
+
+
+#Load data	
+in_outer_area = pd.read_csv('../data/craigs_all.csv', delimiter=',')
+
+#Load L stops
+L_stops = pd.read_csv('../data/CTA_Lstops.csv', delimiter=',')
+
+
+min_dist = np.inf
+min_idx = 0
+
+
+
+for idx in in_outer_area.index:
+	lat1 = in_outer_area.loc[idx, 'lat']
+	lon1 = in_outer_area.loc[idx, 'lon']
+	for L_stop_idx in L_stops.index:
+		lat2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[0])
+		lon2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[1])
+		dist = haversine_distance(lat1, lon1, lat2, lon2)
+		if dist < min_dist:
+			min_dist = round(dist, 2)
+			min_idx = idx
+			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
 	
+	in_outer_area.loc[idx, 'closest_L_stop'] = min_L_stop
+	in_outer_area.loc[idx, 'L_min_dist'] = min_dist
+
+
+	# print(f'The closest station for property {in_outer_area.loc[idx, "address"]}') 
+	# print(f'Station {min_L_stop}: {min_dist} miles away')
+
 
 #? - get all listing links. 
 #? - Get all the posting id's
@@ -291,8 +342,10 @@ def find_nearest_L():
 #? - add function to extract number of bedrooms.
 #? - add function to extract number of bathrooms.
 #? - Check bounding box area search. 
-#TODO - Clean/add variables: money, nearest L stop, distance to nearest L stop
-#TODO - True values for outer search area, assign to neighborhood GPS coords.
+#? - Clean/add variables: money, nearest L stop, distance to nearest L stop
+#? - True values for outer search area, assign to neighborhood GPS coords.
+#TODO - Connect to RapidAPI and pull Walkscore, Crimescore, and Transit score.
+
 #TODO - Implement SQLLite DB to store results. 
 
 #!Something up on line 245.  Probably a deleted post. 
@@ -310,3 +363,5 @@ def find_nearest_L():
 # https://github.com/lewi0622/Housing_Search
 
 
+
+# %%

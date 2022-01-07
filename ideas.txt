@@ -31,6 +31,10 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 	    - Make manual defined boxes of what Bex considers an area
 		
 	- [x] all train stops in the area
+		- Name of closest train stop, and distance to it. (GPS coords).
+			- Don't want to make an extra call to a googleAPI if i don't 
+			- have too and CTA already has the data. 
+	
 	- [] all grocery stores in the area
 		- [] Probably will need to hit the googlesearchAPI for this
 		- [] Need to set up a project for it to make a call. 
