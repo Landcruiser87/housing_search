@@ -9,11 +9,28 @@ import time
 
 
 def get_listings(bs4ob)->list:
+	"""[summary]
+
+	Args:
+		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
+
+	Returns:
+		list: [all the links in the summary page]
+	"""	
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
 		links.append(link.get('href'))
 	return links
 
 def get_posting_ids(bs4ob, links:list)->list:
+	"""[Get the posting id's from the link list]
+
+	Args:
+		bs4ob ([Beautiful Soup Object]): [html of the craigslist summary page]
+		links (list): [list of links to the individual postings]
+
+	Returns:
+		ids([list]): [List of the posting id's]
+	"""	
 	for link in links:
 		ids.append(int(link.split("/")[-1].strip(".html")))
 	return ids
@@ -26,7 +43,7 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list):
 		ids ([list]): [id list of the listings]
 
 	Returns:
-		[type]: [description]
+		price, title, hood [list, list , list]: [returns the basic info of posting on summary page]
 	"""
 	for meta_data in bs4ob.find_all('div', class_='result-info'):
 		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
@@ -98,12 +115,6 @@ def inner_neighborhood(lat:float, lon:float)->str:
 				return hood
 		return np.nan
 
-# for i in in_ravens.index:
-# 	lat = in_ravens.loc[i, 'lat']	
-# 	lon = in_ravens.loc[i, 'lon']
-
-# 	print(inner_neighborhood(lat, lon))
-
 #%%
 
 headers = {
@@ -133,13 +144,10 @@ params = (
 	('laundry', ['1', '4', '2', '3']),
 	('sale_date', 'all dates'),
 )
-
-#! TODO - Once you get the sqllite database up, adjust the parameter to only search todays postings
-#? Will cut down significantly on the number of requests you make. 
-# Request order
+#Request order
 	# 1. Request first page to get total count of listings. 
 	# 2. Iterate through all summary pages and scrape their links
-	# 3. Iterate through each link and 
+	# 3. Iterate through each link and scrape the individual posting 
 
 
 url = 'https://chicago.craigslist.org/search/chc/apa'
@@ -267,7 +275,6 @@ for x in range(0, results.shape[0]+1):
 
 	#Get the property details
 	#Note:These next two groups almost always exist.  Hard coded group order. 
-
 	groups = bs4_home_ob.find_all('p', class_='attrgroup')
 	if groups:
 		#Group1 - beds/baths + sqft + available
@@ -287,7 +294,6 @@ for x in range(0, results.shape[0]+1):
 		#Group2 - Random amenities
 		amenities = groups[1].find_all('span')
 		if amenities:
-			#!Cleanup
 			amen = [amenity.text for amenity in amenities]
 			results.at[x, 'amenities'] = amen
 	
@@ -298,7 +304,6 @@ for x in range(0, results.shape[0]+1):
 
 	print(f'{x} of {results.shape[0]}')
 	time.sleep(np.random.randint(5, 13))
-
 
 
 #%%
@@ -361,7 +366,6 @@ for idx in in_outer_area.index:
 		dist = haversine_distance(lat1, lon1, lat2, lon2)
 		if dist < min_dist:
 			min_dist = round(dist, 2)
-			min_idx = idx
 			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
 	
 	in_outer_area.loc[idx, 'closest_L_stop'] = min_L_stop
