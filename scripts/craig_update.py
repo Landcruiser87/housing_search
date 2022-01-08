@@ -319,8 +319,8 @@ for x in range(0, results.shape[0]):
 			min_dist = round(dist, 2)
 			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
 
-		results.loc[x, 'closest_L_stop'] = min_L_stop
-		results.loc[x, 'L_min_dist'] = min_dist
+	results.loc[x, 'closest_L_stop'] = min_L_stop
+	results.loc[x, 'L_min_dist'] = min_dist
 
 	#If its in the search area, add it to the csv
 	if results.loc[x, 'in_search_area'] == True:
