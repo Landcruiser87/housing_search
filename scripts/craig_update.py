@@ -142,7 +142,7 @@ def inner_neighborhood(lat:float, lon:float)->str:
 		[str]: [If found within the neighborhood.txt file, 
 		returns the name of the neighborhood. If not, returns np.nan]
 	"""	
-	with open('../data/neighborhoods.txt', 'r') as nbh:
+	with open('./data/neighborhoods.txt', 'r') as nbh:
 		neighborhoods = nbh.read().splitlines()
 		inner_hood_dict = {hood.split(':')[0].strip() : eval(hood.split(':')[1]) for hood in neighborhoods[:5]}
 
@@ -233,7 +233,7 @@ with open('./data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
 #Previous listings
-all_results = pd.read_csv("./data/craigs_all.csv", delimiter=',' , index_col=0)
+all_results = pd.read_csv("./data/craigs_all.csv", delimiter=',')
 #Load L stops
 L_stops = pd.read_csv('./data/CTA_Lstops.csv', delimiter=',')
 
@@ -319,15 +319,17 @@ for x in range(0, results.shape[0]):
 
 		results.loc[x, 'closest_L_stop'] = min_L_stop
 		results.loc[x, 'L_min_dist'] = min_dist
-		
+
 	#If its in the search area, add it to the csv
 	if results.loc[x, 'in_search_area'] == True:
 		print(f'New home found at {results.loc[x, "link"]}')
 		#Insert new record into all_results
-		all_results = all_results.append(results.loc[x, :])
+		# all_results = all_results.append(results.loc[x, :])
 		#Save the new record
-		all_results.to_csv("./data/craigs_all.csv", index=False)
+		# all_results.to_csv("./data/craigs_all.csv")
 		#TODO - Implement a way to send a text to the user. 
 
 
 	time.sleep(np.random.randint(5, 13))
+
+print('Update complete!')
