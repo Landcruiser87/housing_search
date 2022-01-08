@@ -2,7 +2,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-url = 'https://chicago.craigslist.org/chc/apa/d/chicago-spacious-1770-square-foot/7430117801.html'
+url = 'https://chicago.craigslist.org/chc/apa/d/chicago-super-affordable-lincoln-square/7420817455.html'
 
 
 def docstring_parameter(*sub):
