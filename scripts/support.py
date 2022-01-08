@@ -8,12 +8,13 @@ carriers = {
 
 def send(message):
         # Replace the number with your own, or consider using an argument\dict for multiple people.
-	to_number = 'phonenum' + carriers['verizon']
+	
 	with open('../secret/sms_login.txt') as login_file:
 		login = login_file.read().splitlines()
 		username = login[0].split(':')[1]
 		password = login[1].split(':')[1]
-
+		to_number = login[2].split(':')[1] + carriers['verizon']
+		
 	auth = (username, password)
 
 	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
