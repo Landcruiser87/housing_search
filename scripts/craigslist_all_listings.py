@@ -261,16 +261,14 @@ for x in range(0, results.shape[0]+1):
 	#Get the date posted
 	posting_info = bs4_home_ob.find('div', class_='postinginfos')
 	if posting_info:
-		results.loc[x, 'postdate'] = posting_info.find('time').get('title')
+		results.loc[x, 'postdate'] = posting_info.find('p', class_='postinginfo reveal').text[8:]
 
 	print(f'{x} of {results.shape[0]}')
 	time.sleep(np.random.randint(5, 13))
 
-# %%
+
 
 #%%
-# in_outer_area = results[results['in_search_area']==True]
-
 def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	from math import radians, cos, sin, asin, sqrt
 	"""[Uses the haversine formula to calculate the distance between 
@@ -283,7 +281,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 		lon2 (float): [latitue of second point]
 
 	Returns:
-		float: [description]
+		float: [Distance between two GPS points in miles]
 
 	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
 	"""	
@@ -300,7 +298,17 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 
 
 #Load data	
-in_outer_area = pd.read_csv('../data/craigs_all.csv', delimiter=',')
+# in_outer_area = pd.read_csv('../data/craigs_all.csv', delimiter=',')
+in_outer_area = results[results['in_search_area']==True]
+in_outer_area  = in_outer_area.astype(
+	{
+	'lat': float, 
+	'lon': float, 
+	'price': float, 
+	'bedrooms': int, 
+	'bathrooms': int
+	}
+)
 
 #Load L stops
 L_stops = pd.read_csv('../data/CTA_Lstops.csv', delimiter=',')
@@ -342,18 +350,17 @@ for idx in in_outer_area.index:
 #? - Check bounding box area search. 
 #? - Clean/add variables: money, nearest L stop, distance to nearest L stop
 #? - True values for outer search area, assign to neighborhood GPS coords.
+#? - Change location of postdate extraction
+
 #TODO - Connect to RapidAPI and pull Walkscore, Crimescore, and Transit score.
 
 #TODO - Implement SQLLite DB to store results. 
 
-#!Something up on line 245.  Probably a deleted post. 
-
 # df.groupby(['web_Product_Desc']).agg({"price_Orig":[min,max,"count",np.mean],"quantity_On_Hand":[np.sum]})
 
-#Program overview
-#1. Pull the first page to get a total count for search
-#2. Iterate through each page creating a df for each page
-#3. Merge all those bastards into one big df
+
+
+
 
 # Resources
 # https://betterprogramming.pub/how-i-built-a-python-scraper-to-analyze-housing-locations-on-craigslist-part-1-18d264b0ec4b
