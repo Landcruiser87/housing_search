@@ -235,7 +235,7 @@ with open('./data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
 #Previous listings
-all_results = pd.read_csv("./data/craigs_all.csv", delimiter=',')
+all_results = pd.read_csv("./data/craigs_all.csv", delimiter=',', index_col=0)
 #Load L stops
 L_stops = pd.read_csv('./data/CTA_Lstops.csv', delimiter=',')
 
@@ -323,15 +323,23 @@ for x in range(0, results.shape[0]):
 	results.loc[x, 'L_min_dist'] = min_dist
 
 	#If its in the search area, add it to the csv
-	if results.loc[x, 'in_search_area'] == True:
-		print(f'New home found at {results.loc[x, "link"]}')
-		#Insert new record into all_results
-		# all_results = all_results.append(results.loc[x, :])
-		#Save the new record
-		# all_results.to_csv("./data/craigs_all.csv")
-		#TODO - Implement a way to send a text to the user. 
+	# if results.loc[x, 'in_search_area'] == True:
+	print(f'New home found at {results.loc[x, "link"]}')
 
-
+	#Insert new record into all_results
+	all_results = all_results.append(results.loc[x, :])
+	
+	#take a nap
 	time.sleep(np.random.randint(5, 13))
+
+#Reset the index
+all_results = all_results.reset_index(drop=True)
+
+#Save the new record
+all_results.to_csv("./data/craigs_all.csv")
+#TODO - Implement a way to send a text to the user. 
+
+
+	
 
 print('Update complete!')
