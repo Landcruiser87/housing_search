@@ -1,25 +1,56 @@
 import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
-def send(message):
-        # Replace the number with your own, or consider using an argument\dict for multiple people.
-	
-	with open('../secret/sms_login.txt') as login_file:
+url = 'https://chicago.craigslist.org/chc/apa/d/chicago-spacious-1770-square-foot/7430117801.html'
+
+
+def docstring_parameter(*sub):
+	def dec(obj):
+		obj.__doc__ = obj.__doc__.format(*sub)
+		return obj
+	return dec
+
+@docstring_parameter(url)
+def inputdatlink():
+	"""
+	<html>
+		<body>
+			<p>Oh haroo,<br>
+			You have a new house to look at! <br>
+			<a href={0}>Click on that craig link</a> 
+			</p>
+		</body>
+	</html>
+	"""
+	pass
+
+def send(url:str):
+	with open('./secret/sms_login.txt') as login_file:
 		login = login_file.read().splitlines()
-		username = login[0].split(':')[1]
+		sender_email = login[0].split(':')[1]
 		password = login[1].split(':')[1]
-		to_email = login[2].split(':')[1] + carriers['verizon']
+		receiver_email = login[2].split(':')[1]
 		
-	auth = (username, password)
-
 	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
-	server = smtplib.SMTP("smtp.gmail.com", 587 )
-	server.starttls()
-	server.login(auth[0], auth[1])
-	message = f'From: {auth[0]} To: {to_email} Subject: {message}'
+	smtp_server = "smtp.gmail.com"
+	port = 465
 
-	# Send text message through SMS gateway of destination number
-	server.sendmail(auth[0], to_email, message)
-	server.quit()
-	print(f'message sent to {to_email}')
+	message = MIMEMultipart("alternative")
+	message["Subject"] = "New House Found!"
+	message["From"] = sender_email
+	message["To"] = receiver_email
 
-send('I HAS THE POWER')
+	html = inputdatlink.__doc__
+
+	attachment = MIMEText(html, "html")
+	message.attach(attachment)
+	context = ssl.create_default_context()
+
+	with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+		server.login(sender_email, password)		
+		server.sendmail(sender_email, receiver_email, message.as_string())
+		print("Email sent!")
+
+
+send(url)
