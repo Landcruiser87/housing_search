@@ -19,11 +19,16 @@ def get_posting_ids(bs4ob, links:list)->list:
 	return ids
 
 def get_meta_data(bs4ob, ids:list)->(list, list, list):
+	"""[Extract the meta data from the craiglist summary page]
 
-	#Maybe do a quick check to make sure the listing is the same as the find_all
-	#They also include commas in the price.  Might want to remove.  But can process all that after
+	Args:
+		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
+		ids ([list]): [id list of the listings]
+
+	Returns:
+		[type]: [description]
+	"""
 	for meta_data in bs4ob.find_all('div', class_='result-info'):
-		#Probably unecessary to check, but want to make sure i'm lined up on the right listing
 		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
 		if _tempid in ids:
 			price.append(money_launderer(meta_data.find('span', class_='result-price').text))
@@ -33,17 +38,33 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list):
 			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
 	return price, title, hood
 	
-def money_launderer(price:list):
-	# Strip dollar signs and commas
+def money_launderer(price:list)->list:
+	"""[Strips dollar signs and comma from the price]
+
+	Args:
+		price (list): [list of prices as strs]
+
+	Returns:
+		[list]: [list of prices as floats]
+	"""	
 	if isinstance(price, str):
 		return float(price.replace("$", "").replace(",", ""))
 	return price
 
+
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
-	"""
-	Check if location is in the bounding box for an area
-	"""
-		
+	"""[Given two corners of a box on a map.  Determine if a point is
+	 within said box.  Step 1.  You cut a hole in that box.]
+
+	Args:
+		bounding_box (list): [list of GPS coordinates of the box]
+		lat (float): [lattitude of point]
+		lon (float): [longitude of point]
+
+	Returns:
+		bool: [Whether or not is within the given GPS ranges 
+		in the bounding box]
+	"""		
 	bb_lat_low = bounding_box[0]
 	bb_lat_up = bounding_box[2]
 	bb_lon_low = bounding_box[1]
@@ -55,7 +76,19 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 
 	return False
 
-def inner_neighborhood(lat, lon):
+def inner_neighborhood(lat:float, lon:float)->str:
+	"""[Function to determine the smaller neighborhood within a given boundary.
+		Current boundaries are located in neighborhoods.txt file. Amend to fit 
+		your own purposes.  I manually went through google maps to extract them]
+
+	Args:
+		lat ([type]): [lattitude of point]
+		lon ([type]): [longitude of point]
+
+	Returns:
+		[str]: [If found within the neighborhood.txt file, 
+		returns the name of the neighborhood. If not, returns np.nan]
+	"""	
 	with open('../data/neighborhoods.txt', 'r') as nbh:
 		neighborhoods = nbh.read().splitlines()
 		inner_hood_dict = {hood.split(':')[0].strip() : eval(hood.split(':')[1]) for hood in neighborhoods[:5]}
