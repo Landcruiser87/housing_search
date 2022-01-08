@@ -1,29 +1,28 @@
-from math import sin, cos, sqrt, atan2, radians
+import smtplib
+carriers = {
+	'att':    '@mms.att.net',
+	'tmobile':' @tmomail.net',
+	'verizon':  '@vtext.com',
+	'sprint':   '@page.nextel.com'
+}
 
-def distanceGPS(lat1,lon1,lat2,lon2):
-    """
-    ##################################################################
-    ###     This code calculates the distance (miles) between two points 
-    ###     __________________________________________________________
-    ###     INPUT:      lat1 - Latitude (degrees) of first object
-    ###                 lon1 - Longitude (degrees) of first object
-    ###                 lat2 - Latitude (degrees) of second object
-    ###                 lon2 - Longitude (degrees) of second object
-    ###     OUTPUT:     distance
-    ##################################################################
-    """
-    # approximate radius of earth in miles
-    R = 3956 
-    lat1 = radians(lat1)
-    lon1 = radians(lon1)
-    lat2 = radians(lat2)
-    lon2 = radians(lon2)
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
-    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
-    c = 2 * atan2(sqrt(a), sqrt(1 - a)) #used atan instead of asin
-    return(R * c * 0.62137)
+def send(message):
+        # Replace the number with your own, or consider using an argument\dict for multiple people.
+	to_number = '260-312-7402' + carriers['verizon']
+	with open('../secret/sms_login.txt') as login_file:
+		login = login_file.read().splitlines()
+		username = login[0].split(':')[1]
+		password = login[1].split(':')[1]
 
-# Borrowed from https://github.com/mmachen/housing-search-Chicago/blob/master/project/extra_programs.py
-# might adapt this as well. 
-# https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
+	auth = (username, password)
+
+	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
+	server = smtplib.SMTP("smtp.gmail.com", 587 )
+	server.starttls()
+	server.login(auth[0], auth[1])
+
+	# Send text message through SMS gateway of destination number
+	server.sendmail(auth[0], to_number, message)
+	server.quit()
+	print(f'message sent to {to_number}')
+send('I HAS THE POWER')

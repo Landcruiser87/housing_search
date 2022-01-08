@@ -319,13 +319,15 @@ for x in range(0, results.shape[0]):
 
 		results.loc[x, 'closest_L_stop'] = min_L_stop
 		results.loc[x, 'L_min_dist'] = min_dist
-
-	print(f'New home found at {results.loc[x, "link"]}')
-	#Insert new record into all_results
-	all_results = all_results.append(results.loc[x, :])
-	#Save the new record
-	all_results.to_csv("./data/craigs_all.csv", index=False)
-	#TODO - Implement a way to send a text to the user. 
+		
+	#If its in the search area, add it to the csv
+	if results.loc[x, 'in_search_area'] == True:
+		print(f'New home found at {results.loc[x, "link"]}')
+		#Insert new record into all_results
+		all_results = all_results.append(results.loc[x, :])
+		#Save the new record
+		all_results.to_csv("./data/craigs_all.csv", index=False)
+		#TODO - Implement a way to send a text to the user. 
 
 
 	time.sleep(np.random.randint(5, 13))
