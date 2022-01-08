@@ -27,7 +27,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 		lon2 (float): [latitue of second point]
 
 	Returns:
-		float: [Distance between two GPS points in miles]
+		dist (float): [Distance between two GPS points in miles]
 
 	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
 	"""	
@@ -50,8 +50,10 @@ def get_listings(bs4ob)->list:
 		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
 
 	Returns:
-		list: [all the links in the summary page]
+		links (list): [all the links in the summary page]
 	"""	
+
+	#TODO.  Think of another way to do this
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
 		if link.get('href').startswith("https://chicago.craigslist.org/chc"):
 			links.append(link.get('href'))
@@ -65,7 +67,7 @@ def get_posting_ids(bs4ob, links:list)->list:
 		links (list): [list of links to the individual postings]
 
 	Returns:
-		ids([list]): [List of the posting id's]
+		ids (list): [List of the posting id's]
 	"""	
 	for link in links:
 		ids.append(int(link.split("/")[-1].strip(".html")))
@@ -75,11 +77,11 @@ def get_meta_data(bs4ob, ids:list)->(list, list, list):
 	"""[Extract the meta data from the craiglist summary page]
 
 	Args:
-		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
-		ids ([list]): [id list of the listings]
+		bs4ob (BeautifulSoup object): [html of craigslist summary page]
+		ids (list): [id list of the listings]
 
 	Returns:
-		price, title, hood [list, list , list]: [returns the basic info of posting on summary page]
+		price, title, hood (list, list , list): [returns the basic info of posting on summary page]
 	"""
 	for meta_data in bs4ob.find_all('div', class_='result-info'):
 		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
@@ -98,7 +100,7 @@ def money_launderer(price:list)->list:
 		price (list): [list of prices as strs]
 
 	Returns:
-		[list]: [list of prices as floats]
+		price (list): [list of prices as floats]
 	"""	
 	if isinstance(price, str):
 		return float(price.replace("$", "").replace(",", ""))
@@ -115,7 +117,7 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 		lon (float): [longitude of point]
 
 	Returns:
-		bool: [Whether or not is within the given GPS ranges 
+		(bool): [Whether or not is within the given GPS ranges 
 		in the bounding box]
 	"""		
 	bb_lat_low = bounding_box[0]
@@ -135,11 +137,11 @@ def inner_neighborhood(lat:float, lon:float)->str:
 		your own purposes.  I manually went through google maps to extract them]
 
 	Args:
-		lat ([type]): [lattitude of point]
-		lon ([type]): [longitude of point]
+		lat (float): [lattitude of point]
+		lon (float): [longitude of point]
 
 	Returns:
-		[str]: [If found within the neighborhood.txt file, 
+		hood (str): [If found within the neighborhood.txt file, 
 		returns the name of the neighborhood. If not, returns np.nan]
 	"""	
 	with open('./data/neighborhoods.txt', 'r') as nbh:
