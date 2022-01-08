@@ -239,7 +239,7 @@ if totalpages > 1:
 with open('../data/total_search_area.txt', 'r') as search_coords:
 	bounding_box = eval(search_coords.read().splitlines()[0])
 
-for x in range(0, results.shape[0]+1):
+for x in range(0, results.shape[0]):
 
 	response = requests.get(results.loc[x, 'link'], headers=headers)
 	#Just in case we piss someone off
@@ -355,8 +355,6 @@ L_stops = pd.read_csv('../data/CTA_Lstops.csv', delimiter=',')
 min_dist = np.inf
 min_idx = 0
 
-
-
 for idx in in_outer_area.index:
 	lat1 = in_outer_area.loc[idx, 'lat']
 	lon1 = in_outer_area.loc[idx, 'lon']
@@ -367,7 +365,7 @@ for idx in in_outer_area.index:
 		if dist < min_dist:
 			min_dist = round(dist, 2)
 			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
-	
+
 	in_outer_area.loc[idx, 'closest_L_stop'] = min_L_stop
 	in_outer_area.loc[idx, 'L_min_dist'] = min_dist
 
