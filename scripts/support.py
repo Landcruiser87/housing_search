@@ -8,7 +8,7 @@ carriers = {
 
 def send(message):
         # Replace the number with your own, or consider using an argument\dict for multiple people.
-	to_number = '260-312-7402' + carriers['verizon']
+	to_number = 'phonenum' + carriers['verizon']
 	with open('../secret/sms_login.txt') as login_file:
 		login = login_file.read().splitlines()
 		username = login[0].split(':')[1]
