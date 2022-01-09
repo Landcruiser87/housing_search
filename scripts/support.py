@@ -27,6 +27,15 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	return c * r
 
 def send_email(url:str):
+	"""[Function for sending an email.  Inputs the url into the docstrings 
+	via decorator for easy formatting of the HTML body of an email.]
+
+	Args:
+		url (str): [url of the listing]
+
+	Returns:
+		[None]: [Just sends the email.  Doesn't return anything]
+	"""	
 	import smtplib, ssl
 	from email.mime.text import MIMEText
 	from email.mime.multipart import MIMEMultipart
