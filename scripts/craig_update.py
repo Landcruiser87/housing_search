@@ -309,3 +309,4 @@ all_results.to_csv("./data/craigs_all.csv")
 
 
 print('Update complete!')
+time.sleep(5)

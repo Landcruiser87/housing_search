@@ -1,6 +1,5 @@
 
 def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
-	from math import radians, cos, sin, asin, sqrt
 	"""[Uses the haversine formula to calculate the distance between 
 	two points on a sphere]
 
@@ -15,6 +14,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 
 	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
 	"""	
+	from math import radians, cos, sin, asin, sqrt
 	# convert decimal degrees to radians 
 	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
 
