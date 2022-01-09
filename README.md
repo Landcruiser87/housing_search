@@ -2,9 +2,11 @@
   <b> Chicago Housing Search Tool </b><br>
 </h1>
 
-This repo is meant to coalesce different housing resources to aide in searching for housing in Chicago.  The aim is to build a dataset of available housing in chicago, then search hourly for new listings.  If a new listing is found, a text is sent to myself via sms gateway to look at the listing.  Also going to build email functionality as my girlfriend doesn't want to get hammered with texts.  
+This repo is meant to coalesce different housing resources to aide in searching for housing in Chicago.  The aim is to build a dataset of available housing in chicago, then search hourly for new listings.  If a new listing is found, an email is sent to the user. 
+Datasets are kept in the data folder.
 
-### Requirements
+
+### Base Python Requirements
 - Python >= 3.8
 
 
@@ -20,7 +22,7 @@ This repo is meant to coalesce different housing resources to aide in searching 
 
 ### Sites to search
 - [] - [Zillow.com](https://www.zillow.com)
-- [] - [craigslist.com](https://www.craiglist.org)
+- x - [craigslist.com](https://www.craiglist.org)
 - [] - [rent.com](https://www.rent.com)
 
 ### External Data Sources
