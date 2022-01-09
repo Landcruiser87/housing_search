@@ -20,6 +20,18 @@ Datasets are kept in the data folder.
   - BeautifulSoup - (I know i know.  But its the best way to parse html)
     -No available json data for any of the housing sites so I had to use the soups. 
 
+### Other Requirements
+- In order to use the email functionality, you need to create a dummy account on gmail. 
+- Once you do, authorize it for 2step authentication. 
+- Generate an App password for the account
+- Store credentials in a text file under a `/secret` folder you'll need to create.
+  
+### Workflow
+- Main Driver code is inoperational at the moment.  So. 
+- In order to run.  run craigslist_all_listings.py
+- Then set up a task scheduler/cron job to run the craig_update.py script every hour.
+
+
 ### Sites to search
 - [] - [Zillow.com](https://www.zillow.com)
 - x - [craigslist.com](https://www.craiglist.org)
