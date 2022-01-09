@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from datetime import date, datetime
 import time
+import mail_send as mailsend
 
 
 #plan
@@ -329,8 +330,12 @@ for x in range(0, results.shape[0]):
 	#Insert new record into all_results
 	all_results = all_results.append(results.loc[x, :])
 	
+	#Send the email
+	mailsend.send_email(results.loc[x, 'link'])
+	
 	#take a nap
 	time.sleep(np.random.randint(5, 13))
+
 
 #Reset the index
 all_results = all_results.reset_index(drop=True)
@@ -338,6 +343,5 @@ all_results = all_results.reset_index(drop=True)
 #Save the new record
 all_results.to_csv("./data/craigs_all.csv")
 
-#TODO - Implement a way to send a text to the user. 
 
 print('Update complete!')

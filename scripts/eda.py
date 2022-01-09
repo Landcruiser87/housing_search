@@ -10,7 +10,7 @@ all_results = pd.read_csv('../data/craigs_all.csv', delimiter=',', index_col=0, 
 _ = plt.hist(all_results['price'], bins= 8, color='blue', edgecolor='black')
 _ = plt.xlabel('Price')
 _ = plt.ylabel('Count')
-_ = plt.title('Price Distribution')
+_ = plt.title('Price Histogram')
 _ = plt.show()
 
 #Looking at what neighborhoods have most available
@@ -22,5 +22,4 @@ _ = plt.title('Top 10 Neighborhood Counts')
 _ = plt.gca().invert_yaxis()
 _ = plt.show()
 
-
-	
+top10

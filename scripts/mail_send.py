@@ -2,30 +2,27 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-url = 'https://chicago.craigslist.org/chc/apa/d/chicago-spacious-1770-square-foot/7430117801.html'
+def send_email(url:str):
+	def docstring_parameter(*sub):
+		def dec(obj):
+			obj.__doc__ = obj.__doc__.format(*sub)
+			return obj
+		return dec
 
+	@docstring_parameter(url)
+	def inputdatlink():
+		"""
+		<html>
+			<body>
+				<p>Oh haroo,<br>
+				You have a new house to look at! <br>
+				<a href={0}>Click on that craig link</a> 
+				</p>
+			</body>
+		</html>
+		"""
+		pass
 
-def docstring_parameter(*sub):
-	def dec(obj):
-		obj.__doc__ = obj.__doc__.format(*sub)
-		return obj
-	return dec
-
-@docstring_parameter(url)
-def inputdatlink():
-	"""
-	<html>
-		<body>
-			<p>Oh haroo,<br>
-			You have a new house to look at! <br>
-			<a href={0}>Click on that craig link</a> 
-			</p>
-		</body>
-	</html>
-	"""
-	pass
-
-def send(url:str):
 	with open('./secret/login.txt') as login_file:
 		login = login_file.read().splitlines()
 		sender_email = login[0].split(':')[1]
@@ -51,6 +48,3 @@ def send(url:str):
 		server.login(sender_email, password)		
 		server.sendmail(sender_email, receiver_email, message.as_string())
 		print("Email sent!")
-
-
-send(url)
