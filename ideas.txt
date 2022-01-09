@@ -16,7 +16,7 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 - [] score each listing based on amenities/crime/distance to L/grocery stores.
 - [] Store results in sqllite database.
 - [] Post any updated listings to discord channel in TestServerAnaki
-- [] Alternatively, just text / email me with any new listings.
+- [x] Alternatively, just text / email me with any new listings.
 
 
 

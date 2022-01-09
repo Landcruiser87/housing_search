@@ -373,6 +373,10 @@ for idx in in_outer_area.index:
 	# print(f'Station {min_L_stop}: {min_dist} miles away')
 
 
+
+#%%
+
+
 #? - get all listing links. 
 #? - Get all the posting id's
 #? - add function to extract geo coords. (might not be available)
@@ -385,6 +389,12 @@ for idx in in_outer_area.index:
 #? - Clean/add variables: money, nearest L stop, distance to nearest L stop
 #? - True values for outer search area, assign to neighborhood GPS coords.
 #? - Change location of postdate extraction
+#? - Pull crime data from data.cityofchicago.org
+#? - Aggregate a crime scoring for each property based on previous crimes that were
+	#? - Within a half a mile radius
+		#? = Use haversine 
+	#? - Isolate serious crimes (Felonies, guncrimes, domestic violence)
+
 
 #TODO - Connect to RapidAPI and pull Walkscore, Crimescore, and Transit score.
 
