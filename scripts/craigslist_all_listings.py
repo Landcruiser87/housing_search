@@ -7,7 +7,6 @@ import pandas as pd
 from datetime import date, datetime
 import time
 
-
 def get_listings(bs4ob)->list:
 	"""[summary]
 
@@ -359,7 +358,7 @@ for idx in in_outer_area.index:
 	lat1 = in_outer_area.loc[idx, 'lat']
 	lon1 = in_outer_area.loc[idx, 'lon']
 	for L_stop_idx in L_stops.index:
-		lat2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[0])
+		lat2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[0]) 
 		lon2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[1])
 		dist = haversine_distance(lat1, lon1, lat2, lon2)
 		if dist < min_dist:
@@ -388,8 +387,6 @@ for idx in in_outer_area.index:
 #? - Change location of postdate extraction
 
 #TODO - Connect to RapidAPI and pull Walkscore, Crimescore, and Transit score.
-
-#TODO - Implement SQLLite DB to store results. 
 
 # df.groupby(['web_Product_Desc']).agg({"price_Orig":[min,max,"count",np.mean],"quantity_On_Hand":[np.sum]})
 
