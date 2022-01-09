@@ -5,43 +5,7 @@ import numpy as np
 import pandas as pd
 from datetime import date, datetime
 import time
-import mail_send as mailsend
-
-
-#plan
-
-#Update craigs query that pulls just today's posts.  
-#Checks csv for listings id to see if it is already in there. 
-#If it is, skip it.  If not, add it to the csv.
-
-#Implement text notifcation or email notification. 
-
-def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
-	from math import radians, cos, sin, asin, sqrt
-	"""[Uses the haversine formula to calculate the distance between 
-	two points on a sphere]
-
-	Args:
-		lat1 (float): [latitude of first point]
-		lon1 (float): [longitude of first point]
-		lat2 (float): [latitude of second point]
-		lon2 (float): [latitue of second point]
-
-	Returns:
-		dist (float): [Distance between two GPS points in miles]
-
-	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
-	"""	
-	# convert decimal degrees to radians 
-	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-
-	# haversine formula 
-	dlon = lon2 - lon1 
-	dlat = lat2 - lat1 
-	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-	c = 2 * asin(sqrt(a)) 
-	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
-	return c * r
+from support import send_email, haversine_distance
 
 
 def get_listings(bs4ob)->list:
@@ -132,27 +96,27 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 
 	return False
 
-def inner_neighborhood(lat:float, lon:float)->str:
-	"""[Function to determine the smaller neighborhood within a given boundary.
-		Current boundaries are located in neighborhoods.txt file. Amend to fit 
-		your own purposes.  I manually went through google maps to extract them]
+# def inner_neighborhood(lat:float, lon:float)->str:
+# 	"""[Function to determine the smaller neighborhood within a given boundary.
+# 		Current boundaries are located in neighborhoods.txt file. Amend to fit 
+# 		your own purposes.  I manually went through google maps to extract them]
 
-	Args:
-		lat (float): [lattitude of point]
-		lon (float): [longitude of point]
+# 	Args:
+# 		lat (float): [lattitude of point]
+# 		lon (float): [longitude of point]
 
-	Returns:
-		hood (str): [If found within the neighborhood.txt file, 
-		returns the name of the neighborhood. If not, returns np.nan]
-	"""	
-	with open('./data/neighborhoods.txt', 'r') as nbh:
-		neighborhoods = nbh.read().splitlines()
-		inner_hood_dict = {hood.split(':')[0].strip() : eval(hood.split(':')[1]) for hood in neighborhoods[:5]}
+# 	Returns:
+# 		hood (str): [If found within the neighborhood.txt file, 
+# 		returns the name of the neighborhood. If not, returns np.nan]
+# 	"""	
+# 	with open('./data/neighborhoods.txt', 'r') as nbh:
+# 		neighborhoods = nbh.read().splitlines()
+# 		inner_hood_dict = {hood.split(':')[0].strip() : eval(hood.split(':')[1]) for hood in neighborhoods[:5]}
 
-		for hood, coords in inner_hood_dict.items():
-			if in_bounding_box(coords, lat, lon):
-				return hood
-		return np.nan
+# 		for hood, coords in inner_hood_dict.items():
+# 			if in_bounding_box(coords, lat, lon):
+# 				return hood
+# 		return np.nan
 
 headers = {
 	'Connection': 'keep-alive',
@@ -331,8 +295,8 @@ for x in range(0, results.shape[0]):
 	all_results = all_results.append(results.loc[x, :])
 	
 	#Send the email
-	mailsend.send_email(results.loc[x, 'link'])
-	
+	send_email(results.loc[x, 'link'])
+
 	#take a nap
 	time.sleep(np.random.randint(5, 13))
 

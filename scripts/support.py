@@ -1,8 +1,36 @@
-import smtplib, ssl
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+
+def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
+	from math import radians, cos, sin, asin, sqrt
+	"""[Uses the haversine formula to calculate the distance between 
+	two points on a sphere]
+
+	Args:
+		lat1 (float): [latitude of first point]
+		lon1 (float): [longitude of first point]
+		lat2 (float): [latitude of second point]
+		lon2 (float): [latitue of second point]
+
+	Returns:
+		dist (float): [Distance between two GPS points in miles]
+
+	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
+	"""	
+	# convert decimal degrees to radians 
+	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+	# haversine formula 
+	dlon = lon2 - lon1 
+	dlat = lat2 - lat1 
+	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+	c = 2 * asin(sqrt(a)) 
+	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
+	return c * r
 
 def send_email(url:str):
+	import smtplib, ssl
+	from email.mime.text import MIMEText
+	from email.mime.multipart import MIMEMultipart
+
 	def docstring_parameter(*sub):
 		def dec(obj):
 			obj.__doc__ = obj.__doc__.format(*sub)
