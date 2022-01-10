@@ -412,3 +412,64 @@ for idx in in_outer_area.index:
 
 
 # %%
+#Testing Socrata API
+from sodapy import Socrata
+import pandas as pd
+
+def crime_score(lat1, lon1)->int:
+	lat1 = 41.906206
+	lon1 = -87.687013
+	client = Socrata("data.cityofchicago.org",
+					 app_token)
+
+	results = client.get("ijzp-q8t2",
+						 select="latitude, longitude, primary_type, date",
+						 where=f"latitude > {lat1-0.5} AND latitude < {lat1+0.5} AND longitude > {lon1-0.5} AND longitude < {lon1+0.5} AND date > '2021-01-01'",
+						 limit=5000)
+
+	serious_crimes = 0
+	noisy_fuckers = 0
+
+	for result in results:
+		if result['primary_type'] in ['FELONY', 'GUN', 'DOMESTIC VIOLENCE']:
+			serious_crimes += 1
+
+	return serious_crimes
+
+with open('../secret/chicagodata.txt') as login_file:
+	login = login_file.read().splitlines()
+	app_token = login[0].split(':')[1]
+	
+client = Socrata("data.cityofchicago.org", app_token)
+
+
+crime_data = client.get("ijzp-q8t2", limit=5000)
+crime_df = pd.DataFrame.from_dict(crime_data)
+
+all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
+
+# for x in all_results.index:
+
+
+#For crime score lets aggregate the types of crimes and assign them with a point value. 
+#guns, drugs, murder, theft, human
+
+# %%
+
+
+	# client = Socrata("data.cityofchicago.org",
+	# 				 "",
+	# 				 username="",
+	# 				 password="")
+
+	# results = client.get("ijzp-q8t2",
+	# 					 select="latitude, longitude, primary_type",
+	# 					 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1}",
+	# 					 limit=1000)
+
+	# serious_crimes = 0
+	# for result in results:
+	# 	if result['primary_type'] in ['FELONY', 'GUN', 'DOMESTIC VIOLENCE']:
+	# 		serious_crimes += 1
+
+	# return serious_crimes
