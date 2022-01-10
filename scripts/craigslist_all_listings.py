@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-from datetime import date, datetime
+import datetime
 import time
 
 def get_listings(bs4ob)->list:
@@ -416,6 +416,11 @@ for idx in in_outer_area.index:
 from sodapy import Socrata
 import pandas as pd
 
+def date_convert(time_big:pd.Series)->(datetime, datetime):
+	dateOb = datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+	return dateOb
+
+
 def crime_score(lat1, lon1)->int:
 	lat1 = 41.906206
 	lon1 = -87.687013
@@ -424,8 +429,10 @@ def crime_score(lat1, lon1)->int:
 
 	results = client.get("ijzp-q8t2",
 						 select="latitude, longitude, primary_type, date",
-						 where=f"latitude > {lat1-0.5} AND latitude < {lat1+0.5} AND longitude > {lon1-0.5} AND longitude < {lon1+0.5} AND date > '2021-01-01'",
+						 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
 						 limit=5000)
+
+	crime_df = pd.DataFrame.from_dict(results)
 
 	serious_crimes = 0
 	noisy_fuckers = 0
@@ -439,20 +446,71 @@ def crime_score(lat1, lon1)->int:
 with open('../secret/chicagodata.txt') as login_file:
 	login = login_file.read().splitlines()
 	app_token = login[0].split(':')[1]
-	
-client = Socrata("data.cityofchicago.org", app_token)
+
+client = Socrata("data.cityofchicago.org",
+					app_token)
+
+results = client.get("ijzp-q8t2",
+						select="latitude, longitude, primary_type, date",
+						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
+						limit=5000)
+					
+# results = client.get("ijzp-q8t2",
+# 						select="latitude, longitude, primary_type, date",
+# 						where=f"latitude > {lat1-0.5} AND latitude < {lat1+0.5} AND longitude > {lon1-0.5} AND longitude < {lon1+0.5} AND date > '2021-01-01'",
+# 						limit=5000)
+
+crime_df = pd.DataFrame.from_dict(results)
 
 
-crime_data = client.get("ijzp-q8t2", limit=5000)
-crime_df = pd.DataFrame.from_dict(crime_data)
+crime_df['date_conv']= crime_df.apply(lambda x: date_convert(x.date), axis=1)
+crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
+crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
+crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
+
 
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
 
-# for x in all_results.index:
+for x in all_results.index:
 
 
 #For crime score lets aggregate the types of crimes and assign them with a point value. 
 #guns, drugs, murder, theft, human
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # %%
 
