@@ -391,7 +391,7 @@ for idx in in_outer_area.index:
 #? - Change location of postdate extraction
 #? - Pull crime data from data.cityofchicago.org
 #? - Aggregate a crime scoring for each property based on previous crimes that were
-	#? - Within a half a mile radius
+	#? - Within a mile radius
 		#? = Use haversine 
 	#? - Isolate serious crimes (Felonies, guncrimes, domestic violence)
 
@@ -414,27 +414,55 @@ for idx in in_outer_area.index:
 # %%
 #Testing Socrata API
 
+#! DELETE ME AFTER YOU'RE DONE PLAYING AROUND YOU WHACKO
+def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
+	from math import radians, cos, sin, asin, sqrt
+	"""[Uses the haversine formula to calculate the distance between 
+	two points on a sphere]
 
+	Args:
+		lat1 (float): [latitude of first point]
+		lon1 (float): [longitude of first point]
+		lat2 (float): [latitude of second point]
+		lon2 (float): [latitue of second point]
+
+	Returns:
+		float: [Distance between two GPS points in miles]
+
+	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
+	"""	
+	# convert decimal degrees to radians 
+	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+	# haversine formula 
+	dlon = lon2 - lon1 
+	dlat = lat2 - lat1 
+	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+	c = 2 * asin(sqrt(a)) 
+	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
+	return c * r
 
 def date_convert(time_big:pd.Series)->(datetime, datetime):
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
 
 
-def crime_score(lat1, lon1)->int:
-	lat1 = 41.906206
-	lon1 = -87.687013
-	client = Socrata("data.cityofchicago.org",
-					 app_token)
+def crime_score(lat1:float, lon1:float) -> dict:
+	with open('../secret/chicagodata.txt') as login_file:
+		login = login_file.read().splitlines()
+		app_token = login[0].split(':')[1]
+		
+	client = Socrata("data.cityofchicago.org", app_token)
 
 	#Search radius is 0.91 miles
-	#TODO - Set date range to variable of 1 year ago from today.
-		#Will give you the ability to generate another request if we haven't gone far enough.
+	#Sets lookback to 1 year from today
+
+	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
 
 	results = client.get("ijzp-q8t2",
 						select="id, date, description, latitude, longitude, primary_type ",
-						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
-						limit=50000)
+						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > {ze_date} ",
+						limit=800000)
 
 	crime_df = pd.DataFrame.from_dict(results)
 	crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
@@ -442,9 +470,19 @@ def crime_score(lat1, lon1)->int:
 	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
 	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 
-	while crime_df
+	crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, x.latitude, x.longitude), axis=1)
+	
+	#Check the last dates record.  If its not within the last year, 
+	#make another request until we hit that date. 
+		# Don't forget to filter any data that may come in extra. 
+
+	date_check = crime_df.date_short.min()
+	if date_check > datetime.date.today() - datetime.timedelta(days=365):
+		#TODO Need to figure out how to remake the request if i hit the 800k limit. 
+		raise ValueError('Yo Query needeth be BIGGER')
+
 	#Checking memory consumption
-	#crime_df.memory_usage(deep=True) / 1_000_000
+	#sum(crime_df.memory_usage(deep=True) / 1_000_000)
 	#Req 500k records costs you about 21.7 MB
 
 	total_crimes = crime_df.shape[0]
@@ -455,9 +493,10 @@ def crime_score(lat1, lon1)->int:
 		'murder_score':0,
 		'perv_score':0,
 		'theft_score':0,
-		'violence_score':0
+		'violence_score':0,
+		'property_d_score':0
 	}
-		
+	#Example of primary_type categories
 	# THEFT                                918
 	# BATTERY                              787
 	# DECEPTIVE PRACTICE                   760
@@ -523,36 +562,24 @@ def crime_score(lat1, lon1)->int:
 		#humanViolence
 		if crime_df.loc[idx, 'primary_type'] in human_violence:
 			scores['violence_score'] += 1
+
 		#humanviolence subsearch
 		elif set(crime_df.loc[idx, 'description'].split()) & set(['CHILDREN']):
 			scores['violence_score'] += 1
 
+		#property damage
+		if crime_df.loc[idx, 'primary_type'] in ['CRIMINAL DAMAGE']:
+			scores['property_d_score'] += 1
+		
+		time.sleep(2)
+		
 	scores = {k:(v/total_count)*100 for k, v in scores.items()}
 	return scores
 
 
-with open('../secret/chicagodata.txt') as login_file:
-	login = login_file.read().splitlines()
-	app_token = login[0].split(':')[1]
-
-client = Socrata("data.cityofchicago.org",
-					app_token)
-
-results = client.get("ijzp-q8t2",
-						select="id, date, description, latitude, longitude, primary_type ",
-						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
-						limit=5000)
-
-crime_df = pd.DataFrame.from_dict(results)
-
-
-crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
-crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
-crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
-crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
-
-
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
+
+all_results['scores'] = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
 
 
 
@@ -596,21 +623,34 @@ all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, 
 
 
 # %%
+def date_convert(time_big:pd.Series)->(datetime, datetime):
+	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+	return dateOb
 
 
-	# client = Socrata("data.cityofchicago.org",
-	# 				 "",
-	# 				 username="",
-	# 				 password="")
+with open('../secret/chicagodata.txt') as login_file:
+	login = login_file.read().splitlines()
+	app_token = login[0].split(':')[1]
 
-	# results = client.get("ijzp-q8t2",
-	# 					 select="latitude, longitude, primary_type",
-	# 					 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1}",
-	# 					 limit=1000)
+lat1 = 41.911232
+lon1 = -87.682455
+client = Socrata("data.cityofchicago.org", app_token)
+#TODO: Format the date correctly for the SQL.  Means i need the date in single quotes. '2021-01-01'
 
-	# serious_crimes = 0
-	# for result in results:
-	# 	if result['primary_type'] in ['FELONY', 'GUN', 'DOMESTIC VIOLENCE']:
-	# 		serious_crimes += 1
+ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365)).replace("'", '"')
 
-	# return serious_crimes
+
+
+results = client.get("ijzp-q8t2",
+					 select="id, date, description, latitude, longitude, primary_type ",
+					 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
+					 limit=10000)
+
+
+crime_df = pd.DataFrame.from_dict(results)
+crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
+crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
+crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
+crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
+
+# %%
