@@ -270,12 +270,16 @@ for x in range(0, results.shape[0]):
 	if posting_info:
 		results.loc[x, 'postdate'] = posting_info.find('p', class_='postinginfo reveal').text[8:]
 	
+
 	#Get the distance to the closest L stop
 	min_dist = np.inf
 	min_idx = 0
 
+	#Set the coords
 	lat1 = float(results.loc[x, 'lat'])
 	lon1 = float(results.loc[x, 'lon'])
+
+	#Iterate through L stops
 	for L_stop_idx in L_stops.index:
 		lat2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[0])
 		lon2 = float(L_stops.loc[L_stop_idx, "Location"].strip("()").split(',')[1])
@@ -283,7 +287,7 @@ for x in range(0, results.shape[0]):
 		if dist < min_dist:
 			min_dist = round(dist, 2)
 			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
-
+			
 	results.loc[x, 'closest_L_stop'] = min_L_stop
 	results.loc[x, 'L_min_dist'] = min_dist
 
