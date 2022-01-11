@@ -336,7 +336,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 
 #Load data	
 # in_outer_area = pd.read_csv('../data/craigs_all.csv', delimiter=',')
-in_outer_area = results[results['in_search_area']==True]
+in_outer_area = results.copy()
 in_outer_area  = in_outer_area.astype(
 	{
 	'lat': float, 
@@ -351,10 +351,9 @@ in_outer_area  = in_outer_area.astype(
 L_stops = pd.read_csv('../data/CTA_Lstops.csv', delimiter=',')
 
 
-min_dist = np.inf
-min_idx = 0
-
 for idx in in_outer_area.index:
+	min_dist = np.inf
+	min_idx = 0
 	lat1 = in_outer_area.loc[idx, 'lat']
 	lon1 = in_outer_area.loc[idx, 'lon']
 	for L_stop_idx in L_stops.index:
@@ -364,10 +363,10 @@ for idx in in_outer_area.index:
 		if dist < min_dist:
 			min_dist = round(dist, 2)
 			min_L_stop = L_stops.loc[L_stop_idx, "STATION_NAME"]
+			continue
 
 	in_outer_area.loc[idx, 'closest_L_stop'] = min_L_stop
 	in_outer_area.loc[idx, 'L_min_dist'] = min_dist
-
 
 	# print(f'The closest station for property {in_outer_area.loc[idx, "address"]}') 
 	# print(f'Station {min_L_stop}: {min_dist} miles away')
@@ -437,6 +436,8 @@ def crime_score(lat1, lon1)->int:
 	serious_crimes = 0
 	noisy_fuckers = 0
 
+
+	
 	for result in results:
 		if result['primary_type'] in ['FELONY', 'GUN', 'DOMESTIC VIOLENCE']:
 			serious_crimes += 1
