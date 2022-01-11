@@ -451,19 +451,14 @@ client = Socrata("data.cityofchicago.org",
 					app_token)
 
 results = client.get("ijzp-q8t2",
-						select="latitude, longitude, primary_type, date",
+						select="id, date, description, latitude, longitude, primary_type ",
 						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
 						limit=5000)
-					
-# results = client.get("ijzp-q8t2",
-# 						select="latitude, longitude, primary_type, date",
-# 						where=f"latitude > {lat1-0.5} AND latitude < {lat1+0.5} AND longitude > {lon1-0.5} AND longitude < {lon1+0.5} AND date > '2021-01-01'",
-# 						limit=5000)
 
 crime_df = pd.DataFrame.from_dict(results)
 
 
-crime_df['date_conv']= crime_df.apply(lambda x: date_convert(x.date), axis=1)
+crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
 crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
 crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
 crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
