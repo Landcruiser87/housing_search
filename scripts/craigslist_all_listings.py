@@ -2,6 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+from sodapy import Socrata
 import numpy as np
 import pandas as pd
 import datetime
@@ -412,11 +413,11 @@ for idx in in_outer_area.index:
 
 # %%
 #Testing Socrata API
-from sodapy import Socrata
-import pandas as pd
+
+
 
 def date_convert(time_big:pd.Series)->(datetime, datetime):
-	dateOb = datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
 
 
@@ -468,6 +469,7 @@ crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
 
 for x in all_results.index:
+	pass
 
 
 #For crime score lets aggregate the types of crimes and assign them with a point value. 
