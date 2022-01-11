@@ -427,23 +427,109 @@ def crime_score(lat1, lon1)->int:
 	client = Socrata("data.cityofchicago.org",
 					 app_token)
 
+	#Search radius is 0.91 miles
+	#TODO - Set date range to variable of 1 year ago from today.
+		#Will give you the ability to generate another request if we haven't gone far enough.
+
 	results = client.get("ijzp-q8t2",
-						 select="latitude, longitude, primary_type, date",
-						 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
-						 limit=5000)
+						select="id, date, description, latitude, longitude, primary_type ",
+						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
+						limit=50000)
 
 	crime_df = pd.DataFrame.from_dict(results)
+	crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
+	crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
+	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
+	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 
-	serious_crimes = 0
-	noisy_fuckers = 0
+	while crime_df
+	#Checking memory consumption
+	#crime_df.memory_usage(deep=True) / 1_000_000
+	#Req 500k records costs you about 21.7 MB
 
+	total_crimes = crime_df.shape[0]
 
-	
-	for result in results:
-		if result['primary_type'] in ['FELONY', 'GUN', 'DOMESTIC VIOLENCE']:
-			serious_crimes += 1
+	scores = {
+		'drug_score':0,
+		'gun_score':0,
+		'murder_score':0,
+		'perv_score':0,
+		'theft_score':0,
+		'violence_score':0
+	}
+		
+	# THEFT                                918
+	# BATTERY                              787
+	# DECEPTIVE PRACTICE                   760
+	# CRIMINAL DAMAGE                      552z
+	# ASSAULT                              370
+	# OTHER OFFENSE                        285z
+	# MOTOR VEHICLE THEFT                  246
+	# ROBBERY                              243
+	# WEAPONS VIOLATION                    214
+	# NARCOTICS                            191
+	# BURGLARY                             166
+	# CRIMINAL TRESPASS                     92z
+	# OFFENSE INVOLVING CHILDREN            37
+	# CRIMINAL SEXUAL ASSAULT               27
+	# PUBLIC PEACE VIOLATION                20
+	# SEX OFFENSE                           20
+	# INTERFERENCE WITH PUBLIC OFFICER      18
+	# STALKING                              15
+	# HOMICIDE                              14
+	# ARSON                                 12
+	# LIQUOR LAW VIOLATION                   4
+	# PROSTITUTION                           3
+	# INTIMIDATION                           3
+	# CONCEALED CARRY LICENSE VIOLATION      1
+	# OBSCENITY                              1
+	# KIDNAPPING                             1
 
-	return serious_crimes
+	narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
+	guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
+	theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
+	sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
+	human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
+
+	for idx in crime_df.index:
+		#Drugs
+		if crime_df.loc[idx, 'primary_type'] in narcotics:
+			scores['drug_score'] += 1
+
+		#Guns
+		if crime_df.loc[idx, 'primary_type'] in guns:
+			scores['gun_score'] += 1
+ 
+		#Gun description subsearch if primary_type doesn't catch it.
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+			scores['gun_score'] += 1
+		
+		#Murder
+		if crime_df.loc[idx, 'primary_type'] in ['HOMICIDE']:
+			scores['murder_score'] += 1
+		
+		#Theft
+		if crime_df.loc[idx, 'primary_type'] in theft:
+			scores['theft_score'] =+ 1
+
+		#Sexual Crimes
+		if crime_df.loc[idx, 'primary_type'] in sex_crimes:
+			scores['perv_score'] += 1
+
+		#Sex Crimes subsearch
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['PEEPING TOM']):
+			scores['perv_score'] += 1
+
+		#humanViolence
+		if crime_df.loc[idx, 'primary_type'] in human_violence:
+			scores['violence_score'] += 1
+		#humanviolence subsearch
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['CHILDREN']):
+			scores['violence_score'] += 1
+
+	scores = {k:(v/total_count)*100 for k, v in scores.items()}
+	return scores
+
 
 with open('../secret/chicagodata.txt') as login_file:
 	login = login_file.read().splitlines()
@@ -468,12 +554,11 @@ crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
 
-for x in all_results.index:
-	pass
 
 
 #For crime score lets aggregate the types of crimes and assign them with a point value. 
 #guns, drugs, murder, theft, human
+
 
 
 
