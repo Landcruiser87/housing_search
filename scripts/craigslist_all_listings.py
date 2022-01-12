@@ -562,7 +562,12 @@ score_dict = {}
 
 # all_results.loc[0, 'lat'], all_results.loc[0, 'lon'])
 #TODO #change this to a for loop
-score_df = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+
+# score_df = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+
+for x in all_results.index:
+	score_df.append(crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon']))
+
 
 #%%
 all_results = pd.concat([all_results, score_df], axis=1)
