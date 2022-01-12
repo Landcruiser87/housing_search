@@ -548,42 +548,22 @@ def crime_score(lat1:float, lon1:float) -> dict:
 		
 	scores = {k:round((v/total_crimes)*100, 2) for k, v in scores.items()}
 
-	time.sleep(2)
+	time.sleep(1)
 	return pd.DataFrame.from_dict(scores, orient='index').T
 
-
+#Load in old data and add new cols for crimescore func
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=0)
-
-score_dict = {}
-# lat1 = 41.77419420717736
-# lon1 = -87.64587583871212
-# print(crime_score(lat1, lon1))
-
-
-# all_results.loc[0, 'lat'], all_results.loc[0, 'lon'])
-#TODO #change this to a for loop
-
-# score_df = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+newcols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score', 'violence_score','property_d_score']
+all_results[newcols] = np.nan
 
 for x in all_results.index:
-	score_df.append(crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon']))
+	scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
+	all_results.loc[x, newcols] = scores.loc[0, :]
+	print(f'{x}/{all_results.shape[0]}')
+	del scores
 
 
 #%%
-all_results = pd.concat([all_results, score_df], axis=1)
- 
-all_results.to_csv("../data/craigs_all.csv")
-
-
-#%%
-
-
-
-#For crime score lets aggregate the types of crimes and assign them with a point value. 
-#guns, drugs, murder, theft, human
-
-
-
 
 
 
