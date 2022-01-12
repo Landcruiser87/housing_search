@@ -496,33 +496,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 		'violence_score':0,
 		'property_d_score':0
 	}
-	#Example of primary_type categories
-	# THEFT                                918
-	# BATTERY                              787
-	# DECEPTIVE PRACTICE                   760
-	# CRIMINAL DAMAGE                      552z
-	# ASSAULT                              370
-	# OTHER OFFENSE                        285z
-	# MOTOR VEHICLE THEFT                  246
-	# ROBBERY                              243
-	# WEAPONS VIOLATION                    214
-	# NARCOTICS                            191
-	# BURGLARY                             166
-	# CRIMINAL TRESPASS                     92z
-	# OFFENSE INVOLVING CHILDREN            37
-	# CRIMINAL SEXUAL ASSAULT               27
-	# PUBLIC PEACE VIOLATION                20
-	# SEX OFFENSE                           20
-	# INTERFERENCE WITH PUBLIC OFFICER      18
-	# STALKING                              15
-	# HOMICIDE                              14
-	# ARSON                                 12
-	# LIQUOR LAW VIOLATION                   4
-	# PROSTITUTION                           3
-	# INTIMIDATION                           3
-	# CONCEALED CARRY LICENSE VIOLATION      1
-	# OBSCENITY                              1
-	# KIDNAPPING                             1
+
 
 	narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
 	guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
@@ -549,7 +523,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 		
 		#Theft
 		if crime_df.loc[idx, 'primary_type'] in theft:
-			scores['theft_score'] =+ 1
+			scores['theft_score'] += 1
 
 		#Sexual Crimes
 		if crime_df.loc[idx, 'primary_type'] in sex_crimes:
@@ -572,17 +546,23 @@ def crime_score(lat1:float, lon1:float) -> dict:
 			scores['property_d_score'] += 1
 		
 		
-	scores = {k:(v/total_crimes)*100 for k, v in scores.items()}
-	return scores
+	scores = {k:round((v/total_crimes)*100, 2) for k, v in scores.items()}
+
+	return pd.DataFrame.from_dict(scores, orient='index').T
 
 
 all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=0)
 
 score_dict = {}
+# lat1 = 41.77419420717736
+# lon1 = -87.64587583871212
+# print(crime_score(lat1, lon1))
 
-print(crime_score(all_results.loc[0, 'lat'], all_results.loc[0, 'lon']))
 
-# score_dict = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+# all_results.loc[0, 'lat'], all_results.loc[0, 'lon'])
+score_df = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+
+
 
 #%%
 
