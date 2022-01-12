@@ -461,7 +461,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 
 	results = client.get("ijzp-q8t2",
 						select="id, date, description, latitude, longitude, primary_type ",
-						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > {ze_date} ",
+						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
 						limit=800000)
 
 	crime_df = pd.DataFrame.from_dict(results)
@@ -622,35 +622,35 @@ all_results['scores'] = all_results.apply(lambda x: crime_score(x.lat, x.lon), a
 
 
 
-# %%
-def date_convert(time_big:pd.Series)->(datetime, datetime):
-	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
-	return dateOb
+# # %%
+# def date_convert(time_big:pd.Series)->(datetime, datetime):
+# 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+# 	return dateOb
 
 
-with open('../secret/chicagodata.txt') as login_file:
-	login = login_file.read().splitlines()
-	app_token = login[0].split(':')[1]
+# with open('../secret/chicagodata.txt') as login_file:
+# 	login = login_file.read().splitlines()
+# 	app_token = login[0].split(':')[1]
 
-lat1 = 41.911232
-lon1 = -87.682455
-client = Socrata("data.cityofchicago.org", app_token)
-#TODO: Format the date correctly for the SQL.  Means i need the date in single quotes. '2021-01-01'
+# lat1 = 41.911232
+# lon1 = -87.682455
+# client = Socrata("data.cityofchicago.org", app_token)
+# #TODO: Format the date correctly for the SQL.  Means i need the date in single quotes. '2021-01-01'
 
-ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365)).replace("'", '"')
-
-
-
-results = client.get("ijzp-q8t2",
-					 select="id, date, description, latitude, longitude, primary_type ",
-					 where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '2021-01-01'",
-					 limit=10000)
+# ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365)).replace("'", '"')
 
 
-crime_df = pd.DataFrame.from_dict(results)
-crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
-crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
-crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
-crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
+
+# results = client.get("ijzp-q8t2",
+# 	select="id, date, description, latitude, longitude, primary_type ",
+# 	where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
+# 	limit=800000)
+
+
+# crime_df = pd.DataFrame.from_dict(results)
+# crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
+# crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
+# crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
+# crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 
 # %%
