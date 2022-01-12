@@ -470,7 +470,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
 	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 
-	crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, x.latitude, x.longitude), axis=1)
+	crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
 	
 	#Check the last dates record.  If its not within the last year, 
 	#make another request until we hit that date. 
@@ -571,15 +571,20 @@ def crime_score(lat1:float, lon1:float) -> dict:
 		if crime_df.loc[idx, 'primary_type'] in ['CRIMINAL DAMAGE']:
 			scores['property_d_score'] += 1
 		
-		time.sleep(2)
 		
-	scores = {k:(v/total_count)*100 for k, v in scores.items()}
+	scores = {k:(v/total_crimes)*100 for k, v in scores.items()}
 	return scores
 
 
-all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=-0)
+all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, header=0)
 
-all_results['scores'] = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+score_dict = {}
+
+print(crime_score(all_results.loc[0, 'lat'], all_results.loc[0, 'lon']))
+
+# score_dict = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
+
+#%%
 
 
 
