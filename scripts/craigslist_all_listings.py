@@ -556,10 +556,12 @@ all_results = pd.read_csv("../data/craigs_all.csv", delimiter=',', index_col=0, 
 newcols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score', 'violence_score','property_d_score']
 all_results[newcols] = np.nan
 
-for x in all_results.index:
+#Insert a timing function here.  tqdm maybe for funzies
+for x in all_results.index[:5]:
+	t = time.process_time()
 	scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
 	all_results.loc[x, newcols] = scores.loc[0, :]
-	print(f'{x}/{all_results.shape[0]}')
+	print(f'{x}/{all_results.shape[0]} in {round(time.process_time()-t, 2)}')
 	del scores
 
 
