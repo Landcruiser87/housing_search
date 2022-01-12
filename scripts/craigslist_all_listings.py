@@ -548,6 +548,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 		
 	scores = {k:round((v/total_crimes)*100, 2) for k, v in scores.items()}
 
+	time.sleep(2)
 	return pd.DataFrame.from_dict(scores, orient='index').T
 
 
@@ -560,8 +561,13 @@ score_dict = {}
 
 
 # all_results.loc[0, 'lat'], all_results.loc[0, 'lon'])
+#TODO #change this to a for loop
 score_df = all_results.apply(lambda x: crime_score(x.lat, x.lon), axis=1)
 
+#%%
+all_results = pd.concat([all_results, score_df], axis=1)
+ 
+all_results.to_csv("../data/craigs_all.csv")
 
 
 #%%
