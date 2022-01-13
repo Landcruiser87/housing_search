@@ -531,7 +531,7 @@ newcols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score
 all_results[newcols] = np.nan
 
 #Insert a timing function here.  tqdm maybe for funzies
-for x in all_results.index[:337]:
+for x in all_results.index[250:351]:
 	try:
 		t = time.process_time()
 		scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
@@ -540,10 +540,12 @@ for x in all_results.index[:337]:
 		del scores
 	except:
 		print(f'{x}/{all_results.shape[0]} failed')
-	
-#%%
+
+
 
 all_results.to_csv('../data/craigs_all.csv')
+
+#%%
 
 #%%
 

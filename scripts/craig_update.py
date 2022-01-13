@@ -259,7 +259,7 @@ headers = {
 	'Accept-Language': 'en-US,en;q=0.9',
 }
 
-
+#Change these to suit your housing requirements
 params = (
     ('hasPic', '1'),
     ('postedToday', '1'),
@@ -284,7 +284,7 @@ if response.status_code != 200:
 #Get the HTML
 bs4ob = BeautifulSoup(response.text, 'lxml')
 
-# Need to iterate the total number of pages.  
+# Get the total number of pages.  
 totalcount = int(bs4ob.find('span', class_='totalcount').text)
 
 links, ids, price, hood, title, = [], [], [], [], []
@@ -415,6 +415,7 @@ for x in range(0, results.shape[0]):
 	results.loc[x, 'closest_L_stop'] = min_L_stop
 	results.loc[x, 'L_min_dist'] = min_dist
 
+	#Get the crime data for a 1 mile radius, 1 year back
 	crimescores = crime_score(lat1, lon1)
 	crimecols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score', 'violence_score','property_d_score']
 	results.loc[x,  crimecols] = crimescores.loc[0, :]
