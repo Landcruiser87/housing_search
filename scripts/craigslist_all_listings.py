@@ -413,35 +413,6 @@ for idx in in_outer_area.index:
 
 # %%
 #Testing Socrata API
-
-#! DELETE ME AFTER YOU'RE DONE PLAYING AROUND YOU WHACKO
-def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
-	from math import radians, cos, sin, asin, sqrt
-	"""[Uses the haversine formula to calculate the distance between 
-	two points on a sphere]
-
-	Args:
-		lat1 (float): [latitude of first point]
-		lon1 (float): [longitude of first point]
-		lat2 (float): [latitude of second point]
-		lon2 (float): [latitue of second point]
-
-	Returns:
-		float: [Distance between two GPS points in miles]
-
-	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
-	"""	
-	# convert decimal degrees to radians 
-	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-
-	# haversine formula 
-	dlon = lon2 - lon1 
-	dlat = lat2 - lat1 
-	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-	c = 2 * asin(sqrt(a)) 
-	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
-	return c * r
-
 def date_convert(time_big:pd.Series)->(datetime, datetime):
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
@@ -464,13 +435,16 @@ def crime_score(lat1:float, lon1:float) -> dict:
 						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
 						limit=800000)
 
+	#TODO Significant slowdown on 5 lines below.  Maybe think of a faster way to do this
 	crime_df = pd.DataFrame.from_dict(results)
 	crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
 	crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
 	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
 	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
-
-	crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
+	
+	#?Keep
+	#Just realized i don't need this.  Keeping in case i want to do a danger by distance metric
+	#crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
 	
 	#Check the last dates record.  If its not within the last year, 
 	#make another request until we hit that date. 
@@ -557,19 +531,21 @@ newcols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score
 all_results[newcols] = np.nan
 
 #Insert a timing function here.  tqdm maybe for funzies
-for x in all_results.index[:5]:
-	t = time.process_time()
-	scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
-	all_results.loc[x, newcols] = scores.loc[0, :]
-	print(f'{x}/{all_results.shape[0]} in {round(time.process_time()-t, 2)}')
-	del scores
-
-
+for x in all_results.index[340:]:
+	try:
+		t = time.process_time()
+		scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
+		all_results.loc[x, newcols] = scores.loc[0, :]
+		print(f'{x}/{all_results.shape[0]} in {round(time.process_time()-t, 2)}')
+		del scores
+	except:
+		pass
+	
 #%%
 
+all_results.to_csv('../data/craigs_all.csv')
 
-
-
+#%%
 
 
 
