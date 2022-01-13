@@ -3,10 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-from datetime import date, datetime
+import datetime
 import time
 from support import send_email, haversine_distance
-
+from sodapy import Socrata
 
 def get_listings(bs4ob)->list:
 	"""[summary]
@@ -95,6 +95,130 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 			return True
 
 	return False
+def date_convert(time_big:pd.Series)->(datetime, datetime):
+	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+	return dateOb
+
+
+def crime_score(lat1:float, lon1:float) -> pd.Series:
+	"""[Connects to data.cityofchicago.org and pulls down all the 
+	crime data for the last year, in a 1 mile radius.  It then recategorizes
+	the crimes into scores based on the percentage of total crime in that area.]
+
+	Args:
+		lat1 (float): [Lattitude of the listing we want to check]
+		lon1 (float): [Longitude of the listing we want to check]
+
+	Raises:
+		ValueError: [Check to make sure we got a years worth of data]
+
+	Returns:
+		pd.Series: [Scores for each listing]
+	"""	
+	with open('./secret/chicagodata.txt') as login_file:
+		login = login_file.read().splitlines()
+		app_token = login[0].split(':')[1]
+		
+	client = Socrata("data.cityofchicago.org", app_token)
+
+	#Search radius is 0.91 miles
+	#Sets lookback to 1 year from today
+
+	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
+
+	results = client.get("ijzp-q8t2",
+						select="id, date, description, latitude, longitude, primary_type ",
+						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
+						limit=800000)
+
+	#TODO Significant slowdown on 5 lines below.  Maybe think of a faster way to do this
+	crime_df = pd.DataFrame.from_dict(results)
+	crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
+	crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
+	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
+	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
+	
+	#?Keep
+	#Just realized i don't need this.  Keeping in case i want to do a metric of danger by distance metric
+	#crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
+	
+	#Check the last dates record.  If its not within the last year, 
+	#make another request until we hit that date. 
+		# Don't forget to filter any data that may come in extra. 
+
+	date_check = crime_df.date_short.min()
+	if date_check > datetime.date.today() - datetime.timedelta(days=365):
+		#TODO Need to figure out how to remake the request if i hit the 800k limit. 
+		raise ValueError('Yo Query needeth be BIGGER')
+
+	#Checking memory consumption
+	#sum(crime_df.memory_usage(deep=True) / 1_000_000)
+	#Req 500k records costs you about 21.7 MB
+
+	total_crimes = crime_df.shape[0]
+
+	scores = {
+		'drug_score':0,
+		'gun_score':0,
+		'murder_score':0,
+		'perv_score':0,
+		'theft_score':0,
+		'violence_score':0,
+		'property_d_score':0
+	}
+
+
+	narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
+	guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
+	theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
+	sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
+	human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
+
+	for idx in crime_df.index:
+		#Drugs
+		if crime_df.loc[idx, 'primary_type'] in narcotics:
+			scores['drug_score'] += 1
+
+		#Guns
+		if crime_df.loc[idx, 'primary_type'] in guns:
+			scores['gun_score'] += 1
+ 
+		#Gun description subsearch if primary_type doesn't catch it.
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+			scores['gun_score'] += 1
+		
+		#Murder
+		if crime_df.loc[idx, 'primary_type'] in ['HOMICIDE']:
+			scores['murder_score'] += 1
+		
+		#Theft
+		if crime_df.loc[idx, 'primary_type'] in theft:
+			scores['theft_score'] += 1
+
+		#Sexual Crimes
+		if crime_df.loc[idx, 'primary_type'] in sex_crimes:
+			scores['perv_score'] += 1
+
+		#Sex Crimes subsearch
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['PEEPING TOM']):
+			scores['perv_score'] += 1
+
+		#humanViolence
+		if crime_df.loc[idx, 'primary_type'] in human_violence:
+			scores['violence_score'] += 1
+
+		#humanviolence subsearch
+		elif set(crime_df.loc[idx, 'description'].split()) & set(['CHILDREN']):
+			scores['violence_score'] += 1
+
+		#property damage
+		if crime_df.loc[idx, 'primary_type'] in ['CRIMINAL DAMAGE']:
+			scores['property_d_score'] += 1
+		
+		
+	scores = {k:round((v/total_crimes)*100, 2) for k, v in scores.items()}
+	return pd.DataFrame.from_dict(scores, orient='index').T
+
 
 # def inner_neighborhood(lat:float, lon:float)->str:
 # 	"""[Function to determine the smaller neighborhood within a given boundary.
@@ -290,6 +414,10 @@ for x in range(0, results.shape[0]):
 			
 	results.loc[x, 'closest_L_stop'] = min_L_stop
 	results.loc[x, 'L_min_dist'] = min_dist
+
+	crimescores = crime_score(lat1, lon1)
+	crimecols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score', 'violence_score','property_d_score']
+	results.loc[x,  crimecols] = crimescores.loc[0, :]
 
 	#If its in the search area, add it to the csv
 	# if results.loc[x, 'in_search_area'] == True:

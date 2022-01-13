@@ -443,7 +443,7 @@ def crime_score(lat1:float, lon1:float) -> dict:
 	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
 	
 	#?Keep
-	#Just realized i don't need this.  Keeping in case i want to do a danger by distance metric
+	#Just realized i don't need this.  Keeping in case i want to do a metric of danger by distance metric
 	#crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
 	
 	#Check the last dates record.  If its not within the last year, 
@@ -531,7 +531,7 @@ newcols = ['drug_score', 'gun_score', 'murder_score', 'perv_score', 'theft_score
 all_results[newcols] = np.nan
 
 #Insert a timing function here.  tqdm maybe for funzies
-for x in all_results.index[340:]:
+for x in all_results.index[:337]:
 	try:
 		t = time.process_time()
 		scores = crime_score(all_results.loc[x, 'lat'], all_results.loc[x, 'lon'])
@@ -539,7 +539,7 @@ for x in all_results.index[340:]:
 		print(f'{x}/{all_results.shape[0]} in {round(time.process_time()-t, 2)}')
 		del scores
 	except:
-		pass
+		print(f'{x}/{all_results.shape[0]} failed')
 	
 #%%
 
