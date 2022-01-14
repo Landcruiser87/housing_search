@@ -9,7 +9,7 @@ from support import send_email, haversine_distance
 from sodapy import Socrata
 
 def get_listings(bs4ob)->list:
-	"""[summary]
+	"""[Gets the list of links to the individual postings]
 
 	Args:
 		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
@@ -25,7 +25,7 @@ def get_listings(bs4ob)->list:
 	return links
 
 def get_posting_ids(bs4ob, links:list)->list:
-	"""[Get the posting id's from the link list]
+	"""[Strips the posting id's from the link list]
 
 	Args:
 		bs4ob ([Beautiful Soup Object]): [html of the craigslist summary page]

@@ -541,7 +541,8 @@ for x in all_results.index[250:351]:
 	except:
 		print(f'{x}/{all_results.shape[0]} failed')
 
-
+#Checkin NA's
+# list(np.where(all_results['theft_score'].isna()))
 
 all_results.to_csv('../data/craigs_all.csv')
 
