@@ -8,15 +8,16 @@ import pandas as pd
 import datetime
 import time
 
-def get_listings(bs4ob)->list:
+def get_listings(bs4ob, var1, var2)->(list, list):
 	"""[summary]
 
 	Args:
-		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
+		bs4ob ([type]): [description]
+		list ([type]): [description]
 
 	Returns:
-		list: [all the links in the summary page]
-	"""	
+		[type]: [description]
+	"""
 	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
 		links.append(link.get('href'))
 	return links
