@@ -216,7 +216,7 @@ def crime_score(lat1:float, lon1:float) -> pd.Series:
 			scores['property_d_score'] += 1
 		
 		
-	scores = {k:round((v/total_crimes)*100, 2) for k, v in scores.items()}
+	scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
 	return pd.DataFrame.from_dict(scores, orient='index').T
 
 
