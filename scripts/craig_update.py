@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import time
-from support import send_email, haversine_distance
+from support import send_housing_email, haversine_distance
 from sodapy import Socrata
 
 def get_listings(bs4ob)->list:
@@ -428,7 +428,7 @@ for x in range(0, results.shape[0]):
 	all_results = all_results.append(results.loc[x, :])
 	
 	#Send the email
-	send_email(results.loc[x, 'link'])
+	send_housing_email(results.loc[x, 'link'])
 
 	#take a nap
 	time.sleep(np.random.randint(5, 13))
