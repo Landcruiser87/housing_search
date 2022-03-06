@@ -231,7 +231,7 @@ for x in range(0, results.shape[0]):
 	print(f'New KB found at {results.loc[x, "link"]}')
 
 	#Insert new record into all_results
-	all_results = data_check.append(results.loc[x, :])
+	all_results = all_results.append(results.loc[x, :])
 	
 	#Send the email
 	support.send_search_email(results.loc[x, 'link'])
