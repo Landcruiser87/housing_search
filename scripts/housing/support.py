@@ -51,9 +51,9 @@ def send_housing_email(url:str):
 		"""
 		<html>
 			<body>
-				<p>Oh haroo,<br>
+				<p>Helloooooooooo!<br>
 				You have a new house to look at! <br>
-				<a href={0}>Click on that craig link</a> 
+				<a href={0}>Click on that link</a> 
 				</p>
 			</body>
 		</html>
@@ -86,7 +86,7 @@ def send_housing_email(url:str):
 		server.sendmail(sender_email, receiver_email, message.as_string())
 		print("Email sent!")
 
-
+#TODO - Use SOURCE as input here
 def send_search_email(url:str):
 	"""[Function for sending an email.  Inputs the url into the docstrings 
 	via decorator for easy formatting of the HTML body of an email.]

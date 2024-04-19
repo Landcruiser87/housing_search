@@ -27,14 +27,19 @@ Datasets are kept in the data folder.
 - Store credentials in a text file under a `/secret` folder you'll need to create.
   
 ### Workflow - Rewrite
-- [ ] 
+- 1. Main file will run indivdiual sub scripts for each source.  (Makes failure tracing easier)
+- 2. For each source, pull off relevant info for each listing.  
+  	Makes sure to use info that's common to all sources. 
+	Store any extra data you find in a text field for cos sim probably
+- 3. 
 
 ### Sites to search
-- [] - [Zillow.com](https://www.zillow.com)
-- x - [craigslist.com](https://www.craiglist.org)
-- [] - [rent.com](https://www.rent.com)
+- [ ] - [craigslist](https://www.craiglist.org)
+- [ ] - [zillow](https://www.zillow.com)
+- [ ] - [rent.com](https://www.rent.com)
+- [ ] - [apartments.com](https://www.apartments.com)
+
 
 ### External Data Sources
 - [CTA L stops](https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/data)
 - [CTA Crime data](https://data.cityofchicago.org/Public-Safety/Gun-Crimes-Heat-Map/iinq-m3rg)
-- 
