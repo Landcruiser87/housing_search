@@ -26,11 +26,8 @@ Datasets are kept in the data folder.
 - Generate an App password for the account
 - Store credentials in a text file under a `/secret` folder you'll need to create.
   
-### Workflow
-- Main Driver code is inoperational at the moment.  So. 
-- In order to run.  run craigslist_all_listings.py
-- Then set up a task scheduler/cron job to run the craig_update.py script every hour.
-
+### Workflow - Rewrite
+- [ ] 
 
 ### Sites to search
 - [] - [Zillow.com](https://www.zillow.com)

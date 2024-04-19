@@ -35,7 +35,7 @@ def get_posting_ids(bs4ob, links:list)->list:
 		ids.append(int(link.split("/")[-1].strip(".html")))
 	return ids
 
-def get_meta_data(bs4ob, ids:list)->(list, list, list):
+def get_meta_data(bs4ob, ids:list)->tuple:
 	"""[Extract the meta data from the craiglist summary page]
 
 	Args:
@@ -100,6 +100,7 @@ response = requests.get(url, headers=headers, params=params)
 if response.status_code != 200:
 	print(f'Status code: {response.status_code}')
 	print(f'Reason: {response.reason}')
+	
 
 #Request order
 	# 1. Request first page to get total count of listings. 
