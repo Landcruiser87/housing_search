@@ -76,19 +76,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			address=addy
 		)
 		listings.append(listing)
-# class Propertyinfo():
-# 	id       : int
-# 	source   : str
-# 	title    : str
-# 	price    : str
-# 	neigh    : str
-# 	bed      : float
-# 	sqft     : float
-# 	bath     : float
-# 	dogs     : bool
-# 	link     : str
-# 	address  : str
-# 	dt_listed: datetime.datetime
+
+	return listings
 
 def money_launderer(price:list)->list:
 	"""[Strips dollar signs and comma from the price]

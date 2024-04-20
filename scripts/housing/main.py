@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import logging
 import datetime
+import time
 from rich.logging import RichHandler
 from dataclasses import dataclass
 
@@ -80,6 +81,7 @@ def scrape(neigh:str):
 		site = SOURCES.get(source)
 		if site:
 			logger.info(f"scraping {site[0]} for {neigh}")
+			time.sleep(2)
 			if isinstance(neigh, str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 			# elif isinstance(neigh, int):
