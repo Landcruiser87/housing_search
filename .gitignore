@@ -3,3 +3,4 @@
 secret/*
 scrap/*
 scripts/__pycache__/*
+scripts/housing/__pycache__/*
