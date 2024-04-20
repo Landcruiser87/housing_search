@@ -77,20 +77,6 @@ def money_launderer(price:list)->float:
 		return float(price.replace("$", "").replace(",", ""))
 	return price
 
-
-def captain_comma(sqft:str)->float:
-	"""[Strips comma from sqft]
-
-	Args:
-		sqft (str): square footage string
-
-	Returns:
-		sqft (float): removes comma so it can be a float!
-	"""	
-	if isinstance(sqft, str):
-		return float(sqft.replace(",", ""))
-	return sqft
-
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	#Return a list of dataclasses
 	#TODO dict of neighborthoods exact mapping

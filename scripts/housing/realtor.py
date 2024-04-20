@@ -37,6 +37,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		#grab the beds, baths, pets
 		for search in card.find_all("ul"):
 			if search.get("data-testid") == "card-meta":
+				sqft = None
 				for subsearch in search.find_all("li"):
 					if subsearch.get("data-testid")=="property-meta-beds":
 						beds = float(subsearch.find("span").text)
@@ -54,7 +55,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 				address = addy.strip()
 		#Pets is already secured in the search query so we don't have to confirm it in the data.
 		pets = True
-	
+			
 		listing = Propertyinfo(
 			id=listingid,
 			source=source,
@@ -65,7 +66,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			bath=baths,
 			dogs=pets,
 			link=url,
-			address=addy
+			address=address
 		)
 		listings.append(listing)
 
