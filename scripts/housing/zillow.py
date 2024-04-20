@@ -1,5 +1,7 @@
-def scrape():
-	print("zillow!")
+import logging
+
+def neighscrape(neigh:str, logger:logging):
+	logger.info("zillow!")
 
 # #%%
 

@@ -27,11 +27,18 @@ Datasets are kept in the data folder.
 - Store credentials in a text file under a `/secret` folder you'll need to create.
   
 ### Workflow - Rewrite
-- 1. Main file will run indivdiual sub scripts for each source.  (Makes failure tracing easier)
-- 2. For each source, pull off relevant info for each listing.  
-  	Makes sure to use info that's common to all sources. 
-	Store any extra data you find in a text field for cos sim probably
-- 3. 
+1. Main file will run indivdiual sub scripts for each source.  (Makes failure tracing easier)
+2. For each source, pull off relevant info for each listing.  
+   - Makes sure to use info that's common to all sources. 
+   - Store any extra data you find in a text field for cos sim probably
+3. After each site / neighborhood retrieval.  Score the listings for these traits
+   - Crime score
+   - Walk score
+   - area mean difference (score these against anything you have saved previously)
+   - area median difference
+4. Send support email with any new links that aren't saved already. 
+   
+5. 
 
 ### Sites to search
 - [ ] - [craigslist](https://www.craiglist.org)
