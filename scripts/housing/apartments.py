@@ -16,45 +16,38 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	listings = []
 	#Set the outer loop over each card returned. 
-	for card in result.find_all("div", class_="BasePropertyCard_propertyCardWrap__MiBHq"):
+	for card in result.find_all("article"):
 		#Grab the id
-		listingid = card.get("id")
-		listingid = listingid.replace("placeholder_property_", "")
+		listingid = card.get("data-listingid")
 
 		#First grab the link.
-		for link in card.find_all("a", class_="card-anchor"):
-			if link.get("href"):
-				url = source + link.get("href")
-				break
+		if card.get("data-url"):
+			url = card.get("data-url")
 		
-		#grab the price
-		for search in card.find_all("div", class_="price-wrapper"):
-			for subsearch in search.find_all("div"):
-				if subsearch.get("data-testid") == "card-price":
-					price = money_launderer(subsearch.text)
-					break
-		
-		#grab the beds, baths, pets
-		for search in card.find_all("ul"):
-			if search.get("data-testid") == "card-meta":
-				for subsearch in search.find_all("li"):
-					if subsearch.get("data-testid")=="property-meta-beds":
-						beds = float(subsearch.find("span").text)
-					elif subsearch.get("data-testid")=="property-meta-baths":
-						baths = float(subsearch.find("span").text)
-					elif subsearch.get("data-testid")=="property-meta-sqft":
-						sqft = float(captain_comma(subsearch.find("span", class_="meta-value").text))
-		
+		#grab the property info
+		for search in card.find_all("div", class_="property-info"):
+			#Grab price
+			for subsearch in search.find_all("div", class_="price-range"):
+				price = subsearch.text
+				price = money_launderer(price.split(" ")[0])
+			#Grab bed bath
+			for subsearch in search.find_all("div", class_="bed-range"):
+				beds = subsearch.text
+				beds, baths = beds.split(",")
+				beds = float(beds.replace(" Beds", ""))
+				if "Baths" in baths:
+					baths = float(baths.replace(" Baths", ""))
+				elif "Bath" in baths:
+					baths = float(baths.replace(" Bath", ""))
+
 		#grab address
-		for search in card.find_all("div", class_="card-address truncate-line"):
-			if search.get("data-testid") == "card-address":
-				addy = ""
-				for subsearch in search.find_all("div", class_="truncate-line"):
-					addy += subsearch.text + " "
-				address = addy.strip()
-		#Pets is already secured in the search query so we don't have to confirm it in the data.
+		for search in card.find_all("a", class_="property-link"):
+			if search.get("aria-label"):
+				addy = search.get("aria-label")
+			
 		pets = True
-	
+		sqft = None
+
 		listing = Propertyinfo(
 			id=listingid,
 			source=source,
@@ -128,9 +121,9 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
 	# surrounding.  Just the neighborhood)
-	results = bs4ob.find("section", class_="PropertiesList_propertiesContainer__ncXi8 PropertiesList_listViewGrid__kkBix")
+	results = bs4ob.find("div", class_="placardContainer")
 	if results:
-		if results.attrs['data-testid']=='property-list':
+		if results.get("id") =='placardContainer':
 			property_listings = get_listings(results, neigh, source, Propertyinfo)
 			return property_listings
 		
