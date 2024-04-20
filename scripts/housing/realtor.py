@@ -79,7 +79,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	return listings
 
-def money_launderer(price:list)->list:
+def money_launderer(price:list)->float:
 	"""[Strips dollar signs and comma from the price]
 
 	Args:

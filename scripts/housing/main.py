@@ -81,12 +81,14 @@ def scrape(neigh:str):
 		site = SOURCES.get(source)
 		if site:
 			logger.info(f"scraping {site[0]} for {neigh}")
-			time.sleep(2)
+			
 			if isinstance(neigh, str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+				time.sleep(2)
 			# elif isinstance(neigh, int):
 			# 	data = site[1].zipscrape(neigh, logger, Propertyinfo)
-
+				# time.sleep(2)
+	
 			#TODO - Need a way to score the listings
 			# score(data)
    
