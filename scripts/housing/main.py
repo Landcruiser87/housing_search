@@ -76,7 +76,7 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	sources = ["apartments", "realtor", "zillow", "craigs"]
+	sources = ["zillow", "apartments", "realtor", "craigs"]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -85,15 +85,19 @@ def scrape(neigh:str):
 			if isinstance(neigh, str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 				time.sleep(2)
-				
+
 			# elif isinstance(neigh, int):
 			# 	data = site[1].zipscrape(neigh, logger, Propertyinfo)
 				# time.sleep(2)
-	
+
+			#TODO - Check previous listings. 
+				#Need a function to go through the JSON id's and find / add any
+				#new ones to newlistings gb variable
+
 			#TODO - Need a way to score the listings
 			# score(data)
    
-			#check for new results to add
+			#add new data to storage json
 			add_data(data, (site[0], neigh))
 		else:
 			logger.warning(f"source: {source} is invalid")

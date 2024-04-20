@@ -1,90 +1,139 @@
 import logging
+from bs4 import BeautifulSoup
+import numpy as np
+import pandas as pd
+import requests
 
-def neighscrape(neigh:str, logger:logging):
-	logger.info("zillow!")
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
+	"""[Gets the list of links to the individual postings]
 
-# #%%
+	Args:
+		bs4ob ([BeautifulSoup object]): [html of realtor page]
 
-# import requests
-# import numpy as np
-# import pandas as pd
-# import json
-# from datetime import date, datetime
-# import time
-# import sys
-# import os
+	Returns:
+		properties (list[Propertyinfo]): [all the links in the summary page]
+	"""
 
-# #%%
+	listings = []
+	#Set the outer loop over each card returned. 
+	for card in result.find_all("article"):
+		#Grab the id
+		listingid = card.get("data-listingid")
+
+		#First grab the link.
+		if card.get("data-url"):
+			url = card.get("data-url")
+		
+		#grab the property info
+		for search in card.find_all("div", class_="property-info"):
+			#Grab price
+			for subsearch in search.find_all("div", class_="price-range"):
+				price = subsearch.text
+				price = money_launderer(price.split(" ")[0])
+			#Grab bed bath
+			for subsearch in search.find_all("div", class_="bed-range"):
+				beds = subsearch.text
+				beds, baths = beds.split(",")
+				beds = float(beds.replace(" Beds", ""))
+				if "Baths" in baths:
+					baths = float(baths.replace(" Baths", ""))
+				elif "Bath" in baths:
+					baths = float(baths.replace(" Bath", ""))
+
+		#grab address
+		for search in card.find_all("a", class_="property-link"):
+			if search.get("aria-label"):
+				addy = search.get("aria-label")
+			
+		pets = True
+		sqft = None
+
+		listing = Propertyinfo(
+			id=listingid,
+			source=source,
+			price=price,
+			neigh=neigh,
+			bed=beds,
+			sqft=sqft,
+			bath=baths,
+			dogs=pets,
+			link=url,
+			address=addy
+		)
+		listings.append(listing)
+
+	return listings
+
+def money_launderer(price:list)->float:
+	"""[Strips dollar signs and comma from the price]
+
+	Args:
+		price (list): [list of prices as strs]
+
+	Returns:
+		price (list): [list of prices as floats]
+	"""	
+	if isinstance(price, str):
+		return float(price.replace("$", "").replace(",", ""))
+	return price
+
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
+	if " " in neigh:
+		neigh = "-".join(neigh.split(" "))
+	neigh = neigh.lower()
+	headers = {
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'referer': 'https://www.zillow.com/chicago-il/rentals/',
+		'origin':'https://www.zillow.com',
+	}
+	params = (
+    ('region', neigh.lower()),
+	('fr',     True),
+	('fsba',   False),
+	('fsbo',   False),
+	('nc',     False),
+	('cmsn',   False),
+	('auc',    False),
+	('fore',   False),
+    ('con',    False),
+	('ah',     True),
+	('apa',    False),
+	('apco',   False),
+    ('ldog',   True),
+    ('sdog',   True),
+)
+	url = f"https://www.zillow.com/{neigh}-chicago-il/rentals/"
+          
+	response = requests.get(url, headers=headers, params=params)
+
+	#Just in case we piss someone off
+	if response.status_code != 200:
+		# If there's an error, log it and return no data for that site
+		logger.warning(f'Status code: {response.status_code}')
+		logger.warning(f'Reason: {response.reason}')
+		return None
+
+	#Get the HTML
+	bs4ob = BeautifulSoup(response.text, 'lxml')
+
+	# Isolate the property-list from the expanded one (I don't want the 3 mile
+	# surrounding.  Just the neighborhood)
+	results = bs4ob.find("div", class_="placardContainer")
+	if results:
+		if results.get("id") =='placardContainer':
+			property_listings = get_listings(results, neigh, source, Propertyinfo)
+			return property_listings
+		
+	else:
+		logger.warning("No listings returned.  Moving to next site")
+	
+	logger.info("apartments!")
+	#If it gets to here, then it didn't find any results
+	return None
 
 
 
-# state = 'IL'
-# zip = '60640'
-
-# #Before we start requesting , lets setup what neighborhoods we want to look in. 
-# url = 'https://www.zillow.com/homes/for_rent/Ravenswood,-Chicago,-IL_rb'
-
-# header = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
-#   'referer': 'https://www.zillow.com/homes/for_rent/Ravenswood,-Chicago,-IL_rb/?searchQueryState=%7B%22pagination'
-  
-# }
-
-# response_html = requests.get(url, headers=header)
-
-# from lxml import html
-
-# resp_html = html.fromstring(response_html.text)
-# html.open_in_browser(doc=resp_html, encoding='UTF-8')
-
-
-
-# #Notes on request.
-# # html format
-# # encoding - UTF-8
-
-
-# #%%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # #Results list
-# # results = []
-
-# # base_url = f'https://www.zillow.com/homes/Ravenswood,-Chicago,-IL_rb/'
-# # response = requests.get(base_url, headers = header )
-# # print(response.status_code)
-
-# # for city in cities:
-# # 	time.sleep(3)
-# # 	base_url = f'https://www.zillow.com/homes/{city},-Chicago,-IL_rb/'
-# # 	response = requests.get(base_url, headers = header )
-
-# # 	resp_json = response.json()
-# # 	results.append(resp_json)
-# # 	# print(resp_json)
-# # 	# print(resp_json['searchResults']['listResults'][0]['hdpUrl'])
-
-# #%%
+def zipscrape():
+	logger.info("apartments!")
+	#TODO build separate extraction for zip codes. 
+	
