@@ -1,10 +1,11 @@
+#Import libraries
 import numpy as np
 import pandas as pd
-from collections import Counter
 import logging
 import datetime
 from rich.logging import RichHandler
-from itertools import chain
+from dataclasses import dataclass
+
 #Import supporting files
 import craigslist_all_listings as craigs
 import realtor, zillow, apartments, support
@@ -50,19 +51,20 @@ SOURCES = {
 
 @dataclass
 class Propertyinfo():
-	id		 : int
+	id       : str
 	source   : str
-	title    : str
 	price    : str
 	neigh    : str
 	bed      : float
-	sqft     : float
 	bath     : float
 	dogs     : bool
 	link     : str
 	address  : str
-	amenities: object
-	dt_listed: datetime.datetime
+	title    : str = None
+	sqft     : float = None
+	# dt_listed: datetime.datetime
+	# amenities: object
+
 
 def add_data(data:pd.DataFrame, siteinfo:tuple):
 	#Add new dataset
@@ -73,34 +75,31 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	
-	
 	sources = ["realtor","apartments", "zillow", "craigs"]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
 			logger.info(f"scraping {site[0]} for {neigh}")
 			if isinstance(neigh, str):
-				data = site[1].neighscrape(neigh, logger, Propertyinfo)
-			elif isinstance(neigh, int):
-				data = site[1].zipscrape(neigh, logger, Propertyinfo)
+				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+			# elif isinstance(neigh, int):
+			# 	data = site[1].zipscrape(neigh, logger, Propertyinfo)
 
 			#TODO - Need a way to score the listings
 			# score(data)
+   
 			#check for new results to add
 			add_data(data, (site[0], neigh))
 		else:
 			logger.warning(f"source: {source} is invalid")
 			raise ValueError(f"site for {source} not loaded")
 
-#Driver code for data pull. 
+#Driver code 
 def main():
 	global newlistings
 	newlistings = []
-
 	for neigh in AREAS:
 		scrape(neigh)
-	
 	# for listing in newlistings:
 		# support.send_housing_email(listing)
 

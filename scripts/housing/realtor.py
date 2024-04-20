@@ -12,55 +12,84 @@ import requests
 # 	# 'Bowmanville',
 # ]
 
-def get_listings(bs4ob, links:list)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
 	"""[Gets the list of links to the individual postings]
 
 	Args:
-		bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
+		bs4ob ([BeautifulSoup object]): [html of realtor page]
 
 	Returns:
-		links (list): [all the links in the summary page]
-	"""	
-
-	for link in bs4ob.find_all('a', class_='result-title hdrlnk'):
-		if link.get('href').startswith("https://chicago.craigslist.org/chc"):
-			links.append(link.get('href'))
-	return links
-
-def get_posting_ids(bs4ob, links:list, ids:list)->list:
-	"""[Strips the posting id's from the link list]
-
-	Args:
-		bs4ob ([Beautiful Soup Object]): [html of the craigslist summary page]
-		links (list): [list of links to the individual postings]
-
-	Returns:
-		ids (list): [List of the posting id's]
-	"""	
-	for link in links:
-		ids.append(int(link.split("/")[-1].strip(".html")))
-	return ids
-
-def get_meta_data(bs4ob, ids:list, price, title, hood):
-	"""[Extract the meta data from the craiglist summary page]
-
-	Args:
-		bs4ob (BeautifulSoup object): [html of page]
-		ids (list): [id list of the listings]
-
-	Returns:
-		price, title, hood (list, list , list): [returns the basic info of posting on summary page]
+		properties (list[Propertyinfo]): [all the links in the summary page]
 	"""
-	for meta_data in bs4ob.find_all('div', class_='result-info'):
-		_tempid = int(meta_data.find('a', class_='result-title hdrlnk').get('data-id'))
-		if _tempid in ids:
-			price.append(money_launderer(meta_data.find('span', class_='result-price').text))
-			title.append(meta_data.find('a', class_='result-title hdrlnk').text)
-			hood.append(meta_data.find('span', class_='result-hood').text)
-			# postdatetime.append(meta_data.find('time', class_='result-date').get('datetime'))
-			# bedrooms.append(meta_data.find('span', class_='housing').text.strip())
-	return price, title, hood
+
+	listings = []
+	#Set the outer loop over each card returned. 
+	for card in result.find_all("div", class_="BasePropertyCard_propertyCardWrap__MiBHq"):
+		#Grab the id
+		listingid = card.get("id")
+		listingid = listingid.replace("placeholder_property_", "")
+
+		#First grab the link.
+		for link in card.find_all("a", class_="card-anchor"):
+			if link.get("href"):
+				url = source + link.get("href")
+				break
+		
+		#grab the price
+		for search in card.find_all("div", class_="price-wrapper"):
+			for subsearch in search.find_all("div"):
+				if subsearch.get("data-testid") == "card-price":
+					price = money_launderer(subsearch.text)
+					break
+		
+		#grab the beds, baths, pets
+		for search in card.find_all("ul"):
+			if search.get("data-testid") == "card-meta":
+				for subsearch in search.find_all("li"):
+					if subsearch.get("data-testid")=="property-meta-beds":
+						beds = float(subsearch.find("span").text)
+					elif subsearch.get("data-testid")=="property-meta-baths":
+						baths = float(subsearch.find("span").text)
+					elif subsearch.get("data-testid")=="property-meta-sqft":
+						sqft = float(captain_comma(subsearch.find("span", class_="meta-value").text))
+		
+		#grab address
+		for search in card.find_all("div", class_="card-address truncate-line"):
+			if search.get("data-testid") == "card-address":
+				addy = ""
+				for subsearch in search.find_all("div", class_="truncate-line"):
+					addy += subsearch.text + " "
+				address = addy.strip()
+		#Pets is already secured in the search query so we don't have to confirm it in the data.
+		pets = True
 	
+		listing = Propertyinfo(
+			id=listingid,
+			source=source,
+			price=price,
+			neigh=neigh,
+			bed=beds,
+			sqft=sqft,
+			bath=baths,
+			dogs=pets,
+			link=url,
+			address=addy
+		)
+		listings.append(listing)
+# class Propertyinfo():
+# 	id       : int
+# 	source   : str
+# 	title    : str
+# 	price    : str
+# 	neigh    : str
+# 	bed      : float
+# 	sqft     : float
+# 	bath     : float
+# 	dogs     : bool
+# 	link     : str
+# 	address  : str
+# 	dt_listed: datetime.datetime
+
 def money_launderer(price:list)->list:
 	"""[Strips dollar signs and comma from the price]
 
@@ -75,7 +104,21 @@ def money_launderer(price:list)->list:
 	return price
 
 
-def neighscrape(neigh:str, logger:logging, Propertyinfo):
+def captain_comma(sqft:str)->float:
+	"""[Strips comma from sqft]
+
+	Args:
+		sqft (str): square footage string
+
+	Returns:
+		sqft (float): removes comma so it can be a float!
+	"""	
+	if isinstance(sqft, str):
+		return float(sqft.replace(",", ""))
+	return sqft
+
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
+	#Return a list of dataclasses
 	#TODO dict of neighborthoods exact mapping
  
 
@@ -88,29 +131,35 @@ def neighscrape(neigh:str, logger:logging, Propertyinfo):
 		'origin':'https://www.realtor.com',
 	}
 
-	url = f"https://www.realtor.com/apartments/{neigh}_Chicago_IL/type-townhome,single-family-home/price-na-2600/dog-friendly"
+	url = f"https://www.realtor.com/apartments/{neigh}_Chicago_IL/type-townhome,single-family-home/beds-2/dog-friendly"
           
 	response = requests.get(url, headers=headers)
 
 	#Just in case we piss someone off
 	if response.status_code != 200:
+		# If there's an error, log it and return no data for that site
 		logger.warning(f'Status code: {response.status_code}')
 		logger.warning(f'Reason: {response.reason}')
-		return "Error in scraping"
+		return None
 
 	#Get the HTML
 	bs4ob = BeautifulSoup(response.text, 'lxml')
 
-	# Get the total number of pages.  
-	totalcount = bs4ob.find('div', class_='MatchProperties_totalMatchingProperties__a1MwL').text
-	totalcount = int(totalcount.split(" ")[0])
-
-	links, ids, price, hood, title, = [], [], [], [], []
-	links = get_listings(bs4ob)
-	ids = get_posting_ids(bs4ob, links)
-	price, title, hood = get_meta_data(bs4ob, ids, price, title, hood)
-
+	# Isolate the property-list from the expanded one (I don't want the 3 mile
+	# surrounding.  Just the neighborhood)
+	results = bs4ob.find("section", class_="PropertiesList_propertiesContainer__ncXi8 PropertiesList_listViewGrid__kkBix")
+	if results:
+		if results.attrs['data-testid']=='property-list':
+			property_listings = get_listings(results, neigh, source, Propertyinfo)
+			return property_listings
+		
+	else:
+		logger.warning("No listings returned.  Moving to next site")
+	
 	logger.info("realtor!!")
+	#If it gets to here, then it didn't find any results
+	return None
+
 
 
 def zipscrape():
