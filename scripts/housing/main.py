@@ -76,7 +76,7 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	sources = ["realtor","apartments", "zillow", "craigs"]
+	sources = ["apartments", "realtor", "zillow", "craigs"]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

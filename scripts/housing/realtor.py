@@ -4,14 +4,6 @@ import numpy as np
 import pandas as pd
 import requests
 
-# AREAS = [
-# 	'Ravenswood',
-# 	# 'Lincoln Square',
-# 	# 'Ravenswood Gardens',
-# 	# 'Budlong Woods',
-# 	# 'Bowmanville',
-# ]
-
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
 	"""[Gets the list of links to the individual postings]
 
