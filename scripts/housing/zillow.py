@@ -78,36 +78,23 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			url = None
 		if not "addy" in locals():
 			addy = None
-
 		
 		listing = Propertyinfo(
-			id=listingid,   #
+			id=listingid,   
 			source=source,
-			price=price,    #
+			price=price,    
 			neigh=neigh,
-			bed=beds,       #
-			sqft=sqft,      #
-			bath=baths,     #
+			bed=beds,       
+			sqft=sqft,      
+			bath=baths,     
 			dogs=pets,      
-			link=url,		#
-			address=addy    #
+			link=url,		
+			address=addy    
 		)
+
 		listings.append(listing)
 
 	return listings
-
-def money_launderer(price:list)->float:
-	"""[Strips dollar signs and comma from the price]
-
-	Args:
-		price (list): [list of prices as strs]
-
-	Returns:
-		price (list): [list of prices as floats]
-	"""	
-	if isinstance(price, str):
-		return float(price.replace("$", "").replace(",", ""))
-	return price
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	#Check for spaces in the name
@@ -117,7 +104,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer': 'https://www.zillow.com/chicago-il/rentals/',
+		'referer': 'https://www.zillow.com/apartments/chicago-il/',
 		'origin':'https://www.zillow.com',
 	}
 	params = (
@@ -136,7 +123,9 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	('con',    False),
     ('ldog',   True),
     ('sdog',   True),
-	('beds', "2min")
+	('isEntirePlaceForRent', True)
+	('isRoomForRent', False)
+	('beds', 'min2')
 )
 	url = f"https://www.zillow.com/{neigh}-chicago-il/rentals/"
           
