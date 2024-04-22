@@ -56,11 +56,11 @@ class Propertyinfo():
 	source   : str
 	price    : str
 	neigh    : str
-	bed      : float
-	bath     : float
 	dogs     : bool
 	link     : str
 	address  : str
+	bed      : float = None
+	bath     : float = None
 	title    : str = None
 	sqft     : float = None
 	# dt_listed: datetime.datetime

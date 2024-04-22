@@ -13,7 +13,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 	Returns:
 		properties (list[Propertyinfo]): [all the links in the summary page]
 	"""
-
 	listings = []
 	#Set the outer loop over each card returned. 
 	# check the count
@@ -55,27 +54,43 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		#Grab bed bath
 		for search in card.find_all("ul"):
 			for subsearch in search.find_all("li"):
-				if "bd" in str(subsearch):
-					beds = float("".join(x for x in str(subsearch) if x.isnumeric()))
-				elif "ba" in str(subsearch):
-					baths = float("".join(x for x in str(subsearch) if x.isnumeric()))
-				elif "sqft" in str(subsearch):
-					sqft = float("".join(x for x in str(subsearch) if x.isnumeric()))
+				text = str(subsearch)
+				numtest = any(x.isnumeric() for x in text)
 
-		
+				if "bd" in text and numtest:
+					beds = float("".join(x for x in text if x.isnumeric()))
+				elif "ba" in text and numtest:
+					baths = float("".join(x for x in text if x.isnumeric()))
+				elif "sqft" in text and numtest:
+					sqft = float("".join(x for x in text if x.isnumeric()))
 		pets = True
 
+		#Janky way of making sure variables are filled if we missed any
+		if not "listingid" in locals():
+			listingid = None
+		if not "price" in locals():
+			price = None
+		if not "beds" in locals():
+			beds = None
+		if not "baths" in locals():
+			baths = None
+		if not "url" in locals():
+			url = None
+		if not "addy" in locals():
+			addy = None
+
+		
 		listing = Propertyinfo(
-			id=listingid,
+			id=listingid,   #
 			source=source,
-			price=price,
+			price=price,    #
 			neigh=neigh,
-			bed=beds,
-			sqft=sqft,
-			bath=baths,
-			dogs=pets,
-			link=url,
-			address=addy
+			bed=beds,       #
+			sqft=sqft,      #
+			bath=baths,     #
+			dogs=pets,      
+			link=url,		#
+			address=addy    #
 		)
 		listings.append(listing)
 
@@ -95,16 +110,19 @@ def money_launderer(price:list)->float:
 	return price
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
+	#Check for spaces in the name
 	if " " in neigh:
 		neigh = "-".join(neigh.split(" "))
 	neigh = neigh.lower()
+
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
 		'referer': 'https://www.zillow.com/chicago-il/rentals/',
 		'origin':'https://www.zillow.com',
 	}
 	params = (
-    ('region', neigh),
+    ('usersSearchTerm', neigh),
+	# ('region', neigh)
 	('fr',     True),
 	('fsba',   False),
 	('fsbo',   False),
@@ -118,6 +136,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	('con',    False),
     ('ldog',   True),
     ('sdog',   True),
+	('beds', "2min")
 )
 	url = f"https://www.zillow.com/{neigh}-chicago-il/rentals/"
           
