@@ -16,37 +16,54 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	listings = []
 	#Set the outer loop over each card returned. 
+	# check the count
+	count = result.find("span", class_="result-count")
+	if count:
+		count = int("".join(x for x in count.text if x.isnumeric()))
+		if count < 1:
+			return "No results found"
+	
 	for card in result.find_all("article"):
-		#Grab the id
-		listingid = card.get("data-listingid")
-
-		#First grab the link.
-		if card.get("data-url"):
-			url = card.get("data-url")
-		
-		#grab the property info
-		for search in card.find_all("div", class_="property-info"):
-			#Grab price
-			for subsearch in search.find_all("div", class_="price-range"):
-				price = subsearch.text
-				price = money_launderer(price.split(" ")[0])
-			#Grab bed bath
-			for subsearch in search.find_all("div", class_="bed-range"):
-				beds = subsearch.text
-				beds, baths = beds.split(",")
-				beds = float(beds.replace(" Beds", ""))
-				if "Baths" in baths:
-					baths = float(baths.replace(" Baths", ""))
-				elif "Bath" in baths:
-					baths = float(baths.replace(" Bath", ""))
-
-		#grab address
-		for search in card.find_all("a", class_="property-link"):
-			if search.get("aria-label"):
-				addy = search.get("aria-label")
-			
-		pets = True
+		#don't always get this one. 
 		sqft = None
+		#Grab the id
+		if card.get("data-test")=="property-card":
+			listingid = card.get("id")
+		
+		#First grab the link.
+		for search in card.find_all("a"):
+			#maybe check if the class ends with that. 
+			if search.get("data-test")=="property-card-link":
+				url = search.get("href")
+				#Grab the address from below the ref link
+				if source not in url:
+					url = source + url
+				addy = search.next.text
+				break
+		
+		#grab the price
+		for search in card.find_all("span"):
+			if search.get("data-test")=="property-card-price":
+				text = search.text
+				#Sometimes these jokers put the beds in with the price just annoy people like me
+				if "+" in text:
+					price = text[:text.index("+")]
+
+				price = float("".join(x for x in text if x.isnumeric()))
+				break
+
+		#Grab bed bath
+		for search in card.find_all("ul"):
+			for subsearch in search.find_all("li"):
+				if "bd" in str(subsearch):
+					beds = float("".join(x for x in str(subsearch) if x.isnumeric()))
+				elif "ba" in str(subsearch):
+					baths = float("".join(x for x in str(subsearch) if x.isnumeric()))
+				elif "sqft" in str(subsearch):
+					sqft = float("".join(x for x in str(subsearch) if x.isnumeric()))
+
+		
+		pets = True
 
 		listing = Propertyinfo(
 			id=listingid,
@@ -87,7 +104,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		'origin':'https://www.zillow.com',
 	}
 	params = (
-    ('region', neigh.lower()),
+    ('region', neigh),
 	('fr',     True),
 	('fsba',   False),
 	('fsbo',   False),
@@ -95,10 +112,10 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	('cmsn',   False),
 	('auc',    False),
 	('fore',   False),
-    ('con',    False),
-	('ah',     True),
-	('apa',    False),
+    ('ah',     True),
 	('apco',   False),
+	('apa',    False),
+	('con',    False),
     ('ldog',   True),
     ('sdog',   True),
 )
