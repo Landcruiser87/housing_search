@@ -3,7 +3,7 @@ def scrape(neigh:str, *params):
 	return list()
 # import requests
 # from bs4 import BeautifulSoup
-# from sodapy import Socrata
+
 # import numpy as np
 # import pandas as pd
 # import datetime

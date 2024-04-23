@@ -7,6 +7,7 @@ import time
 from rich.logging import RichHandler
 from dataclasses import dataclass
 
+from sodapy import Socrata
 #Import supporting files
 import craigslist_all_listings as craigs
 import realtor, zillow, apartments, support
@@ -61,8 +62,8 @@ class Propertyinfo():
 	address  : str
 	bed      : float = None
 	bath     : float = None
-	title    : str = None
 	sqft     : float = None
+	# title    : str = None
 	# dt_listed: datetime.datetime
 	# amenities: object
 
@@ -101,7 +102,6 @@ def scrape(neigh:str):
 			add_data(data, (site[0], neigh))
 		else:
 			logger.warning(f"source: {source} is invalid")
-			raise ValueError(f"site for {source} not loaded")
 
 #Driver code 
 def main():
