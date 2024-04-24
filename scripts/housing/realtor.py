@@ -16,10 +16,14 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	listings = []
 	#Set the outer loop over each card returned. 
-	for card in result.find_all("div", class_="BasePropertyCard_propertyCardWrap__MiBHq"):
+
+	for card in result.select('div[class*="BasePropertyCard"]'):
+		filtertest = card.get("id")
+		if "placeholder_property" in filtertest:
+			continue
 		#Grab the id
 		listingid = card.get("id")
-		listingid = listingid.replace("placeholder_property_", "")
+		listingid = listingid.replace("property_id_", "")
 
 		#First grab the link.
 		for link in card.find_all("a", class_="card-anchor"):
@@ -129,16 +133,15 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
 	# surrounding.  Just the neighborhood)
-	results = bs4ob.find("section", class_="PropertiesList_propertiesContainer__ncXi8 PropertiesList_listViewGrid__kkBix")
+	results = bs4ob.find("section", {"data-testid":"property-list"})
 	if results:
-		if results.attrs['data-testid']=='property-list':
-			property_listings = get_listings(results, neigh, source, Propertyinfo)
-			return property_listings
+		property_listings = get_listings(results, neigh, source, Propertyinfo)
+		logger.info(f'{len(property_listings)} listings returned from apartments')
+		return property_listings
 		
 	else:
-		logger.warning("No listings returned.  Moving to next site")
+		logger.warning("No listings returned on realtor.  Moving to next site")
 	
-	logger.info("realtor!!")
 	#If it gets to here, then it didn't find any results
 	return None
 

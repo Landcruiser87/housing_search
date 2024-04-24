@@ -111,18 +111,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	if results:
 		if results.get("id") =='placardContainer':
 			property_listings = get_listings(results, neigh, source, Propertyinfo)
+			logger.info(f'{len(property_listings)} listings returned from apartments')
 			return property_listings
 		
 	else:
-		logger.warning("No listings returned.  Moving to next site")
+		logger.warning("No listings returned on apartments.  Moving to next site")
 	
-	logger.info("apartments!")
 	#If it gets to here, then it didn't find any results
 	return None
 
 
 
-def zipscrape():
-	logger.info("apartments!")
-	#TODO build separate extraction for zip codes. 
+# def zipscrape():
+# 	logger.info("apartments!")
+# 	#TODO build separate extraction for zip codes. 
 	
