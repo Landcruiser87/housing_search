@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import requests
-from lxml import html
+from urllib.parse import urlencode
 import time
 
 
@@ -113,10 +113,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		'referer':'https://www.zillow.com/chicago-il/rentals',
 		'origin':'https://www.zillow.com',
 	}
-	SEARCH_HEADERS = {
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'origin':'https://www.zillow.com',
-	}
+
 	url_map = f'https://www.zillow.com/{neigh}-chicago-il/rentals'
 	response = requests.get(url_map, headers=BASE_HEADERS)
 	
@@ -188,14 +185,21 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		"isListVisible":True,
 		"regionSelection": [{"regionId": 33597, "regionType": 8}],
 		"pagination" : {},
+		"mapZoom":11
 	}
 	params = {
 		"searchQueryState": subparams,
-		"wants": {"cat2": ["listResults"]},
+		"wants": {"cat1": ["listResults"]},
     	"requestId": 2 #np.random.randint(2, 3)
 	}
-	url_search = "https://www.zillow.com/search/GetSearchPageState.htm?"
-	response = requests.get(url_search, headers = SEARCH_HEADERS, params=params)
+	SEARCH_HEADERS = {
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'referer':'https://www.zillow.com/chicago-il/rentals',
+		'origin':'https://www.zillow.com',
+	}
+
+	url_search = f'https://www.zillow.com/{neigh}-chicago-il/rentals/?' + urlencode(params)
+	response = requests.get(url_search, headers = SEARCH_HEADERS)
 
 	#Just in case we piss someone off
 	if response.status_code != 200:
