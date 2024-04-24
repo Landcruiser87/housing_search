@@ -117,11 +117,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	else:
 		logger.warning("No listings returned on apartments.  Moving to next site")
 	
-	#If it gets to here, then it didn't find any results
-	return None
-
-
-
 # def zipscrape():
 # 	logger.info("apartments!")
 # 	#TODO build separate extraction for zip codes. 

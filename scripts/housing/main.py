@@ -34,15 +34,6 @@ AREAS = [
 	# 'Bowmanville',
 ]
 
-#Uncomment if you want to search by zip. 
-# AREAS = [
-# 	# 60613,
-# 	# 60625,
-# 	# 60624,
-# 	# 60623,
-# 	# 60626,
-# ]
-
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
 	"apartments":("www.apartments.com", apartments),
@@ -77,7 +68,7 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	sources = ["realtor", "apartments", "zillow",  "craigs"]
+	sources = ["zillow", "realtor", "apartments", "craigs"]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

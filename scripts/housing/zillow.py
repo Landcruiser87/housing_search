@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 import requests
 from lxml import html
+import time
+
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
 	"""[Gets the list of links to the individual postings]
@@ -104,45 +106,38 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		neigh = "-".join(neigh.split(" "))
 	neigh = neigh.lower()
 
-	#First grab the map coordinates update our final request
+	#First grab the map coordinates update our next request
+ 	# SEARCH_HEADER = {"content-type":"application/json"}
 	BASE_HEADERS = {
-    "accept-language": "en-US,en;q=0.9",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-    "accept-language": "en-US;en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'referer':'https://www.zillow.com/chicago-il/rentals',
+		'origin':'https://www.zillow.com',
 	}
-# header_dos = {
-    # 	'accept-language': 'en-US,en;q=0.9',
-	# 	'origin':f'https://www.zillow.com/homes/{neigh},-Chicago,-IL_rb/',
-	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-	# 	'referer':'https://www.zillow.com',
-	# }
-	url_map = f'https://www.zillow.com/homes/{neigh},-Chicago,-IL_rb/'
+	SEARCH_HEADERS = {
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'origin':'https://www.zillow.com',
+	}
+	url_map = f'https://www.zillow.com/{neigh}-chicago-il/rentals'
 	response = requests.get(url_map, headers=BASE_HEADERS)
-
-	assert response.status_code == 403, "The way is shut"
 	
 	# If there's an error, log it and return no data for that site
-	if response.status_code != 403:
+	if response.status_code != 200:
+		logger.warning("The way is shut!")
 		logger.warning(f'Status code: {response.status_code}')
 		logger.warning(f'Reason: {response.reason}')
 		return None
 
 	bs4ob = BeautifulSoup(response.text, 'lxml')
+	scripts = bs4ob.find_all("script")
+	coords = [x.text for x in scripts if "window.mapBounds" in x.text]
+	start = coords[0].index("mapBounds")
+	end = start + coords[0][start:].index(";\n")
+	mapcords = coords[0][start:end].split(" = ")[1]
 
 	#Get the map coordinates
-	map_coords = dict()
-	results = bs4ob.find("script", {"id":"__NEXT_DATA__"})
+	map_coords = json.loads(mapcords)
+	time.sleep(np.random.randint(2, 6))
 
-
-# header_dos = {
-    # 	'accept-language': 'en-US,en;q=0.9',
-	# 	'origin':f'https://www.zillow.com/homes/{neigh},-Chicago,-IL_rb/',
-	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-	# 	'referer':'https://www.zillow.com',
-	# }
-	SEARCH_HEADER = {"content-type":"application/json"}
 	#Now realizing I need to make two requests for acccessing zillow data.  It requires map boundaries for a search area otherwise you just get
  	#for sale homes which kind of blows. What you need to do is hit the static search page
   	#"https://www.zillow.com/async-create-search-page-state" to extract geographical boundaries
@@ -171,33 +166,36 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
  				# "usersSearchTerm":neigh + " Chicago, IL",
 	 
 	 #Need to update bounds here. 
-	subparams = {"pagination" : {},
-			    "mapBounds":{
-					map_coords
-				},
-				"filterState":{
-					"isForRent"           :{"value":True},
-					"isForSaleByAgent"    :{"value":False},
-					"isForSaleByOwner"    :{"value":False},
-					"isNewConstruction"   :{"value":False},
-					"isComingSoon"        :{"value":False},
-					"isAuction"           :{"value":False},
-					"isForSaleForeclosure":{"value":False},
-					"isAllHomes"          :{"value":True},
-					"beds"                :{"min":2},
-					"isApartmentOrCondo"  :{"value":False},
-					"isApartment"         :{"value":False},
-					"isCondo"             :{"value":False},
-					"onlyRentalLargeDogsAllowed":{"value":True},
-					"onlyRentalSmallDogsAllowed":{"value":True}
-				},
-				"isListVisible":True,
-				}
-	params = {"searchQueryState": subparams}
-
-	url = "https://www.zillow.com/async-create-search-page-state"
-
-	response = requests.put(url, headers = SEARCH_HEADER, params=params)
+	subparams = {
+		"usersSearchTerm":neigh + " Chicago, IL",
+		"mapBounds":map_coords,
+		"filterState":{
+			"isForRent"           :{"value":True},
+			"isForSaleByAgent"    :{"value":False},
+			"isForSaleByOwner"    :{"value":False},
+			"isNewConstruction"   :{"value":False},
+			"isComingSoon"        :{"value":False},
+			"isAuction"           :{"value":False},
+			"isForSaleForeclosure":{"value":False},
+			"isAllHomes"          :{"value":True},
+			"beds"                :{"min":2},
+			"isApartmentOrCondo"  :{"value":False},
+			"isApartment"         :{"value":False},
+			"isCondo"             :{"value":False},
+			"onlyRentalLargeDogsAllowed":{"value":True},
+			"onlyRentalSmallDogsAllowed":{"value":True}
+		},
+		"isListVisible":True,
+		"regionSelection": [{"regionId": 33597, "regionType": 8}],
+		"pagination" : {},
+	}
+	params = {
+		"searchQueryState": subparams,
+		"wants": {"cat2": ["listResults"]},
+    	"requestId": 2 #np.random.randint(2, 3)
+	}
+	url_search = "https://www.zillow.com/search/GetSearchPageState.htm?"
+	response = requests.get(url_search, headers = SEARCH_HEADERS, params=params)
 
 	#Just in case we piss someone off
 	if response.status_code != 200:
@@ -220,9 +218,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	else:
 		logger.warning("No listings returned.  Moving to next site")
 	
-	logger.info("zillow!")
-	#If it gets to here, then it didn't find any results
-	return None
 
 # def zipscrape():
 # 	logger.info("zillow!")

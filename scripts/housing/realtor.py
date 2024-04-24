@@ -144,9 +144,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	
 	#If it gets to here, then it didn't find any results
 	return None
-
-
-
-def zipscrape():
-	pass
-	#TODO build separate extraction for zip codes. 
