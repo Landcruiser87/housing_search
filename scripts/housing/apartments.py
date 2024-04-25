@@ -33,8 +33,14 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			#Grab bed bath
 			for subsearch in search.find_all("div", class_="bed-range"):
 				beds = subsearch.text
-				beds, baths = beds.split(",")
+				if "ft" in beds:#lol
+					beds, baths, sqft = beds.split(",")
+					sqft = sqft.strip
+				else:
+					beds, baths = beds.split(",")
+
 				beds = float(beds.replace(" Beds", ""))
+
 				if "Baths" in baths:
 					baths = float(baths.replace(" Baths", ""))
 				elif "Bath" in baths:
@@ -44,9 +50,24 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		for search in card.find_all("a", class_="property-link"):
 			if search.get("aria-label"):
 				addy = search.get("aria-label")
-			
+		
 		pets = True
-		sqft = None
+
+		#Janky way of making sure variables are filled if we missed any
+		if not "listingid" in locals():
+			listingid = None
+		if not "price" in locals():
+			price = None
+		if not "beds" in locals():
+			beds = None
+		if not "baths" in locals():
+			baths = None
+		if not "url" in locals():
+			url = None
+		if not "addy" in locals():
+			addy = None
+		if not "sqft" in locals():
+			sqft = None
 
 		listing = Propertyinfo(
 			id=listingid,

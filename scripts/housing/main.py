@@ -5,7 +5,7 @@ import logging
 import datetime
 import time
 from rich.logging import RichHandler
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from sodapy import Socrata
 
 #Import supporting files
@@ -57,8 +57,9 @@ class Propertyinfo():
 	# title    : str = None
 	# dt_listed: datetime.datetime
 	# amenities: object
-
-
+	def dict(self):
+		return {k: str(v) for k, v in asdict(self).items()}
+	
 def add_data(data:pd.DataFrame, siteinfo:tuple):
 	#Add new dataset
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
@@ -68,7 +69,7 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	sources = ["craigs", "zillow", "realtor", "apartments"]
+	sources = ["apartments", "craigs", "zillow", "realtor", ]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -77,10 +78,6 @@ def scrape(neigh:str):
 			if isinstance(neigh, str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 				time.sleep(2)
-
-			# elif isinstance(neigh, int):
-			# 	data = site[1].zipscrape(neigh, logger, Propertyinfo)
-				# time.sleep(2)
 
 			#TODO - Check previous listings. 
 				#Need a function to go through the JSON id's and find / add any
