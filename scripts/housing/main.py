@@ -6,7 +6,9 @@ import datetime
 import time
 from rich.logging import RichHandler
 from dataclasses import dataclass, asdict
-from sodapy import Socrata
+from os.path import exists
+import json
+
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
@@ -44,29 +46,41 @@ SOURCES = {
 
 @dataclass
 class Propertyinfo():
-	id       : str
-	source   : str
-	price    : str
-	neigh    : str
-	dogs     : bool
-	link     : str
-	address  : str
-	bed      : float = None
-	bath     : float = None
-	sqft     : float = None
-	# title    : str = None
-	# dt_listed: datetime.datetime
+	id     : str
+	source : str
+	price  : str
+	neigh  : str
+	dogs   : bool
+	link   : str
+	address: str
+	bed    : float = None
+	bath   : float = None
+	sqft   : float = None
+	# lat    : float = None
+	# long   : float = None
+	# dt_listed: datetime.datetime = None
 	# amenities: object
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
-	
-def add_data(data:pd.DataFrame, siteinfo:tuple):
-	#Add new dataset
+
+def load_historical(data:dataclass):
+	fp = "..\..\data\housing.json"
+	if exists(fp):
+		with open("..\..\data\housing.json", "r") as f:
+			jsondata = json.loads(f)
+
+def add_data(data:dataclass, siteinfo:tuple):
+	update = data.dict()
+	fp = "..\..\data\housing.json"
+	if exists(fp):
+		with open("..\..\data\housing.json", "a") as f:
+			jsondata = json.loads(f)
+	else:
+		with open("..\..\data\housing.json", "w") as f:
+			jsondata = json.loads(f)
+
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
-def score(data):
-	#todo -Come up with system of scoring any listing against chicago data
- 	pass
 
 def scrape(neigh:str):
 	sources = ["apartments", "craigs", "zillow", "realtor", ]
