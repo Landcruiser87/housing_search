@@ -90,7 +90,7 @@ def add_data(data:dataclass, siteinfo:tuple):
 			#update main data container
 			jsondata.update(**updatedict)
 			#Grab the new urls for emailing
-			newurls = [updatedict[idx].get("link") for idx in newids]
+			newurls = [(updatedict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in newids]
 			#Extend the newlistings global
 			newlistings.extend(newurls)
 
@@ -155,7 +155,8 @@ def main():
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
 		logger.info("Listings email sent")
-	
+	else:
+		logger.warning("No new listings were found")
 	logger.info("Program shutting down")
 
 if __name__ == "__main__":

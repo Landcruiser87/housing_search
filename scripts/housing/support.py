@@ -182,11 +182,11 @@ def urlformat(urls:list)->str:
 	links_html = "<ol>"
 	if len(urls) > 1:
 		count = 1
-		for link in urls:
-			links_html += f"<li><a href='{link}'>Link {count}</a></li>"
+		for link, site in urls:
+			links_html += f"<li><a href='{link}'> {site} link {count}</a></li>"
 			count += 1
 	else:
-		links_html = f"<li><a href='{urls[0]}'>Link 1</a></li>"
+		links_html = f"<li><a href='{urls[0]}'> link 1 </a></li>"
 	links_html = links_html + "</ol>"
 	return links_html
 
