@@ -134,7 +134,6 @@ dmypy.json
 /.vscode
 /.pytest_cache
 *.log
-*.csv
 *.xlsx
 *.json
 .Rhistory

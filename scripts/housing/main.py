@@ -62,8 +62,7 @@ class Propertyinfo():
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
 
-def load_historical()->json:
-	fp = "./data/housing.json"
+def load_historical(fp:str)->json:
 	if exists(fp):
 		with open(fp, "r") as f:
 			jsondata = json.loads(f.read())
@@ -80,33 +79,29 @@ def add_data(data:dataclass, siteinfo:tuple):
 	#Pop the id from the dict underneath (no need to store it twice)
 	[new_dict[x].pop("id") for x in ids]
 
-	#If there is historical data.  Check the keys and see if they have already
-	#been scraped
-	fp = "./data/housing.json"
 
-	if exists(fp):
-		if not "jsondata" in globals():
-			global jsondata
-			jsondata = load_historical()
-		
+	if jsondata:
 		j_ids = set(jsondata.keys())
 		n_ids = set(new_dict.keys())
 		newids = n_ids - j_ids
 		if newids:
 			#If we found new data, add it to the json file and save it. 
 			updatedict = {idx:new_dict[idx] for idx in newids}
+			#update main data container
 			jsondata.update(**updatedict)
-			newurls = [jsondata[idx].get("url") for idx in newids]
+			#Grab the new urls for emailing
+			newurls = [updatedict[idx].get("link") for idx in newids]
+			#Extend the newlistings global
 			newlistings.extend(newurls)
 
 		else:
-			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")			
+			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")
+			return		
 	else:
-		
 		#Dump it to json and save it
-		out_json = json.dumps(new_dict, indent=2)
-		with open("./data/housing.json", "w") as out_f:
-			out_f.write(out_json)
+		save_data(new_dict)
+		logger.info("saved inital JSON data.")
+		jsondata.update(**new_dict)
 
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
@@ -130,20 +125,29 @@ def scrape(neigh:str):
 			if data:
 				# geocode(data)
 				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
-				jsond = add_data(data, (site[0], neigh))
+				add_data(data, (site[0], neigh))
 				
 		else:
 			logger.warning(f"source: {source} is not in validated search list")
-	save_data(jsond)
 
 #Driver code 
 def main():
-	global newlistings
+	#Global variable setup
+	global newlistings, jsondata
 	newlistings = []
+	fp = "./data/housing.json"
+	if exists(fp):
+		jsondata = load_historical(fp)
+	else:
+		jsondata = {}
+	#Search the neighborhoods
 	for neigh in AREAS:
 		scrape(neigh)
-	# for listing in newlistings:
-		# support.send_housing_email(listing)
+	#Email any newlistings (one combined email.  not separate)
+		#?Could try a rich table format here with embedded links
+	if newlistings:
+		logger.info("Emailing listings")
+		support.send_housing_email(newlistings)
 
 if __name__ == "__main__":
 	main()

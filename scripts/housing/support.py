@@ -149,6 +149,7 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 			return True
 
 	return False
+
 def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	"""[Uses the haversine formula to calculate the distance between 
 	two points on a sphere]
@@ -176,7 +177,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
 	return c * r
 
-def send_housing_email(url:str):
+def send_housing_email(urls:list):
 	"""[Function for sending an email.  Inputs the url into the docstrings 
 	via decorator for easy formatting of the HTML body of an email.]
 
@@ -196,20 +197,24 @@ def send_housing_email(url:str):
 			return obj
 		return dec
 
-	@docstring_parameter(url)
+	@docstring_parameter(urls)
 	def inputdatlink():
 		"""
 		<html>
 			<body>
-				<p>Helloooooooooo!<br>
-				You have a new house to look at! <br>
-				<a href={0}>Click on that link</a> 
+				<p>Helloooooooooo!
+					<br>
+					You have a new house to look at!<br>
+					%for url in urls:
+						<a href={0}</a>
+					%endfor
 				</p>
 			</body>
 		</html>
 		"""
 		pass
-
+	#<a href={0}>Click on that link</a> 
+ 
 	with open('./secret/login.txt') as login_file:
 		login = login_file.read().splitlines()
 		sender_email = login[0].split(':')[1]
@@ -221,7 +226,7 @@ def send_housing_email(url:str):
 	port = 465
 
 	message = MIMEMultipart("alternative")
-	message["Subject"] = "New House Found!"
+	message["Subject"] = "New Housing Found!"
 	message["From"] = sender_email
 	message["To"] = receiver_email
 
@@ -234,4 +239,3 @@ def send_housing_email(url:str):
 	with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
 		server.login(sender_email, password)		
 		server.sendmail(sender_email, receiver_email, message.as_string())
-		print("Email sent!")
