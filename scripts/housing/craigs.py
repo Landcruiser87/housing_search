@@ -118,11 +118,17 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 		
 		pets = True
 
+		#IDEA Since we can't search by neighborhood on craigs we have to just assign
+		#it to chicago as that's Where the base search is..  Although.. I do
+		#have lat / longs and the boundaries of the neighborhoods I want to
+		#search.  So I could use the bounding box formula to see if they were in
+		#that area. 
+  
 		listing = Propertyinfo(
 			id=listingid,
 			source=source,
 			price=price,
-			neigh=neigh,
+			neigh="Chicago",
 			bed=beds,
 			sqft=sqft,
 			bath=baths,

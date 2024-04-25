@@ -63,21 +63,47 @@ class Propertyinfo():
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
 
-def load_historical(data:dataclass):
+def load_historical()->json:
 	fp = "..\..\data\housing.json"
 	if exists(fp):
 		with open("..\..\data\housing.json", "r") as f:
-			jsondata = json.loads(f)
+			jsondata = json.loads(f.read())
+			return jsondata
+	else:
+		logger.warning("No previous data found.")
 
 def add_data(data:dataclass, siteinfo:tuple):
-	update = data.dict()
 	fp = "..\..\data\housing.json"
+	#If there is historical data.  Check the keys and see if they have already
+	#been scraped
+
+	#flow
+	#data = list of dataclasses
+	#storage is such
+	#id = main key
+		#all the other keys nested underneath that key
+
 	if exists(fp):
 		with open("..\..\data\housing.json", "a") as f:
-			jsondata = json.loads(f)
+			jsondata = load_historical()
+			j_ids = [jsondata[x].get("id") for x in range(len(jsondata))]
+			n_ids = [data[x].get("id") for x in range(len(data))]
+			updatedict = {}
+			jsondata.update(**updatedict)
+			
 	else:
-		with open("..\..\data\housing.json", "w") as f:
-			jsondata = json.loads(f)
+		ids = [data[x].id for x in range(len(data))]
+		histdict = {data[x].id : data[x].dict() for x in range(len(data))}
+		[histdict[x].pop("id") for x in ids]
+		out_json = json.dumps(histdict, indent=2)
+		with open("..\..\data\housing.json", "w") as out_f:
+			out_f.write(out_json)
+
+	# #Moving the id key to the outer dict
+	# ids = [data[x].id for x in range(len(data))]
+	# histids = [{data[x].id : data[x].dict()} for x in range(len(data))]
+	# update = [updatedict[id].pop("id") for id in ids]
+
 
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
@@ -93,15 +119,12 @@ def scrape(neigh:str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 				time.sleep(2)
 
-			#TODO - Check previous listings. 
-				#Need a function to go through the JSON id's and find / add any
-				#new ones to newlistings gb variable
+			#If data was returned, pull the lat long, score it and store it. 
+			if data:
+				# geocode(data)
+				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
+				add_data(data, (site[0], neigh))
 
-			#TODO - Need a way to score the listings
-			# score(data)
-   
-			#add new data to storage json
-			add_data(data, (site[0], neigh))
 		else:
 			logger.warning(f"source: {source} is invalid")
 

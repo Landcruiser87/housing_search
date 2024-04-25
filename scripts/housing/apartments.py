@@ -35,7 +35,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 				beds = subsearch.text
 				if "ft" in beds:#lol
 					beds, baths, sqft = beds.split(",")
-					sqft = sqft.strip
+					sqft = sqft.strip()
 				else:
 					beds, baths = beds.split(",")
 
