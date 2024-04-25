@@ -81,7 +81,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 
 		# Grab the price.
 		for search in bs4ob.find_all("span", class_="price"):
-			price = money_launderer(search.text)
+			price = search.text
+			if any(x.isnumeric() for x in price):
+				price = money_launderer(search.text)
 			break
 
 		#grab bed / bath
@@ -92,8 +94,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 				#bug, maybe remove ft
 			elif "br" in text:
 				beds, baths = search.text.strip("\n").strip().split("/")
-				beds = float([x for x in beds if x.isnumeric()][0])
-				baths = float([x for x in baths if x.isnumeric()][0])
+				beds = "".join([x for x in beds if x.isnumeric()])
+				baths = "".join([x for x in baths if x.isnumeric()])
 
 		#grab addy
 		for search in bs4ob.find_all("h2", class_="street-address"):

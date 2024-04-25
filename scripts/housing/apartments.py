@@ -29,7 +29,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			#Grab price
 			for subsearch in search.find_all("div", class_="price-range"):
 				price = subsearch.text
-				price = money_launderer(price.split(" ")[0])
+				if any(x.isnumeric() for x in price):
+					price = money_launderer(price.split(" ")[0])
+					
 			#Grab bed bath
 			for subsearch in search.find_all("div", class_="bed-range"):
 				beds = subsearch.text
@@ -39,8 +41,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 				else:
 					beds, baths = beds.split(",")
 
-				beds = [x for x in beds if x.isnumeric()]
-				baths = [x for x in baths if x.isnumeric()]
+				beds = float("".join(x for x in beds if x.isnumeric()))
+				baths = float("".join(x for x in baths if x.isnumeric()))
 
 		#grab address
 		for search in card.find_all("a", class_="property-link"):
@@ -108,7 +110,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		'origin':'https://www.apartments.com',
 	}
 
-	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-pet-friendly-dog/"
+	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-2600-pet-friendly-dog/"
           
 	response = requests.get(url, headers=headers)
 

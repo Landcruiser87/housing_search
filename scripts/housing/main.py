@@ -32,7 +32,7 @@ AREAS = [
 	# 'Lincoln Square',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
-	# 'Bowmanville',
+	'Bowmanville',
 ]
 
 SOURCES = {
@@ -124,15 +124,16 @@ def scrape(neigh:str):
 				#scrape it once.  So this sets a boolean of if we've scraped
 				#craigs, then flips the value to not scrape it again in the
 				#future neighborhoods that will be searched. 
-				if site=="craigs":
+				if source=="craigs":
 					if not c_scrape:
 						c_scrape = True
 						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
-						time.sleep(2)
 				else:
 					#every other site, scrape it normally
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
-					time.sleep(2)
+				
+				#Take a lil nap.  Be nice to servers!
+				time.sleep(np.random.randint(2,6))
 		
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
@@ -144,10 +145,6 @@ def scrape(neigh:str):
 		else:
 			logger.warning(f"source: {source} is not in validated search list")
 	
-	#If new listings were found.  Save it to the JSON file
-	if newlistings:
-		save_data(jsondata)
-
 #Driver code 
 def main():
 	#Global variable setup
@@ -165,6 +162,7 @@ def main():
 		#?Could try a rich table format here with embedded links
   
 	if newlistings:
+		save_data(jsondata)
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
 		logger.info("Listings email sent")
