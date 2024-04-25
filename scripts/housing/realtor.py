@@ -136,7 +136,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	results = bs4ob.find("section", {"data-testid":"property-list"})
 	if results:
 		property_listings = get_listings(results, neigh, source, Propertyinfo)
-		logger.info(f'{len(property_listings)} listings returned from apartments')
+		logger.info(f'{len(property_listings)} listings returned from {source}')
 		return property_listings
 		
 	else:

@@ -178,7 +178,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	if results:
 		if len(results) > 0:
 			property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger)
-			logger.info(f'{len(property_listings)} listings found on craigs')
+			logger.info(f'{len(property_listings)} listings returned from {source}')
 			return property_listings
 	
 	else:

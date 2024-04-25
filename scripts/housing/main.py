@@ -9,7 +9,6 @@ from dataclasses import dataclass, asdict
 from os.path import exists
 import json
 
-
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
 
@@ -64,52 +63,60 @@ class Propertyinfo():
 		return {k: str(v) for k, v in asdict(self).items()}
 
 def load_historical()->json:
-	fp = "..\..\data\housing.json"
+	fp = "./data/housing.json"
 	if exists(fp):
-		with open("..\..\data\housing.json", "r") as f:
+		with open(fp, "r") as f:
 			jsondata = json.loads(f.read())
 			return jsondata
 	else:
 		logger.warning("No previous data found.")
 
 def add_data(data:dataclass, siteinfo:tuple):
-	fp = "..\..\data\housing.json"
+	#Reshape data to dict
+	#Pull out the ids
+	ids = [data[x].id for x in range(len(data))]
+	#make a new dict that can be json serialized with the id as the key
+	new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
+	#Pop the id from the dict underneath (no need to store it twice)
+	[new_dict[x].pop("id") for x in ids]
+
 	#If there is historical data.  Check the keys and see if they have already
 	#been scraped
-
-	#flow
-	#data = list of dataclasses
-	#storage is such
-	#id = main key
-		#all the other keys nested underneath that key
+	fp = "./data/housing.json"
 
 	if exists(fp):
-		with open("..\..\data\housing.json", "a") as f:
+		if not "jsondata" in globals():
+			global jsondata
 			jsondata = load_historical()
-			j_ids = [jsondata[x].get("id") for x in range(len(jsondata))]
-			n_ids = [data[x].get("id") for x in range(len(data))]
-			updatedict = {}
+		
+		j_ids = set(jsondata.keys())
+		n_ids = set(new_dict.keys())
+		newids = n_ids - j_ids
+		if newids:
+			#If we found new data, add it to the json file and save it. 
+			updatedict = {idx:new_dict[idx] for idx in newids}
 			jsondata.update(**updatedict)
-			
+			newurls = [jsondata[idx].get("url") for idx in newids]
+			newlistings.extend(newurls)
+
+		else:
+			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")			
 	else:
-		ids = [data[x].id for x in range(len(data))]
-		histdict = {data[x].id : data[x].dict() for x in range(len(data))}
-		[histdict[x].pop("id") for x in ids]
-		out_json = json.dumps(histdict, indent=2)
-		with open("..\..\data\housing.json", "w") as out_f:
+		
+		#Dump it to json and save it
+		out_json = json.dumps(new_dict, indent=2)
+		with open("./data/housing.json", "w") as out_f:
 			out_f.write(out_json)
-
-	# #Moving the id key to the outer dict
-	# ids = [data[x].id for x in range(len(data))]
-	# histids = [{data[x].id : data[x].dict()} for x in range(len(data))]
-	# update = [updatedict[id].pop("id") for id in ids]
-
 
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
+def save_data(jsond:dict):
+	out_json = json.dumps(jsond, indent=2)
+	with open("./data/housing.json", "w") as out_f:
+		out_f.write(out_json)
 
 def scrape(neigh:str):
-	sources = ["apartments", "craigs", "zillow", "realtor", ]
+	sources = ["apartments", "realtor", "craigs", "zillow", ]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -123,10 +130,11 @@ def scrape(neigh:str):
 			if data:
 				# geocode(data)
 				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
-				add_data(data, (site[0], neigh))
-
+				jsond = add_data(data, (site[0], neigh))
+				
 		else:
-			logger.warning(f"source: {source} is invalid")
+			logger.warning(f"source: {source} is not in validated search list")
+	save_data(jsond)
 
 #Driver code 
 def main():
