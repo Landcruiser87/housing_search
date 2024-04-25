@@ -39,12 +39,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 				else:
 					beds, baths = beds.split(",")
 
-				beds = float(beds.replace(" Beds", ""))
-
-				if "Baths" in baths:
-					baths = float(baths.replace(" Baths", ""))
-				elif "Bath" in baths:
-					baths = float(baths.replace(" Bath", ""))
+				beds = [x for x in beds if x.isnumeric()]
+				baths = [x for x in baths if x.isnumeric()]
 
 		#grab address
 		for search in card.find_all("a", class_="property-link"):

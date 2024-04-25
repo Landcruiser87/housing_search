@@ -181,10 +181,8 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 def urlformat(urls:list)->str:
 	links_html = "<ol>"
 	if len(urls) > 1:
-		count = 1
 		for link, site in urls:
-			links_html += f"<li><a href='{link}'> {site} link {count}</a></li>"
-			count += 1
+			links_html += f"<li><a href='{link}'> {site} link </a></li>"
 	else:
 		links_html = f"<li><a href='{urls[0]}'> link 1 </a></li>"
 	links_html = links_html + "</ol>"
