@@ -177,7 +177,20 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
 	return c * r
 
-def send_housing_email(urls:list):
+
+def urlformat(urls:list)->str:
+	links_html = "<ol>"
+	if len(urls) > 1:
+		count = 1
+		for link in urls:
+			links_html += f"<li><a href='{link}'>Link {count}</a></li>"
+			count += 1
+	else:
+		links_html = f"<li><a href='{urls[0]}'>Link 1</a></li>"
+	links_html = links_html + "</ol>"
+	return links_html
+
+def send_housing_email(urls:str):
 	"""[Function for sending an email.  Inputs the url into the docstrings 
 	via decorator for easy formatting of the HTML body of an email.]
 
@@ -190,31 +203,20 @@ def send_housing_email(urls:list):
 	import smtplib, ssl
 	from email.mime.text import MIMEText
 	from email.mime.multipart import MIMEMultipart
-
-	def docstring_parameter(*sub):
-		def dec(obj):
-			obj.__doc__ = obj.__doc__.format(*sub)
-			return obj
-		return dec
-
-	@docstring_parameter(urls)
-	def inputdatlink():
-		"""
+	
+	def inputdatlink(urls:str):
+		html = """
 		<html>
 			<body>
-				<p>Helloooooooooo!
-					<br>
-					You have a new house to look at!<br>
-					%for url in urls:
-						<a href={0}</a>
-					%endfor
+				<p>Helloooooooooo!<br>
+				You have new houses to look at!<br>
+				""" + urls + """
 				</p>
 			</body>
 		</html>
 		"""
-		pass
-	#<a href={0}>Click on that link</a> 
- 
+		return html
+
 	with open('./secret/login.txt') as login_file:
 		login = login_file.read().splitlines()
 		sender_email = login[0].split(':')[1]
@@ -225,12 +227,12 @@ def send_housing_email(urls:list):
 	smtp_server = "smtp.gmail.com"
 	port = 465
 
+	html = inputdatlink(urls)
+
 	message = MIMEMultipart("alternative")
 	message["Subject"] = "New Housing Found!"
 	message["From"] = sender_email
 	message["To"] = receiver_email
-
-	html = inputdatlink.__doc__
 
 	attachment = MIMEText(html, "html")
 	message.attach(attachment)

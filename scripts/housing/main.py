@@ -98,9 +98,9 @@ def add_data(data:dataclass, siteinfo:tuple):
 			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")
 			return		
 	else:
-		#Dump it to json and save it
+		#Update global dic
 		save_data(new_dict)
-		logger.info("saved inital JSON data.")
+		logger.info("JSON dict updated and saved")
 		jsondata.update(**new_dict)
 
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
@@ -109,9 +109,10 @@ def save_data(jsond:dict):
 	out_json = json.dumps(jsond, indent=2)
 	with open("./data/housing.json", "w") as out_f:
 		out_f.write(out_json)
+	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["apartments", "realtor", "craigs", "zillow", ]
+	sources = ["apartments", "realtor", "craigs", "zillow"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -129,6 +130,10 @@ def scrape(neigh:str):
 				
 		else:
 			logger.warning(f"source: {source} is not in validated search list")
+	
+	#If new listings were found.  Save it to the JSON file
+	if newlistings:
+		save_data(jsondata)
 
 #Driver code 
 def main():
@@ -145,9 +150,13 @@ def main():
 		scrape(neigh)
 	#Email any newlistings (one combined email.  not separate)
 		#?Could try a rich table format here with embedded links
+  
 	if newlistings:
-		logger.info("Emailing listings")
-		support.send_housing_email(newlistings)
+		links_html = support.urlformat(newlistings)
+		support.send_housing_email(links_html)
+		logger.info("Listings email sent")
+	
+	logger.info("Program shutting down")
 
 if __name__ == "__main__":
 	main()
