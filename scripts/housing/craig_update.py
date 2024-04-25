@@ -338,6 +338,7 @@ for x in range(0, results.shape[0]):
 	if response.status_code != 200:
 		print(f'Status code: {response.status_code}')
 		print(f'Reason: {response.reason}')
+		
 	bs4_home_ob = BeautifulSoup(response.text, 'lxml')
 
 	#Easy one's to get

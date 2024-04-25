@@ -6,12 +6,12 @@ import datetime
 import time
 from rich.logging import RichHandler
 from dataclasses import dataclass
-
 from sodapy import Socrata
-#Import supporting files
-import craigslist_all_listings as craigs
-import realtor, zillow, apartments, support
 
+#Import supporting files
+import realtor, zillow, apartments, craigs, support
+
+#Format logger and load
 FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
 
@@ -37,7 +37,7 @@ AREAS = [
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
 	"apartments":("www.apartments.com", apartments),
-	"craigs"    :("www.craiglist.com", craigs),
+	"craigs"    :("www.craiglist.org", craigs),
 	"zillow"    :("www.zillow.com", zillow),
 	
 }
@@ -68,7 +68,7 @@ def score(data):
  	pass
 
 def scrape(neigh:str):
-	sources = ["zillow", "realtor", "apartments", "craigs"]
+	sources = ["craigs", "zillow", "realtor", "apartments"]
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

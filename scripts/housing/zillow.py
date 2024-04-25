@@ -134,33 +134,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	#Get the map coordinates
 	map_coords = json.loads(mapcords)
 	time.sleep(np.random.randint(2, 6))
-
-	#Now realizing I need to make two requests for acccessing zillow data.  It requires map boundaries for a search area otherwise you just get
- 	#for sale homes which kind of blows. What you need to do is hit the static search page
-  	#"https://www.zillow.com/async-create-search-page-state" to extract geographical boundaries
-    #and then you can go request what you want from the referer page.  So i'll need two requests here. 
-   
-	# 
-	# subparams = {"usersSearchTerm":neigh + " Chicago, IL",
-	# 			"filterState":{
-	# 				"fr"   :{"value":"true"},
-	# 				"fsba" :{"value":"false"},
-	# 				"fsbo" :{"value":"false"},
-	# 				"nc"   :{"value":"false"},
-	# 				"cmsn" :{"value":"false"},
-	# 				"auc"  :{"value":"false"},
-	# 				"fore" :{"value":"false"},
-	# 				"ah"   :{"value":"true"},
-	# 				"beds" :{"min":"2"},
-	# 				"apco" :{"value":"false"},
-	# 				"apa"  :{"value":"false"},
-	# 				"con"  :{"value":"false"},
-	# 				"ldog" :{"value":"true"},
-	# 				"sdog" :{"value":"true"}
-	# 			},
-	# 			"isListVisible":"true",
-	# 			}
- 				# "usersSearchTerm":neigh + " Chicago, IL",
 	 
 	 #Need to update bounds here. 
 	subparams = {
@@ -183,7 +156,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 			"onlyRentalSmallDogsAllowed":{"value":True}
 		},
 		"isListVisible":True,
-		"regionSelection": [{"regionId": 33597, "regionType": 8}],
+		# "regionSelection": [{"regionId": 33597, "regionType": 8}], #!might not need this?
 		"pagination" : {},
 		"mapZoom":11
 	}
