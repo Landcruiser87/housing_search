@@ -112,6 +112,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
+	c_scrape = False
 	sources = ["apartments", "realtor", "craigs", "zillow"]  
 	for source in sources:
 		site = SOURCES.get(source)
@@ -119,15 +120,27 @@ def scrape(neigh:str):
 			logger.info(f"scraping {site[0]} for {neigh}")
 			
 			if isinstance(neigh, str):
-				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
-				time.sleep(2)
-
+				#Because we can't search craigs by neighborhood, we only want to
+				#scrape it once.  So this sets a boolean of if we've scraped
+				#craigs, then flips the value to not scrape it again in the
+				#future neighborhoods that will be searched. 
+				if site=="craigs":
+					if not c_scrape:
+						c_scrape = True
+						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+						time.sleep(2)
+				else:
+					#every other site, scrape it normally
+					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+					time.sleep(2)
+		
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
 				# geocode(data)
 				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
 				add_data(data, (site[0], neigh))
-				
+				del data
+			
 		else:
 			logger.warning(f"source: {source} is not in validated search list")
 	
