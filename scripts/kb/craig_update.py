@@ -95,6 +95,7 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 			return True
 
 	return False
+
 def date_convert(time_big:pd.Series)->(datetime, datetime):
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
@@ -440,7 +441,6 @@ all_results = all_results.reset_index(drop=True)
 
 #Save the new record
 all_results.to_csv("./data/craigs_all.csv")
-
 
 print('Update complete!')
 time.sleep(5)
