@@ -63,6 +63,8 @@ class Propertyinfo():
 	sqft   : float = None
 	lat    : float = ""
 	long   : float = ""
+	L_dist : float = ""
+	# crimesc: float = ""
 	# dt_listed: datetime.datetime = None
 	# amenities: object
 	def dict(self):
