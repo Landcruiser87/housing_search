@@ -17,11 +17,12 @@ from rich.console import Console
 from geopy import Nominatim
 
 console = Console(color_system="truecolor")
-def closest_L_stop(data):
+
+def closest_L_stop(data:list)->list:
 	#Load up Lstop data
 	stops = pd.read_csv(
 		"./data/CTA_Lstops.csv",
-		header=True,
+		header=0,
 		index_col="STOP_ID"
 		)
 	for listing in data:
@@ -30,16 +31,16 @@ def closest_L_stop(data):
 			lon1 = listing.long
 
 			min_dist = 20000
-			for stop in stops.index():
-				lat2 = stops.loc[stop, "Location"][0]
-				lon2 = stops.loc[stop, "Location"][1]
+			for stop in stops.index:
+				lat2, lon2 = stops.loc[stop, "Location"].strip("()").split(",")
+				lat2, lon2 = float(lat2), float(lon2)
 				dist = haversine_distance(lat1, lon1, lat2, lon2)
 				if dist <= min_dist:
 					min_dist = dist
-					
+		listing.L_dist = min_dist
+	return data
 
-
-def get_lat_long(data:list):
+def get_lat_long(data:list)->list:
 	params = {
 		"user_agent":"myApp",
 		"timeout":10,

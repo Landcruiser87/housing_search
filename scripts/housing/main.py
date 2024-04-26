@@ -119,7 +119,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["zillow", "apartments", "realtor", "craigs"]  
+	sources = ["craigs", "zillow", "apartments", "realtor"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -149,6 +149,9 @@ def scrape(neigh:str):
 			if data:
 				#Get lat longs for the address's
 				data = support.get_lat_long(data)
+				#Calculate the distance to closest L Stop (haversine/as crow
+				#flies)
+				data = support.closest_L_stop(data)
 				#Score them according to chicago crime data
 				# score(data)
 				#Add the listings to the json object. 
