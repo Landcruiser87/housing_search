@@ -66,7 +66,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 		#listing.  Meaning more requests and longer wait times. 
 
 		response = requests.get(link, headers=HEADERS)
-		support.sleepspinner(np.random.randint(2, 6), f'{neigh} individual request nap')
+		support.sleepspinner(np.random.randint(2, 6), f'Craigs {neigh} individual request nap')
 		bs4ob = BeautifulSoup(response.text, "lxml")
 
 		#Just in case we piss someone off

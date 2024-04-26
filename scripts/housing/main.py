@@ -12,8 +12,6 @@ import json
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
 
-
-
 #Format logger and load
 FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
@@ -59,8 +57,8 @@ class Propertyinfo():
 	bed    : float = None
 	bath   : float = None
 	sqft   : float = None
-	# lat    : float = None
-	# long   : float = None
+	lat    : float = ""
+	long   : float = ""
 	# dt_listed: datetime.datetime = None
 	# amenities: object
 	def dict(self):
@@ -135,8 +133,8 @@ def scrape(neigh:str):
 					continue
 				
 				else:
-					logger.info(f"scraping {site[0]} for {neigh}")
 					#every other site, scrape it normally
+					logger.info(f"scraping {site[0]} for {neigh}")
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 
 				#Take a lil nap.  Be nice to servers!
@@ -144,8 +142,11 @@ def scrape(neigh:str):
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
-				# geocode(data)
-				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
+				#Get lat longs for the address's
+				# data = support.get_lat_long(data)
+				#Score them according to chicago crime data
+				# score(data)
+				#Add the listings to the json object. 
 				add_data(data, (site[0], neigh))
 				del data
 			logger.warning(f"source {source} no data found")
@@ -167,8 +168,6 @@ def main():
 	#Search the neighborhoods
 	for neigh in AREAS:
 		scrape(neigh)
-	#Email any newlistings (one combined email.  not separate)
-		#?Could try a rich table format here with embedded links
   
 	if newlistings:
 		save_data(jsondata)
@@ -177,6 +176,7 @@ def main():
 		logger.info("Listings email sent")
 	else:
 		logger.warning("No new listings were found")
+
 	logger.info("Program shutting down")
 
 if __name__ == "__main__":

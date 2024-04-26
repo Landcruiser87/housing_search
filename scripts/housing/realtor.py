@@ -116,7 +116,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		'origin':'https://www.realtor.com',
 	}
 
-	url = f"https://www.realtor.com/apartments/{neigh}_Chicago_IL/type-townhome,single-family-home/beds-2/dog-friendly"
+	url = f"https://www.realtor.com/apartments/{neigh}_Chicago_IL/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
           
 	response = requests.get(url, headers=headers)
 

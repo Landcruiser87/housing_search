@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from sodapy import Socrata
 import time
+import geopy
 
 #Progress bar fun
 from rich.progress import (
@@ -13,8 +14,18 @@ from rich.progress import (
 	TimeRemainingColumn,
 )
 from rich.console import Console
+from geopy import Nominatim
 
 console = Console(color_system="truecolor")
+
+def get_lat_long(data:list):
+	geolocator = Nominatim(user_agent="Chi town search")
+	for listing in data:
+		location = geolocator.geocode(listing.address)
+		lat, long = location.latitude, location.longitude
+		listing.lat = lat
+		listing.long = long
+	return data
 
 def sleepspinner(naps:int, msg:str):
 	my_progress_bar = Progress(
