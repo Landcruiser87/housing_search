@@ -41,14 +41,19 @@ def closest_L_stop(data:list)->list:
 
 	return data
 
-def get_lat_long(data:list)->list:
+def get_lat_long(data:list, citystate:tuple)->list:
 	params = {
 		"user_agent":"myApp",
 		"timeout":10,
 	}
 	geolocator = Nominatim(**params)
 	for listing in data:
-		#TODO - Put check in here for if city and state are the string 
+		address = listing.address
+		if citystate[0].lower() not in address.lower():
+			listing.address = address + citystate[0]
+		if citystate[1].lower() not in address.lower():
+			listing.address = address + citystate[1]
+
 		location = geolocator.geocode(listing.address + " United States")
 		if location:
 			lat, long = location.latitude, location.longitude
@@ -239,7 +244,7 @@ def crime_score(data:list) -> dict:
 								select="id, date, description, latitude, longitude, primary_type ",
 								where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
 								limit=800000)
-			
+			sleepspinner(np.random.randint(2, 4), "Be NICE to your sister")
 			#Set up array
 			crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
 			#Fill it in row by row
@@ -253,9 +258,9 @@ def crime_score(data:list) -> dict:
 			#Check the last dates record.  If its not within the last year, 
 			#make another request until we hit that date. 
 				# Don't forget to filter any data that may come in extra. 
-			date_check = crime_arr["date"]
-			if date_check > datetime.date.today() - datetime.timedelta(days=365):
-				#TODO Need to figure out how to remake the request if i hit the 800k limit. 
+			date_check = crime_arr["date"].min()
+			if date_check > datetime.datetime.today() - datetime.timedelta(days=365):
+				#Need to figure out how to remake the request if i hit the 800k limit. 
 				raise ValueError('Yo Query needeth be BIGGER')
 
 			#Checking memory consumption
@@ -281,7 +286,7 @@ def crime_score(data:list) -> dict:
 			sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
 			human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
 
-			for idx in total_crimes:
+			for idx in range(total_crimes):
 				#Drugs
 				if crime_arr[idx]['primary_type'] in narcotics:
 					scores['drug_score'] += 1

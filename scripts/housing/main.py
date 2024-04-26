@@ -118,7 +118,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["realtor", "craigs", "zillow", "apartments"]  
+	sources = ["craigs", "realtor", "zillow", "apartments"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
