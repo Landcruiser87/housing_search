@@ -32,8 +32,8 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	'Lincoln Square',
 	'Ravenswood',
-	'North Center',
-	'Roscoe Village'
+	# 'North Center',
+	# 'Roscoe Village'
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 	# 'Bowmanville',
@@ -117,7 +117,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["craigs", "apartments", "realtor", "zillow"]  
+	sources = ["zillow", "apartments", "realtor", "craigs"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -146,7 +146,7 @@ def scrape(neigh:str):
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
 				#Get lat longs for the address's
-				# data = support.get_lat_long(data)
+				data = support.get_lat_long(data)
 				#Score them according to chicago crime data
 				# score(data)
 				#Add the listings to the json object. 
@@ -178,7 +178,7 @@ def main():
 		support.send_housing_email(links_html)
 		logger.info("Listings email sent")
 	else:
-		logger.warning("No new listings were found")
+		logger.critical("No new listings were found")
 
 	logger.info("Program shutting down")
 

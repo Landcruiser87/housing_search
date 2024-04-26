@@ -19,12 +19,19 @@ from geopy import Nominatim
 console = Console(color_system="truecolor")
 
 def get_lat_long(data:list):
-	geolocator = Nominatim(user_agent="Chi town search")
+	params = {
+		"user_agent":"myApp",
+		"timeout":10,
+	}
+	geolocator = Nominatim(**params)
 	for listing in data:
-		location = geolocator.geocode(listing.address)
-		lat, long = location.latitude, location.longitude
-		listing.lat = lat
-		listing.long = long
+		location = geolocator.geocode(listing.address + " United States")
+		if location:
+			lat, long = location.latitude, location.longitude
+			listing.lat = lat
+			listing.long = long
+		sleepspinner(np.random.randint(2, 6), "searching lat/long")
+
 	return data
 
 def sleepspinner(naps:int, msg:str):
@@ -46,6 +53,120 @@ def sleepspinner(naps:int, msg:str):
 		for nap in range(naps):
 			time.sleep(1)
 			progress.advance(task)
+
+def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
+	"""[Given two corners of a box on a map.  Determine if a point is
+	 within said box.  Step 1.  You cut a hole in that box.]
+
+	Args:
+		bounding_box (list): [list of GPS coordinates of the box]
+		lat (float): [lattitude of point]
+		lon (float): [longitude of point]
+
+	Returns:
+		(bool): [Whether or not is within the given GPS ranges 
+		in the bounding box]
+	"""		
+	bb_lat_low = bounding_box[0]
+	bb_lat_up = bounding_box[2]
+	bb_lon_low = bounding_box[1]
+	bb_lon_up = bounding_box[3]
+
+	if bb_lat_low < lat < bb_lat_up:
+		if bb_lon_low < lon < bb_lon_up:
+			return True
+
+	return False
+
+def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
+	"""[Uses the haversine formula to calculate the distance between 
+	two points on a sphere]
+
+	Args:
+		lat1 (float): [latitude of first point]
+		lon1 (float): [longitude of first point]
+		lat2 (float): [latitude of second point]
+		lon2 (float): [latitue of second point]
+
+	Returns:
+		dist (float): [Distance between two GPS points in miles]
+
+	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
+	"""	
+	from math import radians, cos, sin, asin, sqrt
+	# convert decimal degrees to radians 
+	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+	# haversine formula 
+	dlon = lon2 - lon1 
+	dlat = lat2 - lat1 
+	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+	c = 2 * asin(sqrt(a)) 
+	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
+	return c * r
+
+
+def urlformat(urls:list)->str:
+	links_html = "<ol>"
+	if len(urls) > 1:
+		for link, site in urls:
+			links_html += f"<li><a href='{link}'> {site} link </a></li>"
+	else:
+		links_html = f"<li><a href='{urls[0]}'> link 1 </a></li>"
+	links_html = links_html + "</ol>"
+	return links_html
+
+def send_housing_email(urls:str):
+	"""[Function for sending an email.  Inputs the url into the docstrings 
+	via decorator for easy formatting of the HTML body of an email.]
+
+	Args:
+		url (str): [url of the listing]
+
+	Returns:
+		[None]: [Just sends the email.  Doesn't return anything]
+	"""	
+	import smtplib, ssl
+	from email.mime.text import MIMEText
+	from email.mime.multipart import MIMEMultipart
+	
+	def inputdatlink(urls:str):
+		html = """
+		<html>
+			<body>
+				<p>Helloooooooooo!<br>
+				You have new houses to look at!<br>
+				""" + urls + """
+				</p>
+			</body>
+		</html>
+		"""
+		return html
+
+	with open('./secret/login.txt') as login_file:
+		login = login_file.read().splitlines()
+		sender_email = login[0].split(':')[1]
+		password = login[1].split(':')[1]
+		receiver_email = login[2].split(':')[1]
+		
+	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
+	smtp_server = "smtp.gmail.com"
+	port = 465
+
+	html = inputdatlink(urls)
+
+	message = MIMEMultipart("alternative")
+	message["Subject"] = "New Housing Found!"
+	message["From"] = sender_email
+	message["To"] = receiver_email
+
+	attachment = MIMEText(html, "html")
+	message.attach(attachment)
+	context = ssl.create_default_context()
+
+	with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+		server.login(sender_email, password)		
+		server.sendmail(sender_email, receiver_email, message.as_string())
 
 def date_convert(time_big:pd.Series)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
@@ -169,117 +290,3 @@ def crime_score(lat1:float, lon1:float) -> pd.Series:
 		
 	scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
 	return pd.DataFrame.from_dict(scores, orient='index').T
-
-def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
-	"""[Given two corners of a box on a map.  Determine if a point is
-	 within said box.  Step 1.  You cut a hole in that box.]
-
-	Args:
-		bounding_box (list): [list of GPS coordinates of the box]
-		lat (float): [lattitude of point]
-		lon (float): [longitude of point]
-
-	Returns:
-		(bool): [Whether or not is within the given GPS ranges 
-		in the bounding box]
-	"""		
-	bb_lat_low = bounding_box[0]
-	bb_lat_up = bounding_box[2]
-	bb_lon_low = bounding_box[1]
-	bb_lon_up = bounding_box[3]
-
-	if bb_lat_low < lat < bb_lat_up:
-		if bb_lon_low < lon < bb_lon_up:
-			return True
-
-	return False
-
-def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
-	"""[Uses the haversine formula to calculate the distance between 
-	two points on a sphere]
-
-	Args:
-		lat1 (float): [latitude of first point]
-		lon1 (float): [longitude of first point]
-		lat2 (float): [latitude of second point]
-		lon2 (float): [latitue of second point]
-
-	Returns:
-		dist (float): [Distance between two GPS points in miles]
-
-	Source:https://stackoverflow.com/questions/42686300/how-to-check-if-coordinate-inside-certain-area-python
-	"""	
-	from math import radians, cos, sin, asin, sqrt
-	# convert decimal degrees to radians 
-	lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-
-	# haversine formula 
-	dlon = lon2 - lon1 
-	dlat = lat2 - lat1 
-	a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-	c = 2 * asin(sqrt(a)) 
-	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
-	return c * r
-
-
-def urlformat(urls:list)->str:
-	links_html = "<ol>"
-	if len(urls) > 1:
-		for link, site in urls:
-			links_html += f"<li><a href='{link}'> {site} link </a></li>"
-	else:
-		links_html = f"<li><a href='{urls[0]}'> link 1 </a></li>"
-	links_html = links_html + "</ol>"
-	return links_html
-
-def send_housing_email(urls:str):
-	"""[Function for sending an email.  Inputs the url into the docstrings 
-	via decorator for easy formatting of the HTML body of an email.]
-
-	Args:
-		url (str): [url of the listing]
-
-	Returns:
-		[None]: [Just sends the email.  Doesn't return anything]
-	"""	
-	import smtplib, ssl
-	from email.mime.text import MIMEText
-	from email.mime.multipart import MIMEMultipart
-	
-	def inputdatlink(urls:str):
-		html = """
-		<html>
-			<body>
-				<p>Helloooooooooo!<br>
-				You have new houses to look at!<br>
-				""" + urls + """
-				</p>
-			</body>
-		</html>
-		"""
-		return html
-
-	with open('./secret/login.txt') as login_file:
-		login = login_file.read().splitlines()
-		sender_email = login[0].split(':')[1]
-		password = login[1].split(':')[1]
-		receiver_email = login[2].split(':')[1]
-		
-	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
-	smtp_server = "smtp.gmail.com"
-	port = 465
-
-	html = inputdatlink(urls)
-
-	message = MIMEMultipart("alternative")
-	message["Subject"] = "New Housing Found!"
-	message["From"] = sender_email
-	message["To"] = receiver_email
-
-	attachment = MIMEText(html, "html")
-	message.attach(attachment)
-	context = ssl.create_default_context()
-
-	with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-		server.login(sender_email, password)		
-		server.sendmail(sender_email, receiver_email, message.as_string())
