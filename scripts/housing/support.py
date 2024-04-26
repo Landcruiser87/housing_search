@@ -24,7 +24,7 @@ def closest_L_stop(data:list)->list:
 		"./data/CTA_Lstops.csv",
 		header=0,
 		index_col="STOP_ID"
-		)
+	)
 	for listing in data:
 		if listing.lat and listing.long:
 			lat1 = listing.lat
@@ -37,7 +37,8 @@ def closest_L_stop(data:list)->list:
 				dist = haversine_distance(lat1, lon1, lat2, lon2)
 				if dist <= min_dist:
 					min_dist = dist
-		listing.L_dist = min_dist
+			listing.L_dist = min_dist
+
 	return data
 
 def get_lat_long(data:list)->list:
@@ -52,7 +53,7 @@ def get_lat_long(data:list)->list:
 			lat, long = location.latitude, location.longitude
 			listing.lat = lat
 			listing.long = long
-		sleepspinner(np.random.randint(2, 6), "searching lat/long")
+		sleepspinner(np.random.randint(2, 4), "searching lat/long")
 
 	return data
 
@@ -63,6 +64,7 @@ def sleepspinner(naps:int, msg:str):
 		BarColumn(),
 		TextColumn("*"),
 		"time remain:",
+		TextColumn("*"),
 		TimeRemainingColumn(),
 		TextColumn("*"),
 		TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
@@ -190,11 +192,11 @@ def send_housing_email(urls:str):
 		server.login(sender_email, password)		
 		server.sendmail(sender_email, receiver_email, message.as_string())
 
-def date_convert(time_big:pd.Series)->datetime:
+def date_convert(time_big:datetime)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
 
-def crime_score(lat1:float, lon1:float) -> pd.Series:
+def crime_score(data:list) -> dict:
 	"""[Connects to data.cityofchicago.org and pulls down all the 
 	crime data for the last year, in a 1 mile radius.  It then recategorizes
 	the crimes into scores based on the percentage of total crime in that area.]
@@ -209,7 +211,7 @@ def crime_score(lat1:float, lon1:float) -> pd.Series:
 	Returns:
 		pd.Series: [Scores for each listing]
 	"""	
-	with open('../../secret/chicagodata.txt') as login_file:
+	with open('./secret/chicagodata.txt') as login_file:
 		login = login_file.read().splitlines()
 		app_token = login[0].split(':')[1]
 		
@@ -217,98 +219,109 @@ def crime_score(lat1:float, lon1:float) -> pd.Series:
 
 	#Search radius is 0.91 miles
 	#Sets lookback to 1 year from today
-
 	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
+	c_dtypes = [
+		("id"          ,str, 60),
+		("date"        ,str, 60),
+		("description" ,str, 120),
+		("latitude"    ,float),
+		("longitude"   ,float),
+		("primary_type",str, 120)
+	]
 
-	results = client.get("ijzp-q8t2",
-						select="id, date, description, latitude, longitude, primary_type ",
-						where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
-						limit=800000)
+	for listing in data:
+		lat1 = listing.lat
+		lon1 = listing.long
 
-	#redo this in numpy
-	crime_df = pd.DataFrame.from_dict(results)
-	crime_df['date_conv'] = crime_df.apply(lambda x: date_convert(x.date), axis=1)
-	crime_df['date_short'] = crime_df.apply(lambda x: x.date_conv.date(), axis=1)
-	crime_df['crime_time'] = crime_df.apply(lambda x: x.date_conv.time(), axis=1)
-	crime_df.drop(['date_conv', 'date'], axis=1, inplace=True)
-	
-	#?Keep
-	#Just realized i don't need this.  Keeping in case i want to do a metric of danger by distance metric
-	#crime_df['distance'] = crime_df.apply(lambda x: haversine_distance(lat1, lon1, float(x.latitude), float(x.longitude)), axis=1)
-	
-	#Check the last dates record.  If its not within the last year, 
-	#make another request until we hit that date. 
-		# Don't forget to filter any data that may come in extra. 
+		if lat1 and lon1:
+			results = client.get("ijzp-q8t2",
+								select="id, date, description, latitude, longitude, primary_type ",
+								where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
+								limit=800000)
+			
+			#Set up array
+			crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
+			#Fill it in row by row
+			for idx, res in enumerate(results):
+				crime_arr[idx] = tuple(res.values())
+			
+			#Convert to datetimes
+			func = np.vectorize(lambda x: date_convert(x))
+			crime_arr["date"] = np.apply_along_axis(func, 0, crime_arr["date"])
+			
+			#Check the last dates record.  If its not within the last year, 
+			#make another request until we hit that date. 
+				# Don't forget to filter any data that may come in extra. 
+			date_check = crime_arr["date"].min()
+			if date_check > datetime.date.today() - datetime.timedelta(days=365):
+				#TODO Need to figure out how to remake the request if i hit the 800k limit. 
+				raise ValueError('Yo Query needeth be BIGGER')
 
-	date_check = crime_df.date_short.min()
-	if date_check > datetime.date.today() - datetime.timedelta(days=365):
-		#TODO Need to figure out how to remake the request if i hit the 800k limit. 
-		raise ValueError('Yo Query needeth be BIGGER')
+			#Checking memory consumption
+			#sum(crime_df.memory_usage(deep=True) / 1_000_000)
+			#Req 500k records costs you about 21.7 MB
 
-	#Checking memory consumption
-	#sum(crime_df.memory_usage(deep=True) / 1_000_000)
-	#Req 500k records costs you about 21.7 MB
+			total_crimes = crime_arr.shape[0]
 
-	total_crimes = crime_df.shape[0]
-
-	scores = {
-		'drug_score':0,
-		'gun_score':0,
-		'murder_score':0,
-		'perv_score':0,
-		'theft_score':0,
-		'violence_score':0,
-		'property_d_score':0
-	}
+			scores = {
+				'drug_score':0,
+				'gun_score':0,
+				'murder_score':0,
+				'perv_score':0,
+				'theft_score':0,
+				'violence_score':0,
+				'property_d_score':0
+			}
 
 
-	narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
-	guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
-	theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
-	sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
-	human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
+			narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
+			guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
+			theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
+			sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
+			human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
 
-	for idx in crime_df.index:
-		#Drugs
-		if crime_df.loc[idx, 'primary_type'] in narcotics:
-			scores['drug_score'] += 1
+			for idx in total_crimes:
+				#Drugs
+				if crime_arr[idx]['primary_type'] in narcotics:
+					scores['drug_score'] += 1
 
-		#Guns
-		if crime_df.loc[idx, 'primary_type'] in guns:
-			scores['gun_score'] += 1
- 
-		#Gun description subsearch if primary_type doesn't catch it.
-		elif set(crime_df.loc[idx, 'description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
-			scores['gun_score'] += 1
+				#Guns
+				if crime_arr[idx]['primary_type'] in guns:
+					scores['gun_score'] += 1
 		
-		#Murder
-		if crime_df.loc[idx, 'primary_type'] in ['HOMICIDE']:
-			scores['murder_score'] += 1
-		
-		#Theft
-		if crime_df.loc[idx, 'primary_type'] in theft:
-			scores['theft_score'] += 1
+				#Gun description subsearch if primary_type doesn't catch it.
+				elif set(crime_arr[idx]['description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+					scores['gun_score'] += 1
+				
+				#Murder
+				if crime_arr[idx]['primary_type'] in ['HOMICIDE']:
+					scores['murder_score'] += 10
+				
+				#Theft
+				if crime_arr[idx]['primary_type'] in theft:
+					scores['theft_score'] += 1
 
-		#Sexual Crimes
-		if crime_df.loc[idx, 'primary_type'] in sex_crimes:
-			scores['perv_score'] += 1
+				#Sexual Crimes
+				if crime_arr[idx]['primary_type'] in sex_crimes:
+					scores['perv_score'] += 1
 
-		#Sex Crimes subsearch
-		elif set(crime_df.loc[idx, 'description'].split()) & set(['PEEPING TOM']):
-			scores['perv_score'] += 1
+				#Sex Crimes subsearch
+				elif set(crime_arr[idx]['description'].split()) & set(['PEEPING TOM']):
+					scores['perv_score'] += 2
 
-		#humanViolence
-		if crime_df.loc[idx, 'primary_type'] in human_violence:
-			scores['violence_score'] += 1
+				#humanViolence
+				if crime_arr[idx]['primary_type'] in human_violence:
+					scores['violence_score'] += 1
 
-		#humanviolence subsearch
-		elif set(crime_df.loc[idx, 'description'].split()) & set(['CHILDREN']):
-			scores['violence_score'] += 1
+				#humanviolence subsearch
+				elif set(crime_arr[idx]['description'].split()) & set(['CHILDREN']):
+					scores['violence_score'] += 5
 
-		#property damage
-		if crime_df.loc[idx, 'primary_type'] in ['CRIMINAL DAMAGE']:
-			scores['property_d_score'] += 1
-		
-		
-	scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
-	return pd.DataFrame.from_dict(scores, orient='index').T
+				#property damage
+				if crime_arr[idx]['primary_type'] in ['CRIMINAL DAMAGE']:
+					scores['property_d_score'] += 1
+				
+			scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
+			listing.crime_sc = scores
+
+	return data

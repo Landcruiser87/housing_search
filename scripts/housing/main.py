@@ -4,18 +4,17 @@ import pandas as pd
 import logging
 import time
 from rich.logging import RichHandler
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from os.path import exists
 import json
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
 
-#Format logger and load
+#Format logger and load configuration
 FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-
 logging.basicConfig(
 	#filename=f"./data/logs/{current_date}.log",  
 	#filemode='w',
@@ -25,14 +24,14 @@ logging.basicConfig(
 	handlers=[RichHandler()] 
 )
 
+#Load logger
 logger = logging.getLogger(__name__) 
 
 #input custom area's here. 
-
 AREAS = [
+	'North Center',
 	'Lincoln Square',
 	'Ravenswood',
-	# 'North Center',
 	# 'Roscoe Village'
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
@@ -44,27 +43,27 @@ SOURCES = {
 	"apartments":("www.apartments.com", apartments),
 	"craigs"    :("www.craiglist.org", craigs),
 	"zillow"    :("www.zillow.com", zillow),
-	
 }
+
 CITY = "Chicago"
 STATE = "IL"
 
 @dataclass
 class Propertyinfo():
-	id     : str
-	source : str
-	price  : str
-	neigh  : str
-	dogs   : bool
-	link   : str
-	address: str
-	bed    : float = None
-	bath   : float = None
-	sqft   : float = None
-	lat    : float = ""
-	long   : float = ""
-	L_dist : float = ""
-	# crimesc: float = ""
+	id      : str
+	source  : str
+	price   : str
+	neigh   : str
+	dogs    : bool
+	link    : str
+	address : str
+	bed     : float = None
+	bath    : float = None
+	sqft    : float = None
+	lat     : float = ""
+	long    : float = ""
+	L_dist  : float = ""
+	crime_sc: dict = field(default_factory=lambda:{})
 	# dt_listed: datetime.datetime = None
 	# amenities: object
 	def dict(self):
@@ -119,7 +118,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["craigs", "zillow", "apartments", "realtor"]  
+	sources = ["craigs", "zillow", "realtor", "apartments"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -149,11 +148,14 @@ def scrape(neigh:str):
 			if data:
 				#Get lat longs for the address's
 				data = support.get_lat_long(data)
+
 				#Calculate the distance to closest L Stop (haversine/as crow
 				#flies)
 				data = support.closest_L_stop(data)
+
 				#Score them according to chicago crime data
-				# score(data)
+				data = support.crime_score(data)
+
 				#Add the listings to the json object. 
 				add_data(data, (site[0], neigh))
 				del data
