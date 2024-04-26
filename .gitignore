@@ -135,7 +135,7 @@ dmypy.json
 /.pytest_cache
 *.log
 *.xlsx
-*.json
+# *.json
 .Rhistory
 .DS_Store
 

@@ -32,7 +32,7 @@ AREAS = [
 	'North Center',
 	'Lincoln Square',
 	'Ravenswood',
-	# 'Roscoe Village'
+	'Roscoe Village'
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 	# 'Bowmanville',
