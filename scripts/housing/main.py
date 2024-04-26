@@ -140,7 +140,7 @@ def scrape(neigh:str):
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 
 				#Take a lil nap.  Be nice to servers!
-				support.sleepspinner(np.random.randint(2,6))
+				support.sleepspinner(np.random.randint(2,6), f'{site[0]} takes a sleep')
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:

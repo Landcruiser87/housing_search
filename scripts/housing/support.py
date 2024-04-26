@@ -16,7 +16,7 @@ from rich.console import Console
 
 console = Console(color_system="truecolor")
 
-def sleepspinner(naps:int):
+def sleepspinner(naps:int, msg:str):
 	my_progress_bar = Progress(
 		TextColumn("{task.description}"),
 		SpinnerColumn("moon"),
@@ -31,7 +31,7 @@ def sleepspinner(naps:int):
 	)
 	
 	with my_progress_bar as progress:
-		task = progress.add_task("Rest little server", total=naps)
+		task = progress.add_task(msg, total=naps)
 		for nap in range(naps):
 			time.sleep(1)
 			progress.advance(task)

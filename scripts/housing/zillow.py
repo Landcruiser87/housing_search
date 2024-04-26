@@ -133,7 +133,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	#Get the map coordinates
 	map_coords = json.loads(mapcords)
-	support.sleepspinner(np.random.randint(2, 8))
+	support.sleepspinner(np.random.randint(2, 8), "Map Request Nap")
 	 
 	 #Need to update bounds here. 
 	subparams = {
