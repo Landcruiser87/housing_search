@@ -6,9 +6,6 @@ import requests
 import time
 import support
 
-
-
-
 def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
 	"""[Gets the list of links to the individual postings]
 
