@@ -20,10 +20,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		#Grab the id
 		listingid = card.get("data-listingid")
 
-		#First grab the link.
+		#First grab the link
 		if card.get("data-url"):
 			url = card.get("data-url")
-		
+
 		#grab the property info
 		for search in card.find_all("div", class_="property-info"):
 			#Grab price
@@ -99,20 +99,18 @@ def money_launderer(price:list)->float:
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	#Return a list of dataclasses
-	#TODO dict of neighborthoods exact mapping
- 
 
 	if " " in neigh:
 		neigh = "-".join(neigh.lower().split(" "))
 
+	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-2600-pet-friendly-dog/"
+
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer': 'https://www.apartments.com/houses-townhomes/chicago-il',
+		'referer': url,
 		'origin':'https://www.apartments.com',
 	}
 
-	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-2600-pet-friendly-dog/"
-          
 	response = requests.get(url, headers=headers)
 
 	#Just in case we piss someone off

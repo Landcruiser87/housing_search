@@ -17,7 +17,7 @@ FORMAT = "%(message)s"
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
 
 logging.basicConfig(
-	#filename=f"./data/logs/{current_date}.log", 
+	#filename=f"./data/logs/{current_date}.log",  
 	#filemode='w',
 	level="INFO", 
 	format=FORMAT, 
@@ -28,8 +28,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 AREAS = [
-	'Ravenswood',
 	'Lincoln Square',
+	'Ravenswood',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 	# 'Bowmanville',
@@ -98,7 +98,7 @@ def add_data(data:dataclass, siteinfo:tuple):
 			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")
 			return		
 	else:
-		#Update global dic
+		#Update global dict with the first few results
 		save_data(new_dict)
 		logger.info("JSON dict updated and saved")
 		jsondata.update(**new_dict)
