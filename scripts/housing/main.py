@@ -12,6 +12,8 @@ import json
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
 
+
+
 #Format logger and load
 FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
@@ -118,8 +120,6 @@ def scrape(neigh:str):
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
-			logger.info(f"scraping {site[0]} for {neigh}")
-			
 			if isinstance(neigh, str):
 				#Because we can't search craigs by neighborhood, we only want to
 				#scrape it once.  So this sets a boolean of if we've scraped
@@ -128,25 +128,28 @@ def scrape(neigh:str):
 				global c_scrape
 				if source=="craigs" and c_scrape==False:
 						c_scrape = True
+						logger.info(f"scraping {site[0]}")
 						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
 
 				elif source=="craigs" and c_scrape==True:
 					continue
 				
 				else:
+					logger.info(f"scraping {site[0]} for {neigh}")
 					#every other site, scrape it normally
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
-				
+
 				#Take a lil nap.  Be nice to servers!
-				time.sleep(np.random.randint(2,6))
-		
+				support.sleepspinner(np.random.randint(2,6))
+
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
 				# geocode(data)
 				# score(data) -> put geopy lat/long extraction in here too. (in support.py now)
 				add_data(data, (site[0], neigh))
 				del data
-			
+			logger.warning(f"source {source} no data found")
+
 		else:
 			logger.warning(f"source: {source} is not in validated search list")
 	

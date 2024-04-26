@@ -103,7 +103,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	if " " in neigh:
 		neigh = "-".join(neigh.lower().split(" "))
 
-	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-1400-pet-friendly-dog/"
+	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-2600-pet-friendly-dog/"
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -125,7 +125,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
 	# surrounding.  Just the neighborhood)
-	nores = bs4ob.find_all("a", class_="placardTitle")
+	nores = bs4ob.find_all("div", class_="no-results")
 	if not nores:
 		results = bs4ob.find("div", class_="placardContainer")
 		if results:
@@ -136,9 +136,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 			
 	else:
 		logger.warning("No listings returned on apartments.  Moving to next site")
-	#BUG
- 	#TODO - Fix when no results come back.  Giving error messages on neighborhoods it can't find
+
 # def zipscrape():
 # 	logger.info("apartments!")
 # 	#TODO build separate extraction for zip codes. 
 	
+#Notes
+#If updating to zips, apartments does this
+# https://www.apartments.com/houses-townhomes/chicago-il-60613

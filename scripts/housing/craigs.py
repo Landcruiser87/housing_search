@@ -3,8 +3,9 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import requests
-import json
 import time
+import support
+
 
 HEADERS = {
 	'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -65,7 +66,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 		#listing.  Meaning more requests and longer wait times. 
 
 		response = requests.get(link, headers=HEADERS)
-		time.sleep(np.random.randint(2, 5))
+		support.sleepspinner(np.random.randint(2, 6))
 		bs4ob = BeautifulSoup(response.text, "lxml")
 
 		#Just in case we piss someone off

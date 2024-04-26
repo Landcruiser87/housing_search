@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 from urllib.parse import urlencode
 import time
-
+import support
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
 	"""[Gets the list of links to the individual postings]
@@ -133,7 +133,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	#Get the map coordinates
 	map_coords = json.loads(mapcords)
-	time.sleep(np.random.randint(2, 6))
+	support.sleepspinner(np.random.randint(2, 8))
 	 
 	 #Need to update bounds here. 
 	subparams = {
@@ -152,6 +152,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 			"isApartmentOrCondo"  :{"value":False},
 			"isApartment"         :{"value":False},
 			"isCondo"             :{"value":False},
+			"mp"                  :{"max":2600},
 			"onlyRentalLargeDogsAllowed":{"value":True},
 			"onlyRentalSmallDogsAllowed":{"value":True}
 		},
@@ -201,3 +202,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 # 	logger.info("zillow!")
 # 	#TODO build separate extraction for zip codes. 
 	
+# Notes:
+# If updating to zips.  Zillow searchs by zip like this
+# https://www.zillow.com/chicago-il-60613/rentals/?

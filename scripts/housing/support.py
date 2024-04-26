@@ -2,6 +2,39 @@ import datetime
 import numpy as np
 import pandas as pd
 from sodapy import Socrata
+import time
+
+#Progress bar fun
+from rich.progress import (
+	Progress,
+	BarColumn,
+	SpinnerColumn,
+	TextColumn,
+	TimeRemainingColumn,
+)
+from rich.console import Console
+
+console = Console(color_system="truecolor")
+
+def sleepspinner(naps:int):
+	my_progress_bar = Progress(
+		TextColumn("{task.description}"),
+		SpinnerColumn("moon"),
+		BarColumn(),
+		TextColumn("*"),
+		"time remain:",
+		TimeRemainingColumn(),
+		TextColumn("*"),
+		TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+		transient=True,
+		console=console
+	)
+	
+	with my_progress_bar as progress:
+		task = progress.add_task("Rest little server", total=naps)
+		for nap in range(naps):
+			time.sleep(1)
+			progress.advance(task)
 
 def date_convert(time_big:pd.Series)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
