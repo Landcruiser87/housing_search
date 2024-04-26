@@ -118,7 +118,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["craigs", "zillow", "realtor", "apartments"]  
+	sources = ["realtor", "craigs", "zillow", "apartments"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -147,7 +147,7 @@ def scrape(neigh:str):
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
 				#Get lat longs for the address's
-				data = support.get_lat_long(data)
+				data = support.get_lat_long(data, (CITY, STATE))
 
 				#Calculate the distance to closest L Stop (haversine/as crow
 				#flies)

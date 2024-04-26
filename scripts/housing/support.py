@@ -48,6 +48,7 @@ def get_lat_long(data:list)->list:
 	}
 	geolocator = Nominatim(**params)
 	for listing in data:
+		#TODO - Put check in here for if city and state are the string 
 		location = geolocator.geocode(listing.address + " United States")
 		if location:
 			lat, long = location.latitude, location.longitude
@@ -222,7 +223,7 @@ def crime_score(data:list) -> dict:
 	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
 	c_dtypes = [
 		("id"          ,str, 60),
-		("date"        ,str, 60),
+		("date"        ,datetime.datetime),
 		("description" ,str, 120),
 		("latitude"    ,float),
 		("longitude"   ,float),
@@ -252,7 +253,7 @@ def crime_score(data:list) -> dict:
 			#Check the last dates record.  If its not within the last year, 
 			#make another request until we hit that date. 
 				# Don't forget to filter any data that may come in extra. 
-			date_check = crime_arr["date"].min()
+			date_check = crime_arr["date"]
 			if date_check > datetime.date.today() - datetime.timedelta(days=365):
 				#TODO Need to figure out how to remake the request if i hit the 800k limit. 
 				raise ValueError('Yo Query needeth be BIGGER')
