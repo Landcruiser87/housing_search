@@ -29,10 +29,10 @@ logger = logging.getLogger(__name__)
 
 AREAS = [
 	'Ravenswood',
-	# 'Lincoln Square',
+	'Lincoln Square',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
-	'Bowmanville',
+	# 'Bowmanville',
 ]
 
 SOURCES = {
@@ -112,7 +112,6 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	c_scrape = False
 	sources = ["apartments", "realtor", "craigs", "zillow"]  
 	for source in sources:
 		site = SOURCES.get(source)
@@ -124,10 +123,14 @@ def scrape(neigh:str):
 				#scrape it once.  So this sets a boolean of if we've scraped
 				#craigs, then flips the value to not scrape it again in the
 				#future neighborhoods that will be searched. 
-				if source=="craigs":
-					if not c_scrape:
+				global c_scrape
+				if source=="craigs" and c_scrape==False:
 						c_scrape = True
 						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+
+				elif source=="craigs" and c_scrape==True:
+					continue
+				
 				else:
 					#every other site, scrape it normally
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
@@ -148,7 +151,8 @@ def scrape(neigh:str):
 #Driver code 
 def main():
 	#Global variable setup
-	global newlistings, jsondata
+	global newlistings, jsondata, c_scrape
+	c_scrape = False
 	newlistings = []
 	fp = "./data/housing.json"
 	if exists(fp):

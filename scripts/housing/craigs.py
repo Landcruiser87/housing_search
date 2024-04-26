@@ -94,8 +94,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 				#bug, maybe remove ft
 			elif "br" in text:
 				beds, baths = search.text.strip("\n").strip().split("/")
-				beds = "".join([x for x in beds if x.isnumeric()])
-				baths = "".join([x for x in baths if x.isnumeric()])
+				if any(x.isnumeric() for x in beds):
+					beds = float("".join(x for x in beds if x.isnumeric()))
+				if any(x.isnumeric() for x in baths):
+					baths = float("".join(x for x in baths if x.isnumeric()))
 
 		#grab addy
 		for search in bs4ob.find_all("h2", class_="street-address"):

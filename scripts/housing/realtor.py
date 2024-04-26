@@ -46,12 +46,23 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 				sqft = None
 				for subsearch in search.find_all("li"):
 					if subsearch.get("data-testid")=="property-meta-beds":
-						beds = float(subsearch.find("span").text)
+						beds = subsearch.find("span").text
+						if any(x.isnumeric() for x in beds):
+							beds = float("".join(x for x in beds if x.isnumeric()))
+
 					elif subsearch.get("data-testid")=="property-meta-baths":
-						baths = float(subsearch.find("span").text)
+						baths = subsearch.find("span").text
+						if any(x.isnumeric() for x in baths):
+							baths = float("".join(x for x in baths if x.isnumeric()))
+
 					elif subsearch.get("data-testid")=="property-meta-sqft":
-						sqft = float(captain_comma(subsearch.find("span", class_="meta-value").text))
-		
+						sqft = subsearch.find("span", class_="meta-value").text
+						if sqft:
+							if any(x.isnumeric() for x in sqft):
+								sqft = float("".join(x for x in sqft if x.isnumeric()))
+			
+	
+
 		#grab address
 		for search in card.find_all("div", class_="card-address truncate-line"):
 			if search.get("data-testid") == "card-address":
@@ -90,20 +101,6 @@ def money_launderer(price:list)->float:
 	if isinstance(price, str):
 		return float(price.replace("$", "").replace(",", ""))
 	return price
-
-
-def captain_comma(sqft:str)->float:
-	"""[Strips comma from sqft]
-
-	Args:
-		sqft (str): square footage string
-
-	Returns:
-		sqft (float): removes comma so it can be a float!
-	"""	
-	if isinstance(sqft, str):
-		return float(sqft.replace(",", ""))
-	return sqft
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	#Return a list of dataclasses

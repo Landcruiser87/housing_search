@@ -40,9 +40,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 					sqft = sqft.strip()
 				else:
 					beds, baths = beds.split(",")
-
-				beds = float("".join(x for x in beds if x.isnumeric()))
-				baths = float("".join(x for x in baths if x.isnumeric()))
+				if any(x.isnumeric() for x in beds):
+					beds = float("".join(x for x in beds if x.isnumeric()))
+				if any(x.isnumeric() for x in baths):
+					baths = float("".join(x for x in baths if x.isnumeric()))
 
 		#grab address
 		for search in card.find_all("a", class_="property-link"):
@@ -102,7 +103,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
  
 
 	if " " in neigh:
-		neigh = "".join(neigh.split(" "))
+		neigh = "-".join(neigh.lower().split(" "))
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -126,16 +127,19 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
 	# surrounding.  Just the neighborhood)
-	results = bs4ob.find("div", class_="placardContainer")
-	if results:
-		if results.get("id") =='placardContainer':
-			property_listings = get_listings(results, neigh, source, Propertyinfo)
-			logger.info(f'{len(property_listings)} listings returned from {source}')
-			return property_listings
-		
+	nores = bs4ob.find("article", class_="noPlacards")
+	if not nores:
+		results = bs4ob.find("div", class_="placardContainer")
+		if results:
+			if results.get("id") =='placardContainer':
+				property_listings = get_listings(results, neigh, source, Propertyinfo)
+				logger.info(f'{len(property_listings)} listings returned from {source}')
+				return property_listings
+			
 	else:
 		logger.warning("No listings returned on apartments.  Moving to next site")
-	
+	#BUG
+ 	#TODO - Fix when no results come back.  Giving error messages on neighborhoods it can't find
 # def zipscrape():
 # 	logger.info("apartments!")
 # 	#TODO build separate extraction for zip codes. 
