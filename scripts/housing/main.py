@@ -64,8 +64,7 @@ class Propertyinfo():
 	long    : float = ""
 	L_dist  : float = ""
 	crime_sc: dict = field(default_factory=lambda:{})
-	# dt_listed: datetime.datetime = None
-	# amenities: object
+
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
 

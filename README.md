@@ -41,10 +41,10 @@ Datasets are kept in the data folder.
 5. 
 
 ### Sites to search
-- [ ] - [craigslist](https://www.craiglist.org)
-- [ ] - [zillow](https://www.zillow.com)
-- [ ] - [rent.com](https://www.rent.com)
-- [ ] - [apartments.com](https://www.apartments.com)
+- [x] - [craigslist](https://www.craiglist.org)
+- [x] - [zillow](https://www.zillow.com)
+- [x] - [rent.com](https://www.rent.com)
+- [x] - [apartments.com](https://www.apartments.com)
 
 
 ### External Data Sources
