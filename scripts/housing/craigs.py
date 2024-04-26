@@ -7,26 +7,9 @@ import time
 import support
 
 
-HEADERS = {
-	'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-	'Accept-Language': 'en-US,en;q=0.9',
-	'Cache-Control': 'max-age=0',
-	'Connection': 'keep-alive',
-	'Origin': 'https://chicago.craigslist.org',
-	'Referer': 'https://chicago.craigslist.org/',
-	'Sec-Fetch-Dest': 'document',
-	'Sec-Fetch-Mode': 'navigate',
-	'Sec-Fetch-Site': 'same-origin',
-	'Sec-Fetch-User': '?1',
-	'Upgrade-Insecure-Requests': '1',
-	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-	'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-	'sec-ch-ua-mobile': '?0',
-	'sec-ch-ua-platform': '"Windows"',
-}
 
 
-def get_links(bs4ob:BeautifulSoup)->list:
+def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
 	"""[Gets the list of links to the individual postings]
 
 	Args:
@@ -38,11 +21,11 @@ def get_links(bs4ob:BeautifulSoup)->list:
 	links = []
 	for link in bs4ob.find_all('a'):
 		url = link.get("href")
-		if url.startswith("https://chicago.craigslist.org/chc"):
+		if url.startswith(f"https://{CITY}.craigslist.org/chc"):
 			links.append(url)
 	return links
 	
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, citystate:tuple)->list:
 	"""[Gets the list of links to the individual postings]
 
 	Args:
@@ -51,13 +34,33 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 	Returns:
 		properties (list[Propertyinfo]): [all the links in the summary page]
 	"""
+	CITY = citystate[0].lower()
+	STATE = citystate[1].lower()
+
+	HEADERS = {
+		'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+		'Accept-Language': 'en-US,en;q=0.9',
+		'Cache-Control': 'max-age=0',
+		'Connection': 'keep-alive',
+		'Origin': f'https://{CITY}.craigslist.org',
+		'Referer': f'https://{CITY}.craigslist.org/',
+		'Sec-Fetch-Dest': 'document',
+		'Sec-Fetch-Mode': 'navigate',
+		'Sec-Fetch-Site': 'same-origin',
+		'Sec-Fetch-User': '?1',
+		'Upgrade-Insecure-Requests': '1',
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+		'sec-ch-ua-mobile': '?0',
+		'sec-ch-ua-platform': '"Windows"',
+	}
 
 	listings = []
 	
 	#lat long info is in here.  Could merge them with the search. 
 	#result.select_one('script[id*="ld_searchpage_results"]')
 	# contents = json.loads(card.contents[0].strip("\n").strip())
-	links = get_links(result)
+	links = get_links(result, CITY)
 	
 	for link in links: 
 		
@@ -66,7 +69,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 		#listing.  Meaning more requests and longer wait times. 
 
 		response = requests.get(link, headers=HEADERS)
-		support.sleepspinner(np.random.randint(2, 6), f'Craigs {neigh} individual request nap')
+		support.sleepspinner(np.random.randint(2, 6), f'Craigs {neigh} request nap')
 		bs4ob = BeautifulSoup(response.text, "lxml")
 
 		#Just in case we piss someone off
@@ -133,7 +136,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 			id=listingid,
 			source=source,
 			price=price,
-			neigh="Chicago",
+			neigh=CITY,
 			bed=beds,
 			sqft=sqft,
 			bath=baths,
@@ -145,8 +148,27 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 
 	return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:tuple):
+	CITY = citystate[0].lower()
+	STATE = citystate[1].lower()
 
+	HEADERS = {
+		'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+		'Accept-Language': 'en-US,en;q=0.9',
+		'Cache-Control': 'max-age=0',
+		'Connection': 'keep-alive',
+		'Origin': f'https://{CITY}.craigslist.org',
+		'Referer': f'https://{CITY}.craigslist.org/',
+		'Sec-Fetch-Dest': 'document',
+		'Sec-Fetch-Mode': 'navigate',
+		'Sec-Fetch-Site': 'same-origin',
+		'Sec-Fetch-User': '?1',
+		'Upgrade-Insecure-Requests': '1',
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+		'sec-ch-ua-mobile': '?0',
+		'sec-ch-ua-platform': '"Windows"',
+	}
 	#Change these to suit your housing requirements
 	params = (
 		("hasPic", "1"),
@@ -163,8 +185,12 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 		("sale_date", "all dates"),
 	)
 
-	url = 'https://chicago.craigslist.org/search/chc/apa'
-
+	url = f'https://{CITY}.craigslist.org/search/chc/apa'
+	#BUG.  So....  craigs encodes
+	#region into their URl.  So you'll have to change that
+	#You can remove the chc from the search link to search an entire city, 
+	#But that will likely generate too many results. 
+ 
 	response = requests.get(url, headers=HEADERS, params=params)
 
 	#Just in case we piss someone off
@@ -182,7 +208,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	results = bs4ob.find_all("li", class_="cl-static-search-result")
 	if results:
 		if len(results) > 0:
-			property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger)
+			property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, citystate)
 			logger.info(f'{len(property_listings)} listings returned from {source}')
 			return property_listings
 	

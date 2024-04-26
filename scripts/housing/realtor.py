@@ -102,21 +102,19 @@ def money_launderer(price:list)->float:
 		return float(price.replace("$", "").replace(",", ""))
 	return price
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
-	#Return a list of dataclasses
-	#TODO dict of neighborthoods exact mapping
- 
-
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
+	CITY = citystate[0].lower()
+	STATE = citystate[1].lower()
 	if " " in neigh:
 		neigh = "-".join(neigh.split(" "))
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer': 'https://www.realtor.com/apartments/Chicago_IL',
+		'referer': f'https://www.realtor.com/apartments/{CITY}_{STATE.upper()}',
 		'origin':'https://www.realtor.com',
 	}
 
-	url = f"https://www.realtor.com/apartments/{neigh}_Chicago_IL/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
+	url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE.upper()}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
           
 	response = requests.get(url, headers=headers)
 

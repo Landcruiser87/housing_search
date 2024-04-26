@@ -100,8 +100,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	#Check for spaces in the search neighborhood
+	CITY = citystate[0].lower()
+	STATE = citystate[1].lower()
 	if " " in neigh:
 		neigh = "-".join(neigh.split(" "))
 	neigh = neigh.lower()
@@ -110,11 +112,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
  	# SEARCH_HEADER = {"content-type":"application/json"}
 	BASE_HEADERS = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer':'https://www.zillow.com/chicago-il/rentals',
+		'referer':f'https://www.zillow.com/{CITY}-{STATE}/rentals',
 		'origin':'https://www.zillow.com',
 	}
 
-	url_map = f'https://www.zillow.com/{neigh}-chicago-il/rentals'
+	url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
 	response = requests.get(url_map, headers=BASE_HEADERS)
 	
 	# If there's an error, log it and return no data for that site
@@ -137,7 +139,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	 
 	 #Need to update bounds here. 
 	subparams = {
-		"usersSearchTerm":neigh + " Chicago, IL",
+		"usersSearchTerm":neigh + f" {CITY}, {STATE.upper()}",
 		"mapBounds":map_coords,
 		"filterState":{
 			"isForRent"           :{"value":True},
@@ -168,11 +170,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	}
 	SEARCH_HEADERS = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer':'https://www.zillow.com/chicago-il/rentals',
+		'referer':f'https://www.zillow.com/{CITY}-{STATE}/rentals',
 		'origin':'https://www.zillow.com',
 	}
 
-	url_search = f'https://www.zillow.com/{neigh}-chicago-il/rentals/?' + urlencode(params)
+	url_search = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?' + urlencode(params)
 	response = requests.get(url_search, headers = SEARCH_HEADERS)
 
 	#Just in case we piss someone off

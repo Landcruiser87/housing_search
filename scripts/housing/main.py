@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd
 import logging
-import datetime
 import time
 from rich.logging import RichHandler
 from dataclasses import dataclass, asdict
@@ -15,6 +14,7 @@ import realtor, zillow, apartments, craigs, support
 #Format logger and load
 FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
+current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
 
 logging.basicConfig(
 	#filename=f"./data/logs/{current_date}.log",  
@@ -26,6 +26,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__) 
+
+#input custom area's here. 
 
 AREAS = [
 	'Lincoln Square',
@@ -44,6 +46,8 @@ SOURCES = {
 	"zillow"    :("www.zillow.com", zillow),
 	
 }
+CITY = "Chicago"
+STATE = "IL"
 
 @dataclass
 class Propertyinfo():
@@ -81,7 +85,6 @@ def add_data(data:dataclass, siteinfo:tuple):
 	#Pop the id from the dict underneath (no need to store it twice)
 	[new_dict[x].pop("id") for x in ids]
 
-
 	if jsondata:
 		j_ids = set(jsondata.keys())
 		n_ids = set(new_dict.keys())
@@ -114,7 +117,7 @@ def save_data(jsond:dict):
 	logger.info("JSON file saved")
 
 def scrape(neigh:str):
-	sources = ["apartments", "realtor", "craigs", "zillow"]  
+	sources = ["craigs", "apartments", "realtor", "zillow"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -127,7 +130,7 @@ def scrape(neigh:str):
 				if source=="craigs" and c_scrape==False:
 						c_scrape = True
 						logger.info(f"scraping {site[0]}")
-						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
 				elif source=="craigs" and c_scrape==True:
 					continue
@@ -135,7 +138,7 @@ def scrape(neigh:str):
 				else:
 					#every other site, scrape it normally
 					logger.info(f"scraping {site[0]} for {neigh}")
-					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo)
+					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
 				#Take a lil nap.  Be nice to servers!
 				support.sleepspinner(np.random.randint(2,6), f'{site[0]} takes a sleep')

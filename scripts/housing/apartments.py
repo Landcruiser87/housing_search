@@ -97,13 +97,14 @@ def money_launderer(price:list)->float:
 		return float(price.replace("$", "").replace(",", ""))
 	return price
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
-	#Return a list of dataclasses
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
+	CITY = citystate[0].lower()
+	STATE = citystate[1].lower()
 
 	if " " in neigh:
 		neigh = "-".join(neigh.lower().split(" "))
 
-	url = f"https://www.apartments.com/houses-townhomes/{neigh}-chicago-il/min-2-bedrooms-under-2600-pet-friendly-dog/"
+	url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-under-2600-pet-friendly-dog/"
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -137,10 +138,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo):
 	else:
 		logger.warning("No listings returned on apartments.  Moving to next site")
 
-# def zipscrape():
-# 	logger.info("apartments!")
-# 	#TODO build separate extraction for zip codes. 
-	
 #Notes
 #If updating to zips, apartments does this
 # https://www.apartments.com/houses-townhomes/chicago-il-60613
