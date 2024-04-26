@@ -28,10 +28,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 AREAS = [
+	'Lincoln Square',
 	'Ravenswood',
 	'North Center',
 	'Roscoe Village'
-	'Lincoln Square',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 	# 'Bowmanville',
