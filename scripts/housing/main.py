@@ -37,6 +37,31 @@ AREAS = [
 	# 'Bowmanville',
 ]
 
+
+#input zipcodes to search here. Must be in city limits to work on craigs
+#TODO
+#[ ] Update sub scripts to work on zips
+	#[ ] main
+	#[ ] Zillow
+	#[ ] Apartments
+	#[ ] Realtor
+	#[ ] Craigslist
+
+# AREAS = [
+# 	"60613",
+# 	"60614"
+# 	"60657",
+# 	"60610"
+# 	"60618",
+# 	"60647",
+# 	"60622",
+# 	"60625",
+# 	"60641",
+# 	"60651"
+
+# 	# 'Budlong Woods',
+# 	# 'Bowmanville',
+# ]
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
 	"apartments":("www.apartments.com", apartments),
@@ -163,7 +188,7 @@ def main():
 	else:
 		logger.warning("No previous data found.")
 		jsondata = {}
-		
+
 	#Search the neighborhoods
 	for neigh in AREAS:
 		scrape(neigh)
