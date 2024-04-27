@@ -4,7 +4,7 @@ import pandas as pd
 from sodapy import Socrata
 import time
 import json
-from os import exists
+from os.path import exists
 
 #Progress bar fun
 from rich.progress import (

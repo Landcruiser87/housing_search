@@ -6,7 +6,6 @@ import time
 from rich.logging import RichHandler
 from dataclasses import dataclass, asdict, field
 from os.path import exists
-import json
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
