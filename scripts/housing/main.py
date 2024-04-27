@@ -29,9 +29,9 @@ logger = logging.getLogger(__name__)
 #input custom area's here. 
 AREAS = [
 	'North Center',
-	'Lincoln Square',
+	# 'Lincoln Square',
 	'Ravenswood',
-	'Roscoe Village'
+	# 'Roscoe Village'
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 	# 'Bowmanville',
@@ -41,27 +41,25 @@ AREAS = [
 #input zipcodes to search here. Must be in city limits to work on craigs
 #TODO
 #[ ] Update sub scripts to work on zips
-	#[ ] main
-	#[ ] Zillow
-	#[ ] Apartments
-	#[ ] Realtor
-	#[ ] Craigslist
+	#[x] main
+	#[x] Zillow
+	#[x] Apartments
+	#[x] Realtor
+	#[x] Craigslist
 
 # AREAS = [
-# 	"60613",
-# 	"60614"
-# 	"60657",
-# 	"60610"
-# 	"60618",
-# 	"60647",
-# 	"60622",
-# 	"60625",
-# 	"60641",
-# 	"60651"
-
-# 	# 'Budlong Woods',
-# 	# 'Bowmanville',
+# 	60613,
+# 	60614,
+# 	# 60657,
+# 	# 60610,
+# 	# 60618,
+# 	# 60647,
+# 	# 60622,
+# 	# 60625,
+# 	# 60641,
+# 	# 60651
 # ]
+
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
 	"apartments":("www.apartments.com", apartments),
