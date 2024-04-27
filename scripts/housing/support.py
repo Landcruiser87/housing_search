@@ -214,7 +214,7 @@ def date_convert(time_big:datetime)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
 	return dateOb
 
-def crime_score(data:list) -> dict:
+def crime_score(data:list) -> list:
 	"""[Connects to data.cityofchicago.org and pulls down all the 
 	crime data for the last year, in a 1 mile radius.  It then recategorizes
 	the crimes into scores based on the percentage of total crime in that area.]
@@ -227,7 +227,7 @@ def crime_score(data:list) -> dict:
 		ValueError: [Check to make sure we got a years worth of data]
 
 	Returns:
-		pd.Series: [Scores for each listing]
+		list: [Listings with updated scores]
 	"""	
 	with open('./secret/chicagodata.txt') as login_file:
 		login = login_file.read().splitlines()
@@ -253,9 +253,10 @@ def crime_score(data:list) -> dict:
 
 		if lat1 and lon1:
 			results = client.get("ijzp-q8t2",
-								select="id, date, description, latitude, longitude, primary_type ",
-								where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
-								limit=800000)
+				select="id, date, description, latitude, longitude, primary_type ",
+				where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
+				limit=800000
+			)
 			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
 			
 			#Set up array
@@ -292,7 +293,6 @@ def crime_score(data:list) -> dict:
 				'property_d_score':0
 			}
 
-
 			narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
 			guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
 			theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
@@ -322,7 +322,7 @@ def crime_score(data:list) -> dict:
 
 				#Sexual Crimes
 				if crime_arr[idx]['primary_type'] in sex_crimes:
-					scores['perv_score'] += 1
+					scores['perv_score'] += 2
 
 				#Sex Crimes subsearch
 				elif set(crime_arr[idx]['description'].split()) & set(['PEEPING TOM']):

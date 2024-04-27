@@ -22,4 +22,5 @@ _ = plt.title('Top 10 Neighborhood Counts')
 _ = plt.gca().invert_yaxis()
 _ = plt.show()
 
-top10
+#TODO 
+#Build standalone use of Socrata for chicago crime data. 

@@ -77,6 +77,8 @@ def add_data(data:dataclass, siteinfo:tuple):
 	[new_dict[x].pop("id") for x in ids]
 
 	if jsondata:
+		#Use sets for membership testing of old current jsondata keys
+  		#and new data keys (Looking for new listings)
 		j_ids = set(jsondata.keys())
 		n_ids = set(new_dict.keys())
 		newids = n_ids - j_ids
