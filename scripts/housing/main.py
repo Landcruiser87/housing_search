@@ -163,6 +163,7 @@ def main():
 	else:
 		logger.warning("No previous data found.")
 		jsondata = {}
+		
 	#Search the neighborhoods
 	for neigh in AREAS:
 		scrape(neigh)

@@ -66,7 +66,7 @@ def get_lat_long(data:list, citystate:tuple)->list:
 		if citystate[1].lower() not in address.lower():
 			listing.address = address + citystate[1]
 
-		location = geolocator.geocode(listing.address + " United States")
+		location = geolocator.geocode(listing.address + " USA")
 		if location:
 			lat, long = location.latitude, location.longitude
 			listing.lat = lat
@@ -313,7 +313,7 @@ def crime_score(data:list) -> list:
 					scores['gun_score'] += 1
 				
 				#Murder
-				if crime_arr[idx]['primary_type'] in ['HOMICIDE']:
+				if crime_arr[idx]['primary_type'] == 'HOMICIDE':
 					scores['murder_score'] += 10
 				
 				#Theft
@@ -337,7 +337,7 @@ def crime_score(data:list) -> list:
 					scores['violence_score'] += 5
 
 				#property damage
-				if crime_arr[idx]['primary_type'] in ['CRIMINAL DAMAGE']:
+				if crime_arr[idx]['primary_type'] == 'CRIMINAL DAMAGE':
 					scores['property_d_score'] += 1
 				
 			scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
