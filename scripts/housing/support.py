@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 from sodapy import Socrata
 import time
-import geopy
+import json
+from os import exists
 
 #Progress bar fun
 from rich.progress import (
@@ -17,6 +18,17 @@ from rich.console import Console
 from geopy import Nominatim
 
 console = Console(color_system="truecolor")
+
+def save_data(jsond:dict):
+	out_json = json.dumps(jsond, indent=2)
+	with open("./data/housing.json", "w") as out_f:
+		out_f.write(out_json)
+
+def load_historical(fp:str)->json:
+	if exists(fp):
+		with open(fp, "r") as f:
+			jsondata = json.loads(f.read())
+			return jsondata	
 
 def closest_L_stop(data:list)->list:
 	#Load up Lstop data
@@ -244,7 +256,8 @@ def crime_score(data:list) -> dict:
 								select="id, date, description, latitude, longitude, primary_type ",
 								where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
 								limit=800000)
-			sleepspinner(np.random.randint(2, 4), "Be NICE to your sister")
+			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
+			
 			#Set up array
 			crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
 			#Fill it in row by row
@@ -329,5 +342,5 @@ def crime_score(data:list) -> dict:
 				
 			scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
 			listing.crime_sc = scores
-
+			del results
 	return data

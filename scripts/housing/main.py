@@ -68,14 +68,6 @@ class Propertyinfo():
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
 
-def load_historical(fp:str)->json:
-	if exists(fp):
-		with open(fp, "r") as f:
-			jsondata = json.loads(f.read())
-			return jsondata
-	else:
-		logger.warning("No previous data found.")
-
 def add_data(data:dataclass, siteinfo:tuple):
 	#Reshape data to dict
 	#Pull out the ids
@@ -104,17 +96,11 @@ def add_data(data:dataclass, siteinfo:tuple):
 			return		
 	else:
 		#Update global dict with the first few results
-		save_data(new_dict)
-		logger.info("JSON dict updated and saved")
+		support.save_data(new_dict)
 		jsondata.update(**new_dict)
-
+		logger.info("JSON file saved and global dict updated")
+		
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
-
-def save_data(jsond:dict):
-	out_json = json.dumps(jsond, indent=2)
-	with open("./data/housing.json", "w") as out_f:
-		out_f.write(out_json)
-	logger.info("JSON file saved")
 
 def scrape(neigh:str):
 	sources = ["craigs", "realtor", "zillow", "apartments"]  
@@ -171,15 +157,17 @@ def main():
 	newlistings = []
 	fp = "./data/housing.json"
 	if exists(fp):
-		jsondata = load_historical(fp)
+		jsondata = support.load_historical(fp)
+		logger.info("historical data loaded")
 	else:
+		logger.warning("No previous data found.")
 		jsondata = {}
 	#Search the neighborhoods
 	for neigh in AREAS:
 		scrape(neigh)
   
 	if newlistings:
-		save_data(jsondata)
+		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
 		logger.info("Listings email sent")

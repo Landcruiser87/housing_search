@@ -10,10 +10,10 @@ Scrape multiple sites and store them by unique ID.  (as multiple scrapings will 
 - Check scraped sites for API
 
 - Plan of attack. 
-- [] Scrape Zillow, rent.com, and craigslist.com
+- [x] Scrape Zillow, rent.com, and craigslist.com
 - [x] Identify surrounding neighborhoods for Ravenswood.
 - [] somehow combine them by MLS id.
-- [] score each listing based on amenities/crime/distance to L/grocery stores.
+- [x] score each listing based on amenities/crime/distance to L/grocery stores.
 - [] Store results in sqllite database.
 - [] Post any updated listings to discord channel in TestServerAnaki
 - [x] Alternatively, just text / email me with any new listings.
