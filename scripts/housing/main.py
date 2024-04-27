@@ -27,30 +27,20 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 #input custom area's here. 
-AREAS = [
-	'North Center',
-	# 'Lincoln Square',
-	'Ravenswood',
-	# 'Roscoe Village'
-	# 'Ravenswood Gardens',
-	# 'Budlong Woods',
-	# 'Bowmanville',
-]
-
-
-#input zipcodes to search here. Must be in city limits to work on craigs
-#TODO
-#[ ] Update sub scripts to work on zips
-	#[x] main
-	#[x] Zillow
-	#[x] Apartments
-	#[x] Realtor
-	#[x] Craigslist
-
 # AREAS = [
-# 	60613,
-# 	60614,
-# 	# 60657,
+# 	'North Center',
+# 	# 'Lincoln Square',
+# 	'Ravenswood',
+# 	# 'Roscoe Village'
+# 	# 'Ravenswood Gardens',
+# 	# 'Budlong Woods',
+# 	# 'Bowmanville',
+# ]
+
+AREAS = [
+	60613,
+	60614,
+	# 60657,
 # 	# 60610,
 # 	# 60618,
 # 	# 60647,
@@ -58,7 +48,7 @@ AREAS = [
 # 	# 60625,
 # 	# 60641,
 # 	# 60651
-# ]
+]
 
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
@@ -127,7 +117,7 @@ def add_data(data:dataclass, siteinfo:tuple):
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
 def scrape(neigh:str):
-	sources = ["craigs", "realtor", "zillow", "apartments"]  
+	sources = ["realtor", "apartments", "zillow"]  #"craigs"
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

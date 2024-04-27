@@ -258,89 +258,89 @@ def crime_score(data:list) -> list:
 				limit=800000
 			)
 			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
-			
-			#Set up array
-			crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
-			#Fill it in row by row
-			for idx, res in enumerate(results):
-				crime_arr[idx] = tuple(res.values())
-			
-			#Convert to datetimes
-			func = np.vectorize(lambda x: date_convert(x))
-			crime_arr["date"] = np.apply_along_axis(func, 0, crime_arr["date"])
-			
-			#Check the last dates record.  If its not within the last year, 
-			#make another request until we hit that date. 
-				# Don't forget to filter any data that may come in extra. 
-			date_check = crime_arr["date"].min()
-			if date_check > datetime.datetime.today() - datetime.timedelta(days=365):
-				#Need to figure out how to remake the request if i hit the 800k limit. 
-				raise ValueError('Yo Query needeth be BIGGER')
-
-			#Checking memory consumption
-			#sum(crime_df.memory_usage(deep=True) / 1_000_000)
-			#Req 500k records costs you about 21.7 MB
-
-			total_crimes = crime_arr.shape[0]
-
-			scores = {
-				'drug_score':0,
-				'gun_score':0,
-				'murder_score':0,
-				'perv_score':0,
-				'theft_score':0,
-				'violence_score':0,
-				'property_d_score':0
-			}
-
-			narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
-			guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
-			theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
-			sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
-			human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
-
-			for idx in range(total_crimes):
-				#Drugs
-				if crime_arr[idx]['primary_type'] in narcotics:
-					scores['drug_score'] += 1
-
-				#Guns
-				if crime_arr[idx]['primary_type'] in guns:
-					scores['gun_score'] += 1
-		
-				#Gun description subsearch if primary_type doesn't catch it.
-				elif set(crime_arr[idx]['description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
-					scores['gun_score'] += 1
+			if results:
+				#Set up array
+				crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
+				#Fill it in row by row
+				for idx, res in enumerate(results):
+					crime_arr[idx] = tuple(res.values())
 				
-				#Murder
-				if crime_arr[idx]['primary_type'] == 'HOMICIDE':
-					scores['murder_score'] += 10
+				#Convert to datetimes
+				func = np.vectorize(lambda x: date_convert(x))
+				crime_arr["date"] = np.apply_along_axis(func, 0, crime_arr["date"])
 				
-				#Theft
-				if crime_arr[idx]['primary_type'] in theft:
-					scores['theft_score'] += 1
+				#Check the last dates record.  If its not within the last year, 
+				#make another request until we hit that date. 
+					# Don't forget to filter any data that may come in extra. 
+				date_check = crime_arr["date"].min()
+				if date_check > datetime.datetime.today() - datetime.timedelta(days=365):
+					#Need to figure out how to remake the request if i hit the 800k limit. 
+					raise ValueError('Yo Query needeth be BIGGER')
 
-				#Sexual Crimes
-				if crime_arr[idx]['primary_type'] in sex_crimes:
-					scores['perv_score'] += 2
+				#Checking memory consumption
+				#sum(crime_df.memory_usage(deep=True) / 1_000_000)
+				#Req 500k records costs you about 21.7 MB
 
-				#Sex Crimes subsearch
-				elif set(crime_arr[idx]['description'].split()) & set(['PEEPING TOM']):
-					scores['perv_score'] += 2
+				total_crimes = crime_arr.shape[0]
 
-				#humanViolence
-				if crime_arr[idx]['primary_type'] in human_violence:
-					scores['violence_score'] += 1
+				scores = {
+					'drug_score':0,
+					'gun_score':0,
+					'murder_score':0,
+					'perv_score':0,
+					'theft_score':0,
+					'violence_score':0,
+					'property_d_score':0
+				}
 
-				#humanviolence subsearch
-				elif set(crime_arr[idx]['description'].split()) & set(['CHILDREN']):
-					scores['violence_score'] += 5
+				narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
+				guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
+				theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
+				sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
+				human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
 
-				#property damage
-				if crime_arr[idx]['primary_type'] == 'CRIMINAL DAMAGE':
-					scores['property_d_score'] += 1
-				
-			scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
-			listing.crime_sc = scores
-			del results
+				for idx in range(total_crimes):
+					#Drugs
+					if crime_arr[idx]['primary_type'] in narcotics:
+						scores['drug_score'] += 1
+
+					#Guns
+					if crime_arr[idx]['primary_type'] in guns:
+						scores['gun_score'] += 1
+			
+					#Gun description subsearch if primary_type doesn't catch it.
+					elif set(crime_arr[idx]['description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+						scores['gun_score'] += 1
+					
+					#Murder
+					if crime_arr[idx]['primary_type'] == 'HOMICIDE':
+						scores['murder_score'] += 10
+					
+					#Theft
+					if crime_arr[idx]['primary_type'] in theft:
+						scores['theft_score'] += 1
+
+					#Sexual Crimes
+					if crime_arr[idx]['primary_type'] in sex_crimes:
+						scores['perv_score'] += 2
+
+					#Sex Crimes subsearch
+					elif set(crime_arr[idx]['description'].split()) & set(['PEEPING TOM']):
+						scores['perv_score'] += 2
+
+					#humanViolence
+					if crime_arr[idx]['primary_type'] in human_violence:
+						scores['violence_score'] += 1
+
+					#humanviolence subsearch
+					elif set(crime_arr[idx]['description'].split()) & set(['CHILDREN']):
+						scores['violence_score'] += 5
+
+					#property damage
+					if crime_arr[idx]['primary_type'] == 'CRIMINAL DAMAGE':
+						scores['property_d_score'] += 1
+					
+				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
+				listing.crime_sc = scores
+				del results
 	return data

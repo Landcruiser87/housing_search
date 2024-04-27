@@ -223,5 +223,35 @@
     "long": "-87.6681357",
     "L_dist": "0.3560486814367563",
     "crime_sc": "{'drug_score': 2.79, 'gun_score': 6.7, 'murder_score': 1.58, 'perv_score': 1.51, 'theft_score': 51.23, 'violence_score': 23.83, 'property_d_score': 10.03}"
+  },
+  "zpid_2114191028": {
+    "source": "www.zillow.com",
+    "price": "2595.0",
+    "neigh": "60613",
+    "dogs": "True",
+    "link": "https://www.zillow.com/homedetails/3815-N-Greenview-Ave-APT-1W-Chicago-IL-60613/2114191028_zpid/",
+    "address": "3815 N Greenview Ave APT 1W, Chicago, IL 60613",
+    "bed": "2.0",
+    "bath": "1.0",
+    "sqft": "850.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
+  },
+  "9706610197": {
+    "source": "www.realtor.com",
+    "price": "2300.0",
+    "neigh": "60614",
+    "dogs": "True",
+    "link": "www.realtor.com/rentals/details/Chicago_IL_60614_M97066-10197",
+    "address": "IL",
+    "bed": "2.0",
+    "bath": "1.0",
+    "sqft": "900.0",
+    "lat": "40.0796606",
+    "long": "-89.4337288",
+    "L_dist": "147.35354146185114",
+    "crime_sc": "{}"
   }
 }

@@ -148,7 +148,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	 
 	 #Need to update bounds here. 
 	subparams = {
-		"usersSearchTerm":neigh + f" {CITY}, {STATE.upper()}",
+		"usersSearchTerm":f"{neigh} {CITY}, {STATE.upper()}",
 		"mapBounds":map_coords,
 		"filterState":{
 			"isForRent"           :{"value":True},
