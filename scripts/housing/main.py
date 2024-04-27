@@ -133,41 +133,41 @@ def scrape(neigh:str):
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
-			if isinstance(neigh, str):
+			# if isinstance(neigh, str):
 				#Because we can't search craigs by neighborhood, we only want to
 				#scrape it once.  So this sets a boolean of if we've scraped
 				#craigs, then flips the value to not scrape it again in the
 				#future neighborhoods that will be searched. 
-				global c_scrape
-				if source=="craigs" and c_scrape==False:
-						c_scrape = True
-						logger.info(f"scraping {site[0]}")
-						data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
-
-				elif source=="craigs" and c_scrape==True:
-					continue
-				
-				else:
-					#every other site, scrape it normally
-					logger.info(f"scraping {site[0]} for {neigh}")
+			global c_scrape
+			if source=="craigs" and c_scrape==False:
+					c_scrape = True
+					logger.info(f"scraping {site[0]}")
 					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
-				#Take a lil nap.  Be nice to servers!
-				support.sleepspinner(np.random.randint(2,6), f'{site[0]} takes a sleep')
+			elif source=="craigs" and c_scrape==True:
+				continue
+			
+			else:
+				#every other site, scrape it normally
+				logger.info(f"scraping {site[0]} for {neigh}")
+				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
+
+			#Take a lil nap.  Be nice to the servers!
+			support.sleepspinner(np.random.randint(2,6), f'{site[0]} takes a sleep')
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
 				#Get lat longs for the address's
 				data = support.get_lat_long(data, (CITY, STATE))
 
-				#Calculate the distance to closest L Stop (haversine/as crow
-				#flies)
+				#Calculate the distance to closest L stop 
+				#(haversine/as crow flies)
 				data = support.closest_L_stop(data)
 
 				#Score them according to chicago crime data
 				data = support.crime_score(data)
 
-				#Add the listings to the json object. 
+				#Add the listings to the jsondata dict. 
 				add_data(data, (site[0], neigh))
 				del data
 			logger.warning(f"source {source} no data found")

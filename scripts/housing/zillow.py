@@ -104,19 +104,28 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	#Check for spaces in the search neighborhood
 	CITY = citystate[0].lower()
 	STATE = citystate[1].lower()
-	if " " in neigh:
-		neigh = "-".join(neigh.split(" "))
-	neigh = neigh.lower()
-
 	#First grab the map coordinates update our next request
- 	# SEARCH_HEADER = {"content-type":"application/json"}
 	BASE_HEADERS = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
 		'referer':f'https://www.zillow.com/{CITY}-{STATE}/rentals',
 		'origin':'https://www.zillow.com',
 	}
+	#Search by neighborhood
+	if isinstance(neigh, str):
+		if " " in neigh:
+			neigh = "-".join(neigh.split(" "))
+		neigh = neigh.lower()
+		url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
+	
+	#Searchby ZipCode
+	elif isinstance(neigh, int):
+		url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals'
+	
+	#Error Trapping
+	else:
+		logging.critical("Inproper input for area, moving to next site")
+		return
 
-	url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
 	response = requests.get(url_map, headers=BASE_HEADERS)
 	
 	# If there's an error, log it and return no data for that site
@@ -168,14 +177,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		"wants": {"cat1": ["listResults"]},
     	"requestId": 2 #np.random.randint(2, 3)
 	}
-	SEARCH_HEADERS = {
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer':f'https://www.zillow.com/{CITY}-{STATE}/rentals',
-		'origin':'https://www.zillow.com',
-	}
-
-	url_search = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?' + urlencode(params)
-	response = requests.get(url_search, headers = SEARCH_HEADERS)
+	if isinstance(neigh, str):
+		url_search = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?' + urlencode(params)
+	elif isinstance(neigh, int):
+		url_search = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals/?' + urlencode(params)
+	response = requests.get(url_search, headers = BASE_HEADERS)
 
 	#Just in case we piss someone off
 	if response.status_code != 200:

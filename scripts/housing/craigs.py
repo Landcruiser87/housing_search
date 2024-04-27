@@ -147,7 +147,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:tuple):
 	CITY = citystate[0].lower()
-	STATE = citystate[1].lower()
+	STATE = citystate[1].upper()
 
 	HEADERS = {
 		'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',

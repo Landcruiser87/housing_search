@@ -99,12 +99,21 @@ def money_launderer(price:list)->float:
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	CITY = citystate[0].lower()
-	STATE = citystate[1].lower()
-
-	if " " in neigh:
-		neigh = "-".join(neigh.lower().split(" "))
-
-	url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-under-2600-pet-friendly-dog/"
+	STATE = citystate[1].upper()
+	#Search by neighborhood
+	if isinstance(neigh, str):
+		if " " in neigh:
+			neigh = "-".join(neigh.lower().split(" "))
+		url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-under-2600-pet-friendly-dog/"
+	
+	#Searchby ZipCode
+	elif isinstance(neigh, int):
+		url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-under-2600-pet-friendly-dog/"	
+	
+	#Error Trapping
+	else:
+		logging.critical("Inproper input for area, moving to next site")
+		return
 
 	headers = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',

@@ -104,19 +104,30 @@ def money_launderer(price:list)->float:
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	CITY = citystate[0].lower()
-	STATE = citystate[1].lower()
-	if " " in neigh:
-		neigh = "-".join(neigh.split(" "))
+	STATE = citystate[1].upper()
+	#Search by neighborhood
+	if isinstance(neigh, str):
+		if " " in neigh:
+			neigh = "-".join(neigh.split(" "))
+		url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
 
-	headers = {
+	#Searchby ZipCode
+	elif isinstance(neigh, int):
+		url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
+	
+	#Error Trapping
+	else:
+		logging.critical("Inproper input for area, moving to next site")
+		return
+	
+	BASE_HEADERS = {
 		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer': f'https://www.realtor.com/apartments/{CITY}_{STATE.upper()}',
+		'referer': url,
 		'origin':'https://www.realtor.com',
 	}
 
-	url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE.upper()}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
           
-	response = requests.get(url, headers=headers)
+	response = requests.get(url, headers=BASE_HEADERS)
 
 	#Just in case we piss someone off
 	if response.status_code != 200:
