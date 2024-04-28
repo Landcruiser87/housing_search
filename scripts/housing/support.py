@@ -268,7 +268,6 @@ def crime_score(data:list) -> list:
 			)
 			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
 
-
 			#NOTES
 				#IDEA
 				#I'd like to redo the crime scoring section becuase I think there's alot more valuable data there than previously
@@ -326,7 +325,8 @@ def crime_score(data:list) -> list:
 				theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
 				sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
 				human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
-
+				
+				#TODO - Update all below comparison to set memberships.
 				for idx in range(total_crimes):
 					#Drugs
 					if crime_arr[idx]['primary_type'] in narcotics:
