@@ -15,12 +15,29 @@ from rich.progress import (
 	TimeRemainingColumn,
 )
 from rich.console import Console
-from geopy import Nominatim
+from geopy import Nominatim, ArcGIS
 
 console = Console(color_system="truecolor")
 
+class NumpyArrayEncoder(json.JSONEncoder):
+	"""Custom numpy JSON Encoder.  Takes in any type from an array and formats it to something that can be JSON serialized.
+	Source Code found here
+		https://pynative.com/python-serialize-numpy-ndarray-into-json/
+	Args:
+		json (object): Json serialized format
+	"""	
+	def default(self, obj):
+		if isinstance(obj, np.integer):
+			return int(obj)
+		elif isinstance(obj, np.floating):
+			return float(obj)
+		elif isinstance(obj, np.ndarray):
+			return obj.tolist()
+		else:
+			return super(NumpyArrayEncoder, self).default(obj)
+		
 def save_data(jsond:dict):
-	out_json = json.dumps(jsond, indent=2)
+	out_json = json.dumps(jsond, indent=2, cls=NumpyArrayEncoder)
 	with open("./data/housing.json", "w") as out_f:
 		out_f.write(out_json)
 
@@ -59,24 +76,44 @@ def get_lat_long(data:list, citystate:tuple)->list:
 		"timeout":10,
 	}
 	geolocator = Nominatim(**noma_params)
+	# arc_params = {
+	# 	"exactly_one":True,
+	# 	"timeout":10,
+	# }
+	# backupgeo = ArcGIS(**arc_params)
 
 	#TODO.  Add backup geocoder?  Not getting alot of the addresses.  
  	#Don't want to use google because the maps API costs money. 
-	#ARCGis Yandex, OpenMapquest, could be free alternatives
+	#OpenMapquest, ARCGis, Yandex could be free alternatives.
+		#ArcGIS has up to 20k free geocode requests a month.  That should be plenty
+  
 	for listing in data:
+		sleepspinner(np.random.randint(2, 4), "searching lat/long")
 		address = listing.address
+		#If city and state aren't present, add them
+			#?Could do this for zip code searches as well.
+   
 		if citystate[0].lower() not in address.lower():
 			listing.address = address + " " + citystate[0]
 		if citystate[1].lower() not in address.lower():
 			listing.address = address + " " + citystate[1]
 
-		location = geolocator.geocode(listing.address + " USA")
+		srch_add = listing.address + " USA"
+		#First search Novatim
+		location = geolocator.geocode(srch_add)
 		if location:
 			lat, long = location.latitude, location.longitude
 			listing.lat = lat
 			listing.long = long
-		sleepspinner(np.random.randint(2, 4), "searching lat/long")
-
+			continue
+		#If that fails, search OpenMapquest
+		# locatedos = backupgeo(srch_add)
+		# if locatedos:
+		# 	lat, long = location.latitude, location.longitude
+		# 	listing.lat = lat
+		# 	listing.long = long
+		
+		
 	return data
 
 def sleepspinner(naps:int, msg:str):
@@ -153,6 +190,15 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 
 
 def urlformat(urls:list)->str:
+	"""This formats each of the list items into an html list for easy ingestion into the email server
+
+	Args:
+		urls (list): List of new listings found
+
+	Returns:
+		str: HTML formatted string for emailing
+	"""	
+	
 	links_html = "<ol>"
 	if len(urls) > 1:
 		for link, site in urls:
@@ -284,12 +330,20 @@ def crime_score(data:list) -> list:
 					#page 2 is burglary and prostitution?  Wierd
 	 				#page 3 is Narcotics.  Lots of different charges here. 
 	  				#page 4 is other offenses.
+	   
 	   			#IDEA What about a week by week analysis up to a year back for each primary_type
+	   
 	   				#That could give a sense of seasonality and trend for important categories
 					#Multi line chart with regressions? in that radius over the past year. 
 	 					#This will be cool ^^^^^
-					#Store those as an array for easy graphing and would be minimal data overhead if grouped by week instead.  
-	   			
+					#Store those as an array for easy graphing and would be minimal data overhead if grouped by week instead,
+	 					#NOTE -json storage.
+							#If you want to save an array inside json.  we'll store it on the 3rd level of the dic so its 
+	   						#format will look like {"array":[1,2,3,4,5,6]}
+		  					#https://pynative.com/python-serialize-numpy-ndarray-into-json/
+		  					#That way it won't indent the json at that level and make the json row count go bonkers
+		 					#Maybe store the top 10 to 15?.  That should keep the dataset size fairly small
+	   					#Score the scoring dict too, buy we'll still need to update that. 
 
 			if results:
 				#Set up array

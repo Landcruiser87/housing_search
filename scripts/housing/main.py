@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 import time
 from rich.logging import RichHandler
-from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, asdict, astuple, field
 from os.path import exists
 
 #Import supporting files
@@ -60,6 +60,8 @@ SOURCES = {
 CITY = "Chicago"
 STATE = "IL"
 
+
+#Define dataclass container
 @dataclass
 class Propertyinfo():
 	id      : str
@@ -76,9 +78,21 @@ class Propertyinfo():
 	long    : float = ""
 	L_dist  : float = ""
 	crime_sc: dict = field(default_factory=lambda:{})
+	# cri_dat : np.ndarray #Eventually one to store week to week crime data here for each listing
 
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
+	
+	#https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
+	#TODO - Look at above link
+		#might be an easier way to offload np arrays. 
+  
+	# def __array__(self):
+	# 	return np.array(astuple(self))
+	# def __len__(self):
+	# 	return astuple(self).__len__()
+	# def __getitem__(self, item):
+	# 	return astuple(self).__getitem__(item)
 
 def add_data(data:dataclass, siteinfo:tuple):
 	#Reshape data to dict
