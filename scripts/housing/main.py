@@ -27,28 +27,28 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 #input custom area's here. 
-# AREAS = [
-# 	'North Center',
-# 	# 'Lincoln Square',
-# 	'Ravenswood',
-# 	# 'Roscoe Village'
-# 	# 'Ravenswood Gardens',
-# 	# 'Budlong Woods',
-# 	# 'Bowmanville',
-# ]
-
 AREAS = [
-	60613,
-	60614,
-	# 60657,
-# 	# 60610,
-# 	# 60618,
-# 	# 60647,
-# 	# 60622,
-# 	# 60625,
-# 	# 60641,
-# 	# 60651
+	'Lincoln Square',
+	'North Center',
+	'Ravenswood',
+	'Bowmanville',
+	'Roscoe Village',
+	# 'Ravenswood Gardens',
+	# 'Budlong Woods',
 ]
+
+# AREAS = [
+# 	60613,
+# 	60614,
+# 	# 60657,
+# # 	# 60610,
+# # 	# 60618,
+# # 	# 60647,
+# # 	# 60622,
+# # 	# 60625,
+# # 	# 60641,
+# # 	# 60651
+# ]
 
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
@@ -117,7 +117,7 @@ def add_data(data:dataclass, siteinfo:tuple):
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
 def scrape(neigh:str):
-	sources = ["realtor", "apartments", "zillow"]  #"craigs"
+	sources = ["realtor", "apartments", "zillow", "craigs",]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

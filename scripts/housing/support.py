@@ -54,17 +54,21 @@ def closest_L_stop(data:list)->list:
 	return data
 
 def get_lat_long(data:list, citystate:tuple)->list:
-	params = {
+	noma_params = {
 		"user_agent":"myApp",
 		"timeout":10,
 	}
-	geolocator = Nominatim(**params)
+	geolocator = Nominatim(**noma_params)
+
+	#TODO.  Add backup geocoder?  Not getting alot of the addresses.  
+ 	#Don't want to use google because the maps API costs money. 
+	#ARCGis Yandex, OpenMapquest, could be free alternatives
 	for listing in data:
 		address = listing.address
 		if citystate[0].lower() not in address.lower():
-			listing.address = address + citystate[0]
+			listing.address = address + " " + citystate[0]
 		if citystate[1].lower() not in address.lower():
-			listing.address = address + citystate[1]
+			listing.address = address + " " + citystate[1]
 
 		location = geolocator.geocode(listing.address + " USA")
 		if location:
@@ -239,12 +243,16 @@ def crime_score(data:list) -> list:
 	#Sets lookback to 1 year from today
 	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
 	c_dtypes = [
-		("id"          ,str, 60),
-		("date"        ,datetime.datetime),
-		("description" ,str, 120),
-		("latitude"    ,float),
-		("longitude"   ,float),
-		("primary_type",str, 120)
+		("id"                   ,str, 60),
+		("date"                 ,datetime.datetime),
+		("iucr"                 ,str, 60),
+		("fbi_code"             ,str, 60),
+		("latitude"             ,float),
+		("longitude"            ,float),
+		("primary_type"         ,str, 240),
+		("description"          ,str, 600),
+		("arrest"               ,str, 20),
+		("domestic"             ,str, 20),
 	]
 
 	for listing in data:
@@ -252,12 +260,32 @@ def crime_score(data:list) -> list:
 		lon1 = listing.long
 
 		if lat1 and lon1:
+			# If the listing has a lat / long, search the area within a 1 mile radius, over the past 365 days.  Pull back the select fields for analysis
 			results = client.get("ijzp-q8t2",
-				select="id, date, description, latitude, longitude, primary_type ",
+				select="id, date, iucr, fbi_code, latitude, longitude, primary_type, description, arrest, domestic",
 				where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
 				limit=800000
 			)
 			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
+
+
+			#NOTES
+				#IDEA
+				#I'd like to redo the crime scoring section becuase I think there's alot more valuable data there than previously
+				#found.  I need a way to classify risk in a region.  Which is no easy task.  
+					#Ideas for crime severity
+	 				#1. Using arrest/domestic as simple scaling of importance
+	  				#2. Make another requeset and use the IUCR codes
+	   					#I'm betting this will be the better route though as
+		 				#there will be a felony misdemeanor charge dilineation in there. 
+					#So primary type and description are the results of the IUCR codes. Makes sense.
+	 				#Don't really need to pull them but I could use the logic of how their structured. 
+	  				#Looks like there's 5 different pages dilineated by crimes in the 1000's
+	   				#page 1 is most frequent, 
+					#page 2 is burglary and prostitution?  Wierd
+	 				#page 3 is Narcotics.  Lots of different charges here. 
+	  				#page 4 is other offenses.
+
 			if results:
 				#Set up array
 				crime_arr = np.zeros(shape=(len(results)), dtype=c_dtypes)
