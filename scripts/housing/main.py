@@ -145,6 +145,9 @@ def scrape(neigh:str):
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
+				#TODO - Check the id's of the listings found first before submitting them to search.  
+				#That way you don't repeat any requests made for search information
+	
 				#Get lat longs for the address's
 				data = support.get_lat_long(data, (CITY, STATE))
 
@@ -181,6 +184,9 @@ def main():
 	for neigh in AREAS:
 		scrape(neigh)
   
+	# If new listings are found, save the data to the json file, 
+	# format the list of dataclasesses to a url 
+	# Send gmail alerting of new properties
 	if newlistings:
 		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)

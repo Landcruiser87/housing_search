@@ -44,7 +44,7 @@ Datasets are kept in the data folder.
 - [x] - [zillow](https://www.zillow.com)
 - [x] - [rent.com](https://www.rent.com)
 - [x] - [apartments.com](https://www.apartments.com)
-
+- [ ] - [redfin](https://www.redfin.com)
 
 ### External Data Sources
 - [CTA L stops](https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/data)

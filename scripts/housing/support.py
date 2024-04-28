@@ -269,7 +269,7 @@ def crime_score(data:list) -> list:
 			sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
 
 			#NOTES
-				#IDEA
+				#IDEA -Redo Scoring
 				#I'd like to redo the crime scoring section becuase I think there's alot more valuable data there than previously
 				#found.  I need a way to classify risk in a region.  Which is no easy task.  
 					#Ideas for crime severity
@@ -284,6 +284,12 @@ def crime_score(data:list) -> list:
 					#page 2 is burglary and prostitution?  Wierd
 	 				#page 3 is Narcotics.  Lots of different charges here. 
 	  				#page 4 is other offenses.
+	   			#IDEA What about a week by week analysis up to a year back for each primary_type
+	   				#That could give a sense of seasonality and trend for important categories
+					#Multi line chart with regressions? in that radius over the past year. 
+	 					#This will be cool ^^^^^
+					#Store those as an array for easy graphing and would be minimal data overhead if grouped by week instead.  
+	   			
 
 			if results:
 				#Set up array
