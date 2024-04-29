@@ -6,6 +6,7 @@ import time
 from rich.logging import RichHandler
 from dataclasses import dataclass, asdict, astuple, field
 from os.path import exists
+from random import shuffle
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, support
@@ -116,7 +117,7 @@ def check_ids_at_the_door(data:list):
 		[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
 		return newdata
 	else:
-		logger.info("Listings already stored in housing.json") 
+		logger.info("Listing(s) already stored in housing.json") 
 		return None
 		
 #FUNCTION Add Data
@@ -152,7 +153,8 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["realtor", "apartments", "zillow", "craigs"]  
+	sources = ["realtor", "apartments", "zillow", "craigs"]
+	shuffle(sources) #Keep em guessing!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -220,7 +222,8 @@ def main():
 		logger.warning("No previous data found.")
 		jsondata = {}
 
-	#Search the neighborhoods
+	#Shuffle and search the neighborhoods
+	shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
   
