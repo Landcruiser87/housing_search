@@ -94,20 +94,19 @@ def check_ids_at_the_door(data:list):
 	#Pop the id from the dict underneath (no need to store it twice)
 	[new_dict[x].pop("id") for x in ids]
 
-	if jsondata:
-		#Use sets for membership testing of old jsondata keys
-  		#and new data keys (Looking for new listings)
-		j_ids = set(jsondata.keys())
-		n_ids = set(new_dict.keys())
-		newids = n_ids - j_ids
-		if newids:
-			#Only add the listings that are new
-			newdata = []
-			[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
-			return newdata
-		else:
-			logger.info("Listings already stored in housing.json") 
-			return None
+	#Use sets for membership testing of old jsondata keys
+	#and new data keys (Looking for new listings)
+	j_ids = set(jsondata.keys())
+	n_ids = set(new_dict.keys())
+	newids = n_ids - j_ids
+	if newids:
+		#Only add the listings that are new
+		newdata = []
+		[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
+		return newdata
+	else:
+		logger.info("Listings already stored in housing.json") 
+		return None
 		
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
@@ -156,11 +155,12 @@ def scrape(neigh:str):
 			#Take a lil nap.  Be nice to the servers!
 			support.sleepspinner(np.random.randint(3,8), f'taking a nap at {site[0]}')
 
-			#If data was returned, pull the lat long, score it and store it. 
+			#If data was returned
 			if data:
-				#This will isolate new id's that aren't in the historical JSON
+				#This function will isolate new id's that aren't in the historical JSON
 				datacheck = check_ids_at_the_door(data)
 				if datacheck:
+					#  pull the lat long, score it and store it. 
 					data = datacheck
 					del datacheck
 					#Get lat longs for the address's
