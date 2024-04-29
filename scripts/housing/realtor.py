@@ -119,7 +119,7 @@ def money_launderer(price:list)->float:
 	return price
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
-	CITY = citystate[0].lower()
+	CITY = citystate[0]
 	STATE = citystate[1].upper()
 	#Search by neighborhood
 	if isinstance(neigh, str):
