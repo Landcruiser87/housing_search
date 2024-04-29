@@ -445,3 +445,16 @@ def crime_score(data:list) -> list:
 				listing.crime_sc = scores
 				del results
 	return data
+
+
+	
+#https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
+#TODO - Look at above link
+	#might be an easier way to offload np arrays. 
+
+# def __array__(self):
+# 	return np.array(astuple(self))
+# def __len__(self):
+# 	return astuple(self).__len__()
+# def __getitem__(self, item):
+# 	return astuple(self).__getitem__(item)

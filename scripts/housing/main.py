@@ -26,7 +26,7 @@ logging.basicConfig(
 #Load logger
 logger = logging.getLogger(__name__) 
 
-#input custom area's here. 
+#input custom area's here. Uncomment whichever way you want to search
 AREAS = [
 	'Lincoln Square',
 	'North Center',
@@ -57,6 +57,7 @@ SOURCES = {
 	"zillow"    :("www.zillow.com", zillow),
 }
 
+# Define City / State
 CITY = "Chicago"
 STATE = "IL"
 
@@ -82,18 +83,7 @@ class Propertyinfo():
 
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
-	
-	#https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
-	#TODO - Look at above link
-		#might be an easier way to offload np arrays. 
-  
-	# def __array__(self):
-	# 	return np.array(astuple(self))
-	# def __len__(self):
-	# 	return astuple(self).__len__()
-	# def __getitem__(self, item):
-	# 	return astuple(self).__getitem__(item)
- 
+
 def check_ids_at_the_door(data:list):
 	#Reshape data to dict
 	#Pull out the ids
@@ -110,7 +100,7 @@ def check_ids_at_the_door(data:list):
 		n_ids = set(new_dict.keys())
 		newids = n_ids - j_ids
 		if newids:
-			#Go through and remove existing listings so they're not searched twice
+			#Only add the listings that are new
 			newdata = []
 			[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
 			return newdata
@@ -165,8 +155,7 @@ def scrape(neigh:str):
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
-				#TODO - Check the id's of the listings found first before submitting them to search.  
-				#That way you don't repeat any requests made for search information
+				#This will isolate new id's that aren't in the historical JSON
 				datacheck = check_ids_at_the_door(data)
 				if datacheck:
 					data = datacheck
@@ -197,6 +186,7 @@ def main():
 	c_scrape = False
 	newlistings = []
 	fp = "./data/housing.json"
+	#Load historical listings JSON
 	if exists(fp):
 		jsondata = support.load_historical(fp)
 		logger.info("historical data loaded")
