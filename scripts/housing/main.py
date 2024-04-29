@@ -94,7 +94,7 @@ class Propertyinfo():
 	# def __getitem__(self, item):
 	# 	return astuple(self).__getitem__(item)
  
-def check_ids_at_the_door(data):
+def check_ids_at_the_door(data:list):
 	#Reshape data to dict
 	#Pull out the ids
 	ids = [data[x].id for x in range(len(data))]
@@ -111,10 +111,14 @@ def check_ids_at_the_door(data):
 		newids = n_ids - j_ids
 		if newids:
 			#Go through and remove existing listings so they're not searched twice
-			updatedict = {idx:new_dict[idx] for idx in newids}
-
-			
-def add_data(data:dataclass, siteinfo:tuple):
+			newdata = []
+			[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
+			return newdata
+		else:
+			logger.info("Listings already stored in housing.json") 
+			return None
+		
+def add_data(data:list, siteinfo:tuple):
 	#Reshape data to dict
 	#Pull out the ids
 	ids = [data[x].id for x in range(len(data))]
@@ -123,36 +127,18 @@ def add_data(data:dataclass, siteinfo:tuple):
 	#Pop the id from the dict underneath (no need to store it twice)
 	[new_dict[x].pop("id") for x in ids]
 
-	if jsondata:
-		#Use sets for membership testing of old jsondata keys
-  		#and new data keys (Looking for new listings)
-		j_ids = set(jsondata.keys())
-		n_ids = set(new_dict.keys())
-		newids = n_ids - j_ids
-		if newids:
-			#If we found new listings, extract the new listings and add them to
-			#the JSON file.
-			updatedict = {idx:new_dict[idx] for idx in newids}
-			#update main data container
-			jsondata.update(**updatedict)
-			#Grab the new urls for emailing
-			newurls = [(updatedict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in newids]
-			#Extend the newlistings global list
-			newlistings.extend(newurls)
+	#update main data container
+	jsondata.update(**new_dict)
+	#Grab the new urls for emailing
+	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in ids]
+	#Extend the newlistings global list
+	newlistings.extend(newurls)
 
-		else:
-			logger.warning(f"No new listings on {siteinfo[0]} in {siteinfo[1]}")
-			return		
-	else:
-		#Update global dict with the first few results
-		support.save_data(new_dict)
-		jsondata.update(**new_dict)
-		logger.info("JSON file saved and global dict updated")
-		
+	logger.info("Global dict updated")
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
 def scrape(neigh:str):
-	sources = ["realtor", "apartments", "zillow", "craigs",]  
+	sources = ["realtor", "apartments", "zillow", ]  #"craigs",
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -181,25 +167,28 @@ def scrape(neigh:str):
 			if data:
 				#TODO - Check the id's of the listings found first before submitting them to search.  
 				#That way you don't repeat any requests made for search information
-				# data = check_ids_at_the_door(data)
-	
-				#Get lat longs for the address's
-				data = support.get_lat_long(data, (CITY, STATE))
+				datacheck = check_ids_at_the_door(data)
+				if datacheck:
+					data = datacheck
+					del datacheck
+					#Get lat longs for the address's
+					data = support.get_lat_long(data, (CITY, STATE))
 
-				#Calculate the distance to closest L stop 
-				#(haversine/as crow flies)
-				data = support.closest_L_stop(data)
+					#Calculate the distance to closest L stop 
+					#(haversine/as crow flies)
+					data = support.closest_L_stop(data)
 
-				#Score them according to chicago crime data
-				data = support.crime_score(data)
+					#Score them according to chicago crime data
+					data = support.crime_score(data)
 
-				#Add the listings to the jsondata dict. 
-				add_data(data, (site[0], neigh))
-				del data
-			logger.warning(f"source {source} no data found")
+					#Add the listings to the jsondata dict. 
+					add_data(data, (site[0], neigh))
+					del data
+			else:
+				logger.info(f"No new data found on {source}")
 
 		else:
-			logger.warning(f"source: {source} is not in validated search list")
+			logger.warning(f"{source} is not in validated search list")
 	
 #Driver code 
 def main():

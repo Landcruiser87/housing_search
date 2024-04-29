@@ -204,4 +204,4 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 			return property_listings
 		
 	else:
-		logger.warning("No listings returned.  Moving to next site")
+		logger.warning("No listings returned on Zillow.  Moving to next site")

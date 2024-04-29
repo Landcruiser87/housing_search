@@ -166,5 +166,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	else:
 		logger.warning("No listings returned on realtor.  Moving to next site")
 	
-	#If it gets to here, then it didn't find any results
-	return None
