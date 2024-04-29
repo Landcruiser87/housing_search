@@ -178,5 +178,35 @@
     "long": "-87.63421352828843",
     "L_dist": "0.05869899436777602",
     "crime_sc": "{'drug_score': 2.44, 'gun_score': 7.73, 'murder_score': 1.81, 'perv_score': 2.74, 'theft_score': 49.81, 'violence_score': 24.8, 'property_d_score': 10.66}"
+  },
+  "7677754327": {
+    "source": "www.realtor.com",
+    "price": "2600.0",
+    "neigh": "North-Center",
+    "dogs": "True",
+    "link": "www.realtor.com/rentals/details/1833-W-Belle-Plaine-Ave-1_Chicago_IL_60613_M76777-54327",
+    "address": "1833 W Belle Plaine Ave Unit 1 Chicago, IL 60613",
+    "bed": "3.0",
+    "bath": "1.0",
+    "sqft": "1200.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
+  },
+  "zpid_348322720": {
+    "source": "www.zillow.com",
+    "price": "2600.0",
+    "neigh": "north-center",
+    "dogs": "True",
+    "link": "https://www.zillow.com/homedetails/1833-W-Belle-Plaine-Ave-UNIT-1-Chicago-IL-60613/348322720_zpid/",
+    "address": "1833 W Belle Plaine Ave UNIT 1, Chicago, IL 60613",
+    "bed": "3.0",
+    "bath": "1.0",
+    "sqft": "1200.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
   }
 }

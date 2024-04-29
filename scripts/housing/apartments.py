@@ -146,7 +146,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 			
 	else:
 		logger.warning("No listings returned on apartments.  Moving to next site")
-
-#Notes
-#If updating to zips, apartments does this
-# https://www.apartments.com/houses-townhomes/chicago-il-60613

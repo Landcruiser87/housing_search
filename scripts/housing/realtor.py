@@ -168,7 +168,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	
 	#If it gets to here, then it didn't find any results
 	return None
-
-#Notes
-#If updating to zips, realtor does this. 
-# https://www.realtor.com/apartments/60613

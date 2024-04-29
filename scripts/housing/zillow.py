@@ -204,12 +204,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		
 	else:
 		logger.warning("No listings returned.  Moving to next site")
-	
-
-# def zipscrape():
-# 	logger.info("zillow!")
-# 	#TODO build separate extraction for zip codes. 
-	
-# Notes:
-# If updating to zips.  Zillow searchs by zip like this
-# https://www.zillow.com/chicago-il-60613/rentals/?
