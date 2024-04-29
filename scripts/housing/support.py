@@ -90,11 +90,9 @@ def get_lat_long(data:list, citystate:tuple)->list:
 	# 	"exactly_one":True,
 	# 	"timeout":10,
 	# }
-	# backupgeo = ArcGIS(**arc_params)
+	# backupgeo = ArcGIS()
 
-	#TODO.  Add backup geocoder?  Not getting alot of the addresses.  
- 	#Don't want to use google because the maps API costs money. 
-	#OpenMapquest, ARCGis, Yandex could be free alternatives.
+	#TODO.  Add backup geocoder?  Going with ARCGis
 		#ArcGIS has up to 20k free geocode requests a month.  That should be plenty
   
 	for listing in data:

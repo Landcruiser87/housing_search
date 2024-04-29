@@ -31,7 +31,7 @@ AREAS = [
 	# 'Lincoln Square',
 	'Ravenswood',
 	'North Center',
-	# 'Bowmanville',
+	'Bowmanville',
 	'Roscoe Village',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
@@ -86,15 +86,16 @@ class Propertyinfo():
 
 #FUNCTION Check IDs
 def check_ids_at_the_door(data:list):
-	"""This function takes in a list of Propertyinfo objects, reformats them to a dictionary, 
-	compares them to existing JSON historical keys, finds any new ones then returns those 
-	as a new list.
+	"""This function takes in a list of Propertyinfo objects, reformats them to
+	a dictionary, compares the property id's to existing JSON historical
+	property id keys, finds any new ones via set comparison. Then returns a list
+	of Propertyinfo objects that have those new id's (if any)
 
 	Args:
 		data (list): List of Propertyinfo objects
 
 	Returns:
-		data (list): Only new Propertyinfo objects
+		data (list): List of only new Propertyinfo objects
 	"""	
 	#Reshape data to dict
 	#Pull out the ids
@@ -151,7 +152,7 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["realtor", "apartments", "zillow", ]  #"craigs",
+	sources = ["realtor", "apartments", "zillow", "craigs"]  
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
