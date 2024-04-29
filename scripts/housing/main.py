@@ -78,7 +78,7 @@ class Propertyinfo():
 	long    : float = ""
 	L_dist  : float = ""
 	crime_sc: dict = field(default_factory=lambda:{})
-	# cri_dat : np.ndarray #Eventually one to store week to week crime data here for each listing
+	# cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
 
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
@@ -104,19 +104,20 @@ def add_data(data:dataclass, siteinfo:tuple):
 	[new_dict[x].pop("id") for x in ids]
 
 	if jsondata:
-		#Use sets for membership testing of old current jsondata keys
+		#Use sets for membership testing of old jsondata keys
   		#and new data keys (Looking for new listings)
 		j_ids = set(jsondata.keys())
 		n_ids = set(new_dict.keys())
 		newids = n_ids - j_ids
 		if newids:
-			#If we found new data, add it to the json file and save it. 
+			#If we found new listings, extract the new listings and add them to
+			#the JSON file.
 			updatedict = {idx:new_dict[idx] for idx in newids}
 			#update main data container
 			jsondata.update(**updatedict)
 			#Grab the new urls for emailing
 			newurls = [(updatedict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in newids]
-			#Extend the newlistings global
+			#Extend the newlistings global list
 			newlistings.extend(newurls)
 
 		else:
@@ -135,16 +136,15 @@ def scrape(neigh:str):
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
-			# if isinstance(neigh, str):
-				#Because we can't search craigs by neighborhood, we only want to
-				#scrape it once.  So this sets a boolean of if we've scraped
-				#craigs, then flips the value to not scrape it again in the
-				#future neighborhoods that will be searched. 
+			#Because we can't search craigs by neighborhood, we only want to
+			#scrape it once.  So this sets a boolean of if we've scraped
+			#craigs, then flips the value to not scrape it again in the
+			#future neighborhoods that will be searched. 
 			global c_scrape
 			if source=="craigs" and c_scrape==False:
-					c_scrape = True
-					logger.info(f"scraping {site[0]}")
-					data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
+				c_scrape = True
+				logger.info(f"scraping {site[0]}")
+				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
 			elif source=="craigs" and c_scrape==True:
 				continue

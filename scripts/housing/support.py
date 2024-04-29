@@ -332,7 +332,7 @@ def crime_score(data:list) -> list:
 	  				#page 4 is other offenses.
 	   
 	   			#IDEA What about a week by week analysis up to a year back for each primary_type
-	   
+	   				#?Month might be easier storage.
 	   				#That could give a sense of seasonality and trend for important categories
 					#Multi line chart with regressions? in that radius over the past year. 
 	 					#This will be cool ^^^^^
@@ -388,12 +388,14 @@ def crime_score(data:list) -> list:
 				
 				#TODO - Update all below comparison to set memberships.
 				for idx in range(total_crimes):
+					crime = crime_arr[idx]['primary_type']
+					crimeset = set(crime.split())
 					#Drugs
-					if crime_arr[idx]['primary_type'] in narcotics:
+					if crime in narcotics:
 						scores['drug_score'] += 1
 
 					#Guns
-					if crime_arr[idx]['primary_type'] in guns:
+					if crime in guns:
 						scores['gun_score'] += 1
 			
 					#Gun description subsearch if primary_type doesn't catch it.
@@ -401,15 +403,15 @@ def crime_score(data:list) -> list:
 						scores['gun_score'] += 1
 					
 					#Murder
-					if crime_arr[idx]['primary_type'] == 'HOMICIDE':
+					if crimeset & 'HOMICIDE':
 						scores['murder_score'] += 10
 					
 					#Theft
-					if crime_arr[idx]['primary_type'] in theft:
+					if crime in theft:
 						scores['theft_score'] += 1
 
 					#Sexual Crimes
-					if crime_arr[idx]['primary_type'] in sex_crimes:
+					if crime in sex_crimes:
 						scores['perv_score'] += 2
 
 					#Sex Crimes subsearch
@@ -417,7 +419,7 @@ def crime_score(data:list) -> list:
 						scores['perv_score'] += 2
 
 					#humanViolence
-					if crime_arr[idx]['primary_type'] in human_violence:
+					if crime in human_violence:
 						scores['violence_score'] += 1
 
 					#humanviolence subsearch
@@ -425,7 +427,7 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 5
 
 					#property damage
-					if crime_arr[idx]['primary_type'] == 'CRIMINAL DAMAGE':
+					if crime == 'CRIMINAL DAMAGE':
 						scores['property_d_score'] += 1
 					
 				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
