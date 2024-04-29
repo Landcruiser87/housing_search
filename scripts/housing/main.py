@@ -93,7 +93,27 @@ class Propertyinfo():
 	# 	return astuple(self).__len__()
 	# def __getitem__(self, item):
 	# 	return astuple(self).__getitem__(item)
+ 
+def check_ids_at_the_door(data):
+	#Reshape data to dict
+	#Pull out the ids
+	ids = [data[x].id for x in range(len(data))]
+	#make a new dict that can be json serialized with the id as the key
+	new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
+	#Pop the id from the dict underneath (no need to store it twice)
+	[new_dict[x].pop("id") for x in ids]
 
+	if jsondata:
+		#Use sets for membership testing of old jsondata keys
+  		#and new data keys (Looking for new listings)
+		j_ids = set(jsondata.keys())
+		n_ids = set(new_dict.keys())
+		newids = n_ids - j_ids
+		if newids:
+			#Go through and remove existing listings so they're not searched twice
+			updatedict = {idx:new_dict[idx] for idx in newids}
+
+			
 def add_data(data:dataclass, siteinfo:tuple):
 	#Reshape data to dict
 	#Pull out the ids
@@ -161,6 +181,7 @@ def scrape(neigh:str):
 			if data:
 				#TODO - Check the id's of the listings found first before submitting them to search.  
 				#That way you don't repeat any requests made for search information
+				# data = check_ids_at_the_door(data)
 	
 				#Get lat longs for the address's
 				data = support.get_lat_long(data, (CITY, STATE))

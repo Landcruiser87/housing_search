@@ -19,6 +19,7 @@ from geopy import Nominatim, ArcGIS
 
 console = Console(color_system="truecolor")
 
+#CLASS Numpy encoder
 class NumpyArrayEncoder(json.JSONEncoder):
 	"""Custom numpy JSON Encoder.  Takes in any type from an array and formats it to something that can be JSON serialized.
 	Source Code found here
@@ -35,18 +36,26 @@ class NumpyArrayEncoder(json.JSONEncoder):
 			return obj.tolist()
 		else:
 			return super(NumpyArrayEncoder, self).default(obj)
-		
+
+#FUNCTION Convert Date
+def date_convert(time_big:datetime)->datetime:
+	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+	return dateOb
+
+#FUNCTION Save Data
 def save_data(jsond:dict):
 	out_json = json.dumps(jsond, indent=2, cls=NumpyArrayEncoder)
 	with open("./data/housing.json", "w") as out_f:
 		out_f.write(out_json)
 
+#FUNCTION Load Historical
 def load_historical(fp:str)->json:
 	if exists(fp):
 		with open(fp, "r") as f:
 			jsondata = json.loads(f.read())
 			return jsondata	
 
+#FUNCTION Closest L
 def closest_L_stop(data:list)->list:
 	#Load up Lstop data
 	stops = pd.read_csv(
@@ -70,6 +79,7 @@ def closest_L_stop(data:list)->list:
 
 	return data
 
+#FUNCTION Get Lat Long
 def get_lat_long(data:list, citystate:tuple)->list:
 	noma_params = {
 		"user_agent":"myApp",
@@ -116,6 +126,7 @@ def get_lat_long(data:list, citystate:tuple)->list:
 		
 	return data
 
+#FUNCTION Sleep spinna
 def sleepspinner(naps:int, msg:str):
 	my_progress_bar = Progress(
 		TextColumn("{task.description}"),
@@ -137,6 +148,7 @@ def sleepspinner(naps:int, msg:str):
 			time.sleep(1)
 			progress.advance(task)
 
+#FUNCTION Bounding box
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 	"""[Given two corners of a box on a map.  Determine if a point is
 	 within said box.  Step 1.  You cut a hole in that box.]
@@ -161,6 +173,7 @@ def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
 
 	return False
 
+#FUNCTION Haversine
 def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	"""[Uses the haversine formula to calculate the distance between 
 	two points on a sphere]
@@ -188,7 +201,7 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 	r = 3956 # Radius of earth in miles. Use 6371 for kilometers
 	return c * r
 
-
+#FUNCTION URL Format
 def urlformat(urls:list)->str:
 	"""This formats each of the list items into an html list for easy ingestion into the email server
 
@@ -208,6 +221,7 @@ def urlformat(urls:list)->str:
 	links_html = links_html + "</ol>"
 	return links_html
 
+#FUNCTION Send Housing Email
 def send_housing_email(urls:str):
 	"""[Function for sending an email.  Inputs the url into the docstrings 
 	via decorator for easy formatting of the HTML body of an email.]
@@ -260,10 +274,7 @@ def send_housing_email(urls:str):
 		server.login(sender_email, password)		
 		server.sendmail(sender_email, receiver_email, message.as_string())
 
-def date_convert(time_big:datetime)->datetime:
-	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
-	return dateOb
-
+#FUNCTION Crime Scoring
 def crime_score(data:list) -> list:
 	"""[Connects to data.cityofchicago.org and pulls down all the 
 	crime data for the last year, in a 1 mile radius.  It then recategorizes
