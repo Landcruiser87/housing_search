@@ -438,7 +438,7 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 5
 
 					#property damage
-					if crime == 'CRIMINAL DAMAGE':
+					if crimeset & 'CRIMINAL DAMAGE':
 						scores['property_d_score'] += 1
 					
 				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
@@ -450,7 +450,7 @@ def crime_score(data:list) -> list:
 	
 #https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
 #TODO - Look at above link
-	#might be an easier way to offload np arrays. 
+	#might be an easier way to offload np arrays from a dataclass
 
 # def __array__(self):
 # 	return np.array(astuple(self))

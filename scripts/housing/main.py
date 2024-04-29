@@ -84,6 +84,7 @@ class Propertyinfo():
 	def dict(self):
 		return {k: str(v) for k, v in asdict(self).items()}
 
+#FUNCTION Check IDs
 def check_ids_at_the_door(data:list):
 	#Reshape data to dict
 	#Pull out the ids
@@ -108,6 +109,7 @@ def check_ids_at_the_door(data:list):
 			logger.info("Listings already stored in housing.json") 
 			return None
 		
+#FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
 	#Reshape data to dict
 	#Pull out the ids
@@ -127,6 +129,7 @@ def add_data(data:list, siteinfo:tuple):
 	logger.info("Global dict updated")
 	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
+#FUNCTION Scrape data
 def scrape(neigh:str):
 	sources = ["realtor", "apartments", "zillow", ]  #"craigs",
 	for source in sources:
@@ -151,7 +154,7 @@ def scrape(neigh:str):
 				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
 			#Take a lil nap.  Be nice to the servers!
-			support.sleepspinner(np.random.randint(2,6), f'{site[0]} takes a sleep')
+			support.sleepspinner(np.random.randint(3,8), f'taking a nap at {site[0]}')
 
 			#If data was returned, pull the lat long, score it and store it. 
 			if data:
@@ -179,7 +182,8 @@ def scrape(neigh:str):
 		else:
 			logger.warning(f"{source} is not in validated search list")
 	
-#Driver code 
+#Driver code
+#FUNCTION Main start
 def main():
 	#Global variable setup
 	global newlistings, jsondata, c_scrape
