@@ -86,6 +86,16 @@ class Propertyinfo():
 
 #FUNCTION Check IDs
 def check_ids_at_the_door(data:list):
+	"""This function takes in a list of Propertyinfo objects, reformats them to a dictionary, 
+	compares them to existing JSON historical keys, finds any new ones then returns those 
+	as a new list.
+
+	Args:
+		data (list): List of Propertyinfo objects
+
+	Returns:
+		data (list): Only new Propertyinfo objects
+	"""	
 	#Reshape data to dict
 	#Pull out the ids
 	ids = [data[x].id for x in range(len(data))]
@@ -110,6 +120,12 @@ def check_ids_at_the_door(data:list):
 		
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
+	"""Adds Data to JSON Historical file
+
+	Args:
+		data (list): List of Propertyinfo objects that are new (not in the historical)
+		siteinfo (tuple): Tuple of website and neighborhood/zip
+	"""	
 	#Reshape data to dict
 	#Pull out the ids
 	ids = [data[x].id for x in range(len(data))]
@@ -130,6 +146,11 @@ def add_data(data:list, siteinfo:tuple):
 
 #FUNCTION Scrape data
 def scrape(neigh:str):
+	"""This function will iterate through different resources scraping necessary information for ingestion. 
+
+	Args:
+		neigh (str): Neighborhood or Zipcode
+	"""	
 	sources = ["realtor", "apartments", "zillow", ]  #"craigs",
 	for source in sources:
 		site = SOURCES.get(source)
