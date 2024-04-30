@@ -32,8 +32,8 @@ AREAS = [
 	# 'Lincoln Square',
 	'Ravenswood',
 	'North Center',
-	'Bowmanville',
-	'Roscoe Village',
+	# 'Bowmanville',
+	# 'Roscoe Village',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 ]
@@ -61,7 +61,6 @@ SOURCES = {
 # Define City / State
 CITY = "Chicago"
 STATE = "IL"
-
 
 #Define dataclass container
 @dataclass

@@ -67,8 +67,14 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 	links = get_links(result, CITY)
 	
 	for link in links: 
+		#Get posting id from the url.
+		listingid = link.split('/')[-1].strip(".html")
 		
-		#Being that craigs doesn't put all the info in the search page card,
+		if listingid in jsondata.keys():
+			logger.info("listing already exists in json container")		
+			continue
+
+		#Being that craigs doesn't put all the info in the search page cards,
 		#we've gotta Dig for the details like we did last time by scraping each
 		#listing.  Meaning more requests and longer wait times. 
 
@@ -82,9 +88,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 			logger.warning(f'Status code: {response.status_code}')
 			logger.warning(f'Reason: {response.reason}')
 			continue
-
-		#Get posting id from the url.
-		listingid = link.split('/')[-1].strip(".html")
 		
 		#assign the url
 		url = link

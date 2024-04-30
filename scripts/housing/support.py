@@ -83,7 +83,7 @@ def closest_L_stop(data:list)->list:
 def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
 	noma_params = {
 		"user_agent":"myApp",
-		"timeout":10,
+		"timeout":5,
 	}
 	geolocator = Nominatim(**noma_params)
 	# arc_params = {
@@ -138,7 +138,7 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
 def sleepspinner(naps:int, msg:str):
 	my_progress_bar = Progress(
 		TextColumn("{task.description}"),
-		SpinnerColumn("moon"),
+		SpinnerColumn("pong"),
 		BarColumn(),
 		TextColumn("*"),
 		"time remain:",
