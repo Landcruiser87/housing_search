@@ -5,6 +5,7 @@ from sodapy import Socrata
 import time
 import json
 from os.path import exists
+import logging
 
 #Progress bar fun
 from rich.progress import (
@@ -79,7 +80,7 @@ def closest_L_stop(data:list)->list:
 	return data
 
 #FUNCTION Get Lat Long
-def get_lat_long(data:list, citystate:tuple)->list:
+def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
 	noma_params = {
 		"user_agent":"myApp",
 		"timeout":10,
@@ -95,16 +96,15 @@ def get_lat_long(data:list, citystate:tuple)->list:
 		#ArcGIS has up to 20k free geocode requests a month.  That should be plenty
   
 	for listing in data:
-		sleepspinner(np.random.randint(2, 4), "searching lat/long")
 		
-		#Early termination to the loop if coordinates already exist
+		#Early termination to the loop if lat/long already exist
 		if isinstance(listing.lat, float) and isinstance(listing.long, float):
 			continue
 
+		sleepspinner(np.random.randint(2, 6), "searching lat/long")
+
 		address = listing.address
 		#If city and state aren't present, add them
-			#?Could do this for zip code searches as well.
-   
 		if citystate[0].lower() not in address.lower():
 			listing.address = address + " " + citystate[0]
 		if citystate[1].lower() not in address.lower():
@@ -112,13 +112,20 @@ def get_lat_long(data:list, citystate:tuple)->list:
 
 		srch_add = listing.address + " USA"
 		#First search Novatim
-		location = geolocator.geocode(srch_add)
+		try:
+			location = geolocator.geocode(srch_add)
+		except Exception as error:
+			logger.warning(f"an error occured in Nominatim\n{error}")
+			location = None
+
+		#If a location is found, assign lat long
 		if location:
 			lat, long = location.latitude, location.longitude
 			listing.lat = lat
 			listing.long = long
-			continue
-		#If that fails, search OpenMapquest
+			# continue
+
+		#If that fails, search ARCgis
 		# locatedos = backupgeo(srch_add)
 		# if locatedos:
 		# 	lat, long = location.latitude, location.longitude
@@ -456,7 +463,7 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 1
 
 					#property damage subsearch
-					if crimeset & set('CRIMINAL DAMAGE'):
+					if crimeset & set(['CRIMINAL DAMAGE']):
 						scores['property_d_score'] += 1
 					
 				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}

@@ -1,4 +1,34 @@
 {
+  "7742256088": {
+    "source": "www.craiglist.org",
+    "price": "1850.0",
+    "neigh": "chicago",
+    "dogs": "True",
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-condo-for-rent-available-now/7742256088.html",
+    "address": "2723 W. Wellington Ave., Chicago, IL 60618",
+    "bed": "2.0",
+    "bath": "1.0",
+    "sqft": "1000ft2",
+    "lat": "41.935845",
+    "long": "-87.696302",
+    "L_dist": "0.76",
+    "crime_sc": "{'drug_score': 2.59, 'gun_score': 7.08, 'murder_score': 1.71, 'perv_score': 2.99, 'theft_score': 49.92, 'violence_score': 37.87, 'property_d_score': 0.0}"
+  },
+  "7742165501": {
+    "source": "www.craiglist.org",
+    "price": "2200.0",
+    "neigh": "chicago",
+    "dogs": "True",
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-beautiful-duplex-bed-bath-in/7742165501.html",
+    "address": "2400 W, Chicago, IL 60608",
+    "bed": "3.0",
+    "bath": "2.0",
+    "sqft": "1300ft2",
+    "lat": "41.8515",
+    "long": "-87.6694",
+    "L_dist": "0.4",
+    "crime_sc": "{'drug_score': 2.56, 'gun_score': 9.03, 'murder_score': 2.43, 'perv_score': 2.81, 'theft_score': 46.15, 'violence_score': 40.38, 'property_d_score': 0.0}"
+  },
   "7741426555": {
     "source": "www.craiglist.org",
     "price": "2300.0",
@@ -9,10 +39,10 @@
     "bed": "2.0",
     "bath": "1.0",
     "sqft": "800ft2",
-    "lat": "41.9614245",
-    "long": "-87.6762198",
-    "L_dist": "0.06441688179027857",
-    "crime_sc": "{'drug_score': 2.76, 'gun_score': 6.7, 'murder_score': 0.0, 'perv_score': 3.01, 'theft_score': 50.93, 'violence_score': 24.01, 'property_d_score': 0.0}"
+    "lat": "41.970228",
+    "long": "-87.676456",
+    "L_dist": "0.29",
+    "crime_sc": "{'drug_score': 2.65, 'gun_score': 6.54, 'murder_score': 1.47, 'perv_score': 2.96, 'theft_score': 51.64, 'violence_score': 36.52, 'property_d_score': 0.0}"
   },
   "7741037945": {
     "source": "www.craiglist.org",
@@ -24,10 +54,10 @@
     "bed": "2.0",
     "bath": "1.0",
     "sqft": "900ft2",
-    "lat": "41.8834815",
-    "long": "-87.63421352828843",
-    "L_dist": "0.05869899436777602",
-    "crime_sc": "{'drug_score': 2.44, 'gun_score': 7.73, 'murder_score': 0.0, 'perv_score': 2.74, 'theft_score': 49.82, 'violence_score': 24.79, 'property_d_score': 0.0}"
+    "lat": "41.883257",
+    "long": "-87.634009",
+    "L_dist": "0.04",
+    "crime_sc": "{'drug_score': 2.44, 'gun_score': 7.72, 'murder_score': 1.8, 'perv_score': 2.74, 'theft_score': 49.81, 'violence_score': 38.22, 'property_d_score': 0.0}"
   },
   "7740760723": {
     "source": "www.craiglist.org",
@@ -39,10 +69,10 @@
     "bed": "2.0",
     "bath": "1.0",
     "sqft": "900ft2",
-    "lat": "41.9393785",
-    "long": "-87.7026208",
-    "L_dist": "0.5075044031396843",
-    "crime_sc": "{'drug_score': 2.6, 'gun_score': 7.02, 'murder_score': 0.0, 'perv_score': 2.99, 'theft_score': 50.01, 'violence_score': 24.53, 'property_d_score': 0.0}"
+    "lat": "41.939532",
+    "long": "-87.680855",
+    "L_dist": "0.58",
+    "crime_sc": "{'drug_score': 2.65, 'gun_score': 7.09, 'murder_score': 1.75, 'perv_score': 3.0, 'theft_score': 49.94, 'violence_score': 37.82, 'property_d_score': 0.0}"
   },
   "7739885926": {
     "source": "www.craiglist.org",
@@ -54,10 +84,10 @@
     "bed": "3.0",
     "bath": "2.0",
     "sqft": "1800ft2",
-    "lat": "41.9112554",
-    "long": "-87.73224706469215",
-    "L_dist": "1.763524365392713",
-    "crime_sc": "{'drug_score': 2.65, 'gun_score': 7.68, 'murder_score': 0.0, 'perv_score': 2.9, 'theft_score': 48.54, 'violence_score': 25.31, 'property_d_score': 0.0}"
+    "lat": "41.910623",
+    "long": "-87.732307",
+    "L_dist": "1.78",
+    "crime_sc": "{'drug_score': 2.65, 'gun_score': 7.68, 'murder_score': 1.88, 'perv_score': 2.9, 'theft_score': 48.48, 'violence_score': 38.89, 'property_d_score': 0.0}"
   },
   "7739736516": {
     "source": "www.craiglist.org",
@@ -69,10 +99,10 @@
     "bed": "3.0",
     "bath": "2.0",
     "sqft": "1200ft2",
-    "lat": "41.881966",
-    "long": "-87.6988753",
-    "L_dist": "0.20653090331811083",
-    "crime_sc": "{'drug_score': 2.46, 'gun_score': 8.09, 'murder_score': 0.0, 'perv_score': 2.97, 'theft_score': 48.26, 'violence_score': 25.51, 'property_d_score': 0.0}"
+    "lat": "41.881832",
+    "long": "-87.701255",
+    "L_dist": "0.3",
+    "crime_sc": "{'drug_score': 2.47, 'gun_score': 8.07, 'murder_score': 1.97, 'perv_score': 2.97, 'theft_score': 48.25, 'violence_score': 38.97, 'property_d_score': 0.0}"
   },
   "7739363050": {
     "source": "www.craiglist.org",
@@ -84,10 +114,10 @@
     "bed": "2.0",
     "bath": "1.0",
     "sqft": "1200ft2",
-    "lat": "41.9393785",
-    "long": "-87.7026208",
-    "L_dist": "0.5075044031396843",
-    "crime_sc": "{'drug_score': 2.6, 'gun_score': 7.02, 'murder_score': 0.0, 'perv_score': 2.99, 'theft_score': 50.01, 'violence_score': 24.53, 'property_d_score': 0.0}"
+    "lat": "41.939532",
+    "long": "-87.680855",
+    "L_dist": "0.58",
+    "crime_sc": "{'drug_score': 2.65, 'gun_score': 7.09, 'murder_score': 1.75, 'perv_score': 3.0, 'theft_score': 49.94, 'violence_score': 37.82, 'property_d_score': 0.0}"
   },
   "7734649835": {
     "source": "www.craiglist.org",
@@ -99,10 +129,10 @@
     "bed": "2.0",
     "bath": "1.0",
     "sqft": "950ft2",
-    "lat": "41.9393785",
-    "long": "-87.7026208",
-    "L_dist": "0.5075044031396843",
-    "crime_sc": "{'drug_score': 2.6, 'gun_score': 7.02, 'murder_score': 0.0, 'perv_score': 2.99, 'theft_score': 50.01, 'violence_score': 24.53, 'property_d_score': 0.0}"
+    "lat": "41.856486",
+    "long": "-87.623606",
+    "L_dist": "0.27",
+    "crime_sc": "{'drug_score': 2.23, 'gun_score': 8.4, 'murder_score': 2.22, 'perv_score': 2.66, 'theft_score': 47.93, 'violence_score': 39.65, 'property_d_score': 0.0}"
   },
   "7733938262": {
     "source": "www.craiglist.org",
@@ -110,14 +140,14 @@
     "neigh": "chicago",
     "dogs": "True",
     "link": "https://chicago.craigslist.org/chc/apa/d/elmwood-park-beautiful-bedroom-15-bath/7733938262.html",
-    "address": "7216 W Altgeld st, Elmwood park 60607, IL 60607 Chicago",
+    "address": "7216 W Altgeld st, Elmwood park 60607, IL 60607",
     "bed": "2.0",
     "bath": "15.0",
     "sqft": "1200ft2",
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": "{}"
+    "lat": "41.926064",
+    "long": "-87.807226",
+    "L_dist": "2.72",
+    "crime_sc": "{'drug_score': 4.59, 'gun_score': 9.63, 'murder_score': 2.58, 'perv_score': 3.04, 'theft_score': 41.2, 'violence_score': 41.68, 'property_d_score': 0.0}"
   },
   "7732945541": {
     "source": "www.craiglist.org",
@@ -129,36 +159,21 @@
     "bed": "3.0",
     "bath": "1.0",
     "sqft": "830ft2",
-    "lat": "41.8910778",
-    "long": "-87.6572385",
-    "L_dist": "0.360380941935799",
-    "crime_sc": "{'drug_score': 2.55, 'gun_score': 7.9, 'murder_score': 0.0, 'perv_score': 2.97, 'theft_score': 49.4, 'violence_score': 24.92, 'property_d_score': 0.0}"
+    "lat": "41.9008",
+    "long": "-87.6528",
+    "L_dist": "0.35",
+    "crime_sc": "{'drug_score': 2.55, 'gun_score': 7.49, 'murder_score': 1.82, 'perv_score': 2.97, 'theft_score': 49.93, 'violence_score': 37.98, 'property_d_score': 0.0}"
   },
   "7299997352": {
     "source": "www.realtor.com",
     "price": "2550.0",
-    "neigh": "Roscoe-Village",
+    "neigh": "North-Center",
     "dogs": "True",
     "link": "www.realtor.com/rentals/details/1911-W-Eddy-St-Apt-3_Chicago_IL_60657_M72999-97352",
     "address": "1911 W Eddy St Apt 3 Chicago, IL 60657",
     "bed": "3.0",
     "bath": "2.0",
     "sqft": "1200.0",
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": "{}"
-  },
-  "8351084790": {
-    "source": "www.realtor.com",
-    "price": "2200.0",
-    "neigh": "Bowmanville",
-    "dogs": "True",
-    "link": "www.realtor.com/rentals/details/5235-N-Winchester-Ave-1_Chicago_IL_60640_M83510-84790",
-    "address": "5235 N Winchester Ave Unit 1 Chicago, IL 60640",
-    "bed": "2.0",
-    "bath": "1.0",
-    "sqft": "1100.0",
     "lat": "",
     "long": "",
     "L_dist": "",
@@ -194,19 +209,19 @@
     "L_dist": "",
     "crime_sc": "{}"
   },
-  "7742165501": {
-    "source": "www.craiglist.org",
+  "8351084790": {
+    "source": "www.realtor.com",
     "price": "2200.0",
-    "neigh": "chicago",
+    "neigh": "Bowmanville",
     "dogs": "True",
-    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-beautiful-duplex-bed-bath-in/7742165501.html",
-    "address": "2400 W, Chicago, IL 60608",
-    "bed": "3.0",
-    "bath": "2.0",
-    "sqft": "1300ft2",
-    "lat": "41.8368324",
-    "long": "-87.6847787",
-    "L_dist": "0.5589404917609",
-    "crime_sc": "{'drug_score': 2.57, 'gun_score': 9.33, 'murder_score': 0.0, 'perv_score': 2.81, 'theft_score': 45.07, 'violence_score': 27.17, 'property_d_score': 0.0}"
+    "link": "www.realtor.com/rentals/details/5235-N-Winchester-Ave-1_Chicago_IL_60640_M83510-84790",
+    "address": "5235 N Winchester Ave Unit 1 Chicago, IL 60640",
+    "bed": "2.0",
+    "bath": "1.0",
+    "sqft": "1100.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
   }
 }

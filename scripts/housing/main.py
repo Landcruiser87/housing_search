@@ -32,8 +32,8 @@ AREAS = [
 	# 'Lincoln Square',
 	'Ravenswood',
 	'North Center',
-	# 'Bowmanville',
-	# 'Roscoe Village',
+	'Bowmanville',
+	'Roscoe Village',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 ]
@@ -188,7 +188,7 @@ def scrape(neigh:str):
 					data = datacheck
 					del datacheck
 					#Get lat longs for the address's
-					data = support.get_lat_long(data, (CITY, STATE))
+					data = support.get_lat_long(data, (CITY, STATE), logger)
 
 					#Calculate the distance to closest L stop 
 					#(haversine/as crow flies)
@@ -219,8 +219,9 @@ def main():
 		jsondata = support.load_historical(fp)
 		logger.info("historical data loaded")
 	else:
-		logger.warning("No previous data found.")
 		jsondata = {}
+		logger.warning("No previous data found.")
+		
 
 	#Shuffle and search the neighborhoods/zips
 	shuffle(AREAS)
