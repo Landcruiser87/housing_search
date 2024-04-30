@@ -154,7 +154,7 @@ def scrape(neigh:str):
 		neigh (str): Neighborhood or Zipcode
 	"""	
 	sources = ["realtor", "apartments", "zillow", "craigs"]
-	shuffle(sources) #Keep em guessing!
+	shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -226,7 +226,7 @@ def main():
 	shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
-  
+
 	# If new listings are found, save the data to the json file, 
 	# format the list of dataclasesses to a url 
 	# Send gmail alerting of new properties

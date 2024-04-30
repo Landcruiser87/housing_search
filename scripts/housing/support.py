@@ -412,7 +412,7 @@ def crime_score(data:list) -> list:
 						scores['gun_score'] += 1
 					
 					#Murder
-					if crimeset & 'HOMICIDE':
+					if crimeset & set('HOMICIDE'):
 						scores['murder_score'] += 10
 					
 					#Theft
@@ -436,7 +436,7 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 5
 
 					#property damage
-					if crimeset & 'CRIMINAL DAMAGE':
+					if crimeset & set('CRIMINAL DAMAGE'):
 						scores['property_d_score'] += 1
 					
 				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
