@@ -22,8 +22,7 @@ console = Console(color_system="truecolor")
 #CLASS Numpy encoder
 class NumpyArrayEncoder(json.JSONEncoder):
 	"""Custom numpy JSON Encoder.  Takes in any type from an array and formats it to something that can be JSON serialized.
-	Source Code found here
-		https://pynative.com/python-serialize-numpy-ndarray-into-json/
+	Source Code found here.  https://pynative.com/python-serialize-numpy-ndarray-into-json/
 	Args:
 		json (object): Json serialized format
 	"""	
@@ -75,7 +74,7 @@ def closest_L_stop(data:list)->list:
 				dist = haversine_distance(lat1, lon1, lat2, lon2)
 				if dist <= min_dist:
 					min_dist = dist
-			listing.L_dist = min_dist
+			listing.L_dist = round(min_dist, 2)
 
 	return data
 
@@ -125,8 +124,7 @@ def get_lat_long(data:list, citystate:tuple)->list:
 		# 	lat, long = location.latitude, location.longitude
 		# 	listing.lat = lat
 		# 	listing.long = long
-		
-		
+
 	return data
 
 #FUNCTION Sleep spinna
@@ -396,14 +394,27 @@ def crime_score(data:list) -> list:
 
 				narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
 				guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
-				theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE']
-				sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING']
-				human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING']
+				theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE','GAMBLING']
+				sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY']
+				human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 
+					  'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 
+					  'OBSCENITY', 'PUBLIC PEACE VIOLATION', ]
+				property_damage = ["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS']
 				
-				#TODO - Update all below comparison to set memberships.
 				for idx in range(total_crimes):
+					#Primary categorization
 					crime = crime_arr[idx]['primary_type']
-					crimeset = set(crime.split())
+					if " " in crime:
+						crimeset = set(crime.split())
+					else:
+						crimeset = set([crime])
+					
+					if " " in crime_arr[idx]['description']:
+						crime_sub_set = set(crime_arr[idx]['description'].split())
+					else:
+						crime_sub_set = set([crime_arr[idx]['description']])
+
+					
 					#Drugs
 					if crime in narcotics:
 						scores['drug_score'] += 1
@@ -413,11 +424,11 @@ def crime_score(data:list) -> list:
 						scores['gun_score'] += 1
 			
 					#Gun description subsearch if primary_type doesn't catch it.
-					elif set(crime_arr[idx]['description'].split()) & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+					elif crime_sub_set & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
 						scores['gun_score'] += 1
 					
 					#Murder
-					if crimeset & set('HOMICIDE'):
+					if crimeset & set(['HOMICIDE']):
 						scores['murder_score'] += 10
 					
 					#Theft
@@ -429,7 +440,7 @@ def crime_score(data:list) -> list:
 						scores['perv_score'] += 2
 
 					#Sex Crimes subsearch
-					elif set(crime_arr[idx]['description'].split()) & set(['PEEPING TOM']):
+					elif crime_sub_set & set(['PEEPING TOM']):
 						scores['perv_score'] += 2
 
 					#humanViolence
@@ -437,10 +448,14 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 1
 
 					#humanviolence subsearch
-					elif set(crime_arr[idx]['description'].split()) & set(['CHILDREN']):
+					elif crime_sub_set & set(['CHILDREN']):
 						scores['violence_score'] += 5
+					
+					#property damage 
+					if crime in property_damage:
+						scores['violence_score'] += 1
 
-					#property damage
+					#property damage subsearch
 					if crimeset & set('CRIMINAL DAMAGE'):
 						scores['property_d_score'] += 1
 					

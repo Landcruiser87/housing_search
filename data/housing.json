@@ -208,20 +208,5 @@
     "long": "-87.6847787",
     "L_dist": "0.5589404917609",
     "crime_sc": "{'drug_score': 2.57, 'gun_score': 9.33, 'murder_score': 0.0, 'perv_score': 2.81, 'theft_score': 45.07, 'violence_score': 27.17, 'property_d_score': 0.0}"
-  },
-  "7742256088": {
-    "source": "www.craiglist.org",
-    "price": "1850.0",
-    "neigh": "chicago",
-    "dogs": "True",
-    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-condo-for-rent-available-now/7742256088.html",
-    "address": "2723 W. Wellington Ave., Chicago, IL 60618",
-    "bed": "2.0",
-    "bath": "1.0",
-    "sqft": "1000ft2",
-    "lat": "41.935845",
-    "long": "-87.696302",
-    "L_dist": "0.7573534495522819",
-    "crime_sc": "{'drug_score': 2.59, 'gun_score': 7.08, 'murder_score': 0.0, 'perv_score': 2.98, 'theft_score': 49.91, 'violence_score': 24.62, 'property_d_score': 0.0}"
   }
 }
