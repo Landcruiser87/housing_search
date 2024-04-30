@@ -22,15 +22,22 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
 			links.append(url)
 	return links
 	
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, citystate:tuple)->list:
-	"""[Gets the list of links to the individual postings]
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, citystate:tuple, jsondata:dict)->list:
+	"""_summary_
 
 	Args:
-		bs4ob ([BeautifulSoup object]): [html of realtor page]
+		result (BeautifulSoup): _description_
+		neigh (str): _description_
+		source (str): _description_
+		Propertyinfo (_type_): _description_
+		logger (_type_): _description_
+		citystate (tuple): _description_
+		jsondatadict (_type_): _description_
 
 	Returns:
 		properties (list[Propertyinfo]): [all the links in the summary page]
-	"""
+	"""			
+
 	CITY = citystate[0].lower()
 	STATE = citystate[1].lower()
 
@@ -78,6 +85,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 
 		#Get posting id from the url.
 		listingid = link.split('/')[-1].strip(".html")
+		
+		#assign the url
 		url = link
 
 		# Grab the price.
@@ -104,7 +113,22 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 		for search in bs4ob.find_all("h2", class_="street-address"):
 			addy = search.text
 			break
+
+		#grab lat / long
+		for search in bs4ob.find_all("div", {"id":"map"}):
+			try:
+				lat = float(search.get("data-latitude"))
+			except:
+				lat = None
+				logger.warning("Lat not a float")
+			try:
+				long = float(search.get("data-longitude"))
+			except:
+				long = None
+				logger.warning("Long not a float")
+
 			
+
 		#Janky way of making sure variables are filled if we missed any
 		if not "listingid" in locals():
 			listingid = None
@@ -139,15 +163,16 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 			bath=baths,
 			dogs=pets,
 			link=url,
-			address=addy
+			address=addy,
+			lat=lat,
+			long=long
 		)
 		listings.append(listing)
 
 	return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:tuple):
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:tuple, jsondata:dict):
 	CITY = citystate[0].lower()
-	STATE = citystate[1].upper()
 
 	HEADERS = {
 		'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -205,7 +230,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
 	results = bs4ob.find_all("li", class_="cl-static-search-result")
 	if results:
 		if len(results) > 0:
-			property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, citystate)
+			property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, citystate, jsondata)
 			logger.info(f'{len(property_listings)} listings returned from {source}')
 			return property_listings
 	

@@ -166,7 +166,7 @@ def scrape(neigh:str):
 			if source=="craigs" and c_scrape==False:
 				c_scrape = True
 				logger.info(f"scraping {site[0]}")
-				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
+				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE), jsondata)
 
 			elif source=="craigs" and c_scrape==True:
 				continue

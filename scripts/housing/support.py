@@ -97,6 +97,11 @@ def get_lat_long(data:list, citystate:tuple)->list:
   
 	for listing in data:
 		sleepspinner(np.random.randint(2, 4), "searching lat/long")
+		
+		#Early termination to the loop if coordinates already exist
+		if isinstance(listing.lat, float) and isinstance(listing.long, float):
+			continue
+
 		address = listing.address
 		#If city and state aren't present, add them
 			#?Could do this for zip code searches as well.
