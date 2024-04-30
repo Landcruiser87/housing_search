@@ -220,7 +220,7 @@ def urlformat(urls:list)->str:
 		for link, site in urls:
 			links_html += f"<li><a href='{link}'> {site} link </a></li>"
 	else:
-		links_html = f"<li><a href='{urls[0]}'> link 1 </a></li>"
+		links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} link </a></li>"
 	links_html = links_html + "</ol>"
 	return links_html
 

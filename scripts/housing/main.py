@@ -32,8 +32,8 @@ AREAS = [
 	# 'Lincoln Square',
 	'Ravenswood',
 	'North Center',
-	'Bowmanville',
-	'Roscoe Village',
+	# 'Bowmanville',
+	# 'Roscoe Village',
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 ]
@@ -222,7 +222,7 @@ def main():
 		logger.warning("No previous data found.")
 		jsondata = {}
 
-	#Shuffle and search the neighborhoods
+	#Shuffle and search the neighborhoods/zips
 	shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
