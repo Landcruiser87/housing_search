@@ -231,8 +231,7 @@ def urlformat(urls:list)->str:
 
 #FUNCTION Send Housing Email
 def send_housing_email(urls:str):
-	"""[Function for sending an email.  Inputs the url into the docstrings 
-	via decorator for easy formatting of the HTML body of an email.]
+	"""[Function for sending an email.  Formats the url list into a basic email with said list]
 
 	Args:
 		url (str): [url of the listing]
@@ -308,16 +307,16 @@ def crime_score(data:list) -> list:
 	#Sets lookback to 1 year from today
 	ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
 	c_dtypes = [
-		("id"                   ,str, 60),
-		("date"                 ,datetime.datetime),
-		("iucr"                 ,str, 60),
-		("fbi_code"             ,str, 60),
-		("latitude"             ,float),
-		("longitude"            ,float),
-		("primary_type"         ,str, 240),
-		("description"          ,str, 600),
-		("arrest"               ,str, 20),
-		("domestic"             ,str, 20),
+		("id"           ,str, 60),
+		("date"         ,datetime.datetime),
+		("iucr"         ,str, 60),
+		("fbi_code"     ,str, 60),
+		("latitude"     ,float),
+		("longitude"    ,float),
+		("primary_type" ,str, 240),
+		("description"  ,str, 600),
+		("arrest"       ,str, 20),
+		("domestic"     ,str, 20),
 	]
 
 	for listing in data:
@@ -405,7 +404,7 @@ def crime_score(data:list) -> list:
 				sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY']
 				human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 
 					  'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 
-					  'OBSCENITY', 'PUBLIC PEACE VIOLATION', ]
+					  'OBSCENITY', 'PUBLIC PEACE VIOLATION']
 				property_damage = ["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS']
 				
 				for idx in range(total_crimes):
@@ -447,7 +446,7 @@ def crime_score(data:list) -> list:
 						scores['perv_score'] += 2
 
 					#Sex Crimes subsearch
-					elif crime_sub_set & set(['PEEPING TOM']):
+					elif crime_sub_set & set(['PEEPING TOM', 'SEXUAL', 'SEX OFFENDER']):
 						scores['perv_score'] += 2
 
 					#humanViolence
@@ -463,7 +462,7 @@ def crime_score(data:list) -> list:
 						scores['violence_score'] += 1
 
 					#property damage subsearch
-					if crimeset & set(['CRIMINAL DAMAGE']):
+					elif crimeset & set(['CRIMINAL DAMAGE']):
 						scores['property_d_score'] += 1
 					
 				scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}

@@ -32,8 +32,10 @@ AREAS = [
 	# 'Lincoln Square',
 	'Ravenswood',
 	'North Center',
-	# 'Bowmanville',
-	# 'Roscoe Village',
+	'Bowmanville',
+	'Roscoe Village',
+	# 'West Town', 
+	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
 	# 'Budlong Woods',
 ]
@@ -56,6 +58,7 @@ SOURCES = {
 	"apartments":("www.apartments.com", apartments),
 	"craigs"    :("www.craiglist.org", craigs),
 	"zillow"    :("www.zillow.com", zillow),
+	# "redfin"    :("www.redfin.com", redfin)
 }
 
 # Define City / State
@@ -111,7 +114,7 @@ def check_ids_at_the_door(data:list):
 	n_ids = set(new_dict.keys())
 	newids = n_ids - j_ids
 	if newids:
-		#Only add the listings that are new
+		#Only add the listings that are new.  
 		newdata = []
 		[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
 		return newdata

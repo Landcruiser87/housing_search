@@ -223,5 +223,20 @@
     "long": "",
     "L_dist": "",
     "crime_sc": "{}"
+  },
+  "8807420043": {
+    "source": "www.realtor.com",
+    "price": "2350.0",
+    "neigh": "North-Center",
+    "dogs": "True",
+    "link": "www.realtor.com/rentals/details/1911-W-Eddy-St-Apt-2_Chicago_IL_60657_M88074-20043",
+    "address": "1911 W Eddy St Apt 2 Chicago, IL 60657",
+    "bed": "2.0",
+    "bath": "2.0",
+    "sqft": "1400.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
   }
 }
