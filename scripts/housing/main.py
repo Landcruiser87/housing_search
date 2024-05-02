@@ -31,9 +31,9 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	'North Center',
 	'Ravenswood',
-	'Bowmanville',
 	'Roscoe Village',
 	'Lincoln Square',
+	# 'Bowmanville',
 	# 'West Town', 
 	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
@@ -224,7 +224,6 @@ def main():
 		jsondata = {}
 		logger.warning("No previous data found.")
 		
-
 	#Shuffle and search the neighborhoods/zips
 	shuffle(AREAS)
 	for neigh in AREAS:
@@ -233,6 +232,7 @@ def main():
 	# If new listings are found, save the data to the json file, 
 	# format the list of dataclasesses to a url 
 	# Send gmail alerting of new properties
+ 
 	if newlistings:
 		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)

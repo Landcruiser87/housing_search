@@ -145,6 +145,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
 		# url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
+	#BUG - Zipcode search not functional yet
 	# #Searchby ZipCode
 	# elif isinstance(neigh, int):
 	# 	url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
@@ -153,7 +154,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	else:
 		logging.critical("Inproper input for redfin, moving to next site")
 		return
-	
 
 	response = requests.get(url_map, headers=BASE_HEADERS)
 	
@@ -164,17 +164,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		logger.warning(f'Reason: {response.reason}')
 		return None
 
-	#[x] - Get neighborhood ID if need be here. 
-	temp_dict = json.loads(response.text[4:])
-	for neighborhood in temp_dict["payload"]['sections'][0]["rows"]:
-		if neighborhood.get("name").lower() == neigh.lower():
-			neighid = neighborhood.get("id")[2:]
-			break
-
+	#Always take naps
 	support.sleepspinner(np.random.randint(4, 8), "Mapping request nap")
 	 
 	#Search by neighborhood
 	if isinstance(neigh, str):
+		#Look up neighborhood id from autocomplete search query
+		temp_dict = json.loads(response.text[4:])
+		for neighborhood in temp_dict["payload"]['sections'][0]["rows"]:
+			if neighborhood.get("name").lower() == neigh.lower():
+				neighid = neighborhood.get("id")[2:]
+				break
+
 		if " " in neigh:
 			neigh = "-".join(neigh.split(" "))
 
