@@ -245,3 +245,9 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+
+#Notes
+# fp = "../../data/housing.json"
+# with open(fp, "r") as readf:
+# 	results = json.load(readf)

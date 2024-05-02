@@ -36,7 +36,7 @@ class NumpyArrayEncoder(json.JSONEncoder):
 			return obj.tolist()
 		else:
 			return super(NumpyArrayEncoder, self).default(obj)
-
+		
 #FUNCTION Convert Date
 def date_convert(time_big:datetime)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
