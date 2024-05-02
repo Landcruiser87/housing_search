@@ -9,7 +9,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-import realtor, zillow, apartments, craigs, support
+import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
 FORMAT = "%(message)s" 
@@ -29,11 +29,11 @@ logger = logging.getLogger(__name__)
 
 #input custom area's here. Uncomment whichever way you want to search
 AREAS = [
-	# 'Lincoln Square',
-	'Ravenswood',
 	'North Center',
-	'Bowmanville',
-	'Roscoe Village',
+	# 'Ravenswood',
+	# 'Bowmanville',
+	# 'Roscoe Village',
+	# 'Lincoln Square',
 	# 'West Town', 
 	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
@@ -58,7 +58,7 @@ SOURCES = {
 	"apartments":("www.apartments.com", apartments),
 	"craigs"    :("www.craiglist.org", craigs),
 	"zillow"    :("www.zillow.com", zillow),
-	# "redfin"    :("www.redfin.com", redfin)
+	"redfin"    :("www.redfin.com", redfin)
 }
 
 # Define City / State
@@ -155,8 +155,8 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["realtor", "apartments", "zillow", "craigs"]
-	shuffle(sources) #Keep em guessin!
+	sources = ["redfin", "realtor"]#, "apartments", "zillow", "craigs"]
+	# shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

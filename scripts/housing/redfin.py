@@ -7,6 +7,7 @@ import requests
 from urllib.parse import urlencode
 import time
 import support
+from urllib.parse import urlencode
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcount:int)->list:
 	"""[Gets the list of links to the individual postings]
@@ -22,8 +23,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 	for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
 		
 		for subsearch in card.find_all("a", class_="link-and-anchor visuallyHidden"):
-			url = subsearch.get("href")
-			listingid = url.split("/")[-1]
+			listid = subsearch.get("href")
+			listingid = listid.split("/")[-1]
 
 		# for subsearch in card.find_all("span", class_=lambda x: x and x.startswith("bp-Homecard__Stats")):
 		# 	if "bed" in card.__class__:
@@ -33,47 +34,23 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 		# 	if "sqft" in card.__class__:
 		# 		sqft = [x for x in subsearch.text if x.isnumeric()]
 		for subsearch in card.find_all("script", {"type":"application/ld+json"}):
-			json.loads(subsearch.text)			
+			listinginfo = json.loads(subsearch.text)
+			url = listinginfo[0].get("url")
+			addy = listinginfo[0].get("name")
+			lat = float(listinginfo[0]["geo"].get("latitude"))
+			long = float(listinginfo[0]["geo"].get("longitude"))
+			beds = listinginfo[0].get("numberOfRooms")
+			if "value" in listinginfo[0].get("floorSize").keys():
+				sqft = listinginfo[0].get("floorSize")["value"]
+				if "," in sqft:
+					sqft = sqft.replace(",", "")
+			price = float(listinginfo[1]["offers"]["price"])
 
-	for card in result.find_all("article"):
-		#Grab the id
-		if card.get("data-test")=="property-card":
-			listingid = card.get("id")
-		
-		#First grab the link.
-		for search in card.find_all("a"):
-			#maybe check if the class ends with that. 
-			if search.get("data-test")=="property-card-link":
-				url = search.get("href")
-				#Grab the address from below the ref link
-				if source not in url:
-					url = source + url
-				addy = search.next.text
-				break
-		
-		#grab the price
-		for search in card.find_all("span"):
-			if search.get("data-test")=="property-card-price":
-				text = search.text
-				#Sometimes these jokers put the beds in with the price just annoy people like me
-				if "+" in text:
-					price = text[:text.index("+")]
+		#Bathrooms weren't in the json.  So we'll grab those manually
+		for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
+			bath = subsearch.text
+			bath = "".join(x for x in bath if x.isnumeric())
 
-				price = float("".join(x for x in text if x.isnumeric()))
-				break
-
-		#Grab bed bath
-		for search in card.find_all("ul"):
-			for subsearch in search.find_all("li"):
-				text = str(subsearch)
-				numtest = any(x.isnumeric() for x in text)
-
-				if "bd" in text and numtest:
-					beds = float("".join(x for x in text if x.isnumeric()))
-				elif "ba" in text and numtest:
-					baths = float("".join(x for x in text if x.isnumeric()))
-				elif "sqft" in text and numtest:
-					sqft = float("".join(x for x in text if x.isnumeric()))
 		pets = True
 
 		#Janky way of making sure variables are filled if we missed any
@@ -100,7 +77,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 			bed=beds,       
 			sqft=sqft,      
 			bath=baths,     
-			dogs=pets,      
+			dogs=pets,
+			lat=lat,
+			long=long,
 			link=url,		
 			address=addy    
 		)
@@ -120,29 +99,67 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		#two requests when searching redfin.  
 		#1. Make a request to see what neighborhood code goes with the search term. 
 		#2. Request the appropriate neigh with paramaterized search. 
-  
+	
+	#Don't have a way to set these programatically.  You need to search for the
+	#neighborhood id so you need to set the market, region_id, region_type, and
+	#lat long to use this
+	SH_PARAMS = {
+		"location": f"{neigh}",
+		"start": 0,
+		"count": 10,
+		"v": 2,
+		"market": f"{CITY.lower()}",
+		"al": 1,
+		"iss": "false",
+		"ooa": "true",
+		"mrs": "false",
+		"region_id": 29470,
+		"region_type": 6,
+		"lat": 41.833670000000005,
+		"lng": -87.73184,
+		"includeAddressInfo": "false"
+	}
+	# DL_URL = 'https://www.redfin.com/stingray/do/gis-search'
+	# SH_PARAMS = {
+	# 	'al': 1,
+	# 	'isSearchFormParamsDefault': 'false',
+	# 	'isRentals': 'true',
+	# 	'lpp': 50,
+	# 	'market': 'Chicago',
+	# 	'mpt': 99,
+	# 	'no_outline': 'false',
+	# 	'num_homes': 500,
+	# 	'page_number': 1,
+	# 	'region_id': 29470,  #Replace this with your city
+	# 	'region_type': 6,	 #I think 6 means neighborhood?
+	# 	'sf': [1,2,5,6,7],
+	# 	'sp': 'true',
+	# 	'status': 1,
+	# 	'uipt': [1,3],
+	# 	'v': 8,
+	# 	# 'render': 'csv'			#
+	# }
   
 	BASE_HEADERS = {
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer':f'https://www.redfin.com/{CITY}-{STATE}/rentals',
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
 		'origin':'https://www.redfin.com',
 	}
-	
+	# https://www.redfin.com/stingray/api/v1/search/rentals
+ 
 	#Search by neighborhood
 	if isinstance(neigh, str):
-		if " " in neigh:
-			neigh = "-".join(neigh.split(" "))
+		url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
+		# url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
-		url_map = f'https://www.redfin.com/neighborhood/{customid}-{STATE}-{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed'
-
-	#Searchby ZipCode
-	elif isinstance(neigh, int):
-		url_map = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,min-baths=2,dogs-allowed'
+	# #Searchby ZipCode
+	# elif isinstance(neigh, int):
+	# 	url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
 	#Error Trapping
 	else:
 		logging.critical("Inproper input for redfin, moving to next site")
 		return
+	
 
 	response = requests.get(url_map, headers=BASE_HEADERS)
 	
@@ -153,55 +170,21 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		logger.warning(f'Reason: {response.reason}')
 		return None
 
-	bs4ob = BeautifulSoup(response.text, 'lxml')
-	scripts = bs4ob.find_all("script")
-	coords = [x.text for x in scripts if "window.mapBounds" in x.text]
-	start = coords[0].index("mapBounds")
-	end = start + coords[0][start:].index(";\n")
-	mapcords = coords[0][start:end].split(" = ")[1]
+	#[x] - Get neighborhood ID if need be here. 
+	temp_dict = json.loads(response.text[4:])
+	for neighborhood in temp_dict["payload"]['sections'][0]["rows"]:
+		if neighborhood.get("name").lower() == neigh.lower():
+			neighid = neighborhood.get("id")[2:]
+			break
 
-	#Get the map coordinates
-	map_coords = json.loads(mapcords)
-	support.sleepspinner(np.random.randint(2, 8), "Map Request Nap")
+	support.sleepspinner(np.random.randint(2, 8), "Mapping request nap")
 	 
-	# #Stipulate subparameters of search
-	# subparams = {
-	# 	"usersSearchTerm":f"{neigh} {CITY}, {STATE.upper()}",
-	# 	"mapBounds":map_coords,
-	# 	"filterState":{
-	# 		"isForRent"           :{"value":True},
-	# 		"isForSaleByAgent"    :{"value":False},
-	# 		"isForSaleByOwner"    :{"value":False},
-	# 		"isNewConstruction"   :{"value":False},
-	# 		"isComingSoon"        :{"value":False},
-	# 		"isAuction"           :{"value":False},
-	# 		"isForSaleForeclosure":{"value":False},
-	# 		"isAllHomes"          :{"value":True},
-	# 		"beds"                :{"min":2},
-	# 		"isApartmentOrCondo"  :{"value":False},
-	# 		"isApartment"         :{"value":False},
-	# 		"isCondo"             :{"value":False},
-	# 		"mp"                  :{"max":2600},
-	# 		"onlyRentalLargeDogsAllowed":{"value":True},
-	# 		"onlyRentalSmallDogsAllowed":{"value":True}
-	# 	},
-	# 	"isListVisible":True,
-	# 	# "regionSelection": [{"regionId": 33597, "regionType": 8}], #!might not need this?
-	# 	"pagination" : {},
-	# 	"mapZoom":11
-	# }
-	# params = {
-	# 	"searchQueryState": subparams,
-	# 	"wants": {"cat1": ["listResults"]},
-    # 	"requestId": 2 #np.random.randint(2, 3)
-	# }
-
 	#Search by neighborhood
 	if isinstance(neigh, str):
 		if " " in neigh:
 			neigh = "-".join(neigh.split(" "))
 
-		url_search = f'https://www.redfin.com/neighborhood/{customid}-{STATE}-{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed'
+		url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed'
 
 	#Searchby ZipCode
 	elif isinstance(neigh, int):
@@ -226,8 +209,9 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
 	# surrounding.  Just the neighborhood)
-	lcount = int(bs4ob.find("div", class_="homes summary").text)
-	
+	lcount = bs4ob.find("div", class_="homes summary").text
+	lcount = int("".join(x for x in lcount if x.isnumeric()))
+
 	if lcount > 0:
 		results = bs4ob.find("div", class_="PhotosView")
 		if results:
