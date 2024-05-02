@@ -40,7 +40,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 			lat = float(listinginfo[0]["geo"].get("latitude"))
 			long = float(listinginfo[0]["geo"].get("longitude"))
 			beds = listinginfo[0].get("numberOfRooms")
-			if "value" in listinginfo[0].get("floorSize").keys():
+			if "value" in listinginfo[0]["floorSize"].keys():
 				sqft = listinginfo[0].get("floorSize")["value"]
 				if "," in sqft:
 					sqft = sqft.replace(",", "")
@@ -177,7 +177,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 			neighid = neighborhood.get("id")[2:]
 			break
 
-	support.sleepspinner(np.random.randint(2, 8), "Mapping request nap")
+	support.sleepspinner(np.random.randint(4, 8), "Mapping request nap")
 	 
 	#Search by neighborhood
 	if isinstance(neigh, str):

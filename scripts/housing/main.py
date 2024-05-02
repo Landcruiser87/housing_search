@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 #input custom area's here. Uncomment whichever way you want to search
 AREAS = [
 	'North Center',
-	# 'Ravenswood',
+	'Ravenswood',
 	# 'Bowmanville',
 	# 'Roscoe Village',
 	# 'Lincoln Square',
@@ -155,7 +155,7 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["redfin", "realtor"]#, "apartments", "zillow", "craigs"]
+	sources = ["redfin", "realtor", "apartments", "zillow", "craigs"]
 	# shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
