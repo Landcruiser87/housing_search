@@ -75,7 +75,8 @@ def closest_L_stop(data:list)->list:
 				dist = haversine_distance(lat1, lon1, lat2, lon2)
 				if dist <= min_dist:
 					min_dist = dist
-			listing.L_dist = round(min_dist, 2)
+					station = stops.loc[stop, "STATION_NAME"]
+			listing.L_dist = (station, round(min_dist, 2))
 
 	return data
 

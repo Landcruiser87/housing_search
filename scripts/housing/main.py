@@ -31,9 +31,9 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	'North Center',
 	'Ravenswood',
-	# 'Bowmanville',
-	# 'Roscoe Village',
-	# 'Lincoln Square',
+	'Bowmanville',
+	'Roscoe Village',
+	'Lincoln Square',
 	# 'West Town', 
 	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
@@ -156,7 +156,7 @@ def scrape(neigh:str):
 		neigh (str): Neighborhood or Zipcode
 	"""	
 	sources = ["zillow", "redfin", "realtor", "apartments", "craigs"]
-	# shuffle(sources) #Keep em guessin!
+	shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -226,7 +226,7 @@ def main():
 		
 
 	#Shuffle and search the neighborhoods/zips
-	# shuffle(AREAS)
+	shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
 
