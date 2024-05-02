@@ -94,7 +94,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		#1. Make a request to see what neighborhood code goes with the search term. 
 		#2. Request the appropriate neigh with paramaterized search. 
 	
-	#Don't have a way to set these programatically.  You need to search for the
+	#BUG - Don't have a way to set these programatically.  You need to search for the
 	#neighborhood id so you need to set the market, region_id, region_type, and
 	#lat long to use this
 	SH_PARAMS = {
@@ -188,7 +188,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	#Error Trapping
 	else:
 		logging.critical("Inproper input for redfin, moving to next site")
-		return
+		return None
 		
 	response = requests.get(url_search, headers = BASE_HEADERS)
 
@@ -215,7 +215,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 				logger.info(f'{len(property_listings)} listings returned from {source}')
 				return property_listings
 			else:
-				logger.warning("The soups failed you")		
+				logger.warning("The soups hath failed you")		
 	else:
 		logger.warning("No listings returned on Redfin.  Moving to next site")
 

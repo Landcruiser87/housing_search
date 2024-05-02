@@ -28,7 +28,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		#First grab the link.
 		for link in card.find_all("a", class_="card-anchor"):
 			if link.get("href"):
-				url = source + link.get("href")
+				url = "https://" + source + link.get("href")
 				break
 		
 		#grab the price

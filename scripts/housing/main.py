@@ -222,7 +222,7 @@ def main():
 		logger.info("historical data loaded")
 	else:
 		jsondata = {}
-		logger.warning("No previous data found.")
+		logger.warning("No historical data found")
 		
 	#Shuffle and search the neighborhoods/zips
 	shuffle(AREAS)
