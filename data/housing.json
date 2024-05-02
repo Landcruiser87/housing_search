@@ -194,21 +194,6 @@
     "L_dist": "",
     "crime_sc": "{}"
   },
-  "zpid_348322720": {
-    "source": "www.zillow.com",
-    "price": "2600.0",
-    "neigh": "north-center",
-    "dogs": "True",
-    "link": "https://www.zillow.com/homedetails/1833-W-Belle-Plaine-Ave-UNIT-1-Chicago-IL-60613/348322720_zpid/",
-    "address": "1833 W Belle Plaine Ave UNIT 1, Chicago, IL 60613",
-    "bed": "3.0",
-    "bath": "1.0",
-    "sqft": "1200.0",
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": "{}"
-  },
   "8351084790": {
     "source": "www.realtor.com",
     "price": "2200.0",

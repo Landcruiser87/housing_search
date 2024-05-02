@@ -26,45 +26,48 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		if count < 1:
 			return "No results found"
 	
-	for card in result.find_all("article"):
-		#Grab the id
-		if card.get("data-test")=="property-card":
-			listingid = card.get("id")
-		
-		#First grab the link.
-		for search in card.find_all("a"):
-			#maybe check if the class ends with that. 
-			if search.get("data-test")=="property-card-link":
-				url = search.get("href")
-				#Grab the address from below the ref link
-				if source not in url:
-					url = source + url
-				addy = search.next.text
-				break
-		
-		#grab the price
-		for search in card.find_all("span"):
-			if search.get("data-test")=="property-card-price":
-				text = search.text
-				#Sometimes these jokers put the beds in with the price just annoy people like me
-				if "+" in text:
-					price = text[:text.index("+")]
+	for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
+		#early terminate if the data-test key is in the underlying object
+		if jres.get("data-test"):
+			continue
+		#grab lat / long
+  
+		latlong = jres.find("script", {"type":"application/ld+json"})
+		if latlong:
+			res = json.loads(latlong.text)
+			lat = res["geo"]["latitude"]
+			long = res["geo"]["longitude"]
+			url = res["url"]
+			addy = res["name"]
+			
+		for card in jres.find_all("article"):
+			#Grab the id
+			if card.get("data-test")=="property-card":
+				listingid = card.get("id")
+			
+			#grab the price
+			for search in card.find_all("span"):
+				if search.get("data-test")=="property-card-price":
+					text = search.text
+					#Sometimes these jokers put the beds in with the price just annoy people like me
+					if "+" in text:
+						price = text[:text.index("+")]
 
-				price = float("".join(x for x in text if x.isnumeric()))
-				break
+					price = float("".join(x for x in text if x.isnumeric()))
+					break
 
-		#Grab bed bath
-		for search in card.find_all("ul"):
-			for subsearch in search.find_all("li"):
-				text = str(subsearch)
-				numtest = any(x.isnumeric() for x in text)
+			#Grab bed bath
+			for search in card.find_all("ul"):
+				for subsearch in search.find_all("li"):
+					text = str(subsearch)
+					numtest = any(x.isnumeric() for x in text)
 
-				if "bd" in text and numtest:
-					beds = float("".join(x for x in text if x.isnumeric()))
-				elif "ba" in text and numtest:
-					baths = float("".join(x for x in text if x.isnumeric()))
-				elif "sqft" in text and numtest:
-					sqft = float("".join(x for x in text if x.isnumeric()))
+					if "bd" in text and numtest:
+						beds = float("".join(x for x in text if x.isnumeric()))
+					elif "ba" in text and numtest:
+						baths = float("".join(x for x in text if x.isnumeric()))
+					elif "sqft" in text and numtest:
+						sqft = float("".join(x for x in text if x.isnumeric()))
 		pets = True
 
 		#Janky way of making sure variables are filled if we missed any
@@ -82,6 +85,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			addy = None
 		if not "sqft" in locals():
 			sqft = None
+		if not "lat" in locals():
+			addy = None
+		if not "long" in locals():
+			sqft = None
 		
 		listing = Propertyinfo(
 			id=listingid,   
@@ -92,7 +99,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			sqft=sqft,      
 			bath=baths,     
 			dogs=pets,      
-			link=url,		
+			link=url,
+			lat=lat,
+			long=long,
 			address=addy    
 		)
 
