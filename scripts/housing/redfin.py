@@ -48,8 +48,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 
 		#Bathrooms weren't in the json.  So we'll grab those manually
 		for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
-			bath = subsearch.text
-			bath = "".join(x for x in bath if x.isnumeric())
+			baths = subsearch.text
+			baths = "".join(x for x in baths if x.isnumeric())
 
 		pets = True
 
