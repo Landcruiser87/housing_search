@@ -9,7 +9,7 @@ import time
 import support
 from urllib.parse import urlencode
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcount:int)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
 	"""[Gets the list of links to the individual postings]
 
 	Args:
@@ -26,13 +26,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 			listid = subsearch.get("href")
 			listingid = listid.split("/")[-1]
 
-		# for subsearch in card.find_all("span", class_=lambda x: x and x.startswith("bp-Homecard__Stats")):
-		# 	if "bed" in card.__class__:
-		# 		beds = [x for x in subsearch.text if x.isnumeric()]
-		# 	if "bath" in card.__class__:
-		# 		baths = [x for x in subsearch.text if x.isnumeric()]
-		# 	if "sqft" in card.__class__:
-		# 		sqft = [x for x in subsearch.text if x.isnumeric()]
 		for subsearch in card.find_all("script", {"type":"application/ld+json"}):
 			listinginfo = json.loads(subsearch.text)
 			url = listinginfo[0].get("url")
@@ -50,7 +43,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, lcou
 		for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
 			baths = subsearch.text
 			baths = "".join(x for x in baths if x.isnumeric())
-
+			break
+		
 		pets = True
 
 		#Janky way of making sure variables are filled if we missed any
@@ -216,7 +210,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		results = bs4ob.find("div", class_="PhotosView")
 		if results:
 			if results.get("data-rf-test-id") =='photos-view':
-				property_listings = get_listings(results, neigh, source, Propertyinfo, lcount)
+				property_listings = get_listings(results, neigh, source, Propertyinfo)
 				logger.info(f'{len(property_listings)} listings returned from {source}')
 				return property_listings
 			else:
