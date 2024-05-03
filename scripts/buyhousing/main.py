@@ -9,7 +9,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-import realtor, zillow, apartments, craigs, redfin, support
+# import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
 FORMAT = "%(message)s" 
