@@ -119,7 +119,7 @@ def check_ids_at_the_door(data:list):
 		[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
 		return newdata
 	else:
-		logger.info("Listing(s) already stored in housing.json") 
+		logger.info("Listing(s) already stored in rental_list.json") 
 		return None
 		
 #FUNCTION Add Data
@@ -215,7 +215,7 @@ def main():
 	global newlistings, jsondata, c_scrape
 	c_scrape = False
 	newlistings = []
-	fp = "./data/housing.json"
+	fp = "./data/rental_list.json"
 	#Load historical listings JSON
 	if exists(fp):
 		jsondata = support.load_historical(fp)
@@ -248,6 +248,6 @@ if __name__ == "__main__":
 
 
 #Notes
-# fp = "../../data/housing.json"
+# fp = "../../data/rental_list.json"
 # with open(fp, "r") as readf:
 # 	results = json.load(readf)

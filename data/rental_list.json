@@ -523,5 +523,50 @@
     "long": "-87.6720946",
     "L_dist": "('Damen', 0.54)",
     "crime_sc": "{'drug_score': 2.64, 'gun_score': 6.51, 'murder_score': 1.46, 'perv_score': 3.13, 'theft_score': 51.92, 'violence_score': 36.38, 'property_d_score': 0.0}"
+  },
+  "7742162952": {
+    "source": "www.craiglist.org",
+    "price": "2595.0",
+    "neigh": "chicago",
+    "dogs": "True",
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-sunny-renovated-2bd-office/7742162952.html",
+    "address": "Augusta Blvd, Chicago, IL 60622",
+    "bed": "3.0",
+    "bath": "1.0",
+    "sqft": "None",
+    "lat": "41.899332",
+    "long": "-87.696855",
+    "L_dist": "('California', 1.04)",
+    "crime_sc": "{'drug_score': 2.48, 'gun_score': 7.63, 'murder_score': 1.82, 'perv_score': 3.24, 'theft_score': 49.03, 'violence_score': 38.56, 'property_d_score': 0.0}"
+  },
+  "7734999300": {
+    "source": "www.craiglist.org",
+    "price": "2595.0",
+    "neigh": "chicago",
+    "dogs": "True",
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-sunny-renovated-2bd-office/7734999300.html",
+    "address": "Augusta Blvd, Chicago, IL 60622",
+    "bed": "3.0",
+    "bath": "1.0",
+    "sqft": "None",
+    "lat": "41.899332",
+    "long": "-87.696855",
+    "L_dist": "('California', 1.04)",
+    "crime_sc": "{'drug_score': 2.48, 'gun_score': 7.63, 'murder_score': 1.82, 'perv_score': 3.24, 'theft_score': 49.03, 'violence_score': 38.56, 'property_d_score': 0.0}"
+  },
+  "190252514": {
+    "source": "www.redfin.com",
+    "price": "1925.0",
+    "neigh": "Lincoln-Square",
+    "dogs": "True",
+    "link": "https://www.redfin.com/IL/Chicago/2733-W-Berwyn-Ave-60625/unit-2/home/190252514",
+    "address": "2733 W Berwyn Ave Unit 2, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "975",
+    "lat": "41.9773357",
+    "long": "-87.6979501",
+    "L_dist": "('Rockwell', 0.8)",
+    "crime_sc": "{'drug_score': 2.35, 'gun_score': 6.31, 'murder_score': 1.28, 'perv_score': 3.11, 'theft_score': 52.41, 'violence_score': 36.12, 'property_d_score': 0.0}"
   }
 }

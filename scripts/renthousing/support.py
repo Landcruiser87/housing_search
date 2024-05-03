@@ -45,7 +45,7 @@ def date_convert(time_big:datetime)->datetime:
 #FUNCTION Save Data
 def save_data(jsond:dict):
 	out_json = json.dumps(jsond, indent=2, cls=NumpyArrayEncoder)
-	with open("./data/housing.json", "w") as out_f:
+	with open("./data/rental_list.json", "w") as out_f:
 		out_f.write(out_json)
 
 #FUNCTION Load Historical
