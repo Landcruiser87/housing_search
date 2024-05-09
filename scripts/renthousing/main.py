@@ -31,8 +31,8 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	'North Center',
 	'Ravenswood',
-	'Roscoe Village',
-	'Lincoln Square',
+	# 'Roscoe Village',
+	# 'Lincoln Square',
 	# 'Bowmanville',
 	# 'West Town', 
 	# 'Humboldt Park'
@@ -141,7 +141,7 @@ def add_data(data:list, siteinfo:tuple):
 	#update main data container
 	jsondata.update(**new_dict)
 	#Grab the new urls for emailing
-	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in ids]
+	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in ids]
 	#Extend the newlistings global list
 	newlistings.extend(newurls)
 
@@ -156,7 +156,7 @@ def scrape(neigh:str):
 		neigh (str): Neighborhood or Zipcode
 	"""	
 	sources = ["zillow", "redfin", "realtor", "apartments", "craigs"]
-	# shuffle(sources) #Keep em guessin!
+	shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

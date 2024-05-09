@@ -223,10 +223,10 @@ def urlformat(urls:list)->str:
 	
 	links_html = "<ol>"
 	if len(urls) > 1:
-		for link, site in urls:
-			links_html += f"<li><a href='{link}'> {site} link </a></li>"
+		for link, site, neigh in urls:
+			links_html += f"<li><a href='{link}'> {site} - {neigh} </a></li>"
 	else:
-		links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} link </a></li>"
+		links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} - {urls[0][2]} </a></li>"
 	links_html = links_html + "</ol>"
 	return links_html
 
