@@ -583,5 +583,35 @@
     "long": "-87.634009",
     "L_dist": "('Washington/Wells', 0.04)",
     "crime_sc": "{'drug_score': 2.44, 'gun_score': 7.72, 'murder_score': 1.8, 'perv_score': 2.99, 'theft_score': 49.77, 'violence_score': 38.25, 'property_d_score': 0.0}"
+  },
+  "190581252": {
+    "source": "www.redfin.com",
+    "price": "1925.0",
+    "neigh": "Lincoln-Square",
+    "dogs": "True",
+    "link": "https://www.redfin.com/IL/Chicago/2727-W-Berwyn-Ave-60625/unit-1/home/190581252",
+    "address": "2727 W Berwyn Ave Unit 1, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "950",
+    "lat": "41.977401",
+    "long": "-87.697376",
+    "L_dist": "('Rockwell', 0.8)",
+    "crime_sc": "{'drug_score': 2.35, 'gun_score': 6.31, 'murder_score': 1.29, 'perv_score': 3.11, 'theft_score': 52.44, 'violence_score': 36.1, 'property_d_score': 0.0}"
+  },
+  "190679040": {
+    "source": "www.redfin.com",
+    "price": "1895.0",
+    "neigh": "Roscoe-Village",
+    "dogs": "True",
+    "link": "https://www.redfin.com/IL/Chicago/3059-N-Leavitt-St-60618/unit-2F/home/190679040",
+    "address": "3059 N Leavitt St Unit 2F, Chicago, IL, 60618",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": "41.9375871",
+    "long": "-87.6829095",
+    "L_dist": "('Paulina', 0.74)",
+    "crime_sc": "{'drug_score': 2.63, 'gun_score': 7.12, 'murder_score': 1.73, 'perv_score': 3.23, 'theft_score': 49.9, 'violence_score': 37.87, 'property_d_score': 0.0}"
   }
 }

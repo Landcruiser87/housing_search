@@ -156,7 +156,7 @@ def scrape(neigh:str):
 		neigh (str): Neighborhood or Zipcode
 	"""	
 	sources = ["zillow", "redfin", "realtor", "apartments", "craigs"]
-	shuffle(sources) #Keep em guessin!
+	# shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:

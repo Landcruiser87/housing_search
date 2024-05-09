@@ -39,7 +39,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			long = res["geo"]["longitude"]
 			url = res["url"]
 			addy = res["name"]
-			
+		#TODO 
+		#Put else in here in case latlong isn't available to get addy and url
 		for card in jres.find_all("article"):
 			#Grab the id
 			if card.get("data-test")=="property-card":
@@ -204,13 +205,24 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	bs4ob = BeautifulSoup(response.text, 'lxml')
 
 	# Isolate the property-list from the expanded one (I don't want the 3 mile
-	# surrounding.  Just the neighborhood)
-	results = bs4ob.find("div", class_="result-list-container")
-	if results:
-		if results.get("id") =='grid-search-results':
-			property_listings = get_listings(results, neigh, source, Propertyinfo)
-			logger.info(f'{len(property_listings)} listings returned from {source}')
-			return property_listings
+	# surrounding.  Just the neighborhood). 
+	#First look for the results count, 
+	#Then look for the results container if you've found the count
+
+	counts = bs4ob.find("span", class_="result-count")
+	if counts:
+		counttest = int("".join(x for x in counts.text if x.isnumeric()))
+	else:
+		logger.warning("No listings on Zillow")
+		return None
+	
+	if counttest > 0:
+		results = bs4ob.find("div", class_="result-list-container")
+		if results:
+			if results.get("id") =='grid-search-results':
+				property_listings = get_listings(results, neigh, source, Propertyinfo)
+				logger.info(f'{len(property_listings)} listings returned from {source}')
+				return property_listings
 		
 	else:
 		logger.warning("No listings returned on Zillow.  Moving to next site")
