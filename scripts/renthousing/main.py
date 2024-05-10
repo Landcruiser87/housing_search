@@ -31,8 +31,9 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	'North Center',
 	'Ravenswood',
-	# 'Roscoe Village',
-	# 'Lincoln Square',
+	'Roscoe Village',
+	'Lincoln Square',
+	'Sheridan Park'
 	# 'Bowmanville',
 	# 'West Town', 
 	# 'Humboldt Park'
@@ -121,7 +122,7 @@ def check_ids_at_the_door(data:list):
 	else:
 		logger.info("Listing(s) already stored in rental_list.json") 
 		return None
-		
+
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
 	"""Adds Data to JSON Historical file

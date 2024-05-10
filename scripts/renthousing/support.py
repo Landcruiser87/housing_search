@@ -36,7 +36,7 @@ class NumpyArrayEncoder(json.JSONEncoder):
 			return obj.tolist()
 		else:
 			return super(NumpyArrayEncoder, self).default(obj)
-		
+
 #FUNCTION Convert Date
 def date_convert(time_big:datetime)->datetime:
 	dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
@@ -95,7 +95,7 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
 
 	#TODO.  Add backup geocoder?  Going with ARCGis
 		#ArcGIS has up to 20k free geocode requests a month.  That should be plenty
-  
+	
 	for listing in data:
 		
 		#Early termination to the loop if lat/long already exist
@@ -289,14 +289,12 @@ def crime_score(data:list) -> list:
 	the crimes into scores based on the percentage of total crime in that area.]
 
 	Args:
-		lat1 (float): [Lattitude of the listing we want to check]
-		lon1 (float): [Longitude of the listing we want to check]
-
+		data (list): List of PropertyInfo dataclasses
 	Raises:
 		ValueError: [Check to make sure we got a years worth of data]
 
 	Returns:
-		list: [Listings with updated scores]
+		list: [List of Property Info dataclasses with updated crime scores]
 	"""	
 	with open('./secret/chicagodata.txt') as login_file:
 		login = login_file.read().splitlines()
@@ -472,7 +470,6 @@ def crime_score(data:list) -> list:
 	return data
 
 
-	
 #https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
 #TODO - Look at above link
 	#might be an easier way to offload np arrays from a dataclass
