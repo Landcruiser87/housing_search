@@ -9,7 +9,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-# import realtor, zillow, apartments, craigs, redfin, support
+import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
 FORMAT = "%(message)s" 
@@ -33,7 +33,7 @@ AREAS = [
 	'Ravenswood',
 	'Roscoe Village',
 	'Lincoln Square',
-	# 'Bowmanville',
+	'Avondale',
 	# 'West Town', 
 	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
@@ -78,6 +78,7 @@ class Propertyinfo():
 	bed     : float = None
 	bath    : float = None
 	sqft    : float = None
+	lotsqft : float = None
 	lat     : float = ""
 	long    : float = ""
 	L_dist  : float = ""
@@ -121,7 +122,7 @@ def check_ids_at_the_door(data:list):
 	else:
 		logger.info("Listing(s) already stored in rental_list.json") 
 		return None
-		
+
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
 	"""Adds Data to JSON Historical file
@@ -141,7 +142,7 @@ def add_data(data:list, siteinfo:tuple):
 	#update main data container
 	jsondata.update(**new_dict)
 	#Grab the new urls for emailing
-	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1]) for idx in ids]
+	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in ids]
 	#Extend the newlistings global list
 	newlistings.extend(newurls)
 
@@ -191,13 +192,13 @@ def scrape(neigh:str):
 					del datacheck
 					#Get lat longs for the address's
 					data = support.get_lat_long(data, (CITY, STATE), logger)
+					if CITY == "Chicago":
+						#Calculate the distance to closest L stop 
+						#(haversine/as crow flies)
+						data = support.closest_L_stop(data)
 
-					#Calculate the distance to closest L stop 
-					#(haversine/as crow flies)
-					data = support.closest_L_stop(data)
-
-					#Score them according to chicago crime data
-					data = support.crime_score(data)
+						#Score them according to chicago crime data
+						data = support.crime_score(data)
 
 					#Add the listings to the jsondata dict. 
 					add_data(data, (site[0], neigh))
@@ -237,7 +238,7 @@ def main():
 		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
-		logger.info("Listings email sent")
+		logger.info(f"{len(newlistings)} new listings found.  Email sent")
 	else:
 		logger.critical("No new listings were found")
 

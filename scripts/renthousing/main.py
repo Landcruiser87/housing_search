@@ -33,8 +33,7 @@ AREAS = [
 	'Ravenswood',
 	'Roscoe Village',
 	'Lincoln Square',
-	'Sheridan Park'
-	# 'Bowmanville',
+	# 'Avondale',
 	# 'West Town', 
 	# 'Humboldt Park'
 	# 'Ravenswood Gardens',
@@ -193,12 +192,14 @@ def scrape(neigh:str):
 					#Get lat longs for the address's
 					data = support.get_lat_long(data, (CITY, STATE), logger)
 
-					#Calculate the distance to closest L stop 
-					#(haversine/as crow flies)
-					data = support.closest_L_stop(data)
+					#If its chicago, do chicago things. 
+					if CITY == 'Chicago':
+						#Calculate the distance to closest L stop 
+						#(haversine/as crow flies)
+						data = support.closest_L_stop(data)
 
-					#Score them according to chicago crime data
-					data = support.crime_score(data)
+						#Score them according to chicago crime data
+						data = support.crime_score(data)
 
 					#Add the listings to the jsondata dict. 
 					add_data(data, (site[0], neigh))
@@ -238,7 +239,7 @@ def main():
 		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
-		logger.info("Listings email sent")
+		logger.info(f"{len(newlistings)} new listings found.  Email sent")
 	else:
 		logger.critical("No new listings were found")
 
