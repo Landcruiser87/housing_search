@@ -35,7 +35,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		lotsqft = listing["description"].get("lot_sqft")
 		htype = listing["description"].get("type")
 		#TODO - Need a funciton to convert the datetimes
-		listdate = listing["description"].get("list_date")
+		listdate = listing.get("list_date")
 		lat = listing["location"]["address"]["coordinate"].get("lat")
 		long = listing["location"]["address"]["coordinate"].get("lon")
 		#Address
@@ -50,6 +50,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		last_s_price = listing["description"].get("sold_price")
 		last_s_date = listing["description"].get("sold_date")
 		extras = {"price_reduced_amount":listing.get("price_reduced_amount")}
+		extras["community"] = listing.get("community")
 		flags = listing.get("flags")
 		extras.update(**flags)
 
@@ -60,21 +61,21 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		listing = Propertyinfo(
 			id=listingid,
 			source=source,
-			price=price,
-			zipc=neigh,
 			status=status,
-			htype=htype,
-			bed=beds,
-			bath=baths,
+			price=price,
 			link=url,
 			address=address,
-			lat=lat,
-			long=long,
+			htype=htype,
+			zipc=neigh,
+			listdate=listdate,
 			last_s_date = last_s_date,
 			last_s_price = last_s_price,
-			listdate=listdate,
+			bed=beds,
+			bath=baths,
 			sqft=sqft,
 			lotsqft=lotsqft,
+			lat=lat,
+			long=long,
 			extras=extras,
 		)
 

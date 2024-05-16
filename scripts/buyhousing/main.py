@@ -58,16 +58,16 @@ class Propertyinfo():
 	link         : str
 	address      : str
 	htype        : str
+	zipc         : int
 	listdate     : datetime
 	last_s_date  : datetime
-	zipc         : int
+	last_s_price : float = ""
 	bed          : float = None
 	bath         : float = None
 	sqft         : float = None
 	lotsqft      : float = None
 	lat          : float = ""
 	long         : float = ""
-	last_s_price : float = ""
 	extras       : dict = field(default_factory=lambda:{})
 	# L_dist  : float = ""
 	# crime_sc: dict = field(default_factory=lambda:{})
