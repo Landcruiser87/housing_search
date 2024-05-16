@@ -45,7 +45,7 @@ def date_convert(time_big:datetime)->datetime:
 #FUNCTION Save Data
 def save_data(jsond:dict):
 	out_json = json.dumps(jsond, indent=2, cls=NumpyArrayEncoder)
-	with open("./data/rental_list.json", "w") as out_f:
+	with open("./data/buy_list.json", "w") as out_f:
 		out_f.write(out_json)
 
 #FUNCTION Load Historical
@@ -223,10 +223,10 @@ def urlformat(urls:list)->str:
 	
 	links_html = "<ol>"
 	if len(urls) > 1:
-		for link, site in urls:
-			links_html += f"<li><a href='{link}'> {site} link </a></li>"
+		for link, site, zipc, price in urls:
+			links_html += f"<li><a href='{link}'> {site} - {zipc} - {price} </a></li>"
 	else:
-		links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} link </a></li>"
+		links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} - {urls[0][2]} - {urls[0][3]} - {urls[0][4]} - </a></li>"
 	links_html = links_html + "</ol>"
 	return links_html
 

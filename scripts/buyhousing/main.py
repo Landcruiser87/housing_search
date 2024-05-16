@@ -31,9 +31,9 @@ logger = logging.getLogger(__name__)
 AREAS = [
 	46703, #Atown
 	46737, #Fremont
-	46779, #Pleasant Lake
-	46776, #Orland
-	46746, #MONGOOOOOO
+	# 46779, #Pleasant Lake
+	# 46776, #Orland
+	# 46746, #MONGOOOOOO
 ]
 
 SOURCES = {
@@ -130,7 +130,7 @@ def add_data(data:list, siteinfo:tuple):
 	#update main data container
 	jsondata.update(**new_dict)
 	#Grab the new urls for emailing
-	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in ids]
+	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("zipc")), (new_dict[idx].get("price"))) for idx in ids]
 	#Extend the newlistings global list
 	newlistings.extend(newurls)
 
@@ -179,7 +179,9 @@ def scrape(neigh:str):
 					data = datacheck
 					del datacheck
 					#Get lat longs for the address's
-					data = support.get_lat_long(data, (CITY, STATE), logger)
+						#BUG - Need this on an individual ID level. 
+						#Might call it somwhere else. 
+					# data = support.get_lat_long(data, (CITY, STATE), logger)
 
 					if CITY == "Chicago":
 						#Calculate the distance to closest L stop 
@@ -224,7 +226,7 @@ def main():
 	# Send gmail alerting of new properties
  
 	if newlistings:
-		support.save_data(jsondata)
+		support.save_data(jsondata, "buy")
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
 		logger.info(f"{len(newlistings)} new listings found.  Email sent")

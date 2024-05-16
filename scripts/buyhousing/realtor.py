@@ -18,8 +18,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 	#Load the json data
 	listing_dict = json.loads(result.text)
 	varnames = [
-		"listingid", "price", "status", "url", "beds", "baths", "sqft", "lotsqft",
-		"htype", "listdate", "lat", "long", "address", "last_s_price", "last_s_date"
+		"listingid", "price", "status", "url", "beds", "baths", "sqft", 
+		"lotsqft", "htype", "listdate", "lat", "long", "address", 
+		"last_s_price", "last_s_date", "extras"
 	]
 
 	for listing in listing_dict["props"]["pageProps"]["properties"]:
@@ -35,8 +36,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		htype = listing["description"].get("type")
 		#TODO - Need a funciton to convert the datetimes
 		listdate = listing["description"].get("list_date")
-		lat = listing["location"]["address"]["coordinate"]["lat"]
-		long = listing["location"]["address"]["coordinate"]["lon"]
+		lat = listing["location"]["address"]["coordinate"].get("lat")
+		long = listing["location"]["address"]["coordinate"].get("lon")
 		#Address
 		add_list = ["line", "city", "state_code", "postal_code"]
 		addy = ""
@@ -52,9 +53,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		flags = listing.get("flags")
 		extras.update(**flags)
 
-		for var in varnames:
-			if var not in locals():
-				locals()[var] = None
+		# for var in varnames:
+		# 	if var not in locals():
+		# 		locals()[var] = None
 
 		listing = Propertyinfo(
 			id=listingid,
