@@ -1,4 +1,5 @@
 #Import libraries
+from datetime import datetime
 import numpy as np
 import pandas as pd
 import logging
@@ -9,7 +10,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-import realtor, zillow, apartments, craigs, redfin, support
+import realtor, support#zillow, apartments, craigs, redfin, 
 
 #Format logger and load configuration
 FORMAT = "%(message)s" 
@@ -27,62 +28,49 @@ logging.basicConfig(
 #Load logger
 logger = logging.getLogger(__name__) 
 
-#input custom area's here. Uncomment whichever way you want to search
 AREAS = [
-	'North Center',
-	'Ravenswood',
-	'Roscoe Village',
-	'Lincoln Square',
-	'Avondale',
-	# 'West Town', 
-	# 'Humboldt Park'
-	# 'Ravenswood Gardens',
-	# 'Budlong Woods',
+	46703, #Atown
+	46737, #Fremont
+	46779, #Pleasant Lake
+	46776, #Orland
+	46746, #MONGOOOOOO
 ]
-
-# AREAS = [
-# 	60613,
-# 	60614,
-# 	# 60657,
-# # 	# 60610,
-# # 	# 60618,
-# # 	# 60647,
-# # 	# 60622,
-# # 	# 60625,
-# # 	# 60641,
-# # 	# 60651
-# ]
 
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
-	"apartments":("www.apartments.com", apartments),
-	"craigs"    :("www.craiglist.org", craigs),
-	"zillow"    :("www.zillow.com", zillow),
-	"redfin"    :("www.redfin.com", redfin)
+	# "apartments":("www.apartments.com", apartments),
+	# "craigs"    :("www.craiglist.org", craigs),
+	# "zillow"    :("www.zillow.com", zillow),
+	# "redfin"    :("www.redfin.com", redfin)
 }
 
 # Define City / State
-CITY = "Chicago"
-STATE = "IL"
+CITY = "Angola"
+STATE = "IN"
 
 #Define dataclass container
 @dataclass
 class Propertyinfo():
-	id      : str
-	source  : str
-	price   : str
-	neigh   : str
-	dogs    : bool
-	link    : str
-	address : str
-	bed     : float = None
-	bath    : float = None
-	sqft    : float = None
-	lotsqft : float = None
-	lat     : float = ""
-	long    : float = ""
-	L_dist  : float = ""
-	crime_sc: dict = field(default_factory=lambda:{})
+	id           : str
+	source       : str
+	status       : str
+	price        : str
+	link         : str
+	address      : str
+	htype        : str
+	listdate     : datetime
+	last_s_date  : datetime
+	zipc         : int
+	bed          : float = None
+	bath         : float = None
+	sqft         : float = None
+	lotsqft      : float = None
+	lat          : float = ""
+	long         : float = ""
+	last_s_price : float = ""
+	extras       : dict = field(default_factory=lambda:{})
+	# L_dist  : float = ""
+	# crime_sc: dict = field(default_factory=lambda:{})
 	# cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
 
 	def dict(self):
@@ -156,8 +144,8 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["zillow", "redfin", "realtor", "apartments", "craigs"]
-	shuffle(sources) #Keep em guessin!
+	sources = ["realtor", "zillow", "redfin", "apartments", "craigs"]
+	# shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)
 		if site:
@@ -192,6 +180,7 @@ def scrape(neigh:str):
 					del datacheck
 					#Get lat longs for the address's
 					data = support.get_lat_long(data, (CITY, STATE), logger)
+
 					if CITY == "Chicago":
 						#Calculate the distance to closest L stop 
 						#(haversine/as crow flies)
@@ -216,7 +205,7 @@ def main():
 	global newlistings, jsondata, c_scrape
 	c_scrape = False
 	newlistings = []
-	fp = "./data/rental_list.json"
+	fp = "./data/buy_list.json"
 	#Load historical listings JSON
 	if exists(fp):
 		jsondata = support.load_historical(fp)
@@ -226,7 +215,7 @@ def main():
 		logger.warning("No historical data found")
 		
 	#Shuffle and search the neighborhoods/zips
-	shuffle(AREAS)
+	# shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
 
