@@ -10,7 +10,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-import realtor, support#zillow, apartments, craigs, redfin, 
+import realtor, support, zillow #, apartments, craigs, redfin, 
 
 #Format logger and load configuration
 FORMAT = "%(message)s" 
@@ -38,9 +38,8 @@ AREAS = [
 
 SOURCES = {
 	"realtor"   :("www.realtor.com", realtor),
-	# "apartments":("www.apartments.com", apartments),
+	"zillow"    :("www.zillow.com", zillow),
 	# "craigs"    :("www.craiglist.org", craigs),
-	# "zillow"    :("www.zillow.com", zillow),
 	# "redfin"    :("www.redfin.com", redfin)
 }
 
@@ -110,6 +109,9 @@ def check_ids_at_the_door(data:list):
 	else:
 		logger.info("Listing(s) already stored in rental_list.json") 
 		return None
+	#TODO - Check old listings. 
+		#Eventually I will want this to check the older listings and 
+		#look for price change
 
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
@@ -144,7 +146,7 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["realtor", "zillow", "redfin", "apartments", "craigs"]
+	sources = ["zillow", "realtor", "redfin", "craigs"]
 	# shuffle(sources) #Keep em guessin!
 	for source in sources:
 		site = SOURCES.get(source)

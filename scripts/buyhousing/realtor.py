@@ -89,19 +89,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
 	return listings
 
-def money_launderer(price:list)->float:
-	"""[Strips dollar signs and comma from the price]
-
-	Args:
-		price (list): [list of prices as strs]
-
-	Returns:
-		price (list): [list of prices as floats]
-	"""	
-	if isinstance(price, str):
-		return float(price.replace("$", "").replace(",", ""))
-	return price
-
+# 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	CITY = citystate[0]
 	STATE = citystate[1].upper()
@@ -122,7 +110,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		logging.critical("Inproper input for area, moving to next site")
 		return
 	
-
 	JSON_HEADERS = {
     'accept': 'application/json, text/javascript',
     'accept-language': 'en-US,en;q=0.9',
@@ -165,6 +152,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 #Old code, Sadly it won't load past 8 results with a headless browser
 #and i vowed never to use those pieces of shit.  Instead we'll grab the application
 # json nested at the end of the html for each page
+
+
+	# def money_launderer(price:list)->float:
+	#  	"""[Strips dollar signs and comma from the price]
+	#  	Args:
+	#  		price (list): [list of prices as strs]
+	#  	Returns:
+	#  		price (list): [list of prices as floats]
+	#  	"""	
+	#  	if isinstance(price, str):
+	#  		return float(price.replace("$", "").replace(",", ""))
+	#  	return price
 
 	# BASE_HEADERS = {
 	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -224,7 +223,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	# 					if lotsqft:
 	# 						if any(x.isnumeric() for x in lotsqft):
 	# 							lotsqft = float("".join(x for x in lotsqft if x.isnumeric()))
-	
 
 	# 	#grab address
 	# 	for search in card.find_all("div", class_="card-address truncate-line"):
