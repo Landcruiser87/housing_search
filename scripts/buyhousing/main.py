@@ -217,7 +217,7 @@ def main():
 		logger.warning("No historical data found")
 		
 	#Shuffle and search the neighborhoods/zips
-	shuffle(AREAS)
+	# shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
 
@@ -228,7 +228,7 @@ def main():
 	if newlistings:
 		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)
-		support.send_housing_email(links_html)
+		# support.send_housing_email(links_html)
 		logger.info(f"{len(newlistings)} new listings found.  Email sent")
 	else:
 		logger.critical("No new listings were found")
@@ -240,6 +240,6 @@ if __name__ == "__main__":
 
 
 #Notes
-# fp = "../../data/rental_list.json"
+# fp = "../../data/buy_list.json"
 # with open(fp, "r") as readf:
 # 	results = json.load(readf)	

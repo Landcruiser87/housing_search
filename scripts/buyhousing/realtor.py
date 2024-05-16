@@ -34,7 +34,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		sqft = listing["description"].get("sqft")
 		lotsqft = listing["description"].get("lot_sqft")
 		htype = listing["description"].get("type")
-		#TODO - Need a funciton to convert the datetimes
 		listdate = listing.get("list_date")
 		lat = listing["location"]["address"]["coordinate"].get("lat")
 		long = listing["location"]["address"]["coordinate"].get("lon")
@@ -58,7 +57,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		# 	if var not in locals():
 		# 		locals()[var] = None
 
-		listing = Propertyinfo(
+		house = Propertyinfo(
 			id=listingid,
 			source=source,
 			status=status,
@@ -79,9 +78,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			extras=extras,
 		)
 
-		listings.append(listing)
+		listings.append(house)
 
 		#cleanup variables so no carryover
+		#BUG - This still doesn't work for deletion.  Doesn't really matter
+		#as the variables will always be remapped above by dict gets, but
+		#for code cleanliness, I'm curious how this is done. 
 		for var in varnames:
 			del locals()[var]
 
@@ -120,12 +122,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 		logging.critical("Inproper input for area, moving to next site")
 		return
 	
-	# BASE_HEADERS = {
-	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-	# 	'referer': url,
-	# 	'origin':'https://www.realtor.com',
-	# }
-	
+
 	JSON_HEADERS = {
     'accept': 'application/json, text/javascript',
     'accept-language': 'en-US,en;q=0.9',
@@ -169,6 +166,13 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 #and i vowed never to use those pieces of shit.  Instead we'll grab the application
 # json nested at the end of the html for each page
 
+	# BASE_HEADERS = {
+	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+	# 	'referer': url,
+	# 	'origin':'https://www.realtor.com',
+	# }
+	
+
 	# for card in result.find_all("div", class_=lambda x: x and x.startswith("BasePropertyCard"), id=lambda x: x and x.startswith("property_id")):
 	# 	listingid = card.get("id")
 	# 	listingid = listingid.replace("property_id_", "")
@@ -179,7 +183,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 	# 			url = "https://" + source + link.get("href")
 	# 			break
 		
-	# 	#TODO - Might want house status too as an input. 
+	# 	#[x] - Might want house status too as an input. 
 		
 	# 	for search in card.find_all("div", {"data-testid":"card-content"}):
 	# 		#grab the price
