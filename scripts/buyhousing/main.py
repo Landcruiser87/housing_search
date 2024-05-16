@@ -217,7 +217,7 @@ def main():
 		logger.warning("No historical data found")
 		
 	#Shuffle and search the neighborhoods/zips
-	# shuffle(AREAS)
+	shuffle(AREAS)
 	for neigh in AREAS:
 		scrape(neigh)
 
@@ -226,7 +226,7 @@ def main():
 	# Send gmail alerting of new properties
  
 	if newlistings:
-		support.save_data(jsondata, "buy")
+		support.save_data(jsondata)
 		links_html = support.urlformat(newlistings)
 		support.send_housing_email(links_html)
 		logger.info(f"{len(newlistings)} new listings found.  Email sent")
