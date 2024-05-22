@@ -56,10 +56,10 @@ class Propertyinfo():
 	price        : str
 	link         : str
 	address      : str
-	htype        : str
-	zipc         : int
-	listdate     : datetime
-	last_s_date  : datetime
+	htype        : str = None
+	zipc         : int = None
+	listdate     : datetime = None
+	last_s_date  : datetime = None
 	last_s_price : float = ""
 	bed          : float = None
 	bath         : float = None

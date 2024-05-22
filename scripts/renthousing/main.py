@@ -250,6 +250,8 @@ if __name__ == "__main__":
 
 
 #Notes
+# import json
 # fp = "../../data/rental_list.json"
 # with open(fp, "r") as readf:
 # 	results = json.load(readf)	
+# sorted(results.items(), key=lambda x:x[1]["price"], reverse=True)[10:15]

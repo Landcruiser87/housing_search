@@ -30,16 +30,16 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		#early terminate if the data-test key is in the underlying object
 		if jres.get("data-test"):
 			continue
+
 		#grab lat / long
-  
 		latlong = jres.find("script", {"type":"application/ld+json"})
 		if latlong:
 			res = json.loads(latlong.text)
 			lat = res["geo"]["latitude"]
 			long = res["geo"]["longitude"]
 			url = res["url"]
-			addy = res["name"]
-		#TODO 
+			address = res["name"]
+
 		#Put else in here in case latlong isn't available to get addy and url
 		for card in jres.find_all("article"):
 			#Grab the id
@@ -58,7 +58,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 					break
 
 			#Grab bed bath
-			for search in card.find_all("ul"):
+			for search in card.find_all("ul", class_=lambda x: x and x.startswith("StyledPropertyCardHomeDetailsList")):
+				if search:
+					status = search.text.strip("-").strip()
+				else:
+					status = None
+				
 				for subsearch in search.find_all("li"):
 					text = str(subsearch)
 					numtest = any(x.isnumeric() for x in text)
@@ -86,9 +91,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 		if not "sqft" in locals():
 			sqft = None
 		if not "lat" in locals():
-			addy = None
+			lat = None
 		if not "long" in locals():
-			sqft = None
+			long = None
 	
 		house = Propertyinfo(
 			id=listingid,
@@ -97,18 +102,18 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 			price=price,
 			link=url,
 			address=address,
-			htype=htype,
+			# htype=htype,
 			zipc=neigh,
-			listdate=listdate,
-			last_s_date = last_s_date,
-			last_s_price = last_s_price,
+			# listdate=listdate,
+			# last_s_date = last_s_date,
+			# last_s_price = last_s_price,
 			bed=beds,
 			bath=baths,
 			sqft=sqft,
-			lotsqft=lotsqft,
+			# lotsqft=lotsqft,
 			lat=lat,
 			long=long,
-			extras=extras,
+			# extras=extras,
 		)
 
 		listings.append(house)
