@@ -140,7 +140,7 @@ def add_data(data:list, siteinfo:tuple):
 
 	#update main data container
 	jsondata.update(**new_dict)
-	#Grab the new urls for emailing
+	#make tuples of (urls, site, neighborhood) for emailing
 	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in ids]
 	#Extend the newlistings global list
 	newlistings.extend(newurls)
@@ -155,9 +155,9 @@ def scrape(neigh:str):
 	Args:
 		neigh (str): Neighborhood or Zipcode
 	"""	
-	sources = ["zillow", "redfin", "realtor", "apartments", "craigs"]
-	shuffle(sources) #Keep em guessin!
-	for source in sources:
+	sites = ["zillow", "redfin", "realtor", "apartments", "craigs"]
+	shuffle(sites) #Keep em guessin!
+	for source in sites:
 		site = SOURCES.get(source)
 		if site:
 			#Because we can't search craigs by neighborhood, we only want to
