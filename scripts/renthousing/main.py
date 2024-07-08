@@ -32,7 +32,7 @@ AREAS = [
     'North Center',
     'Ravenswood',
     'Roscoe Village',
-    'Lincoln Square',
+    'Lincoln Square', 
     # 'Avondale',
     # 'West Town', 
     # 'Humboldt Park'
@@ -41,17 +41,17 @@ AREAS = [
 ]
 
 # AREAS = [
-# 	60613,
-# 	60614,
-# 	# 60657,
-# # 	# 60610,
-# # 	# 60618,
-# # 	# 60647,
-# # 	# 60622,
-# # 	# 60625,
-# # 	# 60641,
-# # 	# 60651
-# ]
+    #60613,
+    #60614,
+    #60657,
+    #60610,
+    #60618,
+    #60647,
+    #60622,
+    #60625,
+    #60641,
+    #60651
+#]
 
 SOURCES = {
     "realtor"   :("www.realtor.com", realtor),
@@ -186,7 +186,7 @@ def scrape(neigh:str):
                 #This function will isolate new id's that aren't in the historical JSON
                 datacheck = check_ids_at_the_door(data)
                 if datacheck:
-                    #  pull the lat long, score it and store it. 
+                    #pull the lat long, score it and store it. 
                     data = datacheck
                     del datacheck
                     #Get lat longs for the address's
@@ -209,7 +209,7 @@ def scrape(neigh:str):
 
         else:
             logger.warning(f"{source} is not in validated search list")
-    
+
 #Driver code
 #FUNCTION Main start
 def main():
@@ -219,6 +219,7 @@ def main():
     newlistings = []
     fp = "./data/rental_list.json"
     #Load historical listings JSON
+
     if exists(fp):
         jsondata = support.load_historical(fp)
         logger.info("historical data loaded")
@@ -240,6 +241,7 @@ def main():
         links_html = support.urlformat(newlistings)
         support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
+
     else:
         logger.critical("No new listings were found")
 

@@ -187,11 +187,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
         "wants": {"cat1": ["listResults"]},
         "requestId": 2 #np.random.randint(2, 3)
     }
-    if isinstance(neigh, str):
-        url_search = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?' + urlencode(params)
-    elif isinstance(neigh, int):
-        url_search = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals/?' + urlencode(params)
-        
+    url_search = url_map + "?" + urlencode(params)
     response = requests.get(url_search, headers = BASE_HEADERS)
 
     #Just in case we piss someone off
