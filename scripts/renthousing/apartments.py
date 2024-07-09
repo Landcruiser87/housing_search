@@ -36,8 +36,18 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             for subsearch in search.find_all("div", class_="bed-range"):
                 beds = subsearch.text
                 if "ft" in beds:#lol
-                    beds, baths, sqft = beds.split(",")
-                    sqft = sqft.strip()
+                    #quick comma count
+                    count = beds.count(",")
+                    if count < 3:
+                        beds, baths, sqft = beds.split(",")
+                        sqft = sqft.strip()
+                    else:
+                        beds, baths, sqft, extra = beds.split(",")
+                        sqft = "".join([sqft, extra]).strip()
+                    #BUG
+                    #Found the problem.  Someone put a comma in the number for
+                    #square footage so need improved logic for text extraction here. 
+
                 else:
                     beds, baths = beds.split(",")
                 if any(x.isnumeric() for x in beds):
@@ -135,7 +145,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    nores = bs4ob.find_all("div", class_="no-results")
+    nores = bs4ob.find_all("article", class_="noPlacards")
     if not nores:
         results = bs4ob.find("div", class_="placardContainer")
         if results:
