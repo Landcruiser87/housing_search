@@ -73,7 +73,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
         #Janky way of making sure variables are filled if we missed any
         if not "listingid" in locals():
-            listingid = None
+            raise ValueError(f"Missing listing id for {url}")
         if not "price" in locals():
             price = None
         if not "beds" in locals():

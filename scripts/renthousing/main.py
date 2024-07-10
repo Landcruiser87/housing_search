@@ -101,12 +101,10 @@ def check_ids_at_the_door(data:list):
         data (list): List of only new Propertyinfo objects
     """	
     #Reshape data to dict
-    #Pull out the ids
-    ids = [data[x].id for x in range(len(data))]
     #make a new dict that can be json serialized with the id as the key
     new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
     #Pop the id from the dict underneath (no need to store it twice)
-    [new_dict[x].pop("id") for x in ids]
+    [new_dict[x].pop("id") for x in new_dict.keys()]
 
     #Use sets for membership testing of old jsondata keys
     #and new data keys (Looking for new listings)
@@ -131,17 +129,15 @@ def add_data(data:list, siteinfo:tuple):
         siteinfo (tuple): Tuple of website and neighborhood/zip
     """	
     #Reshape data to dict
-    #Pull out the ids
-    ids = [data[x].id for x in range(len(data))]
     #make a new dict that can be json serialized with the id as the key
     new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
     #Pop the id from the dict underneath (no need to store it twice)
-    [new_dict[x].pop("id") for x in ids]
+    [new_dict[x].pop("id") for x in new_dict.keys()]
 
     #update main data container
     jsondata.update(**new_dict)
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in ids]
+    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
@@ -155,8 +151,8 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["apartments", "zillow", "redfin", "realtor", "craigs"]
-    # shuffle(sites) #Keep em guessin!
+    sites = ["zillow", "apartments", "redfin", "realtor", "craigs"]
+    shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
         if site:

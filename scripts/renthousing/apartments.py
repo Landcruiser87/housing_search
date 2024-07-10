@@ -42,12 +42,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                         beds, baths, sqft = beds.split(",")
                         sqft = sqft.strip()
                     else:
+                        #For if they put a comma in the square footage
                         beds, baths, sqft, extra = beds.split(",")
                         sqft = "".join([sqft, extra]).strip()
-                    #BUG
-                    #Found the problem.  Someone put a comma in the number for
-                    #square footage so need improved logic for text extraction here. 
-
+                    
                 else:
                     beds, baths = beds.split(",")
                 if any(x.isnumeric() for x in beds):
@@ -109,11 +107,13 @@ def money_launderer(price:list)->float:
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
     CITY = citystate[0].lower()
-    STATE = citystate[1].upper()
+    STATE = citystate[1].lower()
     #Search by neighborhood
     if isinstance(neigh, str):
         if " " in neigh:
             neigh = "-".join(neigh.lower().split(" "))
+        else:
+            neigh = neigh.lower()
         url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-under-2600-pet-friendly-dog/"
     
     #Searchby ZipCode
@@ -145,7 +145,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    nores = bs4ob.find_all("article", class_="noPlacards")
+    nores = bs4ob.find_all("div", class_="no-results")
     if not nores:
         results = bs4ob.find("div", class_="placardContainer")
         if results:
