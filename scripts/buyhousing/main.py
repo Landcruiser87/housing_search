@@ -245,3 +245,7 @@ if __name__ == "__main__":
 # fp = "../../data/buy_list.json"
 # with open(fp, "r") as readf:
 # 	results = json.load(readf)	
+
+#IDEA
+#What about using census data to survey area's of older populations.  
+#might be able to do some cool clustering with that. 

@@ -136,6 +136,7 @@ def add_data(data:list, siteinfo:tuple):
 
     #update main data container
     jsondata.update(**new_dict)
+    
     #make tuples of (urls, site, neighborhood) for emailing
     newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
     #Extend the newlistings global list
