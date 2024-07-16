@@ -1,10 +1,9 @@
 #Import libraries
 import numpy as np
-import pandas as pd
 import logging
 import time
 from rich.logging import RichHandler
-from dataclasses import dataclass, asdict, astuple, field
+from dataclasses import dataclass, field
 from os.path import exists
 from random import shuffle
 
@@ -131,9 +130,8 @@ def check_ids_at_the_door(data:list):
     Returns:
         data (list): List of only new Propertyinfo objects
     """	
-    ids = [data[x].id for x in range(len(data))]
     j_ids = set(jsondata.keys())
-    n_ids = set(ids)
+    n_ids = set([data[x].id for x in range(len(data))])
     newids = n_ids - j_ids
     if newids:
         #Only add the listings that are new.  
@@ -151,7 +149,7 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["zillow", "apartments"]#, "redfin", "realtor", "craigs"]
+    sites = ["zillow", "apartments", "redfin", "realtor", "craigs"]
     shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)

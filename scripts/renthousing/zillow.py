@@ -217,7 +217,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
     if counts:
         counttest = int("".join(x for x in counts.text if x.isnumeric()))
     else:
-        logger.warning("No listings on Zillow")
+        logger.warning("No listings on Zillow. Count test fail")
         return None
     
     if counttest > 0:
