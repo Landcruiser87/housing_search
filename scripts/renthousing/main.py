@@ -34,13 +34,11 @@ AREAS = [
     'Roscoe Village',
     'Lincoln Square', 
     'Irving Park',
-    'Old Irving Park',
     'Portage Park',
     'Mayfair',
     'North Mayfair',
-    'Rogers Park',
     'Budlong Woods',
-    'Oak Park',
+    # 'Rogers Park',
     # 'Avondale',
     # 'West Town', 
     # 'Humboldt Park'
@@ -91,8 +89,34 @@ class Propertyinfo():
     crime_sc: dict = field(default_factory=lambda:{})
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
 
-    def dict(self):
-        return {k: str(v) for k, v in asdict(self).items()}
+    # def dict(self):
+    #     return {k: str(v) for k, v in asdict(self).items()}
+
+#FUNCTION Add Data
+def add_data(data:list, siteinfo:tuple):
+    """Adds Data to JSON Historical file
+
+    Args:
+        data (list): List of Propertyinfo objects that are new (not in the historical)
+        siteinfo (tuple): Tuple of website and neighborhood/zip
+    """	
+    ids = [data[x].id for x in range(len(data))]
+    #Reshape data to dict
+    #make a new dict that can be json serialized with the id as the key
+    new_dict = {data[x].id : data[x].__dict__ for x in range(len(data))}
+    #Pop the id from the dict underneath (no need to store it twice)
+    [new_dict[x].pop("id") for x in ids]
+
+    #update main data container
+    jsondata.update(new_dict)
+    
+    #make tuples of (urls, site, neighborhood) for emailing
+    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
+    #Extend the newlistings global list
+    newlistings.extend(newurls)
+
+    logger.info("Global dict updated")
+    logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
 #FUNCTION Check IDs
 def check_ids_at_the_door(data:list):
@@ -107,16 +131,9 @@ def check_ids_at_the_door(data:list):
     Returns:
         data (list): List of only new Propertyinfo objects
     """	
-    #Reshape data to dict
-    #make a new dict that can be json serialized with the id as the key
-    new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
-    #Pop the id from the dict underneath (no need to store it twice)
-    [new_dict[x].pop("id") for x in new_dict.keys()]
-
-    #Use sets for membership testing of old jsondata keys
-    #and new data keys (Looking for new listings)
+    ids = [data[x].id for x in range(len(data))]
     j_ids = set(jsondata.keys())
-    n_ids = set(new_dict.keys())
+    n_ids = set(ids)
     newids = n_ids - j_ids
     if newids:
         #Only add the listings that are new.  
@@ -127,31 +144,6 @@ def check_ids_at_the_door(data:list):
         logger.info("Listing(s) already stored in rental_list.json") 
         return None
 
-#FUNCTION Add Data
-def add_data(data:list, siteinfo:tuple):
-    """Adds Data to JSON Historical file
-
-    Args:
-        data (list): List of Propertyinfo objects that are new (not in the historical)
-        siteinfo (tuple): Tuple of website and neighborhood/zip
-    """	
-    #Reshape data to dict
-    #make a new dict that can be json serialized with the id as the key
-    new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
-    #Pop the id from the dict underneath (no need to store it twice)
-    [new_dict[x].pop("id") for x in new_dict.keys()]
-
-    #update main data container
-    jsondata.update(**new_dict)
-    
-    #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
-    #Extend the newlistings global list
-    newlistings.extend(newurls)
-
-    logger.info("Global dict updated")
-    logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
-
 #FUNCTION Scrape data
 def scrape(neigh:str):
     """This function will iterate through different resources scraping necessary information for ingestion. 
@@ -159,7 +151,7 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["zillow", "apartments", "redfin", "realtor", "craigs"]
+    sites = ["zillow", "apartments"]#, "redfin", "realtor", "craigs"]
     shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)

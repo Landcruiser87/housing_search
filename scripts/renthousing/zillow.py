@@ -39,8 +39,16 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             long = res["geo"]["longitude"]
             url = res["url"]
             addy = res["name"]
-        #TODO 
-        #Put else in here in case latlong isn't available to get addy and url
+        else:
+            lat  = ""
+            long = ""
+            card = jres.find("a")
+            if card:
+                url = card.get("href")
+                addy = card.next_element.contents[0]
+            else:
+                url, addy = "", ""
+
         for card in jres.find_all("article"):
             #Grab the id
             if card.get("data-test")=="property-card":
@@ -87,9 +95,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         if not "sqft" in locals():
             sqft = None
         if not "lat" in locals():
-            addy = None
+            lat = None
         if not "long" in locals():
-            sqft = None
+            long = None
         
         listing = Propertyinfo(
             id=listingid,   
