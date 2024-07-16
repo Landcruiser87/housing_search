@@ -2668,5 +2668,35 @@
     "long": "-87.6796769",
     "L_dist": "('Paulina', 0.71)",
     "crime_sc": "{'drug_score': 2.76, 'gun_score': 6.92, 'murder_score': 1.54, 'perv_score': 3.09, 'theft_score': 49.71, 'violence_score': 38.04, 'property_d_score': 0.0}"
+  },
+  "7766401023": {
+    "source": "www.craiglist.org",
+    "price": "1500.0",
+    "neigh": "chicago",
+    "dogs": "True",
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-2nd-top-floor-mayfair-condo-by/7766401023.html",
+    "address": "4360 W Wilson, Chicago, IL 60630",
+    "bed": "2.0",
+    "bath": "1.0",
+    "sqft": "900ft2",
+    "lat": "41.964548",
+    "long": "-87.73834",
+    "L_dist": "('Montrose', 0.34)",
+    "crime_sc": "{'drug_score': 2.86, 'gun_score': 6.79, 'murder_score': 1.4, 'perv_score': 3.07, 'theft_score': 49.55, 'violence_score': 37.98, 'property_d_score': 0.0}"
+  },
+  "9211183225": {
+    "source": "www.realtor.com",
+    "price": "2600.0",
+    "neigh": "North-Center",
+    "dogs": "True",
+    "link": "https://www.realtor.com/rentals/details/1928-W-Barry-Ave-Apt-1_Chicago_IL_60657_M92111-83225",
+    "address": "1928 W Barry Ave Apt 1 Chicago, IL 60657",
+    "bed": "3.0",
+    "bath": "1.0",
+    "sqft": "1200.0",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": "{}"
   }
 }

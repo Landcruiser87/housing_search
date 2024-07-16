@@ -33,11 +33,18 @@ AREAS = [
     'Ravenswood',
     'Roscoe Village',
     'Lincoln Square', 
+    'Irving Park',
+    'Old Irving Park',
+    'Portage Park',
+    'Mayfair',
+    'North Mayfair',
+    'Rogers Park',
+    'Budlong Woods',
+    'Oak Park',
     # 'Avondale',
     # 'West Town', 
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
-    # 'Budlong Woods',
 ]
 
 # AREAS = [
