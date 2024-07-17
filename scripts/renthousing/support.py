@@ -284,7 +284,7 @@ def send_housing_email(urls:str):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 #FUNCTION Crime Scoring
-def crime_score(data:list, logger:logging) -> list:
+def crime_score(data:list, logger:logging.Logger) -> list:
     """[Connects to data.cityofchicago.org and pulls down all the 
     crime data for the last year, in a 1 mile radius.  It then recategorizes
     the crimes into scores based on the percentage of total crime in that area.]
@@ -407,9 +407,7 @@ def crime_score(data:list, logger:logging) -> list:
                 guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
                 theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE','GAMBLING']
                 sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY']
-                human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 
-                      'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 
-                      'OBSCENITY', 'PUBLIC PEACE VIOLATION']
+                human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 'OBSCENITY', 'PUBLIC PEACE VIOLATION']
                 property_damage = ["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS']
                 
                 for idx in range(total_crimes):
@@ -425,7 +423,6 @@ def crime_score(data:list, logger:logging) -> list:
                     else:
                         crime_sub_set = set([crime_arr[idx]['description']])
 
-                    
                     #Drugs
                     if crime in narcotics:
                         scores['drug_score'] += 1
