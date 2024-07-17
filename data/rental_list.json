@@ -4590,5 +4590,21 @@
       "violence_score": 35.77,
       "property_d_score": 0.0
     }
+  },
+  "9398894258": {
+    "source": "www.realtor.com",
+    "price": 2200.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2428-W-Carmen-Ave-1_Chicago_IL_60625_M93988-94258",
+    "address": "2428 W Carmen Ave Unit 1 Chicago, IL 60625",
+    "date_pulled": "07-16-2024_20-20-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
