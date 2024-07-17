@@ -13,11 +13,9 @@ from random import shuffle
 import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
-# FORMAT = "%(message)s" 
-# FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-FORMAT = "%(asctime)s|%(levelname)-8s|%(funcName)-22s|%(lineno)-3d|%(message)s|" #[%(name)s]
-FORMAT_RICH = "%(funcName)-22s | %(lineno)-3d | %(message)s "
+FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-21s|%(message)s|" #[%(name)s]
+FORMAT_RICH = " %(lineno)-3d | %(funcName)-21s | %(message)s "
 
 console = Console(color_system="truecolor")
 rh = RichHandler(level = logging.INFO, console=console)
