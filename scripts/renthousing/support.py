@@ -284,7 +284,7 @@ def send_housing_email(urls:str):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 #FUNCTION Crime Scoring
-def crime_score(data:list) -> list:
+def crime_score(data:list, logger:logging) -> list:
     """[Connects to data.cityofchicago.org and pulls down all the 
     crime data for the last year, in a 1 mile radius.  It then recategorizes
     the crimes into scores based on the percentage of total crime in that area.]
@@ -324,13 +324,18 @@ def crime_score(data:list) -> list:
         lon1 = listing.long
 
         if lat1 and lon1:
-            # If the listing has a lat / long, search the area within a 1 mile radius, over the past 365 days.  Pull back the select fields for analysis
-            results = client.get("ijzp-q8t2",
-                select="id, date, iucr, fbi_code, latitude, longitude, primary_type, description, arrest, domestic",
-                where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
-                limit=800000
-            )
-            sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
+            try:
+                # If the listing has a lat / long, search the area within a 1 mile radius, over the past 365 days.  Pull back the select fields for analysis
+                results = client.get("ijzp-q8t2",
+                    select="id, date, iucr, fbi_code, latitude, longitude, primary_type, description, arrest, domestic",
+                    where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
+                    limit=800000
+                )
+                sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
+            except Exception as e:
+                logger.warning(e)
+                continue          
+
 
             #NOTES
                 #IDEA -Redo Scoring
