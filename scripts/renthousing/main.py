@@ -27,7 +27,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
@@ -238,7 +238,7 @@ def main():
         scrape(neigh)
 
     # If new listings are found, save the data to the json file, 
-    # format the list of dataclasesses to a url 
+    # format the list of dataclassses to a url 
     # Send gmail alerting of new properties
  
     if newlistings:

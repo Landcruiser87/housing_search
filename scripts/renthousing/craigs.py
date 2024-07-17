@@ -199,18 +199,19 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
     }
     #Change these to suit your housing requirements
     params = (
+        ("airconditioning","1"),
         ("hasPic", "1"),
         # ("postedToday", "1"),
-        ("housing_type",["10", "2", "3", "4", "5", "6", "8", "9"]),
+        ("housing_type",["10", "3", "4", "5", "6", "8", "9"]),
         ("min_price", "500"),
         ("max_price", "2600"),
         ("min_bedrooms", "2"),
         ("min_bathrooms", "1"),
-        ("availabilityMode", "0"),
+        # ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),
-        ("laundry", ["1", "4", "2", "3"]),
-        ("parking", ["2", "3", "5"]),
-        ("sale_date", "all dates"),
+        ("laundry", ["1", "2", "3"]),
+        ("parking", ["2", "3", "4", "5"]),
+        # ("sale_date", "all dates"), #sale date?  Dude wtf .  check your code!
     )
 
     url = f'https://{CITY}.craigslist.org/search/chc/apa'

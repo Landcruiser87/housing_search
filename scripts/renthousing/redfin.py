@@ -182,11 +182,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
 
-        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed'
+        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed,air-conditioning,has-parking'
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,min-baths=2,dogs-allowed'
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,min-baths=2,dogs-allowed,air-conditioning,has-parking'
 
     #Error Trapping
     else:

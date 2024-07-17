@@ -185,6 +185,8 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
             "isApartment"         :{"value":False},
             "isCondo"             :{"value":False},
             "mp"                  :{"max":2600},
+            "ac"                  :{"value":True},
+            "parka"               :{"value":True},
             "onlyRentalLargeDogsAllowed":{"value":True},
             "onlyRentalSmallDogsAllowed":{"value":True}
         },
