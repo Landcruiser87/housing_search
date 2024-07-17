@@ -404,12 +404,17 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                 }
 
                 narcotics = set(['NARCOTICS', 'OTHER NARCOTIC VIOLATION'])
-                guns = set(['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION'])
+                guns = set(['WEAPONS VIOLATION', 'CONCEALED CARRY LICENSE VIOLATION'])
+                guns_sub = set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE'])
+                murder = set(['HOMICIDE'])
                 theft = set(['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE','GAMBLING'])
                 sex_crimes = set(['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY'])
+                sex_crimes_sub = set(['PEEPING TOM', 'SEXUAL', 'SEX OFFENDER'])
                 human_violence = set(['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 'OBSCENITY', 'PUBLIC PEACE VIOLATION'])
+                human_v_kids = set(['CHILDREN'])
                 property_damage = set(["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS'])
-                
+                property_d_sub = set(['CRIMINAL DAMAGE'])
+
                 for idx in range(total_crimes):
                     #Primary categorization
                     crime = crime_arr[idx]['primary_type']
@@ -432,11 +437,11 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['gun_score'] += 1
             
                     #Gun description subsearch if primary_type doesn't catch it.
-                    elif crime_sub_set & set(['HANDGUN', 'ARMOR', 'GUN', 'FIREARM', 'AMMO', 'AMMUNITION', 'RIFLE']):
+                    elif crime_sub_set & guns_sub:
                         scores['gun_score'] += 1
                     
                     #Murder
-                    if crimeset & set(['HOMICIDE']):
+                    if crimeset & murder:
                         scores['murder_score'] += 10
                     
                     #Theft
@@ -448,7 +453,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['perv_score'] += 2
 
                     #Sex Crimes subsearch
-                    elif crime_sub_set & set(['PEEPING TOM', 'SEXUAL', 'SEX OFFENDER']):
+                    elif crime_sub_set & sex_crimes_sub:
                         scores['perv_score'] += 2
 
                     #humanViolence
@@ -456,15 +461,15 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['violence_score'] += 1
 
                     #humanviolence subsearch
-                    elif crime_sub_set & set(['CHILDREN']):
+                    elif crime_sub_set & human_v_kids:
                         scores['violence_score'] += 5
                     
                     #property damage 
                     if crimeset & property_damage:
-                        scores['violence_score'] += 1
+                        scores['property_d_score'] += 1
 
                     #property damage subsearch
-                    elif crimeset & set(['CRIMINAL DAMAGE']):
+                    elif crimeset & property_d_sub:
                         scores['property_d_score'] += 1
                     
                 scores = {k:round((v/total_crimes )*100, 2) for k, v in scores.items()}
