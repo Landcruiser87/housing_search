@@ -307,16 +307,16 @@ def crime_score(data:list, logger:logging) -> list:
     #Sets lookback to 1 year from today
     ze_date = str(datetime.datetime.today().date() - datetime.timedelta(days=365))
     c_dtypes = [
-        ("id"           ,str, 60),
-        ("date"         ,datetime.datetime),
-        ("iucr"         ,str, 60),
-        ("fbi_code"     ,str, 60),
-        ("latitude"     ,float),
-        ("longitude"    ,float),
-        ("primary_type" ,str, 240),
-        ("description"  ,str, 600),
-        ("arrest"       ,str, 20),
-        ("domestic"     ,str, 20),
+        ("id"          ,str, 60),
+        ("date"        ,datetime.datetime),
+        ("iucr"        ,str, 60),
+        ("fbi_code"    ,str, 60),
+        ("latitude"    ,float),
+        ("longitude"   ,float),
+        ("primary_type",str, 240),
+        ("description" ,str, 600),
+        ("arrest"      ,str, 20),
+        ("domestic"    ,str, 20),
     ]
 
     for listing in data:

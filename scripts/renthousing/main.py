@@ -21,13 +21,14 @@ console = Console(color_system="truecolor")
 rh = RichHandler(level = logging.INFO, console=console)
 rh.setFormatter(Formatter(FORMAT_RICH))
 
-logging.basicConfig(level=logging.INFO, 
-					format=FORMAT, 
-					datefmt="[%X]",
-					handlers=[
-						rh, 
-						logging.FileHandler(f'./data/logs/{current_date}.log', mode='w')
-					]
+logging.basicConfig(
+    level=logging.INFO, 
+    format=FORMAT, 
+    datefmt="[%X]",
+    handlers=[
+        rh, #Rich formatted send to terminal
+        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send to log file
+    ]
 )
 
 #Load logger
