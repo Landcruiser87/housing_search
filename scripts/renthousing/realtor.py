@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import requests
+import time
+
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
     """[Gets the list of links to the individual postings]
@@ -24,6 +26,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         #Grab the id
         listingid = card.get("id")
         listingid = listingid.replace("property_id_", "")
+
+        # Time of pull
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #First grab the link.
         for link in card.find_all("a", class_="card-anchor"):
@@ -99,7 +104,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             bath=baths,
             dogs=pets,
             link=url,
-            address=address
+            address=address,
+            date_pulled=current_time
         )
         listings.append(listing)
 

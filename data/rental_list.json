@@ -4155,5 +4155,440 @@
       "violence_score": 37.22,
       "property_d_score": 0.0
     }
+  },
+  "185899541": {
+    "source": "www.redfin.com",
+    "price": 1800.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3734-W-Lawrence-Ave-60625/unit-2/home/185899541",
+    "address": "3734 W Lawrence Ave Unit 2, Chicago, IL, 60625",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.968573,
+    "long": -87.722152,
+    "L_dist": [
+      "Kimball",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.37,
+      "murder_score": 1.24,
+      "perv_score": 2.97,
+      "theft_score": 51.39,
+      "violence_score": 36.64,
+      "property_d_score": 0.0
+    }
+  },
+  "186154735": {
+    "source": "www.redfin.com",
+    "price": 1600.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4750-N-Troy-St-60625/unit-2/home/186154735",
+    "address": "4750 N Troy St Unit 2, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9681387,
+    "long": -87.7074622,
+    "L_dist": [
+      "Kedzie",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.32,
+      "murder_score": 1.21,
+      "perv_score": 3.08,
+      "theft_score": 51.51,
+      "violence_score": 36.53,
+      "property_d_score": 0.0
+    }
+  },
+  "187769103": {
+    "source": "www.redfin.com",
+    "price": 1750.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4808-N-Ridgeway-Ave-60625/unit-3/home/187769103",
+    "address": "4808 N Ridgeway Ave Unit 3, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9686706,
+    "long": -87.7220869,
+    "L_dist": [
+      "Kimball",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.37,
+      "murder_score": 1.24,
+      "perv_score": 2.96,
+      "theft_score": 51.39,
+      "violence_score": 36.64,
+      "property_d_score": 0.0
+    }
+  },
+  "188944781": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5114-N-Avers-Ave-60625/unit-2/home/188944781",
+    "address": "5114 N Avers Ave Unit 2, Chicago, IL, 60625",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9742351,
+    "long": -87.7248447,
+    "L_dist": [
+      "Kimball",
+      0.75
+    ],
+    "crime_sc": {
+      "drug_score": 2.61,
+      "gun_score": 6.38,
+      "murder_score": 1.19,
+      "perv_score": 2.83,
+      "theft_score": 51.52,
+      "violence_score": 36.69,
+      "property_d_score": 0.0
+    }
+  },
+  "190344960": {
+    "source": "www.redfin.com",
+    "price": 1450.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3057-W-Argyle-St-60625/unit-AF3057-2/home/190344960",
+    "address": "3057 W Argyle St Unit AF3057-2, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9719823,
+    "long": -87.705827,
+    "L_dist": [
+      "Kedzie",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 6.31,
+      "murder_score": 1.2,
+      "perv_score": 2.96,
+      "theft_score": 51.67,
+      "violence_score": 36.48,
+      "property_d_score": 0.0
+    }
+  },
+  "190376033": {
+    "source": "www.redfin.com",
+    "price": 1450.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3157-W-Argyle-St-60625/unit-2W/home/190376033",
+    "address": "3157 W Argyle St Unit 2W, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.971752,
+    "long": -87.708288,
+    "L_dist": [
+      "Kimball",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 2.67,
+      "gun_score": 6.31,
+      "murder_score": 1.19,
+      "perv_score": 2.97,
+      "theft_score": 51.61,
+      "violence_score": 36.53,
+      "property_d_score": 0.0
+    }
+  },
+  "190804579": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3349-W-Eastwood-Ave-60625/unit-3/home/190804579",
+    "address": "3349 W Eastwood Ave Unit 3, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9653472,
+    "long": -87.712764,
+    "L_dist": [
+      "Kimball",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.39,
+      "murder_score": 1.24,
+      "perv_score": 3.08,
+      "theft_score": 51.24,
+      "violence_score": 36.76,
+      "property_d_score": 0.0
+    }
+  },
+  "191478017": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4856-N-Albany-Ave-60625/unit-2/home/191478017",
+    "address": "4856 N Albany Ave Unit 2, Chicago, IL, 60625",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1400",
+    "lat": 41.9701554,
+    "long": -87.7064353,
+    "L_dist": [
+      "Kedzie",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.34,
+      "murder_score": 1.22,
+      "perv_score": 3.03,
+      "theft_score": 51.49,
+      "violence_score": 36.58,
+      "property_d_score": 0.0
+    }
+  },
+  "191149477": {
+    "source": "www.redfin.com",
+    "price": 2225.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4730-N-Kimball-Ave-60625/unit-4730-212/home/191149477",
+    "address": "4730 N Kimball Ave Unit 4730-212, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "850",
+    "lat": 41.9675263,
+    "long": -87.7136934,
+    "L_dist": [
+      "Kimball",
+      0.04
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.3,
+      "murder_score": 1.21,
+      "perv_score": 3.08,
+      "theft_score": 51.46,
+      "violence_score": 36.58,
+      "property_d_score": 0.0
+    }
+  },
+  "191314056": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4713-N-Albany-Ave-60625/unit-3/home/191314056",
+    "address": "4713 N Albany Ave Unit 3, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1100",
+    "lat": 41.9670471,
+    "long": -87.705619,
+    "L_dist": [
+      "Kedzie",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.33,
+      "murder_score": 1.23,
+      "perv_score": 3.07,
+      "theft_score": 51.44,
+      "violence_score": 36.62,
+      "property_d_score": 0.0
+    }
+  },
+  "191314363": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4711-N-Albany-Ave-60625/unit-8Q/home/191314363",
+    "address": "4711 N Albany Ave Unit 8Q, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1100",
+    "lat": 41.9670255,
+    "long": -87.7056046,
+    "L_dist": [
+      "Kedzie",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.33,
+      "murder_score": 1.23,
+      "perv_score": 3.07,
+      "theft_score": 51.43,
+      "violence_score": 36.62,
+      "property_d_score": 0.0
+    }
+  },
+  "191335051": {
+    "source": "www.redfin.com",
+    "price": 1600.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4817-N-Springfield-Ave-60625/unit-3E/home/191335051",
+    "address": "4817 N Springfield Ave Unit 3E, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.96888,
+    "long": -87.725106,
+    "L_dist": [
+      "Kimball",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.43,
+      "murder_score": 1.26,
+      "perv_score": 2.97,
+      "theft_score": 51.01,
+      "violence_score": 36.93,
+      "property_d_score": 0.0
+    }
+  },
+  "191315926": {
+    "source": "www.redfin.com",
+    "price": 1575.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4959-N-Albany-Ave-60625/unit-1/home/191315926",
+    "address": "4959 N Albany Ave Unit 1, Chicago, IL, 60625",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9719547,
+    "long": -87.7059476,
+    "L_dist": [
+      "Kedzie",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 6.31,
+      "murder_score": 1.2,
+      "perv_score": 2.97,
+      "theft_score": 51.67,
+      "violence_score": 36.48,
+      "property_d_score": 0.0
+    }
+  },
+  "8055209930": {
+    "source": "www.realtor.com",
+    "price": 1735.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4433-N-Bernard-St_Chicago_IL_60625_M80552-09930",
+    "address": "4433 N Bernard St Chicago, IL 60625",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1161.0,
+    "lat": 41.96213885,
+    "long": -87.71413676884103,
+    "L_dist": [
+      "Kedzie",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.43,
+      "murder_score": 1.28,
+      "perv_score": 3.07,
+      "theft_score": 50.9,
+      "violence_score": 36.98,
+      "property_d_score": 0.0
+    }
+  },
+  "9130373089": {
+    "source": "www.realtor.com",
+    "price": 1475.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4817-N-Springfield-Ave-Apt-1W_Chicago_IL_60625_M91303-73089",
+    "address": "4817 N Springfield Ave Apt 1W Chicago, IL 60625",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8160509143": {
+    "source": "www.realtor.com",
+    "price": 2600.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4817-N-Troy-St-Apt-1_Chicago_IL_60625_M81605-09143",
+    "address": "4817 N Troy St Apt 1 Chicago, IL 60625",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9318801455": {
+    "source": "www.realtor.com",
+    "price": 1600.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4817-N-Springfield-Ave-Apt-3E_Chicago_IL_60625_M93188-01455",
+    "address": "4817 N Springfield Ave Apt 3E Chicago, IL 60625",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "13515517": {
+    "source": "www.redfin.com",
+    "price": 1500.0,
+    "neigh": "North-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5741-N-Drake-Ave-60659/home/13515517",
+    "address": "5741 N Drake Ave, Chicago, IL, 60659",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1900",
+    "lat": 41.9859916,
+    "long": -87.7172166,
+    "L_dist": [
+      "Kimball",
+      1.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.09,
+      "gun_score": 5.97,
+      "murder_score": 0.82,
+      "perv_score": 2.98,
+      "theft_score": 53.0,
+      "violence_score": 35.77,
+      "property_d_score": 0.0
+    }
   }
 }

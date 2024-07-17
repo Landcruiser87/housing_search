@@ -29,13 +29,14 @@ logger = logging.getLogger(__name__)
 #input custom area's here. Uncomment whichever way you want to search
 AREAS = [
     'North Center',
+    'North Park', 
+    'Albany Park',
     'Ravenswood',
     'Roscoe Village',
     'Lincoln Square', 
     'Irving Park',
     'Portage Park',
     'Mayfair',
-    'North Mayfair',
     'Budlong Woods',
     # 'Rogers Park',
     # 'Avondale',
@@ -72,20 +73,21 @@ STATE = "IL"
 #Define dataclass container
 @dataclass
 class Propertyinfo():
-    id      : str
-    source  : str
-    price   : str
-    neigh   : str
-    dogs    : bool
-    link    : str
-    address : str
-    bed     : float = None
-    bath    : float = None
-    sqft    : float = None
-    lat     : float = ""
-    long    : float = ""
-    L_dist  : float = ""
-    crime_sc: dict = field(default_factory=lambda:{})
+    id          : str
+    source      : str
+    price       : str
+    neigh       : str
+    dogs        : bool
+    link        : str
+    address     : str
+    date_pulled : np.datetime64
+    bed         : float = None
+    bath        : float = None
+    sqft        : float = None
+    lat         : float = ""
+    long        : float = ""
+    L_dist      : float = ""
+    crime_sc    : dict = field(default_factory=lambda:{})
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
 
     # def dict(self):

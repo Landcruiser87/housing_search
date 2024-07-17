@@ -92,6 +92,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         #assign the url
         url = link
 
+        # Time of pull
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+
         # Grab the price.
         for search in bs4ob.find_all("span", class_="price"):
             price = search.text
@@ -168,7 +171,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
             link=url,
             address=addy,
             lat=lat,
-            long=long
+            long=long,
+            date_pulled=current_time
         )
         listings.append(listing)
 

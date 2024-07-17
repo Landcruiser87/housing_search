@@ -38,6 +38,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 if "," in sqft:
                     sqft = sqft.replace(",", "")
             price = float(listinginfo[1]["offers"]["price"])
+    
+        # Time of pull
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #Bathrooms weren't in the json.  So we'll grab those manually
         for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
@@ -75,7 +78,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             lat=lat,
             long=long,
             link=url,		
-            address=addy    
+            address=addy,
+            date_pulled=current_time    
         )
 
         listings.append(listing)

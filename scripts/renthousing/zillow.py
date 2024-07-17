@@ -30,8 +30,11 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         #early terminate if the data-test key is in the underlying object
         if jres.get("data-test"):
             continue
+
+        # Time of pull
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+
         #grab lat / long
-  
         latlong = jres.find("script", {"type":"application/ld+json"})
         if latlong:
             res = json.loads(latlong.text)
@@ -111,7 +114,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             link=url,
             lat=lat,
             long=long,
-            address=addy    
+            address=addy,
+            date_pulled=current_time    
         )
 
         listings.append(listing)
