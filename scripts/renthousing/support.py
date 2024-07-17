@@ -403,12 +403,12 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                     'property_d_score':0
                 }
 
-                narcotics = ['NARCOTICS', 'OTHER NARCOTIC VIOLATION']
-                guns = ['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION']
-                theft = ['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE','GAMBLING']
-                sex_crimes = ['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY']
-                human_violence = ['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 'OBSCENITY', 'PUBLIC PEACE VIOLATION']
-                property_damage = ["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS']
+                narcotics = set(['NARCOTICS', 'OTHER NARCOTIC VIOLATION'])
+                guns = set(['WEAPONS VIOLATION', 'CONCEALED CARRY LICENCE VIOLATION'])
+                theft = set(['BURGLARY', 'ROBBERY', 'MOTOR VEHICLE THEFT', 'THEFT', 'DECEPTIVE PRACTICE','GAMBLING'])
+                sex_crimes = set(['CRIMINAL SEXUAL ASSAULT', 'SEX OFFENSE',  'PROSTITUTION', 'STALKING', 'PUBLIC INDECENCY'])
+                human_violence = set(['BATTERY', 'ASSAULT', 'OFFENSE INVOLVING CHILDREN', 'INTIMIDATION', 'KIDNAPPING', 'HUMAN TRAFFICKING','INTERFERENCE WITH PUBLIC OFFICER', 'OBSCENITY', 'PUBLIC PEACE VIOLATION'])
+                property_damage = set(["ARSON","CRIMINAL DAMAGE", 'CRIMINAL TRESPASS'])
                 
                 for idx in range(total_crimes):
                     #Primary categorization
@@ -424,11 +424,11 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         crime_sub_set = set([crime_arr[idx]['description']])
 
                     #Drugs
-                    if crimeset in narcotics:
+                    if crimeset & narcotics:
                         scores['drug_score'] += 1
 
                     #Guns
-                    if crimeset in guns:
+                    if crimeset & guns:
                         scores['gun_score'] += 1
             
                     #Gun description subsearch if primary_type doesn't catch it.
@@ -440,11 +440,11 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['murder_score'] += 10
                     
                     #Theft
-                    if crimeset in theft:
+                    if crimeset & theft:
                         scores['theft_score'] += 1
 
                     #Sexual Crimes
-                    if crimeset in sex_crimes:
+                    if crimeset & sex_crimes:
                         scores['perv_score'] += 2
 
                     #Sex Crimes subsearch
@@ -452,7 +452,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['perv_score'] += 2
 
                     #humanViolence
-                    if crimeset in human_violence:
+                    if crimeset & human_violence:
                         scores['violence_score'] += 1
 
                     #humanviolence subsearch
@@ -460,7 +460,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['violence_score'] += 5
                     
                     #property damage 
-                    if crimeset in property_damage:
+                    if crimeset & property_damage:
                         scores['violence_score'] += 1
 
                     #property damage subsearch

@@ -27,7 +27,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
