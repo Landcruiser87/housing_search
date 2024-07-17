@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO,
 					datefmt="[%X]",
 					handlers=[
 						rh, 
-						logging.FileHandler(f'./data/logs/{current_date}_.log', mode='w')
+						# logging.FileHandler(f'./data/logs/{current_date}.log', mode='w')
 					]
 )
 

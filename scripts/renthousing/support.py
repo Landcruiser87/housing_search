@@ -272,8 +272,9 @@ def send_housing_email(urls:str):
     message = MIMEMultipart("alternative")
     message["Subject"] = "New Housing Found!"
     message["From"] = sender_email
-    message["To"] = receiver_email
-
+    message["To"] = ", ".join(receiver_email)   #message[To] needs to be a str, 
+                                                #but sendmail wants it as a list????  OOOK
+                                                #receiver email is a list due to the split method
     attachment = MIMEText(html, "html")
     message.attach(attachment)
     context = ssl.create_default_context()
