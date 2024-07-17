@@ -424,11 +424,11 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         crime_sub_set = set([crime_arr[idx]['description']])
 
                     #Drugs
-                    if crime in narcotics:
+                    if crimeset in narcotics:
                         scores['drug_score'] += 1
 
                     #Guns
-                    if crime in guns:
+                    if crimeset in guns:
                         scores['gun_score'] += 1
             
                     #Gun description subsearch if primary_type doesn't catch it.
@@ -440,11 +440,11 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['murder_score'] += 10
                     
                     #Theft
-                    if crime in theft:
+                    if crimeset in theft:
                         scores['theft_score'] += 1
 
                     #Sexual Crimes
-                    if crime in sex_crimes:
+                    if crimeset in sex_crimes:
                         scores['perv_score'] += 2
 
                     #Sex Crimes subsearch
@@ -452,7 +452,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['perv_score'] += 2
 
                     #humanViolence
-                    if crime in human_violence:
+                    if crimeset in human_violence:
                         scores['violence_score'] += 1
 
                     #humanviolence subsearch
@@ -460,7 +460,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                         scores['violence_score'] += 5
                     
                     #property damage 
-                    if crime in property_damage:
+                    if crimeset in property_damage:
                         scores['violence_score'] += 1
 
                     #property damage subsearch
@@ -471,6 +471,10 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                 listing.crime_sc = scores
                 del results
     return data
+#TODO - Add DC crime module
+    # https://datagate.dc.gov/search/open/crimes?daterange=1year%20to%20date&details=true&format=csv
+    
+#TODO - Add DC closest train option
 
 
 #https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html

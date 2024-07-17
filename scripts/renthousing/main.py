@@ -190,6 +190,7 @@ def scrape(neigh:str):
                 #This function will isolate new id's that aren't in the historical JSON
                 datacheck = check_ids_at_the_door(data)
                 if datacheck:
+                    logger.info("New data found, adding lat/lon/Lstop/crime")
                     #pull the lat long, score it and store it. 
                     data = datacheck
                     del datacheck
