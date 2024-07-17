@@ -3,6 +3,8 @@ import numpy as np
 import logging
 import time
 from rich.logging import RichHandler
+from logging import Formatter
+from rich.console import Console
 from dataclasses import dataclass, field
 from os.path import exists
 from random import shuffle
@@ -11,16 +13,23 @@ from random import shuffle
 import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
-FORMAT = "%(message)s" 
+# FORMAT = "%(message)s" 
 # FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-logging.basicConfig(
-    #filename=f"./data/logs/{current_date}.log",  
-    #filemode='w',
-    level="INFO", 
-    format=FORMAT, 
-    datefmt="%m-%d-%Y %H:%M:%S",
-    handlers=[RichHandler()] 
+FORMAT = "%(asctime)s|%(levelname)s|%(message)s|%(funcName)s|%(lineno)d" #[%(name)s]
+FORMAT_RICH = "%(message)s | %(funcName)s | %(lineno)d"
+
+console = Console(color_system="truecolor")
+rh = RichHandler(level = logging.INFO, console=console)
+rh.setFormatter(Formatter(FORMAT_RICH))
+
+logging.basicConfig(level=logging.INFO, 
+					format=FORMAT, 
+					datefmt="[%X]",
+					handlers=[
+						rh, 
+						logging.FileHandler(f'./data/logs/{current_date}_.log', mode='w')
+					]
 )
 
 #Load logger

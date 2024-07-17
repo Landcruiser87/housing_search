@@ -261,7 +261,7 @@ def send_housing_email(urls:str):
         login = login_file.read().splitlines()
         sender_email = login[0].split(':')[1]
         password = login[1].split(':')[1]
-        receiver_email = login[2].split(':')[1]
+        receiver_email = login[2].split(':')[1].split(",")
         
     # Establish a secure session with gmail's outgoing SMTP server using your gmail account
     smtp_server = "smtp.gmail.com"
