@@ -6,7 +6,7 @@ import requests
 from urllib.parse import urlencode
 import time
 import support
-from urllib.parse import urlencode
+from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
     """[Gets the list of links to the individual postings]
@@ -85,7 +85,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
     return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
     #Check for spaces in the search neighborhood
     CITY = citystate[0]
     STATE = citystate[1]

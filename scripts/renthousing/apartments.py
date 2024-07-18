@@ -2,6 +2,7 @@ import logging
 from bs4 import BeautifulSoup
 import requests
 import time
+from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
     """[Gets the list of links to the individual postings]
@@ -25,6 +26,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         #First grab the link
         if card.get("data-url"):
             url = card.get("data-url")
+            #If the listingid wasn't in the metadata (sometimes happens)
+            #Pull it from the end of the URL
+            if not listingid:
+                listingid = url.split("/")[-2]
 
         #grab the property info
         for search in card.find_all("div", class_="property-info"):
@@ -108,7 +113,7 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
     CITY = citystate[0].lower()
     STATE = citystate[1].lower()
     #Search by neighborhood
@@ -117,11 +122,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-1600-to-2600-pet-friendly-dog/air-conditioning-garage/"
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-1500-to-2600-pet-friendly-dog/air-conditioning-garage/"
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-1600-to-2600-pet-friendly-dog/air-conditioning-garage/"
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-1500-to-2600-pet-friendly-dog/air-conditioning-garage/"
     
     #Error Trapping
     else:

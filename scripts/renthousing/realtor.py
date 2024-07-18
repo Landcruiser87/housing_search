@@ -2,7 +2,7 @@ import logging
 from bs4 import BeautifulSoup
 import requests
 import time
-
+from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
     """[Gets the list of links to the individual postings]
@@ -122,7 +122,7 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
     CITY = citystate[0]
     STATE = citystate[1].upper()
     #Search by neighborhood

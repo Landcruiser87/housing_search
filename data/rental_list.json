@@ -4689,7 +4689,7 @@
     ],
     "crime_sc": {}
   },
-  "null": {
+  "b8yhedc": {
     "source": "www.apartments.com",
     "price": 1395.0,
     "neigh": "mayfair",
@@ -4784,33 +4784,6 @@
       "theft_score": 43.19,
       "violence_score": 25.03,
       "property_d_score": 0.14
-    }
-  },
-  "null": {
-    "source": "www.apartments.com",
-    "price": 1395.0,
-    "neigh": "mayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
-    "address": "2651 E 92nd St, Chicago, IL 60617",
-    "date_pulled": "07-18-2024_08-13-22",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": "960 sq ft",
-    "lat": 41.7279584,
-    "long": -87.55882545213177,
-    "L_dist": [
-      "95th/Dan Ryan",
-      3.4
-    ],
-    "crime_sc": {
-      "drug_score": 1.35,
-      "gun_score": 10.7,
-      "murder_score": 3.55,
-      "perv_score": 1.39,
-      "theft_score": 34.24,
-      "violence_score": 31.17,
-      "property_d_score": 0.26
     }
   }
 }
