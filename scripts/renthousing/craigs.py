@@ -207,7 +207,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
         ("max_price", "2600"),
         ("min_bedrooms", "2"),
         ("min_bathrooms", "1"),
-        # ("availabilityMode", "0"), #can't seem to verify this parameter in the url
+        ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),
         ("laundry", ["1", "2", "3"]),
         ("parking", ["2", "3", "4", "5"]),

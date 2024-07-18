@@ -15,7 +15,7 @@ import realtor, zillow, apartments, craigs, redfin, support
 #Format logger and load configuration
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
 FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-21s|%(message)s|" #[%(name)s]
-FORMAT_RICH = " %(lineno)-3d | %(funcName)-21s | %(message)s "
+FORMAT_RICH = "| %(lineno)-3d | %(funcName)-21s | %(message)s "
 
 console = Console(color_system="truecolor")
 rh = RichHandler(level = logging.INFO, console=console)
@@ -205,7 +205,9 @@ def scrape(neigh:str):
 
                         #Score them according to chicago crime data
                         data = support.crime_score(data, logger)
-
+                    # if CITY == 'DC':
+                        # pass
+                        #TODO - Build DC params
                     #Add the listings to the jsondata dict. 
                     add_data(data, (site[0], neigh))
                     del data

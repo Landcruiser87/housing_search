@@ -3297,6 +3297,7 @@
     "dogs": true,
     "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
     "address": "2651 E 92nd St, Chicago, IL 60617",
+    "date_pulled": "07-17-2024_20-56-35",
     "bed": 2.0,
     "bath": 1.0,
     "sqft": "960 sq ft",
@@ -3308,12 +3309,12 @@
     ],
     "crime_sc": {
       "drug_score": 1.35,
-      "gun_score": 10.73,
+      "gun_score": 10.7,
       "murder_score": 3.55,
-      "perv_score": 2.76,
-      "theft_score": 38.32,
-      "violence_score": 46.76,
-      "property_d_score": 0.0
+      "perv_score": 1.39,
+      "theft_score": 34.24,
+      "violence_score": 31.19,
+      "property_d_score": 0.26
     }
   },
   "zpid_398579155": {
@@ -4756,6 +4757,60 @@
       "theft_score": 44.88,
       "violence_score": 23.92,
       "property_d_score": 0.14
+    }
+  },
+  "178229876": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Roscoe-Village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2025-W-Melrose-St-60618/unit-2F/home/178229876",
+    "address": "2025 W Melrose St Unit 2F, Chicago, IL, 60618",
+    "date_pulled": "07-18-2024_08-10-54",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9402673,
+    "long": -87.6794066,
+    "L_dist": [
+      "Paulina",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 2.8,
+      "gun_score": 6.81,
+      "murder_score": 1.52,
+      "perv_score": 1.45,
+      "theft_score": 43.19,
+      "violence_score": 25.03,
+      "property_d_score": 0.14
+    }
+  },
+  "null": {
+    "source": "www.apartments.com",
+    "price": 1395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
+    "address": "2651 E 92nd St, Chicago, IL 60617",
+    "date_pulled": "07-18-2024_08-13-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "960 sq ft",
+    "lat": 41.7279584,
+    "long": -87.55882545213177,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.4
+    ],
+    "crime_sc": {
+      "drug_score": 1.35,
+      "gun_score": 10.7,
+      "murder_score": 3.55,
+      "perv_score": 1.39,
+      "theft_score": 34.24,
+      "violence_score": 31.17,
+      "property_d_score": 0.26
     }
   }
 }

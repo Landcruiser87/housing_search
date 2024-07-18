@@ -117,11 +117,11 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-under-2600-pet-friendly-dog/air-conditioning-garage/"
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-1600-to-2600-pet-friendly-dog/air-conditioning-garage/"
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-under-2600-pet-friendly-dog/air-conditioning-garage/"
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-1600-to-2600-pet-friendly-dog/air-conditioning-garage/"
     
     #Error Trapping
     else:
