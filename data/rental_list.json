@@ -4641,5 +4641,121 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7766064610": {
+    "source": "www.craiglist.org",
+    "price": 2100.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/forest-park-house-for-rent-forest-park/7766064610.html",
+    "address": "Beloit, Forest park, IL 60130",
+    "date_pulled": "07-17-2024_18-27-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1500ft2",
+    "lat": 41.877725,
+    "long": -87.812133,
+    "L_dist": [
+      "Forest Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.43,
+      "gun_score": 9.58,
+      "murder_score": 2.16,
+      "perv_score": 2.18,
+      "theft_score": 35.0,
+      "violence_score": 29.08,
+      "property_d_score": 0.24
+    }
+  },
+  "7761325447": {
+    "source": "www.craiglist.org",
+    "price": 2449.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/carpentersville-newly-renovated-single/7761325447.html",
+    "address": "428 Singapore Ln, Carpentersville, 60110, IL 60110",
+    "date_pulled": "07-17-2024_18-27-16",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1040ft2",
+    "lat": 42.119913,
+    "long": -88.297063,
+    "L_dist": [
+      "O'Hare",
+      22.41
+    ],
+    "crime_sc": {}
+  },
+  "null": {
+    "source": "www.apartments.com",
+    "price": 1395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
+    "address": "2651 E 92nd St, Chicago, IL 60617",
+    "date_pulled": "07-17-2024_18-28-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "960 sq ft",
+    "lat": 41.7279584,
+    "long": -87.55882545213177,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.4
+    ],
+    "crime_sc": {
+      "drug_score": 1.35,
+      "gun_score": 10.7,
+      "murder_score": 3.55,
+      "perv_score": 1.39,
+      "theft_score": 34.24,
+      "violence_score": 31.19,
+      "property_d_score": 0.26
+    }
+  },
+  "t1c62sc": {
+    "source": "www.apartments.com",
+    "price": 1395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/tgm-retreat-at-danada-wheaton-il/t1c62sc/",
+    "address": "TGM Retreat at Danada, Wheaton, IL Chicago",
+    "date_pulled": "07-17-2024_18-28-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "960 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191612684": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2428-W-Carmen-Ave-60625/unit-1/home/191612684",
+    "address": "2428 W Carmen Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "07-17-2024_18-31-11",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9742712,
+    "long": -87.6903437,
+    "L_dist": [
+      "Western",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 2.6,
+      "gun_score": 6.3,
+      "murder_score": 1.18,
+      "perv_score": 1.34,
+      "theft_score": 44.88,
+      "violence_score": 23.92,
+      "property_d_score": 0.14
+    }
   }
 }
