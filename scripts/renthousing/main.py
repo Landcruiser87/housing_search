@@ -14,8 +14,8 @@ import realtor, zillow, apartments, craigs, redfin, support
 
 #Format logger and load configuration
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-21s|%(message)s|" #[%(name)s]
-FORMAT_RICH = "| %(lineno)-3d | %(funcName)-21s | %(message)s "
+FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-18s|%(message)s|" #[%(name)s]
+FORMAT_RICH = "| %(lineno)-3d | %(funcName)-18s | %(message)s "
 
 console = Console(color_system="truecolor")
 rh = RichHandler(level = logging.INFO, console=console)
@@ -67,11 +67,11 @@ AREAS = [
 #]
 
 SOURCES = {
-    "realtor"   :("www.realtor.com", realtor),
+    "realtor"   :("www.realtor.com"   , realtor),
     "apartments":("www.apartments.com", apartments),
-    "craigs"    :("www.craiglist.org", craigs),
-    "zillow"    :("www.zillow.com", zillow),
-    "redfin"    :("www.redfin.com", redfin)
+    "craigs"    :("www.craiglist.org" , craigs),
+    "zillow"    :("www.zillow.com"    , zillow),
+    "redfin"    :("www.redfin.com"    , redfin)
 }
 
 # Define City / State
@@ -128,7 +128,7 @@ def add_data(data:list, siteinfo:tuple):
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
 
 #FUNCTION Check IDs
-def check_ids_at_the_door(data:list):
+def check_ids(data:list):
     """This function takes in a list of Propertyinfo objects, reformats them to
     a dictionary, compares the property id's to existing JSON historical
     property id keys, finds any new ones via set comparison. Then returns a list
@@ -188,7 +188,7 @@ def scrape(neigh:str):
             #If data was returned
             if data:
                 #This function will isolate new id's that aren't in the historical JSON
-                datacheck = check_ids_at_the_door(data)
+                datacheck = check_ids(data)
                 if datacheck:
                     logger.info("New data found, adding lat/lon/Lstop/crime")
                     #pull the lat long, score it and store it. 

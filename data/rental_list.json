@@ -3297,7 +3297,7 @@
     "dogs": true,
     "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
     "address": "2651 E 92nd St, Chicago, IL 60617",
-    "date_pulled": "07-17-2024_20-56-35",
+    "date_pulled": "07-17-2024_18-28-14",
     "bed": 2.0,
     "bath": 1.0,
     "sqft": "960 sq ft",
@@ -4689,33 +4689,6 @@
     ],
     "crime_sc": {}
   },
-  "b8yhedc": {
-    "source": "www.apartments.com",
-    "price": 1395.0,
-    "neigh": "mayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/2651-e-92nd-st-chicago-il/b8yhedc/",
-    "address": "2651 E 92nd St, Chicago, IL 60617",
-    "date_pulled": "07-17-2024_18-28-14",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": "960 sq ft",
-    "lat": 41.7279584,
-    "long": -87.55882545213177,
-    "L_dist": [
-      "95th/Dan Ryan",
-      3.4
-    ],
-    "crime_sc": {
-      "drug_score": 1.35,
-      "gun_score": 10.7,
-      "murder_score": 3.55,
-      "perv_score": 1.39,
-      "theft_score": 34.24,
-      "violence_score": 31.19,
-      "property_d_score": 0.26
-    }
-  },
   "t1c62sc": {
     "source": "www.apartments.com",
     "price": 1395.0,
@@ -4784,6 +4757,33 @@
       "theft_score": 43.19,
       "violence_score": 25.03,
       "property_d_score": 0.14
+    }
+  },
+  "zpid_70458570": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3238-N-Kilbourn-Ave-UNIT-13-Chicago-IL-60641/70458570_zpid/",
+    "address": "3238 N Kilbourn Ave Unit 13, Chicago, IL 60641",
+    "date_pulled": "07-18-2024_18-13-34",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.940098,
+    "long": -87.74073,
+    "L_dist": [
+      "Irving Park",
+      1.06
+    ],
+    "crime_sc": {
+      "drug_score": 2.92,
+      "gun_score": 7.27,
+      "murder_score": 1.65,
+      "perv_score": 1.57,
+      "theft_score": 41.82,
+      "violence_score": 25.86,
+      "property_d_score": 0.15
     }
   }
 }

@@ -476,6 +476,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                 listing.crime_sc = scores
                 del results
     return data
+
 #TODO - Add DC crime module
     # https://datagate.dc.gov/search/open/crimes?daterange=1year%20to%20date&details=true&format=csv
     

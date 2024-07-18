@@ -140,9 +140,6 @@ def main():
 			print("No more pages")
 			break
 
-	#make a panda!
-	#FIXME WHY DID YOU USE PANDAAAAAS NOOOOOOOOO
-
 	df_results = pd.DataFrame(results, columns=['job_title', 'job_id', 'company', 'location', 'post_date', 'job_description', 'job_url', 'salary'])
 
 	#add a column with the count of each job_id for looking at duplicates
@@ -151,4 +148,6 @@ def main():
 	logger.info(f'Your results are ready!  Shape of dataframe = {df_results.shape}')
 	
 	return df_results
-df_results = main()
+
+if __name__ == "__main__":
+    main()
