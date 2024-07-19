@@ -187,7 +187,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isCondo"             :{"value":False},
             "mp"                  :{"max":2600},
             "ac"                  :{"value":True},
-            "parka"               :{"value":True},
+            # "parka"               :{"value":True},#I think searching by parking too is limiting my results.  Taking it off for now
             "onlyRentalLargeDogsAllowed":{"value":True},
             "onlyRentalSmallDogsAllowed":{"value":True}
         },
