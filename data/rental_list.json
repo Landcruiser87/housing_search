@@ -4812,5 +4812,220 @@
       "violence_score": 24.87,
       "property_d_score": 0.14
     }
+  },
+  "191724225": {
+    "source": "www.redfin.com",
+    "price": 1850.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3321-N-Karlov-Ave-60641/unit-3W/home/191724225",
+    "address": "3321 N Karlov Ave Unit 3W, Chicago, IL, 60641",
+    "date_pulled": "07-19-2024_09-52-18",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "660",
+    "lat": 41.9415108,
+    "long": -87.729372,
+    "L_dist": [
+      "Addison",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 7.0,
+      "murder_score": 1.52,
+      "perv_score": 1.56,
+      "theft_score": 42.51,
+      "violence_score": 25.41,
+      "property_d_score": 0.14
+    }
+  },
+  "zpid_2092374246": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2251-W-Giddings-St-3-Chicago-IL-60625/2092374246_zpid/",
+    "address": "2251 W Giddings St #3, Chicago, IL 60625",
+    "date_pulled": "07-19-2024_09-52-42",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "186369724": {
+    "source": "www.redfin.com",
+    "price": 1825.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4611-N-Kedzie-Ave-60625/unit-2E/home/186369724",
+    "address": "4611 N Kedzie Ave Unit 2E, Chicago, IL, 60625",
+    "date_pulled": "07-19-2024_09-53-24",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9651425,
+    "long": -87.7081402,
+    "L_dist": [
+      "Kedzie",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 6.35,
+      "murder_score": 1.24,
+      "perv_score": 1.46,
+      "theft_score": 44.17,
+      "violence_score": 24.24,
+      "property_d_score": 0.13
+    }
+  },
+  "8088539071": {
+    "source": "www.realtor.com",
+    "price": 2500.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2251-W-Giddings-St-Apt-3_Chicago_IL_60625_M80885-39071",
+    "address": "2251 W Giddings St Unit 3RD Chicago, IL 60625",
+    "date_pulled": "07-19-2024_09-54-03",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "186141938": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2251-W-Giddings-St-60625/unit-3RD/home/186141938",
+    "address": "2251 W Giddings St Unit 3RD, Chicago, IL, 60625",
+    "date_pulled": "07-19-2024_09-54-18",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1250",
+    "lat": 41.9675438,
+    "long": -87.6859448,
+    "L_dist": [
+      "Western",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.32,
+      "murder_score": 1.23,
+      "perv_score": 1.47,
+      "theft_score": 44.51,
+      "violence_score": 24.09,
+      "property_d_score": 0.14
+    }
+  },
+  "9907241627": {
+    "source": "www.realtor.com",
+    "price": 2550.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2607-W-Rascher-Ave-Apt-1_Chicago_IL_60625_M99072-41627",
+    "address": "2607 W Rascher Ave Apt 1 Chicago, IL 60625",
+    "date_pulled": "07-19-2024_09-54-51",
+    "bed": 3.0,
+    "bath": 15.0,
+    "sqft": 1600.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191564570": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2607-W-Rascher-Ave-60625/unit-1/home/191564570",
+    "address": "2607 W Rascher Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "07-19-2024_09-55-06",
+    "bed": "3",
+    "bath": "15",
+    "sqft": "1600",
+    "lat": 41.9801789,
+    "long": -87.6945701,
+    "L_dist": [
+      "Rockwell",
+      0.97
+    ],
+    "crime_sc": {
+      "drug_score": 2.34,
+      "gun_score": 6.08,
+      "murder_score": 1.07,
+      "perv_score": 1.32,
+      "theft_score": 45.65,
+      "violence_score": 23.49,
+      "property_d_score": 0.13
+    }
+  },
+  "null": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1802-n-karlov-ave-chicago-il/zpjgw7x/",
+    "address": "1802 N Karlov Ave, Chicago, IL",
+    "date_pulled": "07-19-2024_09-56-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.9137733,
+    "long": -87.72917272774518,
+    "L_dist": [
+      "Logan Square",
+      1.53
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 7.21,
+      "murder_score": 1.59,
+      "perv_score": 1.58,
+      "theft_score": 42.29,
+      "violence_score": 25.55,
+      "property_d_score": 0.16
+    }
+  },
+  "teqxtj9": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/the-townhomes-at-highcrest-woodridge-il/teqxtj9/",
+    "address": "The Townhomes at Highcrest, Woodridge, IL Chicago",
+    "date_pulled": "07-19-2024_09-56-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "5ctx8tp": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1022-evergreen-cir-glendale-heights-il/5ctx8tp/",
+    "address": "1022 Evergreen Cir, Glendale Heights, IL Chicago",
+    "date_pulled": "07-19-2024_09-56-37",
+    "bed": 3.0,
+    "bath": 25.0,
+    "sqft": "1650 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }

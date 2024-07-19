@@ -36,18 +36,21 @@ logger = logging.getLogger(__name__)
 
 #input custom area's here. Uncomment whichever way you want to search
 AREAS = [
-    'North Center',
-    'North Park', 
+    'North Center',    #
+    'North Park',      #
     'Albany Park',
     'Ravenswood',
     'Roscoe Village',
-    'Lincoln Square', 
-    'Irving Park',
-    'Portage Park',
+    'Lincoln Square',  #
+    'Irving Park',     #
+    'Portage Park',    #
     'Mayfair',
     'Budlong Woods',
+    'Jefferson Park',   #New Add
+    'West Ridge',       #New add
+    'Avondale',         #New add
+    'Wicker Park'       #New add
     # 'Rogers Park',
-    # 'Avondale',
     # 'West Town', 
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
