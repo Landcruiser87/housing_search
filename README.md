@@ -30,21 +30,21 @@ Datasets are kept in the data folder.
 1. Main file will run indivdiual sub scripts for each source.  (Makes failure tracing easier)
 2. For each source, pull off relevant info for each listing.  
    - Makes sure to use info that's common to all sources. 
-   - Store any extra data you find in a text field for cos sim probably
+   - Store any extra data you find in a text field
    - Craigs is the only one you have to load each individual link. As not all their 
      information is stored on the front page.
 3. After each site / neighborhood retrieval.  Score the listings for these traits
-   - Closest L Stop
+   - Closest train stop
    - Crime score
 4. Send support email with any new links that aren't saved already. 
    
 
 ### Sites to search
-- [x] - [craigslist](https://www.craiglist.org)
-- [x] - [zillow](https://www.zillow.com)
-- [x] - [rent.com](https://www.rent.com)
 - [x] - [apartments.com](https://www.apartments.com)
+- [x] - [craigslist](https://www.craiglist.org)
+- [x] - [realtor.com](https://www.realtor.com)
 - [x] - [redfin](https://www.redfin.com)
+- [x] - [zillow](https://www.zillow.com)
 
 ### External Data Sources
 - [CTA L stops](https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/data)

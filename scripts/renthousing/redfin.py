@@ -144,11 +144,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     # https://www.redfin.com/stingray/api/v1/search/rentals
  
     #Search by neighborhood
-    if isinstance(neigh, str):
+    if isinstance(neigh, str) or isinstance(neigh, int):
         url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
         # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
-    #BUG - Zipcode search not functional yet
+    #TODO - zipcode
+        #Check that the above link will work for zip code too.  It should but I'm not sure
     # #Searchby ZipCode
     # elif isinstance(neigh, int):
     # 	url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)

@@ -14,10 +14,19 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     Returns:
         links (list): [all the links in the summary page]
     """	
+    #TODO - craig update city
+        #Need a base dictionary of craiglist citys and the city codes they use. 
+        #That way we can format the links properly by city. 
+    
     links = []
+    if CITY =='chicago':
+        url_pref = f"https://{CITY}.craigslist.org/chc"
+    else:
+        url_pref = f"https://{CITY}.craigslist.org/"
+
     for link in bs4ob.find_all('a'):
         url = link.get("href")
-        if url.startswith(f"https://{CITY}.craigslist.org/chc"):
+        if url.startswith(url_pref):
             links.append(url)
     return links
     
@@ -152,12 +161,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         
         pets = True
 
-        #IDEA Since we can't search by neighborhood on craigs we have to just assign
-        #it to chicago as that's Where the base search is..  Although.. I do
-        #have lat / longs and the boundaries of the neighborhoods I want to
-        #search.  So I could use the bounding box formula to see if they were in
-        #that area. 
-  
         listing = Propertyinfo(
             id=listingid,
             source=source,
@@ -211,13 +214,21 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
         ("pets_dog", "1"),
         ("laundry", ["1", "2", "3"]),
         ("parking", ["2", "3", "4", "5"]),
-        # ("sale_date", "all dates"), #sale date?  Dude wtf .  check your code!
+        # ("sale_date", "all dates"), #left over param for buying 
     )
 
-    url = f'https://{CITY}.craigslist.org/search/chc/apa'
-    #BUG.  So....  craigs encodes
-    #region into their URl.  So you'll have to change that
-    #You can remove the chc from the search link to search an entire city, 
+    #TODO - craig update city
+        #Need a base dictionary of craiglist citys and the city codes they use. 
+        #That way we can format the links properly by city. 
+
+    if CITY == "chicago":
+        url = f'https://{CITY}.craigslist.org/search/chc/apa'
+    else:
+        url = f'https://{CITY}.craigslist.org/search/apa'
+
+    #BUG
+    # So....  craigs encodes region into their URL.  So you'll have to change
+    #that. You can remove the chc from the search link to search an entire city,
     #But that will likely generate too many results. 
  
     response = requests.get(url, headers=HEADERS, params=params)

@@ -35,10 +35,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 #input custom area's here. Uncomment whichever way you want to search
+# sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
+
+
 AREAS = [
     'North Center',    #
     'North Park',      #
-    'Albany Park',
+    'Albany Park',     #
     'Ravenswood',
     'Roscoe Village',
     'Lincoln Square',  #
@@ -46,28 +49,16 @@ AREAS = [
     'Portage Park',    #
     'Mayfair',
     'Budlong Woods',
-    'Jefferson Park',   #New Add
-    'West Ridge',       #New add
-    'Avondale',         #New add
-    'Wicker Park'       #New add
+    'Avondale',           #New add
+    'Wicker Park'         #New add
+    # 'Jefferson Park',   #too far out
+    # 'West Ridge',       #too far out
+
     # 'Rogers Park',
     # 'West Town', 
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
 ]
-
-# AREAS = [
-    #60613,
-    #60614,
-    #60657,
-    #60610,
-    #60618,
-    #60647,
-    #60622,
-    #60625,
-    #60641,
-    #60651
-#]
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
@@ -77,9 +68,28 @@ SOURCES = {
     "redfin"    :("www.redfin.com"    , redfin)
 }
 
+# 
+# DC test data notes
+# minbed = 2
+# top_price = 4000
+# home = "home/townhome"
+
 # Define City / State
 CITY = "Chicago"
 STATE = "IL"
+
+# SEARCH_PARAMS = {
+#     "pricemax" : 2600,
+#     "hometype" : "All", #Not sure how to make this one flexible across platforms
+#     "minbeds" : 2
+# }
+
+# AREAS = [
+# 20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
+#]
+
+#IDEA - Put city and state in all search params.  
+    # Simplifies inputs to neighscrape functions
 
 #Define dataclass container
 @dataclass
@@ -100,7 +110,6 @@ class Propertyinfo():
     L_dist      : float = ""
     crime_sc    : dict = field(default_factory=lambda:{})
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
-
     # def dict(self):
     #     return {k: str(v) for k, v in asdict(self).items()}
 
