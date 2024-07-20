@@ -5,6 +5,19 @@ import requests
 import time
 import support
 
+def money_launderer(price:list)->float:
+    """[Strips dollar signs and comma from the price]
+
+    Args:
+        price (list): [list of prices as strs]
+
+    Returns:
+        price (list): [list of prices as floats]
+    """	
+    if isinstance(price, str):
+        return float(price.replace("$", "").replace(",", ""))
+    return price
+
 def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     """[Gets the list of links to the individual postings]
 
@@ -34,13 +47,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
     """_summary_
 
     Args:
-        result (BeautifulSoup): _description_
-        neigh (str): _description_
-        source (str): _description_
-        Propertyinfo (_type_): _description_
-        logger (_type_): _description_
-        citystate (tuple): _description_
-        jsondatadict (_type_): _description_
+        result (BeautifulSoup): Search Result
+        neigh (Union[str,int]): Neighborhood or zipcode searched
+        source (str): What site is being scraped
+        Propertyinfo (dataclass): Custom data object
+        logger (logging.logger): logger for logging
+        citystate (tuple): Tuple of city/state
+        jsondata (dict): Data uploaded from rental_list.json
 
     Returns:
         properties (list[Propertyinfo]): [all the links in the summary page]
@@ -201,6 +214,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
         'sec-ch-ua-platform': '"Windows"',
     }
     #Change these to suit your housing requirements
+    #!Update tprice and min bed
     params = (
         ("airconditioning","1"),
         ("hasPic", "1"),
@@ -255,16 +269,3 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
     else:
         logger.warning("No listings returned on craigs.  Moving to next site")
 
-
-def money_launderer(price:list)->float:
-    """[Strips dollar signs and comma from the price]
-
-    Args:
-        price (list): [list of prices as strs]
-
-    Returns:
-        price (list): [list of prices as floats]
-    """	
-    if isinstance(price, str):
-        return float(price.replace("$", "").replace(",", ""))
-    return price

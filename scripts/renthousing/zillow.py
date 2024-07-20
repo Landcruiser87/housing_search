@@ -167,7 +167,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #Get the map coordinates
     map_coords = json.loads(mapcords)
     support.sleepspinner(np.random.randint(2, 8), "Map Request Nap")
-     
+    
+    #! Update tprice and min beds
     #Stipulate subparameters of search
     subparams = {
         "usersSearchTerm":f"{neigh} {CITY}, {STATE.upper()}",

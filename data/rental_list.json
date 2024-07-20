@@ -3011,6 +3011,7 @@
     "dogs": true,
     "link": "https://www.apartments.com/1802-n-karlov-ave-chicago-il/zpjgw7x/",
     "address": "1802 N Karlov Ave, Chicago, IL",
+    "date_pulled": "07-19-2024_09-56-37",
     "bed": 2.0,
     "bath": 1.0,
     "sqft": "1200 sq ft",
@@ -3022,12 +3023,12 @@
     ],
     "crime_sc": {
       "drug_score": 2.75,
-      "gun_score": 7.27,
-      "murder_score": 1.57,
-      "perv_score": 3.07,
-      "theft_score": 48.64,
-      "violence_score": 38.8,
-      "property_d_score": 0.0
+      "gun_score": 7.21,
+      "murder_score": 1.59,
+      "perv_score": 1.58,
+      "theft_score": 42.29,
+      "violence_score": 25.55,
+      "property_d_score": 0.16
     }
   },
   "9fj1j95": {
@@ -4969,33 +4970,6 @@
       "property_d_score": 0.13
     }
   },
-  "null": {
-    "source": "www.apartments.com",
-    "price": 1700.0,
-    "neigh": "mayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/1802-n-karlov-ave-chicago-il/zpjgw7x/",
-    "address": "1802 N Karlov Ave, Chicago, IL",
-    "date_pulled": "07-19-2024_09-56-37",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": "1200 sq ft",
-    "lat": 41.9137733,
-    "long": -87.72917272774518,
-    "L_dist": [
-      "Logan Square",
-      1.53
-    ],
-    "crime_sc": {
-      "drug_score": 2.75,
-      "gun_score": 7.21,
-      "murder_score": 1.59,
-      "perv_score": 1.58,
-      "theft_score": 42.29,
-      "violence_score": 25.55,
-      "property_d_score": 0.16
-    }
-  },
   "teqxtj9": {
     "source": "www.apartments.com",
     "price": 1700.0,
@@ -5026,6 +5000,467 @@
     "lat": "",
     "long": "",
     "L_dist": "",
+    "crime_sc": {}
+  },
+  "9505470016": {
+    "source": "www.realtor.com",
+    "price": 2300.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2449-W-Leland-Ave-G_Chicago_IL_60625_M95054-70016",
+    "address": "2449 W Leland Ave Unit G Chicago, IL 60625",
+    "date_pulled": "07-19-2024_18-11-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "184948197": {
+    "source": "www.redfin.com",
+    "price": 1728.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2803-N-Kedzie-Ave-60618/unit-1/home/184948197",
+    "address": "2803 N Kedzie Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9323392,
+    "long": -87.7072385,
+    "L_dist": [
+      "Logan Square",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 2.7,
+      "gun_score": 6.77,
+      "murder_score": 1.52,
+      "perv_score": 1.46,
+      "theft_score": 43.06,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "186860132": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3650-W-Diversey-Ave-60647/unit-2R/home/186860132",
+    "address": "3650 W Diversey Ave Unit 2R, Chicago, IL, 60647",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9320831,
+    "long": -87.719282,
+    "L_dist": [
+      "Belmont",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.78,
+      "murder_score": 1.5,
+      "perv_score": 1.47,
+      "theft_score": 42.9,
+      "violence_score": 25.09,
+      "property_d_score": 0.14
+    }
+  },
+  "190327006": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2823-N-Central-Park-Ave-60618/unit-1R/home/190327006",
+    "address": "2823 N Central Park Ave Unit 1R, Chicago, IL, 60618",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9326745,
+    "long": -87.7168612,
+    "L_dist": [
+      "Belmont",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.75,
+      "murder_score": 1.49,
+      "perv_score": 1.46,
+      "theft_score": 43.01,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "191561364": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2817-N-Talman-Ave-60618/unit-GS/home/191561364",
+    "address": "2817 N Talman Ave Unit GS, Chicago, IL, 60618",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "950",
+    "lat": 41.9326809,
+    "long": -87.693615,
+    "L_dist": [
+      "California",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.81,
+      "murder_score": 1.54,
+      "perv_score": 1.45,
+      "theft_score": 43.1,
+      "violence_score": 25.06,
+      "property_d_score": 0.14
+    }
+  },
+  "191411175": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2847-N-Ridgeway-Ave-60618/unit-2/home/191411175",
+    "address": "2847 N Ridgeway Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "950",
+    "lat": 41.9332732,
+    "long": -87.7206353,
+    "L_dist": [
+      "Belmont",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.78,
+      "murder_score": 1.49,
+      "perv_score": 1.47,
+      "theft_score": 42.88,
+      "violence_score": 25.08,
+      "property_d_score": 0.14
+    }
+  },
+  "191434754": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2847-N-Ridgeway-Ave-60618/unit-1/home/191434754",
+    "address": "2847 N Ridgeway Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "950",
+    "lat": 41.9332732,
+    "long": -87.7206353,
+    "L_dist": [
+      "Belmont",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.78,
+      "murder_score": 1.49,
+      "perv_score": 1.47,
+      "theft_score": 42.88,
+      "violence_score": 25.08,
+      "property_d_score": 0.14
+    }
+  },
+  "191525888": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3320-W-Diversey-Ave-60647/unit-G/home/191525888",
+    "address": "3320 W Diversey Ave Unit G, Chicago, IL, 60647",
+    "date_pulled": "07-19-2024_18-12-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9321502,
+    "long": -87.7107242,
+    "L_dist": [
+      "Logan Square",
+      0.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.7,
+      "gun_score": 6.75,
+      "murder_score": 1.5,
+      "perv_score": 1.46,
+      "theft_score": 43.06,
+      "violence_score": 25.04,
+      "property_d_score": 0.14
+    }
+  },
+  "9323431798": {
+    "source": "www.realtor.com",
+    "price": 1950.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3320-W-Diversey-Ave-G_Chicago_IL_60647_M93234-31798",
+    "address": "3320 W Diversey Ave Unit G Chicago, IL 60647",
+    "date_pulled": "07-19-2024_18-13-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "180602310": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1527-N-Claremont-Ave-60622/unit-2R/home/180602310",
+    "address": "1527 N Claremont Ave Unit 2R, Chicago, IL, 60622",
+    "date_pulled": "07-19-2024_18-15-30",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9093614,
+    "long": -87.6857195,
+    "L_dist": [
+      "Damen",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 2.65,
+      "gun_score": 7.11,
+      "murder_score": 1.6,
+      "perv_score": 1.49,
+      "theft_score": 42.72,
+      "violence_score": 25.4,
+      "property_d_score": 0.15
+    }
+  },
+  "185710272": {
+    "source": "www.redfin.com",
+    "price": 2195.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1713-N-Hermitage-Ave-60622/unit-G/home/185710272",
+    "address": "1713 N Hermitage Ave Unit G, Chicago, IL, 60622",
+    "date_pulled": "07-19-2024_18-15-30",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9128352,
+    "long": -87.6711547,
+    "L_dist": [
+      "Damen",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 7.05,
+      "murder_score": 1.57,
+      "perv_score": 1.47,
+      "theft_score": 42.91,
+      "violence_score": 25.26,
+      "property_d_score": 0.15
+    }
+  },
+  "191478162": {
+    "source": "www.redfin.com",
+    "price": 2150.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1634-N-Winchester-Ave-60622/unit-2G/home/191478162",
+    "address": "1634 N Winchester Ave Unit 2G, Chicago, IL, 60622",
+    "date_pulled": "07-19-2024_18-15-30",
+    "bed": "2",
+    "bath": "15",
+    "sqft": "1200",
+    "lat": 41.9115492,
+    "long": -87.6765474,
+    "L_dist": [
+      "Damen",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 2.69,
+      "gun_score": 7.07,
+      "murder_score": 1.58,
+      "perv_score": 1.47,
+      "theft_score": 42.82,
+      "violence_score": 25.32,
+      "property_d_score": 0.15
+    }
+  },
+  "9654759450": {
+    "source": "www.realtor.com",
+    "price": 2150.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1634-N-Winchester-Ave-Apt-2_Chicago_IL_60622_M96547-59450",
+    "address": "1634 N Winchester Ave Unit 2G Chicago, IL 60607",
+    "date_pulled": "07-19-2024_18-16-09",
+    "bed": 2.0,
+    "bath": 15.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9705747949": {
+    "source": "www.realtor.com",
+    "price": 2195.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1713-N-Hermitage-Ave-Apt-G_Chicago_IL_60622_M97057-47949",
+    "address": "1713 N Hermitage Ave Apt G Chicago, IL 60622",
+    "date_pulled": "07-19-2024_18-16-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191748962": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2449-W-Leland-Ave-60625/unit-G/home/191748962",
+    "address": "2449 W Leland Ave Unit G, Chicago, IL, 60625",
+    "date_pulled": "07-20-2024_08-33-56",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1200",
+    "lat": 41.9665755,
+    "long": -87.690739,
+    "L_dist": [
+      "Western",
+      0.12
+    ],
+    "crime_sc": {
+      "drug_score": 2.78,
+      "gun_score": 6.31,
+      "murder_score": 1.26,
+      "perv_score": 1.46,
+      "theft_score": 44.4,
+      "violence_score": 24.14,
+      "property_d_score": 0.14
+    }
+  },
+  "191749178": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Roscoe-Village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3403-N-Damen-Ave-60618/unit-2R/home/191749178",
+    "address": "3403 N Damen Ave Unit 2R, Chicago, IL, 60618",
+    "date_pulled": "07-20-2024_08-35-38",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9434799,
+    "long": -87.6782994,
+    "L_dist": [
+      "Addison",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 6.77,
+      "murder_score": 1.48,
+      "perv_score": 1.46,
+      "theft_score": 43.24,
+      "violence_score": 24.98,
+      "property_d_score": 0.14
+    }
+  },
+  "191749023": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3507-N-Springfield-Ave-60618/unit-1/home/191749023",
+    "address": "3507 N Springfield Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "07-20-2024_08-38-16",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9449231,
+    "long": -87.7246966,
+    "L_dist": [
+      "Addison",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 6.79,
+      "murder_score": 1.47,
+      "perv_score": 1.49,
+      "theft_score": 42.86,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "8910g20": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1129-w-oakdale-ave-chicago-il/8910g20/",
+    "address": "1129 W Oakdale Ave, Chicago, IL",
+    "date_pulled": "07-20-2024_08-39-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.93504865,
+    "long": -87.65758011402173,
+    "L_dist": [
+      "Wellington",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 2.86,
+      "gun_score": 6.73,
+      "murder_score": 1.52,
+      "perv_score": 1.43,
+      "theft_score": 43.74,
+      "violence_score": 24.59,
+      "property_d_score": 0.13
+    }
+  },
+  "null": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1129-w-oakdale-ave-chicago-il/8910g20/",
+    "address": "1129 W Oakdale Ave, Chicago, IL",
+    "date_pulled": "07-20-2024_08-39-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.93504865,
+    "long": -87.65758011402173,
+    "L_dist": [
+      "Wellington",
+      0.23
+    ],
     "crime_sc": {}
   }
 }

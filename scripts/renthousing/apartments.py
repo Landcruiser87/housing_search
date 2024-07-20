@@ -122,11 +122,13 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-1500-to-2600-pet-friendly-dog/air-conditioning/"#-garage
+        #!Update tprice and min bed
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-2-bedrooms-1705-to-2600-pet-friendly-dog/air-conditioning/"#-garage
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-1500-to-2600-pet-friendly-dog/air-conditioning/"#-garage
+        #!Update tprice and min bed
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-2-bedrooms-1705-to-2600-pet-friendly-dog/air-conditioning/"#-garage
     
     #Error Trapping
     else:
