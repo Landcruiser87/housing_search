@@ -184,6 +184,7 @@ def scrape(neigh:str):
             if source=="craigs" and c_scrape==False:
                 c_scrape = True
                 logger.info(f"scraping {site[0]}")
+                #!update citystate tuple
                 data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE), jsondata)
 
             elif source=="craigs" and c_scrape==True:
@@ -192,6 +193,7 @@ def scrape(neigh:str):
             else:
                 #every other site, scrape it normally
                 logger.info(f"scraping {site[0]} for {neigh}")
+                #! Update citystate tuple
                 data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
 
             #Take a lil nap.  Be nice to the servers!
