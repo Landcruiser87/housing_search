@@ -39,18 +39,18 @@ logger = logging.getLogger(__name__)
 
 
 AREAS = [
-    'North Center',    #
-    'North Park',      #
-    'Albany Park',     #
-    'Ravenswood',
-    'Roscoe Village',
-    'Lincoln Square',  #
-    'Irving Park',     #
-    'Portage Park',    #
-    'Mayfair',
-    'Budlong Woods',
-    'Avondale',           #New add
-    'Wicker Park'         #New add
+    # 'North Center',    #
+    # 'North Park',      #
+    # 'Albany Park',     #
+    # 'Ravenswood',
+    # 'Roscoe Village',
+    # 'Lincoln Square',  #
+    # 'Irving Park',     #
+    # 'Portage Park',    #
+    # 'Mayfair',
+    # 'Budlong Woods',
+    # 'Avondale',           #New add
+    # 'Wicker Park'         #New add
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
 
