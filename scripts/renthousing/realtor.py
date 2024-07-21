@@ -87,8 +87,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             baths = None
         if not "url" in locals():
             url = None
-        if not "addy" in locals():
-            addy = None
+        if not "address" in locals():
+            address = None
         if not "sqft" in locals():
             sqft = None
 
@@ -106,7 +106,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             date_pulled=current_time
         )
         listings.append(listing)
-
+        listingid = price = beds = sqft = baths = pets = url = address = current_time = None
     return listings
 
 def money_launderer(price:list)->float:

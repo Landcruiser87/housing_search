@@ -193,7 +193,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
             date_pulled=current_time
         )
         listings.append(listing)
-
+        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long =  None
     return listings
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tuple, jsondata:dict):

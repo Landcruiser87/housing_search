@@ -27,7 +27,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
@@ -43,18 +43,18 @@ logger = logging.getLogger(__name__)
 
 
 AREAS = [
+    'Mayfair',
     'Portage Park',    #
     'North Center',    #
     'North Park',      #
-    'Albany Park',     #
-    'Ravenswood',
-    'Roscoe Village',
-    'Lincoln Square',  #
-    'Irving Park',     #
-    'Mayfair',
-    'Budlong Woods',
-    'Avondale',           #New add
-    'Wicker Park'         #New add
+    # 'Albany Park',     #
+    # 'Ravenswood',
+    # 'Roscoe Village',
+    # 'Lincoln Square',  #
+    # 'Irving Park',     #
+    # 'Budlong Woods',
+    # 'Avondale',           #New add
+    # 'Wicker Park'         #New add
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
 
@@ -213,7 +213,7 @@ def scrape(neigh:str):
                     #pull the lat long, score it and store it. 
                     data = datacheck
                     del datacheck
-                    #Get lat longs for the address's
+                    #Get lat longs for the address's    
                     data = support.get_lat_long(data, (CITY, STATE), logger)
 
                     #If its chicago, do chicago things. 
@@ -266,8 +266,8 @@ def main():
  
     if newlistings:
         # support.save_data(jsondata)
-        # links_html = support.urlformat(newlistings)
-        # support.send_housing_email(links_html)
+        links_html = support.urlformat(newlistings)
+        support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
 
     else:

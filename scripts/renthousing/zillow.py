@@ -116,9 +116,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             address=addy,
             date_pulled=current_time    
         )
-
         listings.append(listing)
-
+        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     return listings
 
 def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):

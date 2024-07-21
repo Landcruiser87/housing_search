@@ -64,6 +64,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             addy = None
         if not "sqft" in locals():
             sqft = None
+        if not "lat" in locals():
+            lat = None
+        if not "long" in locals():
+            long = None
         
         listing = Propertyinfo(
             id=listingid,   
@@ -82,7 +86,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         )
 
         listings.append(listing)
-
+        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
+        
     return listings
 
 def money_launderer(price:int)->str:

@@ -32,7 +32,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             #Pull it from the end of the URL
             if not listingid:
                 listingid = url.split("/")[-2]
-        
+        else:
+            continue
         #grab the property info
         for search in card.find_all("div", class_="property-info"):
             #Grab price
@@ -71,7 +72,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
         #Janky way of making sure variables are filled if we missed any
         if not "listingid" in locals():
-            listingid = None
+            raise ValueError(f"Missing listing id for {url}")
+            continue
+
         if not "price" in locals():
             price = None
         if not "beds" in locals():
@@ -99,6 +102,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             date_pulled=current_time
         )
         listings.append(listing)
+        listingid = price = beds = sqft = baths = pets = url = addy = current_time = None
 
     return listings
 
