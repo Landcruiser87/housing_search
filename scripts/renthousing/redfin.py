@@ -85,10 +85,28 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
     return listings
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
+def money_launderer(price:list)->float:
+    """[Formats price to a single decimal k format]
+
+    Args:
+        price (list): [list of prices as strs]
+
+    Returns:
+        price (list): [list of prices as floats]
+    """	
+    if isinstance(price, str):
+        return float(price.replace("$", "").replace(",", ""))
+    return price
+
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
     #Check for spaces in the search neighborhood
-    CITY = citystate[0]
-    STATE = citystate[1]
+    CITY = srch_par[0].lower()
+    if CITY == "washington":
+        CITY = "washington dc"
+    STATE = srch_par[1]
+    minbeds = int(srch_par[2])
+    maxrent = int(srch_par[3])
+
     #First grab the map coordinates update our next request
  
     #BUG stupid neighborhood encodings. 
@@ -188,7 +206,9 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #! Update tprice and min beds
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,min-baths=2,dogs-allowed,air-conditioning' #,has-parking
+        #Bug.  they submit their max prices in decimal k.  ugh.  need to format
+
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent}k,min-beds=2,min-baths=2,dogs-allowed,air-conditioning' #,has-parking
 
     #Error Trapping
     else:
