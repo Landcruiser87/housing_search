@@ -20,11 +20,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     listings = []
     #Set the outer loop over each card returned. 
     # check the count
-    count = result.find("span", class_="result-count")
-    if count:
-        count = int("".join(x for x in count.text if x.isnumeric()))
-        if count < 1:
-            return "No results found"
+        #update - Don't need to check count anymore. Doing so beforehand
+        #Saving in case i'm wrong
+    # if pcount < 1:
+    #     return "No results found"
     
     for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
         #early terminate if the data-test key is in the underlying object
@@ -77,7 +76,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                     if "bd" in text and numtest:
                         beds = float("".join(x for x in text if x.isnumeric()))
                     elif "ba" in text and numtest:
-                        baths = float("".join(x for x in text if x.isnumeric()))
+                        baths = str("".join(x for x in text if x.isnumeric() or x == "."))
                     elif "sqft" in text and numtest:
                         sqft = float("".join(x for x in text if x.isnumeric()))
         pets = True
@@ -122,10 +121,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
     return listings
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
     #Check for spaces in the search neighborhood
-    CITY = citystate[0].lower()
-    STATE = citystate[1].lower()
+    CITY = srch_par[0].lower()
+    STATE = srch_par[1].lower()
+    minbeds = int(srch_par[2])
+    maxrent = int(srch_par[3])
+
     #First grab the map coordinates update our next request
     BASE_HEADERS = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -138,10 +140,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.split(" "))
         neigh = neigh.lower()
         url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
-    
+        srch_terms = f"{neigh} {CITY}, {STATE.upper()}"
+
     #Searchby ZipCode
     elif isinstance(neigh, int):
         url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals'
+        srch_terms = f"{neigh} {CITY}, {STATE.upper()}"
     
     #Error Trapping
     else:
@@ -171,7 +175,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #! Update tprice and min beds
     #Stipulate subparameters of search
     subparams = {
-        "usersSearchTerm":f"{neigh} {CITY}, {STATE.upper()}",
+        "usersSearchTerm":srch_terms,
         "mapBounds":map_coords,
         "filterState":{
             "isForRent"           :{"value":True},
@@ -182,14 +186,14 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isAuction"           :{"value":False},
             "isForSaleForeclosure":{"value":False},
             "isAllHomes"          :{"value":True},
-            "beds"                :{"min":2},
+            "beds"                :{"min":minbeds},
             "isApartmentOrCondo"  :{"value":False},
             "isApartment"         :{"value":False},
             "isCondo"             :{"value":False},
-            "mp"                  :{"max":2600},
+            "mp"                  :{"max":maxrent},
             "ac"                  :{"value":True},
             # "parka"               :{"value":True},#I think searching by parking too is limiting my results.  Taking it off for now
-            "onlyRentalLargeDogsAllowed":{"value":True},
+            "onlyRentalLargeDogsAllowed":{"value":True}, #Uncomment depending on doggo preference
             "onlyRentalSmallDogsAllowed":{"value":True}
         },
         "isListVisible":True,
@@ -231,7 +235,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         results = bs4ob.find("div", class_="result-list-container")
         if results:
             if results.get("id") =='grid-search-results':
-                property_listings = get_listings(results, neigh, source, Propertyinfo)
+                resultlist = results.find("ul", class_=(lambda x:x and x.startswith("List")))
+                property_listings = get_listings(resultlist, neigh, source, Propertyinfo)
                 logger.info(f'{len(property_listings)} listings returned from {source}')
                 return property_listings
         
