@@ -74,15 +74,20 @@ SOURCES = {
 # top_price = 4000
 # home = "home/townhome"
 
-# Define City / State
-CITY = "Chicago"
-STATE = "IL"
+# Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
+CITY    = "Chicago"
+STATE   = "IL"
+MINBEDS = 2
+MAXRENT = 4000
+DOGS    = True
 
-# SEARCH_PARAMS = {
-#     "pricemax" : 2600,
-#     "hometype" : "All", #Not sure how to make this one flexible across platforms
-#     "minbeds" : 2
-# }
+SEARCH_PARAMS = (
+    CITY,
+    STATE,
+    MINBEDS,
+    MAXRENT,
+    DOGS
+)
 
 # AREAS = [
 # 20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
