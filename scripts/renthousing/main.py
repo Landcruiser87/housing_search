@@ -75,8 +75,8 @@ SOURCES = {
 # home = "home/townhome"
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Chicago"
-STATE   = "IL"
+CITY    = "Washington"
+STATE   = "DC"
 MINBEDS = 2
 MAXRENT = 4000
 DOGS    = True
@@ -89,12 +89,9 @@ SEARCH_PARAMS = (
     DOGS
 )
 
-# AREAS = [
-# 20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
-#]
-
-#IDEA - Put city and state in all search params.  
-    # Simplifies inputs to neighscrape functions
+AREAS = [
+20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
+]
 
 #Define dataclass container
 @dataclass
@@ -189,8 +186,7 @@ def scrape(neigh:str):
             if source=="craigs" and c_scrape==False:
                 c_scrape = True
                 logger.info(f"scraping {site[0]}")
-                #!update citystate tuple
-                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE), jsondata)
+                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, SEARCH_PARAMS, jsondata)
 
             elif source=="craigs" and c_scrape==True:
                 continue
@@ -198,8 +194,7 @@ def scrape(neigh:str):
             else:
                 #every other site, scrape it normally
                 logger.info(f"scraping {site[0]} for {neigh}")
-                #! Update citystate tuple
-                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
+                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
             support.sleepspinner(np.random.randint(3,8), f'taking a nap at {site[0]}')

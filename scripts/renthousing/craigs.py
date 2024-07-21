@@ -34,6 +34,8 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     links = []
     if CITY =='chicago':
         url_pref = f"https://{CITY}.craigslist.org/chc"
+    elif CITY == 'washington':
+        url_pref = f"https://washingtondc.craigslist.org/"
     else:
         url_pref = f"https://{CITY}.craigslist.org/"
 
@@ -43,7 +45,7 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
             links.append(url)
     return links
     
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, citystate:tuple, jsondata:dict)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, srch_par:tuple, jsondata:dict)->list:
     """_summary_
 
     Args:
@@ -59,9 +61,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         properties (list[Propertyinfo]): [all the links in the summary page]
     """			
 
-    CITY = citystate[0].lower()
-    STATE = citystate[1].lower()
-
+    CITY = srch_par[0].lower()
+    if CITY == "washington":
+        CITY = "washingtondc"
+    
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -193,8 +196,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
 
     return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:tuple, jsondata:dict):
-    CITY = citystate[0].lower()
+def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tuple, jsondata:dict):
+    CITY = srch_par[0].lower()
+    if CITY == "washington":
+        CITY = "washingtondc"
+
+    minbeds = int(srch_par[2])
+    maxrent = int(srch_par[3])
 
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -221,8 +229,8 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
         # ("postedToday", "1"),
         ("housing_type",["10", "3", "4", "5", "6", "8", "9"]),
         ("min_price", "500"),
-        ("max_price", "2600"),
-        ("min_bedrooms", "2"),
+        ("max_price", maxrent),
+        ("min_bedrooms", minbeds),
         ("min_bathrooms", "1"),
         ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),
@@ -231,12 +239,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
         # ("sale_date", "all dates"), #left over param for buying 
     )
 
-    #TODO - craig update city
+    #[x] - craig update city
         #Need a base dictionary of craiglist citys and the city codes they use. 
         #That way we can format the links properly by city. 
+        #Or just hardcode DC because that dictionary would be huge.
+        #?Could input it as a separate function in the script. 
 
     if CITY == "chicago":
         url = f'https://{CITY}.craigslist.org/search/chc/apa'
+    
+    elif CITY == 'washington':
+        url = f'https://washingtondc.craigslist.org/search/doc/apa'
+
     else:
         url = f'https://{CITY}.craigslist.org/search/apa'
 
@@ -262,7 +276,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate:t
     results = bs4ob.find_all("li", class_="cl-static-search-result")
     if results:
         if len(results) > 0:
-            property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, citystate, jsondata)
+            property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, srch_par, jsondata)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
     
