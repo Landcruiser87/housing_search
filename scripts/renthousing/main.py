@@ -37,34 +37,32 @@ logger = logging.getLogger(__name__)
 #input custom area's here. Uncomment whichever way you want to search
 # sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
 
-AREAS = [
-20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
-]
-
-
 # AREAS = [
-#     'Portage Park',    #
-#     'North Center',    #
-#     'North Park',      #
-#     'Albany Park',     #
-#     'Ravenswood',
-#     'Roscoe Village',
-#     'Lincoln Square',  #
-#     'Irving Park',     #
-#     'Mayfair',
-#     'Budlong Woods',
-#     'Avondale',           #New add
-#     'Wicker Park'         #New add
-#     # 'Jefferson Park',   #too far out
-#     # 'West Ridge',       #too far out
-
-#     # 'Rogers Park',
-#     # 'West Town', 
-#     # 'Humboldt Park'
-#     # 'Ravenswood Gardens',
+# 20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
 # ]
 
 
+AREAS = [
+    'Portage Park',    #
+    'North Center',    #
+    'North Park',      #
+    'Albany Park',     #
+    'Ravenswood',
+    'Roscoe Village',
+    'Lincoln Square',  #
+    'Irving Park',     #
+    'Mayfair',
+    'Budlong Woods',
+    'Avondale',           #New add
+    'Wicker Park'         #New add
+    # 'Jefferson Park',   #too far out
+    # 'West Ridge',       #too far out
+
+    # 'Rogers Park',
+    # 'West Town', 
+    # 'Humboldt Park'
+    # 'Ravenswood Gardens',
+]
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
@@ -79,18 +77,18 @@ SOURCES = {
 # minbed = 2
 # top_price = 4000
 # home = "home/townhome"
-CITY    = "Washington"
-STATE   = "DC"
-MINBEDS = 2
-MAXRENT = 3000
-DOGS    = True
+# CITY    = "Washington"
+# STATE   = "DC"
+# MINBEDS = 2
+# MAXRENT = 3000
+# DOGS    = True
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-# CITY    = "Chicago"
-# STATE   = "IL"
-# MINBEDS = 2
-# MAXRENT = 2600
-# DOGS    = True
+CITY    = "Chicago"
+STATE   = "IL"
+MINBEDS = 2
+MAXRENT = 2600
+DOGS    = True
 
 SEARCH_PARAMS = (
     CITY,
@@ -180,7 +178,7 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["zillow", "redfin", "realtor", "craigs", "apartments"]
+    sites = ["apartments", "zillow", "redfin", "realtor", "craigs"]
     # shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
@@ -267,9 +265,9 @@ def main():
     # Send gmail alerting of new properties
  
     if newlistings:
-        support.save_data(jsondata)
-        links_html = support.urlformat(newlistings)
-        support.send_housing_email(links_html)
+        # support.save_data(jsondata)
+        # links_html = support.urlformat(newlistings)
+        # support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
 
     else:

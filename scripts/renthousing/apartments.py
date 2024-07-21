@@ -22,6 +22,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
         #Grab the id
         listingid = card.get("data-listingid")
+        #BUG - Still pulling in nulls for some listing ids on apartments. 
+            #Not sure why but it only happens every once in a while.
 
         #First grab the link
         if card.get("data-url"):
@@ -30,7 +32,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             #Pull it from the end of the URL
             if not listingid:
                 listingid = url.split("/")[-2]
-
+        
         #grab the property info
         for search in card.find_all("div", class_="property-info"):
             #Grab price
