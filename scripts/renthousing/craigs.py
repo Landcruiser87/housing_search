@@ -34,8 +34,8 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     links = []
     if CITY =='chicago':
         url_pref = f"https://{CITY}.craigslist.org/chc"
-    elif CITY == 'washington':
-        url_pref = f"https://washingtondc.craigslist.org/"
+    elif CITY == 'washingtondc':
+        url_pref = f"https://washingtondc.craigslist.org/doc"
     else:
         url_pref = f"https://{CITY}.craigslist.org/"
 
@@ -245,10 +245,10 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
         #Or just hardcode DC because that dictionary would be huge.
         #?Could input it as a separate function in the script. 
 
-    if CITY == "chicago":
+    if CITY == 'chicago':
         url = f'https://{CITY}.craigslist.org/search/chc/apa'
     
-    elif CITY == 'washington':
+    elif CITY == 'washingtondc':
         url = f'https://washingtondc.craigslist.org/search/doc/apa'
 
     else:

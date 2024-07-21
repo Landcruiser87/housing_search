@@ -173,8 +173,8 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["zillow", "apartments", "redfin", "realtor", "craigs"]
-    shuffle(sites) #Keep em guessin!
+    sites = ["realtor", "craigs", "apartments", "redfin", "zillow"]
+    # shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
         if site:
@@ -219,7 +219,7 @@ def scrape(neigh:str):
 
                         #Score them according to chicago crime data
                         data = support.crime_score(data, logger)
-                    # if CITY == 'DC':
+                    # elif CITY == 'DC':
                         # pass
                         #TODO - Build DC params
                     #Add the listings to the jsondata dict. 

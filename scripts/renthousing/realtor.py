@@ -122,20 +122,23 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, citystate):
-    CITY = citystate[0]
-    STATE = citystate[1].upper()
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
+    CITY = srch_par[0]
+    STATE = srch_par[1].upper()
+    minbeds = int(srch_par[2])
+    maxrent = int(srch_par[3])
+
     #Search by neighborhood
     if isinstance(neigh, str):
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         #! Update tprice and min beds
-        url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly/features-ca"#g1
+        url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{minbeds}/price-na-{maxrent}/dog-friendly/features-ca"#g1
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #! Update tprice and min beds
-        url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly/features-ca"#g1
+        url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{minbeds}/price-na-{maxrent}/dog-friendly/features-ca"#g1
     
     #Error Trapping
     else:
