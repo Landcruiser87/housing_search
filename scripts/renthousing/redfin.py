@@ -44,7 +44,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         #Bathrooms weren't in the json.  So we'll grab those manually
         for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
             baths = subsearch.text
-            baths = "".join(x for x in baths if x.isnumeric())
+            baths = "".join(x for x in baths if x.isnumeric() or x == ".")
             break
         
         pets = True
@@ -85,18 +85,25 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
     return listings
 
-def money_launderer(price:list)->float:
+def money_launderer(price:int)->str:
     """[Formats price to a single decimal k format]
 
     Args:
-        price (list): [list of prices as strs]
+        price (int): [price as an int]
 
     Returns:
-        price (list): [list of prices as floats]
-    """	
-    if isinstance(price, str):
-        return float(price.replace("$", "").replace(",", ""))
-    return price
+        price (str): [price as a str]
+    """
+    if isinstance(price, int):
+        sprice = str(price)
+        if sprice[1] != "0":
+            fprice = sprice[0] + "." + sprice[1] + "k"
+        else:
+            fprice = sprice[0] + "k"
+        return fprice
+    
+    else:
+        return price
 
 def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
     #Check for spaces in the search neighborhood
@@ -105,92 +112,84 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         CITY = "washington dc"
     STATE = srch_par[1]
     minbeds = int(srch_par[2])
-    maxrent = int(srch_par[3])
-
-    #First grab the map coordinates update our next request
- 
-    #BUG stupid neighborhood encodings. 
-        #Beeeeecause redfin dumps their own numerical zip for neighborhoods, I need to make
-        #two requests when searching redfin.  
-        #1. Make a request to see what neighborhood code goes with the search term. 
-        #2. Request the appropriate neigh with paramaterized search. 
+    maxrent = money_launderer(int(srch_par[3]))
     
-    #BUG - Don't have a way to set these programatically.  You need to search for the
-    #neighborhood id so you need to set the market, region_id, region_type, and
-    #lat long to use this
-    SH_PARAMS = {
-        "location": f"{neigh}",
-        "start": 0,
-        "count": 10,
-        "v": 2,
-        "market": f"{CITY.lower()}",
-        "al": 1,
-        "iss": "false",
-        "ooa": "true",
-        "mrs": "false",
-        "region_id": 29470,
-        "region_type": 6,
-        "lat": 41.833670000000005,
-        "lng": -87.73184,
-        "includeAddressInfo": "false"
-    }
-    # DL_URL = 'https://www.redfin.com/stingray/do/gis-search'
-    # SH_PARAMS = {
-    # 	'al': 1,
-    # 	'isSearchFormParamsDefault': 'false',
-    # 	'isRentals': 'true',
-    # 	'lpp': 50,
-    # 	'market': 'Chicago',
-    # 	'mpt': 99,
-    # 	'no_outline': 'false',
-    # 	'num_homes': 500,
-    # 	'page_number': 1,
-    # 	'region_id': 29470,  #Replace this with your city
-    # 	'region_type': 6,	 #I think 6 means neighborhood?
-    # 	'sf': [1,2,5,6,7],
-    # 	'sp': 'true',
-    # 	'status': 1,
-    # 	'uipt': [1,3],
-    # 	'v': 8,
-    # 	# 'render': 'csv'			#
-    # }
-  
     BASE_HEADERS = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
         'origin':'https://www.redfin.com',
     }
-    # https://www.redfin.com/stingray/api/v1/search/rentals
- 
-    #Search by neighborhood
-    if isinstance(neigh, str) or isinstance(neigh, int):
-        url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
-        # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
-    #TODO - zipcode
-        #Check that the above link will work for zip code too.  It should but I'm not sure
-    # #Searchby ZipCode
-    # elif isinstance(neigh, int):
-    # 	url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
-
-    #Error Trapping
-    else:
-        logging.critical("Inproper input for redfin, moving to next site")
-        return
-
-    response = requests.get(url_map, headers=BASE_HEADERS)
-    
-    # If there's an error, log it and return no data for that site
-    if response.status_code != 200:
-        logger.warning("The way is shut!")
-        logger.warning(f'Status code: {response.status_code}')
-        logger.warning(f'Reason: {response.reason}')
-        return None
-
-    #Always take naps
-    support.sleepspinner(np.random.randint(4, 8), "Mapping request nap")
-     
     #Search by neighborhood
     if isinstance(neigh, str):
+            #First grab the map coordinates update our next request
+ 
+        #BUG stupid neighborhood encodings. 
+            #Beeeeecause redfin dumps their own numerical zip for neighborhoods, I need to make
+            #two requests when searching redfin by string
+            #1. Make a request to see what neighborhood code goes with the search term. 
+            #2. Request the appropriate neigh with paramaterized search. 
+        
+        SH_PARAMS = {
+            "location": f"{neigh}",
+            "start": 0,
+            "count": 10,
+            "v": 2,
+            "market": f"{CITY.lower()}",
+            "al": 1,
+            "iss": "false",
+            "ooa": "true",
+            "mrs": "false",
+            "region_id": 29470,
+            "region_type": 6,
+            "lat": 41.833670000000005,
+            "lng": -87.73184,
+            "includeAddressInfo": "false"
+        }
+        # DL_URL = 'https://www.redfin.com/stingray/do/gis-search'
+        # SH_PARAMS = {
+        # 	'al': 1,
+        # 	'isSearchFormParamsDefault': 'false',
+        # 	'isRentals': 'true',
+        # 	'lpp': 50,
+        # 	'market': 'Chicago',
+        # 	'mpt': 99,
+        # 	'no_outline': 'false',
+        # 	'num_homes': 500,
+        # 	'page_number': 1,
+        # 	'region_id': 29470,  #Replace this with your city
+        # 	'region_type': 6,	 #I think 6 means neighborhood?
+        # 	'sf': [1,2,5,6,7],
+        # 	'sp': 'true',
+        # 	'status': 1,
+        # 	'uipt': [1,3],
+        # 	'v': 8,
+        # 	# 'render': 'csv'			#
+        # }
+
+        # https://www.redfin.com/stingray/api/v1/search/rentals
+    
+        #Search by neighborhood
+        if isinstance(neigh, str):
+            url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
+            # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
+
+        #Error Trapping
+        else:
+            logging.critical("Inproper input for redfin, moving to next site")
+            return
+
+        response = requests.get(url_map, headers=BASE_HEADERS)
+        
+        # If there's an error, log it and return no data for that site
+        if response.status_code != 200:
+            logger.warning("The way is shut!")
+            logger.warning(f'Status code: {response.status_code}')
+            logger.warning(f'Reason: {response.reason}')
+            return None
+
+        #Always take naps
+        support.sleepspinner(np.random.randint(4, 8), "Map coords request nap")
+        
         #Look up neighborhood id from autocomplete search query
         temp_dict = json.loads(response.text[4:])
         for neighborhood in temp_dict["payload"]['sections'][0]["rows"]:
@@ -201,14 +200,14 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         #! Update tprice and min beds
-        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed,air-conditioning'#,has-parking
+        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent},min-beds={minbeds},dogs-allowed,air-conditioning'#,has-parking
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #! Update tprice and min beds
         #Bug.  they submit their max prices in decimal k.  ugh.  need to format
 
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent}k,min-beds=2,min-baths=2,dogs-allowed,air-conditioning' #,has-parking
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent},min-beds={minbeds},dogs-allowed,air-conditioning' #,has-parking
 
     #Error Trapping
     else:
@@ -243,7 +242,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
                 logger.warning("The soups hath failed you")		
     else:
         logger.warning("No listings returned on Redfin.  Moving to next site")
-
 
 #Notes
 # https://github.com/ryansherby/RedfinScraper/blob/main/redfin_scraper/core/redfin_scraper.py

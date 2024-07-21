@@ -39,18 +39,18 @@ logger = logging.getLogger(__name__)
 
 
 AREAS = [
-    # 'North Center',    #
-    # 'North Park',      #
-    # 'Albany Park',     #
-    # 'Ravenswood',
-    # 'Roscoe Village',
-    # 'Lincoln Square',  #
-    # 'Irving Park',     #
-    # 'Portage Park',    #
-    # 'Mayfair',
-    # 'Budlong Woods',
-    # 'Avondale',           #New add
-    # 'Wicker Park'         #New add
+    'Portage Park',    #
+    'North Center',    #
+    'North Park',      #
+    'Albany Park',     #
+    'Ravenswood',
+    'Roscoe Village',
+    'Lincoln Square',  #
+    'Irving Park',     #
+    'Mayfair',
+    'Budlong Woods',
+    'Avondale',           #New add
+    'Wicker Park'         #New add
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
 
@@ -59,6 +59,12 @@ AREAS = [
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
 ]
+
+
+# AREAS = [
+# 20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
+# ]
+
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
@@ -73,12 +79,18 @@ SOURCES = {
 # minbed = 2
 # top_price = 4000
 # home = "home/townhome"
+# CITY    = "Washington"
+# STATE   = "DC"
+# MINBEDS = 2
+# MAXRENT = 4000
+# DOGS    = True
+
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Washington"
-STATE   = "DC"
+CITY    = "Chicago"
+STATE   = "IL"
 MINBEDS = 2
-MAXRENT = 4000
+MAXRENT = 2600
 DOGS    = True
 
 SEARCH_PARAMS = (
@@ -88,10 +100,6 @@ SEARCH_PARAMS = (
     MAXRENT,
     DOGS
 )
-
-AREAS = [
-20003, 20007, 20008, 20009, 22201, 22207, 22101, 200057, 20015, 20016
-]
 
 #Define dataclass container
 @dataclass
@@ -249,7 +257,7 @@ def main():
         logger.warning("No historical data found")
         
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
     for neigh in AREAS:
         scrape(neigh)
 
