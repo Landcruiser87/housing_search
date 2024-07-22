@@ -72,11 +72,8 @@ SOURCES = {
     "redfin"    :("www.redfin.com"    , redfin)
 }
 
-# 
 # DC test data notes
-# minbed = 2
-# top_price = 4000
-# home = "home/townhome"
+# home    = "home/townhome"
 # CITY    = "Washington"
 # STATE   = "DC"
 # MINBEDS = 2
@@ -247,8 +244,8 @@ def main():
     c_scrape = False
     newlistings = []
     fp = "./data/rental_list.json"
-    #Load historical listings JSON
 
+    #Load rental_list.json
     if exists(fp):
         jsondata = support.load_historical(fp)
         logger.info("historical data loaded")

@@ -9,13 +9,16 @@ import support
 from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
-    """[Gets the list of links to the individual postings]
+    """[Ingest HTML of summary page for listings info]
 
     Args:
-        bs4ob ([BeautifulSoup object]): [html of realtor page]
+        result (BeautifulSoup object): html of redfin page
+        neigh (str): neighorhood being searched
+        source (str): Source website
+        Propertyinfo (dataclass) : Dataclass for housing individual listings
 
     Returns:
-        properties (list[Propertyinfo]): [all the links in the summary page]
+        listings (list): [List of dataclass objects]
     """
     listings = []
     #Set the outer loop over each card returned. 

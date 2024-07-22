@@ -22,7 +22,8 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     """[Gets the list of links to the individual postings]
 
     Args:
-        bs4ob ([BeautifulSoup object]): [html of craigslist summary page]
+        bs4ob (BeautifulSoup): html of craigslist summary page
+        CITY (str): city being searched
 
     Returns:
         links (list): [all the links in the summary page]
@@ -46,7 +47,7 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     return links
     
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, srch_par:tuple, jsondata:dict)->list:
-    """_summary_
+    """[Scrapes individual pages for listing information]
 
     Args:
         result (BeautifulSoup): Search Result
@@ -54,12 +55,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         source (str): What site is being scraped
         Propertyinfo (dataclass): Custom data object
         logger (logging.logger): logger for logging
-        citystate (tuple): Tuple of city/state
+        srch_par (tuple): Tuple of search parameters
         jsondata (dict): Data uploaded from rental_list.json
 
     Returns:
-        properties (list[Propertyinfo]): [all the links in the summary page]
-    """			
+        properties (list): [List of Propertyinfo dataclass objects]
+    """
 
     CITY = srch_par[0].lower()
     if CITY == "washington":
@@ -197,6 +198,19 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
     return listings
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tuple, jsondata:dict):
+    """Outer scraping function for script
+
+    Args:
+        neigh (str): Neighborhood zip to be scraped
+        source (str): Website we're searching
+        logger (logging): For all the logging
+        Propertyinfo (dataclass): Custom data object
+        srch_par (tuple): Tuple of search parameters
+        jsondata (dict): Data uploaded from rental_list.json
+
+    Returns:
+        property_listings (list): List of PropertyInfo dataclasses
+    """    
     CITY = srch_par[0].lower()
     if CITY == "washington":
         CITY = "washingtondc"
