@@ -27,7 +27,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
@@ -38,10 +38,11 @@ logger = logging.getLogger(__name__)
 # sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
 
 # AREAS = [
-# 20003, 20007, 20008, #20009, 22201, 22207, 22101, 200057, 20015, 20016
+# 20003, 20007, 20008, 20009,  22207, 20057, 20015, 20016
+# #Problem zips 22201,22101 - In Arlington.  Need to run arlington separately
 # ]
 
-#
+
 AREAS = [
     'Mayfair',
     'Portage Park',    #
@@ -265,7 +266,7 @@ def main():
     # Send gmail alerting of new properties
  
     if newlistings:
-        # support.save_data(jsondata)
+        support.save_data(jsondata)
         links_html = support.urlformat(newlistings)
         support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
