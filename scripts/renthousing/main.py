@@ -41,7 +41,7 @@ logger = logging.getLogger(__name__)
 # 20003, 20007, 20008, #20009, 22201, 22207, 22101, 200057, 20015, 20016
 # ]
 
-
+#
 AREAS = [
     'Mayfair',
     'Portage Park',    #
