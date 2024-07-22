@@ -53,8 +53,8 @@ AREAS = [
     'Lincoln Square',  #
     'Irving Park',     #
     'Budlong Woods',
-    'Avondale',           #New add
-    'Wicker Park'         #New add
+    'Avondale',        #    #New add
+    'Wicker Park'      #    #New add
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
 
