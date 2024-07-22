@@ -122,8 +122,8 @@ def money_launderer(price:list)->float:
 def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
     CITY = srch_par[0].lower()
     STATE = srch_par[1].lower()
-    minbeds = int(srch_par[2])
-    maxrent = int(srch_par[3])
+    MINBEDS = int(srch_par[2])
+    MAXRENT = int(srch_par[3])
 
     #Search by neighborhood
     if isinstance(neigh, str):
@@ -131,11 +131,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{minbeds}-bedrooms-1705-to-{maxrent}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1705-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{minbeds}-bedrooms-1705-to-{maxrent}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1705-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
     
     #Error Trapping
     else:

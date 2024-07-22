@@ -201,8 +201,8 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     if CITY == "washington":
         CITY = "washingtondc"
 
-    minbeds = int(srch_par[2])
-    maxrent = int(srch_par[3])
+    MINBEDS = int(srch_par[2])
+    MAXRENT = int(srch_par[3])
 
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -229,8 +229,8 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
         # ("postedToday", "1"),
         ("housing_type",["10", "3", "4", "5", "6", "8", "9"]),
         ("min_price", "500"),
-        ("max_price", maxrent),
-        ("min_bedrooms", minbeds),
+        ("max_price", MAXRENT),
+        ("min_bedrooms", MINBEDS),
         ("min_bathrooms", "1"),
         ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),

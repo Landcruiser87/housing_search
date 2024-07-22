@@ -116,8 +116,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     if CITY == "washington":
         CITY = "washington dc"
     STATE = srch_par[1]
-    minbeds = int(srch_par[2])
-    maxrent = money_launderer(int(srch_par[3]))
+    MINBEDS = int(srch_par[2])
+    MAXRENT = money_launderer(int(srch_par[3]))
     
     BASE_HEADERS = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
@@ -205,14 +205,14 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         #! Update tprice and min beds
-        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent},min-beds={minbeds},dogs-allowed,air-conditioning'#,has-parking
+        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #! Update tprice and min beds
         #Bug.  they submit their max prices in decimal k.  ugh.  need to format
 
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={maxrent},min-beds={minbeds},dogs-allowed,air-conditioning' #,has-parking
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
 
     #Error Trapping
     else:

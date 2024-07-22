@@ -124,8 +124,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #Check for spaces in the search neighborhood
     CITY = srch_par[0].lower()
     STATE = srch_par[1].lower()
-    minbeds = int(srch_par[2])
-    maxrent = int(srch_par[3])
+    MINBEDS = int(srch_par[2])
+    MAXRENT = int(srch_par[3])
 
     #First grab the map coordinates update our next request
     BASE_HEADERS = {
@@ -185,11 +185,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isAuction"           :{"value":False},
             "isForSaleForeclosure":{"value":False},
             "isAllHomes"          :{"value":True},
-            "beds"                :{"min":minbeds},
+            "beds"                :{"min":MINBEDS},
             "isApartmentOrCondo"  :{"value":False},
             "isApartment"         :{"value":False},
             "isCondo"             :{"value":False},
-            "mp"                  :{"max":maxrent},
+            "mp"                  :{"max":MAXRENT},
             "ac"                  :{"value":True},
             # "parka"               :{"value":True},#I think searching by parking too is limiting my results.  Taking it off for now
             "onlyRentalLargeDogsAllowed":{"value":True}, #Uncomment depending on doggo preference
