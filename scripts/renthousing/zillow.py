@@ -21,12 +21,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         listings (list): [List of dataclass objects]
     """
     listings = []
-    #Set the outer loop over each card returned. 
-    # check the count
-        #update - Don't need to check count anymore. Doing so beforehand
-        #Saving in case i'm wrong
-    # if pcount < 1:
-    #     return "No results found"
     
     for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
         #early terminate if the data-test key is in the underlying object
