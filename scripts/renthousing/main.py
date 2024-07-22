@@ -27,7 +27,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
@@ -58,7 +58,6 @@ AREAS = [
     'Wicker Park'      #    #New add
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
-
     # 'Rogers Park',
     # 'West Town', 
     # 'Humboldt Park'
@@ -179,7 +178,8 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["apartments", "zillow", "redfin", "realtor", "craigs"]
+    #TODO - Add homes.com as well (CoStar - same architecture as apartments)
+    sites = ["apartments", "zillow", "redfin", "realtor", "craigs"] 
     shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
