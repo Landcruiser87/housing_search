@@ -62,7 +62,6 @@ AREAS = [
     # 'West Town', 
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
-    #
 ]
 
 SOURCES = {
