@@ -245,7 +245,6 @@ def main():
     newlistings = []
     fp = "./data/rental_list.json"
 
-    #Quick test
     #Load rental_list.json
     if exists(fp):
         jsondata = support.load_historical(fp)
@@ -253,7 +252,7 @@ def main():
     else:
         jsondata = {}
         logger.warning("No historical data found")
-        
+
     #Shuffle and search the neighborhoods/zips
     shuffle(AREAS)
     for neigh in AREAS:

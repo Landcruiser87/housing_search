@@ -198,8 +198,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
     return listings
 
 def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tuple, jsondata:dict):
-    """Outer scraping function for script
-
+    """[Outer scraping function to set up request pulls]
     Args:
         neigh (str): Neighborhood zip to be scraped
         source (str): Website we're searching

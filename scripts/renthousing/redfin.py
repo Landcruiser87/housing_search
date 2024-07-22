@@ -114,6 +114,18 @@ def money_launderer(price:int)->str:
         return price
 
 def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
+    """[Outer scraping function to set up request pulls]
+
+    Args:
+        neigh (Union[str,int]): Neighborhood or zipcode searched
+        source (str): What site is being scraped
+        logger (logging.logger): logger for Kenny loggin
+        Propertyinfo (dataclass): Custom data object
+        srch_par (tuple): Tuple of search parameters
+
+    Returns:
+        property_listings (list): List of dataclass objects
+    """    
     #Check for spaces in the search neighborhood
     CITY = srch_par[0].lower()
     if CITY == "washington":

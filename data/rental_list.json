@@ -5444,25 +5444,6 @@
       "property_d_score": 0.13
     }
   },
-  "null": {
-    "source": "www.apartments.com",
-    "price": 2600.0,
-    "neigh": "mayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/1129-w-oakdale-ave-chicago-il/8910g20/",
-    "address": "1129 W Oakdale Ave, Chicago, IL",
-    "date_pulled": "07-20-2024_08-39-15",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": "1200 sq ft",
-    "lat": 41.93504865,
-    "long": -87.65758011402173,
-    "L_dist": [
-      "Wellington",
-      0.23
-    ],
-    "crime_sc": {}
-  },
   "191574912": {
     "source": "www.redfin.com",
     "price": 2450.0,
@@ -5488,33 +5469,6 @@
       "theft_score": 36.85,
       "violence_score": 28.22,
       "property_d_score": 0.2
-    }
-  },
-  "null": {
-    "source": "www.apartments.com",
-    "price": 2600.0,
-    "neigh": "mayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/1129-w-oakdale-ave-chicago-il/8910g20/",
-    "address": "1129 W Oakdale Ave, Chicago, IL",
-    "date_pulled": "07-20-2024_18-14-56",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": "1200 sq ft",
-    "lat": 41.93504865,
-    "long": -87.65758011402173,
-    "L_dist": [
-      "Wellington",
-      0.23
-    ],
-    "crime_sc": {
-      "drug_score": 2.86,
-      "gun_score": 6.73,
-      "murder_score": 1.52,
-      "perv_score": 1.43,
-      "theft_score": 43.74,
-      "violence_score": 24.59,
-      "property_d_score": 0.13
     }
   }
 }
