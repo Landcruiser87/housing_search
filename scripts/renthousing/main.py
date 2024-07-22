@@ -37,32 +37,32 @@ logger = logging.getLogger(__name__)
 #input custom area's here. Uncomment whichever way you want to search
 # sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
 
-AREAS = [
-20003, 20007, 20008, #20009, 22201, 22207, 22101, 200057, 20015, 20016
-]
-
-
 # AREAS = [
-#     'Mayfair',
-#     'Portage Park',    #
-#     'North Center',    #
-#     'North Park',      #
-#     # 'Albany Park',     #
-#     # 'Ravenswood',
-#     # 'Roscoe Village',
-#     # 'Lincoln Square',  #
-#     # 'Irving Park',     #
-#     # 'Budlong Woods',
-#     # 'Avondale',           #New add
-#     # 'Wicker Park'         #New add
-#     # 'Jefferson Park',   #too far out
-#     # 'West Ridge',       #too far out
-
-#     # 'Rogers Park',
-#     # 'West Town', 
-#     # 'Humboldt Park'
-#     # 'Ravenswood Gardens',
+# 20003, 20007, 20008, #20009, 22201, 22207, 22101, 200057, 20015, 20016
 # ]
+
+
+AREAS = [
+    'Mayfair',
+    'Portage Park',    #
+    'North Center',    #
+    'North Park',      #
+    'Albany Park',     #
+    'Ravenswood',
+    'Roscoe Village',
+    'Lincoln Square',  #
+    'Irving Park',     #
+    'Budlong Woods',
+    'Avondale',           #New add
+    'Wicker Park'         #New add
+    # 'Jefferson Park',   #too far out
+    # 'West Ridge',       #too far out
+
+    # 'Rogers Park',
+    # 'West Town', 
+    # 'Humboldt Park'
+    # 'Ravenswood Gardens',
+]
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
@@ -77,18 +77,18 @@ SOURCES = {
 # minbed = 2
 # top_price = 4000
 # home = "home/townhome"
-CITY    = "Washington"
-STATE   = "DC"
-MINBEDS = 2
-MAXRENT = 4000
-DOGS    = True
+# CITY    = "Washington"
+# STATE   = "DC"
+# MINBEDS = 2
+# MAXRENT = 4000
+# DOGS    = True
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-# CITY    = "Chicago"
-# STATE   = "IL"
-# MINBEDS = 2
-# MAXRENT = 2600
-# DOGS    = True
+CITY    = "Chicago"
+STATE   = "IL"
+MINBEDS = 2
+MAXRENT = 2600
+DOGS    = True
 
 SEARCH_PARAMS = (
     CITY,
