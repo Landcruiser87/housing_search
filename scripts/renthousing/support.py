@@ -101,6 +101,9 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
         #Early termination to the loop if lat/long already exist
         if isinstance(listing.lat, float) and isinstance(listing.long, float):
             continue
+        #Or if the listing doesn't have an address????  Come on people.
+        if not listing.address:
+            continue
 
         sleepspinner(np.random.randint(2, 6), "searching lat/long")
 

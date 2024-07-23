@@ -10,7 +10,7 @@ from os.path import exists
 from random import shuffle
 
 #Import supporting files
-import realtor, zillow, apartments, craigs, redfin, support
+import realtor, zillow, apartments, craigs, redfin, homes, support
 
 #Format logger and load configuration
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
@@ -38,24 +38,24 @@ logger = logging.getLogger(__name__)
 # sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
 
 # AREAS = [
-# 20003, 20007, 20008, 20009,  22207, 20057, 20015, 20016
-# #Problem zips 22201,22101 - In Arlington.  Need to run arlington separately
+# 20003, 20007, 20008, 20009, 20057, 20015, 20016
+# #Problem zips 22201,22101, 22207 - In Arlington.  Need to run arlington separately
 # ]
 
 
 AREAS = [
-    'Mayfair',
+    'Albany Park',     #
     'Portage Park',    #
     'North Center',    #
     'North Park',      #
-    'Albany Park',     #
-    'Ravenswood',
-    'Roscoe Village',
     'Lincoln Square',  #
     'Irving Park',     #
-    'Budlong Woods',
     'Avondale',        #    #New add
     'Wicker Park'      #    #New add
+    'Ravenswood',
+    'Roscoe Village',
+    'Mayfair',
+    'Budlong Woods'
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
     # 'Rogers Park',
@@ -69,7 +69,8 @@ SOURCES = {
     "apartments":("www.apartments.com", apartments),
     "craigs"    :("www.craiglist.org" , craigs),
     "zillow"    :("www.zillow.com"    , zillow),
-    "redfin"    :("www.redfin.com"    , redfin)
+    "redfin"    :("www.redfin.com"    , redfin),
+    "homes"     :("www.homes.com"     , homes)
 }
 
 # DC test data notes
@@ -175,8 +176,7 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    #TODO - Add homes.com as well (CoStar - same architecture as apartments)
-    sites = ["apartments", "zillow", "redfin", "realtor", "craigs"] 
+    sites = ["apartments", "zillow", "redfin", "realtor", "craigs", "homes"] 
     shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
@@ -254,7 +254,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
     for neigh in AREAS:
         scrape(neigh)
 
@@ -263,7 +263,7 @@ def main():
     # Send gmail alerting of new properties
  
     if newlistings:
-        support.save_data(jsondata)
+        # support.save_data(jsondata)
         links_html = support.urlformat(newlistings)
         support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
