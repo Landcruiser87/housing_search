@@ -51,7 +51,7 @@ AREAS = [
     'Lincoln Square',  #
     'Irving Park',     #
     'Avondale',        #    #New add
-    'Wicker Park'      #    #New add
+    'Wicker Park',     #    #New add
     'Ravenswood',
     'Roscoe Village',
     'Mayfair',
