@@ -254,7 +254,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    # shuffle(AREAS)
+    shuffle(AREAS)
     for neigh in AREAS:
         scrape(neigh)
 
