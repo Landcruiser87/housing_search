@@ -48,7 +48,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 if testval:
                     #Grab price
                     if "$" in testval:
-                        price = int("".join(x for x in price if x.isnumeric()))
+                        price = int("".join(x for x in testval if x.isnumeric()))
                     #Grab Beds
                     elif "beds" in testval.lower():
                         beds = int("".join(x for x in testval if x.isnumeric()))
