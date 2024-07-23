@@ -5470,5 +5470,21 @@
       "violence_score": 28.22,
       "property_d_score": 0.2
     }
+  },
+  "lgm3e0e": {
+    "source": "www.apartments.com",
+    "price": 2395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1823-n-43rd-ave-stone-park-il/lgm3e0e/",
+    "address": "1823 N 43rd Ave, Stone Park, IL Chicago",
+    "date_pulled": "07-23-2024_08-23-22",
+    "bed": 5.0,
+    "bath": 2.0,
+    "sqft": "1577 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }

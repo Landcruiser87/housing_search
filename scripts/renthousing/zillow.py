@@ -21,7 +21,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         listings (list): [List of dataclass objects]
     """
     listings = []
-    
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
         #early terminate if the data-test key is in the underlying object
         if jres.get("data-test"):
@@ -77,26 +77,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                     elif "sqft" in text and numtest:
                         sqft = float("".join(x for x in text if x.isnumeric()))
         pets = True
-
-        #Janky way of making sure variables are filled if we missed any
-        if not "listingid" in locals():
-            raise ValueError(f"Missing listing id for {url}")
-        if not "price" in locals():
-            price = None
-        if not "beds" in locals():
-            beds = None
-        if not "baths" in locals():
-            baths = None
-        if not "url" in locals():
-            url = None
-        if not "addy" in locals():
-            addy = None
-        if not "sqft" in locals():
-            sqft = None
-        if not "lat" in locals():
-            lat = None
-        if not "long" in locals():
-            long = None
         
         listing = Propertyinfo(
             id=listingid,   

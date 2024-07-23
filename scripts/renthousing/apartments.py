@@ -18,6 +18,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     """
 
     listings = []
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = None
     #Set the outer loop over each card returned. 
     for card in result.find_all("article"):
         # Time of pull
@@ -25,8 +26,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
 
         #Grab the id
         listingid = card.get("data-listingid")
-        #BUG - Still pulling in nulls for some listing ids on apartments. 
-            #Not sure why but it only happens every once in a while.
 
         #First grab the link
         if card.get("data-url"):
@@ -67,29 +66,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                     baths = float("".join(x for x in baths if x.isnumeric()))
 
         #grab address
+        #BUG - might want to update the below.  Janky coding
         for search in card.find_all("a", class_="property-link"):
             if search.get("aria-label"):
                 addy = search.get("aria-label")
-        
+            
         pets = True
-
-        #Janky way of making sure variables are filled if we missed any
-        if not "listingid" in locals():
-            raise ValueError(f"Missing listing id for {url}")
-            continue
-
-        if not "price" in locals():
-            price = None
-        if not "beds" in locals():
-            beds = None
-        if not "baths" in locals():
-            baths = None
-        if not "url" in locals():
-            url = None
-        if not "addy" in locals():
-            addy = None
-        if not "sqft" in locals():
-            sqft = None
 
         listing = Propertyinfo(
             id=listingid,
@@ -146,11 +128,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1705-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1705-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
     
     #Error Trapping
     else:

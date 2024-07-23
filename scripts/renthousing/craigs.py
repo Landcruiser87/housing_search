@@ -85,7 +85,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
     }
 
     listings = []
-    
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long =  None
     #lat long info is in here.  Could merge them with the search. 
     #result.select_one('script[id*="ld_searchpage_results"]')
     # contents = json.loads(card.contents[0].strip("\n").strip())
@@ -158,24 +158,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
                 long = None
                 logger.warning("Long not a float")
 
-            
-
-        #Janky way of making sure variables are filled if we missed any
-        if not "listingid" in locals():
-            listingid = None
-        if not "price" in locals():
-            price = None
-        if not "beds" in locals():
-            beds = None
-        if not "baths" in locals():
-            baths = None
-        if not "url" in locals():
-            url = None
-        if not "addy" in locals():
-            addy = None
-        if not "sqft" in locals():
-            sqft = None
-        
         pets = True
 
         listing = Propertyinfo(

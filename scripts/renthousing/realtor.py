@@ -18,8 +18,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     """
 
     listings = []
+    listingid = price = beds = sqft = baths = pets = url = address = current_time = None
     #Set the outer loop over each card returned. 
-
     for card in result.select('div[class*="BasePropertyCard"]'):
         filtertest = card.get("id")
         if "placeholder_property" in filtertest:
@@ -78,22 +78,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 address = addy.strip()
         #Pets is already secured in the search query so we don't have to confirm it in the data.
         pets = True
-        
-        #Janky way of making sure variables are filled if we missed any
-        if not "listingid" in locals():
-            listingid = None
-        if not "price" in locals():
-            price = None
-        if not "beds" in locals():
-            beds = None
-        if not "baths" in locals():
-            baths = None
-        if not "url" in locals():
-            url = None
-        if not "address" in locals():
-            address = None
-        if not "sqft" in locals():
-            sqft = None
 
         listing = Propertyinfo(
             id=listingid,

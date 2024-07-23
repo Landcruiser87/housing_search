@@ -21,6 +21,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         listings (list): [List of dataclass objects]
     """
     listings = []
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     #Set the outer loop over each card returned. 
     for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
         
@@ -51,26 +52,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             break
         
         pets = True
-
-        #Janky way of making sure variables are filled if we missed any
-        if not "listingid" in locals():
-            listingid = None
-        if not "price" in locals():
-            price = None
-        if not "beds" in locals():
-            beds = None
-        if not "baths" in locals():
-            baths = None
-        if not "url" in locals():
-            url = None
-        if not "addy" in locals():
-            addy = None
-        if not "sqft" in locals():
-            sqft = None
-        if not "lat" in locals():
-            lat = None
-        if not "long" in locals():
-            long = None
         
         listing = Propertyinfo(
             id=listingid,   
