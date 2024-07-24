@@ -109,7 +109,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     #Error Trapping
     else:
-        logging.critical("Inproper input for area, moving to next site")
+        logger.critical("Inproper input for area, moving to next site")
         return
 
     headers = {

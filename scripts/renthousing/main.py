@@ -16,7 +16,6 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
 FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-18s|%(message)s|" #[%(name)s]
 FORMAT_RICH = "| %(lineno)-3d | %(funcName)-18s | %(message)s "
-
 console = Console(color_system="truecolor")
 rh = RichHandler(level = logging.INFO, console=console)
 rh.setFormatter(Formatter(FORMAT_RICH))
@@ -263,7 +262,7 @@ def main():
     # Send gmail alerting of new properties
  
     if newlistings:
-        # support.save_data(jsondata)
+        support.save_data(jsondata)
         links_html = support.urlformat(newlistings)
         support.send_housing_email(links_html)
         logger.info(f"{len(newlistings)} new listings found.  Email sent")
