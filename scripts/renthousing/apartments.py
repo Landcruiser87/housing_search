@@ -4,13 +4,14 @@ import requests
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
         result (BeautifulSoup object): html of apartments page
         neigh (str): neighorhood being searched
         source (str): Source website
+        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass) : Dataclass for housing individual listings
 
     Returns:
@@ -35,7 +36,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             if not listingid:
                 listingid = url.split("/")[-2]
         else:
+            logger.warning(f"missing url and id for card on {source} in {neigh}")
             continue
+
         #grab the property info
         for search in card.find_all("div", class_="property-info"):
             #Grab price
@@ -164,7 +167,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         results = bs4ob.find("div", class_="placardContainer")
         if results:
             if results.get("id") =='placardContainer':
-                property_listings = get_listings(results, neigh, source, Propertyinfo)
+                property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
                 logger.info(f'{len(property_listings)} listings returned from {source}')
                 return property_listings
             
