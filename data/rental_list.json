@@ -5550,5 +5550,37 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "8yqvbkzktjcs9": {
+    "source": "www.homes.com",
+    "price": 2300,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2449-w-leland-ave-chicago-il-unit-garden/8yqvbkzktjcs9/",
+    "address": "2449 W Leland Ave Unit GARDEN, Chicago, IL 60625",
+    "date_pulled": "07-24-2024_17-20-08",
+    "bed": 2,
+    "bath": 2,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8053950131": {
+    "source": "www.realtor.com",
+    "price": 2300.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2449-W-Leland-Ave_Chicago_IL_60625_M80539-50131",
+    "address": "2449 W Leland Ave Unit Garden Chicago, IL 60625",
+    "date_pulled": "07-24-2024_17-23-34",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }

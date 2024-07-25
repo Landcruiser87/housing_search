@@ -97,7 +97,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     return listings
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:

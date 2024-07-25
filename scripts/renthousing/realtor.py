@@ -109,7 +109,7 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:

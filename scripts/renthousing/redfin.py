@@ -94,7 +94,7 @@ def money_launderer(price:int)->str:
     else:
         return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par):
+def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
