@@ -34,14 +34,14 @@ logging.basicConfig(
 logger = logging.getLogger(__name__) 
 
 #input custom area's here. Uncomment whichever way you want to search
-# sign to the right of neighborhood means its a  city of chicago neighborhood, if not its a smaller neighborhood.
 
 # AREAS = [
 # 20003, 20007, 20008, 20009, 20057, 20015, 20016
 # #Problem zips 22201,22101, 22207 - In Arlington.  Need to run arlington separately
 # ]
 
-
+# pound sign to the right of neighborhood means its a city of chicago neighborhood, 
+# if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
     'Albany Park',     #
     'Portage Park',    #
@@ -73,7 +73,6 @@ SOURCES = {
 }
 
 # DC test data notes
-# home    = "home/townhome"
 # CITY    = "Washington"
 # STATE   = "DC"
 # MINBEDS = 2

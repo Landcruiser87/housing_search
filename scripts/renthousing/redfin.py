@@ -75,7 +75,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     return listings
 
 def money_launderer(price:int)->str:
-    """[Formats price to a single decimal k format]
+    """[Formats price to a single decimal k format.  This is redfins weird encoding nonsense]
 
     Args:
         price (int): [price as an int]
