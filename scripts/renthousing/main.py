@@ -26,7 +26,7 @@ logging.basicConfig(
     datefmt="[%X]",
     handlers=[
         rh, #Rich formatted logger sent to terminal
-        logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
     ]
 )
 
@@ -174,8 +174,8 @@ def scrape(neigh:str):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    sites = ["apartments", "zillow", "redfin", "realtor", "craigs", "homes"] 
-    shuffle(sites) #Keep em guessin!
+    sites = ["homes", "apartments", "zillow", "redfin", "realtor", "craigs"] 
+    # shuffle(sites) #Keep em guessin!
     for source in sites:
         site = SOURCES.get(source)
         if site:
@@ -273,8 +273,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+    #TODO Update any non 200 return with a program shutdown.  When it hangs that's how they block
+    #TODO Add rotating proxy's
+        #https://www.scrapehero.com/how-to-rotate-proxies-and-ip-addresses-using-python-3/
+    #TODO Add rotating headers
+        #https://www.scrapehero.com/how-to-fake-and-rotate-user-agents-using-python-3/
+        #https://www.scrapehero.com/essential-http-headers-for-web-scraping/
 
-
+    #TODO - Map out each site's headers more exensively
+        #Meaning you'll have to curl convert them one by one to check the main data pulls
+        # [x] homes
+        # [ ] realtor
+        # [x] apartments
+        # [ ] redfin
+        # [ ] zillow
+        # [x] craigs
 #Notes
 # import json
 # fp = "../../data/rental_list.json"
