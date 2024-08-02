@@ -5,7 +5,6 @@ import numpy as np
 import requests
 from urllib.parse import urlencode
 import time
-import support
 from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
@@ -189,7 +188,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             return None
 
         #Always take naps
-        support.sleepspinner(np.random.randint(4, 8), "Map coords request nap")
+        time.sleep(np.random.randint(3, 5))
         
         #Look up neighborhood id from autocomplete search query
         temp_dict = json.loads(response.text[4:])

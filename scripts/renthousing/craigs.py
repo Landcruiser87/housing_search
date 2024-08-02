@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import numpy as np
 import requests
 import time
-import support
 
 def money_launderer(price:list)->float:
     """[Strips dollar signs and comma from the price]
@@ -104,7 +103,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         #listing.  Meaning more requests and longer wait times. 
 
         response = requests.get(link, headers=HEADERS)
-        support.sleepspinner(np.random.randint(4, 6), f'Craigs {neigh} request nap')
+        time.sleep(np.random.randint(4, 6))
         bs4ob = BeautifulSoup(response.text, "lxml")
 
         #Just in case we piss someone off

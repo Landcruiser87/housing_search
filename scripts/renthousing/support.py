@@ -5,6 +5,7 @@ from sodapy import Socrata
 import time
 import json
 from os.path import exists
+from os import get_terminal_size
 import logging
 
 #Progress bar fun
@@ -14,11 +15,274 @@ from rich.progress import (
     SpinnerColumn,
     TextColumn,
     TimeRemainingColumn,
+    TimeElapsedColumn
 )
+from rich.logging import RichHandler
+from rich.layout import Layout
+from rich.console import Console
+from rich.live import Live
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
+from rich.text import Text
+
 from rich.console import Console
 from geopy import Nominatim, ArcGIS
+from pathlib import Path
 
-console = Console(color_system="truecolor")
+# console = Console(color_system="truecolor")
+
+################################# Logging and Timing Funcs ####################################
+def log_time(fn):
+    """Decorator timing function.  Accepts any function and returns a logging
+    statement with the amount of time it took to run. DJ, I use this code everywhere still.  Thank you bud!
+
+    Args:
+        fn (function): Input function you want to time
+    """	
+    def inner(*args, **kwargs):
+        tnow = time.time()
+        out = fn(*args, **kwargs)
+        te = time.time()
+        took = round(te - tnow, 2)
+        if took <= 60:
+            logging.warning(f"{fn.__name__} ran in {took:.2f}s")
+        elif took <= 3600:
+            logging.warning(f"{fn.__name__} ran in {(took)/60:.2f}m")		
+        else:
+            logging.warning(f"{fn.__name__} ran in {(took)/3600:.2f}h")
+        return out
+    return inner
+
+def get_file_handler(log_dir:Path)->logging.FileHandler:
+    """Assigns the saved file logger format and location to be saved
+
+    Args:
+        log_dir (Path): Path to where you want the log saved
+
+    Returns:
+        filehandler(handler): This will handle the logger's format and file management
+    """	
+    LOG_FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-14s|%(message)s|" 
+    current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
+    log_file = log_dir / f"{current_date}.log"
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setFormatter(logging.Formatter(LOG_FORMAT, "%m-%d-%Y %H:%M:%S"))
+    return file_handler
+
+def get_rich_handler(console:Console):
+    """Assigns the rich format that prints out to your terminal
+
+    Args:
+        console (Console): Reference to your terminal
+
+    Returns:
+        rh(RichHandler): This will format your terminal output
+    """
+    FORMAT_RICH = "| %(levelname)-8s | %(funcName)-12s |%(message)s "#%(levelname)-8s | %(lineno)-3d
+    rh = RichHandler(level=logging.INFO, console=console)
+    rh.setFormatter(logging.Formatter(FORMAT_RICH))
+    return rh
+
+def get_logger(log_dir:Path, console:Console)->logging.Logger:
+    """Loads logger instance.  When given a path and access to the terminal output.  The logger will save a log of all records, as well as print it out to your terminal. Propogate set to False assigns all captured log messages to both handlers.
+
+    Args:
+        log_dir (Path): Path you want the logs saved
+        console (Console): Reference to your terminal
+
+    Returns:
+        logger: Returns custom logger object.  Info level reporting with a file handler and rich handler to properly terminal print
+    """	
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    logger.addHandler(get_file_handler(log_dir)) 
+    # logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
+    logger.propagate = False
+    return logger
+
+################################# Rich Functions ####################################
+
+class MakeHeader:
+	"""Display header with clock."""
+
+	def __rich__(self) -> Panel:
+		grid = Table.grid(expand=True)
+		grid.add_column(justify="center", ratio=1)
+		grid.add_column(justify="right")
+		grid.add_row(
+			"[b]Housing[/b] Search Application",
+			datetime.datetime.now().ctime().replace(":", "[blink]:[/]"),
+		)
+		return Panel(grid, style="red on black")
+
+class MainTableHandler(logging.Handler):
+	"""Custom logging handler that saves off every entry of a logger to a temporary
+	list.  As the size of the list grows to be more than half the terminal
+	height, it will pop off the first item in the list and redraw the
+	main_table. 
+
+	Args:
+		logging (Handler): modified logging handler. 
+	"""	
+	def __init__(self, main_table: Table, layout: Layout, log_level: str):
+		super().__init__()
+		self.main_table = main_table
+		self.log_list = []
+		self.layout = layout
+		self.log_format = "|%(levelname)-8s | %(funcName)-12s |%(message)s "
+		self.setLevel(log_level)
+
+	def emit(self, record):
+		record.asctime = record.asctime.split(",")[0]
+		#msg = self.format(record) #if you want just the message info switch comment lines
+		msg = self.log_format % record.__dict__
+		tsize = get_terminal_size().lines // 2
+		if len(self.log_list) > tsize:
+			self.log_list.append(msg)
+			self.log_list.pop(0)
+			self.main_table = redraw_main_table(self.log_list)
+			self.layout["termoutput"].update(Panel(self.main_table, border_style="green"))
+		else:
+			self.main_table.add_row(msg)
+			self.log_list.append(msg)
+
+#FUNCTION make main table
+def make_main_table():
+    main_table = Table(
+        expand=True,
+        show_header=False,
+        header_style="bold",
+        title="[blue][b]Log Entries[/b]",
+        highlight=True,
+    )
+    main_table.add_column("Log Output")
+    return main_table
+
+#FUNCTION make rich display
+def make_rich_display(totalstops:int):
+    layout = make_layout()
+    main_table = make_main_table()
+    totalprog, task = overalprog(totalstops, "Program progress")
+    sleeper = sleepspinner()
+
+    layout["header"].update(MakeHeader())
+    layout["termoutput"].update(Panel(main_table, border_style="blue"))
+    layout["overall_prog"].update(Panel(totalprog, border_style="red"))
+    layout["sleep_prog"].update(Panel(sleeper, border_style="green"))
+    layout["find_count"].update(
+        Panel(Text("0 homes found"),
+        title="current count",
+        title_align="center",
+        border_style="red")
+        )
+    return layout, totalprog, task, main_table
+
+def make_layout() -> Layout:
+	"""Creates the rich Display Layout
+
+	Returns:
+		Layout: rich Layout object
+	"""
+	layout = Layout(name="root")
+	layout.split(
+		Layout(name="header", size=3), 
+		Layout(name="main")
+	)
+	layout["main"].split_row(
+		Layout(name="termoutput",), 
+		Layout(name="progs"),
+	)
+	layout["progs"].split_column(
+		Layout(name="overall_prog"), 
+		Layout(name="sleep_prog"),
+        Layout(name="find_count")
+	)
+	return layout
+
+def update_count(newdigs:int, layout:Layout):
+    current = int(layout["find_count"].renderable.renderable.plain[0])
+    current += newdigs
+    format_p = Panel(
+        Text(f"{current} homes found"),
+        title="current count",
+        title_align="center",
+        border_style="green"
+        ) 
+    return format_p
+
+def redraw_main_table(temp_list: list) -> Table:
+	"""Function that redraws the main table once the log
+	entries reach a certain legnth.
+
+	Args:
+		temp_list (list): Stores the last 10 log entries
+
+	Returns:
+		Table: rich Table object
+	"""	
+	main_table = Table(
+		expand=True,
+		show_header=False,
+		header_style="bold",
+		title="[blue][b]Log Entries[/b]",
+		highlight=True,
+	)
+	main_table.add_column("Log Entries")
+	for row in temp_list:
+		main_table.add_row(row)
+
+	return main_table
+
+
+################################# Rich Spinners ####################################
+#FUNCTION sleep progbar
+def sleepspinner():
+    my_progress_bar = Progress(
+        TextColumn("{task.description}"),
+        SpinnerColumn("pong"),
+        BarColumn(),
+        TextColumn("*"),
+        "time remain:",
+        TextColumn("*"),
+        TimeRemainingColumn(),
+        TextColumn("*"),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        transient=True,
+        refresh_per_second=10
+    )
+    return my_progress_bar
+
+#FUNCTION sleep progbar run function
+def run_sleep(naps:int, msg:str, layout):
+    spinner = sleepspinner()
+    layout["sleep_prog"].update(Panel(spinner, border_style="red"))
+    # Maybe load this into the layout and then have it disappear?
+    task = spinner.add_task(msg, total=naps)
+    for nap in range(naps):
+        time.sleep(1)
+        spinner.advance(task)
+    
+    layout["sleep_prog"].update(Panel(sleepspinner(), border_style="green"))
+            
+#FUNCTION  overall progbar
+def overalprog(stops:int, msg:str):
+    my_progress_bar = Progress(
+        TextColumn("{task.description}"),
+        SpinnerColumn("pong"),
+        BarColumn(),
+        TextColumn("*"),
+        "time elapsed:",
+        TextColumn("*"),
+        TimeElapsedColumn(),
+        TextColumn("*"),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        # transient=False,
+        refresh_per_second=10,
+    )
+
+    task = my_progress_bar.add_task(msg, total=stops)
+    return my_progress_bar, task
 
 #CLASS Numpy encoder
 class NumpyArrayEncoder(json.JSONEncoder):
@@ -105,7 +369,7 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
         if not listing.address:
             continue
 
-        sleepspinner(np.random.randint(2, 6), "searching lat/long")
+        time.sleep(np.random.randint(2, 6))
 
         address = listing.address
         #If city and state aren't present, add them
@@ -138,27 +402,6 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
 
     return data
 
-#FUNCTION Sleep spinna
-def sleepspinner(naps:int, msg:str):
-    my_progress_bar = Progress(
-        TextColumn("{task.description}"),
-        SpinnerColumn("pong"),
-        BarColumn(),
-        TextColumn("*"),
-        "time remain:",
-        TextColumn("*"),
-        TimeRemainingColumn(),
-        TextColumn("*"),
-        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
-        transient=True,
-        console=console
-    )
-    
-    with my_progress_bar as progress:
-        task = progress.add_task(msg, total=naps)
-        for nap in range(naps):
-            time.sleep(1)
-            progress.advance(task)
 
 #FUNCTION Bounding box
 def in_bounding_box(bounding_box:list, lat:float, lon:float)->bool:
@@ -334,7 +577,7 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                     where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
                     limit=800000
                 )
-                sleepspinner(np.random.randint(2, 6), "Be NICE to your sister")
+                time.sleep(np.random.randint(2, 6))
             except Exception as e:
                 logger.warning(e)
                 continue          

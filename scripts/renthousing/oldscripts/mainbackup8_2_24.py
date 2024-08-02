@@ -2,18 +2,39 @@
 import numpy as np
 import logging
 import time
-# from rich.logging import RichHandler
+from rich.logging import RichHandler
+from logging import Formatter
 from rich.console import Console
-from rich.live import Live
 from dataclasses import dataclass, field
 from os.path import exists
 from random import shuffle
-from pathlib import Path, PurePath
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
 
+#Format logger and load configuration
+current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
+FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-18s|%(message)s|" #[%(name)s]
+FORMAT_RICH = "| %(lineno)-3d | %(funcName)-18s | %(message)s "
+console = Console(color_system="truecolor")
+rh = RichHandler(level = logging.INFO, console=console)
+rh.setFormatter(Formatter(FORMAT_RICH))
+
+logging.basicConfig(
+    level=logging.INFO, 
+    format=FORMAT, 
+    datefmt="[%X]",
+    handlers=[
+        rh, #Rich formatted logger sent to terminal
+        # logging.FileHandler(f'./data/logs/{current_date}.log', mode='w') #To send log messages to log file
+    ]
+)
+
+#Load logger
+logger = logging.getLogger(__name__) 
+
 #input custom area's here. Uncomment whichever way you want to search
+
 # AREAS = [
 # 20003, 20007, 20008, 20009, 20057, 20015, 20016
 # #Problem zips 22201,22101, 22207 - In Arlington.  Need to run arlington separately
@@ -51,7 +72,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["realtor", "homes"]# "apartments", "zillow", "redfin", "craigs"] 
+SITES = ["realtor", "homes", "apartments", "zillow", "redfin", "craigs"] 
 
 # DC test data notes
 # CITY    = "Washington"
@@ -149,7 +170,7 @@ def check_ids(data:list):
         return None
 
 #FUNCTION Scrape data
-def scrape(neigh:str, progbar, task, layout):
+def scrape(neigh:str, progbar, task):
     """This function will iterate through different resources scraping necessary information for ingestion. 
 
     Args:
@@ -161,7 +182,8 @@ def scrape(neigh:str, progbar, task, layout):
         if site:
             #Update and advance the overall progressbar
             progbar.advance(task)
-            progbar.update(task_id=task, description=f"{neigh}:{site[0]}")
+            progbar.update(task_id=task, description=f"Searching {site[0]} for {neigh}")
+
             #Because we can't search craigs by neighborhood, we only want to
             #scrape it once.  So this sets a boolean of if we've scraped
             #craigs, then flips the value to not scrape it again in the
@@ -181,7 +203,7 @@ def scrape(neigh:str, progbar, task, layout):
                 data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
-            support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
+            support.sleepspinner(np.random.randint(3,8), f'taking a nap at {site[0]}')
 
             #If data was returned
             if data:
@@ -192,8 +214,7 @@ def scrape(neigh:str, progbar, task, layout):
                     #pull the lat long, score it and store it. 
                     data = datacheck
                     del datacheck
-                    #Get lat longs for the address's
-                    layout["find_count"].update(support.update_count(len(data), layout))
+                    #Get lat longs for the address's    
                     data = support.get_lat_long(data, (CITY, STATE), logger)
 
                     #If its chicago, do chicago things. 
@@ -221,18 +242,11 @@ def scrape(neigh:str, progbar, task, layout):
 #Driver code
 #FUNCTION Main start
 def main():
-    #Global variables setup
+    #Global variable setup
     global newlistings, jsondata, c_scrape
     c_scrape = False
     newlistings = []
     fp = "./data/rental_list.json"
-    totalstops = len(AREAS) * len(SITES)
-
-    global logger, console
-    console = Console(color_system="truecolor")
-    log_path = PurePath(Path.cwd(), Path("./data/logs"))
-    logger = support.get_logger(log_path, console=console)
-    layout, progbar, task, main_table = support.make_rich_display(totalstops)
 
     #Load rental_list.json
     if exists(fp):
@@ -244,30 +258,32 @@ def main():
 
     #Shuffle and search the neighborhoods/zips
     shuffle(AREAS)
+    totalsteps = len(AREAS) * len(SITES)
+    progbar, task = support.overalprog(totalsteps, "Init search")
 
-    with Live(layout, refresh_per_second=7, screen=True, transient=True) as live:
-        logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
-        for neigh in AREAS:
-            scrape(neigh, progbar, task, layout)
-            live.refresh() #might not be needed
+    for neigh in AREAS:
+        scrape(neigh, progbar, task)
+        progbar.advance(task)
 
-        # If new listings are found, save the data to the json file, 
-        # format the list of dataclassses to a url 
-        # Send gmail alerting of new properties
-        if newlistings:
-            support.save_data(jsondata)
-            links_html = support.urlformat(newlistings)
-            support.send_housing_email(links_html)
-            logger.info(f"{len(newlistings)} new listings found.  Email sent")
+    # If new listings are found, save the data to the json file, 
+    # format the list of dataclassses to a url 
+    # Send gmail alerting of new properties
+ 
+    if newlistings:
+        support.save_data(jsondata)
+        links_html = support.urlformat(newlistings)
+        support.send_housing_email(links_html)
+        logger.info(f"{len(newlistings)} new listings found.  Email sent")
 
-        else:
-            logger.critical("No new listings were found")
-        
-        logger.info("Program shutting down")
+    else:
+        logger.critical("No new listings were found")
+
+    logger.info("Program shutting down")
 
 if __name__ == "__main__":
     main()
     
+    #TODO Update any non 200 return with a program shutdown.  When it hangs that's how they block
     #TODO Add rotating proxy's
         #https://www.scrapehero.com/how-to-rotate-proxies-and-ip-addresses-using-python-3/
     #TODO Add rotating headers

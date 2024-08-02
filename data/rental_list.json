@@ -6262,5 +6262,226 @@
       "violence_score": 24.79,
       "property_d_score": 0.15
     }
+  },
+  "7771144054": {
+    "source": "www.craiglist.org",
+    "price": 2100.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/forest-park-house-for-rent-forest-park/7771144054.html",
+    "address": "Beloit, Forest park, IL 60130",
+    "date_pulled": "08-01-2024_09-14-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1500ft2",
+    "lat": 41.877725,
+    "long": -87.812133,
+    "L_dist": [
+      "Forest Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.5,
+      "gun_score": 9.54,
+      "murder_score": 2.25,
+      "perv_score": 2.23,
+      "theft_score": 34.93,
+      "violence_score": 28.98,
+      "property_d_score": 0.23
+    }
+  },
+  "zpid_2093809873": {
+    "source": "www.zillow.com",
+    "price": 2395.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2824-N-Drake-Ave-3W-Chicago-IL-60618/2093809873_zpid/",
+    "address": "2824 N Drake Ave #3w, Chicago, IL 60618",
+    "date_pulled": "08-01-2024_09-14-43",
+    "bed": 2.0,
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.932713,
+    "long": -87.71635,
+    "L_dist": [
+      "Belmont",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.72,
+      "murder_score": 1.48,
+      "perv_score": 1.45,
+      "theft_score": 43.08,
+      "violence_score": 25.01,
+      "property_d_score": 0.14
+    }
+  },
+  "9188402589": {
+    "source": "www.realtor.com",
+    "price": 1725.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5010-N-Sawyer-Ave-Apt-3_Chicago_IL_60625_M91884-02589",
+    "address": "5010 N Sawyer Ave Apt 3 Chicago, IL 60625",
+    "date_pulled": "08-01-2024_09-20-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "186040228": {
+    "source": "www.redfin.com",
+    "price": 1725.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5010-N-Sawyer-Ave-60625/unit-3/home/186040228",
+    "address": "5010 N Sawyer Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "08-01-2024_09-21-17",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1400",
+    "lat": 41.9724815,
+    "long": -87.7100397,
+    "L_dist": [
+      "Kimball",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 6.24,
+      "murder_score": 1.21,
+      "perv_score": 1.33,
+      "theft_score": 44.63,
+      "violence_score": 23.97,
+      "property_d_score": 0.13
+    }
+  },
+  "187392598": {
+    "source": "www.redfin.com",
+    "price": 1850.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1651-N-Claremont-Ave-60647/unit-2/home/187392598",
+    "address": "1651 N Claremont Ave #2, Chicago, IL, 60647",
+    "date_pulled": "08-02-2024_16-50-41",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "775",
+    "lat": 41.9118242,
+    "long": -87.685801,
+    "L_dist": [
+      "Western",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 2.69,
+      "gun_score": 7.02,
+      "murder_score": 1.55,
+      "perv_score": 1.46,
+      "theft_score": 42.91,
+      "violence_score": 25.27,
+      "property_d_score": 0.15
+    }
+  },
+  "191908908": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3603-W-Ainslie-St-60625/unit-1/home/191908908",
+    "address": "3603 W Ainslie St Unit 1, Chicago, IL, 60625",
+    "date_pulled": "08-02-2024_16-52-40",
+    "bed": "3",
+    "bath": "2",
+    "sqft": "1000",
+    "lat": 41.9700108,
+    "long": -87.7186233,
+    "L_dist": [
+      "Kimball",
+      0.32
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.26,
+      "murder_score": 1.23,
+      "perv_score": 1.42,
+      "theft_score": 44.41,
+      "violence_score": 24.01,
+      "property_d_score": 0.13
+    }
+  },
+  "191917613": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5027-W-Agatite-Ave-60630/unit-2/home/191917613",
+    "address": "5027 W Agatite Ave Unit 2, Chicago, IL, 60630",
+    "date_pulled": "08-02-2024_16-55-51",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1082",
+    "lat": 41.9613504,
+    "long": -87.7535006,
+    "L_dist": [
+      "Montrose",
+      0.51
+    ],
+    "crime_sc": {
+      "drug_score": 3.26,
+      "gun_score": 7.28,
+      "murder_score": 1.63,
+      "perv_score": 1.63,
+      "theft_score": 41.1,
+      "violence_score": 26.05,
+      "property_d_score": 0.15
+    }
+  },
+  "191911568": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5723-W-Irving-Park-Rd-60634/unit-2F/home/191911568",
+    "address": "5723 W Irving Park Rd Unit 2F, Chicago, IL, 60634",
+    "date_pulled": "08-02-2024_16-55-51",
+    "bed": "3",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9529163,
+    "long": -87.7703769,
+    "L_dist": [
+      "Jefferson Park",
+      1.32
+    ],
+    "crime_sc": {
+      "drug_score": 3.85,
+      "gun_score": 8.32,
+      "murder_score": 1.88,
+      "perv_score": 1.73,
+      "theft_score": 38.7,
+      "violence_score": 27.25,
+      "property_d_score": 0.18
+    }
+  },
+  "9179655009": {
+    "source": "www.realtor.com",
+    "price": 1900.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3044-N-Hamilton-Ave_Chicago_IL_60618_M91796-55009",
+    "address": "3044 N Hamilton Ave Unit Garden Chicago, IL 60618",
+    "date_pulled": "08-02-2024_16-57-46",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }

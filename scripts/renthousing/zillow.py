@@ -5,7 +5,6 @@ import numpy as np
 import requests
 from urllib.parse import urlencode
 import time
-import support
 from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
@@ -158,7 +157,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     #Get the map coordinates
     map_coords = json.loads(mapcords)
-    support.sleepspinner(np.random.randint(2, 8), "Map Request Nap")
+    time.sleep(np.random.randint(2, 6))
     
     #! Update tprice and min beds
     #Stipulate subparameters of search
