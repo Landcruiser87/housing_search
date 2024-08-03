@@ -6483,5 +6483,102 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "191921100": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4838-W-Addison-St-60641/unit-2/home/191921100",
+    "address": "4838 W Addison St Unit 2, Chicago, IL, 60641",
+    "date_pulled": "08-03-2024_11-15-08",
+    "bed": "3",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9463507,
+    "long": -87.7486583,
+    "L_dist": [
+      "Montrose",
+      1.08
+    ],
+    "crime_sc": {
+      "drug_score": 3.09,
+      "gun_score": 7.34,
+      "murder_score": 1.65,
+      "perv_score": 1.62,
+      "theft_score": 41.07,
+      "violence_score": 26.28,
+      "property_d_score": 0.15
+    }
+  },
+  "191921011": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5328-W-Leland-Ave-60630/unit-2F/home/191921011",
+    "address": "5328 W Leland Ave Unit 2F, Chicago, IL, 60630",
+    "date_pulled": "08-03-2024_11-15-08",
+    "bed": "3",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9658445,
+    "long": -87.7613307,
+    "L_dist": [
+      "Jefferson Park",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.42,
+      "gun_score": 7.57,
+      "murder_score": 1.72,
+      "perv_score": 1.67,
+      "theft_score": 40.79,
+      "violence_score": 25.93,
+      "property_d_score": 0.17
+    }
+  },
+  "bdv6z6b": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1519-w-thomas-st-chicago-il/bdv6z6b/",
+    "address": null,
+    "date_pulled": "08-03-2024_11-17-10",
+    "bed": null,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "184934810": {
+    "source": "www.redfin.com",
+    "price": 2195.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2980-N-Ridgeway-Ave-60618/unit-1/home/184934810",
+    "address": "2980 N Ridgeway Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "08-03-2024_11-18-27",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9356382,
+    "long": -87.7195184,
+    "L_dist": [
+      "Belmont",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 6.73,
+      "murder_score": 1.49,
+      "perv_score": 1.47,
+      "theft_score": 42.96,
+      "violence_score": 25.08,
+      "property_d_score": 0.14
+    }
   }
 }

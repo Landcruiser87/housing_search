@@ -313,7 +313,6 @@ def overalprog(stops:int, msg:str):
         TimeElapsedColumn(),
         TextColumn("*"),
         TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
-        # transient=False,
         refresh_per_second=10,
     )
 
