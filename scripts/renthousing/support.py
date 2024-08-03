@@ -296,7 +296,7 @@ def run_sleep(naps:int, msg:str, layout):
     
     layout["sleep_prog"].update(
         Align.center(
-            Panel(sleepspinner(), border_style="green"), 
+            Panel("awaits next nap... :zzz: ", border_style="green", expand=True), 
             vertical="middle", 
             height=6)
             )

@@ -6580,5 +6580,21 @@
       "violence_score": 25.08,
       "property_d_score": 0.14
     }
+  },
+  "8665758317": {
+    "source": "www.realtor.com",
+    "price": 2600.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3453-N-Hoyne-Ave_Chicago_IL_60618_M86657-58317",
+    "address": "3453 N Hoyne Ave Unit Garden Chicago, IL 60618",
+    "date_pulled": "08-03-2024_15-41-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
