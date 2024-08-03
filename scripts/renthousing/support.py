@@ -18,9 +18,9 @@ from rich.progress import (
     TimeElapsedColumn
 )
 from rich.logging import RichHandler
+from rich.align import Align
 from rich.layout import Layout
 from rich.console import Console
-from rich.live import Live
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -114,7 +114,7 @@ class MakeHeader:
 			"[b]Housing[/b] Search Application",
 			datetime.datetime.now().ctime().replace(":", "[blink]:[/]"),
 		)
-		return Panel(grid, style="red on black")
+		return Panel(grid, style="green on black")
 
 class MainTableHandler(logging.Handler):
 	"""Custom logging handler that saves off every entry of a logger to a temporary
@@ -168,10 +168,31 @@ def make_rich_display(totalstops:int):
 
     layout["header"].update(MakeHeader())
     layout["termoutput"].update(Panel(main_table, border_style="blue"))
-    layout["overall_prog"].update(Panel(totalprog, border_style="red"))
-    layout["sleep_prog"].update(Panel(sleeper, border_style="green"))
+    layout["overall_prog"].update(
+        Panel(
+            Align.center(
+                totalprog,
+                vertical="middle", 
+                height=6),
+            border_style="red",
+            title="Overall Progress",
+            title_align="center",
+            expand=True)
+            )
+    layout["sleep_prog"].update(
+        Panel(
+            Align.center(
+                totalprog,
+                vertical="middle", 
+                height=6),
+            border_style="green",
+            title="sleepytimer",
+            title_align="center",
+            expand=True)
+            )
     layout["find_count"].update(
-        Panel(Text("0 homes found"),
+        Panel(
+            Align.center(Text("0 homes found"), vertical="middle"),
         title="current count",
         title_align="center",
         border_style="red")
@@ -201,14 +222,14 @@ def make_layout() -> Layout:
 	return layout
 
 def update_count(newdigs:int, layout:Layout):
-    current = int(layout["find_count"].renderable.renderable.plain[0])
+    current = int(layout["find_count"].renderable.renderable.renderable.plain[0])
     current += newdigs
     format_p = Panel(
-        Text(f"{current} homes found"),
+            Align.center(Text(f"{current} homes found"), vertical="middle"),
         title="current count",
         title_align="center",
-        border_style="green"
-        ) 
+        border_style="green")
+
     return format_p
 
 def redraw_main_table(temp_list: list) -> Table:
@@ -256,14 +277,29 @@ def sleepspinner():
 #FUNCTION sleep progbar run function
 def run_sleep(naps:int, msg:str, layout):
     spinner = sleepspinner()
-    layout["sleep_prog"].update(Panel(spinner, border_style="red"))
+    layout["sleep_prog"].update(
+        Panel(
+            Align.center(
+                spinner,
+                vertical="middle", 
+                height=6),
+            border_style="red",
+            title="sleepytimer",
+            title_align="center",
+            expand=True)
+            )
     # Maybe load this into the layout and then have it disappear?
     task = spinner.add_task(msg, total=naps)
     for nap in range(naps):
         time.sleep(1)
         spinner.advance(task)
     
-    layout["sleep_prog"].update(Panel(sleepspinner(), border_style="green"))
+    layout["sleep_prog"].update(
+        Align.center(
+            Panel(sleepspinner(), border_style="green"), 
+            vertical="middle", 
+            height=6)
+            )
             
 #FUNCTION  overall progbar
 def overalprog(stops:int, msg:str):
@@ -345,7 +381,7 @@ def closest_L_stop(data:list)->list:
     return data
 
 #FUNCTION Get Lat Long
-def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
+def get_lat_long(data:list, citystate:tuple, logger:logging.Logger, layout)->list:
     noma_params = {
         "user_agent":"myApp",
         "timeout":5,
@@ -369,9 +405,9 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
         if not listing.address:
             continue
 
-        time.sleep(np.random.randint(2, 6))
-
+        run_sleep(np.random.randint(2, 6), "ohhh GPS sleepys", layout)
         address = listing.address
+        logger.info(f"searching GPS for {address}")
         #If city and state aren't present, add them
         if citystate[0].lower() not in address.lower():
             listing.address = address + " " + citystate[0]
@@ -391,7 +427,6 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger)->list:
             lat, long = location.latitude, location.longitude
             listing.lat = lat
             listing.long = long
-            # continue
 
         #If that fails, search ARCgis
         # locatedos = backupgeo(srch_add)
@@ -530,7 +565,7 @@ def send_housing_email(urls:str):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 #FUNCTION Crime Scoring
-def crime_score(data:list, logger:logging.Logger) -> list:
+def crime_score(data:list, logger:logging.Logger, layout) -> list:
     """[Connects to data.cityofchicago.org and pulls down all the 
     crime data for the last year, in a 1 mile radius.  It then recategorizes
     the crimes into scores based on the percentage of total crime in that area.]
@@ -577,7 +612,8 @@ def crime_score(data:list, logger:logging.Logger) -> list:
                     where=f"latitude > {lat1-0.1} AND latitude < {lat1+0.1} AND longitude > {lon1-0.1} AND longitude < {lon1+0.1} AND date > '{ze_date}'",
                     limit=800000
                 )
-                time.sleep(np.random.randint(2, 6))
+                run_sleep(np.random.randint(2, 6), "BE NICE to your sister", layout)
+
             except Exception as e:
                 logger.warning(e)
                 continue          

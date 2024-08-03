@@ -22,8 +22,8 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    'Albany Park',     #
     'Portage Park',    #
+    'Albany Park',     #
     'North Center',    #
     'North Park',      #
     'Lincoln Square',  #
@@ -51,7 +51,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["realtor", "homes"]# "apartments", "zillow", "redfin", "craigs"] 
+SITES = ["redfin", "realtor", "homes", "apartments", "zillow", "craigs"] 
 
 # DC test data notes
 # CITY    = "Washington"
@@ -155,7 +155,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -194,7 +194,7 @@ def scrape(neigh:str, progbar, task, layout):
                     del datacheck
                     #Get lat longs for the address's
                     layout["find_count"].update(support.update_count(len(data), layout))
-                    data = support.get_lat_long(data, (CITY, STATE), logger)
+                    data = support.get_lat_long(data, (CITY, STATE), logger, layout)
 
                     #If its chicago, do chicago things. 
                     if CITY == 'Chicago':
@@ -203,7 +203,7 @@ def scrape(neigh:str, progbar, task, layout):
                         data = support.closest_L_stop(data)
 
                         #Score them according to chicago crime data
-                        data = support.crime_score(data, logger)
+                        data = support.crime_score(data, logger, layout)
                     # elif CITY == 'DC':
                         # pass
                         #TODO - Build DC search for 
@@ -229,7 +229,7 @@ def main():
     totalstops = len(AREAS) * len(SITES)
 
     global logger, console
-    console = Console(color_system="truecolor")
+    console = Console(color_system="auto")
     log_path = PurePath(Path.cwd(), Path("./data/logs"))
     logger = support.get_logger(log_path, console=console)
     layout, progbar, task, main_table = support.make_rich_display(totalstops)
@@ -243,13 +243,13 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
-    with Live(layout, refresh_per_second=7, screen=True, transient=True) as live:
+    with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
-            live.refresh() #might not be needed
+            # live.refresh() #might not be needed
 
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url 
