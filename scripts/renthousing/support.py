@@ -32,27 +32,7 @@ from pathlib import Path
 
 # console = Console(color_system="truecolor")
 
-################################# Logging and Timing Funcs ####################################
-def log_time(fn):
-    """Decorator timing function.  Accepts any function and returns a logging
-    statement with the amount of time it took to run. DJ, I use this code everywhere still.  Thank you bud!
-
-    Args:
-        fn (function): Input function you want to time
-    """	
-    def inner(*args, **kwargs):
-        tnow = time.time()
-        out = fn(*args, **kwargs)
-        te = time.time()
-        took = round(te - tnow, 2)
-        if took <= 60:
-            logging.warning(f"{fn.__name__} ran in {took:.2f}s")
-        elif took <= 3600:
-            logging.warning(f"{fn.__name__} ran in {(took)/60:.2f}m")		
-        else:
-            logging.warning(f"{fn.__name__} ran in {(took)/3600:.2f}h")
-        return out
-    return inner
+################################# Logging Funcs ####################################
 
 def get_file_handler(log_dir:Path)->logging.FileHandler:
     """Assigns the saved file logger format and location to be saved

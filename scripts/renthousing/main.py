@@ -13,6 +13,8 @@ from pathlib import Path, PurePath
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
 
+
+################################# Variable Setup ####################################
 #input custom area's here. Uncomment whichever way you want to search
 # AREAS = [
 # 20003, 20007, 20008, 20009, 20057, 20015, 20016
@@ -96,7 +98,29 @@ class Propertyinfo():
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
     # def dict(self):
     #     return {k: str(v) for k, v in asdict(self).items()}
+################################# Timing Func ####################################
+def log_time(fn):
+    """Decorator timing function.  Accepts any function and returns a logging
+    statement with the amount of time it took to run. DJ, I use this code everywhere still.  Thank you bud!
 
+    Args:
+        fn (function): Input function you want to time
+    """	
+    def inner(*args, **kwargs):
+        tnow = time.time()
+        out = fn(*args, **kwargs)
+        te = time.time()
+        took = round(te - tnow, 2)
+        if took <= 60:
+            logging.warning(f"{fn.__name__} ran in {took:.2f}s")
+        elif took <= 3600:
+            logging.warning(f"{fn.__name__} ran in {(took)/60:.2f}m")		
+        else:
+            logging.warning(f"{fn.__name__} ran in {(took)/3600:.2f}h")
+        return out
+    return inner
+
+################################# Main Funcs ####################################
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
     """Adds Data to JSON Historical file
@@ -217,9 +241,10 @@ def scrape(neigh:str, progbar, task, layout):
 
         else:
             logger.warning(f"{source} is not in validated search list")
-
+################################# Start Program ####################################
 #Driver code
 #FUNCTION Main start
+@log_time
 def main():
     #Global variables setup
     global newlistings, jsondata, c_scrape
