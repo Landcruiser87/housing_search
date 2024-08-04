@@ -21,12 +21,10 @@ from rich.logging import RichHandler
 from rich.align import Align
 from rich.layout import Layout
 from rich.console import Console
-from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 
-from rich.console import Console
 from geopy import Nominatim, ArcGIS
 from pathlib import Path
 
