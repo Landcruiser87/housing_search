@@ -130,7 +130,6 @@ dmypy.json
 
 #Project specific folders
 /__pycache__
-/.p_venv
 /.vscode
 /.pytest_cache
 *.log

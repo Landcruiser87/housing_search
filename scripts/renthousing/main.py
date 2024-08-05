@@ -144,11 +144,11 @@ def add_data(data:list, siteinfo:tuple):
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
-    logger.info("Global dict updated")
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
+    logger.info(f"These ids were added to storage: {ids}")
 
 #FUNCTION Check IDs
-def check_ids(data:list):
+def check_ids(data:list)->list:
     """This function takes in a list of Propertyinfo objects, reformats them to
     a dictionary, compares the property id's to existing JSON historical
     property id keys, finds any new ones via set comparison. Then returns a list
@@ -228,6 +228,7 @@ def scrape(neigh:str, progbar, task, layout):
 
                         #Score them according to chicago crime data
                         data = support.crime_score(data, logger, layout)
+                        
                     # elif CITY == 'DC':
                         # pass
                         #TODO - Build DC search for 
