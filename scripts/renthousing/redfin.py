@@ -145,26 +145,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "lng": -87.73184,
             "includeAddressInfo": "false"
         }
-        # DL_URL = 'https://www.redfin.com/stingray/do/gis-search'
-        # SH_PARAMS = {
-        # 	'al': 1,
-        # 	'isSearchFormParamsDefault': 'false',
-        # 	'isRentals': 'true',
-        # 	'lpp': 50,
-        # 	'market': 'Chicago',
-        # 	'mpt': 99,
-        # 	'no_outline': 'false',
-        # 	'num_homes': 500,
-        # 	'page_number': 1,
-        # 	'region_id': 29470,  #Replace this with your city
-        # 	'region_type': 6,	 #I think 6 means neighborhood?
-        # 	'sf': [1,2,5,6,7],
-        # 	'sp': 'true',
-        # 	'status': 1,
-        # 	'uipt': [1,3],
-        # 	'v': 8,
-        # 	# 'render': 'csv'			#
-        # }
 
         # https://www.redfin.com/stingray/api/v1/search/rentals
     
@@ -199,14 +179,10 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
-        #! Update tprice and min beds
         url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        #! Update tprice and min beds
-        #Bug.  they submit their max prices in decimal k.  ugh.  need to format
-
         url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
 
     #Error Trapping
