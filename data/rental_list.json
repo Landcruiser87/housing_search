@@ -6731,5 +6731,199 @@
       "violence_score": 24.91,
       "property_d_score": 0.13
     }
+  },
+  "d8rrs21vxlcg0": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3714-w-george-st-chicago-il/d8rrs21vxlcg0/",
+    "address": "3714 W George St Chicago, IL 60618",
+    "date_pulled": "08-07-2024_16-52-00",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": 41.933779,
+    "long": -87.72065340202694,
+    "L_dist": [
+      "Belmont",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 6.73,
+      "murder_score": 1.47,
+      "perv_score": 1.48,
+      "theft_score": 42.94,
+      "violence_score": 25.1,
+      "property_d_score": 0.14
+    }
+  },
+  "7772951021": {
+    "source": "www.craiglist.org",
+    "price": 1550.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-br-bath-condo-in-west-rodgers/7772951021.html",
+    "address": "Claremont, Chicago, IL 60645",
+    "date_pulled": "08-07-2024_16-52-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900ft2",
+    "lat": 41.997809,
+    "long": -87.688928,
+    "L_dist": [
+      "Morse",
+      1.39
+    ],
+    "crime_sc": {
+      "drug_score": 1.16,
+      "gun_score": 5.59,
+      "murder_score": 0.77,
+      "perv_score": 1.45,
+      "theft_score": 46.61,
+      "violence_score": 23.37,
+      "property_d_score": 0.12
+    }
+  },
+  "7771543809": {
+    "source": "www.craiglist.org",
+    "price": 2250.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-stunning-avondale-bedroom-condo/7771543809.html",
+    "address": "wellington, chicago, IL 60618",
+    "date_pulled": "08-07-2024_16-52-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.935886,
+    "long": -87.697098,
+    "L_dist": [
+      "Logan Square",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 2.78,
+      "gun_score": 6.76,
+      "murder_score": 1.5,
+      "perv_score": 1.47,
+      "theft_score": 43.08,
+      "violence_score": 25.11,
+      "property_d_score": 0.14
+    }
+  },
+  "7770387288": {
+    "source": "www.craiglist.org",
+    "price": 1500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-br-bath-condo-in-west-rodgers/7770387288.html",
+    "address": "Claremont, Chicago, IL 60645",
+    "date_pulled": "08-07-2024_16-52-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900ft2",
+    "lat": 41.997809,
+    "long": -87.688928,
+    "L_dist": [
+      "Morse",
+      1.39
+    ],
+    "crime_sc": {
+      "drug_score": 1.16,
+      "gun_score": 5.59,
+      "murder_score": 0.77,
+      "perv_score": 1.45,
+      "theft_score": 46.61,
+      "violence_score": 23.37,
+      "property_d_score": 0.12
+    }
+  },
+  "7767080426": {
+    "source": "www.craiglist.org",
+    "price": 2050.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-beautiful-2br-2bath-condo-for/7767080426.html",
+    "address": "W Harrison St, Chicago, IL 60612",
+    "date_pulled": "08-07-2024_16-52-49",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.873832,
+    "long": -87.686354,
+    "L_dist": [
+      "Western",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 2.63,
+      "gun_score": 7.99,
+      "murder_score": 1.88,
+      "perv_score": 1.62,
+      "theft_score": 41.01,
+      "violence_score": 26.52,
+      "property_d_score": 0.17
+    }
+  },
+  "qz6msf2vj9clt": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1359-w-barry-ave-chicago-il-unit-1r/qz6msf2vj9clt/",
+    "address": "1359 W Barry Ave Unit 1R Chicago, IL 60657",
+    "date_pulled": "08-07-2024_16-54-09",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9sn6kdzgzh7zv": {
+    "source": "www.homes.com",
+    "price": 2275.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1615-w-greenleaf-ave-chicago-il-unit-c/9sn6kdzgzh7zv/",
+    "address": "1615 W Greenleaf Ave Unit C Chicago, IL 60626",
+    "date_pulled": "08-07-2024_16-54-43",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "186911865": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2939-N-Kedzie-Ave-60618/unit-B/home/186911865",
+    "address": "2939 N Kedzie Ave Unit B, Chicago, IL, 60618",
+    "date_pulled": "08-07-2024_17-00-32",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1000",
+    "lat": 41.9350104,
+    "long": -87.7072453,
+    "L_dist": [
+      "Belmont",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 6.74,
+      "murder_score": 1.49,
+      "perv_score": 1.46,
+      "theft_score": 43.05,
+      "violence_score": 25.09,
+      "property_d_score": 0.14
+    }
   }
 }
