@@ -150,7 +150,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     if not nores:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
-            # if results.get("id") =='placardContainer':
             property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings

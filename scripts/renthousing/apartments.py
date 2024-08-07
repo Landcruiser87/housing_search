@@ -19,7 +19,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
     """
 
     listings = []
-    listingid = price = beds = sqft = baths = pets = url = addy = current_time = None
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = extrafun = None
     #Set the outer loop over each card returned. 
     for card in result.find_all("article"):
         # Time of pull
@@ -49,28 +49,38 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                     
             #Grab bed bath
             for subsearch in card.find_all("div", class_="bedRange"):
-                beds = subsearch.text
-                if "ft" in beds:#lol
+                extrafun = subsearch.text.lower()
+                if "ft" in extrafun:#lol
                     #quick comma count
-                    count = beds.count(",")
+                    count = extrafun.count(",")
                     if count < 3:
-                        beds, baths, sqft = beds.split(",")
+                        beds, baths, sqft = extrafun.split(",")
                         sqft = sqft.strip()
                     else:
                         #For if they put a comma in the square footage
-                        beds, baths, sqft, extra = beds.split(",")
+                        beds, baths, sqft, extra = extrafun.split(",")
                         sqft = "".join([sqft, extra]).strip()
                     
                 else:
-                    beds, baths = beds.split(",")
-                if any(x.isnumeric() for x in beds):
-                    beds = float("".join(x for x in beds if x.isnumeric()))
-                if any(x.isnumeric() for x in baths):
-                    baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
+                    if ("beds" in extrafun) & ("baths" in extrafun):
+                        beds, baths = extrafun.split(",")
+                        #Because some toolbag didn't put the baths in 
+                        #their listing.  smh.  
+                    elif "beds" in extrafun:
+                        beds = extrafun
+                    elif "baths" in extrafun:
+                        baths = extrafun
+
+                if beds:
+                    if any(x.isnumeric() for x in beds):
+                        beds = float("".join(x for x in beds if x.isnumeric()))
+                if baths:
+                    if any(x.isnumeric() for x in baths):
+                        baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
 
         #grab address
         #BUG - might want to update the below.  Janky coding
-        for search in card.find_all("div", class_="propertyAddress"):
+        for search in card.find_all("a", class_="property-link"):
             if search.get("title"):
                 addy = search.get("title")
             
@@ -131,7 +141,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}/"#-pet-friendly-dog/air-conditioning/"#-garage
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
@@ -174,12 +184,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     # surrounding.  Just the neighborhood)
     nores = bs4ob.find_all("div", class_="no-results")
     if not nores:
-        results = bs4ob.find("div", class_="placardContainer")
+        results = bs4ob.find("div", id="placardContainer")
         if results:
-            if results.get("id") =='placardContainer':
-                property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
-                logger.info(f'{len(property_listings)} listings returned from {source}')
-                return property_listings
+            property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
+            logger.info(f'{len(property_listings)} listings returned from {source}')
+            return property_listings
             
     else:
         logger.warning("No listings returned on apartments.  Moving to next site")
