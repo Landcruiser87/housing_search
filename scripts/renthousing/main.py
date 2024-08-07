@@ -13,7 +13,6 @@ from pathlib import Path, PurePath
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
 
-
 ################################# Variable Setup ####################################
 #input custom area's here. Uncomment whichever way you want to search
 # AREAS = [
@@ -24,7 +23,6 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    'Avondale',        #    #New add
     'Portage Park',    #
     'Albany Park',     #
     'North Center',    #
@@ -32,6 +30,7 @@ AREAS = [
     'Lincoln Square',  #
     'Irving Park',     #
     'Wicker Park',     #    #New add
+    'Avondale',        #    #New add
     'Ravenswood',
     'Roscoe Village',
     'Mayfair',
@@ -53,7 +52,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["apartments", "homes", "redfin", "realtor", "zillow", "craigs"] 
+SITES = ["craigs", "apartments", "homes", "redfin", "realtor", "zillow"] 
 
 # DC test data notes
 # CITY    = "Washington"
@@ -66,7 +65,7 @@ SITES = ["apartments", "homes", "redfin", "realtor", "zillow", "craigs"]
 CITY    = "Chicago"
 STATE   = "IL"
 MINBEDS = 2
-MAXRENT = 3700
+MAXRENT = 2600
 DOGS    = True
 
 SEARCH_PARAMS = (
@@ -273,6 +272,13 @@ def main():
 
     with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
+        #BUG - Sometimes sites still give a 200 even though the structure has changed and we're not finding data
+
+        #TODO - Split the current count panel into subpanels that look for at least
+            # one value for each site.  When any is found, we know that the individual
+            # site is still successfully gathering data.  If we go a few runs
+            # without finding anything, it will be easier to isolate.  
+
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
 
@@ -299,15 +305,6 @@ if __name__ == "__main__":
         #https://www.scrapehero.com/how-to-fake-and-rotate-user-agents-using-python-3/
         #https://www.scrapehero.com/essential-http-headers-for-web-scraping/
     
-    #TODO - Map out each site's headers more extensively
-        #Meaning you'll have to curl convert them one by one to check the main data pulls
-        # [x] homes
-        # [x] realtor
-        # [x] apartments
-        # [ ] redfin - More difficult because 2 requests used
-        # [ ] zillow - More difficult because 2 requests used
-        # [x] craigs
-
 #Notes
 # import json
 # fp = "../../data/rental_list.json"

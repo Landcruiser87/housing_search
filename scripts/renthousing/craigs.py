@@ -78,7 +78,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         'Sec-Fetch-User': '?1',
         'Upgrade-Insecure-Requests': '1',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+        'sec-ch-ua': '"Chromium";v="122", "Google Chrome";v="122", "Not-A.Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
     }
@@ -198,22 +198,31 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     MINBEDS = int(srch_par[2])
     MAXRENT = int(srch_par[3])
 
+    if CITY == 'chicago':
+        url = f'https://{CITY}.craigslist.org/search/chc/apa?'
+    
+    elif CITY == 'washingtondc':
+        url = f'https://{CITY}.craigslist.org/search/doc/apa?'
+
+    else:
+        url = f'https://{CITY}.craigslist.org/search/apa?'
+
+    w_version = np.random.randint(120, 127)
+    # NOTE - rdfparser.js seems to have all the necessary headers. 
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'Accept-Language': 'en-US,en;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Origin': f'https://{CITY}.craigslist.org',
-        'Referer': f'https://{CITY}.craigslist.org/',
         'Sec-Fetch-Dest': 'document',
         'Sec-Fetch-Mode': 'navigate',
         'Sec-Fetch-Site': 'same-origin',
         'Sec-Fetch-User': '?1',
         'Upgrade-Insecure-Requests': '1',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
+        'User-Agent': f'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{w_version}.0.0.0 Mobile Safari/537.36',
+        'sec-ch-ua': f'"Not)A;Brand";v="99", "Google Chrome";v="{w_version}", "Chromium";v="{w_version}"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
     }
     #Change these to suit your housing requirements
     #!Update tprice and min bed
@@ -221,32 +230,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
         ("airconditioning","1"),
         ("hasPic", "1"),
         # ("postedToday", "1"),
-        ("housing_type",["10", "3", "4", "5", "6", "8", "9"]),
+        ("housing_type",["10", "2", "3", "4", "5", "6", "8", "9"]),
         ("min_price", "500"),
         ("max_price", MAXRENT),
         ("min_bedrooms", MINBEDS),
         ("min_bathrooms", "1"),
-        ("availabilityMode", "0"), #can't seem to verify this parameter in the url
+        # ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),
         ("laundry", ["1", "2", "3"]),
         ("parking", ["2", "3", "4", "5"]),
         # ("sale_date", "all dates"), #left over param for buying 
     )
 
-    #[x] - craig update city
-        #Need a base dictionary of craiglist citys and the city codes they use. 
-        #That way we can format the links properly by city. 
-        #Or just hardcode DC because that dictionary would be huge.
-        #?Could input it as a separate function in the script. 
-
-    if CITY == 'chicago':
-        url = f'https://{CITY}.craigslist.org/search/chc/apa'
-    
-    elif CITY == 'washingtondc':
-        url = f'https://washingtondc.craigslist.org/search/doc/apa'
-
-    else:
-        url = f'https://{CITY}.craigslist.org/search/apa'
 
     #BUG
     # So....  craigs encodes region into their URL.  So you'll have to change
@@ -264,7 +259,6 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
 
     #Get the HTML
     bs4ob = BeautifulSoup(response.text, 'lxml')
-
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
     results = bs4ob.find_all("li", class_="cl-static-search-result")
