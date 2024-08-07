@@ -24,13 +24,13 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    'Avondale',        #    #New add
     'Portage Park',    #
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
     'Lincoln Square',  #
     'Irving Park',     #
-    'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Ravenswood',
     'Roscoe Village',
@@ -53,7 +53,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["redfin", "realtor", "homes", "apartments", "zillow", "craigs"] 
+SITES = ["apartments", "homes", "redfin", "realtor", "zillow", "craigs"] 
 
 # DC test data notes
 # CITY    = "Washington"
@@ -66,7 +66,7 @@ SITES = ["redfin", "realtor", "homes", "apartments", "zillow", "craigs"]
 CITY    = "Chicago"
 STATE   = "IL"
 MINBEDS = 2
-MAXRENT = 2600
+MAXRENT = 3700
 DOGS    = True
 
 SEARCH_PARAMS = (
@@ -179,7 +179,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -269,7 +269,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

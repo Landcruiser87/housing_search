@@ -137,7 +137,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
                 if any(x.isnumeric() for x in beds):
                     beds = float("".join(x for x in beds if x.isnumeric()))
                 if any(x.isnumeric() for x in baths):
-                    baths = float("".join(x for x in baths if x.isnumeric()))
+                    baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
 
         #grab addy
         for search in bs4ob.find_all("h2", class_="street-address"):

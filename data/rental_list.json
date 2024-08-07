@@ -6650,5 +6650,86 @@
       "violence_score": 27.76,
       "property_d_score": 0.21
     }
+  },
+  "179422515": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4349-N-Spaulding-Ave-60618/unit-2/home/179422515",
+    "address": "4349 N Spaulding Ave #2, Chicago, IL, 60618",
+    "date_pulled": "08-07-2024_06-44-33",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9607916,
+    "long": -87.7104936,
+    "L_dist": [
+      "Kedzie",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 2.85,
+      "gun_score": 6.36,
+      "murder_score": 1.29,
+      "perv_score": 1.46,
+      "theft_score": 43.81,
+      "violence_score": 24.5,
+      "property_d_score": 0.13
+    }
+  },
+  "184628681": {
+    "source": "www.redfin.com",
+    "price": 1825.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4417-W-School-St-60641/unit-2/home/184628681",
+    "address": "4417 W School St Unit 2, Chicago, IL, 60641",
+    "date_pulled": "08-07-2024_06-44-33",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9406487,
+    "long": -87.7379935,
+    "L_dist": [
+      "Irving Park",
+      0.96
+    ],
+    "crime_sc": {
+      "drug_score": 2.92,
+      "gun_score": 7.13,
+      "murder_score": 1.58,
+      "perv_score": 1.6,
+      "theft_score": 42.07,
+      "violence_score": 25.82,
+      "property_d_score": 0.15
+    }
+  },
+  "191961095": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3705-N-Kedzie-Ave-60618/unit-403/home/191961095",
+    "address": "3705 N Kedzie Ave Unit 403, Chicago, IL, 60618",
+    "date_pulled": "08-07-2024_06-44-33",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1250",
+    "lat": 41.9486807,
+    "long": -87.7077184,
+    "L_dist": [
+      "Addison",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.58,
+      "murder_score": 1.36,
+      "perv_score": 1.47,
+      "theft_score": 43.3,
+      "violence_score": 24.91,
+      "property_d_score": 0.13
+    }
   }
 }

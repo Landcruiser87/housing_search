@@ -59,7 +59,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                     elif subsearch.get("data-testid")=="property-meta-baths":
                         baths = subsearch.find("span").text
                         if any(x.isnumeric() for x in baths):
-                            baths = float("".join(x for x in baths if x.isnumeric()))
+                            baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
 
                     elif subsearch.get("data-testid")=="property-meta-sqft":
                         sqft = subsearch.find("span", class_="meta-value").text

@@ -40,15 +40,15 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             continue
 
         #grab the property info
-        for search in card.find_all("div", class_="property-info"):
+        for search in card.find_all("div", class_="propertyDetails"):
             #Grab price
-            for subsearch in search.find_all("div", class_="price-range"):
+            for subsearch in search.find_all("div", class_="priceRange"):
                 price = subsearch.text
                 if any(x.isnumeric() for x in price):
                     price = money_launderer(price.split(" ")[0])
                     
             #Grab bed bath
-            for subsearch in search.find_all("div", class_="bed-range"):
+            for subsearch in card.find_all("div", class_="bedRange"):
                 beds = subsearch.text
                 if "ft" in beds:#lol
                     #quick comma count
@@ -66,13 +66,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                 if any(x.isnumeric() for x in beds):
                     beds = float("".join(x for x in beds if x.isnumeric()))
                 if any(x.isnumeric() for x in baths):
-                    baths = float("".join(x for x in baths if x.isnumeric()))
+                    baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
 
         #grab address
         #BUG - might want to update the below.  Janky coding
-        for search in card.find_all("a", class_="property-link"):
-            if search.get("aria-label"):
-                addy = search.get("aria-label")
+        for search in card.find_all("div", class_="propertyAddress"):
+            if search.get("title"):
+                addy = search.get("title")
             
         pets = True
 
@@ -131,11 +131,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/"#air-conditioning/-garage
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#-garage
+        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/"#air-conditioning/-garage
     
     #Error Trapping
     else:

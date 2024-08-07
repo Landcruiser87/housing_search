@@ -27,8 +27,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #Grab the id
-        search = card.find("article", "search-placard for-rent-mls-placard")
-        if search:
+        search = card.find("article", class_="for-rent-mls-placard")
+        if search:  
             listingid = search.get("data-pk")
         else:
             logger.warning(f"missing id for card on {source} in {neigh}")
@@ -37,9 +37,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         details = card.find("div", class_="for-rent-content-container")
         if details:
             #grab address
-            res = card.find("p", class_="address")
+            res = card.find("address")
             if res:
-                addy = res.text
+                addy = " ".join(card.find("address").text.strip("\n").split())
             #grab url
             res = card.find("a")
             if res:
@@ -51,13 +51,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                 if testval:
                     #Grab price
                     if "$" in testval:
-                        price = int("".join(x for x in testval if x.isnumeric()))
+                        price = float("".join(x for x in testval if x.isnumeric()))
                     #Grab Beds
                     elif "beds" in testval.lower():
-                        beds = int("".join(x for x in testval if x.isnumeric()))
+                        beds = float("".join(x for x in testval if x.isnumeric()))
                     #Grab baths
                     elif "baths" in testval.lower():
-                        baths = int("".join(x for x in testval if x.isnumeric()))
+                        baths = float("".join(x for x in testval if x.isnumeric() or x == "."))
                     #! SQFT is available on the individual links, but not worth
                     #! the extra call to grab it
 
@@ -128,7 +128,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Mobile Safari/537.36',
         'referer': url,
         'origin':'https://www.homes.com',
-        'Content-Type': 'text/html'
+        # 'Content-Type': 'text/html',
+        # 'Content-Encoding':'gzip'
     }
 
     response = requests.get(url, headers=headers)
@@ -147,12 +148,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     # surrounding.  Just the neighborhood)
     nores = bs4ob.find_all("div", class_="no-results-container")
     if not nores:
-        results = bs4ob.find("section", class_="placards")
+        results = bs4ob.find("ul", class_="placards-list")
         if results:
-            if results.get("id") =='placardContainer':
-                property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
-                logger.info(f'{len(property_listings)} listings returned from {source}')
-                return property_listings
+            # if results.get("id") =='placardContainer':
+            property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
+            logger.info(f'{len(property_listings)} listings returned from {source}')
+            return property_listings
             
     else:
         logger.warning("No listings returned on apartments.  Moving to next site")
