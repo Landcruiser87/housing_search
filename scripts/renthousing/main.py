@@ -46,13 +46,13 @@ AREAS = [
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
     "apartments":("www.apartments.com", apartments),
-    "craigs"    :("www.craiglist.org" , craigs),
+    "craigs"    :("www.craigslist.org" , craigs),
     "zillow"    :("www.zillow.com"    , zillow),
     "redfin"    :("www.redfin.com"    , redfin),
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["apartments", "craigs", "homes", "redfin", "realtor", "zillow"] 
+SITES = ["apartments", "craigs", "homes", "redfin", "realtor", "zillow"]
 
 # DC test data notes
 # CITY    = "Washington"
@@ -212,11 +212,19 @@ def scrape(neigh:str, progbar, task, layout):
                 datacheck = check_ids(data)
                 if datacheck:
                     logger.info("New data found, adding lat/lon/Lstop/crime")
-                    #pull the lat long, score it and store it. 
                     data = datacheck
                     del datacheck
-                    #Get lat longs for the address's
-                    layout["find_count"].update(support.update_count(len(data), layout))
+
+                    #update the total counter
+                    layout["total"].update(support.update_count(len(data), layout, "total"))
+
+                    #Update other counters
+                    for row in data:
+                        for website in SITES:
+                            if website in row.source:
+                                layout[website].update(support.update_count(1, layout, website))
+                        
+                    #pull the lat long, score it and store it. 
                     data = support.get_lat_long(data, (CITY, STATE), logger, layout)
 
                     #If its chicago, do chicago things. 
@@ -272,13 +280,6 @@ def main():
 
     with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
-        #BUG - Sometimes sites still give a 200 even though the structure has changed and we're not finding data
-
-        #TODO - Split the current count panel into subpanels that look for at least
-            # one value for each site.  When any is found, we know that the individual
-            # site is still successfully gathering data.  If we go a few runs
-            # without finding anything, it will be easier to isolate.  
-
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
 
@@ -298,7 +299,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
+
+#BUG - Sometimes sites still give a 200 even though the structure has changed and we're not finding data
+
     #TODO Add rotating proxy's
         #https://www.scrapehero.com/how-to-rotate-proxies-and-ip-addresses-using-python-3/
     #TODO Add rotating headers

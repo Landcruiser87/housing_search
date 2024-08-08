@@ -82,48 +82,48 @@ def get_logger(log_dir:Path, console:Console)->logging.Logger:
 ################################# Rich Functions ####################################
 
 class MakeHeader:
-	"""Display header with clock."""
+    """Display header with clock."""
 
-	def __rich__(self) -> Panel:
-		grid = Table.grid(expand=True)
-		grid.add_column(justify="center", ratio=1)
-		grid.add_column(justify="right")
-		grid.add_row(
-			"[b]Housing[/b] Search Application",
-			datetime.datetime.now().ctime().replace(":", "[blink]:[/]"),
-		)
-		return Panel(grid, style="green on black")
+    def __rich__(self) -> Panel:
+        grid = Table.grid(expand=True)
+        grid.add_column(justify="center", ratio=1)
+        grid.add_column(justify="right")
+        grid.add_row(
+            "[b]Housing[/b] Search Application",
+            datetime.datetime.now().ctime().replace(":", "[blink]:[/]"),
+        )
+        return Panel(grid, style="green on black")
 
 class MainTableHandler(logging.Handler):
-	"""Custom logging handler that saves off every entry of a logger to a temporary
-	list.  As the size of the list grows to be more than half the terminal
-	height, it will pop off the first item in the list and redraw the
-	main_table. 
+    """Custom logging handler that saves off every entry of a logger to a temporary
+    list.  As the size of the list grows to be more than half the terminal
+    height, it will pop off the first item in the list and redraw the
+    main_table. 
 
-	Args:
-		logging (Handler): modified logging handler. 
-	"""	
-	def __init__(self, main_table: Table, layout: Layout, log_level: str):
-		super().__init__()
-		self.main_table = main_table
-		self.log_list = []
-		self.layout = layout
-		self.log_format = "|%(levelname)-8s | %(funcName)-12s |%(message)s "
-		self.setLevel(log_level)
+    Args:
+        logging (Handler): modified logging handler. 
+    """	
+    def __init__(self, main_table: Table, layout: Layout, log_level: str):
+        super().__init__()
+        self.main_table = main_table
+        self.log_list = []
+        self.layout = layout
+        self.log_format = "|%(levelname)-8s | %(funcName)-12s |%(message)s "
+        self.setLevel(log_level)
 
-	def emit(self, record):
-		record.asctime = record.asctime.split(",")[0]
-		#msg = self.format(record) #if you want just the message info switch comment lines
-		msg = self.log_format % record.__dict__
-		tsize = get_terminal_size().lines // 2
-		if len(self.log_list) > tsize:
-			self.log_list.append(msg)
-			self.log_list.pop(0)
-			self.main_table = redraw_main_table(self.log_list)
-			self.layout["termoutput"].update(Panel(self.main_table, border_style="green"))
-		else:
-			self.main_table.add_row(msg)
-			self.log_list.append(msg)
+    def emit(self, record):
+        record.asctime = record.asctime.split(",")[0]
+        #msg = self.format(record) #if you want just the message info switch comment lines
+        msg = self.log_format % record.__dict__
+        tsize = get_terminal_size().lines // 2
+        if len(self.log_list) > tsize:
+            self.log_list.append(msg)
+            self.log_list.pop(0)
+            self.main_table = redraw_main_table(self.log_list)
+            self.layout["termoutput"].update(Panel(self.main_table, border_style="green"))
+        else:
+            self.main_table.add_row(msg)
+            self.log_list.append(msg)
 
 #FUNCTION make main table
 def make_main_table():
@@ -168,70 +168,87 @@ def make_rich_display(totalstops:int):
             title_align="center",
             expand=True)
             )
-    layout["find_count"].update(
+    # layout["total"].update(
+    #     Panel(
+    #         Align.center(Text("0\nhomes\nfound"), vertical="middle"),
+    #     title="current count",
+    #     title_align="center",
+    #     border_style="red")
+    #     )
+    for Lname in ["total", "apartments", "craigs", "homes", "redfin", "realtor", "zillow"]:
+        layout[Lname].update(
         Panel(
-            Align.center(Text("0 homes found"), vertical="middle"),
-        title="current count",
+            Align.center(Text("0"), vertical="middle"),
+        title=f"{Lname}",
         title_align="center",
         border_style="red")
         )
     return layout, totalprog, task, main_table
 
 def make_layout() -> Layout:
-	"""Creates the rich Display Layout
+    """Creates the rich Display Layout
 
-	Returns:
-		Layout: rich Layout object
-	"""
-	layout = Layout(name="root")
-	layout.split(
-		Layout(name="header", size=3), 
-		Layout(name="main")
-	)
-	layout["main"].split_row(
-		Layout(name="termoutput",), 
-		Layout(name="progs"),
-	)
-	layout["progs"].split_column(
-		Layout(name="overall_prog"), 
-		Layout(name="sleep_prog"),
+    Returns:
+        Layout: rich Layout object
+    """
+    layout = Layout(name="root")
+    layout.split(
+        Layout(name="header", size=3), 
+        Layout(name="main")
+    )
+    layout["main"].split_row(
+        Layout(name="termoutput",), 
+        Layout(name="progs"),
+    )
+    layout["progs"].split_column(
+        Layout(name="overall_prog"), 
+        Layout(name="sleep_prog"),
         Layout(name="find_count")
-	)
-	return layout
+    )
+    layout["find_count"].split_row(
+        Layout(name="total"),
+        Layout(name="apartments"),
+        Layout(name="craigs"),
+        Layout(name="homes"),
+        Layout(name="realtor"),
+        Layout(name="redfin"),
+        Layout(name="zillow")
+    )
+    return layout
 
-def update_count(newdigs:int, layout:Layout):
-    current = int(layout["find_count"].renderable.renderable.renderable.plain[0])
+def update_count(newdigs:int, layout:Layout, Lname:str):
+    current = int(layout[Lname].renderable.renderable.renderable.plain[0])
     current += newdigs
     format_p = Panel(
-            Align.center(Text(f"{current} homes found"), vertical="middle"),
-        title="current count",
+        Align.center(Text(f"{current}"), vertical="middle"),
+        title=f"{Lname}",
         title_align="center",
         border_style="green")
 
     return format_p
 
 def redraw_main_table(temp_list: list) -> Table:
-	"""Function that redraws the main table once the log
-	entries reach a certain legnth.
+    """Function that redraws the main table once the log
+    entries reach a certain legnth.
 
-	Args:
-		temp_list (list): Stores the last 10 log entries
+    Args:
+        temp_list (list): Stores the last 10 log entries
 
-	Returns:
-		Table: rich Table object
-	"""	
-	main_table = Table(
-		expand=True,
-		show_header=False,
-		header_style="bold",
-		title="[blue][b]Log Entries[/b]",
-		highlight=True,
-	)
-	main_table.add_column("Log Entries")
-	for row in temp_list:
-		main_table.add_row(row)
+    Returns:
+        Table: rich Table object
+    """	
+    main_table = Table(
+        expand=True,
+        show_header=False,
+        header_style="bold",
+        title="[blue][b]Log Entries[/b]",
+        highlight=True,
+    )
+    main_table.add_column("Log Entries")
+    for row in temp_list:
+        main_table.add_row(row)
 
-	return main_table
+    return main_table
 
 
 ################################# Rich Spinners ####################################

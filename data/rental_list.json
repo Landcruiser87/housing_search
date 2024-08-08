@@ -6925,5 +6925,148 @@
       "violence_score": 25.09,
       "property_d_score": 0.14
     }
+  },
+  "13462149": {
+    "source": "www.redfin.com",
+    "price": 1250.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5124-W-Warwick-Ave-60641/home/13462149",
+    "address": "5124 W Warwick Ave, Chicago, IL, 60641",
+    "date_pulled": "08-08-2024_06-57-22",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1024",
+    "lat": 41.9489618,
+    "long": -87.7555574,
+    "L_dist": [
+      "Montrose",
+      1.06
+    ],
+    "crime_sc": {
+      "drug_score": 3.33,
+      "gun_score": 7.6,
+      "murder_score": 1.72,
+      "perv_score": 1.65,
+      "theft_score": 40.29,
+      "violence_score": 26.62,
+      "property_d_score": 0.16
+    }
+  },
+  "brvj5g8": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3204-s-racine-ave-chicago-il/brvj5g8/",
+    "address": "3204 S Racine Ave, Chicago, IL 60608",
+    "date_pulled": "08-08-2024_06-59-05",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1400 sq ft",
+    "lat": 41.83584275,
+    "long": -87.65619579212284,
+    "L_dist": [
+      "Ashland",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 9.05,
+      "murder_score": 2.54,
+      "perv_score": 1.58,
+      "theft_score": 39.08,
+      "violence_score": 27.76,
+      "property_d_score": 0.21
+    }
+  },
+  "d2112fl": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7750-159th-pl-tinley-park-il/d2112fl/",
+    "address": "7750 159th Pl, Tinley Park, IL 60477 Chicago",
+    "date_pulled": "08-08-2024_06-59-05",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191969300": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2908-N-Allen-Ave-60618/unit-2/home/191969300",
+    "address": "2908 N Allen Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-08-2024_07-00-22",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1000",
+    "lat": 41.9342204,
+    "long": -87.7151468,
+    "L_dist": [
+      "Belmont",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.7,
+      "murder_score": 1.46,
+      "perv_score": 1.47,
+      "theft_score": 43.0,
+      "violence_score": 25.11,
+      "property_d_score": 0.14
+    }
+  },
+  "180913675": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1655-N-Damen-Ave-60647/unit-2/home/180913675",
+    "address": "1655 N Damen Ave #2, Chicago, IL, 60647",
+    "date_pulled": "08-08-2024_07-04-42",
+    "bed": "2",
+    "bath": "1.5",
+    "sqft": "1300",
+    "lat": 41.9120863,
+    "long": -87.6772941,
+    "L_dist": [
+      "Damen",
+      0.16
+    ],
+    "crime_sc": {}
+  },
+  "191969262": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4518-N-Kedzie-Ave-60625/unit-4D/home/191969262",
+    "address": "4518 N Kedzie Ave Unit 4D, Chicago, IL, 60625",
+    "date_pulled": "08-08-2024_07-05-07",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1250",
+    "lat": 41.9635624,
+    "long": -87.7084679,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.34,
+      "murder_score": 1.28,
+      "perv_score": 1.46,
+      "theft_score": 44.02,
+      "violence_score": 24.35,
+      "property_d_score": 0.13
+    }
   }
 }
