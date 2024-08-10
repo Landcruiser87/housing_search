@@ -76,6 +76,15 @@ SEARCH_PARAMS = (
     DOGS
 )
 
+LOST_N_FOUND = {
+    "apartments":False,
+    "craigs"    :False,
+    "homes"     :False,
+    "redfin"    :False,
+    "realtor"   :False,
+    "zillow"    :False
+}
+
 #Define dataclass container
 @dataclass
 class Propertyinfo():
@@ -208,6 +217,13 @@ def scrape(neigh:str, progbar, task, layout):
 
             #If data was returned
             if data:
+                #If there was data found on a site, Update counters border to 
+                #magenta.  Letting me know the site is still successfully scraping.
+                res_test = LOST_N_FOUND[source]
+                if not res_test:
+                    layout[source].update(support.update_border(layout, source))
+                    LOST_N_FOUND[source] = True
+
                 #This function will isolate new id's that aren't in the historical JSON
                 datacheck = check_ids(data)
                 if datacheck:

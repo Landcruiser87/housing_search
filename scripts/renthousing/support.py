@@ -168,13 +168,7 @@ def make_rich_display(totalstops:int):
             title_align="center",
             expand=True)
             )
-    # layout["total"].update(
-    #     Panel(
-    #         Align.center(Text("0\nhomes\nfound"), vertical="middle"),
-    #     title="current count",
-    #     title_align="center",
-    #     border_style="red")
-    #     )
+
     for Lname in ["total", "apartments", "craigs", "homes", "redfin", "realtor", "zillow"]:
         layout[Lname].update(
         Panel(
@@ -227,6 +221,15 @@ def update_count(newdigs:int, layout:Layout, Lname:str):
 
     return format_p
 
+def update_border(layout:Layout, Lname:str):
+    current = int(layout[Lname].renderable.renderable.renderable.plain[0])
+    format_p = Panel(
+        Align.center(Text(f"{current}"), vertical="middle"),
+        title=f"{Lname}",
+        title_align="center",
+        border_style="magenta")
+
+    return format_p
 def redraw_main_table(temp_list: list) -> Table:
     """Function that redraws the main table once the log
     entries reach a certain legnth.
