@@ -58,9 +58,9 @@ Your terminal should look something like this during runtime.  It is a [rich](ht
    - Other information will sometimes pop up here if the program is requesting additional GPS or city crime information
 4. A total and individual site counters for listings found. 
    - The border color will change for each counter depending on what information has been found.
-   - ${\color{red}No \space listings \space have \space been \space found.}$ 
-   - ${\color{Green}A \space new \space listing \space has \space been \space found.}$
-   - ${\color{Magenta}A \space listing \space has \space been \space found \space but \space already \space exists \space in \space your \space JSON \space container.}$
+   - ${\color{red}Red \space = \space No \space listings \space have \space been \space found.}$ 
+   - ${\color{green}Green \space = \space a \space new \space listing \space has \space been \space found.}$
+   - ${\color{magenta}Magenta \space = \space A \space listing \space has \space been \space found \space but \space already \space exists \space in \space your \space JSON \space container.}$
 
 ### External Data Sources
 - [CTA L stops](https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/data)
