@@ -59,7 +59,7 @@ Your terminal should look something like this during runtime.  It is a [rich](ht
 4. A total and individual site counters for listings found. 
    - The border color will change for each counter depending on what information has been found.
    - ${\color{red}No \space listings \space have \space been \space found.}$ 
-   - ${\color{Green}A \space listing \space has \space been \space found.}$
+   - ${\color{Green}A \space new \space listing \space has \space been \space found.}$
    - ${\color{Magenta}A \space listing \space has \space been \space found \space but \space already \space exists \space in \space your \space JSON \space container.}$
 
 ### External Data Sources
