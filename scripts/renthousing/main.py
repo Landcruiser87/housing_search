@@ -217,8 +217,10 @@ def scrape(neigh:str, progbar, task, layout):
 
             #If data was returned
             if data:
-                #If there was data found on a site, Update counters border to 
-                #magenta.  Letting me know the site is still successfully scraping.
+                #If there was data found on a site, Update the site counter's border to 
+                #magenta.  Letting me know the site is still successfully returning data.
+                    #NOTE: Some sites will still return a 200 but change a variable name in the DOM
+                    # which leads to missing data.  
                 res_test = LOST_N_FOUND[source]
                 if not res_test:
                     layout[source].update(support.update_border(layout, source))
@@ -253,7 +255,6 @@ def scrape(neigh:str, progbar, task, layout):
                         data = support.crime_score(data, logger, layout)
                         
                     # elif CITY == 'DC':
-                        # pass
                         #TODO - Build DC search for 
                         #closets train stop and 
                         #crime score if you can find any data
@@ -315,8 +316,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#BUG - Sometimes sites still give a 200 even though the structure has changed and we're not finding data
 
     #TODO Add rotating proxy's
         #https://www.scrapehero.com/how-to-rotate-proxies-and-ip-addresses-using-python-3/
