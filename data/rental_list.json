@@ -7192,5 +7192,32 @@
       "violence_score": 24.67,
       "property_d_score": 0.13
     }
+  },
+  "7774110358": {
+    "source": "www.craigslist.org",
+    "price": 2100.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-roscoe-village-bedroom-bathroom/7774110358.html",
+    "address": null,
+    "date_pulled": "08-10-2024_09-51-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900ft2",
+    "lat": 41.943771,
+    "long": -87.676241,
+    "L_dist": [
+      "Addison",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 6.72,
+      "murder_score": 1.45,
+      "perv_score": 1.46,
+      "theft_score": 43.24,
+      "violence_score": 25.04,
+      "property_d_score": 0.13
+    }
   }
 }

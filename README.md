@@ -46,6 +46,28 @@ Datasets are kept in the data folder.
 - [x] - [redfin](https://www.redfin.com)
 - [x] - [zillow](https://www.zillow.com)
 
+### Runtime Sample
+
+Your terminal should look something like this during runtime.  It is a [rich](https://rich.readthedocs.io/en/stable/) live display that shows you the following information.
+
+![runtime](./data/runtime.jpg)
+
+1. Log table of all log messages letting you know whats happening during runtime
+2. Overall progress timer
+3. Server naps progress timers (because always be nice to the servers)
+   - Other information will sometimes pop up here if the program is requesting additional GPS or city crime information
+4. A total and individual site counters for listings found. 
+   - The border color will change for each counter depending on what information has been found.
+   - ${\color{red}No \space listings \space have \space been \space found.}$ 
+   - ${\color{Green}A \space listing \space has \space been \space found.}$
+   - ${\color{Magenta}A \space listing \space has \space been \space found \space but \space already \space exists \space in \space your \space JSON \space container.}$
+
 ### External Data Sources
 - [CTA L stops](https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/data)
 - [CTA Crime data](https://data.cityofchicago.org/Public-Safety/Gun-Crimes-Heat-Map/iinq-m3rg)
+    
+### Current Search Area
+
+Currently the software is set to search the following neighborhoods.  These can be adjust by adding/commenting out the `AREAS` variable in `main.py`
+
+![searcharea](./data/search_map.png)

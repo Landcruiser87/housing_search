@@ -152,7 +152,7 @@ def make_rich_display(totalstops:int):
                 totalprog,
                 vertical="middle", 
                 height=6),
-            border_style="red",
+            border_style="green",
             title="Overall Progress",
             title_align="center",
             expand=True)
@@ -163,7 +163,7 @@ def make_rich_display(totalstops:int):
                 totalprog,
                 vertical="middle", 
                 height=6),
-            border_style="green",
+            border_style="red",
             title="sleepytimer",
             title_align="center",
             expand=True)
@@ -281,7 +281,7 @@ def run_sleep(naps:int, msg:str, layout):
                 spinner,
                 vertical="middle", 
                 height=6),
-            border_style="red",
+            border_style="green",
             title="sleepytimer",
             title_align="center",
             expand=True)
@@ -294,7 +294,7 @@ def run_sleep(naps:int, msg:str, layout):
     
     layout["sleep_prog"].update(
         Align.center(
-            Panel("awaits next nap... :zzz: ", border_style="green", expand=True), 
+            Panel("awaits next nap... :zzz: ", border_style="red", expand=True), 
             vertical="middle", 
             height=6)
             )
