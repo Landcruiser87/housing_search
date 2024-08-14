@@ -7219,5 +7219,59 @@
       "violence_score": 25.04,
       "property_d_score": 0.13
     }
+  },
+  "186092276": {
+    "source": "www.redfin.com",
+    "price": 2295.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4928-N-Saint-Louis-Ave-60625/unit-3/home/186092276",
+    "address": "4928 N Saint Louis Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "08-11-2024_06-32-57",
+    "bed": "3",
+    "bath": "1.5",
+    "sqft": "1475",
+    "lat": 41.9710957,
+    "long": -87.7161908,
+    "L_dist": [
+      "Kimball",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.2,
+      "murder_score": 1.19,
+      "perv_score": 1.34,
+      "theft_score": 44.45,
+      "violence_score": 24.05,
+      "property_d_score": 0.13
+    }
+  },
+  "192057889": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2527-W-Gunnison-St-60625/home/192057889",
+    "address": "2527 W Gunnison St, Chicago, IL, 60625",
+    "date_pulled": "08-14-2024_07-21-06",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1400",
+    "lat": 41.9694537,
+    "long": -87.6924794,
+    "L_dist": [
+      "Rockwell",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.24,
+      "murder_score": 1.24,
+      "perv_score": 1.43,
+      "theft_score": 44.43,
+      "violence_score": 24.14,
+      "property_d_score": 0.13
+    }
   }
 }
