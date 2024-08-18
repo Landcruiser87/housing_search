@@ -7273,5 +7273,301 @@
       "violence_score": 24.14,
       "property_d_score": 0.13
     }
+  },
+  "8547865626": {
+    "source": "www.realtor.com",
+    "price": 1650.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2949-N-Washtenaw-Ave-Apt-2_Chicago_IL_60618_M85478-65626",
+    "address": "2949 N Washtenaw Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "08-14-2024_17-05-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_2102257619": {
+    "source": "www.zillow.com",
+    "price": 1650.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2949-N-Washtenaw-Ave-APT-2-Chicago-IL-60618/2102257619_zpid/",
+    "address": "2949 N Washtenaw Ave Apt 2, Chicago, IL 60618",
+    "date_pulled": "08-14-2024_17-05-43",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.935368,
+    "long": -87.694916,
+    "L_dist": [
+      "Logan Square",
+      0.8
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.73,
+      "murder_score": 1.52,
+      "perv_score": 1.46,
+      "theft_score": 43.05,
+      "violence_score": 25.13,
+      "property_d_score": 0.14
+    }
+  },
+  "4ntd8mwwme322": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1716-w-washington-blvd-chicago-il/4ntd8mwwme322/",
+    "address": "1716 W Washington Blvd Chicago, IL 60612",
+    "date_pulled": "08-15-2024_08-41-29",
+    "bed": 4.0,
+    "bath": 4.5,
+    "sqft": null,
+    "lat": 41.88317308163265,
+    "long": -87.66958375510204,
+    "L_dist": [
+      "Ashland",
+      0.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 7.73,
+      "murder_score": 1.76,
+      "perv_score": 1.61,
+      "theft_score": 42.0,
+      "violence_score": 25.88,
+      "property_d_score": 0.16
+    }
+  },
+  "181038957": {
+    "source": "www.redfin.com",
+    "price": 1650.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2949-N-Washtenaw-Ave-60618/unit-2/home/181038957",
+    "address": "2949 N Washtenaw Ave #2, Chicago, IL, 60618",
+    "date_pulled": "08-15-2024_08-42-49",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9353573,
+    "long": -87.6950322,
+    "L_dist": [
+      "Logan Square",
+      0.8
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.72,
+      "murder_score": 1.52,
+      "perv_score": 1.47,
+      "theft_score": 43.06,
+      "violence_score": 25.13,
+      "property_d_score": 0.14
+    }
+  },
+  "9502123860": {
+    "source": "www.realtor.com",
+    "price": 2500.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3453-N-Hoyne-Ave_Chicago_IL_60618_M95021-23860",
+    "address": "3453 N Hoyne Ave Unit Garden Chicago, IL 60618",
+    "date_pulled": "08-15-2024_16-13-03",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_439147963": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2415-W-Cullom-Ave-APT-2-Chicago-IL-60618/439147963_zpid/",
+    "address": "2415 W Cullom Ave Apt 2, Chicago, IL 60618",
+    "date_pulled": "08-16-2024_06-58-42",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.959225,
+    "long": -87.6893,
+    "L_dist": [
+      "Western",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 6.38,
+      "murder_score": 1.35,
+      "perv_score": 1.46,
+      "theft_score": 43.74,
+      "violence_score": 24.58,
+      "property_d_score": 0.13
+    }
+  },
+  "8324644068": {
+    "source": "www.realtor.com",
+    "price": 1800.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2415-W-Cullom-Ave-Unit-2_Chicago_IL_60618_M83246-44068",
+    "address": "2415 W Cullom Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "08-16-2024_06-59-04",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_2077630639": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2827-N-Central-Park-Ave-APT-2R-Chicago-IL-60618/2077630639_zpid/",
+    "address": "2827 N Central Park Ave Apt 2r, Chicago, IL 60618",
+    "date_pulled": "08-16-2024_07-00-47",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": 700.0,
+    "lat": 41.932713,
+    "long": -87.71693,
+    "L_dist": [
+      "Belmont",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.66,
+      "murder_score": 1.48,
+      "perv_score": 1.47,
+      "theft_score": 42.98,
+      "violence_score": 25.1,
+      "property_d_score": 0.14
+    }
+  },
+  "9167169957": {
+    "source": "www.realtor.com",
+    "price": 1800.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2827-N-Central-Park-Ave-Apt-2R_Chicago_IL_60618_M91671-69957",
+    "address": "2827 N Central Park Ave Apt 2R Chicago, IL 60618",
+    "date_pulled": "08-16-2024_07-01-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "185817318": {
+    "source": "www.redfin.com",
+    "price": 1800.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2827-N-Central-Park-Ave-60618/unit-2R/home/185817318",
+    "address": "2827 N Central Park Ave Unit 2R, Chicago, IL, 60618",
+    "date_pulled": "08-16-2024_07-01-48",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "700",
+    "lat": 41.932654,
+    "long": -87.7170759,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.66,
+      "murder_score": 1.48,
+      "perv_score": 1.47,
+      "theft_score": 42.97,
+      "violence_score": 25.11,
+      "property_d_score": 0.14
+    }
+  },
+  "9779389943": {
+    "source": "www.realtor.com",
+    "price": 2200.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2449-W-Leland-Ave-G_Chicago_IL_60625_M97793-89943",
+    "address": "2449 W Leland Ave Unit G Chicago, IL 60625",
+    "date_pulled": "08-16-2024_17-49-24",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "179336615": {
+    "source": "www.redfin.com",
+    "price": 1800.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2415-W-Cullom-Ave-60618/unit-2/home/179336615",
+    "address": "2415 W Cullom Ave #2, Chicago, IL, 60618",
+    "date_pulled": "08-16-2024_17-50-36",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9592888,
+    "long": -87.6892935,
+    "L_dist": [
+      "Western",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 6.38,
+      "murder_score": 1.35,
+      "perv_score": 1.47,
+      "theft_score": 43.74,
+      "violence_score": 24.58,
+      "property_d_score": 0.13
+    }
+  },
+  "7776465225": {
+    "source": "www.craigslist.org",
+    "price": 2500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-bed-35-bath-townhouse-humboldt/7776465225.html",
+    "address": "3572 Wabansia, Chicago, IL 60647",
+    "date_pulled": "08-17-2024_22-51-06",
+    "bed": 3.0,
+    "bath": 3.5,
+    "sqft": null,
+    "lat": 41.911832,
+    "long": -87.715985,
+    "L_dist": [
+      "California",
+      1.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.84,
+      "murder_score": 1.54,
+      "perv_score": 1.5,
+      "theft_score": 42.79,
+      "violence_score": 25.26,
+      "property_d_score": 0.15
+    }
   }
 }
