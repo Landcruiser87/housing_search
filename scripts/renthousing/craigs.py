@@ -35,7 +35,9 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     if CITY =='chicago':
         url_pref = f"https://{CITY}.craigslist.org/chc"
     elif CITY == 'washingtondc':
-        url_pref = f"https://washingtondc.craigslist.org/doc"
+        url_pref = f"https://{CITY}.craigslist.org/doc"
+    elif CITY == 'sfbay':
+        url_pref = f"https://{CITY}.craigslist.org/sfc"
     else:
         url_pref = f"https://{CITY}.craigslist.org/"
 
@@ -64,7 +66,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
     CITY = srch_par[0].lower()
     if CITY == "washington":
         CITY = "washingtondc"
-    
+    elif CITY == "san francisco":
+        CITY = 'sfbay'
+
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'Accept-Language': 'en-US,en;q=0.9',
@@ -194,6 +198,8 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     CITY = srch_par[0].lower()
     if CITY == "washington":
         CITY = "washingtondc"
+    if CITY == "san francisco":
+        CITY = 'sfbay'
 
     MINBEDS = int(srch_par[2])
     MAXRENT = int(srch_par[3])
@@ -203,6 +209,9 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     
     elif CITY == 'washingtondc':
         url = f'https://{CITY}.craigslist.org/search/doc/apa?'
+
+    elif CITY == 'sfbay':
+        url = f'https://{CITY}.craigslist.org/search/sfc/apa?'
 
     else:
         url = f'https://{CITY}.craigslist.org/search/apa?'

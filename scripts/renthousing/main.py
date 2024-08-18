@@ -42,6 +42,13 @@ AREAS = [
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
 ]
+# SF Testing
+# AREAS = [
+#     "Mission District",
+#     "Sunset District",
+#     "Chinatown",
+#     "Nob Hill"
+# ]
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
@@ -52,7 +59,16 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["apartments", "craigs", "homes", "redfin", "realtor", "zillow"]
+SITES = ["craigs", "apartments", "homes", "redfin", "realtor", "zillow"]
+
+
+# Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
+CITY    = "Chicago"
+STATE   = "IL"
+MINBEDS = 2
+MAXRENT = 2600
+DOGS    = True
+
 
 # DC test data notes
 # CITY    = "Washington"
@@ -61,12 +77,13 @@ SITES = ["apartments", "craigs", "homes", "redfin", "realtor", "zillow"]
 # MAXRENT = 4000
 # DOGS    = True
 
-# Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Chicago"
-STATE   = "IL"
-MINBEDS = 2
-MAXRENT = 2600
-DOGS    = True
+# SF Testing
+# CITY    = "San Francisco"
+# STATE   = "CA"
+# MINBEDS = 2
+# MAXRENT = 3000
+# DOGS    = True
+
 
 SEARCH_PARAMS = (
     CITY,
@@ -241,6 +258,7 @@ def scrape(neigh:str, progbar, task, layout):
                         for website in SITES:
                             if website in row.source:
                                 layout[website].update(support.update_count(1, layout, website))
+                                break
                         
                     #pull the lat long, score it and store it. 
                     data = support.get_lat_long(data, (CITY, STATE), logger, layout)

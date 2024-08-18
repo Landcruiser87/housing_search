@@ -128,7 +128,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             #two requests when searching redfin by string
             #1. Make a request to see what neighborhood code goes with the search term. 
             #2. Request the appropriate neigh with paramaterized search. 
-        
+
         SH_PARAMS = {
             "location": f"{neigh}",
             "start": 0,

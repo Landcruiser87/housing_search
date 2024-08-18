@@ -28,7 +28,7 @@ from rich.text import Text
 from geopy import Nominatim, ArcGIS
 from pathlib import Path
 
-# console = Console(color_system="truecolor")
+console = Console(color_system="truecolor")
 
 ################################# Logging Funcs ####################################
 
@@ -211,7 +211,7 @@ def make_layout() -> Layout:
     return layout
 
 def update_count(newdigs:int, layout:Layout, Lname:str):
-    current = int(layout[Lname].renderable.renderable.renderable.plain[0])
+    current = int(layout[Lname].renderable.renderable.renderable.plain)
     current += newdigs
     format_p = Panel(
         Align.center(Text(f"{current}"), vertical="middle"),
