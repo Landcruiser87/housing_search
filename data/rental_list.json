@@ -7569,5 +7569,641 @@
       "violence_score": 25.26,
       "property_d_score": 0.15
     }
+  },
+  "7776705369": {
+    "source": "www.craigslist.org",
+    "price": 1550.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-br-bath-condo-in-west-rodgers/7776705369.html",
+    "address": "Claremont, Chicago, IL 60645",
+    "date_pulled": "08-18-2024_17-12-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900ft2",
+    "lat": 41.997809,
+    "long": -87.688928,
+    "L_dist": [
+      "Morse",
+      1.39
+    ],
+    "crime_sc": {
+      "drug_score": 1.17,
+      "gun_score": 5.53,
+      "murder_score": 0.75,
+      "perv_score": 1.46,
+      "theft_score": 46.54,
+      "violence_score": 23.34,
+      "property_d_score": 0.12
+    }
+  },
+  "144995252": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3923-W-Ainslie-St-60625/unit-1E/home/144995252",
+    "address": "3923 W Ainslie St Unit 1E, Chicago, IL, 60625",
+    "date_pulled": "08-18-2024_17-13-09",
+    "bed": "3",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.969799,
+    "long": -87.7265484,
+    "L_dist": [
+      "Kimball",
+      0.7
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 6.31,
+      "murder_score": 1.24,
+      "perv_score": 1.48,
+      "theft_score": 43.91,
+      "violence_score": 24.27,
+      "property_d_score": 0.14
+    }
+  },
+  "192125220": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1518-N-Ashland-Ave-60622/unit-3/home/192125220",
+    "address": "1518 N Ashland Ave Unit 3, Chicago, IL, 60622",
+    "date_pulled": "08-18-2024_17-14-19",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "800",
+    "lat": 41.9093784,
+    "long": -87.6679422,
+    "L_dist": [
+      "Division",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 7.03,
+      "murder_score": 1.61,
+      "perv_score": 1.49,
+      "theft_score": 42.88,
+      "violence_score": 25.34,
+      "property_d_score": 0.15
+    }
+  },
+  "9498402365": {
+    "source": "www.realtor.com",
+    "price": 1700.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3043-N-Kedzie-Ave-Apt-1_Chicago_IL_60618_M94984-02365",
+    "address": "3043 N Kedzie Ave N Unit 1ST Chicago, IL 60618",
+    "date_pulled": "08-19-2024_07-10-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192131754": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3043-N-Kedzie-Ave-60618/unit-1ST/home/192131754",
+    "address": "3043 N Kedzie Ave Unit 1ST, Chicago, IL, 60618",
+    "date_pulled": "08-19-2024_07-11-12",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9369587,
+    "long": -87.7073511,
+    "L_dist": [
+      "Belmont",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.78,
+      "gun_score": 6.68,
+      "murder_score": 1.49,
+      "perv_score": 1.48,
+      "theft_score": 43.0,
+      "violence_score": 25.1,
+      "property_d_score": 0.14
+    }
+  },
+  "13391039": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1909-W-Sunnyside-Ave-60640/home/13391039",
+    "address": "1909 W Sunnyside Ave, Chicago, IL, 60640",
+    "date_pulled": "08-19-2024_17-09-35",
+    "bed": "3",
+    "bath": "3",
+    "sqft": "1800",
+    "lat": 41.9631425,
+    "long": -87.6765196,
+    "L_dist": [
+      "Montrose",
+      0.12
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 6.37,
+      "murder_score": 1.3,
+      "perv_score": 1.47,
+      "theft_score": 44.06,
+      "violence_score": 24.35,
+      "property_d_score": 0.13
+    }
+  },
+  "zpid_3707755": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4657-N-Hermitage-Ave-APT-1-Chicago-IL-60640/3707755_zpid/",
+    "address": "4657 N Hermitage Ave Apt 1, Chicago, IL 60640",
+    "date_pulled": "08-19-2024_17-11-58",
+    "bed": 2.0,
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.966846,
+    "long": -87.672165,
+    "L_dist": [
+      "Damen",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 6.24,
+      "murder_score": 1.25,
+      "perv_score": 1.49,
+      "theft_score": 44.54,
+      "violence_score": 24.04,
+      "property_d_score": 0.13
+    }
+  },
+  "9799788317": {
+    "source": "www.realtor.com",
+    "price": 2600.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5626-W-Patterson-Ave-1_Chicago_IL_60634_M97997-88317",
+    "address": "5626 W Patterson Ave Unit 1 Chicago, IL 60634",
+    "date_pulled": "08-19-2024_17-14-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1274.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_439203783": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5626-W-Patterson-Ave-1-Chicago-IL-60634/439203783_zpid/",
+    "address": "5626 W Patterson Ave #1, Chicago, IL 60634",
+    "date_pulled": "08-19-2024_17-14-19",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": 1274.0,
+    "lat": 41.94705,
+    "long": -87.767876,
+    "L_dist": [
+      "Montrose",
+      1.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.73,
+      "gun_score": 8.18,
+      "murder_score": 1.9,
+      "perv_score": 1.76,
+      "theft_score": 38.78,
+      "violence_score": 27.25,
+      "property_d_score": 0.18
+    }
+  },
+  "9630161082": {
+    "source": "www.realtor.com",
+    "price": 1700.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3422-N-Hamlin-Ave-G_Chicago_IL_60618_M96301-61082",
+    "address": "3422 N Hamlin Ave Unit G Chicago, IL 60618",
+    "date_pulled": "08-19-2024_17-15-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "181917294": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3422-N-Hamlin-Ave-60618/unit-G/home/181917294",
+    "address": "3422 N Hamlin Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "08-20-2024_06-55-44",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9435389,
+    "long": -87.7227015,
+    "L_dist": [
+      "Addison",
+      0.32
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.61,
+      "murder_score": 1.44,
+      "perv_score": 1.51,
+      "theft_score": 43.0,
+      "violence_score": 25.02,
+      "property_d_score": 0.14
+    }
+  },
+  "dcq3k8h": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1411-w-19th-st-chicago-il/dcq3k8h/",
+    "address": "1411 W 19th St, Chicago, IL 60608",
+    "date_pulled": "08-20-2024_06-56-44",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.85597193963111,
+    "long": -87.6616518373377,
+    "L_dist": [
+      "18th",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 8.61,
+      "murder_score": 2.22,
+      "perv_score": 1.6,
+      "theft_score": 40.13,
+      "violence_score": 26.97,
+      "property_d_score": 0.19
+    }
+  },
+  "192150163": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5626-W-Patterson-Ave-60634/unit-1/home/192150163",
+    "address": "5626 W Patterson Ave Unit 1, Chicago, IL, 60634",
+    "date_pulled": "08-20-2024_07-01-54",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1274",
+    "lat": 41.9469607,
+    "long": -87.7679076,
+    "L_dist": [
+      "Montrose",
+      1.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 8.15,
+      "murder_score": 1.89,
+      "perv_score": 1.75,
+      "theft_score": 38.75,
+      "violence_score": 27.26,
+      "property_d_score": 0.18
+    }
+  },
+  "192155856": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4040-W-Roscoe-St-60641/unit-2F/home/192155856",
+    "address": "4040 W Roscoe St Unit 2F, Chicago, IL, 60641",
+    "date_pulled": "08-20-2024_16-45-29",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1200",
+    "lat": 41.9434062,
+    "long": -87.7289794,
+    "L_dist": [
+      "Addison",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 2.88,
+      "gun_score": 6.85,
+      "murder_score": 1.51,
+      "perv_score": 1.59,
+      "theft_score": 42.46,
+      "violence_score": 25.46,
+      "property_d_score": 0.14
+    }
+  },
+  "7777370582": {
+    "source": "www.craigslist.org",
+    "price": 1850.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-newly-renovated-apt-in-prime/7777370582.html",
+    "address": "5135 S Kenwood Ave., Chicago, IL 60615",
+    "date_pulled": "08-21-2024_06-46-48",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "750ft2",
+    "lat": 41.801848,
+    "long": -87.593614,
+    "L_dist": [
+      "51st",
+      1.28
+    ],
+    "crime_sc": {
+      "drug_score": 1.47,
+      "gun_score": 8.92,
+      "murder_score": 2.7,
+      "perv_score": 1.31,
+      "theft_score": 38.9,
+      "violence_score": 28.03,
+      "property_d_score": 0.21
+    }
+  },
+  "192161502": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4906-N-Hermitage-Ave-60640/home/192161502",
+    "address": "4906 N Hermitage Ave, Chicago, IL, 60640",
+    "date_pulled": "08-21-2024_06-50-45",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1000",
+    "lat": 41.9720792,
+    "long": -87.673008,
+    "L_dist": [
+      "Damen",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 2.85,
+      "gun_score": 6.18,
+      "murder_score": 1.22,
+      "perv_score": 1.31,
+      "theft_score": 44.7,
+      "violence_score": 23.99,
+      "property_d_score": 0.13
+    }
+  },
+  "9390843552": {
+    "source": "www.realtor.com",
+    "price": 1995.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4318-N-Sacramento-Ave-1A_Chicago_IL_60618_M93908-43552",
+    "address": "4318 N Sacramento Ave Unit 1A Chicago, IL 60618",
+    "date_pulled": "08-21-2024_17-17-48",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9687003439": {
+    "source": "www.realtor.com",
+    "price": 1495.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4318-N-Sacramento-Ave-1B_Chicago_IL_60618_M96870-03439",
+    "address": "4318 N Sacramento Ave Unit 1B Chicago, IL 60618",
+    "date_pulled": "08-21-2024_17-17-48",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_3646463": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4724-N-Kewanee-Ave-Chicago-IL-60630/3646463_zpid/",
+    "address": "4724 N Kewanee Ave, Chicago, IL 60630",
+    "date_pulled": "08-21-2024_17-20-37",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": 900.0,
+    "lat": 41.966328,
+    "long": -87.73242,
+    "L_dist": [
+      "Montrose",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 2.86,
+      "gun_score": 6.43,
+      "murder_score": 1.32,
+      "perv_score": 1.6,
+      "theft_score": 43.44,
+      "violence_score": 24.67,
+      "property_d_score": 0.14
+    }
+  },
+  "192175795": {
+    "source": "www.redfin.com",
+    "price": 1925.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3256-N-Monticello-Ave-60618/unit-2/home/192175795",
+    "address": "3256 N Monticello Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-22-2024_06-54-11",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "950",
+    "lat": 41.9408808,
+    "long": -87.7188885,
+    "L_dist": [
+      "Belmont",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.58,
+      "murder_score": 1.42,
+      "perv_score": 1.49,
+      "theft_score": 42.97,
+      "violence_score": 25.06,
+      "property_d_score": 0.13
+    }
+  },
+  "185366281": {
+    "source": "www.redfin.com",
+    "price": 2595.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2834-N-Albany-Ave-60618/unit-01F/home/185366281",
+    "address": "2834 N Albany Ave Unit 01F, Chicago, IL, 60618",
+    "date_pulled": "08-22-2024_06-54-11",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1250",
+    "lat": 41.9331177,
+    "long": -87.7053486,
+    "L_dist": [
+      "Logan Square",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 2.78,
+      "gun_score": 6.65,
+      "murder_score": 1.5,
+      "perv_score": 1.47,
+      "theft_score": 42.98,
+      "violence_score": 25.09,
+      "property_d_score": 0.14
+    }
+  },
+  "192177274": {
+    "source": "www.redfin.com",
+    "price": 1495.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4318-N-Sacramento-Ave-60618/unit-1B/home/192177274",
+    "address": "4318 N Sacramento Ave Unit 1B, Chicago, IL, 60618",
+    "date_pulled": "08-22-2024_06-57-34",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9600464,
+    "long": -87.7036112,
+    "L_dist": [
+      "Francisco",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 6.29,
+      "murder_score": 1.32,
+      "perv_score": 1.47,
+      "theft_score": 43.69,
+      "violence_score": 24.54,
+      "property_d_score": 0.13
+    }
+  },
+  "192177259": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4318-N-Sacramento-Ave-60618/unit-1A/home/192177259",
+    "address": "4318 N Sacramento Ave Unit 1A, Chicago, IL, 60618",
+    "date_pulled": "08-22-2024_06-57-34",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1300",
+    "lat": 41.9600464,
+    "long": -87.7036112,
+    "L_dist": [
+      "Francisco",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 6.29,
+      "murder_score": 1.32,
+      "perv_score": 1.47,
+      "theft_score": 43.69,
+      "violence_score": 24.54,
+      "property_d_score": 0.13
+    }
+  },
+  "7777805794": {
+    "source": "www.craigslist.org",
+    "price": 1850.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-condo-for-rent-available/7777805794.html",
+    "address": "2723 W. Wellington Ave., Chicago, IL 60618",
+    "date_pulled": "08-22-2024_16-01-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1000ft2",
+    "lat": 41.935845,
+    "long": -87.696302,
+    "L_dist": [
+      "Logan Square",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 2.8,
+      "gun_score": 6.67,
+      "murder_score": 1.51,
+      "perv_score": 1.48,
+      "theft_score": 42.98,
+      "violence_score": 25.12,
+      "property_d_score": 0.14
+    }
+  },
+  "9wqxhk6bjk69x": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2344-w-jarvis-ave-chicago-il-unit-1/9wqxhk6bjk69x/",
+    "address": "2344 W Jarvis Ave Unit 1 Chicago, IL 60645",
+    "date_pulled": "08-22-2024_16-07-50",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191844518": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3453-N-Ridgeway-Ave-60618/unit-2/home/191844518",
+    "address": "3453 N Ridgeway Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-23-2024_06-40-01",
+    "bed": "3",
+    "bath": "2",
+    "sqft": "1200",
+    "lat": 41.9443932,
+    "long": -87.7209418,
+    "L_dist": [
+      "Addison",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 6.54,
+      "murder_score": 1.42,
+      "perv_score": 1.5,
+      "theft_score": 42.98,
+      "violence_score": 24.98,
+      "property_d_score": 0.13
+    }
   }
 }

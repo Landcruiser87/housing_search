@@ -126,16 +126,22 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     STATE = srch_par[1].upper()
     MINBEDS = int(srch_par[2])
     MAXRENT = int(srch_par[3])
-
+    PETS = srch_par[4]
     #Search by neighborhood
     if isinstance(neigh, str):
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
-        url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+        if PETS:
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+        else:
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/features-ca"#g1
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+        if PETS:
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+        else:
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/features-ca"#g1
     
     #Error Trapping
     else:

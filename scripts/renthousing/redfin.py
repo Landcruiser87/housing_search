@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -50,7 +50,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             baths = "".join(x for x in baths if x.isnumeric() or x == ".")
             break
         
-        pets = True
+        pets = PETS
         
         listing = Propertyinfo(
             id=listingid,   
@@ -113,7 +113,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     STATE = srch_par[1]
     MINBEDS = int(srch_par[2])
     MAXRENT = money_launderer(int(srch_par[3]))
-    
+    PETS = srch_par[4]
     BASE_HEADERS = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
         'origin':'https://www.redfin.com',
@@ -179,12 +179,16 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
-        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
-
+        if PETS:
+            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
+        else:
+            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning'#,has-parking
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
-
+        if PETS:
+            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
+        else:
+            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
     #Error Trapping
     else:
         logging.critical("Inproper input for redfin, moving to next site")
@@ -211,7 +215,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         results = bs4ob.find("div", class_="PhotosView")
         if results:
             if results.get("data-rf-test-id") =='photos-view':
-                property_listings = get_listings(results, neigh, source, Propertyinfo)
+                property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
                 logger.info(f'{len(property_listings)} listings returned from {source}')
                 return property_listings
             else:

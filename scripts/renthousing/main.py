@@ -14,7 +14,7 @@ from pathlib import Path, PurePath
 import realtor, zillow, apartments, craigs, redfin, homes, support
 
 ################################# Variable Setup ####################################
-#input custom area's here. Uncomment whichever way you want to search
+# input custom area's here. Uncomment whichever way you want to search
 # AREAS = [
 # 20003, 20007, 20008, 20009, 20057, 20015, 20016
 # #Problem zips 22201,22101, 22207 - In Arlington.  Need to run arlington separately
@@ -84,7 +84,6 @@ DOGS    = True
 # MAXRENT = 3000
 # DOGS    = True
 
-
 SEARCH_PARAMS = (
     CITY,
     STATE,
@@ -123,6 +122,7 @@ class Propertyinfo():
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
     # def dict(self):
     #     return {k: str(v) for k, v in asdict(self).items()}
+
 ################################# Timing Func ####################################
 def log_time(fn):
     """Decorator timing function.  Accepts any function and returns a logging
@@ -237,7 +237,7 @@ def scrape(neigh:str, progbar, task, layout):
                 #If there was data found on a site, Update the site counter's border to 
                 #magenta.  Letting me know the site is still successfully returning data.
                     #NOTE: Some sites will still return a 200 but change a variable name in the DOM
-                    # which leads to missing data.  
+                    # which leads to missing data.
                 res_test = LOST_N_FOUND[source]
                 if not res_test:
                     layout[source].update(support.update_border(layout, source))
@@ -321,6 +321,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url 
         # Send gmail alerting of new properties
+
         if newlistings:
             support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
@@ -340,7 +341,7 @@ if __name__ == "__main__":
     #TODO Add rotating headers
         #https://www.scrapehero.com/how-to-fake-and-rotate-user-agents-using-python-3/
         #https://www.scrapehero.com/essential-http-headers-for-web-scraping/
-    
+
 #Notes
 # import json
 # fp = "../../data/rental_list.json"

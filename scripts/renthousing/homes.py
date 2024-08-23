@@ -4,7 +4,7 @@ import requests
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -13,6 +13,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         source (str): Source website
         logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass) : Dataclass for housing individual listings
+        Pets (bool) : Whether or not you are searching for a furry friend
 
     Returns:
         listings (list): [List of dataclass objects]
@@ -61,7 +62,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                     #! SQFT is available on the individual links, but not worth
                     #! the extra call to grab it
 
-        pets = True
+        pets = PETS
 
         listing = Propertyinfo(
             id=listingid,
@@ -98,17 +99,24 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     STATE = srch_par[1].lower()
     MINBEDS = int(srch_par[2])
     MAXRENT = int(srch_par[3])
-
+    PETS = srch_par[4]
     #Search by neighborhood
     if isinstance(neigh, str):
         if " " in neigh:
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
+        if PETS:
+            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
+        else:
+            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
+            #TODO - Come back and verify this works.  URL does some funny reformatting when its a single amenity
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/{MINBEDS}-to-5-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
+        if PETS:
+            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/{MINBEDS}-to-5-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
+        else:
+            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/{MINBEDS}-to-5-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
 
     #Error Trapping
     else:
@@ -150,7 +158,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     if not nores:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
-            property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
+            property_listings = get_listings(results, neigh, source, logger, Propertyinfo, PETS)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
             

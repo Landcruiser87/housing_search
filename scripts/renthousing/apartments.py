@@ -4,7 +4,7 @@ import requests
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -84,7 +84,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             if search.get("title"):
                 addy = search.get("title")
             
-        pets = True
+        pets = PETS
 
         listing = Propertyinfo(
             id=listingid,
@@ -134,19 +134,24 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     STATE = srch_par[1].lower()
     MINBEDS = int(srch_par[2])
     MAXRENT = int(srch_par[3])
-
+    PETS = srch_par[4]
     #Search by neighborhood
     if isinstance(neigh, str):
         if " " in neigh:
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#
+        if PETS:
+            url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#
+        else:
+            url = f"https://www.apartments.com/houses-townhomes/{neigh}-{CITY}-{STATE}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}/air-conditioning/"#
     
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#air-conditioning/-garage
-    
+        if PETS:
+            url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}-pet-friendly-dog/air-conditioning/"#air-conditioning/-garage
+        else:
+            url = f"https://www.apartments.com/houses-townhomes/{CITY}-{STATE}-{neigh}/min-{MINBEDS}-bedrooms-1000-to-{MAXRENT}/air-conditioning/"#air-conditioning/-garage
     #Error Trapping
     else:
         logger.critical("Inproper input for area, moving to next site")
@@ -186,7 +191,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     if not nores:
         results = bs4ob.find("div", id="placardContainer")
         if results:
-            property_listings = get_listings(results, neigh, source, logger, Propertyinfo)
+            property_listings = get_listings(results, neigh, source, logger, Propertyinfo, PETS)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
             
