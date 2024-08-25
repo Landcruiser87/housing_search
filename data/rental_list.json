@@ -8205,5 +8205,129 @@
       "violence_score": 24.98,
       "property_d_score": 0.13
     }
+  },
+  "9vldh1kcwhbcr": {
+    "source": "www.homes.com",
+    "price": 1600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1114-n-kedvale-ave-chicago-il-unit-2/9vldh1kcwhbcr/",
+    "address": "1114 N Kedvale Ave Unit 2 Chicago, IL 60651",
+    "date_pulled": "08-23-2024_17-49-32",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "186051158": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Roscoe-Village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2214-W-Roscoe-St-60618/unit-3/home/186051158",
+    "address": "2214 W Roscoe St Unit 3, Chicago, IL, 60618",
+    "date_pulled": "08-24-2024_07-10-21",
+    "bed": "2",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9433853,
+    "long": -87.6840193,
+    "L_dist": [
+      "Addison",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 6.63,
+      "murder_score": 1.45,
+      "perv_score": 1.49,
+      "theft_score": 43.08,
+      "violence_score": 25.05,
+      "property_d_score": 0.13
+    }
+  },
+  "13481742": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Mayfair",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4724-N-Kewanee-Ave-60630/home/13481742",
+    "address": "4724 N Kewanee Ave, Chicago, IL, 60630",
+    "date_pulled": "08-24-2024_07-13-23",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.966348,
+    "long": -87.7324474,
+    "L_dist": [
+      "Montrose",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 2.85,
+      "gun_score": 6.42,
+      "murder_score": 1.34,
+      "perv_score": 1.6,
+      "theft_score": 43.42,
+      "violence_score": 24.64,
+      "property_d_score": 0.14
+    }
+  },
+  "192222509": {
+    "source": "www.redfin.com",
+    "price": 2450.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3814-N-Albany-Ave-60618/unit-2/home/192222509",
+    "address": "3814 N Albany Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-24-2024_18-37-44",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9508285,
+    "long": -87.7057345,
+    "L_dist": [
+      "Addison",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 2.85,
+      "gun_score": 6.42,
+      "murder_score": 1.38,
+      "perv_score": 1.47,
+      "theft_score": 43.3,
+      "violence_score": 24.82,
+      "property_d_score": 0.13
+    }
+  },
+  "180318409": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1655-N-Claremont-Ave-60647/unit-1/home/180318409",
+    "address": "1655 N Claremont Ave #1, Chicago, IL, 60647",
+    "date_pulled": "08-24-2024_18-39-03",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9119693,
+    "long": -87.6857913,
+    "L_dist": [
+      "Western",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.9,
+      "murder_score": 1.54,
+      "perv_score": 1.48,
+      "theft_score": 42.72,
+      "violence_score": 25.35,
+      "property_d_score": 0.15
+    }
   }
 }
