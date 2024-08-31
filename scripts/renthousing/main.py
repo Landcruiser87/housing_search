@@ -27,7 +27,7 @@ AREAS = [
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
-    'Lincoln Square',  #
+    'Lincoln Square',  #    
     'Irving Park',     #
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
@@ -42,6 +42,7 @@ AREAS = [
     # 'Humboldt Park'
     # 'Ravenswood Gardens',
 ]
+
 # SF Testing
 # AREAS = [
 #     "Mission District",
@@ -184,7 +185,7 @@ def check_ids(data:list)->list:
 
     Returns:
         data (list): List of only new Propertyinfo objects
-    """	
+    """
     j_ids = set(jsondata.keys())
     n_ids = set([data[x].id for x in range(len(data))])
     newids = n_ids - j_ids

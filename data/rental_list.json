@@ -8329,5 +8329,446 @@
       "violence_score": 25.35,
       "property_d_score": 0.15
     }
+  },
+  "186094091": {
+    "source": "www.redfin.com",
+    "price": 1550.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3616-N-Christiana-Ave-60618/unit-2/home/186094091",
+    "address": "3616 N Christiana Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-25-2024_17-24-53",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9471262,
+    "long": -87.71178,
+    "L_dist": [
+      "Addison",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 6.49,
+      "murder_score": 1.39,
+      "perv_score": 1.47,
+      "theft_score": 43.12,
+      "violence_score": 24.92,
+      "property_d_score": 0.13
+    }
+  },
+  "7779103954": {
+    "source": "www.craigslist.org",
+    "price": 2300.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-3br-2ba-duplex-free-laundry/7779103954.html",
+    "address": "1641 W 18th St, Chicago, IL 60608",
+    "date_pulled": "08-27-2024_07-20-48",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1200ft2",
+    "lat": 41.857701,
+    "long": -87.66741,
+    "L_dist": [
+      "18th",
+      0.09
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 8.53,
+      "murder_score": 2.18,
+      "perv_score": 1.59,
+      "theft_score": 40.13,
+      "violence_score": 26.99,
+      "property_d_score": 0.19
+    }
+  },
+  "vbk9fb8m2922w": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1315-s-7th-ave-maywood-il/vbk9fb8m2922w/",
+    "address": "1315 S 7th Ave Maywood, IL 60153 Chicago",
+    "date_pulled": "08-27-2024_07-27-50",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "sfpxdjz0w3s2y": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/448-hazelwood-ln-glenview-il/sfpxdjz0w3s2y/",
+    "address": "448 Hazelwood Ln Glenview, IL 60025 Chicago",
+    "date_pulled": "08-27-2024_07-27-50",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2vrreh8p5hkc2": {
+    "source": "www.homes.com",
+    "price": 1650.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/8223-w-30th-st-riverside-il/2vrreh8p5hkc2/?t=forrent",
+    "address": "8223 W 30th St Riverside, IL 60546 Chicago",
+    "date_pulled": "08-27-2024_07-27-50",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "s69d8qwchbqqn": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/7033-simpson-st-morton-grove-il/s69d8qwchbqqn/",
+    "address": "7033 Simpson St Morton Grove, IL 60053 Chicago",
+    "date_pulled": "08-27-2024_07-27-50",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "y6l64ebywzetd": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/10049-frontage-rd-skokie-il-unit-d/y6l64ebywzetd/",
+    "address": "10049 Frontage Rd Unit D Skokie, IL 60077 Chicago",
+    "date_pulled": "08-27-2024_07-27-50",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_2125589190": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2611-W-Argyle-St-1-Chicago-IL-60625/2125589190_zpid/",
+    "address": "2611 W Argyle St #1, Chicago, IL 60625",
+    "date_pulled": "08-27-2024_22-43-44",
+    "bed": 2.0,
+    "bath": "2",
+    "sqft": 1400.0,
+    "lat": 41.97204,
+    "long": -87.69427,
+    "L_dist": [
+      "Rockwell",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.09,
+      "murder_score": 1.24,
+      "perv_score": 1.32,
+      "theft_score": 44.49,
+      "violence_score": 24.04,
+      "property_d_score": 0.13
+    }
+  },
+  "192258536": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2611-W-Argyle-St-60625/unit-1/home/192258536",
+    "address": "2611 W Argyle St Unit 1, Chicago, IL, 60625",
+    "date_pulled": "08-27-2024_22-44-05",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1400",
+    "lat": 41.9720494,
+    "long": -87.6944543,
+    "L_dist": [
+      "Rockwell",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.09,
+      "murder_score": 1.24,
+      "perv_score": 1.32,
+      "theft_score": 44.49,
+      "violence_score": 24.04,
+      "property_d_score": 0.13
+    }
+  },
+  "034623kyfnqz4": {
+    "source": "www.homes.com",
+    "price": 2200.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1334-w-wolfram-st-chicago-il-unit-1/034623kyfnqz4/",
+    "address": "1334 W Wolfram St Unit 1 Chicago, IL 60657",
+    "date_pulled": "08-27-2024_22-44-20",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "eg595jfd0835k": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2222-w-erie-st-chicago-il-unit-1/eg595jfd0835k/",
+    "address": "2222 W Erie St Unit 1 Chicago, IL 60612",
+    "date_pulled": "08-27-2024_22-45-00",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8976728329": {
+    "source": "www.realtor.com",
+    "price": 2400.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3750-N-Albany-Ave-1_Chicago_IL_60618_M89767-28329",
+    "address": "3750 N Albany Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "08-27-2024_22-48-15",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192223097": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3750-N-Albany-Ave-60618/unit-1/home/192223097",
+    "address": "3750 N Albany Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "08-27-2024_22-48-47",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9499843,
+    "long": -87.7057304,
+    "L_dist": [
+      "Addison",
+      0.71
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 6.4,
+      "murder_score": 1.4,
+      "perv_score": 1.47,
+      "theft_score": 43.26,
+      "violence_score": 24.85,
+      "property_d_score": 0.13
+    }
+  },
+  "kfrc29etckwn9": {
+    "source": "www.homes.com",
+    "price": 1400.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3137-w-douglas-blvd-chicago-il-unit-coachhouse/kfrc29etckwn9/",
+    "address": "3137 W Douglas Blvd Unit COACHHOUSE Chicago, IL 60623",
+    "date_pulled": "08-28-2024_20-53-47",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "13496291": {
+    "source": "www.redfin.com",
+    "price": 1240.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4910-N-Kruger-Ave-60630/home/13496291",
+    "address": "4910 N Kruger Ave, Chicago, IL, 60630",
+    "date_pulled": "08-28-2024_20-54-48",
+    "bed": "4",
+    "bath": "2",
+    "sqft": "1600",
+    "lat": 41.9703057,
+    "long": -87.7458006,
+    "L_dist": [
+      "Montrose",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 2.95,
+      "gun_score": 6.59,
+      "murder_score": 1.46,
+      "perv_score": 1.48,
+      "theft_score": 42.65,
+      "violence_score": 25.13,
+      "property_d_score": 0.14
+    }
+  },
+  "192263108": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1539-N-Bell-Ave-60622/unit-2R/home/192263108",
+    "address": "1539 N Bell Ave Unit 2R, Chicago, IL, 60622",
+    "date_pulled": "08-28-2024_20-57-57",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.909746,
+    "long": -87.6832105,
+    "L_dist": [
+      "Damen",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.9,
+      "murder_score": 1.59,
+      "perv_score": 1.47,
+      "theft_score": 42.67,
+      "violence_score": 25.4,
+      "property_d_score": 0.15
+    }
+  },
+  "189917542": {
+    "source": "www.redfin.com",
+    "price": 1500.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4048-N-Milwaukee-Ave-60641/unit-2/home/189917542",
+    "address": "4048 N Milwaukee Ave Unit 2, Chicago, IL, 60641",
+    "date_pulled": "08-29-2024_08-27-20",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "585",
+    "lat": 41.9542378,
+    "long": -87.7489223,
+    "L_dist": [
+      "Montrose",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 3.14,
+      "gun_score": 6.97,
+      "murder_score": 1.64,
+      "perv_score": 1.62,
+      "theft_score": 41.13,
+      "violence_score": 26.19,
+      "property_d_score": 0.15
+    }
+  },
+  "186710095": {
+    "source": "www.redfin.com",
+    "price": 2175.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3306-W-Cullom-Ave-60618/unit-1/home/186710095",
+    "address": "3306 W Cullom Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "08-29-2024_08-28-34",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9595608,
+    "long": -87.7110383,
+    "L_dist": [
+      "Kedzie",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.21,
+      "murder_score": 1.34,
+      "perv_score": 1.46,
+      "theft_score": 43.62,
+      "violence_score": 24.53,
+      "property_d_score": 0.13
+    }
+  },
+  "7780088682": {
+    "source": "www.craigslist.org",
+    "price": 2600.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-west-town-bed-bath-duplex-dw-ac/7780088682.html",
+    "address": "1033 North Mozart, Chicago, IL 60622",
+    "date_pulled": "08-29-2024_18-38-28",
+    "bed": 4.0,
+    "bath": 3.0,
+    "sqft": "2000ft2",
+    "lat": 41.900192,
+    "long": -87.698155,
+    "L_dist": [
+      "California",
+      1.11
+    ],
+    "crime_sc": {
+      "drug_score": 2.65,
+      "gun_score": 7.12,
+      "murder_score": 1.67,
+      "perv_score": 1.61,
+      "theft_score": 42.3,
+      "violence_score": 25.69,
+      "property_d_score": 0.15
+    }
+  },
+  "192069246": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1231-N-Wolcott-Ave-60622/unit-1/home/192069246",
+    "address": "1231 N Wolcott Ave Unit 1, Chicago, IL, 60622",
+    "date_pulled": "08-29-2024_18-41-17",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "980",
+    "lat": 41.9042866,
+    "long": -87.6746042,
+    "L_dist": [
+      "Damen",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 2.7,
+      "gun_score": 7.06,
+      "murder_score": 1.67,
+      "perv_score": 1.53,
+      "theft_score": 42.54,
+      "violence_score": 25.56,
+      "property_d_score": 0.15
+    }
   }
 }
