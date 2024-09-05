@@ -8770,5 +8770,210 @@
       "violence_score": 25.56,
       "property_d_score": 0.15
     }
+  },
+  "187326029": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4224-N-Francisco-Ave-60618/unit-2/home/187326029",
+    "address": "4224 N Francisco Ave #2, Chicago, IL, 60618",
+    "date_pulled": "09-02-2024_19-59-59",
+    "bed": "3",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.958367,
+    "long": -87.7011064,
+    "L_dist": [
+      "Francisco",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 2.86,
+      "gun_score": 6.21,
+      "murder_score": 1.37,
+      "perv_score": 1.46,
+      "theft_score": 43.58,
+      "violence_score": 24.63,
+      "property_d_score": 0.13
+    }
+  },
+  "3bth1057cd3yl": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4527-n-mulligan-ave-chicago-il/3bth1057cd3yl/",
+    "address": "4527 N Mulligan Ave Chicago, IL 60630",
+    "date_pulled": "09-03-2024_09-56-28",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9628939,
+    "long": -87.78537901405616,
+    "L_dist": [
+      "Jefferson Park",
+      1.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 8.27,
+      "murder_score": 2.06,
+      "perv_score": 1.81,
+      "theft_score": 37.25,
+      "violence_score": 27.79,
+      "property_d_score": 0.18
+    }
+  },
+  "7896594707": {
+    "source": "www.realtor.com",
+    "price": 2500.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4527-N-Mulligan-Ave_Chicago_IL_60630_M78965-94707",
+    "address": "4527 N Mulligan Ave Chicago, IL 60630",
+    "date_pulled": "09-03-2024_10-00-14",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9628939,
+    "long": -87.78537901405616,
+    "L_dist": [
+      "Jefferson Park",
+      1.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 8.27,
+      "murder_score": 2.06,
+      "perv_score": 1.81,
+      "theft_score": 37.25,
+      "violence_score": 27.79,
+      "property_d_score": 0.18
+    }
+  },
+  "13476596": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4527-N-Mulligan-Ave-60630/home/13476596",
+    "address": "4527 N Mulligan Ave, Chicago, IL, 60630",
+    "date_pulled": "09-03-2024_20-14-38",
+    "bed": "3",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9628794,
+    "long": -87.7853833,
+    "L_dist": [
+      "Jefferson Park",
+      1.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 8.27,
+      "murder_score": 2.06,
+      "perv_score": 1.81,
+      "theft_score": 37.25,
+      "violence_score": 27.79,
+      "property_d_score": 0.18
+    }
+  },
+  "9801753885": {
+    "source": "www.realtor.com",
+    "price": 1950.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4022-N-Kimball-Ave-1_Chicago_IL_60618_M98017-53885",
+    "address": "4022 N Kimball Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "09-03-2024_20-16-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192360945": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4022-N-Kimball-Ave-60618/unit-1/home/192360945",
+    "address": "4022 N Kimball Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "09-04-2024_20-09-35",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9546066,
+    "long": -87.7131919,
+    "L_dist": [
+      "Addison",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.22,
+      "murder_score": 1.38,
+      "perv_score": 1.46,
+      "theft_score": 43.32,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "192362205": {
+    "source": "www.redfin.com",
+    "price": 2350.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3609-W-Ainslie-St-60625/unit-3/home/192362205",
+    "address": "3609 W Ainslie St Unit 3, Chicago, IL, 60625",
+    "date_pulled": "09-04-2024_20-12-16",
+    "bed": "3",
+    "bath": "2",
+    "sqft": "1000",
+    "lat": 41.9700231,
+    "long": -87.718795,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.02,
+      "murder_score": 1.26,
+      "perv_score": 1.41,
+      "theft_score": 44.22,
+      "violence_score": 24.1,
+      "property_d_score": 0.13
+    }
+  },
+  "zpid_87708919": {
+    "source": "www.zillow.com",
+    "price": 1750.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4823-N-Sawyer-Ave-4821-3-Chicago-IL-60625/87708919_zpid/",
+    "address": "4823 N Sawyer Ave #4821-3, Chicago, IL 60625",
+    "date_pulled": "09-04-2024_20-12-54",
+    "bed": 2.0,
+    "bath": "2",
+    "sqft": 1250.0,
+    "lat": 41.96911,
+    "long": -87.709366,
+    "L_dist": [
+      "Kimball",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.02,
+      "murder_score": 1.27,
+      "perv_score": 1.44,
+      "theft_score": 44.26,
+      "violence_score": 24.14,
+      "property_d_score": 0.13
+    }
   }
 }

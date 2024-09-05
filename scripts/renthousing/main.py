@@ -7,7 +7,7 @@ from rich.console import Console
 from rich.live import Live
 from dataclasses import dataclass, field
 from os.path import exists
-from random import shuffle
+from random import shuffle  
 from pathlib import Path, PurePath
 
 #Import supporting files
@@ -23,12 +23,12 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    'Irving Park',     #
     'Portage Park',    #
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
     'Lincoln Square',  #    
-    'Irving Park',     #
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Ravenswood',
@@ -60,7 +60,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["craigs", "apartments", "homes", "redfin", "realtor", "zillow"]
+SITES = ["redfin", "craigs", "apartments", "homes", "realtor", "zillow"]
 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
