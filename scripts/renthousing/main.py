@@ -328,10 +328,12 @@ def main():
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
-
+            
         else:
             logger.critical("No new listings were found")
-        
+
+        logger.info("Site functionality summary")
+        logger.info(f"{list(LOST_N_FOUND.items())}")
         logger.info("Program shutting down")
 
 if __name__ == "__main__":

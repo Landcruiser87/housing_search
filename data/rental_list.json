@@ -8975,5 +8975,323 @@
       "violence_score": 24.14,
       "property_d_score": 0.13
     }
+  },
+  "192364987": {
+    "source": "www.redfin.com",
+    "price": 1250.0,
+    "neigh": "Budlong-Woods",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5322-N-Francisco-Ave-60625/unit-GN/home/192364987",
+    "address": "5322 N Francisco Ave Unit GN, Chicago, IL, 60625",
+    "date_pulled": "09-05-2024_07-40-19",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "700",
+    "lat": 41.9783821,
+    "long": -87.7016893,
+    "L_dist": [
+      "Francisco",
+      0.85
+    ],
+    "crime_sc": {
+      "drug_score": 2.5,
+      "gun_score": 5.83,
+      "murder_score": 1.13,
+      "perv_score": 1.34,
+      "theft_score": 45.23,
+      "violence_score": 23.61,
+      "property_d_score": 0.12
+    }
+  },
+  "0p9gk6vqy1q29": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1624-n-western-ave-chicago-il-unit-ph-2/0p9gk6vqy1q29/",
+    "address": "1624 N Western Ave Unit PH-2 Chicago, IL 60647",
+    "date_pulled": "09-05-2024_17-10-57",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "13495534": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4955-N-Kildare-Ave-60630/home/13495534",
+    "address": "4955 N Kildare Ave, Chicago, IL, 60630",
+    "date_pulled": "09-05-2024_17-14-45",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1300",
+    "lat": 41.971599,
+    "long": -87.7352435,
+    "L_dist": [
+      "Montrose",
+      0.82
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.3,
+      "murder_score": 1.36,
+      "perv_score": 1.42,
+      "theft_score": 43.38,
+      "violence_score": 24.7,
+      "property_d_score": 0.13
+    }
+  },
+  "180642638": {
+    "source": "www.redfin.com",
+    "price": 2146.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3152-N-Honore-St-60657/unit-2/home/180642638",
+    "address": "3152 N Honore St Unit 2, Chicago, IL, 60657",
+    "date_pulled": "09-05-2024_17-15-26",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9393865,
+    "long": -87.6743877,
+    "L_dist": [
+      "Paulina",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 6.56,
+      "murder_score": 1.56,
+      "perv_score": 1.47,
+      "theft_score": 43.1,
+      "violence_score": 25.11,
+      "property_d_score": 0.13
+    }
+  },
+  "192380859": {
+    "source": "www.redfin.com",
+    "price": 2295.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4143-N-Central-Park-Ave-60618/home/192380859",
+    "address": "4143 N Central Park Ave, Chicago, IL, 60618",
+    "date_pulled": "09-05-2024_17-17-30",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1250",
+    "lat": 41.9569256,
+    "long": -87.717636,
+    "L_dist": [
+      "Irving Park",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.2,
+      "murder_score": 1.37,
+      "perv_score": 1.46,
+      "theft_score": 43.43,
+      "violence_score": 24.69,
+      "property_d_score": 0.13
+    }
+  },
+  "192382825": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3814-N-Albany-Ave-60618/unit-G/home/192382825",
+    "address": "3814 N Albany Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "09-06-2024_07-51-11",
+    "bed": "2",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9508285,
+    "long": -87.7057345,
+    "L_dist": [
+      "Addison",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.31,
+      "murder_score": 1.41,
+      "perv_score": 1.46,
+      "theft_score": 43.28,
+      "violence_score": 24.87,
+      "property_d_score": 0.13
+    }
+  },
+  "7090108778": {
+    "source": "www.realtor.com",
+    "price": 1875.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3818-W-Ainslie-St-Apt-3_Chicago_IL_60625_M70901-08778",
+    "address": "3818 W Ainslie St Apt 3 Chicago, IL 60625",
+    "date_pulled": "09-06-2024_07-53-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "7782368960": {
+    "source": "www.craigslist.org",
+    "price": 2100.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/forest-park-house-for-rent-forest-park/7782368960.html",
+    "address": "Beloit, Forest park, IL 60130",
+    "date_pulled": "09-06-2024_16-28-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1500ft2",
+    "lat": 41.877725,
+    "long": -87.812133,
+    "L_dist": [
+      "Forest Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.56,
+      "gun_score": 9.32,
+      "murder_score": 2.28,
+      "perv_score": 2.24,
+      "theft_score": 34.66,
+      "violence_score": 29.11,
+      "property_d_score": 0.22
+    }
+  },
+  "7782339145": {
+    "source": "www.craigslist.org",
+    "price": 2500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-top-of-the-line-luxury-lakeview/7782339145.html",
+    "address": "Irving Park Road, Chicago, IL 60613",
+    "date_pulled": "09-06-2024_16-28-13",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": "1150ft2",
+    "lat": 41.954336,
+    "long": -87.652552,
+    "L_dist": [
+      "Sheridan",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 2.97,
+      "gun_score": 6.01,
+      "murder_score": 1.34,
+      "perv_score": 1.43,
+      "theft_score": 44.43,
+      "violence_score": 24.09,
+      "property_d_score": 0.13
+    }
+  },
+  "9047972081": {
+    "source": "www.realtor.com",
+    "price": 2000.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4550-N-Western-Ave-3_Chicago_IL_60625_M90479-72081",
+    "address": "4550 N Western Ave Unit 3 Chicago, IL 60625",
+    "date_pulled": "09-06-2024_16-31-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "187035390": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3968-N-Elston-Ave-60618/unit-2/home/187035390",
+    "address": "3968 N Elston Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "09-07-2024_08-23-55",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1400",
+    "lat": 41.9531365,
+    "long": -87.7186733,
+    "L_dist": [
+      "Addison",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.26,
+      "murder_score": 1.4,
+      "perv_score": 1.46,
+      "theft_score": 43.25,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "192381602": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5418-W-Belmont-Ave-60641/unit-2W/home/192381602",
+    "address": "5418 W Belmont Ave Unit 2W, Chicago, IL, 60641",
+    "date_pulled": "09-07-2024_17-27-26",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1150",
+    "lat": 41.938876,
+    "long": -87.7623765,
+    "L_dist": [
+      "Montrose",
+      1.84
+    ],
+    "crime_sc": {
+      "drug_score": 3.49,
+      "gun_score": 7.84,
+      "murder_score": 1.97,
+      "perv_score": 1.67,
+      "theft_score": 39.27,
+      "violence_score": 27.1,
+      "property_d_score": 0.18
+    }
+  },
+  "192360031": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4550-N-Western-Ave-60625/unit-3/home/192360031",
+    "address": "4550 N Western Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "09-07-2024_17-32-58",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "750",
+    "lat": 41.9647229,
+    "long": -87.6890004,
+    "L_dist": [
+      "Western",
+      0.1
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 6.15,
+      "murder_score": 1.29,
+      "perv_score": 1.45,
+      "theft_score": 44.14,
+      "violence_score": 24.33,
+      "property_d_score": 0.13
+    }
   }
 }
