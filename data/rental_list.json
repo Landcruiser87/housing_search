@@ -9293,5 +9293,118 @@
       "violence_score": 24.33,
       "property_d_score": 0.13
     }
+  },
+  "jehxbk9nd8nls": {
+    "source": "www.homes.com",
+    "price": 1800.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2536-s-millard-ave-chicago-il/jehxbk9nd8nls/",
+    "address": "2536 S Millard Ave Chicago, IL 60623",
+    "date_pulled": "09-08-2024_16-53-59",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": 41.845494934865286,
+    "long": -87.71614915418847,
+    "L_dist": [
+      "Central Park",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 2.88,
+      "gun_score": 8.49,
+      "murder_score": 2.22,
+      "perv_score": 1.65,
+      "theft_score": 39.74,
+      "violence_score": 27.13,
+      "property_d_score": 0.2
+    }
+  },
+  "8829349780": {
+    "source": "www.realtor.com",
+    "price": 1925.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5247-W-Waveland-Ave-1_Chicago_IL_60641_M88293-49780",
+    "address": "5247 W Waveland Ave Unit 1 Chicago, IL 60641",
+    "date_pulled": "09-09-2024_17-09-57",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "0ce7ltbtp2pm8": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1246-w-chicago-ave-chicago-il-unit-1f/0ce7ltbtp2pm8/",
+    "address": "1246 W Chicago Ave Unit 1F Chicago, IL 60642",
+    "date_pulled": "09-10-2024_08-11-33",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "183767897": {
+    "source": "www.redfin.com",
+    "price": 2150.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2847-W-Berwyn-Ave-60625/unit-1/home/183767897",
+    "address": "2847 W Berwyn Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "09-10-2024_08-13-47",
+    "bed": "3",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9772913,
+    "long": -87.7008208,
+    "L_dist": [
+      "Francisco",
+      0.78
+    ],
+    "crime_sc": {
+      "drug_score": 2.54,
+      "gun_score": 5.86,
+      "murder_score": 1.13,
+      "perv_score": 1.33,
+      "theft_score": 45.08,
+      "violence_score": 23.69,
+      "property_d_score": 0.12
+    }
+  },
+  "192449107": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2633-W-Carmen-Ave-60625/unit-3E/home/192449107",
+    "address": "2633 W Carmen Ave Unit 3E, Chicago, IL, 60625",
+    "date_pulled": "09-10-2024_08-13-47",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1300",
+    "lat": 41.9738067,
+    "long": -87.6953461,
+    "L_dist": [
+      "Rockwell",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 2.62,
+      "gun_score": 5.97,
+      "murder_score": 1.18,
+      "perv_score": 1.32,
+      "theft_score": 44.73,
+      "violence_score": 23.96,
+      "property_d_score": 0.13
+    }
   }
 }
