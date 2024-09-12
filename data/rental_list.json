@@ -9594,5 +9594,91 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "fqb0bwpbw12s6": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1506-w-erie-st-chicago-il-unit-ch/fqb0bwpbw12s6/",
+    "address": "1506 W Erie St Unit CH Chicago, IL 60642",
+    "date_pulled": "09-12-2024_08-12-39",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "vl5sr5e": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1531-golfview-dr-glendale-heights-il/vl5sr5e/",
+    "address": "1531 Golfview Dr, Glendale Heights, IL 60139 Chicago",
+    "date_pulled": "09-12-2024_08-13-35",
+    "bed": 2.0,
+    "bath": 2.5,
+    "sqft": "1248 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192515160": {
+    "source": "www.redfin.com",
+    "price": 2350.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3705-N-Kedzie-Ave-60618/unit-401/home/192515160",
+    "address": "3705 N Kedzie Ave Unit 401, Chicago, IL, 60618",
+    "date_pulled": "09-12-2024_08-19-10",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1250",
+    "lat": 41.9486807,
+    "long": -87.7077184,
+    "L_dist": [
+      "Addison",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.37,
+      "murder_score": 1.39,
+      "perv_score": 1.47,
+      "theft_score": 43.17,
+      "violence_score": 24.95,
+      "property_d_score": 0.13
+    }
+  },
+  "192515248": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4020-W-Cornelia-Ave-60641/unit-2/home/192515248",
+    "address": "4020 W Cornelia Ave Unit 2, Chicago, IL, 60641",
+    "date_pulled": "09-12-2024_08-19-10",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1100",
+    "lat": 41.944986,
+    "long": -87.7282283,
+    "L_dist": [
+      "Addison",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 6.66,
+      "murder_score": 1.51,
+      "perv_score": 1.55,
+      "theft_score": 42.4,
+      "violence_score": 25.42,
+      "property_d_score": 0.14
+    }
   }
 }
