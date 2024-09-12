@@ -9406,5 +9406,193 @@
       "violence_score": 23.96,
       "property_d_score": 0.13
     }
+  },
+  "emr2q2ehb93ch": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2015-w-superior-st-chicago-il-unit-ch/emr2q2ehb93ch/",
+    "address": "2015 W Superior St Unit CH Chicago, IL 60612",
+    "date_pulled": "09-10-2024_18-08-44",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9383185329": {
+    "source": "www.realtor.com",
+    "price": 2550.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5016-N-Winchester-Ave-Apt-3R_Chicago_IL_60640_M93831-85329",
+    "address": "5016 N Winchester Ave Apt 3R Chicago, IL 60640",
+    "date_pulled": "09-10-2024_18-09-08",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "1cx6bs6": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/16025-forest-ave-oak-forest-il/1cx6bs6/",
+    "address": "16025 Forest Ave, Oak Forest, IL 60452 Chicago",
+    "date_pulled": "09-11-2024_09-27-43",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "937 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192462152": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5016-N-Winchester-Ave-60640/unit-3R/home/192462152",
+    "address": "5016 N Winchester Ave Unit 3R, Chicago, IL, 60640",
+    "date_pulled": "09-11-2024_09-28-44",
+    "bed": "2",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9729963,
+    "long": -87.6781583,
+    "L_dist": [
+      "Damen",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 2.78,
+      "gun_score": 6.05,
+      "murder_score": 1.2,
+      "perv_score": 1.31,
+      "theft_score": 44.65,
+      "violence_score": 24.01,
+      "property_d_score": 0.13
+    }
+  },
+  "192453798": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3556-W-Belmont-Ave-60618/unit-1/home/192453798",
+    "address": "3556 W Belmont Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "09-11-2024_09-31-50",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9394591,
+    "long": -87.7172231,
+    "L_dist": [
+      "Belmont",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.8,
+      "gun_score": 6.46,
+      "murder_score": 1.51,
+      "perv_score": 1.47,
+      "theft_score": 42.93,
+      "violence_score": 25.09,
+      "property_d_score": 0.13
+    }
+  },
+  "xdz2zfemxsynn": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4640-n-ozanam-ave-norridge-il/xdz2zfemxsynn/",
+    "address": "4640 N Ozanam Ave Norridge, IL 60706 Chicago",
+    "date_pulled": "09-11-2024_09-32-29",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.964131328380155,
+    "long": -87.82202716925934,
+    "L_dist": [
+      "Harlem",
+      1.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.64,
+      "gun_score": 8.73,
+      "murder_score": 1.84,
+      "perv_score": 2.1,
+      "theft_score": 35.89,
+      "violence_score": 28.35,
+      "property_d_score": 0.18
+    }
+  },
+  "zpid_3708266": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4245-N-Leavitt-St-Chicago-IL-60618/3708266_zpid/",
+    "address": "4245 N Leavitt St, Chicago, IL 60618",
+    "date_pulled": "09-11-2024_09-34-14",
+    "bed": 3.0,
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.959057,
+    "long": -87.6834,
+    "L_dist": [
+      "Montrose",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 2.92,
+      "gun_score": 6.25,
+      "murder_score": 1.35,
+      "perv_score": 1.45,
+      "theft_score": 43.67,
+      "violence_score": 24.6,
+      "property_d_score": 0.13
+    }
+  },
+  "9ldnctx63y9hl": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2009-w-17th-st-chicago-il-unit-1f/9ldnctx63y9hl/",
+    "address": "2009 W 17th St Unit 1F Chicago, IL 60608",
+    "date_pulled": "09-11-2024_17-24-57",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9848432589": {
+    "source": "www.realtor.com",
+    "price": 2100.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4020-W-Cornelia-Ave-2_Chicago_IL_60641_M98484-32589",
+    "address": "4020 W Cornelia Ave Unit 2 Chicago, IL 60641",
+    "date_pulled": "09-11-2024_17-27-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
