@@ -9680,5 +9680,145 @@
       "violence_score": 25.42,
       "property_d_score": 0.14
     }
+  },
+  "s4f0bsw0l085l": {
+    "source": "www.homes.com",
+    "price": 1825.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2009-w-17th-st-chicago-il-unit-1r/s4f0bsw0l085l/",
+    "address": "2009 W 17th St Unit 1R Chicago, IL 60608",
+    "date_pulled": "09-12-2024_18-10-58",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "qx364bxnb93tl": {
+    "source": "www.homes.com",
+    "price": 1700.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/109-e-37th-place-chicago-il/qx364bxnb93tl/?t=forrent",
+    "address": "109 E 37th Place Chicago, IL 60653",
+    "date_pulled": "09-12-2024_18-10-58",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": 41.82657627606577,
+    "long": -87.62294283538374,
+    "L_dist": [
+      "Indiana",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 2.28,
+      "gun_score": 8.74,
+      "murder_score": 2.66,
+      "perv_score": 1.37,
+      "theft_score": 39.09,
+      "violence_score": 27.96,
+      "property_d_score": 0.21
+    }
+  },
+  "k78hntmcmydk3": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4642-hawthorne-ave-lyons-il/k78hntmcmydk3/",
+    "address": "4642 Hawthorne Ave Lyons, IL 60534 Chicago",
+    "date_pulled": "09-12-2024_18-10-58",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192526573": {
+    "source": "www.redfin.com",
+    "price": 1525.0,
+    "neigh": "Budlong-Woods",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5322-N-Francisco-Ave-60625/unit-2N/home/192526573",
+    "address": "5322 N Francisco Ave Unit 2N, Chicago, IL, 60625",
+    "date_pulled": "09-12-2024_18-11-53",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "850",
+    "lat": 41.9783821,
+    "long": -87.7016893,
+    "L_dist": [
+      "Francisco",
+      0.85
+    ],
+    "crime_sc": {
+      "drug_score": 2.52,
+      "gun_score": 5.84,
+      "murder_score": 1.1,
+      "perv_score": 1.33,
+      "theft_score": 45.24,
+      "violence_score": 23.59,
+      "property_d_score": 0.12
+    }
+  },
+  "9cgj036": {
+    "source": "www.apartments.com",
+    "price": 2570.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3636-s-giles-ave-chicago-il/9cgj036/",
+    "address": "3636 S Giles Ave, Chicago, IL 60653",
+    "date_pulled": "09-13-2024_08-13-34",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.828135599999996,
+    "long": -87.61954312150544,
+    "L_dist": [
+      "35th-Bronzeville-IIT",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.16,
+      "gun_score": 8.68,
+      "murder_score": 2.62,
+      "perv_score": 1.36,
+      "theft_score": 39.41,
+      "violence_score": 27.82,
+      "property_d_score": 0.21
+    }
+  },
+  "192536148": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5420-W-Belmont-Ave-60641/unit-2E/home/192536148",
+    "address": "5420 W Belmont Ave Unit 2E, Chicago, IL, 60641",
+    "date_pulled": "09-13-2024_08-16-13",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1150",
+    "lat": 41.9388348,
+    "long": -87.7625414,
+    "L_dist": [
+      "Montrose",
+      1.85
+    ],
+    "crime_sc": {
+      "drug_score": 3.52,
+      "gun_score": 7.84,
+      "murder_score": 1.96,
+      "perv_score": 1.66,
+      "theft_score": 39.22,
+      "violence_score": 27.11,
+      "property_d_score": 0.18
+    }
   }
 }
