@@ -9820,5 +9820,150 @@
       "violence_score": 27.11,
       "property_d_score": 0.18
     }
+  },
+  "mjd811ztc7w71": {
+    "source": "www.homes.com",
+    "price": 1500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1237-s-58th-ave-cicero-il/mjd811ztc7w71/",
+    "address": "1237 S 58th Ave Cicero, IL 60804 Chicago",
+    "date_pulled": "09-14-2024_08-29-44",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.864563756615404,
+    "long": -87.76907631891538,
+    "L_dist": [
+      "Austin",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 9.42,
+      "murder_score": 2.35,
+      "perv_score": 1.98,
+      "theft_score": 36.94,
+      "violence_score": 28.43,
+      "property_d_score": 0.23
+    }
+  },
+  "192537021": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4518-N-Kedzie-Ave-60625/unit-3B/home/192537021",
+    "address": "4518 N Kedzie Ave Unit 3B, Chicago, IL, 60625",
+    "date_pulled": "09-14-2024_08-31-29",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1150",
+    "lat": 41.9635624,
+    "long": -87.7084679,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 6.13,
+      "murder_score": 1.32,
+      "perv_score": 1.45,
+      "theft_score": 43.9,
+      "violence_score": 24.38,
+      "property_d_score": 0.13
+    }
+  },
+  "7782226885": {
+    "source": "www.craigslist.org",
+    "price": 2500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-good-morning-skyline/7782226885.html",
+    "address": "Ogden, Chicago, IL 60612",
+    "date_pulled": "09-15-2024_10-21-35",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1300ft2",
+    "lat": 41.880888,
+    "long": -87.666739,
+    "L_dist": [
+      "Ashland",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 7.62,
+      "murder_score": 1.81,
+      "perv_score": 1.61,
+      "theft_score": 41.77,
+      "violence_score": 26.02,
+      "property_d_score": 0.16
+    }
+  },
+  "gtdtbc0ewyxdh": {
+    "source": "www.homes.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3-e-judith-ann-dr-mount-prospect-il/gtdtbc0ewyxdh/?t=forrent",
+    "address": "3 E Judith Ann Dr Mount Prospect, IL 60056 Chicago",
+    "date_pulled": "09-15-2024_10-25-23",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "qzy49jxbymq1s": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/70-n-albert-st-mount-prospect-il/qzy49jxbymq1s/",
+    "address": "70 N Albert St Mount Prospect, IL 60056 Chicago",
+    "date_pulled": "09-15-2024_10-25-23",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "br9hf7sd2dr38": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/263-e-maple-ave-villa-park-il/br9hf7sd2dr38/",
+    "address": "263 E Maple Ave Villa Park, IL 60181 Chicago",
+    "date_pulled": "09-15-2024_10-26-24",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "489lz081n5w3g": {
+    "source": "www.homes.com",
+    "price": 2350.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/651-s-oakland-ave-villa-park-il/489lz081n5w3g/",
+    "address": "651 S Oakland Ave Villa Park, IL 60181 Chicago",
+    "date_pulled": "09-15-2024_10-26-24",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
