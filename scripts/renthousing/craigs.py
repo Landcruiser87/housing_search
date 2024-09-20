@@ -240,7 +240,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
         ("hasPic", "1"),
         # ("postedToday", "1"),
         ("housing_type",["10", "2", "3", "4", "5", "6", "8", "9"]),
-        ("min_price", "100"),
+        ("min_price", "0"),
         ("max_price", MAXRENT),
         ("min_bedrooms", MINBEDS),
         ("min_bathrooms", "1"),
