@@ -173,15 +173,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isAuction"           :{"value":False},
             "isForSaleForeclosure":{"value":False},
             "isAllHomes"          :{"value":True},
-            "beds"                :{"min":MINBEDS},
-            "isApartmentOrCondo"  :{"value":False},
-            "isApartment"         :{"value":False},
-            "isCondo"             :{"value":False},
+            "isApartmentOrCondo"  :{"value":True},
+            "isApartment"         :{"value":True},
+            "isCondo"             :{"value":True},
             "mp"                  :{"max":MAXRENT},
             "ac"                  :{"value":True},
-            # "parka"               :{"value":True},#I think searching by parking too is limiting my results.  Taking it off for now
-            "onlyRentalLargeDogsAllowed":{"value":True}, #Uncomment depending on doggo preference
-            "onlyRentalSmallDogsAllowed":{"value":True}
+            "r4r"                 :{"value":True},
         },
         "isListVisible":True,
         # "regionSelection": [{"regionId": 33597, "regionType": 8}], #!might not need this?

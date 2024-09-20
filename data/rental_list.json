@@ -9965,5 +9965,274 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7785004715": {
+    "source": "www.craigslist.org",
+    "price": 2500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-single-family-home-large/7785004715.html",
+    "address": "Birchwood, Chicago, IL 60626",
+    "date_pulled": "09-15-2024_17-16-14",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1200ft2",
+    "lat": 42.017831,
+    "long": -87.675957,
+    "L_dist": [
+      "Howard",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 0.82,
+      "gun_score": 4.17,
+      "murder_score": 0.64,
+      "perv_score": 1.46,
+      "theft_score": 47.44,
+      "violence_score": 22.89,
+      "property_d_score": 0.1
+    }
+  },
+  "blp7dfc": {
+    "source": "www.apartments.com",
+    "price": 2450.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/921-w-lawrence-ave-chicago-il/blp7dfc/",
+    "address": "921 W Lawrence Ave, Chicago, IL 60640",
+    "date_pulled": "09-15-2024_17-23-52",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": "1300 sq ft",
+    "lat": 41.9689083,
+    "long": -87.65323838808689,
+    "L_dist": [
+      "Lawrence",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.94,
+      "gun_score": 5.74,
+      "murder_score": 1.19,
+      "perv_score": 1.42,
+      "theft_score": 45.6,
+      "violence_score": 23.23,
+      "property_d_score": 0.12
+    }
+  },
+  "qx1ddw4lrbhxq": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2112-rugen-rd-glenview-il/qx1ddw4lrbhxq/",
+    "address": "2112 Rugen Rd Glenview, IL 60026 Chicago",
+    "date_pulled": "09-16-2024_07-33-07",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "q16pk46nlwxxh": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5369-n-oconto-ave-chicago-il/q16pk46nlwxxh/",
+    "address": "5369 N Oconto Ave Chicago, IL 60656",
+    "date_pulled": "09-17-2024_07-38-33",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.977866500000005,
+    "long": -87.80945212108875,
+    "L_dist": [
+      "Harlem",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 4.7,
+      "gun_score": 8.49,
+      "murder_score": 1.76,
+      "perv_score": 1.61,
+      "theft_score": 36.06,
+      "violence_score": 27.6,
+      "property_d_score": 0.18
+    }
+  },
+  "185544119": {
+    "source": "www.redfin.com",
+    "price": 2075.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4917-N-Hermitage-Ave-60640/unit-4923-1/home/185544119",
+    "address": "4917 N Hermitage Ave Unit 4923-1, Chicago, IL, 60640",
+    "date_pulled": "09-17-2024_18-08-41",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.972401,
+    "long": -87.6720946,
+    "L_dist": [
+      "Damen",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 2.85,
+      "gun_score": 6.02,
+      "murder_score": 1.28,
+      "perv_score": 1.29,
+      "theft_score": 44.74,
+      "violence_score": 23.95,
+      "property_d_score": 0.13
+    }
+  },
+  "qj06pkxem6j4v": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/624-n-spaulding-ave-chicago-il/qj06pkxem6j4v/?t=forrent",
+    "address": "624 N Spaulding Ave Chicago, IL 60624",
+    "date_pulled": "09-18-2024_17-27-19",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.8926721,
+    "long": -87.70914496923078,
+    "L_dist": [
+      "Kedzie",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 7.24,
+      "murder_score": 1.72,
+      "perv_score": 1.6,
+      "theft_score": 41.98,
+      "violence_score": 25.85,
+      "property_d_score": 0.16
+    }
+  },
+  "9494286230": {
+    "source": "www.realtor.com",
+    "price": 2600.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2538-W-Ainslie-St-2_Chicago_IL_60625_M94942-86230",
+    "address": "2538 W Ainslie St Unit 2 Chicago, IL 60625",
+    "date_pulled": "09-18-2024_17-31-36",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "l45q9gg": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1738-n-richmond-st-chicago-il/l45q9gg/",
+    "address": "1738 N Richmond St Unit 1, Chicago, IL 60647",
+    "date_pulled": "09-18-2024_17-31-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "b94glp7b15ed8": {
+    "source": "www.homes.com",
+    "price": 2546.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1809-n-francisco-ave-chicago-il-unit-ch/b94glp7b15ed8/",
+    "address": "1809 N Francisco Ave Unit CH Chicago, IL 60647",
+    "date_pulled": "09-19-2024_16-06-57",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "yk1w3ketnpyg8": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2929-kenilworth-ave-berwyn-il/yk1w3ketnpyg8/?t=forrent",
+    "address": "2929 Kenilworth Ave Berwyn, IL 60402 Chicago",
+    "date_pulled": "09-19-2024_16-06-57",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192621002": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2538-W-Ainslie-St-60625/unit-2/home/192621002",
+    "address": "2538 W Ainslie St Unit 2, Chicago, IL, 60625",
+    "date_pulled": "09-19-2024_18-17-47",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1400",
+    "lat": 41.9710161,
+    "long": -87.6929139,
+    "L_dist": [
+      "Rockwell",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.0,
+      "murder_score": 1.23,
+      "perv_score": 1.3,
+      "theft_score": 44.4,
+      "violence_score": 24.11,
+      "property_d_score": 0.13
+    }
+  },
+  "192640643": {
+    "source": "www.redfin.com",
+    "price": 2490.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1620-N-Marshfield-Ave-60622/unit-GF/home/192640643",
+    "address": "1620 N Marshfield Ave Unit GF, Chicago, IL, 60622",
+    "date_pulled": "09-20-2024_08-22-14",
+    "bed": "2",
+    "bath": "2",
+    "sqft": "1200",
+    "lat": 41.9112744,
+    "long": -87.6691803,
+    "L_dist": [
+      "Damen",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.77,
+      "murder_score": 1.6,
+      "perv_score": 1.48,
+      "theft_score": 42.81,
+      "violence_score": 25.32,
+      "property_d_score": 0.14
+    }
   }
 }

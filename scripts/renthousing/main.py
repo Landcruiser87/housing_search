@@ -23,24 +23,22 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    'Irving Park',     #
-    'Portage Park',    #
-    'Albany Park',     #
-    'North Center',    #
-    'North Park',      #
-    'Lincoln Square',  #    
-    'Avondale',        #    #New add
-    'Wicker Park',     #    #New add
+    'Lower West Side'
     'Ravenswood',
-    'Roscoe Village',
-    'Mayfair',
-    'Budlong Woods'
-    # 'Jefferson Park',   #too far out
-    # 'West Ridge',       #too far out
-    # 'Rogers Park',
-    # 'West Town', 
-    # 'Humboldt Park'
-    # 'Ravenswood Gardens',
+    'Near South Side',
+    'Little Italy',
+    'South Loop',
+    'Lower West Side',
+    'Mckinley Park',
+    'Hyde Park',
+    'West Loop',
+    'Loop',
+    'United Center',
+    'River North',
+    'West Town',
+    'River North',
+    'Ukranian Village',
+    'Wicker Park'
 ]
 
 # SF Testing
@@ -66,10 +64,9 @@ SITES = ["redfin", "craigs", "apartments", "homes", "realtor", "zillow"]
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Chicago"
 STATE   = "IL"
-MINBEDS = 2
-MAXRENT = 2600
-DOGS    = True
-
+MINBEDS = 1
+MAXRENT = 1000
+DOGS    = False
 
 # DC test data notes
 # CITY    = "Washington"

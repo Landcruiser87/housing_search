@@ -236,18 +236,18 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     #Change these to suit your housing requirements
     #!Update tprice and min bed
     params = (
-        ("airconditioning","1"),
+        # ("airconditioning","1"),
         ("hasPic", "1"),
         # ("postedToday", "1"),
         ("housing_type",["10", "2", "3", "4", "5", "6", "8", "9"]),
-        ("min_price", "500"),
+        ("min_price", "100"),
         ("max_price", MAXRENT),
         ("min_bedrooms", MINBEDS),
         ("min_bathrooms", "1"),
         # ("availabilityMode", "0"), #can't seem to verify this parameter in the url
-        ("pets_dog", "1"),
-        ("laundry", ["1", "2", "3"]),
-        ("parking", ["2", "3", "4", "5"]),
+        # ("pets_dog", "1"),
+        # ("laundry", ["1", "2", "3"]),
+        # ("parking", ["2", "3", "4", "5"]),
         # ("sale_date", "all dates"), #left over param for buying 
     )
 

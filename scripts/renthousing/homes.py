@@ -106,11 +106,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        if PETS:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
-        else:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
-            #TODO - Come back and verify this works.  URL does some funny reformatting when its a single amenity
+        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/?price-max={MAXRENT}"
+        
     #Searchby ZipCode
     elif isinstance(neigh, int):
         if PETS:
