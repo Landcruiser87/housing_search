@@ -23,7 +23,7 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    'Lower West Side'
+    'Lower West Side',
     'Ravenswood',
     'Near South Side',
     'Little Italy',
