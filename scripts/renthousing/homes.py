@@ -106,7 +106,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/?price-max={MAXRENT}"
+        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/price-max={MAXRENT}"
         
     #Searchby ZipCode
     elif isinstance(neigh, int):
