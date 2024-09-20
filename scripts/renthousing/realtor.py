@@ -43,7 +43,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 if subsearch.get("data-testid") == "card-price":
                     price = subsearch.text
                     if any(x.isnumeric() for x in price):
-                        price = money_launderer(subsearch.text)
+                        if "-" in price:
+                            price = price.split("-")[0]
+                        price = money_launderer(price)
                     break
         
         #grab the beds, baths, pets
