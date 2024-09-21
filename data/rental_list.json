@@ -10250,5 +10250,75 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7786573532": {
+    "source": "www.craigslist.org",
+    "price": 2500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-good-morning-skyline/7786573532.html",
+    "address": "Ogden, Chicago, IL 60612",
+    "date_pulled": "09-20-2024_20-33-28",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1300ft2",
+    "lat": 41.880888,
+    "long": -87.666739,
+    "L_dist": [
+      "Ashland",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 2.7,
+      "gun_score": 7.58,
+      "murder_score": 1.8,
+      "perv_score": 1.6,
+      "theft_score": 41.76,
+      "violence_score": 26.03,
+      "property_d_score": 0.16
+    }
+  },
+  "9946572144": {
+    "source": "www.realtor.com",
+    "price": 2300.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2610-W-Argyle-St-2_Chicago_IL_60625_M99465-72144",
+    "address": "2610 W Argyle St Unit 2 Chicago, IL 60625",
+    "date_pulled": "09-20-2024_20-38-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1181.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zpid_440625783": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2610-W-Argyle-St-2-Chicago-IL-60625/440625783_zpid/",
+    "address": "2610 W Argyle St #2, Chicago, IL 60625",
+    "date_pulled": "09-20-2024_20-39-16",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": 1181.0,
+    "lat": 41.97248,
+    "long": -87.694435,
+    "L_dist": [
+      "Rockwell",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 5.97,
+      "murder_score": 1.25,
+      "perv_score": 1.3,
+      "theft_score": 44.46,
+      "violence_score": 24.06,
+      "property_d_score": 0.13
+    }
   }
 }
