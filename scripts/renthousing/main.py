@@ -288,7 +288,7 @@ def main():
     global newlistings, jsondata, c_scrape
     c_scrape = False
     newlistings = []
-    fp = "./data/rental_list.json"
+    fp = "./data/richrental_list.json"
     totalstops = len(AREAS) * len(SITES)
 
     global logger, console
