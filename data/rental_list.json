@@ -10320,5 +10320,67 @@
       "violence_score": 24.06,
       "property_d_score": 0.13
     }
+  },
+  "192678916": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2610-W-Argyle-St-60625/unit-2/home/192678916",
+    "address": "2610 W Argyle St Unit 2, Chicago, IL, 60625",
+    "date_pulled": "09-21-2024_08-55-37",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1181",
+    "lat": 41.9724554,
+    "long": -87.6944354,
+    "L_dist": [
+      "Rockwell",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 5.97,
+      "murder_score": 1.25,
+      "perv_score": 1.3,
+      "theft_score": 44.46,
+      "violence_score": 24.06,
+      "property_d_score": 0.13
+    }
+  },
+  "187525140": {
+    "source": "www.redfin.com",
+    "price": 1500.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3741-W-Roscoe-St-60618/unit-1R/home/187525140",
+    "address": "3741 W Roscoe St Unit 1R, Chicago, IL, 60618",
+    "date_pulled": "09-21-2024_18-01-35",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "950",
+    "lat": 41.9426986,
+    "long": -87.7214443,
+    "L_dist": [
+      "Addison",
+      0.35
+    ],
+    "crime_sc": {}
+  },
+  "zcc89gy": {
+    "source": "www.apartments.com",
+    "price": 2550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1536-young-cir-elk-grove-village-il/zcc89gy/",
+    "address": "1536 Young Cir, Elk Grove Village, IL 60007 Chicago",
+    "date_pulled": "09-22-2024_08-38-11",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1765 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
