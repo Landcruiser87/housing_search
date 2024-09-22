@@ -33,8 +33,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         latlong = jres.find("script", {"type":"application/ld+json"})
         if latlong:
             res = json.loads(latlong.text)
-            lat = res["geo"]["latitude"]
-            long = res["geo"]["longitude"]
+            lat = res["geo"].get("latitude")
+            long = res["geo"].get("longitude")
             url = res["url"]
             addy = res["name"]
         else:
