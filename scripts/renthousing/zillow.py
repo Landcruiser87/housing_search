@@ -25,7 +25,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
         #early terminate if the data-test key is in the underlying object
         if jres.get("data-test"):
             continue
-
+        classtext = jres.text
+        if "Loading" in classtext:
+            continue
         # Time of pull
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
@@ -51,7 +53,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             #Grab the id
             if card.get("data-test")=="property-card":
                 listingid = card.get("id")
-            
+
             #grab the price
             for search in card.find_all("span"):
                 if search.get("data-test")=="property-card-price":
