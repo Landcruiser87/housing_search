@@ -10788,5 +10788,161 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "t9zk2xc": {
+    "source": "www.apartments.com",
+    "price": 1895.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3446-n-ozark-ave-chicago-il/t9zk2xc/",
+    "address": "3446 N Ozark Ave, Chicago, IL 60634",
+    "date_pulled": "09-27-2024_07-56-17",
+    "bed": 31.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.9426785,
+    "long": -87.820629911305,
+    "L_dist": [
+      "Harlem",
+      2.8
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 8.93,
+      "murder_score": 2.15,
+      "perv_score": 2.04,
+      "theft_score": 35.08,
+      "violence_score": 28.97,
+      "property_d_score": 0.2
+    }
+  },
+  "w07sy1d51ezd9": {
+    "source": "www.homes.com",
+    "price": 2515.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/unlisted-address/w07sy1d51ezd9/",
+    "address": "Unlisted Address IL",
+    "date_pulled": "09-27-2024_17-22-03",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "lsxjz0c4pwyfn": {
+    "source": "www.homes.com",
+    "price": 1950.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1712-orchard-st-des-plaines-il/lsxjz0c4pwyfn/",
+    "address": "1712 Orchard St Des Plaines, IL 60018 Chicago",
+    "date_pulled": "09-27-2024_17-29-38",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "rtn59s0": {
+    "source": "www.apartments.com",
+    "price": 2395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5125-n-mason-ave-chicago-il/rtn59s0/",
+    "address": "5125 N Mason Ave, Chicago, IL 60630",
+    "date_pulled": "09-28-2024_09-08-43",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.974676849999994,
+    "long": -87.77675515099239,
+    "L_dist": [
+      "Jefferson Park",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 7.69,
+      "murder_score": 1.77,
+      "perv_score": 1.55,
+      "theft_score": 38.99,
+      "violence_score": 26.67,
+      "property_d_score": 0.18
+    }
+  },
+  "192802933": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5520-W-Montrose-Ave-60641/unit-2S/home/192802933",
+    "address": "5520 W Montrose Ave Unit 2S, Chicago, IL, 60641",
+    "date_pulled": "09-28-2024_09-09-35",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1400",
+    "lat": 41.9607065,
+    "long": -87.7657639,
+    "L_dist": [
+      "Jefferson Park",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 7.52,
+      "murder_score": 1.9,
+      "perv_score": 1.68,
+      "theft_score": 39.43,
+      "violence_score": 26.76,
+      "property_d_score": 0.17
+    }
+  },
+  "7788874074": {
+    "source": "www.craigslist.org",
+    "price": 1950.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-avondale-bedroom-apartment/7788874074.html",
+    "address": "3519 N Albany Ave, Chicago, IL 60625",
+    "date_pulled": "09-29-2024_11-11-20",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.973,
+    "long": -87.7039,
+    "L_dist": [
+      "Francisco",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 5.88,
+      "murder_score": 1.23,
+      "perv_score": 1.29,
+      "theft_score": 44.43,
+      "violence_score": 24.05,
+      "property_d_score": 0.13
+    }
+  },
+  "k495gbc": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4014-s-oakenwald-ave-chicago-il/k495gbc/",
+    "address": "4014 S Oakenwald Ave Unit #2 Duplex, Chicago, IL 60653",
+    "date_pulled": "09-29-2024_11-11-43",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1900 sq ft",
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
