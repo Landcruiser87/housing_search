@@ -10944,5 +10944,64 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "tee2tbr90bfp8": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3445-n-oakley-ave-chicago-il-unit-3/tee2tbr90bfp8/",
+    "address": "3445 N Oakley Ave Unit 3 Chicago, IL 60618",
+    "date_pulled": "10-01-2024_19-57-26",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9416751835": {
+    "source": "www.realtor.com",
+    "price": 2500.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2153-W-Potomac-Ave-1F_Chicago_IL_60622_M94167-51835",
+    "address": "2153 W Potomac Ave Unit 1F Chicago, IL 60622",
+    "date_pulled": "10-01-2024_19-58-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "fe9kv77vcf2bd": {
+    "source": "www.homes.com",
+    "price": 2475.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3621-s-54th-ave-cicero-il/fe9kv77vcf2bd/",
+    "address": "3621 S 54th Ave Cicero, IL 60804 Chicago",
+    "date_pulled": "10-01-2024_20-00-13",
+    "bed": 5.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.8585726,
+    "long": -87.7591917,
+    "L_dist": [
+      "54th/Cermak",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.59,
+      "gun_score": 9.31,
+      "murder_score": 2.41,
+      "perv_score": 1.89,
+      "theft_score": 37.02,
+      "violence_score": 28.59,
+      "property_d_score": 0.23
+    }
   }
 }

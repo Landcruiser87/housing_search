@@ -120,10 +120,11 @@ class Propertyinfo():
     long        : float = ""
     L_dist      : float = ""
     crime_sc    : dict = field(default_factory=lambda:{})
+
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
     # def dict(self):
     #     return {k: str(v) for k, v in asdict(self).items()}
-
+#FUNCTION Log time
 ################################# Timing Func ####################################
 def log_time(fn):
     """Decorator timing function.  Accepts any function and returns a logging

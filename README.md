@@ -2,7 +2,7 @@
   <b> Housing Search Tool </b><br>
 </h1>
 
-This repo is meant to coalesce different housing resources to aide in searching for housing in Chicago.  The aim is to build a dataset of available housing in chicago, then search hourly for new listings.  If a new listing is found, an email is sent to the user. 
+This repo is meant to coalesce different housing resources to aide in searching for housing in Chicago.  The aim is to build a dataset of available housing in chicago, then search twice daily for new listings.  If a new listing is found, an email is sent to the user. 
 Datasets are kept in the data folder.
 
 
