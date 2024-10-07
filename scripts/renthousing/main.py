@@ -23,6 +23,7 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    'Ravenswood',
     'Irving Park',     #
     'Portage Park',    #
     'Albany Park',     #
@@ -31,7 +32,6 @@ AREAS = [
     'Lincoln Square',  #    
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
-    'Ravenswood',
     'Roscoe Village',
     'Mayfair',
     'Budlong Woods'
@@ -60,7 +60,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["zillow", "redfin", "craigs", "apartments", "homes", "realtor"]
+SITES = ["redfin", "zillow", "craigs", "apartments", "homes", "realtor"]
 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
@@ -319,6 +319,8 @@ def main():
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
+        
+        #TODO - Fix redfin.  Didn't pull anything in yesterday
 
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url 
