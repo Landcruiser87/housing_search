@@ -315,12 +315,12 @@ def main():
     #Shuffle and search the neighborhoods/zips
     shuffle(AREAS)
 
-    with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
+    with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
         
-        #TODO - Fix redfin.  Didn't pull anything in yesterday
+        #[x] - Fix redfin.  Didn't pull anything in yesterday
 
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url 
