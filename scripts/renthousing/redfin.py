@@ -39,7 +39,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
                 sqft = listinginfo[0].get("floorSize")["value"]
                 if "," in sqft:
                     sqft = sqft.replace(",", "")
-            price = float(listinginfo[1]["offers"]["price"])
+            price = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
     
         # Time of pull
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")

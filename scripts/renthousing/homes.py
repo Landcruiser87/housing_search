@@ -28,7 +28,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #Grab the id
-        search = card.find("article", class_="for-rent-mls-placard")
+        search = card.find("article", class_=lambda x: x and x.startswith("search-placard for-rent"))
         if search:  
             listingid = search.get("data-pk")
         else:
@@ -110,7 +110,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/studio-to-{MINBEDS}-bedroom/under-{MAXRENT}/"    #Error Trapping
+        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/under-{MAXRENT}/?"    #Error Trapping
         
     else:
         logger.critical("Inproper input for area, moving to next site")
