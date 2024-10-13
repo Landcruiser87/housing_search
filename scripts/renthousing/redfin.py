@@ -183,7 +183,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/max-price={MAXRENT},min-beds=0,max-bed={MINBEDS}'
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/max-price={MAXRENT},min-beds=0,max-beds={MINBEDS}'
 
     #Error Trapping
     else:

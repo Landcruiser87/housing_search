@@ -110,7 +110,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/studio-to-{MINBEDS}-bedroom/under-{MAXRENT}/"    #Error Trapping
+        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/studio-to-{MINBEDS}-bedroom/under-{MAXRENT}/"    #Error Trapping
         
     else:
         logger.critical("Inproper input for area, moving to next site")

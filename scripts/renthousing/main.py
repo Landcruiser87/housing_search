@@ -23,11 +23,11 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    35204,	#Graymont
     35203,	#Downtown
     35213,	#Mountain Brook
     35216,	#Vestavia Hills
     35209,	#Homewood
-    35204,	#Graymont
     35226,	#Mountain Oaks
     35020,	#Bessemer
     35234,	#Norwood
@@ -54,7 +54,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["redfin", "craigs", "apartments", "homes", "realtor", "zillow"]
+SITES = ["homes", "realtor", "apartments", "redfin", "zillow", "craigs"]
 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)

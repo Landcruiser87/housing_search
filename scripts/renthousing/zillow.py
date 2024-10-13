@@ -92,7 +92,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             address=addy,
             date_pulled=current_time    
         )
-        listings.append(listing)
+        if listing.id != None:
+            listings.append(listing)
+            
         listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     return listings
 
@@ -132,7 +134,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #Searchby ZipCode
     elif isinstance(neigh, int):
         url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals'
-        srch_terms = f"{CITY}, {STATE.upper()}, {neigh} "
+        srch_terms = f"{CITY}, {STATE.upper()} {neigh} "
     
     #Error Trapping
     else:
@@ -165,21 +167,21 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         "usersSearchTerm":srch_terms,
         "mapBounds":map_coords,
         "filterState":{
-            "isForRent"           :{"value":True},
-            "isForSaleByAgent"    :{"value":False},
-            "isForSaleByOwner"    :{"value":False},
-            "isNewConstruction"   :{"value":False},
-            "isComingSoon"        :{"value":False},
-            "isAuction"           :{"value":False},
-            "isForSaleForeclosure":{"value":False},
-            "isAllHomes"          :{"value":True},
+            "isForRent"           :{"value":"true"},
+            "isForSaleByAgent"    :{"value":"false"},
+            "isForSaleByOwner"    :{"value":"false"},
+            "isNewConstruction"   :{"value":"false"},
+            "isComingSoon"        :{"value":"false"},
+            "isAuction"           :{"value":"false"},
+            "isForSaleForeclosure":{"value":"false"},
+            "isAllHomes"          :{"value":"true"},
             # "isApartmentOrCondo"  :{"value":True},
             # "isApartment"         :{"value":True},
             # "isCondo"             :{"value":True},
             "beds"                :{"min":MINBEDS},
             "mp"                  :{"max":MAXRENT},
-            "ac"                  :{"value":True},
-            "r4r"                 :{"value":True},
+            # "ac"                  :{"value":"true"},
+            "r4r"                 :{"value":"true"},
         },
         "isListVisible":True,
         # "regionSelection": [{"regionId": 33597, "regionType": 8}], #!might not need this?
