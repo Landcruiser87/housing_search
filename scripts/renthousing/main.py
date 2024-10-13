@@ -23,7 +23,7 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    35233,	#Five Points South
+    35218,	#Ensley Highlands
     35223,	#Mountain Brook
     35226,	#Mountain Oaks
     35204,	#Graymont

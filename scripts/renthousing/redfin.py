@@ -152,7 +152,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         if isinstance(neigh, str):
             url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
             # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
-
+        elif isinstance(neigh, int):
+            url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
         #Error Trapping
         else:
             logging.critical("Inproper input for redfin, moving to next site")
@@ -183,7 +184,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/max-price={MAXRENT},min-beds=0,max-beds={MINBEDS}'
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/max-price={MAXRENT}'
 
     #Error Trapping
     else:
@@ -212,7 +213,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         return 
     
     if lcount > 0:
-        results = bs4ob.find("div", class_="PhotosView")
+        results = bs4ob.find("div", class_="PhotosView reversePosition")
         if results:
             if results.get("data-rf-test-id") =='photos-view':
                 property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
