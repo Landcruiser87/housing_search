@@ -206,7 +206,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    hcount = bs4ob.find("div", class_="homes summary")
+    hcount = bs4ob.find("div", class_="homes summary reversePosition")
     if hcount:
         lcount = int("".join(x for x in hcount.text if x.isnumeric()))
     else:
