@@ -16463,5 +16463,544 @@
       "violence_score": 25.07,
       "property_d_score": 0.13
     }
+  },
+  "193007170": {
+    "source": "www.redfin.com",
+    "price": 1595.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5050-N-Oakley-Ave-60625/unit-5050/home/193007170",
+    "address": "5050 N Oakley Ave Unit 5050, Chicago, IL, 60625",
+    "date_pulled": "10-10-2024_10-37-16",
+    "bed": "3",
+    "bath": "2.5",
+    "sqft": null,
+    "lat": 41.9738126,
+    "long": -87.6868914,
+    "L_dist": [
+      "Western",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 2.68,
+      "gun_score": 5.79,
+      "murder_score": 1.23,
+      "perv_score": 1.27,
+      "theft_score": 44.63,
+      "violence_score": 24.0,
+      "property_d_score": 0.12
+    }
+  },
+  "193011392": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "Irving-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4426-N-Kenneth-Ave-60630/unit-2/home/193011392",
+    "address": "4426 N Kenneth Ave Unit 2, Chicago, IL, 60630",
+    "date_pulled": "10-10-2024_10-38-27",
+    "bed": "2",
+    "bath": "2",
+    "sqft": null,
+    "lat": 41.9616528,
+    "long": -87.7401726,
+    "L_dist": [
+      "Montrose",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.07,
+      "gun_score": 6.37,
+      "murder_score": 1.63,
+      "perv_score": 1.54,
+      "theft_score": 42.28,
+      "violence_score": 25.39,
+      "property_d_score": 0.13
+    }
+  },
+  "193011490": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "Wicker-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1928-W-Crystal-St-60622/unit-2/home/193011490",
+    "address": "1928 W Crystal St Unit 2, Chicago, IL, 60622",
+    "date_pulled": "10-10-2024_10-40-03",
+    "bed": "3",
+    "bath": "1",
+    "sqft": null,
+    "lat": 41.9043309,
+    "long": -87.6760082,
+    "L_dist": [
+      "Damen",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.79,
+      "murder_score": 1.74,
+      "perv_score": 1.5,
+      "theft_score": 42.36,
+      "violence_score": 25.69,
+      "property_d_score": 0.15
+    }
+  },
+  "sr54zz6": {
+    "source": "www.apartments.com",
+    "price": 1945.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1927-n-humboldt-blvd-chicago-il/sr54zz6/",
+    "address": "1927 N Humboldt Blvd, Chicago, IL 60647",
+    "date_pulled": "10-10-2024_10-43-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.91644855,
+    "long": -87.70144318530194,
+    "L_dist": [
+      "California",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.46,
+      "murder_score": 1.63,
+      "perv_score": 1.44,
+      "theft_score": 42.61,
+      "violence_score": 25.38,
+      "property_d_score": 0.14
+    }
+  },
+  "dq7tvd1b1jnf8": {
+    "source": "www.homes.com",
+    "price": 1900.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5222-n-loring-ave-chicago-il-unit-2/dq7tvd1b1jnf8/",
+    "address": "5222 N Loring Ave Unit 2 Chicago, IL 60630",
+    "date_pulled": "10-10-2024_17-35-26",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "rnyqd1xphc8y0": {
+    "source": "www.homes.com",
+    "price": 1550.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/8540-georgiana-ave-morton-grove-il-unit-1/rnyqd1xphc8y0/",
+    "address": "8540 Georgiana Ave Unit 1 Morton Grove, IL 60053 Chicago",
+    "date_pulled": "10-10-2024_17-42-29",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9071617854": {
+    "source": "www.realtor.com",
+    "price": 2200.0,
+    "neigh": "Ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2106-W-Wilson-Ave-2_Chicago_IL_60625_M90716-17854?from=SRP_List_Card",
+    "address": "2106 W Wilson Ave Unit 2 Chicago, IL 60625",
+    "date_pulled": "10-11-2024_08-10-20",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "kc1pd3c": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.apartments.com/2106-w-wilson-ave-chicago-il/kc1pd3c/",
+    "address": "2106 W Wilson Ave, Chicago, IL 60625",
+    "date_pulled": "10-11-2024_08-10-29",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "900 sq ft",
+    "lat": 41.96514999174825,
+    "long": -87.68102465601454,
+    "L_dist": [
+      "Damen",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 5.96,
+      "murder_score": 1.37,
+      "perv_score": 1.41,
+      "theft_score": 44.04,
+      "violence_score": 24.34,
+      "property_d_score": 0.12
+    }
+  },
+  "cj3pfbf": {
+    "source": "www.apartments.com",
+    "price": 2450.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4024-s-calumet-ave-chicago-il/cj3pfbf/",
+    "address": "4024 S Calumet Ave, Chicago, IL 60653",
+    "date_pulled": "10-11-2024_08-12-07",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1350 sq ft",
+    "lat": 41.8212185,
+    "long": -87.61875709133574,
+    "L_dist": [
+      "Indiana",
+      0.14
+    ],
+    "crime_sc": {
+      "drug_score": 2.13,
+      "gun_score": 8.59,
+      "murder_score": 2.67,
+      "perv_score": 1.36,
+      "theft_score": 38.75,
+      "violence_score": 28.21,
+      "property_d_score": 0.21
+    }
+  },
+  "ev1lmen": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1445-n-california-ave-chicago-il/ev1lmen/",
+    "address": "1445 N California Ave, Chicago, IL 60622",
+    "date_pulled": "10-11-2024_08-12-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.90793645,
+    "long": -87.69656500648426,
+    "L_dist": [
+      "Western",
+      0.74
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.67,
+      "murder_score": 1.69,
+      "perv_score": 1.47,
+      "theft_score": 42.41,
+      "violence_score": 25.58,
+      "property_d_score": 0.14
+    }
+  },
+  "826dxh3": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/521-e-91st-st-chicago-il/826dxh3/",
+    "address": "521 E 91st St, Chicago, IL 60619",
+    "date_pulled": "10-11-2024_08-12-07",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.72903445,
+    "long": -87.61097342216888,
+    "L_dist": [
+      "95th/Dan Ryan",
+      0.83
+    ],
+    "crime_sc": {
+      "drug_score": 1.46,
+      "gun_score": 10.45,
+      "murder_score": 3.35,
+      "perv_score": 1.47,
+      "theft_score": 33.81,
+      "violence_score": 31.33,
+      "property_d_score": 0.27
+    }
+  },
+  "jgh9707mxgb5y": {
+    "source": "www.homes.com",
+    "price": 1800.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1853-pine-st-des-plaines-il/jgh9707mxgb5y/",
+    "address": "1853 Pine St Des Plaines, IL 60018 Chicago",
+    "date_pulled": "10-11-2024_08-14-32",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "l5te2ng": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3841-n-sacramento-ave-chicago-il/l5te2ng/",
+    "address": "3841 N Sacramento Ave, Chicago, IL 60618",
+    "date_pulled": "10-11-2024_08-17-36",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.9515188,
+    "long": -87.7027798052359,
+    "L_dist": [
+      "Addison",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 6.11,
+      "murder_score": 1.47,
+      "perv_score": 1.43,
+      "theft_score": 43.18,
+      "violence_score": 24.91,
+      "property_d_score": 0.13
+    }
+  },
+  "193042501": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "Lincoln-Square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2106-W-Wilson-Ave-60625/unit-2/home/193042501",
+    "address": "2106 W Wilson Ave Unit 2, Chicago, IL, 60625",
+    "date_pulled": "10-11-2024_17-25-46",
+    "bed": "2",
+    "bath": "1.5",
+    "sqft": "900",
+    "lat": 41.965258,
+    "long": -87.680976,
+    "L_dist": [
+      "Damen",
+      0.14
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 5.96,
+      "murder_score": 1.35,
+      "perv_score": 1.41,
+      "theft_score": 44.06,
+      "violence_score": 24.34,
+      "property_d_score": 0.12
+    }
+  },
+  "193044496": {
+    "source": "www.redfin.com",
+    "price": 2000.0,
+    "neigh": "North-Center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3626-N-Claremont-Ave-60618/unit-2/home/193044496",
+    "address": "3626 N Claremont Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "10-11-2024_17-29-26",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "1000",
+    "lat": 41.9476066,
+    "long": -87.6873655,
+    "L_dist": [
+      "Addison",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 2.93,
+      "gun_score": 6.23,
+      "murder_score": 1.51,
+      "perv_score": 1.45,
+      "theft_score": 43.03,
+      "violence_score": 25.04,
+      "property_d_score": 0.13
+    }
+  },
+  "pfzj1et": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2541-w-congress-pkwy-chicago-il/pfzj1et/",
+    "address": "2541 W Congress Pkwy, Chicago, IL 60612",
+    "date_pulled": "10-12-2024_09-51-16",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.87475125,
+    "long": -87.69029202078208,
+    "L_dist": [
+      "Western",
+      0.11
+    ],
+    "crime_sc": {
+      "drug_score": 2.67,
+      "gun_score": 7.58,
+      "murder_score": 1.92,
+      "perv_score": 1.58,
+      "theft_score": 40.77,
+      "violence_score": 26.63,
+      "property_d_score": 0.17
+    }
+  },
+  "m6zljdk": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2607-w-jarlath-st-chicago-il/m6zljdk/",
+    "address": "2607 W Jarlath St, Chicago, IL 60645",
+    "date_pulled": "10-12-2024_09-51-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 42.01298534552183,
+    "long": -87.69527178430765,
+    "L_dist": [
+      "Howard",
+      1.22
+    ],
+    "crime_sc": {
+      "drug_score": 0.81,
+      "gun_score": 4.34,
+      "murder_score": 0.64,
+      "perv_score": 1.41,
+      "theft_score": 47.18,
+      "violence_score": 23.03,
+      "property_d_score": 0.11
+    }
+  },
+  "syngfj7": {
+    "source": "www.apartments.com",
+    "price": 1995.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3435-n-harding-ave-chicago-il/syngfj7/",
+    "address": "3435 N Harding Ave, Chicago, IL 60618",
+    "date_pulled": "10-12-2024_09-51-16",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.9438021,
+    "long": -87.72578517030777,
+    "L_dist": [
+      "Addison",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 2.94,
+      "gun_score": 6.38,
+      "murder_score": 1.62,
+      "perv_score": 1.49,
+      "theft_score": 42.55,
+      "violence_score": 25.29,
+      "property_d_score": 0.13
+    }
+  },
+  "lp2mvye": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2825-n-parkside-ave-chicago-il/lp2mvye/",
+    "address": "2825 N Parkside Ave, Chicago, IL 60634",
+    "date_pulled": "10-12-2024_09-51-16",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.93202455,
+    "long": -87.76720303123713,
+    "L_dist": [
+      "Montrose",
+      2.37
+    ],
+    "crime_sc": {
+      "drug_score": 3.68,
+      "gun_score": 7.89,
+      "murder_score": 2.11,
+      "perv_score": 1.68,
+      "theft_score": 38.45,
+      "violence_score": 27.62,
+      "property_d_score": 0.17
+    }
+  },
+  "vh74mne": {
+    "source": "www.apartments.com",
+    "price": 2245.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2434-n-avers-ave-chicago-il/vh74mne/",
+    "address": "2434 N Avers Ave, Chicago, IL 60647",
+    "date_pulled": "10-12-2024_09-51-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1400 sq ft",
+    "lat": 41.925590400000004,
+    "long": -87.72339477052981,
+    "L_dist": [
+      "Logan Square",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 6.39,
+      "murder_score": 1.64,
+      "perv_score": 1.47,
+      "theft_score": 42.61,
+      "violence_score": 25.23,
+      "property_d_score": 0.14
+    }
+  },
+  "193055265": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3435-N-Harding-Ave-60618/unit-2/home/193055265",
+    "address": "3435 N Harding Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "10-12-2024_09-55-50",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1100",
+    "lat": 41.9438255,
+    "long": -87.7258046,
+    "L_dist": [
+      "Addison",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 2.94,
+      "gun_score": 6.38,
+      "murder_score": 1.62,
+      "perv_score": 1.49,
+      "theft_score": 42.55,
+      "violence_score": 25.29,
+      "property_d_score": 0.13
+    }
+  },
+  "8131832955": {
+    "source": "www.realtor.com",
+    "price": 1995.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3435-N-Harding-Ave-2_Chicago_IL_60618_M81318-32955?from=SRP_List_Card",
+    "address": "3435 N Harding Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "10-12-2024_09-56-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
