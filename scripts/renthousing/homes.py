@@ -28,7 +28,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #Grab the id
-        search = card.find("article", class_="for-rent-mls-placard")
+        search = card.find("article", class_=lambda x: x and x.startswith("search-placard for-rent"))
         if search:  
             listingid = search.get("data-pk")
         else:
