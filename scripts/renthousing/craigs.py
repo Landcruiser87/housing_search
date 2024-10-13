@@ -212,6 +212,9 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
 
     elif CITY == 'sfbay':
         url = f'https://{CITY}.craigslist.org/search/sfc/apa?'
+    
+    elif CITY == 'birmingham':
+        url = f'https://bham.craigslist.org/search/apa?'
 
     else:
         url = f'https://{CITY}.craigslist.org/search/apa?'
@@ -238,7 +241,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     params = (
         # ("airconditioning","1"),
         ("hasPic", "1"),
-        # ("postedToday", "1"),
+        ("postedToday", "1"),
         ("housing_type",["10", "2", "3", "4", "5", "6", "8", "9"]),
         ("min_price", "0"),
         ("max_price", MAXRENT),

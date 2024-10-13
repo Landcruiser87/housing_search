@@ -132,7 +132,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #Searchby ZipCode
     elif isinstance(neigh, int):
         url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals'
-        srch_terms = f"{neigh} {CITY}, {STATE.upper()}"
+        srch_terms = f"{CITY}, {STATE.upper()}, {neigh} "
     
     #Error Trapping
     else:
@@ -173,9 +173,10 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isAuction"           :{"value":False},
             "isForSaleForeclosure":{"value":False},
             "isAllHomes"          :{"value":True},
-            "isApartmentOrCondo"  :{"value":True},
-            "isApartment"         :{"value":True},
-            "isCondo"             :{"value":True},
+            # "isApartmentOrCondo"  :{"value":True},
+            # "isApartment"         :{"value":True},
+            # "isCondo"             :{"value":True},
+            "beds"                :{"min":MINBEDS},
             "mp"                  :{"max":MAXRENT},
             "ac"                  :{"value":True},
             "r4r"                 :{"value":True},

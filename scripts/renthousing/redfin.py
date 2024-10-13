@@ -183,10 +183,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        if PETS:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
-        else:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/max-price={MAXRENT},min-beds=0,max-bed={MINBEDS}'
+
     #Error Trapping
     else:
         logging.critical("Inproper input for redfin, moving to next site")

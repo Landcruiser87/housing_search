@@ -141,11 +141,11 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             neigh = "-".join(neigh.lower().split(" "))
         else:
             neigh = neigh.lower()
-        url = f"https://www.apartments.com/apartments-condos/{neigh}-{CITY}-{STATE}/under-{MAXRENT}"
-    
+        url = f"https://www.apartments.com/{neigh}-{CITY}-{STATE}/max-{MINBEDS}-bedrooms-under-{MAXRENT}"
+
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.apartments.com/apartments-condos/{CITY}-{STATE}-{neigh}/under-{MAXRENT}" 
+        url = f"https://www.apartments.com/{CITY}-{STATE}-{neigh}/max-{MINBEDS}-bedrooms-under-{MAXRENT}" 
     #Error Trapping
     else:
         logger.critical("Inproper input for area, moving to next site")
