@@ -155,7 +155,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
     nores = bs4ob.find_all("div", class_="no-results-container")
-    if not nores:
+    errorres = bs4ob.find_all("div", class_="error-results-container")
+    if not nores and not errorres:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
             property_listings = get_listings(results, neigh, source, logger, Propertyinfo, PETS)

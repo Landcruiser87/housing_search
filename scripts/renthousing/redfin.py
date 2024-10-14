@@ -84,7 +84,9 @@ def money_launderer(price:int)->str:
     """
     if isinstance(price, int):
         sprice = str(price)
-        if sprice[1] != "0":
+        if len(sprice) < 4:
+            fprice = sprice
+        elif sprice[1] != "0":
             fprice = sprice[0] + "." + sprice[1] + "k"
         else:
             fprice = sprice[0] + "k"
@@ -210,7 +212,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     # surrounding.  Just the neighborhood)
     hcount = bs4ob.find("div", class_="homes summary reversePosition")
     if hcount:
-        lcount = int("".join(x for x in hcount.text if x.isnumeric()))
+        lcount = hcount.text.split()[0]
+        lcount = int("".join(x for x in lcount if x.isnumeric()))
     else:
         logger.warning("No count found on redfin.  Moving to next site")
         return 
