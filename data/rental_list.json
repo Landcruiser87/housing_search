@@ -17434,5 +17434,113 @@
       "violence_score": 25.6,
       "property_d_score": 0.15
     }
+  },
+  "pgvj0nt": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1849-w-augusta-blvd-chicago-il/pgvj0nt/",
+    "address": "1849 W Augusta Blvd, Chicago, IL 60622",
+    "date_pulled": "10-14-2024_07-41-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1050 sq ft",
+    "lat": 41.899475949999996,
+    "long": -87.67419627919296,
+    "L_dist": [
+      "Division",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 2.71,
+      "gun_score": 6.9,
+      "murder_score": 1.8,
+      "perv_score": 1.57,
+      "theft_score": 42.32,
+      "violence_score": 25.76,
+      "property_d_score": 0.15
+    }
+  },
+  "pbgj5es": {
+    "source": "www.apartments.com",
+    "price": 1650.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5720-w-63rd-st-chicago-il/pbgj5es/",
+    "address": "5720 W 63rd St, Chicago, IL 60638",
+    "date_pulled": "10-14-2024_07-41-09",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.7782044,
+    "long": -87.76504969679793,
+    "L_dist": [
+      "Midway",
+      1.51
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 9.95,
+      "murder_score": 3.05,
+      "perv_score": 2.41,
+      "theft_score": 32.99,
+      "violence_score": 31.11,
+      "property_d_score": 0.28
+    }
+  },
+  "kh4jjy8": {
+    "source": "www.apartments.com",
+    "price": 2530.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5427-n-broadway-chicago-il/kh4jjy8/",
+    "address": "5427 N Broadway, Chicago, IL 60640",
+    "date_pulled": "10-14-2024_07-41-09",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1020 sq ft",
+    "lat": 41.98106515,
+    "long": -87.65938874493062,
+    "L_dist": [
+      "Bryn Mawr",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 2.38,
+      "gun_score": 5.27,
+      "murder_score": 1.06,
+      "perv_score": 1.21,
+      "theft_score": 46.76,
+      "violence_score": 22.81,
+      "property_d_score": 0.11
+    }
+  },
+  "8l04332": {
+    "source": "www.apartments.com",
+    "price": 1975.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1739-w-wallen-ave-chicago-il/8l04332/",
+    "address": "1739 W Wallen Ave, Chicago, IL 60626",
+    "date_pulled": "10-14-2024_07-41-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 42.002318849999995,
+    "long": -87.67433635897984,
+    "L_dist": [
+      "Morse",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 1.01,
+      "gun_score": 4.91,
+      "murder_score": 0.77,
+      "perv_score": 1.36,
+      "theft_score": 47.14,
+      "violence_score": 23.18,
+      "property_d_score": 0.1
+    }
   }
 }
