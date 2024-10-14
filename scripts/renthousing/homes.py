@@ -110,7 +110,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/under-{MAXRENT}/?"    #Error Trapping
+        url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/studio-to-{MINBEDS}-bedroom/under-{MAXRENT}/?"    #Error Trapping
         
     else:
         logger.critical("Inproper input for area, moving to next site")
@@ -146,9 +146,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     bs4ob = BeautifulSoup(response.text, 'lxml')
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
-    # surrounding.  Just the neighborhood)
+    # surrounding.  Just the neighborhood) #BUG Add me
     nores = bs4ob.find_all("div", class_="no-results-container")
-    if not nores:
+    errorres = bs4ob.find_all("div", class_="error-results-container")
+    #BUG Edge case
+        #Keeps getting through where its showing similar properties but no result.  Noooot sure why. 
+    if not nores or not errorres:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
             property_listings = get_listings(results, neigh, source, logger, Propertyinfo, PETS)

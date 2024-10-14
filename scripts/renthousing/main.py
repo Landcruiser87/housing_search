@@ -23,14 +23,14 @@ import realtor, zillow, apartments, craigs, redfin, homes, support
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    35209,	#Homewood
+    35204,	#Graymont
     35218,	#Ensley Highlands
     35223,	#Mountain Brook
     35226,	#Mountain Oaks
-    35204,	#Graymont
     35203,	#Downtown
     35213,	#Mountain Brook
     35216,	#Vestavia Hills
-    35209,	#Homewood
     35020,	#Bessemer
     35234,	#Norwood
     35212,	#Woodlawn
@@ -55,7 +55,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["homes", "realtor", "apartments", "redfin", "zillow", "craigs"]
+SITES = ["redfin", "homes", "realtor", "apartments", "zillow", "craigs"]
 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
@@ -199,7 +199,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -306,7 +306,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=10, screen=True, transient=True) as live:
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
