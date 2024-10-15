@@ -766,5 +766,21 @@
     "long": -86.77893,
     "L_dist": "",
     "crime_sc": {}
+  },
+  "9178165293": {
+    "source": "www.realtor.com",
+    "price": 700.0,
+    "neigh": 35226,
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1400-Huckleberry-Ln_Hoover_AL_35226_M91781-65293?from=SRP_List_Card",
+    "address": "Cadence at Bluff Park 1400 Huckleberry Ln, Hoover, AL 35226 Birmingham",
+    "date_pulled": "10-15-2024_09-57-24",
+    "bed": 13.0,
+    "bath": 12.0,
+    "sqft": 7041000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
