@@ -17542,5 +17542,653 @@
       "violence_score": 23.18,
       "property_d_score": 0.1
     }
+  },
+  "vnxdyhd": {
+    "source": "www.apartments.com",
+    "price": 2333.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2615-w-north-ave-chicago-il/vnxdyhd/",
+    "address": "2615 W North Ave, Chicago, IL 60647",
+    "date_pulled": "10-15-2024_07-43-17",
+    "bed": 41.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.910114,
+    "long": -87.6927745,
+    "L_dist": [
+      "Western",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 6.58,
+      "murder_score": 1.68,
+      "perv_score": 1.48,
+      "theft_score": 42.44,
+      "violence_score": 25.55,
+      "property_d_score": 0.15
+    }
+  },
+  "krczl89": {
+    "source": "www.apartments.com",
+    "price": 2163.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1403-n-wicker-park-ave-chicago-il/krczl89/",
+    "address": "1403 N Wicker Park Ave, Chicago, IL 60622",
+    "date_pulled": "10-15-2024_07-43-17",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.90740625,
+    "long": -87.6746119366023,
+    "L_dist": [
+      "Damen",
+      0.22
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 6.72,
+      "murder_score": 1.74,
+      "perv_score": 1.47,
+      "theft_score": 42.46,
+      "violence_score": 25.65,
+      "property_d_score": 0.15
+    }
+  },
+  "zk715rx": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1155-w-roosevelt-rd-chicago-il/zk715rx/",
+    "address": "1155 W Roosevelt Rd, Chicago, IL 60608",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1116 sq ft",
+    "lat": 41.866927,
+    "long": -87.65589366666667,
+    "L_dist": [
+      "Racine",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 7.8,
+      "murder_score": 2.09,
+      "perv_score": 1.54,
+      "theft_score": 40.83,
+      "violence_score": 26.61,
+      "property_d_score": 0.18
+    }
+  },
+  "rntm5z0": {
+    "source": "www.apartments.com",
+    "price": 2540.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7702-n-marshfield-ave-chicago-il/rntm5z0/",
+    "address": "7702 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1500 sq ft",
+    "lat": 42.0213175706992,
+    "long": -87.67200569291565,
+    "L_dist": [
+      "Howard",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 0.78,
+      "gun_score": 3.83,
+      "murder_score": 0.72,
+      "perv_score": 1.35,
+      "theft_score": 47.56,
+      "violence_score": 23.06,
+      "property_d_score": 0.1
+    }
+  },
+  "fer2njr": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6201-n-kenmore-ave-chicago-il/fer2njr/",
+    "address": "6201 N Kenmore Ave, Chicago, IL 60660",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "710 sq ft",
+    "lat": 41.994862999999995,
+    "long": -87.65659018167557,
+    "L_dist": [
+      "Granville",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 1.92,
+      "gun_score": 5.03,
+      "murder_score": 0.83,
+      "perv_score": 1.27,
+      "theft_score": 47.08,
+      "violence_score": 22.94,
+      "property_d_score": 0.1
+    }
+  },
+  "3pnx4ke": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7357-n-ashland-ave-chicago-il/3pnx4ke/",
+    "address": "7357 N Ashland Ave, Chicago, IL 60626",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1000 sq ft",
+    "lat": 42.015592,
+    "long": -87.670188,
+    "L_dist": [
+      "Jarvis",
+      0.06
+    ],
+    "crime_sc": {
+      "drug_score": 0.81,
+      "gun_score": 4.22,
+      "murder_score": 0.69,
+      "perv_score": 1.39,
+      "theft_score": 47.63,
+      "violence_score": 23.02,
+      "property_d_score": 0.1
+    }
+  },
+  "q3y8w5x": {
+    "source": "www.apartments.com",
+    "price": 1400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/822-n-lawndale-ave-chicago-il/q3y8w5x/",
+    "address": "822 N Lawndale Ave, Chicago, IL 60651",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 41.8961633,
+    "long": -87.71906883038196,
+    "L_dist": [
+      "Conservatory",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 2.75,
+      "gun_score": 6.92,
+      "murder_score": 1.77,
+      "perv_score": 1.59,
+      "theft_score": 42.02,
+      "violence_score": 25.81,
+      "property_d_score": 0.16
+    }
+  },
+  "kwv0mwc": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1124-s-sacramento-blvd-chicago-il/kwv0mwc/",
+    "address": "1124 S Sacramento Blvd, Chicago, IL 60612",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "915 sq ft",
+    "lat": 41.867485349999995,
+    "long": -87.70110790435169,
+    "L_dist": [
+      "Kedzie-Homan",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 7.78,
+      "murder_score": 2.0,
+      "perv_score": 1.58,
+      "theft_score": 40.29,
+      "violence_score": 26.89,
+      "property_d_score": 0.18
+    }
+  },
+  "nt1plwq": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1243-s-fairfield-ave-chicago-il/nt1plwq/",
+    "address": "1243 S Fairfield Ave, Chicago, IL 60608",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1300 sq ft",
+    "lat": 41.86528295240432,
+    "long": -87.69449642913702,
+    "L_dist": [
+      "Western",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 7.88,
+      "murder_score": 2.04,
+      "perv_score": 1.57,
+      "theft_score": 40.26,
+      "violence_score": 26.86,
+      "property_d_score": 0.19
+    }
+  },
+  "6gey1ws": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1239-s-fairfield-ave-chicago-il/6gey1ws/",
+    "address": "1239 S Fairfield Ave, Chicago, IL 60608",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1300 sq ft",
+    "lat": 41.86529025,
+    "long": -87.69432451986978,
+    "L_dist": [
+      "Western",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 7.88,
+      "murder_score": 2.04,
+      "perv_score": 1.57,
+      "theft_score": 40.26,
+      "violence_score": 26.86,
+      "property_d_score": 0.19
+    }
+  },
+  "7t73dmx": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2230-w-augusta-blvd-chicago-il/7t73dmx/",
+    "address": "2230 W Augusta Blvd, Chicago, IL 60622",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.8996316,
+    "long": -87.68332584235512,
+    "L_dist": [
+      "Damen",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 2.69,
+      "gun_score": 6.89,
+      "murder_score": 1.75,
+      "perv_score": 1.57,
+      "theft_score": 42.22,
+      "violence_score": 25.8,
+      "property_d_score": 0.15
+    }
+  },
+  "l0ssfwd": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5416-w-belmont-ave-chicago-il/l0ssfwd/",
+    "address": "5416 W Belmont Ave, Chicago, IL 60641",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "900 sq ft",
+    "lat": 41.938548090673095,
+    "long": -87.76223892836397,
+    "L_dist": [
+      "Montrose",
+      1.85
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 7.63,
+      "murder_score": 2.06,
+      "perv_score": 1.66,
+      "theft_score": 39.0,
+      "violence_score": 27.34,
+      "property_d_score": 0.17
+    }
+  },
+  "t2pref8": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6327-n-oakley-ave-chicago-il/t2pref8/",
+    "address": "6327 N Oakley Ave, Chicago, IL 60659",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1400 sq ft",
+    "lat": 41.99683245,
+    "long": -87.6871089784846,
+    "L_dist": [
+      "Morse",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 1.23,
+      "gun_score": 5.15,
+      "murder_score": 0.8,
+      "perv_score": 1.39,
+      "theft_score": 46.33,
+      "violence_score": 23.49,
+      "property_d_score": 0.11
+    }
+  },
+  "llvm4qd": {
+    "source": "www.apartments.com",
+    "price": 1750.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1701-n-harding-ave-chicago-il/llvm4qd/",
+    "address": "1701 N Harding Ave, Chicago, IL 60647",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.91184335,
+    "long": -87.72488834854369,
+    "L_dist": [
+      "Logan Square",
+      1.49
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.6,
+      "murder_score": 1.69,
+      "perv_score": 1.51,
+      "theft_score": 42.26,
+      "violence_score": 25.54,
+      "property_d_score": 0.15
+    }
+  },
+  "8ve8jb3": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2629-n-whipple-st-chicago-il/8ve8jb3/",
+    "address": "2629 N Whipple St, Chicago, IL 60647",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.9295245,
+    "long": -87.70339794562841,
+    "L_dist": [
+      "Logan Square",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.34,
+      "murder_score": 1.64,
+      "perv_score": 1.46,
+      "theft_score": 42.73,
+      "violence_score": 25.32,
+      "property_d_score": 0.13
+    }
+  },
+  "h8fe4h3": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2543-s-wallace-st-chicago-il/h8fe4h3/",
+    "address": "2543 S Wallace St, Chicago, IL 60616",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1175 sq ft",
+    "lat": 41.846073849999996,
+    "long": -87.64136445833822,
+    "L_dist": [
+      "Halsted",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 2.58,
+      "gun_score": 8.34,
+      "murder_score": 2.34,
+      "perv_score": 1.39,
+      "theft_score": 39.59,
+      "violence_score": 27.61,
+      "property_d_score": 0.2
+    }
+  },
+  "jsxrgm4": {
+    "source": "www.apartments.com",
+    "price": 1400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3137-w-douglas-blvd-chicago-il/jsxrgm4/",
+    "address": "3137 W Douglas Blvd, Chicago, IL 60623",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "450 sq ft",
+    "lat": 41.86226855,
+    "long": -87.70452896666858,
+    "L_dist": [
+      "Kedzie",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 8.01,
+      "murder_score": 2.1,
+      "perv_score": 1.57,
+      "theft_score": 40.02,
+      "violence_score": 26.98,
+      "property_d_score": 0.19
+    }
+  },
+  "4bs4cyh": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5418-w-belmont-ave-chicago-il/4bs4cyh/",
+    "address": "5418 W Belmont Ave, Chicago, IL 60641",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1150 sq ft",
+    "lat": 41.93854730874832,
+    "long": -87.76230278555418,
+    "L_dist": [
+      "Montrose",
+      1.86
+    ],
+    "crime_sc": {
+      "drug_score": 3.54,
+      "gun_score": 7.63,
+      "murder_score": 2.06,
+      "perv_score": 1.66,
+      "theft_score": 38.99,
+      "violence_score": 27.35,
+      "property_d_score": 0.17
+    }
+  },
+  "ewb460m": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/ewb460m/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "690 sq ft",
+    "lat": 42.01975440522873,
+    "long": -87.67202281793693,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.79,
+      "gun_score": 3.9,
+      "murder_score": 0.71,
+      "perv_score": 1.36,
+      "theft_score": 47.58,
+      "violence_score": 23.04,
+      "property_d_score": 0.1
+    }
+  },
+  "6dx0wbs": {
+    "source": "www.apartments.com",
+    "price": 1550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/630-n-homan-ave-chicago-il/6dx0wbs/",
+    "address": "630 N Homan Ave., Chicago, IL 60624",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.89245052204352,
+    "long": -87.7114543056613,
+    "L_dist": [
+      "Conservatory",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 2.72,
+      "gun_score": 7.05,
+      "murder_score": 1.75,
+      "perv_score": 1.57,
+      "theft_score": 41.82,
+      "violence_score": 25.99,
+      "property_d_score": 0.16
+    }
+  },
+  "46wjq2k": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/11038-s-artesian-ave-chicago-il/46wjq2k/",
+    "address": "11038 S Artesian Ave, Chicago, IL 60655",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.69244785,
+    "long": -87.6827442843647,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.65
+    ],
+    "crime_sc": {
+      "drug_score": 1.73,
+      "gun_score": 10.15,
+      "murder_score": 3.6,
+      "perv_score": 1.5,
+      "theft_score": 32.83,
+      "violence_score": 31.04,
+      "property_d_score": 0.3
+    }
+  },
+  "g4p0elx": {
+    "source": "www.apartments.com",
+    "price": 1650.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2714-w-37th-pl-chicago-il/g4p0elx/",
+    "address": "2714 W 37th Pl, Chicago, IL 60632",
+    "date_pulled": "10-15-2024_07-44-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.8257742,
+    "long": -87.69290335050567,
+    "L_dist": [
+      "35th/Archer",
+      0.68
+    ],
+    "crime_sc": {
+      "drug_score": 2.86,
+      "gun_score": 8.77,
+      "murder_score": 2.6,
+      "perv_score": 1.6,
+      "theft_score": 37.95,
+      "violence_score": 28.24,
+      "property_d_score": 0.21
+    }
+  },
+  "9rcyc57": {
+    "source": "www.apartments.com",
+    "price": 2460.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3051-n-spaulding-ave-chicago-il/9rcyc57/",
+    "address": "3051 N Spaulding Ave, Chicago, IL 60618",
+    "date_pulled": "10-15-2024_07-50-35",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1400 sq ft",
+    "lat": 41.936605455756606,
+    "long": -87.70986944036127,
+    "L_dist": [
+      "Belmont",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.31,
+      "murder_score": 1.64,
+      "perv_score": 1.46,
+      "theft_score": 42.73,
+      "violence_score": 25.26,
+      "property_d_score": 0.13
+    }
+  },
+  "n9d2bmq": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.apartments.com/5012-n-clark-st-chicago-il/n9d2bmq/",
+    "address": "5012 N Clark St, Chicago, IL 60640",
+    "date_pulled": "10-15-2024_07-51-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.9729236,
+    "long": -87.6681756,
+    "L_dist": [
+      "Argyle",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 5.8,
+      "murder_score": 1.28,
+      "perv_score": 1.25,
+      "theft_score": 44.87,
+      "violence_score": 23.95,
+      "property_d_score": 0.12
+    }
   }
 }
