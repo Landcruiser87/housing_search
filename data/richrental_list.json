@@ -782,5 +782,21 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "zpid_2078207845": {
+    "source": "www.zillow.com",
+    "price": 650.0,
+    "neigh": 35212,
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/921-53rd-St-N-UNIT-B-Birmingham-AL-35212/2078207845_zpid/",
+    "address": "921 53rd St N Unit B, Birmingham, AL 35212",
+    "date_pulled": "10-16-2024_13-38-14",
+    "bed": 2.0,
+    "bath": "1",
+    "sqft": 908.0,
+    "lat": 33.53993,
+    "long": -86.75579,
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
