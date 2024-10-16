@@ -18190,5 +18190,323 @@
       "violence_score": 23.95,
       "property_d_score": 0.12
     }
+  },
+  "q5r1xxy": {
+    "source": "www.apartments.com",
+    "price": 1675.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6029-n-winthrop-ave-chicago-il/q5r1xxy/",
+    "address": "6029 N Winthrop Ave, Chicago, IL 60660",
+    "date_pulled": "10-15-2024_17-46-40",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "700 sq ft",
+    "lat": 41.991835249999994,
+    "long": -87.65790137372105,
+    "L_dist": [
+      "Thorndale",
+      0.12
+    ],
+    "crime_sc": {
+      "drug_score": 2.22,
+      "gun_score": 5.11,
+      "murder_score": 0.83,
+      "perv_score": 1.25,
+      "theft_score": 46.81,
+      "violence_score": 22.9,
+      "property_d_score": 0.11
+    }
+  },
+  "pxv8ytr": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1550-s-blue-island-ave-chicago-il/pxv8ytr/",
+    "address": "1550 S Blue Island Ave, Chicago, IL 60608",
+    "date_pulled": "10-15-2024_17-46-40",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.86060095,
+    "long": -87.65969581676622,
+    "L_dist": [
+      "18th",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 8.09,
+      "murder_score": 2.22,
+      "perv_score": 1.54,
+      "theft_score": 40.25,
+      "violence_score": 26.92,
+      "property_d_score": 0.18
+    }
+  },
+  "2g1qr5b": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.apartments.com/4756-n-clark-st-chicago-il/2g1qr5b/",
+    "address": "4756 N Clark St, Chicago, IL 60640",
+    "date_pulled": "10-16-2024_07-53-45",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.96845710816224,
+    "long": -87.66752420194607,
+    "L_dist": [
+      "Lawrence",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 2.9,
+      "gun_score": 5.84,
+      "murder_score": 1.35,
+      "perv_score": 1.43,
+      "theft_score": 44.72,
+      "violence_score": 23.94,
+      "property_d_score": 0.12
+    }
+  },
+  "2cjqw59": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3713-n-central-park-ave-chicago-il/2cjqw59/",
+    "address": "3713 N Central Park Ave, Chicago, IL 60618",
+    "date_pulled": "10-16-2024_07-55-58",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.9487954,
+    "long": -87.71737671349337,
+    "L_dist": [
+      "Addison",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 6.12,
+      "murder_score": 1.49,
+      "perv_score": 1.46,
+      "theft_score": 43.0,
+      "violence_score": 25.0,
+      "property_d_score": 0.13
+    }
+  },
+  "3be0tjgzt6zns": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1638-n-washtenaw-ave-chicago-il-unit-2/3be0tjgzt6zns/",
+    "address": "1638 N Washtenaw Ave Unit 2 Chicago, IL 60647",
+    "date_pulled": "10-16-2024_07-57-27",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "3xytb6lbdzndx": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2912-w-north-ave-chicago-il-unit-2/3xytb6lbdzndx/",
+    "address": "2912 W North Ave Unit 2 Chicago, IL 60647",
+    "date_pulled": "10-16-2024_07-57-27",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "yvkcwds": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3043-n-kedzie-ave-chicago-il/yvkcwds/",
+    "address": "3043 N Kedzie Ave, Chicago, IL 60618",
+    "date_pulled": "10-16-2024_07-58-07",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.936980000000005,
+    "long": -87.70730407579438,
+    "L_dist": [
+      "Belmont",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 6.32,
+      "murder_score": 1.64,
+      "perv_score": 1.46,
+      "theft_score": 42.76,
+      "violence_score": 25.26,
+      "property_d_score": 0.13
+    }
+  },
+  "qlhrmdz": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3223-n-lawndale-ave-chicago-il/qlhrmdz/",
+    "address": "3223 N Lawndale Ave, Chicago, IL 60618",
+    "date_pulled": "10-16-2024_07-58-07",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 41.93989685,
+    "long": -87.7196105985737,
+    "L_dist": [
+      "Belmont",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 6.27,
+      "murder_score": 1.63,
+      "perv_score": 1.47,
+      "theft_score": 42.72,
+      "violence_score": 25.21,
+      "property_d_score": 0.13
+    }
+  },
+  "193141240": {
+    "source": "www.redfin.com",
+    "price": 2150.0,
+    "neigh": "Avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3110-N-Harding-Ave-60618/unit-2M/home/193141240",
+    "address": "3110 N Harding Ave Unit 2M, Chicago, IL, 60618",
+    "date_pulled": "10-16-2024_07-58-55",
+    "bed": "3",
+    "bath": "1",
+    "sqft": "1200",
+    "lat": 41.9377078,
+    "long": -87.7262096,
+    "L_dist": [
+      "Belmont",
+      0.71
+    ],
+    "crime_sc": {
+      "drug_score": 2.92,
+      "gun_score": 6.45,
+      "murder_score": 1.68,
+      "perv_score": 1.51,
+      "theft_score": 42.31,
+      "violence_score": 25.51,
+      "property_d_score": 0.14
+    }
+  },
+  "be5eey9": {
+    "source": "www.apartments.com",
+    "price": 2595.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/8716-s-sacramento-ave-chicago-il/be5eey9/",
+    "address": "8716 S Sacramento Ave, Chicago, IL 60805",
+    "date_pulled": "10-16-2024_08-00-08",
+    "bed": 3.0,
+    "bath": 3.0,
+    "sqft": "1550 sq ft",
+    "lat": 41.7007705,
+    "long": -87.6965265,
+    "L_dist": [
+      "95th/Dan Ryan",
+      4.01
+    ],
+    "crime_sc": {
+      "drug_score": 1.77,
+      "gun_score": 10.26,
+      "murder_score": 3.33,
+      "perv_score": 1.54,
+      "theft_score": 32.74,
+      "violence_score": 30.9,
+      "property_d_score": 0.28
+    }
+  },
+  "xexbfkm": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2531-w-medill-ave-chicago-il/xexbfkm/",
+    "address": "2531 W Medill Ave, Chicago, IL 60647",
+    "date_pulled": "10-16-2024_08-00-08",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "932 sq ft",
+    "lat": 41.92385,
+    "long": -87.69066201980132,
+    "L_dist": [
+      "California",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 2.79,
+      "gun_score": 6.39,
+      "murder_score": 1.67,
+      "perv_score": 1.46,
+      "theft_score": 42.68,
+      "violence_score": 25.41,
+      "property_d_score": 0.13
+    }
+  },
+  "xvjk4cq": {
+    "source": "www.apartments.com",
+    "price": 1400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/852-n-central-park-ave-chicago-il/xvjk4cq/",
+    "address": "852 N Central Park Ave, Chicago, IL 60651",
+    "date_pulled": "10-16-2024_08-00-08",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.897016699999995,
+    "long": -87.71664963250029,
+    "L_dist": [
+      "Conservatory",
+      0.84
+    ],
+    "crime_sc": {
+      "drug_score": 2.73,
+      "gun_score": 6.87,
+      "murder_score": 1.75,
+      "perv_score": 1.59,
+      "theft_score": 42.1,
+      "violence_score": 25.78,
+      "property_d_score": 0.15
+    }
+  },
+  "lsg6163r0zsvy": {
+    "source": "www.homes.com",
+    "price": 2250.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/8017-w-lyons-st-niles-il/lsg6163r0zsvy/",
+    "address": "8017 W Lyons St Niles, IL 60714 Chicago",
+    "date_pulled": "10-16-2024_08-01-21",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
