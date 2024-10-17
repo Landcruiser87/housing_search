@@ -33,8 +33,8 @@ AREAS = [
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Roscoe Village',
-    'Mayfair',
     'Budlong Woods'
+    # 'Mayfair',
     # 'Jefferson Park',   #too far out
     # 'West Ridge',       #too far out
     # 'Rogers Park',
