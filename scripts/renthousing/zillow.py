@@ -78,17 +78,28 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
     #                 elif "sqft" in text and numtest:
     #                     sqft = float("".join(x for x in text if x.isnumeric()))
     for res in result:
+        active_keys = list(res.keys())
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
-        listingid = res["zpid"]
-        url = res["detailUrl"]
-        price = res["unformattedPrice"]
-        beds = res["beds"]
-        baths = res["baths"]
-        sqft = res["area"]
-        addy = res["address"]
-        lat = res["latLong"]["latitude"]
-        long = res["latLong"]["longitude"]
-
+        if "zpid" in active_keys:
+            listingid = res["zpid"]
+        else:
+            #If it doesn't have an ID, don't store it
+            continue
+        if "detailUrl" in active_keys:
+            url = res["detailUrl"]
+        if "unformattedPrice" in active_keys:
+            price = res["unformattedPrice"]
+        if "beds" in active_keys:
+            beds = res["beds"]
+        if "baths" in active_keys:
+            baths = res["baths"]
+        if "address" in active_keys:
+            addy = res["address"]
+        if "area" in active_keys:
+            sqft = res["area"]
+        if "latLong" in active_keys:
+            lat = res["latLong"]["latitude"]
+            long = res["latLong"]["longitude"]
         # daysonZ = res["variableData"]["text"]
         pets = True
         
