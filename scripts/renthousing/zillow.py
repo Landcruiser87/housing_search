@@ -21,62 +21,7 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
     """
     listings = []
     listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
-    # for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
-    #     #early terminate if the data-test key is in the underlying object
-    #     if jres.get("data-test"):
-    #         continue
-    #     classtext = jres.text
-    #     if "Loading" in classtext:
-    #         continue
-    #     # Time of pull
-    #     current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
-    #     #grab lat / long
-    #     latlong = jres.find("script", {"type":"application/ld+json"})
-    #     if latlong:
-    #         res = json.loads(latlong.text)
-    #         lat = res["geo"].get("latitude")
-    #         long = res["geo"].get("longitude")
-    #         url = res["url"]
-    #         addy = res["name"]
-    #     else:
-    #         lat  = ""
-    #         long = ""
-    #         card = jres.find("a")
-    #         if card:
-    #             url = card.get("href")
-    #             addy = card.next_element.contents[0]
-    #         else:
-    #             url, addy = "", ""
-
-    #     for card in jres.find_all("article"):
-    #         #Grab the id
-    #         if card.get("data-test")=="property-card":
-    #             listingid = card.get("id")
-
-    #         #grab the price
-    #         for search in card.find_all("span"):
-    #             if search.get("data-test")=="property-card-price":
-    #                 text = search.text
-    #                 #Sometimes these jokers put the beds in with the price just annoy people like me
-    #                 if "+" in text:
-    #                     price = text[:text.index("+")]
-
-    #                 price = float("".join(x for x in text if x.isnumeric()))
-    #                 break
-
-    #         #Grab bed bath
-    #         for search in card.find_all("ul"):
-    #             for subsearch in search.find_all("li"):
-    #                 text = str(subsearch)
-    #                 numtest = any(x.isnumeric() for x in text)
-
-    #                 if "bd" in text and numtest:
-    #                     beds = float("".join(x for x in text if x.isnumeric()))
-    #                 elif "ba" in text and numtest:
-    #                     baths = str("".join(x for x in text if x.isnumeric() or x == "."))
-    #                 elif "sqft" in text and numtest:
-    #                     sqft = float("".join(x for x in text if x.isnumeric()))
     for res in result:
         active_keys = list(res.keys())
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
@@ -97,8 +42,9 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
             addy = res["address"]
         if "area" in active_keys:
             sqft = res["area"]
-        if "latLong" in active_keys:
+        if res["latLong"].get("latitude"):
             lat = res["latLong"]["latitude"]
+        if res["latLong"].get("longitude"):
             long = res["latLong"]["longitude"]
         # daysonZ = res["variableData"]["text"]
         pets = True
@@ -248,11 +194,9 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     }
     url_search = "https://www.zillow.com/async-create-search-page-state"
-    
-    # url_search = url_map + "/?" + urlencode(params)
-    # response = requests.post(url_search, headers = BASE_HEADERS, data=urlencode(params))
+    #Example
+    # https://github.com/johnbalvin/pyzill
     response = requests.put(url_search, json = params, headers = RUN_HEADERS)
-    # response = requests.get(url_search, headers=BASE_HEADERS)
 
     #Just in case we piss someone off
     if response.status_code != 200:
@@ -263,15 +207,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
 
     resp_json = response.json()
-    #Get the HTML
-    # bs4ob = BeautifulSoup(response.text, 'lxml')
-
-    # Isolate the property-list from the expanded one (I don't want the 3 mile
-    # surrounding.  Just the neighborhood). 
-    #First look for the results count, 
-    #Then look for the results container if you've found the count
-
-    # counts = bs4ob.find("span", class_="result-count")
     results = resp_json.get("cat1")["searchResults"]["listResults"]
 
     if results:
