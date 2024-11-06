@@ -23766,5 +23766,269 @@
     "long": null,
     "L_dist": "",
     "crime_sc": {}
+  },
+  "3658748": {
+    "source": "www.zillow.com",
+    "price": 800,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/6139-W-Byron-St-Chicago-IL-60634/3658748_zpid/",
+    "address": "6139 W Byron St, Chicago, IL 60634",
+    "date_pulled": "11-05-2024_17-17-24",
+    "bed": 4,
+    "bath": 1.0,
+    "sqft": 2280,
+    "lat": 41.9509,
+    "long": -87.78066,
+    "L_dist": [
+      "Jefferson Park",
+      1.7
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 7.92,
+      "murder_score": 2.17,
+      "perv_score": 1.79,
+      "theft_score": 36.81,
+      "violence_score": 28.28,
+      "property_d_score": 0.2
+    }
+  },
+  "vyjry9g": {
+    "source": "www.apartments.com",
+    "price": 2550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1134-w-granville-ave-chicago-il/vyjry9g/",
+    "address": "1134 W Granville Ave, Chicago, IL 60660",
+    "date_pulled": "11-05-2024_17-21-23",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1200 sq ft",
+    "lat": 41.99464176263472,
+    "long": -87.65970517953879,
+    "L_dist": [
+      "Granville",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 1.88,
+      "gun_score": 4.95,
+      "murder_score": 0.86,
+      "perv_score": 1.29,
+      "theft_score": 46.83,
+      "violence_score": 23.14,
+      "property_d_score": 0.11
+    }
+  },
+  "dcnd1vj": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1741-n-mayfield-ave-chicago-il/dcnd1vj/",
+    "address": "1741 N Mayfield Ave, Chicago, IL 60639",
+    "date_pulled": "11-05-2024_17-21-23",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1000 sq ft",
+    "lat": 41.91233005,
+    "long": -87.7724746937032,
+    "L_dist": [
+      "Austin",
+      1.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 8.01,
+      "murder_score": 2.24,
+      "perv_score": 1.79,
+      "theft_score": 37.5,
+      "violence_score": 28.14,
+      "property_d_score": 0.2
+    }
+  },
+  "y63ymft": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1044-w-school-st-chicago-il/y63ymft/",
+    "address": "1044 W School St, Chicago, IL 60657",
+    "date_pulled": "11-05-2024_17-21-23",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.941868400000004,
+    "long": -87.6558561748682,
+    "L_dist": [
+      "Belmont",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 3.03,
+      "gun_score": 5.97,
+      "murder_score": 1.65,
+      "perv_score": 1.44,
+      "theft_score": 43.68,
+      "violence_score": 24.64,
+      "property_d_score": 0.13
+    }
+  },
+  "2054921197": {
+    "source": "www.zillow.com",
+    "price": 1895,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2423-W-Gunnison-St-APT-3-Chicago-IL-60625/2054921197_zpid/",
+    "address": "2423 W Gunnison St APT 3, Chicago, IL 60625",
+    "date_pulled": "11-05-2024_17-22-51",
+    "bed": 2,
+    "bath": 1.0,
+    "sqft": 1100,
+    "lat": 41.96939,
+    "long": -87.69012,
+    "L_dist": [
+      "Western",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 2.84,
+      "gun_score": 5.73,
+      "murder_score": 1.41,
+      "perv_score": 1.41,
+      "theft_score": 44.22,
+      "violence_score": 24.19,
+      "property_d_score": 0.13
+    }
+  },
+  "y6k4vpe9ffvce": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/125-s-leavitt-st-chicago-il-unit-g/y6k4vpe9ffvce/",
+    "address": "125 S Leavitt St Unit G Chicago, IL 60612",
+    "date_pulled": "11-05-2024_17-25-03",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "z5z8jgp6fw2gy": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5422-w-wrightwood-ave-chicago-il-unit-1/z5z8jgp6fw2gy/",
+    "address": "5422 W Wrightwood Ave Unit 1 Chicago, IL 60639",
+    "date_pulled": "11-06-2024_08-16-17",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "p2hzb41xpk0ee": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4039-n-sawyer-ave-chicago-il-unit-garden/p2hzb41xpk0ee/",
+    "address": "4039 N Sawyer Ave Unit GARDEN Chicago, IL 60618",
+    "date_pulled": "11-06-2024_08-16-17",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "189061896": {
+    "source": "www.redfin.com",
+    "price": 1300.0,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5956-W-North-Ave-60639/apartment/189061896",
+    "address": "5956 W North Ave, Chicago, IL, 60639",
+    "date_pulled": "11-06-2024_08-16-33",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "700",
+    "lat": 41.9094607,
+    "long": -87.7749649,
+    "L_dist": [
+      "Austin",
+      1.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 8.14,
+      "murder_score": 2.29,
+      "perv_score": 1.82,
+      "theft_score": 37.0,
+      "violence_score": 28.47,
+      "property_d_score": 0.21
+    }
+  },
+  "2059288965": {
+    "source": "www.zillow.com",
+    "price": 1600,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4039-N-Sawyer-Ave-Chicago-IL-60618/2059288965_zpid/",
+    "address": "4039 N Sawyer Ave, Chicago, IL 60618",
+    "date_pulled": "11-06-2024_08-17-32",
+    "bed": 2,
+    "bath": 1.0,
+    "sqft": 900,
+    "lat": 41.955074,
+    "long": -87.70892,
+    "L_dist": [
+      "Addison",
+      0.74
+    ],
+    "crime_sc": {
+      "drug_score": 2.91,
+      "gun_score": 5.89,
+      "murder_score": 1.5,
+      "perv_score": 1.46,
+      "theft_score": 43.16,
+      "violence_score": 24.88,
+      "property_d_score": 0.13
+    }
+  },
+  "p8jqbft": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1550-s-blue-island-ave-chicago-il/p8jqbft/",
+    "address": "1550 S Blue Island Ave, Chicago, IL 60608",
+    "date_pulled": "11-06-2024_17-17-33",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.86060095,
+    "long": -87.65969581676622,
+    "L_dist": [
+      "18th",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 7.85,
+      "murder_score": 2.22,
+      "perv_score": 1.55,
+      "theft_score": 40.17,
+      "violence_score": 26.92,
+      "property_d_score": 0.18
+    }
   }
 }

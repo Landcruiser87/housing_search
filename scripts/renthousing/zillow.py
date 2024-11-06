@@ -156,8 +156,8 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             "isComingSoon"        :{"value":False},       #cmsn #"isComingSoon"
             "isAuction"           :{"value":False},       #auc #"isAuction"
             "isForSaleForeclosure":{"value":False},       #fore #"isForSaleForeclosure"
-            "mp"                  :{"max":str(MAXRENT)},    #mp #"mp"
-            "beds"                :{"min":str(MINBEDS)},    #beds #"beds"
+            "mp"                  :{"max":str(MAXRENT)},  #mp #"mp"
+            "beds"                :{"min":str(MINBEDS)},  #beds #"beds"
             "isManufactured"      :{"value":False},       #mf #"isManufactured"
             "isApartmentOrCondo"  :{"value":False},       #apco #"isApartmentOrCondo"
             "isApartment"         :{"value":False},       #apa #"isApartment"
@@ -204,7 +204,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         logger.warning(f'Status code: {response.status_code}')
         logger.warning(f'Reason: {response.reason}')
         return None
-
 
     resp_json = response.json()
     results = resp_json.get("cat1")["searchResults"]["listResults"]
