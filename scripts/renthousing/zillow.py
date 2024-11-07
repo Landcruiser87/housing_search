@@ -90,7 +90,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     #First grab the map coordinates update our next request
     BASE_HEADERS = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'referer':f'https://www.zillow.com/{CITY}-{STATE}/rentals',
+        'referer':f'https://www.zillow.com/{CITY}-{STATE}/',
         'origin':'https://www.zillow.com',
     }
     #Search by neighborhood
@@ -99,12 +99,12 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         srch_terms = f"{neigh} {CITY} {STATE.upper()}"
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
-        url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
+        url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?'
         
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals'
+        url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals/?'
         srch_terms = f"{neigh} {CITY}, {STATE.upper()}"
     
     #Error Trapping

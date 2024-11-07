@@ -24030,5 +24030,356 @@
       "violence_score": 26.92,
       "property_d_score": 0.18
     }
+  },
+  "7799962512": {
+    "source": "www.craigslist.org",
+    "price": 1850.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/oak-park-bd-bath-condo-with-parking/7799962512.html",
+    "address": "Corcoran Place, Chicago, IL 60644",
+    "date_pulled": "11-07-2024_08-27-20",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "1200ft2",
+    "lat": 41.886996,
+    "long": -87.774826,
+    "L_dist": [
+      "Austin",
+      0.04
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 8.46,
+      "murder_score": 2.35,
+      "perv_score": 1.99,
+      "theft_score": 36.72,
+      "violence_score": 28.57,
+      "property_d_score": 0.21
+    }
+  },
+  "13393153": {
+    "source": "www.redfin.com",
+    "price": 1425.0,
+    "neigh": "Roscoe-Village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Park-Shores/apartment/13393153",
+    "address": "Park Shores - 4304 N Sheridan Rd, Chicago, IL, 60613",
+    "date_pulled": "11-07-2024_08-28-31",
+    "bed": "1-2",
+    "bath": null,
+    "sqft": "520-630",
+    "lat": 41.9600693,
+    "long": -87.6552369,
+    "L_dist": [
+      "Wilson",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 5.64,
+      "murder_score": 1.47,
+      "perv_score": 1.41,
+      "theft_score": 44.6,
+      "violence_score": 23.94,
+      "property_d_score": 0.12
+    }
+  },
+  "9snm637": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5525-w-drummond-pl-chicago-il/9snm637/",
+    "address": "5525 W Drummond Pl, Chicago, IL 60639",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1600 sq ft",
+    "lat": 41.9284795525553,
+    "long": -87.76464800579707,
+    "L_dist": [
+      "Irving Park",
+      2.48
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 7.53,
+      "murder_score": 2.16,
+      "perv_score": 1.71,
+      "theft_score": 38.66,
+      "violence_score": 27.58,
+      "property_d_score": 0.18
+    }
+  },
+  "1e4m2l5": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1252-w-byron-st-chicago-il/1e4m2l5/",
+    "address": "1252 W Byron St, Chicago, IL 60613",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 41.952653287545346,
+    "long": -87.6615309451028,
+    "L_dist": [
+      "Sheridan",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 3.06,
+      "gun_score": 5.87,
+      "murder_score": 1.57,
+      "perv_score": 1.44,
+      "theft_score": 43.71,
+      "violence_score": 24.51,
+      "property_d_score": 0.13
+    }
+  },
+  "r3wqdg1": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1252-w-byron-st-chicago-il/r3wqdg1/",
+    "address": "1252 W Byron St, Chicago, IL 60613",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 41.952653287545346,
+    "long": -87.6615309451028,
+    "L_dist": [
+      "Sheridan",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 3.06,
+      "gun_score": 5.87,
+      "murder_score": 1.57,
+      "perv_score": 1.44,
+      "theft_score": 43.71,
+      "violence_score": 24.51,
+      "property_d_score": 0.13
+    }
+  },
+  "f1dqj8v": {
+    "source": "www.apartments.com",
+    "price": 1550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3925-w-47th-st-chicago-il/f1dqj8v/",
+    "address": "3925 W 47th St, Chicago, IL 60632",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900 sq ft",
+    "lat": 41.80767635,
+    "long": -87.72213600901065,
+    "L_dist": [
+      "Pulaski",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.44,
+      "gun_score": 8.67,
+      "murder_score": 2.79,
+      "perv_score": 1.64,
+      "theft_score": 36.67,
+      "violence_score": 28.68,
+      "property_d_score": 0.22
+    }
+  },
+  "kl7cljb": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2031-n-spaulding-ave-chicago-il/kl7cljb/",
+    "address": "2031 N Spaulding Ave, Chicago, IL 60647",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.918312,
+    "long": -87.70999650776699,
+    "L_dist": [
+      "California",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.22,
+      "murder_score": 1.64,
+      "perv_score": 1.47,
+      "theft_score": 42.55,
+      "violence_score": 25.42,
+      "property_d_score": 0.14
+    }
+  },
+  "dryp9wh": {
+    "source": "www.apartments.com",
+    "price": 2395.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2638-n-milwaukee-ave-chicago-il/dryp9wh/",
+    "address": "2638 N Milwaukee Ave, Chicago, IL 60647",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "903 sq ft",
+    "lat": 41.929657250066484,
+    "long": -87.70854512510877,
+    "L_dist": [
+      "Logan Square",
+      0.0
+    ],
+    "crime_sc": {
+      "drug_score": 2.81,
+      "gun_score": 6.15,
+      "murder_score": 1.68,
+      "perv_score": 1.47,
+      "theft_score": 42.64,
+      "violence_score": 25.33,
+      "property_d_score": 0.14
+    }
+  },
+  "0f7tg92": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1506-w-erie-st-chicago-il/0f7tg92/",
+    "address": "1506 W Erie St, Chicago, IL 60642",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": "900 sq ft",
+    "lat": 41.89374635,
+    "long": -87.66594062920768,
+    "L_dist": [
+      "Chicago",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 6.83,
+      "murder_score": 1.8,
+      "perv_score": 1.57,
+      "theft_score": 42.23,
+      "violence_score": 25.77,
+      "property_d_score": 0.15
+    }
+  },
+  "86b79v2": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3324-w-le-moyne-st-chicago-il/86b79v2/",
+    "address": "3324 W Le Moyne St, Chicago, IL 60651",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1300 sq ft",
+    "lat": 41.908327487578056,
+    "long": -87.71009172095525,
+    "L_dist": [
+      "California",
+      1.16
+    ],
+    "crime_sc": {
+      "drug_score": 2.74,
+      "gun_score": 6.42,
+      "murder_score": 1.69,
+      "perv_score": 1.48,
+      "theft_score": 42.37,
+      "violence_score": 25.61,
+      "property_d_score": 0.15
+    }
+  },
+  "9qqbgw7": {
+    "source": "www.apartments.com",
+    "price": 1600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2915-w-79th-st-chicago-il/9qqbgw7/",
+    "address": "2915 W 79th St, Chicago, IL 60652",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "1100 sq ft",
+    "lat": 41.7495932,
+    "long": -87.69571813301383,
+    "L_dist": [
+      "Ashland/63rd",
+      2.61
+    ],
+    "crime_sc": {
+      "drug_score": 1.59,
+      "gun_score": 10.03,
+      "murder_score": 3.28,
+      "perv_score": 1.69,
+      "theft_score": 33.76,
+      "violence_score": 30.85,
+      "property_d_score": 0.28
+    }
+  },
+  "xcm5mjq": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2005-s-allport-st-chicago-il/xcm5mjq/",
+    "address": "2005 S Allport St, Chicago, IL 60608",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": "1850 sq ft",
+    "lat": 41.85496165000001,
+    "long": -87.65732750110169,
+    "L_dist": [
+      "18th",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 8.01,
+      "murder_score": 2.27,
+      "perv_score": 1.53,
+      "theft_score": 39.92,
+      "violence_score": 27.13,
+      "property_d_score": 0.19
+    }
+  },
+  "v8zvjmf": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4743-n-beacon-st-chicago-il/v8zvjmf/",
+    "address": "4743 N Beacon St, Chicago, IL 60640",
+    "date_pulled": "11-07-2024_08-29-39",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": "1400 sq ft",
+    "lat": 41.9683859,
+    "long": -87.66395830666234,
+    "L_dist": [
+      "Lawrence",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 2.9,
+      "gun_score": 5.65,
+      "murder_score": 1.4,
+      "perv_score": 1.44,
+      "theft_score": 44.89,
+      "violence_score": 23.73,
+      "property_d_score": 0.12
+    }
   }
 }
