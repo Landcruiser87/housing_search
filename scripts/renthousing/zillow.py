@@ -93,6 +93,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         'referer':f'https://www.zillow.com/{CITY}-{STATE}/',
         'origin':'https://www.zillow.com',
     }
+    #BUG - Getting errors here now.  Probably need to adjust the base_headers
     #Search by neighborhood
     if isinstance(neigh, str):
         neigh = neigh.lower()
@@ -111,8 +112,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     else:
         logging.critical("Inproper input for area, moving to next site")
         return
-
-    #BUG - I think i'm pulling in the wrong geo coords
 
     response = requests.get(url_map, headers=BASE_HEADERS)
     
