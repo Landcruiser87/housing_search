@@ -45,15 +45,15 @@ from pathlib import Path, PurePath
 import support
 
 AREAS = [
-    'Portage Park',    #
+    'Portage Park',    
     'Ravenswood',
-    'Irving Park',     #
-    'Albany Park',     #
-    'North Center',    #
-    'North Park',      #
-    'Lincoln Square',  #    
-    'Avondale',        #    #New add
-    'Wicker Park',     #    #New add
+    'Irving Park',     
+    'Albany Park',     
+    'North Center',    
+    'North Park',      
+    'Lincoln Square',  
+    'Avondale',        
+    'Wicker Park',     
     'Roscoe Village',
     'Budlong Woods',
     'Mayfair',
@@ -142,9 +142,12 @@ def load_graph():
 def main():
     fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
     global data
+    #Load historical data and load into dataframe
     json_f = support.load_historical(fp)
     data = pd.DataFrame.from_dict(json_f, orient="index")
+    #Load official neighborhood polygons from data.cityofchicago.org
     maps = support.load_neigh_polygons()
+    #
     graph = "load_graph()"
 
 if __name__ == "__main__":
