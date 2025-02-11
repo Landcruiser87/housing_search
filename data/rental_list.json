@@ -39581,5 +39581,75 @@
       "violence_score": 26.48,
       "property_d_score": 0.16
     }
+  },
+  "194443346": {
+    "source": "www.redfin.com",
+    "price": 1800.0,
+    "neigh": "Albany-Park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4332-W-Lawrence-Ave-60630/unit-9Q/home/194443346",
+    "address": "4332 W Lawrence Ave Unit 9Q, Chicago, IL, 60630",
+    "date_pulled": "02-10-2025_08-13-46",
+    "bed": "2",
+    "bath": "1",
+    "sqft": "900",
+    "lat": 41.9683331,
+    "long": -87.736769,
+    "L_dist": [
+      "Montrose",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 3.23,
+      "gun_score": 5.57,
+      "murder_score": 1.51,
+      "perv_score": 1.7,
+      "theft_score": 42.64,
+      "violence_score": 25.1,
+      "property_d_score": 0.13
+    }
+  },
+  "2064286985": {
+    "source": "www.zillow.com",
+    "price": 2500,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3705-N-Lockwood-Ave-2N-Chicago-IL-60641/2064286985_zpid/",
+    "address": "3705 N Lockwood Ave #2N, Chicago, IL 60641",
+    "date_pulled": "02-10-2025_18-01-53",
+    "bed": 3,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.948074,
+    "long": -87.759224,
+    "L_dist": [
+      "Montrose",
+      1.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 6.67,
+      "murder_score": 2.01,
+      "perv_score": 1.79,
+      "theft_score": 38.82,
+      "violence_score": 27.28,
+      "property_d_score": 0.17
+    }
+  },
+  "9156383044": {
+    "source": "www.realtor.com",
+    "price": null,
+    "neigh": "Portage-Park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3705-N-Lockwood-Ave-Apt-2_Chicago_IL_60641_M91563-83044",
+    "address": "3705 N Lockwood Ave Unit 2N Chicago, IL 60641",
+    "date_pulled": "02-10-2025_18-02-40",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
