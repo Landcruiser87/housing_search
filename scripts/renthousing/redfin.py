@@ -34,7 +34,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
             addy = listinginfo[0].get("name")
             lat = float(listinginfo[0]["geo"].get("latitude"))
             long = float(listinginfo[0]["geo"].get("longitude"))
-            beds = listinginfo[0].get("numberOfRooms")
+            beds = float(listinginfo[0].get("numberOfRooms"))
             if "value" in listinginfo[0]["floorSize"].keys():
                 sqft = listinginfo[0].get("floorSize")["value"]
                 if "," in sqft:
@@ -47,7 +47,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
         #Bathrooms weren't in the json.  So we'll grab those manually
         for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
             baths = subsearch.text
-            baths = "".join(x for x in baths if x.isnumeric() or x == ".")
+            baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
             break
         
         pets = PETS
@@ -56,7 +56,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
             id=listingid,   
             source=source,
             price=price,    
-            neigh=neigh,
+            neigh=neigh.lower(),
             bed=beds,       
             sqft=sqft,      
             bath=baths,     

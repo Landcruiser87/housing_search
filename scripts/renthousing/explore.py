@@ -86,7 +86,13 @@ def clean_data(json_f:dict) -> pd.DataFrame:
             return npdateOb
         else:
             return np.nan
-    def neighborhood_convert():
+    def neighborhood_convert(neigh):
+        names =[name.lower() for name in np.unique(maps["pri_neigh"])]
+        if "-" in neigh:
+            neigh = " ".join(neigh.split("-"))
+        if neigh.lower() in names:
+            pass
+
         # ['Albany-Park', 'Avondale', 'Budlong-Woods', 'Budlong-WoodsMayfair',
         #  'Irving-Park', 'Lincoln-Square', 'Mayfair', 'North-Center',
         #  'North-Park', 'Portage-Park', 'Ravenswood', 'Roscoe-Village',
@@ -94,18 +100,17 @@ def clean_data(json_f:dict) -> pd.DataFrame:
         #  'budlong-woodsmayfair', 'chicago', 'irving-park', 'lincoln-square',
         #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
         #  'roscoe-village', 'wicker-park']
-        pass
 
     #Load data frame
     data = pd.DataFrame.from_dict(json_f, orient="index")
     #Convert Dates to np.datetime64s
     data["date_pulled"] = data["date_pulled"].apply(date_convert)
     #Unify neighborhoods
-    # data["neigh"] = data["neigh"].apply(neighborhood_convert)
+    data["neigh"] = data["neigh"].apply(neighborhood_convert)
 
     return data
 
-def load_graph(maps:pd.DataFrame):
+def load_graph():
     
     ################## plot functions ###############################
     def switch_checks_on():
@@ -202,17 +207,20 @@ def load_graph(maps:pd.DataFrame):
     plt.show()
 
 def main():
-    fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
-    global data
     #Load historical data and load into dataframe
+    fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
     json_f = support.load_historical(fp)
-    data = clean_data(json_f)
 
     #Load official neighborhood polygons from data.cityofchicago.org
-    maps = support.load_neigh_polygons()
+    global data, maps
+    maps = support.load_neigh_polygons() 
+    #?Maybe consider a way to save these so you're not constantly pinging while developing
     
-    #Load Main graph
-    graph = load_graph(maps)
+    #clean data
+    data = clean_data(json_f)
+
+    #Load GUI
+    graph = load_graph()
 
 if __name__ == "__main__":
     main()

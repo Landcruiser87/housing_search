@@ -83,7 +83,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             id=listingid,
             source=source,
             price=price,
-            neigh=neigh,
+            neigh=neigh.lower(),
             bed=beds,
             sqft=sqft,
             bath=baths,
