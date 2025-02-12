@@ -42,6 +42,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons, TextBox, SpanSelect
 from matplotlib.lines import Line2D
 import matplotlib.gridspec as gridspec
 from pathlib import Path, PurePath
+from itertools import cycle
 import support
 
 AREAS = [
@@ -62,81 +63,64 @@ AREAS = [
 SITES = ["zillow", "redfin", "craigs", "apartments", "homes", "realtor"]
 
 def load_graph():
-    valid_sect = hs_data['section_info']['valid']
-    global ax_map, gs, fig
-    fig = plt.figure(figsize=(14, 10))
-    gs = gridspec.GridSpec(nrows=2, ncols=2, height_ratios=[6, 1])
-    plt.subplots_adjust(hspace=0.40)
-    ax_map = fig.add_subplot(gs[0, :2], label="mainplot")
-    first_sect = np.where(hs_data['section_info']['valid']!=0)[0][0]
-    start_w = hs_data['section_info'][first_sect]['start_point']
-    end_w = hs_data['section_info'][first_sect]['end_point']
-    ax_map.plot(range(start_w, end_w), wave[start_w:end_w], color='dodgerblue', label='mainECG')
-    ax_map.set_xlim(start_w, end_w)
-    ax_map.set_ylabel('Voltage (mV)')
-    ax_map.set_xlabel('ECG index')
-    ax_map.legend(loc='upper left')
+    ################## plot functions ###############################
+    def onselect():
+        pass
+        #Have this update the choloropeth map and the trendline. 
+    ################## Loading plot objects ###############################
+    global sp_map, sp_trend, sp_section, gs
+    fig = plt.figure(figsize=(15, 10))
+    gs = gridspec.GridSpec(nrows=4, ncols=2, height_ratios=[1, 3, 3, 1], width_ratios=[3, 1])
+    plt.subplots_adjust(hspace=0.2)
+    sp_map = fig.add_subplot(gs[0, 0], label="mainplot")
+    sp_trend = fig.add_subplot(gs[1, 0], label="trendline")
+    sp_section = fig.add_subplot(gs[2, 0], label="dateselector")
 
-    #brokebarH plot for the background of the slider. 
-    ax_section = fig.add_subplot(gs[1, :2])
-    ax_section.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
-    ax_section.set_ylim(0, 1)
-    ax_section.set_xlim(0, valid_sect.shape[0])
-
-    sect_slider = Slider(ax_section, 
-        label='Sections',
-        valmin=first_sect, 
-        valmax=len(valid_sect), 
-        valinit=first_sect, 
-        valstep=1
+    span = SpanSelector(
+        sp_section,
+        onselect,
+        "horizontal",
+        useblit=True,
+        props=dict(alpha=0.5, facecolor="tab:orange"),
+        interactive=True,
+        drag_from_anywhere=True
     )
-
     #Invalid step axes placeholders
-    axnext = plt.axes([0.595, 0.01, 0.15, 0.050])
-    axprev = plt.axes([0.44, 0.01, 0.15, 0.050])
+    
+    time_windows = cycle(["day", "week", "month"])
 
-    #Singlestep axes placholders
-    ax_sing_next = plt.axes([0.28, 0.01, 0.15, 0.050])
-    ax_sing_prev = plt.axes([0.125, 0.01, 0.15, 0.050])
+    #Add containers for radio buttons
+    ax_radio_site = fig.add_axes(gs[0, 1:], label="radio_site")
+    ax_radio_neigh = fig.add_axes(gs[1, 1:], label="radio_neigh")
+    ax_radio_metric = fig.add_axes(gs[2, 1:], label="radio_metric")
+    ax_cycletime = fig.add_axes(gs[3, 1:], label="cycle_time")
 
-    #Jump section axes placeholders
-    ax_jump_textb = plt.axes([0.88, 0.01, 0.06, 0.050])
-
-    #Add axis container for radio buttons
-    ax_radio = plt.axes([0.905, .45, 0.09, 0.20])
-
-    #Button for Invalid Step process
-    next_button = Button(axnext, label='Next Invalid Section')
-    prev_button = Button(axprev, label='Previous Invalid Section')
-
-    #Button for single step process
-    sing_next_button = Button(ax_sing_next, label='Single Step Forward')
-    sing_prev_button = Button(ax_sing_prev, label='Single Step Backward')
-
-    #TextBox for section jump
-    jump_sect_text = TextBox(ax_jump_textb, 
-        label='Jump to Section',
-        textalignment="center", 
-        hovercolor='green'
-    )
+    #Button for cycling Time window
+    cycle_time_button = Button(ax_cycletime, label='Cycle Time Window')
 
     #Radio buttons
-    radio = RadioButtons(ax_radio, ('Price Trend','Safety Rating' 'Availability'))
+    radio_site = RadioButtons(ax_radio_site, SITES)
+    radio_area = RadioButtons(ax_radio_neigh, AREAS)
+    radio_metric = RadioButtons(ax_radio_metric, ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"))
 
     #Set actions for GUI items. 
-    sect_slider.on_changed(update_plot)
-    next_button.on_clicked(move_slider_forward)
-    prev_button.on_clicked(move_slider_back)
-    sing_next_button.on_clicked(move_slider_sing_forward)
-    sing_prev_button.on_clicked(move_slider_sing_back)
-    radio.on_clicked(radiob_action)
-    jump_sect_text.on_submit(jump_slider_to_sect)
+    # span.on_changed(update_time_span)           #TODO write update_time_span   
+    # cycle_time_button.on_clicked(cycle_time)    #TODO write cycle_back
+    # radio_site.on_clicked(radio_site_action)    #TODO write radio_site_action
+    # radio_area.on_clicked(radio_neigh_action)   #TODO write radio_neigh_action
+    # radio_metric.on_clicked(radio_metric_action)#TODO write radio_metric_action
+
+    #TODO initial plot loading here of presets. 
+
 
     #Make a custom legend. 
-    legend_elements = [
-        Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
-        ]
-    ax_map.legend(handles=legend_elements, loc='upper left')
+    # legend_elements = [
+    #     Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
+    #     ]
+    # sp_trend.legend(handles=legend_elements, loc='upper left')
+
+
+    #show the plot!
     plt.show()
 
 def main():
@@ -146,9 +130,8 @@ def main():
     json_f = support.load_historical(fp)
     data = pd.DataFrame.from_dict(json_f, orient="index")
     #Load official neighborhood polygons from data.cityofchicago.org
-    maps = support.load_neigh_polygons()
-    #
-    graph = "load_graph()"
+    # maps = support.load_neigh_polygons()
+    graph = load_graph()
 
 if __name__ == "__main__":
     main()
