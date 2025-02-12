@@ -38,6 +38,7 @@ import numpy as np
 import pandas as pd
 import support
 import datetime
+import geopandas as gpd
 from itertools import cycle
 from pathlib import Path, PurePath
 import matplotlib.pyplot as plt
@@ -67,12 +68,17 @@ SITES = ["Zillow", "Redfin", "Craigs", "Apartments", "Homes", "Realtor"]
 
 #Time Window cycle options
 TIME_WINDOW = cycle(["day", "week", "month", "year"])
-
+TIME_DICT = {
+    "day":7,
+    "week":4, 
+    "month":6,
+    "year":2
+}
 #Load a logger instance
 # logger = support.get_logger("", support.console)
 
 #FUNCTION Convert Date
-def format_data(json_f:dict) -> pd.DataFrame:
+def clean_data(json_f:dict) -> pd.DataFrame:
     def date_convert(dt_str:str):
         if isinstance(dt_str, str):
             dateOb = datetime.datetime.strptime(dt_str.split("_")[0],'%m-%d-%Y')
@@ -80,35 +86,54 @@ def format_data(json_f:dict) -> pd.DataFrame:
             return npdateOb
         else:
             return np.nan
+    def neighborhood_convert():
+        # ['Albany-Park', 'Avondale', 'Budlong-Woods', 'Budlong-WoodsMayfair',
+        #  'Irving-Park', 'Lincoln-Square', 'Mayfair', 'North-Center',
+        #  'North-Park', 'Portage-Park', 'Ravenswood', 'Roscoe-Village',
+        #  'Wicker-Park', 'albany-park', 'avondale', 'budlong-woods',
+        #  'budlong-woodsmayfair', 'chicago', 'irving-park', 'lincoln-square',
+        #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
+        #  'roscoe-village', 'wicker-park']
+        pass
+
     #Load data frame
     data = pd.DataFrame.from_dict(json_f, orient="index")
     #Convert Dates to np.datetime64s
-    funk = np.vectorize(lambda x: date_convert(x))
-    data["date_pulled"] = np.apply_along_axis(funk, 0, data["date_pulled"])
+    data["date_pulled"] = data["date_pulled"].apply(date_convert)
+    #Unify neighborhoods
+    # data["neigh"] = data["neigh"].apply(neighborhood_convert)
 
     return data
 
-def load_graph():
+def load_graph(maps:pd.DataFrame):
     
     ################## plot functions ###############################
-    def cycle_time(time_window):
+    def switch_checks_on():
+        [checkb_site.set_active(x) for x in range(len(checkb_site.labels))]
+        [checkb_area.set_active(x) for x in range(len(checkb_area.labels))]
+
+    def update_main(time_window:str, amount:int):
+        pass
+
+    def cycle_time():
+        amount = TIME_DICT[tw]
+        tw = next(TIME_WINDOW)
+        update_main(tw, amount)
         #Need a mainplot update here
-        return next(time_window)
 
     def onselect_func(xmin, xmax):
         xmin = mdates.num2date(xmin)
         xmax = mdates.num2date(xmax)
-        region_x = np.timedelta64(xmin, xmax)
-        print(f"{region_x}")
+        # region_x = np.timedelta64(xmin, xmax)
+        # print(f"{xmin:%Y-%m-%d} | {xmax:%Y-%m-%d}")
         # #early terminate if you accidentally click
         # if xmin==xmax or len(region_x) <= 10:
         #     raise ValueError(f'Please select a larger range than {len(region_x)}')
 
         #Have this update the choloropeth map and the trendline. 
 
-
     ################## Loading plot objects ###############################
-    global sp_map, sp_trend, sp_section, gs
+    global sp_map, sp_trend, sp_section, gs, tw
     fig = plt.figure(figsize=(14, 10))
     gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[4, 2, 1], width_ratios=[5, 1])
     plt.subplots_adjust(hspace=0.2)
@@ -118,16 +143,20 @@ def load_graph():
     #Set initial axis values for a date
         #Maybe flip them into the graph too to make it a chart on its own!  ooooo yes.
 
-    
+    #TODO initial plot loading here of presets. 
+    tw = "day"
+    amount = TIME_DICT[tw]
+    # update_main(tw, amount)
+    # update_trend(tw, amount)
+
     xmax = np.max(data["date_pulled"])
     #Subset the last 14 days to start
-    xmin = np.max(data["date_pulled"]) - np.timedelta64(2, "W")
-    
+    xmin = np.max(data["date_pulled"]) - np.timedelta64(4, "W")
     sp_section.set_xlim(xmin, xmax)
-    sp_section.xaxis.set_major_locator(mdates.DayLocator(interval=3))
+    sp_section.xaxis.set_major_locator(mdates.DayLocator(interval=2))
     sp_section.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
     ticks = sp_section.get_xticklabels()
-    sp_section.set_xticklabels(ticks, rotation=45)
+    sp_section.set_xticklabels(ticks, rotation=40)
 
     span = SpanSelector(
         sp_section,
@@ -138,7 +167,6 @@ def load_graph():
         interactive=True,
         drag_from_anywhere=True
     )
-    
 
     #Add total / indivdual containers for radio buttons
     # ax_widgets = fig.add_subplot(gs[:, 1], label="widget_ax")
@@ -150,20 +178,19 @@ def load_graph():
     #Button for cycling Time window
     cycle_time_button = Button(ax_cycletime, label='Cycle Time Window')
 
-    #Radio buttons
-    radio_site = CheckButtons(ax_radio_site, tuple(SITES))
-    radio_area = CheckButtons(ax_radio_neigh, tuple(AREAS))
+    #Make Check buttons (enabled) and radio buttons
+    checkb_site = CheckButtons(ax_radio_site, tuple(SITES))
+    checkb_area = CheckButtons(ax_radio_neigh, tuple(AREAS))
+    switch_checks_on()
     radio_metric = RadioButtons(ax_radio_metric, ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"))
-
+    
     #Set actions for GUI items. 
-    # span.on_changed(update_maincharts)          #TODO write update_maincharts  
-    cycle_time_button.on_clicked(cycle_time)      #TODO write cycle_back
-    # radio_site.on_clicked(radio_site_action)    #TODO write radio_site_action
-    # radio_area.on_clicked(radio_neigh_action)   #TODO write radio_neigh_action
-    # radio_metric.on_clicked(radio_metric_action)#TODO write radio_metric_action
-    #TODO initial plot loading here of presets. 
-
-
+    # span.on_changed(update_maincharts)            #TODO write update_maincharts  
+    cycle_time_button.on_clicked(cycle_time)        #TODO write cycle_back
+    # radio_site.on_clicked(radio_site_action)      #TODO write radio_site_action
+    # radio_area.on_clicked(radio_neigh_action)     #TODO write radio_neigh_action
+    # radio_metric.on_clicked(radio_metric_action)  #TODO write radio_metric_action
+    
     #Make a custom legend. 
     # legend_elements = [
     #     Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
@@ -179,13 +206,13 @@ def main():
     global data
     #Load historical data and load into dataframe
     json_f = support.load_historical(fp)
-    data = format_data(json_f)
+    data = clean_data(json_f)
 
     #Load official neighborhood polygons from data.cityofchicago.org
-    # maps = support.load_neigh_polygons()
+    maps = support.load_neigh_polygons()
     
     #Load Main graph
-    graph = load_graph()
+    graph = load_graph(maps)
 
 if __name__ == "__main__":
     main()
