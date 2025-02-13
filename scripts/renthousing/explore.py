@@ -115,6 +115,14 @@ def clean_data(json_f:dict) -> pd.DataFrame:
 
 def load_graph():
     
+    ################## widget functions ###############################
+
+    def check_site_action():
+        pass
+
+    def check_neigh_action():
+        pass
+
     ################## plot functions ###############################
 
     def update_main(time_window:str, amount:int):
@@ -160,8 +168,10 @@ def load_graph():
     sp_section.set_xlim(xmin, xmax)
     sp_section.xaxis.set_major_locator(mdates.DayLocator(interval=2))
     sp_section.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
-    ticks = sp_section.get_xticklabels()
-    sp_section.set_xticklabels(ticks, rotation=40)
+    ticks = sp_section.get_xticks() #weird error here that if i don't set the ticks before i set the labels it throws a warning???  oooooooooook
+    sp_section.set_xticks(ticks)
+    tickslabels = sp_section.get_xticklabels()
+    sp_section.set_xticklabels(tickslabels, rotation=40)
 
     span = SpanSelector(
         sp_section,
@@ -189,29 +199,30 @@ def load_graph():
         labels = tuple(SITES),
         actives = [True] * len(SITES),
         label_props = {
-            "fontsize":14,
-            "fontweight":"bold"
+            "fontsize":[11] * len(SITES),
+            "fontweight":["bold"] * len(SITES)
         }
     )
     checkb_area = CheckButtons(
         ax = ax_radio_neigh, 
         labels = tuple(AREAS),
         actives = [True] * len(AREAS),
-        label_props= {
-            "fontsize":14,
-            "fontweight":"bold"
+        label_props = {
+            "fontsize":[11] * len(AREAS),
+            "fontweight":["bold"] * len(AREAS)
         }
     )
     radio_metric = RadioButtons(
         ax = ax_radio_metric, 
-        labels = ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft")
+        labels = ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"),
+        active = 0
     )
     
     #Set actions for GUI items. 
     # span.on_changed(update_maincharts)            #TODO write update_maincharts  
     cycle_time_button.on_clicked(cycle_time)        #TODO write cycle_back
-    # radio_site.on_clicked(radio_site_action)      #TODO write radio_site_action
-    # radio_area.on_clicked(radio_neigh_action)     #TODO write radio_neigh_action
+    checkb_site.on_clicked(check_site_action)       #TODO write radio_site_action
+    checkb_area.on_clicked(check_neigh_action)      #TODO write radio_neigh_action
     # radio_metric.on_clicked(radio_metric_action)  #TODO write radio_metric_action
     
     #Make a custom legend. 

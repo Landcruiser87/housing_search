@@ -35,7 +35,14 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
             addy = listinginfo[0].get("name")
             lat = float(listinginfo[0]["geo"].get("latitude"))
             long = float(listinginfo[0]["geo"].get("longitude"))
-            beds = float(listinginfo[0].get("numberOfRooms"))
+            beds = listinginfo[0].get("numberOfRooms")
+            if "-" in beds: 
+                beds = float(beds.split("-")[-1])
+            elif "," in beds: 
+                beds = float(beds.split(",")[-1])
+            else:
+                beds = float(beds)
+                
             if "value" in listinginfo[0]["floorSize"].keys():
                 sqft = listinginfo[0].get("floorSize")["value"]
                 if "," in sqft:
