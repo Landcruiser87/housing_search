@@ -562,22 +562,28 @@ def send_housing_email(urls:str):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 #FUNCTION Load neighborhood boundaries
-def load_neigh_polygons():
-    with open('./secret/chicagodata.txt') as login_file:
-        login = login_file.read().splitlines()
-        app_token = login[0].split(':')[1]
+def load_neigh_polygons(update:bool=False):
+    if update:
+        with open('./secret/chicagodata.txt') as login_file:
+            login = login_file.read().splitlines()
+            app_token = login[0].split(':')[1]
+            
+        client = Socrata("data.cityofchicago.org", app_token)
+        db_id = "y6yq-dbs2"
+        try:
+            results = client.get(
+                db_id,
+                limit=5000
+            )
+            df = pd.DataFrame.from_records(results)
+            df.to_csv("./data/chicago_map.csv", sep=",", index=False)
+            return df
         
-    client = Socrata("data.cityofchicago.org", app_token)
-    db_id = "y6yq-dbs2"
-    try:
-        results = client.get(
-            db_id,
-            limit=5000
-        )
-        return pd.DataFrame.from_records(results)
-    
-    except Exception as e:
-        raise e
+        except Exception as e:
+            raise e
+    else:
+        fp = "./data/chicago_map.csv"
+        return pd.read_csv(fp)
 
     #?  Could aggregate live crime data for each neighborhood too for the last year.  That would be awesome!
 

@@ -87,19 +87,22 @@ def clean_data(json_f:dict) -> pd.DataFrame:
         else:
             return np.nan
     def neighborhood_convert(neigh):
-        names =[name.lower() for name in np.unique(maps["pri_neigh"])]
+        # names =[name.lower() for name in np.unique(maps["pri_neigh"])]
         if "-" in neigh:
             neigh = " ".join(neigh.split("-"))
-        if neigh.lower() in names:
-            pass
+        return neigh.lower()
 
-        # ['Albany-Park', 'Avondale', 'Budlong-Woods', 'Budlong-WoodsMayfair',
-        #  'Irving-Park', 'Lincoln-Square', 'Mayfair', 'North-Center',
-        #  'North-Park', 'Portage-Park', 'Ravenswood', 'Roscoe-Village',
-        #  'Wicker-Park', 'albany-park', 'avondale', 'budlong-woods',
-        #  'budlong-woodsmayfair', 'chicago', 'irving-park', 'lincoln-square',
-        #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
-        #  'roscoe-village', 'wicker-park']
+            #BUG 
+                #Need a better way to do this. 
+                #Could use Levensetein distance with a low threshold
+
+            # ['Albany-Park', 'Avondale', 'Budlong-Woods', 'Budlong-WoodsMayfair',
+            #  'Irving-Park', 'Lincoln-Square', 'Mayfair', 'North-Center',
+            #  'North-Park', 'Portage-Park', 'Ravenswood', 'Roscoe-Village',
+            #  'Wicker-Park', 'albany-park', 'avondale', 'budlong-woods',
+            #  'budlong-woodsmayfair', 'chicago', 'irving-park', 'lincoln-square',
+            #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
+            #  'roscoe-village', 'wicker-park']
 
     #Load data frame
     data = pd.DataFrame.from_dict(json_f, orient="index")
@@ -113,9 +116,6 @@ def clean_data(json_f:dict) -> pd.DataFrame:
 def load_graph():
     
     ################## plot functions ###############################
-    def switch_checks_on():
-        [checkb_site.set_active(x) for x in range(len(checkb_site.labels))]
-        [checkb_area.set_active(x) for x in range(len(checkb_area.labels))]
 
     def update_main(time_window:str, amount:int):
         pass
@@ -184,10 +184,28 @@ def load_graph():
     cycle_time_button = Button(ax_cycletime, label='Cycle Time Window')
 
     #Make Check buttons (enabled) and radio buttons
-    checkb_site = CheckButtons(ax_radio_site, tuple(SITES))
-    checkb_area = CheckButtons(ax_radio_neigh, tuple(AREAS))
-    switch_checks_on()
-    radio_metric = RadioButtons(ax_radio_metric, ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"))
+    checkb_site = CheckButtons(
+        ax = ax_radio_site, 
+        labels = tuple(SITES),
+        actives = [True] * len(SITES),
+        label_props = {
+            "fontsize":14,
+            "fontweight":"bold"
+        }
+    )
+    checkb_area = CheckButtons(
+        ax = ax_radio_neigh, 
+        labels = tuple(AREAS),
+        actives = [True] * len(AREAS),
+        label_props= {
+            "fontsize":14,
+            "fontweight":"bold"
+        }
+    )
+    radio_metric = RadioButtons(
+        ax = ax_radio_metric, 
+        labels = ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft")
+    )
     
     #Set actions for GUI items. 
     # span.on_changed(update_maincharts)            #TODO write update_maincharts  
@@ -214,7 +232,6 @@ def main():
     #Load official neighborhood polygons from data.cityofchicago.org
     global data, maps
     maps = support.load_neigh_polygons() 
-    #?Maybe consider a way to save these so you're not constantly pinging while developing
     
     #clean data
     data = clean_data(json_f)
