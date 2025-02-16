@@ -65,7 +65,14 @@ AREAS = [
 ]
 #Sites Searched
 SITES = ["Zillow", "Redfin", "Craigs", "Apartments", "Homes", "Realtor"]
-
+SWITCH_SITE = {
+    "Zillow":"www.zillow.com",
+    "Redfin":"www.redfin.com",
+    "Craigs":"www.craigslist.org",
+    "Apartments":"www.apartments.com",
+    "Homes":"www.homes.com", 
+    "Realtor":"www.realtor.com"
+}
 #Time Window cycle options
 TIME_WINDOW = cycle(["day", "week", "month", "year"])
 TIME_DICT = {
@@ -80,13 +87,30 @@ TIME_DICT = {
 #FUNCTION Convert Date
 def clean_data(json_f:dict) -> pd.DataFrame:
     def date_convert(dt_str:str):
+        """Date conversion from a string to a np.datetime64
+
+        Args:
+            dt_str (str): Datetime string 
+
+        Returns:
+            npdateOb (np.datetime64): a datetime object
+        """        
         if isinstance(dt_str, str):
             dateOb = datetime.datetime.strptime(dt_str.split("_")[0],'%m-%d-%Y')
             npdateOb = np.datetime64(dateOb, "D")
             return npdateOb
         else:
             return np.nan
-    def neighborhood_convert(neigh):
+    
+    def neighborhood_convert(neigh:str):
+        """neighborhoods in the dataset need a little formatting. 
+
+        Args:
+            neigh (str): _description_
+
+        Returns:
+            _type_: _description_
+        """        
         # names =[name.lower() for name in np.unique(maps["pri_neigh"])]
         if "-" in neigh:
             neigh = " ".join(neigh.split("-"))
@@ -110,39 +134,90 @@ def clean_data(json_f:dict) -> pd.DataFrame:
     data["date_pulled"] = data["date_pulled"].apply(date_convert)
     #Unify neighborhoods
     data["neigh"] = data["neigh"].apply(neighborhood_convert)
+    #Set types for strings
+    for col in ["source","neigh", "address"]:
+        data[col] = data[col].astype(str)
+    #Set types for floats
+    for col in ["price", "bed", "bath"]:
+        data[col] = data[col].astype(float)
+    #replace bs in lat long and turn to float
+    for col in ["lat", "long"]:
+        data[col] = data[col].replace(r'^\s*$', np.nan, regex=True)
+        data[col] = data[col].astype(float)
 
     return data
 
 def load_graph():
     
     ################## widget functions ###############################
+    def checkb_site_action(val):
+        update_main(tw, amount)
+        #update main data and trend plot below
+        #need to remove the val from that target.  
+        #won't have a ref to the line...  ohhhh what about this.  
+            #Nest the option box INSIDE the legend for site.  
+            #then have the outer box be for neighborhood giving you some more space.  
+        fig.canvas.draw_idle()
 
-    def check_site_action():
-        pass
+    def checkb_neigh_action(val):
+        update_main(tw, amount)
+        #update main data and trend plot below
+        fig.canvas.draw_idle()
 
-    def check_neigh_action():
-        pass
-
+    def get_active_labels():
+        actives = []
+        for chkb_name, artist in zip(["site", "neigh"], [checkb_site, checkb_neigh]):
+            for label in artist.get_checked_labels():
+                actives.append((chkb_name, label))
+        
+        return actives
     ################## plot functions ###############################
 
-    def update_main(time_window:str, amount:int):
-        pass
+    def update_main(xmin:datetime=None, xmax:datetime=None):
+        labels = get_active_labels()
+        tickslabels = sp_section.get_xticklabels()
+        if not span._selection_completed:
+            mindate = datetime.datetime.strptime(tickslabels[0].get_text(), "%Y-%m-%d")  
+            maxdate = datetime.datetime.strptime(tickslabels[-1].get_text(), "%Y-%m-%d")
+        else:
+            mindate = xmin
+            maxdate = xmax
+            
+        #Need to filter the dataframe by results in...
+            #1. active time period in zer bar.  #todo - write that function
+            #2. check labels in both site and neighborhood.
+        source, neigh = [], ["chicago"]
+        for cbox, label in labels:
+            if cbox == "site":
+                source.append(SWITCH_SITE[label])
+            elif cbox == "neigh":
+                neigh.append(" ".join(label.lower().split()))
+
+        source_mask = data["source"].isin(source)
+        site_mask = data["neigh"].isin(neigh)
+        dmin_mask = data["date_pulled"] >= np.datetime64(mindate, "D")
+        dmax_mask = data["date_pulled"] <= np.datetime64(maxdate, "D")
+        idx_mask = source_mask & site_mask & dmin_mask & dmax_mask
+        filtdata = data[idx_mask]
+        stuff = ""
 
     def cycle_time():
+        global tw, amount
         amount = TIME_DICT[tw]
         tw = next(TIME_WINDOW)
-        update_main(tw, amount)
+        update_main()
         #Need a mainplot update here
 
-    def onselect_func(xmin, xmax):
-        xmin = mdates.num2date(xmin)
-        xmax = mdates.num2date(xmax)
+    def onselect_func(x_min, x_max):
+        xmind = mdates.num2date(x_min)
+        xmaxd = mdates.num2date(x_max)
+
         # region_x = np.timedelta64(xmin, xmax)
         # print(f"{xmin:%Y-%m-%d} | {xmax:%Y-%m-%d}")
         # #early terminate if you accidentally click
         # if xmin==xmax or len(region_x) <= 10:
         #     raise ValueError(f'Please select a larger range than {len(region_x)}')
-
+        update_main(xmind, xmaxd)
         #Have this update the choloropeth map and the trendline. 
 
     ################## Loading plot objects ###############################
@@ -156,14 +231,8 @@ def load_graph():
     #Set initial axis values for a date
         #Maybe flip them into the graph too to make it a chart on its own!  ooooo yes.
 
-    #TODO initial plot loading here of presets. 
-    tw = "day"
-    amount = TIME_DICT[tw]
-    # update_main(tw, amount)
-    # update_trend(tw, amount)
-
     xmax = np.max(data["date_pulled"])
-    #Subset the last 14 days to start
+    #Subset the last 4 weeks to start
     xmin = np.max(data["date_pulled"]) - np.timedelta64(4, "W")
     sp_section.set_xlim(xmin, xmax)
     sp_section.xaxis.set_major_locator(mdates.DayLocator(interval=2))
@@ -185,8 +254,8 @@ def load_graph():
 
     #Add total / indivdual containers for radio buttons
     # ax_widgets = fig.add_subplot(gs[:, 1], label="widget_ax")
-    ax_radio_site = plt.axes([0.74, 0.75, 0.20, 0.13], label="radio_site")
-    ax_radio_neigh = plt.axes([0.74, 0.49, 0.20, 0.26], label="radio_neigh")
+    ax_check_site = plt.axes([0.74, 0.75, 0.20, 0.13], label="radio_site")
+    ax_check_neigh = plt.axes([0.74, 0.49, 0.20, 0.26], label="radio_neigh")
     ax_radio_metric = plt.axes([0.74, 0.25, 0.20, 0.20], label="radio_metric")
     ax_cycletime = plt.axes([0.74, 0.11, 0.20, 0.10], label="radio_cycle")
 
@@ -195,7 +264,7 @@ def load_graph():
 
     #Make Check buttons (enabled) and radio buttons
     checkb_site = CheckButtons(
-        ax = ax_radio_site, 
+        ax = ax_check_site, 
         labels = tuple(SITES),
         actives = [True] * len(SITES),
         label_props = {
@@ -203,8 +272,8 @@ def load_graph():
             "fontweight":["bold"] * len(SITES)
         }
     )
-    checkb_area = CheckButtons(
-        ax = ax_radio_neigh, 
+    checkb_neigh = CheckButtons(
+        ax = ax_check_neigh, 
         labels = tuple(AREAS),
         actives = [True] * len(AREAS),
         label_props = {
@@ -217,12 +286,19 @@ def load_graph():
         labels = ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"),
         active = 0
     )
-    
+    #IDEA: It would be cool to see amount of reposts too across different sites and their own
+    ################## Loading plots ###############################
+    global tw, amount
+    tw = "day"
+    amount = TIME_DICT[tw]
+    update_main()
+    # update_trend(tw, amount)
+
     #Set actions for GUI items. 
-    # span.on_changed(update_maincharts)            #TODO write update_maincharts  
+    span.on_changed(onselect_func)            #TODO write update_maincharts  
     cycle_time_button.on_clicked(cycle_time)        #TODO write cycle_back
-    checkb_site.on_clicked(check_site_action)       #TODO write radio_site_action
-    checkb_area.on_clicked(check_neigh_action)      #TODO write radio_neigh_action
+    checkb_site.on_clicked(checkb_site_action)      
+    checkb_neigh.on_clicked(checkb_neigh_action)    
     # radio_metric.on_clicked(radio_metric_action)  #TODO write radio_metric_action
     
     #Make a custom legend. 
@@ -236,17 +312,14 @@ def load_graph():
     plt.show()
 
 def main():
-    #Load historical data and load into dataframe
+    #Load historical json
     fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
     json_f = support.load_historical(fp)
-
-    #Load official neighborhood polygons from data.cityofchicago.org
     global data, maps
-    maps = support.load_neigh_polygons() 
-    
-    #clean data
+    #Load / clean data into a df
     data = clean_data(json_f)
-
+    #Load official neighborhood polygons from data.cityofchicago.org
+    maps = support.load_neigh_polygons() 
     #Load GUI
     graph = load_graph()
 

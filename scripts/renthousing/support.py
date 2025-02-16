@@ -155,8 +155,9 @@ def make_rich_display(totalstops:int):
             border_style="green",
             title="Overall Progress",
             title_align="center",
-            expand=True)
-            )
+            expand=True
+        )
+    )
     layout["sleep_prog"].update(
         Panel(
             Align.center(
@@ -166,16 +167,17 @@ def make_rich_display(totalstops:int):
             border_style="red",
             title="sleepytimer",
             title_align="center",
-            expand=True)
-            )
+            expand=True
+        )
+    )
 
     for Lname in ["total", "apartments", "craigs", "homes", "redfin", "realtor", "zillow"]:
         layout[Lname].update(
-        Panel(
-            Align.center(Text("0"), vertical="middle"),
-        title=f"{Lname}",
-        title_align="center",
-        border_style="red")
+            Panel(
+                Align.center(Text("0"), vertical="middle"),
+            title=f"{Lname}",
+            title_align="center",
+            border_style="red")
         )
     return layout, totalprog, task, main_table
 
@@ -230,6 +232,7 @@ def update_border(layout:Layout, Lname:str):
         border_style="magenta")
 
     return format_p
+
 def redraw_main_table(temp_list: list) -> Table:
     """Function that redraws the main table once the log
     entries reach a certain legnth.
@@ -787,7 +790,6 @@ def crime_score(data:list, logger:logging.Logger, layout) -> list:
     # https://datagate.dc.gov/search/open/crimes?daterange=1year%20to%20date&details=true&format=csv
     
 #TODO - Add DC closest train option
-
 
 #https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
 #TODO - Look at above link
