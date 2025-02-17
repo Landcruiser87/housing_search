@@ -37,6 +37,7 @@
 import numpy as np
 import pandas as pd
 import support
+import json
 import datetime
 import geopandas as gpd
 from itertools import cycle
@@ -46,6 +47,7 @@ import matplotlib.dates as mdates
 import matplotlib.gridspec as gridspec
 from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, Arrow
+
 from matplotlib.widgets import CheckButtons, Button, RadioButtons, SpanSelector, TextBox
 
 #Neighborhoods searched
@@ -128,12 +130,15 @@ def clean_data(json_f:dict) -> pd.DataFrame:
             #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
             #  'roscoe-village', 'wicker-park']
 
-    #Load data frame
+    
+    #Load data frame:
     data = pd.DataFrame.from_dict(json_f, orient="index")
     #Convert Dates to np.datetime64s
     data["date_pulled"] = data["date_pulled"].apply(date_convert)
     #Unify neighborhoods
     data["neigh"] = data["neigh"].apply(neighborhood_convert)
+    
+
     #Set types for strings
     for col in ["source","neigh", "address"]:
         data[col] = data[col].astype(str)
@@ -151,7 +156,7 @@ def load_graph():
     
     ################## widget functions ###############################
     def checkb_site_action(val):
-        update_main(tw, amount)
+        update_main()
         #update main data and trend plot below
         #need to remove the val from that target.  
         #won't have a ref to the line...  ohhhh what about this.  
@@ -160,7 +165,7 @@ def load_graph():
         fig.canvas.draw_idle()
 
     def checkb_neigh_action(val):
-        update_main(tw, amount)
+        update_main()
         #update main data and trend plot below
         fig.canvas.draw_idle()
 
@@ -192,15 +197,16 @@ def load_graph():
                 source.append(SWITCH_SITE[label])
             elif cbox == "neigh":
                 neigh.append(" ".join(label.lower().split()))
-
+        #Create boolean masks for each filter we want, and then join them 
+        #all together at the end! :tada:
         source_mask = data["source"].isin(source)
-        site_mask = data["neigh"].isin(neigh)
+        neigh_mask = data["neigh"].isin(neigh)
         dmin_mask = data["date_pulled"] >= np.datetime64(mindate, "D")
         dmax_mask = data["date_pulled"] <= np.datetime64(maxdate, "D")
-        idx_mask = source_mask & site_mask & dmin_mask & dmax_mask
-        filtdata = data[idx_mask]
-        stuff = ""
-
+        idx_mask = source_mask & neigh_mask & dmin_mask & dmax_mask
+        filtdata = data[idx_mask].copy()
+        filt_df = filtdata[["the_geom"]]
+        
     def cycle_time():
         global tw, amount
         amount = TIME_DICT[tw]
@@ -315,11 +321,12 @@ def main():
     #Load historical json
     fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
     json_f = support.load_historical(fp)
-    global data, maps
+
+    global data, chi_maps
+    #Load official neighborhood polygons from data.cityofchicago.org
+    chi_maps = support.socrata_api(True)
     #Load / clean data into a df
     data = clean_data(json_f)
-    #Load official neighborhood polygons from data.cityofchicago.org
-    maps = support.load_neigh_polygons() 
     #Load GUI
     graph = load_graph()
 

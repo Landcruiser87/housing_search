@@ -6,6 +6,7 @@ import time
 import json
 from os.path import exists
 from os import get_terminal_size
+from shapely.geometry import shape
 import logging
 
 #Progress bar fun
@@ -24,8 +25,8 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
-
 from geopy import Nominatim, ArcGIS
+import geopandas as gpd
 from pathlib import Path
 
 console = Console(color_system="truecolor")
@@ -565,29 +566,53 @@ def send_housing_email(urls:str):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 #FUNCTION Load neighborhood boundaries
-def load_neigh_polygons(update:bool=False):
+def socrata_api(update:bool=False):
+                
+    def load_shape_objects(polygon:str):
+        # polygon = polygon.replace("'", "\"")
+        # geo_data = json.loads(polygon)
+        return shape(polygon)
+    
     if update:
         with open('./secret/chicagodata.txt') as login_file:
             login = login_file.read().splitlines()
             app_token = login[0].split(':')[1]
             
         client = Socrata("data.cityofchicago.org", app_token)
-        db_id = "y6yq-dbs2"
-        try:
-            results = client.get(
-                db_id,
-                limit=5000
-            )
-            df = pd.DataFrame.from_records(results)
-            df.to_csv("./data/chicago_map.csv", sep=",", index=False)
-            return df
+        datasets = {
+            "map"   :{"id":"y6yq-dbs2", "ds":""},
+            "health":{"id":"iqnk-2tcu", "ds":""},
+            "zip"   :{"id":"unjd-c2ca", "ds":""},
+            "pop"   :{"id":"85cm-7uqa", "ds":""},
+        }
         
-        except Exception as e:
-            raise e
-    else:
-        fp = "./data/chicago_map.csv"
-        return pd.read_csv(fp)
+        for db_name in datasets.keys():
+            try:
+                #Grab neighborhood coords
+                results = client.get(
+                    datasets[db_name]["id"],
+                    limit=5000
+                )
+                df = pd.DataFrame.from_records(results)
+                datasets[db_name]["ds"] = df.copy()
 
+                # df.to_csv(f"./data/chicago_{db_name}.csv", sep=",", index=False)
+            except Exception as e:
+                raise e
+        #Join routine would go here. 
+        for db_name in datasets.keys():
+            if "the_geom" in df.columns.tolist():
+                df["the_geom"] = df["the_geom"].apply(load_shape_objects)
+
+        [datasets[key]["ds"].head() for key, _ in datasets.items()]
+    else:
+        fp = f"./data/chicago_merged.csv"
+        return gpd.read_file(fp)
+
+    #towed vehicles = ygr5-vcbg
+    #police stations = gkur-vufi
+    #fire stations = hp65-bcxv
+    #population = 85cm-7uqa
     #?  Could aggregate live crime data for each neighborhood too for the last year.  That would be awesome!
 
 

@@ -41628,5 +41628,59 @@
       "violence_score": 25.54,
       "property_d_score": 0.14
     }
+  },
+  "1h9m2r5": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.apartments.com/1828-w-farragut-ave-chicago-il/1h9m2r5/",
+    "address": "1828 W Farragut Ave, Chicago, IL 60640",
+    "date_pulled": "02-16-2025_17-31-28",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "2192 sq ft",
+    "lat": 41.977084833333336,
+    "long": -87.67528658333333,
+    "L_dist": [
+      "Damen",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 2.94,
+      "gun_score": 5.14,
+      "murder_score": 1.32,
+      "perv_score": 1.37,
+      "theft_score": 44.79,
+      "violence_score": 23.85,
+      "property_d_score": 0.12
+    }
+  },
+  "186566663": {
+    "source": "www.redfin.com",
+    "price": 2595.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2112-W-Division-St-60622/unit-3F/home/186566663",
+    "address": "2112 W Division St Unit 3F, Chicago, IL, 60622",
+    "date_pulled": "02-17-2025_08-13-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9034131,
+    "long": -87.6803328,
+    "L_dist": [
+      "Damen",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 6.21,
+      "murder_score": 1.77,
+      "perv_score": 1.66,
+      "theft_score": 41.9,
+      "violence_score": 25.81,
+      "property_d_score": 0.14
+    }
   }
 }
