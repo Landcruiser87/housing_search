@@ -41682,5 +41682,226 @@
       "violence_score": 25.81,
       "property_d_score": 0.14
     }
+  },
+  "0v73rpvlqks3f": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5942-w-thorndale-ave-chicago-il/0v73rpvlqks3f/",
+    "address": "5942 W Thorndale Ave Chicago, IL 60646",
+    "date_pulled": "02-17-2025_17-41-43",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.98831725,
+    "long": -87.77640341884307,
+    "L_dist": [
+      "Jefferson Park",
+      1.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 5.9,
+      "murder_score": 1.31,
+      "perv_score": 1.72,
+      "theft_score": 40.43,
+      "violence_score": 25.6,
+      "property_d_score": 0.18
+    }
+  },
+  "fdgzbvzn7sw89": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1232-elgin-ave-forest-park-il/fdgzbvzn7sw89/",
+    "address": "1232 Elgin Ave Forest Park, IL 60130 Chicago",
+    "date_pulled": "02-18-2025_18-04-23",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9zf5187": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1358-n-artesian-ave-chicago-il/9zf5187/",
+    "address": "1358 N Artesian Ave, Chicago, IL 60622",
+    "date_pulled": "02-19-2025_08-30-48",
+    "bed": 31.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.90652915,
+    "long": -87.68864773435652,
+    "L_dist": [
+      "Damen",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 6.13,
+      "murder_score": 1.76,
+      "perv_score": 1.59,
+      "theft_score": 41.94,
+      "violence_score": 25.76,
+      "property_d_score": 0.14
+    }
+  },
+  "yer1sfv": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1358-n-artesian-ave-chicago-il/yer1sfv/",
+    "address": "1358 N Artesian Ave, Chicago, IL 60622",
+    "date_pulled": "02-19-2025_08-30-48",
+    "bed": 31.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.90652915,
+    "long": -87.68864773435652,
+    "L_dist": [
+      "Damen",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 6.13,
+      "murder_score": 1.76,
+      "perv_score": 1.59,
+      "theft_score": 41.94,
+      "violence_score": 25.76,
+      "property_d_score": 0.14
+    }
+  },
+  "gxx5k7w": {
+    "source": "www.apartments.com",
+    "price": 1400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1037-n-springfield-ave-chicago-il/gxx5k7w/",
+    "address": "1037 N Springfield Ave, Chicago, IL 60651",
+    "date_pulled": "02-19-2025_08-32-10",
+    "bed": 21.0,
+    "bath": null,
+    "sqft": null,
+    "lat": 41.9001277,
+    "long": -87.72351050020833,
+    "L_dist": [
+      "Pulaski",
+      1.02
+    ],
+    "crime_sc": {
+      "drug_score": 3.2,
+      "gun_score": 6.22,
+      "murder_score": 1.77,
+      "perv_score": 1.69,
+      "theft_score": 41.77,
+      "violence_score": 25.77,
+      "property_d_score": 0.15
+    }
+  },
+  "80808658": {
+    "source": "www.zillow.com",
+    "price": 2100,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4950-N-Kimball-Ave-APT-2E-Chicago-IL-60625/80808658_zpid/",
+    "address": "4950 N Kimball Ave APT 2E, Chicago, IL 60625",
+    "date_pulled": "02-19-2025_08-34-49",
+    "bed": 2,
+    "bath": 2.0,
+    "sqft": 1100,
+    "lat": 41.97187,
+    "long": -87.71383,
+    "L_dist": [
+      "Kimball",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.06,
+      "gun_score": 5.27,
+      "murder_score": 1.31,
+      "perv_score": 1.37,
+      "theft_score": 43.86,
+      "violence_score": 24.28,
+      "property_d_score": 0.12
+    }
+  },
+  "ejjzk9bmzblxr": {
+    "source": "www.homes.com",
+    "price": null,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5942-w-thorndale-ave-chicago-il-unit-1/ejjzk9bmzblxr/",
+    "address": "5942 W Thorndale Ave Unit 1 Chicago, IL 60646",
+    "date_pulled": "02-19-2025_17-32-11",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "194789336": {
+    "source": "www.redfin.com",
+    "price": 2450.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1241-N-Milwaukee-Ave-60622/unit-306/home/194789336",
+    "address": "1241 N Milwaukee Ave Unit 306, Chicago, IL, 60622",
+    "date_pulled": "02-19-2025_17-37-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "986",
+    "lat": 41.904501,
+    "long": -87.6680581,
+    "L_dist": [
+      "Division",
+      0.11
+    ],
+    "crime_sc": {
+      "drug_score": 3.16,
+      "gun_score": 6.17,
+      "murder_score": 1.77,
+      "perv_score": 1.58,
+      "theft_score": 42.15,
+      "violence_score": 25.66,
+      "property_d_score": 0.14
+    }
+  },
+  "3653503": {
+    "source": "www.zillow.com",
+    "price": 2495,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4249-N-Parkside-Ave-Chicago-IL-60634/3653503_zpid/",
+    "address": "4249 N Parkside Ave, Chicago, IL 60634",
+    "date_pulled": "02-19-2025_17-38-05",
+    "bed": 2,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.958256,
+    "long": -87.76804,
+    "L_dist": [
+      "Jefferson Park",
+      0.93
+    ],
+    "crime_sc": {
+      "drug_score": 4.42,
+      "gun_score": 6.87,
+      "murder_score": 2.07,
+      "perv_score": 1.9,
+      "theft_score": 38.17,
+      "violence_score": 27.33,
+      "property_d_score": 0.16
+    }
   }
 }

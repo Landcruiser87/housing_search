@@ -322,9 +322,9 @@ def main():
     fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
     json_f = support.load_historical(fp)
 
-    global data, chi_maps
+    global data, chi_data
     #Load official neighborhood polygons from data.cityofchicago.org
-    chi_maps = support.socrata_api(True)
+    chi_data = support.socrata_api(True)
     #Load / clean data into a df
     data = clean_data(json_f)
     #Load GUI

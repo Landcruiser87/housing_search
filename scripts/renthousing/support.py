@@ -7,6 +7,7 @@ import json
 from os.path import exists
 from os import get_terminal_size
 from shapely.geometry import shape
+import geodatasets
 import logging
 
 #Progress bar fun
@@ -585,7 +586,7 @@ def socrata_api(update:bool=False):
             "zip"   :{"id":"unjd-c2ca", "ds":""},
             "pop"   :{"id":"85cm-7uqa", "ds":""},
         }
-        
+        merged_df = None
         for db_name in datasets.keys():
             try:
                 #Grab neighborhood coords
@@ -594,26 +595,78 @@ def socrata_api(update:bool=False):
                     limit=5000
                 )
                 df = pd.DataFrame.from_records(results)
-                datasets[db_name]["ds"] = df.copy()
+                if "the_geom" in df.columns.tolist():
+                    # df["the_geom"] = df["the_geom"].astype(str)
+                    df["the_geom"] = df["the_geom"].apply(load_shape_objects)
+                    df = gpd.GeoDataFrame(df, geometry="the_geom")
 
+                datasets[db_name] = df.copy()
                 # df.to_csv(f"./data/chicago_{db_name}.csv", sep=",", index=False)
+
             except Exception as e:
                 raise e
-        #Join routine would go here. 
-        for db_name in datasets.keys():
-            if "the_geom" in df.columns.tolist():
-                df["the_geom"] = df["the_geom"].apply(load_shape_objects)
+        
+        #Manual data cleaning
+        chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
+        datasets["chicago"] = chicago
+        datasets["chicago"]["community"] = datasets["chicago"]["community"].apply(lambda x:x.lower().replace("montclare", "montclaire"))
+        datasets["health"]["community_area_name"] = datasets["health"]["community_area_name"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
+        datasets["map"]["pri_neigh"] = datasets["map"]["pri_neigh"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
+        datasets["map"]["sec_neigh"] = datasets["map"]["sec_neigh"].apply(lambda x:x.lower())
+        #quick check
+        #[f"{x:_<21} {y}" for x, y in list(zip(datasets["map"]["pri_neigh"],datasets["map"]["sec_neigh"]))]
+        datasets["health"].rename(columns={"community_area_name":"community"}, inplace=True)
+        datasets["map"].rename(columns={"pri_neigh":"community"}, inplace=True)
+        #first merge chicago and health. then with maps.  
+        #Then update their polygons only keeping the ones that have data. 
+        merged_df = pd.merge(datasets["chicago"], datasets["health"], on="community", how="outer")
+        merged_df = pd.merge(merged_df, datasets["map"], on="community", how="left")
+        #zipcode based datasets
+            #pop
+            #zip
 
-        [datasets[key]["ds"].head() for key, _ in datasets.items()]
+        #neighborhoodbased datasets
+            #health
+            #chicago
+            #map
+
+        #Convert the shp files to usable Shapely objects
+        for db_name in datasets.keys():
+            #Merge the dataset
+            if "shape_area" in datasets[db_name].columns.tolist():
+                merged_df = gpd.sjoin(merged_df, datasets[db_name], on="shape_area", how="inner")
+                # merged_df = pd.merge(merged_df, datasets[db_name], on=["the_geom"], how="outer") 
+                # merged_df.drop("the_geom_x", axis=1, inplace=True)
+            else:
+                pass
+
+        merged_df["the_geom"] = merged_df["the_geom"].apply(load_shape_objects)
+
+        return merged_df
+    
     else:
         fp = f"./data/chicago_merged.csv"
         return gpd.read_file(fp)
-
+    #IDEA
     #towed vehicles = ygr5-vcbg
     #police stations = gkur-vufi
     #fire stations = hp65-bcxv
     #population = 85cm-7uqa
     #?  Could aggregate live crime data for each neighborhood too for the last year.  That would be awesome!
+
+    #BUG
+    #NOTES
+    #Main problem, is i've got different shapes for different key values.  
+    #zipcodes
+    #population data by zip
+    #neighborhoods
+    #neighborhood health 
+    #a chicago pop dataset/shapes from geodatasets
+        #How in the f do i merge them all to be usable????
+    #I have all the polygons for zip and neighborhoods... 
+        #maybe make a switch between them?  would be kinda cool.  
+        #
+
 
 
 #FUNCTION Crime Scoring
