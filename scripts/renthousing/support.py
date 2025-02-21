@@ -581,10 +581,11 @@ def socrata_api(update:bool=False):
             
         client = Socrata("data.cityofchicago.org", app_token)
         datasets = {
-            "map"   :{"id":"y6yq-dbs2", "ds":""},
-            "health":{"id":"iqnk-2tcu", "ds":""},
-            "zip"   :{"id":"unjd-c2ca", "ds":""},
-            "pop"   :{"id":"85cm-7uqa", "ds":""},
+            "map"   :{"id":"y6yq-dbs2"},
+            "health":{"id":"iqnk-2tcu"},
+            "zip"   :{"id":"unjd-c2ca"},
+            "pop"   :{"id":"85cm-7uqa"},
+            "city"  :{"id":"qqq8-j68g"}
         }
         merged_df = None
         for db_name in datasets.keys():
@@ -613,18 +614,43 @@ def socrata_api(update:bool=False):
         datasets["health"]["community_area_name"] = datasets["health"]["community_area_name"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
         datasets["map"]["pri_neigh"] = datasets["map"]["pri_neigh"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
         datasets["map"]["sec_neigh"] = datasets["map"]["sec_neigh"].apply(lambda x:x.lower())
+        
         #quick check
         #[f"{x:_<21} {y}" for x, y in list(zip(datasets["map"]["pri_neigh"],datasets["map"]["sec_neigh"]))]
+        #rename columns and map city polygon to 
         datasets["health"].rename(columns={"community_area_name":"community"}, inplace=True)
         datasets["map"].rename(columns={"pri_neigh":"community"}, inplace=True)
+        datasets["pop"].rename(columns={"geography":"zip"}, inplace=True)
+
+        #Two boundaries in the zip database have expanded and are stored as different records.  
+        #We need to manually combine the polygons, shape_area, and shape length, while keeping the original id. #not sure if that will hose us later. 
+
+        for area in ["60707", "60643"]:
+            rows = datasets["zip"][datasets["zip"]["zip"]==area]
+            for col in ["the_geom", "shape_area", "shape_len"]:
+                if col == "the_geom":
+                    bigpoly = rows.iloc[0, 0]
+                    lilpoly = rows.iloc[1, 0]
+                    datasets["zip"].iloc[rows.index[0], 0] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="union")
+                else:
+                    datasets["zip"][datasets["zip"].index == rows[0].index][col] = rows[col] 
+
         #first merge chicago and health. then with maps.  
         #Then update their polygons only keeping the ones that have data. 
-        merged_df = pd.merge(datasets["chicago"], datasets["health"], on="community", how="outer")
-        merged_df = pd.merge(merged_df, datasets["map"], on="community", how="left")
+        merged_neigh = datasets["chicago"].merge(datasets["health"], on="community", how="outer")
+        merged_neigh = merged_neigh.merge(datasets["map"], on="community", how="left")
+        merged_zip = datasets["pop"].merge(datasets["zip"], on="zip", how="left", validate="m:m")
+        cityrows = merged_zip.loc[:, "zip"] == "Chicago"
+        merged_zip.loc[cityrows, "the_geom"] = datasets["city"].loc[:, "the_geom"]
+        merged_zip.loc[cityrows, "shape_area"] = datasets["city"].loc[:, "shape_area"]
+        merged_zip.loc[cityrows, "shape_len"] = datasets["city"].loc[:, "shape_len"]
+        merged_zip.loc[cityrows, "objectid"] = 0
         #zipcode based datasets
             #pop
             #zip
-
+                #Note. Getting 4 more rows than expected and not sure why.  
+                #Wierd, it two random zip codes??  oooooook
+                # 60707, 60643
         #neighborhoodbased datasets
             #health
             #chicago

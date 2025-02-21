@@ -41903,5 +41903,32 @@
       "violence_score": 27.33,
       "property_d_score": 0.16
     }
+  },
+  "194809135": {
+    "source": "www.redfin.com",
+    "price": 1500.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3040-N-California-Ave-60618/unit-B/home/194809135",
+    "address": "3040 N California Ave Unit B, Chicago, IL, 60618",
+    "date_pulled": "02-21-2025_07-52-53",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": "900",
+    "lat": 41.9369817,
+    "long": -87.6980016,
+    "L_dist": [
+      "Logan Square",
+      0.74
+    ],
+    "crime_sc": {
+      "drug_score": 3.3,
+      "gun_score": 5.8,
+      "murder_score": 1.74,
+      "perv_score": 1.58,
+      "theft_score": 42.26,
+      "violence_score": 25.37,
+      "property_d_score": 0.13
+    }
   }
 }
