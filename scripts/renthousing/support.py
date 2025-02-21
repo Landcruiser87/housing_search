@@ -7,6 +7,7 @@ import json
 from os.path import exists
 from os import get_terminal_size
 from shapely.geometry import shape
+import shapely
 import geodatasets
 import logging
 
@@ -570,8 +571,6 @@ def send_housing_email(urls:str):
 def socrata_api(update:bool=False):
                 
     def load_shape_objects(polygon:str):
-        # polygon = polygon.replace("'", "\"")
-        # geo_data = json.loads(polygon)
         return shape(polygon)
     
     if update:
@@ -588,6 +587,7 @@ def socrata_api(update:bool=False):
             "city"  :{"id":"qqq8-j68g"}
         }
         merged_df = None
+        chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
         for db_name in datasets.keys():
             try:
                 #Grab neighborhood coords
@@ -600,15 +600,15 @@ def socrata_api(update:bool=False):
                     # df["the_geom"] = df["the_geom"].astype(str)
                     df["the_geom"] = df["the_geom"].apply(load_shape_objects)
                     df = gpd.GeoDataFrame(df, geometry="the_geom")
-
+                    df = df.set_crs(chicago.crs)
+                    df['the_geom'] = df['the_geom'].apply(lambda geom: geom if geom.crs else shapely.ops.transform(lambda x, y, z=None: (x, y), geom))
                 datasets[db_name] = df.copy()
                 # df.to_csv(f"./data/chicago_{db_name}.csv", sep=",", index=False)
 
             except Exception as e:
                 raise e
         
-        #Manual data cleaning
-        chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
+        #Import last dataset and manual data cleaning
         datasets["chicago"] = chicago
         datasets["chicago"]["community"] = datasets["chicago"]["community"].apply(lambda x:x.lower().replace("montclare", "montclaire"))
         datasets["health"]["community_area_name"] = datasets["health"]["community_area_name"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
@@ -627,14 +627,16 @@ def socrata_api(update:bool=False):
 
         for area in ["60707", "60643"]:
             rows = datasets["zip"][datasets["zip"]["zip"]==area]
-            for col in ["the_geom", "shape_area", "shape_len"]:
+            cols = [(3, "shape_area"), (4, "shape_len"),(0, "the_geom")]
+            for idx, col in cols:
                 if col == "the_geom":
                     bigpoly = rows.iloc[0, 0]
                     lilpoly = rows.iloc[1, 0]
-                    datasets["zip"].iloc[rows.index[0], 0] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="union")
+                    datasets["zip"].iloc[rows.index[0], idx] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="intersection")
                 else:
-                    datasets["zip"][datasets["zip"].index == rows[0].index][col] = rows[col] 
-
+                    datasets["zip"].iloc[rows.index[0], idx] = rows[col].astype(float).sum()
+        
+        gdf.crs = target_c
         #first merge chicago and health. then with maps.  
         #Then update their polygons only keeping the ones that have data. 
         merged_neigh = datasets["chicago"].merge(datasets["health"], on="community", how="outer")
@@ -656,23 +658,13 @@ def socrata_api(update:bool=False):
             #chicago
             #map
 
-        #Convert the shp files to usable Shapely objects
-        for db_name in datasets.keys():
-            #Merge the dataset
-            if "shape_area" in datasets[db_name].columns.tolist():
-                merged_df = gpd.sjoin(merged_df, datasets[db_name], on="shape_area", how="inner")
-                # merged_df = pd.merge(merged_df, datasets[db_name], on=["the_geom"], how="outer") 
-                # merged_df.drop("the_geom_x", axis=1, inplace=True)
-            else:
-                pass
-
         merged_df["the_geom"] = merged_df["the_geom"].apply(load_shape_objects)
-
         return merged_df
     
     else:
         fp = f"./data/chicago_merged.csv"
         return gpd.read_file(fp)
+
     #IDEA
     #towed vehicles = ygr5-vcbg
     #police stations = gkur-vufi
@@ -692,8 +684,6 @@ def socrata_api(update:bool=False):
     #I have all the polygons for zip and neighborhoods... 
         #maybe make a switch between them?  would be kinda cool.  
         #
-
-
 
 #FUNCTION Crime Scoring
 def crime_score(data:list, logger:logging.Logger, layout) -> list:
@@ -889,11 +879,6 @@ def crime_score(data:list, logger:logging.Logger, layout) -> list:
                 listing.crime_sc = scores
                 del results
     return data
-
-#TODO - Add DC crime module
-    # https://datagate.dc.gov/search/open/crimes?daterange=1year%20to%20date&details=true&format=csv
-    
-#TODO - Add DC closest train option
 
 #https://kplauritzen.dk/2021/08/11/convert-dataclasss-np-array.html
 #TODO - Look at above link

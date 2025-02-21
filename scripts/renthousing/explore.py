@@ -323,7 +323,12 @@ def main():
     json_f = support.load_historical(fp)
 
     global data, chi_data
-    #Load official neighborhood polygons from data.cityofchicago.org
+    #Load a buuuuunch of city data from data.cityofchicago.org
+        #Polygons for neighborhood/zip.
+        #Health data for the neighborhood
+        #population data
+        #More to come
+        
     chi_data = support.socrata_api(True)
     #Load / clean data into a df
     data = clean_data(json_f)
