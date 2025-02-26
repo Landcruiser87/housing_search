@@ -132,38 +132,52 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         if PETS:
-            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
         else:
-            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/features-ca"#g1
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
         if PETS:
-            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly/features-ca"#g1
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
         else:
-            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/features-ca"#g1
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
     
     #Error Trapping
     else:
         logging.critical("Inproper input for area, moving to next site")
         return None
     
+    # BASE_HEADERS = {
+    #     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    #     'accept-language': 'en-US,en;q=0.9',
+    #     'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="122", "Chromium";v="122"',
+    #     'sec-ch-ua-mobile': '?1',
+    #     'sec-ch-ua-platform': '"Android"',
+    #     'sec-fetch-dest': 'iframe',
+    #     'sec-fetch-mode': 'navigate',
+    #     'sec-fetch-site': 'cross-site',
+    #     'sec-fetch-user': '?1',
+    #     'upgrade-insecure-requests': '1',
+    #     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    #     'referer': url,
+    #     'origin':'https://www.realtor.com',
+    # }
+
     BASE_HEADERS = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept': '*/*',
         'accept-language': 'en-US,en;q=0.9',
-        'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="122", "Chromium";v="122"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
-        'sec-fetch-dest': 'iframe',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-site': 'cross-site',
-        'sec-fetch-user': '?1',
-        'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         'referer': url,
         'origin':'https://www.realtor.com',
+        'priority': 'u=1, i',
+        'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="120", "Chromium";v="120"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'cross-site',
+        'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
     }
-
           
     response = requests.get(url, headers=BASE_HEADERS)
 

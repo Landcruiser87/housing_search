@@ -627,10 +627,10 @@ def socrata_api(update:bool=False):
         #quick check
         #[f"{x:_<21} {y}" for x, y in list(zip(datasets["map"]["pri_neigh"],datasets["map"]["sec_neigh"]))]
         #rename columns and map city polygon to 
-        datasets["health"].rename(columns={"community_area_name":"community"}, inplace=True)
-        datasets["map"].rename(columns={"pri_neigh":"community"}, inplace=True)
+        datasets["health"].rename(columns={"community_area_name":"neigh"}, inplace=True)
+        datasets["map"].rename(columns={"pri_neigh":"neigh"}, inplace=True)
         datasets["pop"].rename(columns={"geography":"zip"}, inplace=True)
-
+        chicago.rename(columns={"community":"neigh"}, inplace=True)
         #Two boundaries in the zip database have expanded and are stored as different records.  
         #We need to manually combine the polygons, shape_area, and shape length, while keeping the original id. #not sure if that will hose us later. 
 
@@ -647,8 +647,8 @@ def socrata_api(update:bool=False):
         
         #first merge chicago and health. then with maps.  
         #Then update their polygons only keeping the ones that have data. 
-        merged_neigh = datasets["chicago"].merge(datasets["health"], on="community", how="outer")
-        merged_neigh = merged_neigh.merge(datasets["map"], on="community", how="left")
+        merged_neigh = datasets["chicago"].merge(datasets["health"], on="neigh", how="outer")
+        merged_neigh = merged_neigh.merge(datasets["map"], on="neigh", how="left")
         merged_zip = datasets["zip"].merge(datasets["pop"], on="zip", how="right", validate="m:m")
         cityrows = merged_zip.loc[:, "zip"] == "Chicago"
         merged_zip.loc[cityrows, "the_geom"] = datasets["city"].loc[:, "the_geom"]
@@ -678,8 +678,8 @@ def socrata_api(update:bool=False):
     else:
         fp1 ="./data/chicago_zip.csv"
         fp2 = "./data/chicago_neigh.csv"
-        merged_zip = pd.read_file(fp1)
-        merged_neigh = pd.read_file(fp2)
+        merged_zip = pd.read_csv(fp1)
+        merged_neigh = pd.read_csv(fp2)
         return {"zip":merged_zip, "neigh":merged_neigh}
 
     #IDEA

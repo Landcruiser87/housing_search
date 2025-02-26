@@ -182,16 +182,23 @@ def load_graph():
         #Determine whether we're using neighborhoods or zips
         area = check_m_type.get_checked_labels()[0]
         if area == "Neighborhood":
-            df = chi_data["neigh"].merge(
+            df_prime = chi_data["neigh"].merge(
                 right = df,
-                left = chi_data["neigh"],
-                on = "Neighborhood",
+                on = "neigh",
                 how = "outer",
                 validate = "m:m"
             )
-        elif area == "Zip":
-            pass
+            #TODO - Could merge neigh on secondary neighborhood, but just amend the to include
+            #the missing neighborhoods in the first one!  ha!  donezo and easy and 
+            #takes care of their group assignment
         
+        elif area == "Zip":
+            df_prime = chi_data["zip"].merge(
+                right = df,
+                on = "zip",
+                how = "outer",
+                validate = "m:m"
+            )        
         if metric.startswith("Listing"):
             pass
         elif metric.startswith("Price"):
@@ -379,7 +386,7 @@ def main():
         #population data
         #More to come
         
-    chi_data = support.socrata_api()
+    chi_data = support.socrata_api(True)
     #Load / clean data into a df
     data = clean_data(json_f)
     #Load GUI
