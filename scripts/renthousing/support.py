@@ -7,7 +7,8 @@ import json
 from os.path import exists
 from os import get_terminal_size
 from shapely.geometry import shape
-import shapely
+from shapely.geometry import Polygon
+from shapely.ops import unary_union
 import geodatasets
 import logging
 
@@ -324,9 +325,9 @@ def overalprog(stops:int, msg:str):
     return my_progress_bar, task
 
 #CLASS Numpy encoder
-class NumpyArrayEncoder(json.JSONEncoder):
-    """Custom numpy JSON Encoder.  Takes in any type from an array and formats it to something that can be JSON serialized.
-    Source Code found here.  https://pynative.com/python-serialize-numpy-ndarray-into-json/
+class CustomEncoder(json.JSONEncoder):
+    """Custom numpy JSON Encoder.  Takes in any type from an array and formats it to something that can be JSON serialized. Source Code found here. https://pynative.com/python-serialize-numpy-ndarray-into-json/
+    
     Args:
         json (object): Json serialized format
     """	
@@ -337,8 +338,16 @@ class NumpyArrayEncoder(json.JSONEncoder):
             return float(obj)
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
+        elif isinstance(obj, pd.DataFrame):
+            return obj.to_json(orient='records')
+        elif isinstance(obj, dict):
+            return obj.__dict__
+        elif isinstance(obj, str):
+            return str(obj)
+        elif isinstance(obj, datetime.datetime):
+            return datetime.datetime.strftime(obj, "%m-%d-%Y_%H-%M-%S")
         else:
-            return super(NumpyArrayEncoder, self).default(obj)
+            return super(CustomEncoder, self).default(obj)
 
 #FUNCTION Convert Date
 def date_convert(time_big:datetime)->datetime:
@@ -347,7 +356,7 @@ def date_convert(time_big:datetime)->datetime:
 
 #FUNCTION Save Data
 def save_data(jsond:dict):
-    out_json = json.dumps(jsond, indent=2, cls=NumpyArrayEncoder)
+    out_json = json.dumps(jsond, indent=2, cls=CustomEncoder)
     with open("./data/rental_list.json", "w") as out_f:
         out_f.write(out_json)
 
@@ -601,7 +610,7 @@ def socrata_api(update:bool=False):
                     df["the_geom"] = df["the_geom"].apply(load_shape_objects)
                     df = gpd.GeoDataFrame(df, geometry="the_geom")
                     df = df.set_crs(chicago.crs)
-                    df['the_geom'] = df['the_geom'].apply(lambda geom: geom if geom.crs else shapely.ops.transform(lambda x, y, z=None: (x, y), geom))
+                    
                 datasets[db_name] = df.copy()
                 # df.to_csv(f"./data/chicago_{db_name}.csv", sep=",", index=False)
 
@@ -628,25 +637,26 @@ def socrata_api(update:bool=False):
         for area in ["60707", "60643"]:
             rows = datasets["zip"][datasets["zip"]["zip"]==area]
             cols = [(3, "shape_area"), (4, "shape_len"),(0, "the_geom")]
-            for idx, col in cols:
+            for col_idx, col in cols:
                 if col == "the_geom":
-                    bigpoly = rows.iloc[0, 0]
-                    lilpoly = rows.iloc[1, 0]
-                    datasets["zip"].iloc[rows.index[0], idx] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="intersection")
+                    combine = rows["the_geom"].unary_union
+                    datasets["zip"].iloc[rows.index[0], col_idx] = combine
+                    # datasets["zip"].iloc[rows.index[0], idx] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="intersection")
                 else:
-                    datasets["zip"].iloc[rows.index[0], idx] = rows[col].astype(float).sum()
+                    datasets["zip"].iloc[rows.index[0], col_idx] = rows[col].astype(float).sum()
         
-        gdf.crs = target_c
         #first merge chicago and health. then with maps.  
         #Then update their polygons only keeping the ones that have data. 
         merged_neigh = datasets["chicago"].merge(datasets["health"], on="community", how="outer")
         merged_neigh = merged_neigh.merge(datasets["map"], on="community", how="left")
-        merged_zip = datasets["pop"].merge(datasets["zip"], on="zip", how="left", validate="m:m")
+        merged_zip = datasets["zip"].merge(datasets["pop"], on="zip", how="right", validate="m:m")
         cityrows = merged_zip.loc[:, "zip"] == "Chicago"
         merged_zip.loc[cityrows, "the_geom"] = datasets["city"].loc[:, "the_geom"]
         merged_zip.loc[cityrows, "shape_area"] = datasets["city"].loc[:, "shape_area"]
         merged_zip.loc[cityrows, "shape_len"] = datasets["city"].loc[:, "shape_len"]
         merged_zip.loc[cityrows, "objectid"] = 0
+        
+        #I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
         #zipcode based datasets
             #pop
             #zip
@@ -657,13 +667,20 @@ def socrata_api(update:bool=False):
             #health
             #chicago
             #map
-
-        merged_df["the_geom"] = merged_df["the_geom"].apply(load_shape_objects)
-        return merged_df
+        savejson = {"zip":merged_zip, "neigh":merged_neigh}
+        merged_zip.to_csv(f"./data/chicago_zip.csv", sep=",", index=False)
+        merged_neigh.to_csv(f"./data/chicago_neigh.csv", sep=",", index=False)
+        # out_json = json.dumps(savejson, indent=2, cls=CustomEncoder)
+        # with open("./data/chicago_merged.json", "w") as out_f:
+        #     out_f.write(out_json)
+        return savejson
     
     else:
-        fp = f"./data/chicago_merged.csv"
-        return gpd.read_file(fp)
+        fp1 ="./data/chicago_zip.csv"
+        fp2 = "./data/chicago_neigh.csv"
+        merged_zip = pd.read_file(fp1)
+        merged_neigh = pd.read_file(fp2)
+        return {"zip":merged_zip, "neigh":merged_neigh}
 
     #IDEA
     #towed vehicles = ygr5-vcbg

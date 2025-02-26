@@ -178,7 +178,33 @@ def load_graph():
         return actives
     ################## plot functions ###############################
 
+    def data_transform(df:pd.DataFrame, metric:str):
+        #Determine whether we're using neighborhoods or zips
+        area = check_m_type.get_checked_labels()[0]
+        if area == "Neighborhood":
+            df = chi_data["neigh"].merge(
+                right = df,
+                left = chi_data["neigh"],
+                on = "Neighborhood",
+                how = "outer",
+                validate = "m:m"
+            )
+        elif area == "Zip":
+            pass
+        
+        if metric.startswith("Listing"):
+            pass
+        elif metric.startswith("Price"):
+            #I want to return prices for that neighborhood
+            pass
+        elif metric.startswith("Population"):
+            pass
+        elif metric.startswith("Health"):
+            pass
+
+
     def update_main(xmin:datetime=None, xmax:datetime=None):
+        #Get active labels in the checkboxes
         labels = get_active_labels()
         tickslabels = sp_section.get_xticklabels()
         if not span._selection_completed:
@@ -187,26 +213,30 @@ def load_graph():
         else:
             mindate = xmin
             maxdate = xmax
-            
-        #Need to filter the dataframe by results in...
-            #1. active time period in zer bar.  #todo - write that function
-            #2. check labels in both site and neighborhood.
+
         source, neigh = [], ["chicago"]
         for cbox, label in labels:
             if cbox == "site":
                 source.append(SWITCH_SITE[label])
             elif cbox == "neigh":
                 neigh.append(" ".join(label.lower().split()))
-        #Create boolean masks for each filter we want, and then join them 
-        #all together at the end! :tada:
+        #Create boolean masks for each filter in the first two listboxes
         source_mask = data["source"].isin(source)
         neigh_mask = data["neigh"].isin(neigh)
         dmin_mask = data["date_pulled"] >= np.datetime64(mindate, "D")
         dmax_mask = data["date_pulled"] <= np.datetime64(maxdate, "D")
         idx_mask = source_mask & neigh_mask & dmin_mask & dmax_mask
         filtdata = data[idx_mask].copy()
-        filt_df = filtdata[["the_geom"]]
-        
+
+        #Now filter and join wth chi_data depending on selection. 
+        #Need the ability to select different analysis blocks
+        metric_val = checkb_metric.value_selected
+        df = data_transform(filtdata, metric_val)
+        df.plot(ax=sp_map)
+        sp_map.set_title(f"{metric_val}")
+
+        # fig.canvas.draw_idle()
+
     def cycle_time():
         global tw, amount
         amount = TIME_DICT[tw]
@@ -225,6 +255,13 @@ def load_graph():
         #     raise ValueError(f'Please select a larger range than {len(region_x)}')
         update_main(xmind, xmaxd)
         #Have this update the choloropeth map and the trendline. 
+    
+    def check_m_type_action():
+        #eventually will switch underlying dataset from zips to neighborhoods
+        pass
+
+    def checkb_metric_action():
+        pass
 
     ################## Loading plot objects ###############################
     global sp_map, sp_trend, sp_section, gs, tw
@@ -232,6 +269,16 @@ def load_graph():
     gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[4, 2, 1], width_ratios=[5, 1])
     plt.subplots_adjust(hspace=0.2)
     sp_map = fig.add_subplot(gs[0, 0], label="mainplot")
+    rax = sp_map.inset_axes([0.0, 0.0, 0.15, 0.17])
+    boxcolors = ["blue", "green"]
+    check_m_type = CheckButtons(
+        ax = rax,
+        labels = ["Neighborhood", "Zip"],
+        actives = [True, False], 
+        label_props = {"color":boxcolors},
+        frame_props = {"edgecolor":boxcolors},
+        check_props = {"facecolor":boxcolors}
+    )
     sp_trend = fig.add_subplot(gs[1, 0], label="trendline")
     sp_section = fig.add_subplot(gs[2, 0], label="dateselector")
     #Set initial axis values for a date
@@ -287,11 +334,12 @@ def load_graph():
             "fontweight":["bold"] * len(AREAS)
         }
     )
-    radio_metric = RadioButtons(
+    checkb_metric = RadioButtons(
         ax = ax_radio_metric, 
-        labels = ("Listing Frequency", "Price", "Price Regression", "Agg Crime Score", "Avg Sqft"),
+        labels = ("Listing Frequency", "Price", "Population", "Health", "Crime"),
         active = 0
     )
+    
     #IDEA: It would be cool to see amount of reposts too across different sites and their own
     ################## Loading plots ###############################
     global tw, amount
@@ -300,19 +348,21 @@ def load_graph():
     update_main()
     # update_trend(tw, amount)
 
-    #Set actions for GUI items. 
-    span.on_changed(onselect_func)            #TODO write update_maincharts  
-    cycle_time_button.on_clicked(cycle_time)        #TODO write cycle_back
+    #Set actions for GUI items.     
+    span.on_changed(onselect_func)
+    cycle_time_button.on_clicked(cycle_time)        
+
+    #Main checkbutton actions
+    check_m_type.on_clicked(check_m_type_action)
     checkb_site.on_clicked(checkb_site_action)      
     checkb_neigh.on_clicked(checkb_neigh_action)    
-    # radio_metric.on_clicked(radio_metric_action)  #TODO write radio_metric_action
+    checkb_metric.on_clicked(checkb_metric_action)  
     
     #Make a custom legend. 
     # legend_elements = [
     #     Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
     #     ]
     # sp_trend.legend(handles=legend_elements, loc='upper left')
-
 
     #show the plot!
     plt.show()
@@ -329,7 +379,7 @@ def main():
         #population data
         #More to come
         
-    chi_data = support.socrata_api(True)
+    chi_data = support.socrata_api()
     #Load / clean data into a df
     data = clean_data(json_f)
     #Load GUI
