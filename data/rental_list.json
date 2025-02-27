@@ -43117,31 +43117,31 @@
     "L_dist": "",
     "crime_sc": {}
   },
-  "p877jds": {
+  "9yz2gk5": {
     "source": "www.apartments.com",
-    "price": 2100.0,
-    "neigh": "north-center",
+    "price": 2200.0,
+    "neigh": "ravenswood",
     "dogs": true,
-    "link": "https://www.apartments.com/3630-n-hermitage-ave-chicago-il/p877jds/",
-    "address": "3630 N Hermitage Ave, Chicago, IL 60613",
-    "date_pulled": "02-27-2025_10-17-36",
+    "link": "https://www.apartments.com/5235-n-winchester-ave-chicago-il/9yz2gk5/",
+    "address": "5235 N Winchester Ave, Chicago, IL 60640",
+    "date_pulled": "02-27-2025_12-18-46",
     "bed": 2.0,
     "bath": 1.0,
-    "sqft": "800 sq ft",
-    "lat": 41.94788525,
-    "long": -87.67272177309603,
+    "sqft": 1100.0,
+    "lat": 41.97723905,
+    "long": -87.67774692101938,
     "L_dist": [
-      "Addison",
-      0.12
+      "Damen",
+      0.76
     ],
     "crime_sc": {
-      "drug_score": 3.51,
-      "gun_score": 5.68,
-      "murder_score": 1.61,
-      "perv_score": 1.54,
-      "theft_score": 42.7,
-      "violence_score": 25.02,
-      "property_d_score": 0.13
+      "drug_score": 2.97,
+      "gun_score": 5.13,
+      "murder_score": 1.28,
+      "perv_score": 1.38,
+      "theft_score": 44.75,
+      "violence_score": 23.84,
+      "property_d_score": 0.12
     }
   },
   "7700346811": {
@@ -43151,7 +43151,7 @@
     "dogs": true,
     "link": "https://www.realtor.com/rentals/details/5034-N-Washtenaw-Ave_Chicago_IL_60625_M77003-46811",
     "address": "5034 N Washtenaw Ave Chicago, IL 60625",
-    "date_pulled": "02-27-2025_10-18-40",
+    "date_pulled": "02-27-2025_12-19-39",
     "bed": 2.0,
     "bath": 1.0,
     "sqft": 800.0,
@@ -43178,7 +43178,7 @@
     "dogs": true,
     "link": "https://www.realtor.com/rentals/details/4623-N-Hamilton-Ave-Apt-1_Chicago_IL_60625_M89968-84650",
     "address": "4623 N Hamilton Ave Apt 1 Chicago, IL 60625",
-    "date_pulled": "02-27-2025_10-18-40",
+    "date_pulled": "02-27-2025_12-19-39",
     "bed": 2.0,
     "bath": 2.0,
     "sqft": 1200.0,
@@ -43187,44 +43187,152 @@
     "L_dist": "",
     "crime_sc": {}
   },
-  "9yz2gk5": {
+  "591r3sq": {
     "source": "www.apartments.com",
-    "price": 2200.0,
-    "neigh": "ravenswood",
+    "price": 2400.0,
+    "neigh": "mayfair",
     "dogs": true,
-    "link": "https://www.apartments.com/5235-n-winchester-ave-chicago-il/9yz2gk5/",
-    "address": "5235 N Winchester Ave, Chicago, IL 60640",
-    "date_pulled": "02-27-2025_10-19-27",
+    "link": "https://www.apartments.com/1720-s-michigan-ave-chicago-il/591r3sq/",
+    "address": "1720 S Michigan Ave, Chicago, IL 60616",
+    "date_pulled": "02-27-2025_12-20-54",
     "bed": 2.0,
     "bath": 1.0,
-    "sqft": "1100 sq ft",
-    "lat": 41.97723905,
-    "long": -87.67774692101938,
+    "sqft": 953.0,
+    "lat": 41.8586137,
+    "long": -87.62442822457231,
     "L_dist": [
-      "Damen",
-      0.76
+      "Cermak-McCormick Place",
+      0.39
     ],
     "crime_sc": {
-      "drug_score": 2.97,
-      "gun_score": 5.13,
-      "murder_score": 1.28,
-      "perv_score": 1.38,
-      "theft_score": 44.75,
-      "violence_score": 23.84,
-      "property_d_score": 0.12
+      "drug_score": 2.76,
+      "gun_score": 7.15,
+      "murder_score": 2.19,
+      "perv_score": 1.33,
+      "theft_score": 40.89,
+      "violence_score": 26.54,
+      "property_d_score": 0.16
+    }
+  },
+  "q6wwztx": {
+    "source": "www.apartments.com",
+    "price": 1650.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3731-n-kimball-ave-chicago-il/q6wwztx/",
+    "address": "3731 N Kimball Ave, Chicago, IL 60618",
+    "date_pulled": "02-27-2025_12-20-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.94945885,
+    "long": -87.71252827023305,
+    "L_dist": [
+      "Addison",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.39,
+      "gun_score": 5.6,
+      "murder_score": 1.53,
+      "perv_score": 1.57,
+      "theft_score": 42.52,
+      "violence_score": 25.08,
+      "property_d_score": 0.13
+    }
+  },
+  "zk4yp7z": {
+    "source": "www.apartments.com",
+    "price": 2145.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2146-w-iowa-st-chicago-il/zk4yp7z/",
+    "address": "2146 W Iowa St, Chicago, IL 60622",
+    "date_pulled": "02-27-2025_12-20-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.89790025,
+    "long": -87.68140252692588,
+    "L_dist": [
+      "Damen",
+      0.84
+    ],
+    "crime_sc": {
+      "drug_score": 3.14,
+      "gun_score": 6.29,
+      "murder_score": 1.8,
+      "perv_score": 1.7,
+      "theft_score": 41.82,
+      "violence_score": 25.81,
+      "property_d_score": 0.14
+    }
+  },
+  "6zvyy5r": {
+    "source": "www.apartments.com",
+    "price": 2095.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1957-w-23rd-st-chicago-il/6zvyy5r/",
+    "address": "1957 W 23rd St, Chicago, IL 60608",
+    "date_pulled": "02-27-2025_12-20-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.850288504604045,
+    "long": -87.67515119152885,
+    "L_dist": [
+      "Damen",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 3.14,
+      "gun_score": 7.65,
+      "murder_score": 2.38,
+      "perv_score": 1.63,
+      "theft_score": 39.04,
+      "violence_score": 27.57,
+      "property_d_score": 0.19
+    }
+  },
+  "218v689": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4633-n-kenmore-ave-chicago-il/218v689/",
+    "address": "4633 N Kenmore Ave, Chicago, IL 60640",
+    "date_pulled": "02-27-2025_12-20-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.966479899999996,
+    "long": -87.65586110013496,
+    "L_dist": [
+      "Wilson",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.46,
+      "gun_score": 5.12,
+      "murder_score": 1.33,
+      "perv_score": 1.51,
+      "theft_score": 44.82,
+      "violence_score": 23.52,
+      "property_d_score": 0.11
     }
   },
   "q04wsbz": {
     "source": "www.apartments.com",
     "price": 1900.0,
-    "neigh": "mayfair",
+    "neigh": "irving-park",
     "dogs": true,
     "link": "https://www.apartments.com/3900-n-christiana-ave-chicago-il/q04wsbz/",
     "address": "3900 N Christiana Ave, Chicago, IL 60618",
-    "date_pulled": "02-27-2025_10-20-08",
+    "date_pulled": "02-27-2025_12-22-50",
     "bed": 2.0,
     "bath": 2.0,
-    "sqft": "1200 sq ft",
+    "sqft": 1200.0,
     "lat": 41.95218105,
     "long": -87.71187349002322,
     "L_dist": [
@@ -43241,44 +43349,33 @@
       "property_d_score": 0.13
     }
   },
-  "ktg3lz8": {
-    "source": "www.apartments.com",
-    "price": 2000.0,
-    "neigh": "mayfair",
+  "9416244296": {
+    "source": "www.realtor.com",
+    "price": 1750.0,
+    "neigh": "irving-park",
     "dogs": true,
-    "link": "https://www.apartments.com/3231-w-hirsch-st-chicago-il/ktg3lz8/",
-    "address": "3231 W Hirsch St, Chicago, IL 60651",
-    "date_pulled": "02-27-2025_10-20-08",
+    "link": "https://www.realtor.com/rentals/details/3823-N-Whipple-St-Apt-1_Chicago_IL_60618_M94162-44296",
+    "address": "3823 N Whipple St Apt 1 Chicago, IL 60618",
+    "date_pulled": "02-27-2025_12-23-11",
     "bed": 2.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": 41.906217850000004,
-    "long": -87.70817692246874,
-    "L_dist": [
-      "California",
-      1.23
-    ],
-    "crime_sc": {
-      "drug_score": 3.17,
-      "gun_score": 6.07,
-      "murder_score": 1.73,
-      "perv_score": 1.58,
-      "theft_score": 41.95,
-      "violence_score": 25.71,
-      "property_d_score": 0.14
-    }
+    "bath": 1.0,
+    "sqft": 1050.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   },
   "9vc2bb6": {
     "source": "www.apartments.com",
     "price": 1950.0,
-    "neigh": "mayfair",
+    "neigh": "roscoe-village",
     "dogs": true,
     "link": "https://www.apartments.com/1749-w-barry-ave-chicago-il/9vc2bb6/",
     "address": "1749 W Barry Ave, Chicago, IL 60657",
-    "date_pulled": "02-27-2025_10-20-08",
+    "date_pulled": "02-27-2025_12-24-27",
     "bed": 2.0,
     "bath": 1.0,
-    "sqft": 800,
+    "sqft": 800.0,
     "lat": 41.93762435,
     "long": -87.67290987481374,
     "L_dist": [
@@ -43295,70 +43392,97 @@
       "property_d_score": 0.13
     }
   },
-  "m2g53xh": {
+  "p877jds": {
     "source": "www.apartments.com",
-    "price": 1950.0,
-    "neigh": "mayfair",
+    "price": 2100.0,
+    "neigh": "north-center",
     "dogs": true,
-    "link": "https://www.apartments.com/1446-w-thorndale-ave-chicago-il/m2g53xh/",
-    "address": "1446 W Thorndale Ave, Chicago, IL 60660",
-    "date_pulled": "02-27-2025_10-20-08",
-    "bed": 1,
-    "bath": 1,
-    "sqft": null,
-    "lat": 41.99003430541313,
-    "long": -87.66700874277386,
+    "link": "https://www.apartments.com/3630-n-hermitage-ave-chicago-il/p877jds/",
+    "address": "3630 N Hermitage Ave, Chicago, IL 60613",
+    "date_pulled": "02-27-2025_12-25-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.94788525,
+    "long": -87.67272177309603,
     "L_dist": [
-      "Thorndale",
-      0.41
+      "Addison",
+      0.12
     ],
     "crime_sc": {
-      "drug_score": 2.47,
-      "gun_score": 4.79,
-      "murder_score": 0.89,
-      "perv_score": 1.39,
-      "theft_score": 46.14,
-      "violence_score": 23.19,
-      "property_d_score": 0.12
+      "drug_score": 3.51,
+      "gun_score": 5.68,
+      "murder_score": 1.61,
+      "perv_score": 1.54,
+      "theft_score": 42.7,
+      "violence_score": 25.02,
+      "property_d_score": 0.13
     }
   },
-  "pfz7qwv": {
-    "source": "www.apartments.com",
-    "price": 2200.0,
-    "neigh": "mayfair",
+  "194876546": {
+    "source": "www.redfin.com",
+    "price": 2050.0,
+    "neigh": "portage-park",
     "dogs": true,
-    "link": "https://www.apartments.com/7450-n-artesian-ave-chicago-il/pfz7qwv/",
-    "address": "7450 N Artesian Ave, Chicago, IL 60645",
-    "date_pulled": "02-27-2025_10-20-08",
+    "link": "https://www.redfin.com/IL/Chicago/4060-N-Milwaukee-Ave-60641/unit-2/home/194876546",
+    "address": "4060 N Milwaukee Ave Unit 2, Chicago, IL, 60641",
+    "date_pulled": "02-27-2025_12-25-49",
     "bed": 3.0,
-    "bath": 1.0,
-    "sqft": 1533,
-    "lat": 42.01737905,
-    "long": -87.69166378737748,
+    "bath": 1.5,
+    "sqft": 1034.0,
+    "lat": 41.954389,
+    "long": -87.7492674,
     "L_dist": [
-      "Howard",
-      0.97
+      "Montrose",
+      0.57
     ],
     "crime_sc": {
-      "drug_score": 0.91,
-      "gun_score": 3.71,
-      "murder_score": 0.76,
-      "perv_score": 1.61,
-      "theft_score": 46.42,
-      "violence_score": 23.67,
-      "property_d_score": 0.11
+      "drug_score": 3.79,
+      "gun_score": 6.16,
+      "murder_score": 1.8,
+      "perv_score": 1.77,
+      "theft_score": 40.19,
+      "violence_score": 26.59,
+      "property_d_score": 0.15
+    }
+  },
+  "194876545": {
+    "source": "www.redfin.com",
+    "price": 2525.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3705-N-Lockwood-Ave-60641/unit-2S/home/194876545",
+    "address": "3705 N Lockwood Ave Unit 2S, Chicago, IL, 60641",
+    "date_pulled": "02-27-2025_12-25-49",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9480729,
+    "long": -87.7591972,
+    "L_dist": [
+      "Montrose",
+      1.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.21,
+      "gun_score": 6.66,
+      "murder_score": 2.0,
+      "perv_score": 1.8,
+      "theft_score": 38.76,
+      "violence_score": 27.19,
+      "property_d_score": 0.17
     }
   },
   "kyz3qzc": {
     "source": "www.apartments.com",
     "price": 2525.0,
-    "neigh": "mayfair",
+    "neigh": "portage-park",
     "dogs": true,
     "link": "https://www.apartments.com/3705-n-lockwood-ave-chicago-il/kyz3qzc/",
     "address": "3705 N Lockwood Ave, Chicago, IL 60641",
-    "date_pulled": "02-27-2025_10-20-08",
-    "bed": 3,
-    "bath": 1,
+    "date_pulled": "02-27-2025_12-26-26",
+    "bed": 3.0,
+    "bath": 1.0,
     "sqft": null,
     "lat": 41.9480541,
     "long": -87.75924475253623,
@@ -43376,92 +43500,6 @@
       "property_d_score": 0.17
     }
   },
-  "q6wwztx": {
-    "source": "www.apartments.com",
-    "price": 1650.0,
-    "neigh": "irving-park",
-    "dogs": true,
-    "link": "https://www.apartments.com/3731-n-kimball-ave-chicago-il/q6wwztx/",
-    "address": "3731 N Kimball Ave, Chicago, IL 60618",
-    "date_pulled": "02-27-2025_10-25-10",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": 950,
-    "lat": 41.94945885,
-    "long": -87.71252827023305,
-    "L_dist": [
-      "Addison",
-      0.36
-    ],
-    "crime_sc": {
-      "drug_score": 3.39,
-      "gun_score": 5.6,
-      "murder_score": 1.53,
-      "perv_score": 1.57,
-      "theft_score": 42.52,
-      "violence_score": 25.08,
-      "property_d_score": 0.13
-    }
-  },
-  "9416244296": {
-    "source": "www.realtor.com",
-    "price": 1750.0,
-    "neigh": "irving-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3823-N-Whipple-St-Apt-1_Chicago_IL_60618_M94162-44296",
-    "address": "3823 N Whipple St Apt 1 Chicago, IL 60618",
-    "date_pulled": "02-27-2025_10-25-44",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": 1050.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "194876502": {
-    "source": "www.redfin.com",
-    "price": 2200.0,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.redfin.com/IL/Chicago/5235-N-Winchester-Ave-60640/unit-3/home/194876502",
-    "address": "5235 N Winchester Ave Unit 3, Chicago, IL, 60640",
-    "date_pulled": "02-27-2025_10-26-18",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": 1100,
-    "lat": 41.9772233,
-    "long": -87.6776923,
-    "L_dist": [
-      "Damen",
-      0.76
-    ],
-    "crime_sc": {
-      "drug_score": 2.97,
-      "gun_score": 5.13,
-      "murder_score": 1.28,
-      "perv_score": 1.38,
-      "theft_score": 44.75,
-      "violence_score": 23.84,
-      "property_d_score": 0.12
-    }
-  },
-  "9185780839": {
-    "source": "www.realtor.com",
-    "price": 1575.0,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4415-N-Drake-Ave-Apt-2F_Chicago_IL_60625_M91857-80839",
-    "address": "4415 N Drake Ave Apt 2F Chicago, IL 60625",
-    "date_pulled": "02-27-2025_10-28-00",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": 1175.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
   "z05msdz": {
     "source": "www.apartments.com",
     "price": 1550.0,
@@ -43469,10 +43507,10 @@
     "dogs": true,
     "link": "https://www.apartments.com/4054-n-milwaukee-ave-chicago-il/z05msdz/",
     "address": "4054 N Milwaukee Ave, Chicago, IL 60641",
-    "date_pulled": "02-27-2025_10-28-30",
+    "date_pulled": "02-27-2025_12-26-26",
     "bed": 2.0,
     "bath": 1.0,
-    "sqft": 585,
+    "sqft": 585.0,
     "lat": 41.95427885882363,
     "long": -87.74892130702105,
     "L_dist": [
@@ -43487,6 +43525,92 @@
       "theft_score": 40.26,
       "violence_score": 26.56,
       "property_d_score": 0.15
+    }
+  },
+  "d10x0zj": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4060-n-milwaukee-ave-chicago-il/d10x0zj/",
+    "address": "4060 N Milwaukee Ave, Chicago, IL 60641",
+    "date_pulled": "02-27-2025_12-26-26",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1034.0,
+    "lat": 41.95437165301764,
+    "long": -87.7490799551592,
+    "L_dist": [
+      "Montrose",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 3.78,
+      "gun_score": 6.15,
+      "murder_score": 1.8,
+      "perv_score": 1.76,
+      "theft_score": 40.23,
+      "violence_score": 26.58,
+      "property_d_score": 0.15
+    }
+  },
+  "9268786416": {
+    "source": "www.realtor.com",
+    "price": 1850.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2735-W-Berwyn-Ave-Apt-3_Chicago_IL_60625_M92687-86416",
+    "address": "2735 W Berwyn Ave Apt 3 Chicago, IL 60625",
+    "date_pulled": "02-27-2025_12-27-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 975.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9185780839": {
+    "source": "www.realtor.com",
+    "price": 1575.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4415-N-Drake-Ave-Apt-2F_Chicago_IL_60625_M91857-80839",
+    "address": "4415 N Drake Ave Apt 2F Chicago, IL 60625",
+    "date_pulled": "02-27-2025_12-29-29",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1175.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "194876502": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5235-N-Winchester-Ave-60640/unit-3/home/194876502",
+    "address": "5235 N Winchester Ave Unit 3, Chicago, IL, 60640",
+    "date_pulled": "02-27-2025_12-30-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9772233,
+    "long": -87.6776923,
+    "L_dist": [
+      "Damen",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 2.97,
+      "gun_score": 5.13,
+      "murder_score": 1.28,
+      "perv_score": 1.38,
+      "theft_score": 44.75,
+      "violence_score": 23.84,
+      "property_d_score": 0.12
     }
   }
 }

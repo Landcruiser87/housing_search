@@ -91,7 +91,7 @@ SEARCH_PARAMS = (
     MAXRENT,
     DOGS
 )
-
+#Dictionary to keep track of which sites return data in a singular run
 LOST_N_FOUND = {
     "apartments":False,
     "craigs"    :False,
