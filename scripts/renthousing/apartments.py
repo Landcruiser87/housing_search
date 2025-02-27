@@ -66,13 +66,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                         sqft = float("".join(x for x in sqft if x.isnumeric()))
                 else:
                     #what edge case were you trying to fix here....  ehhh.  weird code dude
-                    if ("beds" in extrafun) & ("baths" in extrafun):
+                    if ("bed" in extrafun) & ("bath" in extrafun):
                         beds, baths = extrafun.split(",")
                         #Because some toolbag didn't put the baths in 
                         #their listing.  smh.  
-                    elif "beds" in extrafun:
+                    elif "bed" in extrafun:
                         beds = float(extrafun)
-                    elif "baths" in extrafun:
+                    elif "bath" in extrafun:
                         baths = float(extrafun)
 
                 if beds:
