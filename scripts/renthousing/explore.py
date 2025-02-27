@@ -1,39 +1,4 @@
-#For looking at housing data over the past few years. 
-#Could chart a few different variables, 
 
-#Main things i want.  
-
-#Slider on the bottom to navigate time. 
-    #Gonna be a bitch with datetimes. 
-    #Time regrouping.  Need resolutions at the day, week, month level for changing trend
-
-#Dual charts residing above. 
-#On the left.
-    #Main map chart.  (plotly would be better here but lets be OG MPL)
-    #For the time period selected, show possible rent dots 
-    #Color by count frequency of availble rentals
-    #? Ability to click neighborhood and have the 
-        #corresponding right graph filter to that data?  ooo smooth! 
-
-#On the right - Option button to the right to flip between the following
-    #1. Show price trend.  Tie that to the brokebarh as well for time selection
-        #Would be for all neighborhoods indvidually and averaged over the search area.
-
-    #2. Neighborhood listing frequencies.  
-        # Break out the top 10 neighborhoods in a bar chart maybe?
-        #Color by safety ratings?
-            #Data won't be as complete, but would be interesting to see. 
-    #3. Sites that repeat listings?  meh
-
-#On the bottom
-#Brokebarh chart with a time span selector.  
-    #That would be sweet. and would take care of my time regrouping needs all in one object. 
-        #NOTE - I might need neighborhood polygons..  Which the city has stored I think on their API...
-
-# import matplotlib
-# matplotlib.use('TkAgg')
-# import scipy.signal as ss
-# import stumpy 
 import numpy as np
 import pandas as pd
 import support
@@ -380,13 +345,8 @@ def main():
     json_f = support.load_historical(fp)
 
     global data, chi_data
-    #Load a buuuuunch of city data from data.cityofchicago.org
-        #Polygons for neighborhood/zip.
-        #Health data for the neighborhood
-        #population data
-        #More to come
-        
-    chi_data = support.socrata_api(True)
+    #Load city data from data.cityofchicago.org 
+    chi_data = support.socrata_api() #Pass in True to update city data
     #Load / clean data into a df
     data = clean_data(json_f)
     #Load GUI
@@ -394,3 +354,38 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#NOTES
+#For looking at housing data over the past few years. 
+#Could chart a few different variables, 
+
+#Main things i want.  
+
+#Slider on the bottom to navigate time. 
+    #Gonna be a bitch with datetimes. 
+    #Time regrouping.  Need resolutions at the day, week, month level for changing trend
+
+#Dual charts residing above. 
+#On the left.
+    #Main map chart.  (plotly would be better here but lets be OG MPL)
+    #For the time period selected, show possible rent dots 
+    #Color by count frequency of availble rentals
+    #? Ability to click neighborhood and have the 
+        #corresponding right graph filter to that data?  ooo smooth! 
+
+#On the right - Option button to the right to flip between the following
+    #1. Show price trend.  Tie that to the brokebarh as well for time selection
+        #Would be for all neighborhoods indvidually and averaged over the search area.
+
+    #2. Neighborhood listing frequencies.  
+        # Break out the top 10 neighborhoods in a bar chart maybe?
+        #Color by safety ratings?
+            #Data won't be as complete, but would be interesting to see. 
+    #3. Sites that repeat listings?  meh
+
+#On the bottom
+#Brokebarh chart with a time span selector.  
+    #That would be sweet. and would take care of my time regrouping needs all in one object. 
+        #NOTE - I might need neighborhood polygons..  Which the city has stored I think on their API...
+

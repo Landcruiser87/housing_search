@@ -41836,7 +41836,7 @@
   },
   "ejjzk9bmzblxr": {
     "source": "www.homes.com",
-    "price": null,
+    "price": 2000,
     "neigh": "budlong-woods",
     "dogs": true,
     "link": "https://www.homes.com/property/5942-w-thorndale-ave-chicago-il-unit-1/ejjzk9bmzblxr/",
@@ -42980,7 +42980,7 @@
   },
   "7958977831": {
     "source": "www.realtor.com",
-    "price": null,
+    "price": 1500,
     "neigh": "north-center",
     "dogs": true,
     "link": "https://www.realtor.com/rentals/details/3919-N-Oakley-Ave-G_Chicago_IL_60618_M79589-77831",
@@ -42996,7 +42996,7 @@
   },
   "7763460337": {
     "source": "www.realtor.com",
-    "price": null,
+    "price": 1900,
     "neigh": "north-center",
     "dogs": true,
     "link": "https://www.realtor.com/rentals/details/4139-N-Western-Ave-Apt-2_Chicago_IL_60618_M77634-60337",
@@ -43012,7 +43012,7 @@
   },
   "9363331977": {
     "source": "www.realtor.com",
-    "price": null,
+    "price": 1900,
     "neigh": "lincoln-square",
     "dogs": true,
     "link": "https://www.realtor.com/rentals/details/5316-N-Bowmanville-Ave-Fl-2_Chicago_IL_60625_M93633-31977",

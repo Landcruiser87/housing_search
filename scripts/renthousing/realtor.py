@@ -38,13 +38,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 break
         
         #grab the price
-        for search in card.find_all("div", class_="price-wrapper"):
-            for subsearch in search.find_all("div"):
-                if subsearch.get("data-testid") == "card-price":
-                    price = subsearch.text
-                    if any(x.isnumeric() for x in price):
-                        price = money_launderer(subsearch.text)
-                    break
+        for search in card.find_all("div"):
+            if search.get("data-testid") == "card-price":
+                price = search.text
+                if any(x.isnumeric() for x in price):
+                    price = money_launderer(search.text)
+                break
         
         #grab the beds, baths, pets
         for search in card.find_all("ul"):
