@@ -21,7 +21,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
     listings = []
     listingid = price = beds = sqft = baths = pets = url = addy = current_time = extrafun = None
     #Set the outer loop over each card returned. 
-    for card in result.find_all("article"):
+    for card in result.find_all("article", class_=lambda x: x and x.startswith("placard")):
         # Time of pull
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
@@ -40,15 +40,17 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             continue
 
         #grab the property info
-        for search in card.find_all("div", class_="property-info"):
+        for search in card.find_all("div", class_="propertyInfo"):
             #Grab price
-            for subsearch in search.find_all("div", class_="price-range"):
+            for subsearch in search.find_all("div", class_="priceRange left"):
                 price = subsearch.text
                 if any(x.isnumeric() for x in price):
                     price = money_launderer(price.split(" ")[0])
-                    
+            #Grab address
+            for subsearch in search.find_all("div", class_="propertyAddress"):
+                addy = subsearch.text
             #Grab bed bath
-            for subsearch in card.find_all("div", class_="bed-range"):
+            for subsearch in card.find_all("div", class_="bedRange"):
                 extrafun = subsearch.text.lower()
                 if "ft" in extrafun:#lol
                     #quick comma count
@@ -78,12 +80,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                     if any(x.isnumeric() for x in baths):
                         baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
 
-        #grab address
-        #BUG - might want to update the below.  Janky coding
-        for search in card.find_all("a", class_="property-link"):
-            if search.get("title"):
-                addy = search.get("title")
-            
         pets = PETS
 
         listing = Propertyinfo(
