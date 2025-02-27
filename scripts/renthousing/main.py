@@ -325,7 +325,7 @@ def main():
         if newlistings:
             support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
-            support.send_housing_email(links_html)
+            # support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
             
         else:
