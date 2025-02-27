@@ -135,6 +135,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
             text = search.text.lower()
             if "ft" in text:
                 sqft = search.text.strip("\n").strip()
+                sqft = float("".join(x for x in sqft if x.isnumeric()))
                 #bug, maybe remove ft
             elif "br" in text:
                 beds, baths = search.text.strip("\n").strip().split("/")

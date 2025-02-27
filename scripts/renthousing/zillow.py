@@ -33,19 +33,19 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
         if "detailUrl" in active_keys:
             url = res["detailUrl"]
         if "unformattedPrice" in active_keys:
-            price = res["unformattedPrice"]
+            price = float(res["unformattedPrice"])
         if "beds" in active_keys:
-            beds = res["beds"]
+            beds = float(res["beds"])
         if "baths" in active_keys:
-            baths = res["baths"]
+            baths = float(res["baths"])
         if "address" in active_keys:
             addy = res["address"]
         if "area" in active_keys:
-            sqft = res["area"]
+            sqft = float(res["area"])
         if res["latLong"].get("latitude"):
-            lat = res["latLong"]["latitude"]
+            lat = float(res["latLong"]["latitude"])
         if res["latLong"].get("longitude"):
-            long = res["latLong"]["longitude"]
+            long = float(res["latLong"]["longitude"])
         # daysonZ = res["variableData"]["text"]
         pets = True
         

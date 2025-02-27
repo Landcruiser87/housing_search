@@ -58,20 +58,21 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                     if count < 3:
                         beds, baths, sqft = extrafun.split(",")
                         sqft = sqft.strip()
+                        sqft = float("".join(x for x in sqft if x.isnumeric()))
                     else:
                         #For if they put a comma in the square footage
                         beds, baths, sqft, extra = extrafun.split(",")
                         sqft = "".join([sqft, extra]).strip()
-                    
+                        sqft = float("".join(x for x in sqft if x.isnumeric()))
                 else:
                     if ("beds" in extrafun) & ("baths" in extrafun):
                         beds, baths = extrafun.split(",")
                         #Because some toolbag didn't put the baths in 
                         #their listing.  smh.  
                     elif "beds" in extrafun:
-                        beds = extrafun
+                        beds = float(extrafun)
                     elif "baths" in extrafun:
-                        baths = extrafun
+                        baths = float(extrafun)
 
                 if beds:
                     if any(x.isnumeric() for x in beds):
