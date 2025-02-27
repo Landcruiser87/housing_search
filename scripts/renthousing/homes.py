@@ -35,12 +35,16 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             logger.warning(f"missing id for card on {source} in {neigh}")
             continue
 
-        details = card.find("div", class_="for-rent-content-container")
+        details = card.find("div", class_=lambda x: x and x.startswith("for-rent-content-container"))
         if details:
             #grab address
             res = card.find("address")
             if res:
-                addy = " ".join(card.find("address").text.strip("\n").split())
+                addy = " ".join(res.text.strip("\n").split())
+            #grab price
+            res = card.find("p", class_="current-price")
+            if res:
+                price = float("".join(x for x in res.text if x.isnumeric()))
             #grab url
             res = card.find("a")
             if res:
@@ -50,17 +54,15 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             for subsearch in search.find_all("li"):
                 testval = subsearch.text
                 if testval:
-                    #Grab price
-                    if "$" in testval:
-                        price = float("".join(x for x in testval if x.isnumeric()))
                     #Grab Beds
-                    elif "beds" in testval.lower():
+                    if "beds" in testval.lower():
                         beds = float("".join(x for x in testval if x.isnumeric()))
                     #Grab baths
-                    elif "baths" in testval.lower():
+                    elif "bath" in testval.lower():
                         baths = float("".join(x for x in testval if x.isnumeric() or x == "."))
-                    #! SQFT is available on the individual links, but not worth
-                    #! the extra call to grab it
+                    
+                    elif ("sq" in testval.lower()) | ("ft" in testval.lower()):
+                        sqft = float("".join(x for x in testval if x.isnumeric()))
 
         pets = PETS
 

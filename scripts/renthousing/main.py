@@ -60,7 +60,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["apartments", "realtor", "redfin", "zillow", "craigs",  "homes"]
+SITES = ["homes", "apartments", "realtor", "redfin", "zillow", "craigs"]
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Chicago"
