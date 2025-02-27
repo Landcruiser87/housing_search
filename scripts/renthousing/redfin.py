@@ -23,10 +23,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
     listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     #Set the outer loop over each card returned. 
     for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
-        
-        # for subsearch in card.find_all("a", class_="link-and-anchor visuallyHidden"):
-        #     listid = subsearch.get("href")
-        #     listingid = listid.split("/")[-1]
 
         for subsearch in card.find_all("script", {"type":"application/ld+json"}):
             listinginfo = json.loads(subsearch.text)
