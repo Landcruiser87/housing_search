@@ -595,7 +595,6 @@ def socrata_api(update:bool=False):
             "pop"   :{"id":"85cm-7uqa"},
             "city"  :{"id":"qqq8-j68g"}
         }
-        merged_df = None
         chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
         for db_name in datasets.keys():
             try:
@@ -623,7 +622,6 @@ def socrata_api(update:bool=False):
         datasets["health"]["community_area_name"] = datasets["health"]["community_area_name"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
         datasets["map"]["pri_neigh"] = datasets["map"]["pri_neigh"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
         datasets["map"]["sec_neigh"] = datasets["map"]["sec_neigh"].apply(lambda x:x.lower())
-        
         #quick check
         #[f"{x:_<21} {y}" for x, y in list(zip(datasets["map"]["pri_neigh"],datasets["map"]["sec_neigh"]))]
         #rename columns and map city polygon to 
@@ -633,7 +631,6 @@ def socrata_api(update:bool=False):
         chicago.rename(columns={"community":"neigh"}, inplace=True)
         #Two boundaries in the zip database have expanded and are stored as different records.  
         #We need to manually combine the polygons, shape_area, and shape length, while keeping the original id. #not sure if that will hose us later. 
-
         for area in ["60707", "60643"]:
             rows = datasets["zip"][datasets["zip"]["zip"]==area]
             cols = [(3, "shape_area"), (4, "shape_len"),(0, "the_geom")]

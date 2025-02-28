@@ -19361,420 +19361,6 @@
     "L_dist": "",
     "crime_sc": {}
   },
-  "0rhrgb3": {
-    "source": "www.apartments.com",
-    "price": 1700.0,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/535-w-31st-st-chicago-il/0rhrgb3/",
-    "address": "535 W 31st St, Chicago, IL 60616",
-    "date_pulled": "10-21-2024_17-52-33",
-    "bed": 3.0,
-    "bath": 1.0,
-    "sqft": "1100 sq ft",
-    "lat": 41.8379366,
-    "long": -87.6403518597524,
-    "L_dist": [
-      "Sox-35th",
-      0.68
-    ],
-    "crime_sc": {
-      "drug_score": 2.58,
-      "gun_score": 8.49,
-      "murder_score": 2.47,
-      "perv_score": 1.39,
-      "theft_score": 39.04,
-      "violence_score": 27.88,
-      "property_d_score": 0.21
-    }
-  },
-  "k337xh8": {
-    "source": "www.apartments.com",
-    "price": 1450.0,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.apartments.com/5609-n-glenwood-ave-chicago-il/k337xh8/",
-    "address": "5609 N Glenwood Ave, Chicago, IL 60660",
-    "date_pulled": "10-21-2024_17-52-33",
-    "bed": 21.0,
-    "bath": null,
-    "sqft": null,
-    "lat": 41.98383701194269,
-    "long": -87.66485317282562,
-    "L_dist": [
-      "Bryn Mawr",
-      0.31
-    ],
-    "crime_sc": {
-      "drug_score": 2.42,
-      "gun_score": 5.36,
-      "murder_score": 1.07,
-      "perv_score": 1.25,
-      "theft_score": 46.3,
-      "violence_score": 23.06,
-      "property_d_score": 0.11
-    }
-  },
-  "7187961807": {
-    "source": "www.realtor.com",
-    "price": 2000.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/521-E-91st-St_Chicago_IL_60619_M71879-61807?from=SRP_List_Card",
-    "address": "521 E 91st St Chicago, IL 60619",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": 1000.0,
-    "lat": 41.72903445,
-    "long": -87.61097342216888,
-    "L_dist": [
-      "95th/Dan Ryan",
-      0.83
-    ],
-    "crime_sc": {
-      "drug_score": 1.45,
-      "gun_score": 10.42,
-      "murder_score": 3.35,
-      "perv_score": 1.48,
-      "theft_score": 33.73,
-      "violence_score": 31.36,
-      "property_d_score": 0.27
-    }
-  },
-  "9884642536": {
-    "source": "www.realtor.com",
-    "price": 1650.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/5720-W-63rd-St-Apt-1_Chicago_IL_60638_M98846-42536?from=SRP_List_Card",
-    "address": "5720 W 63rd St Apt 1 Chicago, IL 60638",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 1.5,
-    "sqft": null,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "9855197834": {
-    "source": "www.realtor.com",
-    "price": 2550.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/552-E-46th-Pl-2_Chicago_IL_60653_M98551-97834?from=SRP_List_Card",
-    "address": "552 E 46th Pl Unit 2 Chicago, IL 60653",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 2.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "9251136430": {
-    "source": "www.realtor.com",
-    "price": 2200.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/6042-W-63rd-St-2_Chicago_IL_60638_M92511-36430?from=SRP_List_Card",
-    "address": "6042 W 63rd St Unit 2 Chicago, IL 60638",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": 1400.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "9603819570": {
-    "source": "www.realtor.com",
-    "price": 2250.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2519-N-Maplewood-Ave-2_Chicago_IL_60647_M96038-19570?from=SRP_List_Card",
-    "address": "2519 N Maplewood Ave Unit 2 Chicago, IL 60647",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 1.0,
-    "sqft": 1040.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "8396999123": {
-    "source": "www.realtor.com",
-    "price": 1500.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/6207-S-Dorchester-Ave-1_Chicago_IL_60637_M83969-99123?from=SRP_List_Card",
-    "address": "6207 S Dorchester Ave Unit 1 Chicago, IL 60637",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 3.0,
-    "sqft": 1689.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "9491779961": {
-    "source": "www.realtor.com",
-    "price": 2095.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/6347-S-Woodlawn-Ave-G_Chicago_IL_60637_M94917-79961?from=SRP_List_Card",
-    "address": "6347 S Woodlawn Ave Unit G Chicago, IL 60637",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": 1700.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "9337194481": {
-    "source": "www.realtor.com",
-    "price": 1600.0,
-    "neigh": "Budlong-WoodsMayfair",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3531-W-Le-Moyne-St-1_Chicago_IL_60651_M93371-94481?from=SRP_List_Card",
-    "address": "3531 W Le Moyne St Unit 1 Chicago, IL 60651",
-    "date_pulled": "10-21-2024_17-53-10",
-    "bed": 2.0,
-    "bath": 1.0,
-    "sqft": 900.0,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "h067pv2p5y60c": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/10563-s-central-park-ave-chicago-il/h067pv2p5y60c/",
-    "address": "10563 S Central Park Ave Chicago, IL 60655",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": 41.7005359,
-    "long": -87.71065552847682,
-    "L_dist": [
-      "95th/Dan Ryan",
-      4.7
-    ],
-    "crime_sc": {
-      "drug_score": 1.83,
-      "gun_score": 10.22,
-      "murder_score": 3.34,
-      "perv_score": 1.59,
-      "theft_score": 32.69,
-      "violence_score": 30.58,
-      "property_d_score": 0.28
-    }
-  },
-  "vkpwf439p8xck": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/7031-w-72nd-place-chicago-il/vkpwf439p8xck/",
-    "address": "7031 W 72nd Place Chicago, IL 60638",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 3.0,
-    "bath": null,
-    "sqft": null,
-    "lat": 41.7615447,
-    "long": -87.7100752,
-    "L_dist": [
-      "Midway",
-      2.25
-    ],
-    "crime_sc": {
-      "drug_score": 1.76,
-      "gun_score": 10.08,
-      "murder_score": 3.19,
-      "perv_score": 1.76,
-      "theft_score": 33.9,
-      "violence_score": 30.63,
-      "property_d_score": 0.28
-    }
-  },
-  "370zscfly7xvl": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/9932-s-yates-blvd-chicago-il/370zscfly7xvl/",
-    "address": "9932 S Yates Blvd Chicago, IL 60617",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 2.0,
-    "bath": null,
-    "sqft": null,
-    "lat": 41.7316422,
-    "long": -87.5658603,
-    "L_dist": [
-      "87th",
-      3.04
-    ],
-    "crime_sc": {
-      "drug_score": 1.43,
-      "gun_score": 10.39,
-      "murder_score": 3.4,
-      "perv_score": 1.39,
-      "theft_score": 34.08,
-      "violence_score": 31.34,
-      "property_d_score": 0.26
-    }
-  },
-  "ffgkbc82vdbn0": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/5624-s-albany-ave-chicago-il/ffgkbc82vdbn0/",
-    "address": "5624 S Albany Ave Chicago, IL 60629",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": 41.790954049999996,
-    "long": -87.70128526611144,
-    "L_dist": [
-      "Kedzie",
-      0.93
-    ],
-    "crime_sc": {
-      "drug_score": 2.63,
-      "gun_score": 9.17,
-      "murder_score": 3.03,
-      "perv_score": 1.75,
-      "theft_score": 35.65,
-      "violence_score": 29.59,
-      "property_d_score": 0.23
-    }
-  },
-  "mv09wbtpn6tld": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/521-e-91st-st-chicago-il/mv09wbtpn6tld/",
-    "address": "521 E 91st St Chicago, IL 60619",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 3.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": 41.72903445,
-    "long": -87.61097342216888,
-    "L_dist": [
-      "95th/Dan Ryan",
-      0.83
-    ],
-    "crime_sc": {
-      "drug_score": 1.45,
-      "gun_score": 10.42,
-      "murder_score": 3.35,
-      "perv_score": 1.48,
-      "theft_score": 33.73,
-      "violence_score": 31.36,
-      "property_d_score": 0.27
-    }
-  },
-  "ff555y4csmy79": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/5620-s-winchester-ave-chicago-il-unit-2/ff555y4csmy79/",
-    "address": "5620 S Winchester Ave Unit 2 Chicago, IL 60636",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 3.0,
-    "bath": null,
-    "sqft": null,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "ypwm7dt98lw36": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/7432-s-champlain-ave-chicago-il/ypwm7dt98lw36/",
-    "address": "7432 S Champlain Ave Chicago, IL 60619",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 2.0,
-    "bath": null,
-    "sqft": null,
-    "lat": 41.7593234,
-    "long": -87.60934229482353,
-    "L_dist": [
-      "79th",
-      1.02
-    ],
-    "crime_sc": {
-      "drug_score": 1.47,
-      "gun_score": 10.15,
-      "murder_score": 3.34,
-      "perv_score": 1.5,
-      "theft_score": 34.43,
-      "violence_score": 30.96,
-      "property_d_score": 0.26
-    }
-  },
-  "62lvyjfvzcxlb": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/4545-s-drexel-blvd-chicago-il-unit-3f/62lvyjfvzcxlb/",
-    "address": "4545 S Drexel Blvd Unit 3F Chicago, IL 60653",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 2.0,
-    "bath": 2.0,
-    "sqft": null,
-    "lat": "",
-    "long": "",
-    "L_dist": "",
-    "crime_sc": {}
-  },
-  "rm9kpm9fe12k6": {
-    "source": "www.homes.com",
-    "price": null,
-    "neigh": "budlong-woodsmayfair",
-    "dogs": true,
-    "link": "https://www.homes.com/property/5850-s-neva-ave-chicago-il/rm9kpm9fe12k6/",
-    "address": "5850 S Neva Ave Chicago, IL 60638",
-    "date_pulled": "10-21-2024_17-54-15",
-    "bed": 4.0,
-    "bath": null,
-    "sqft": null,
-    "lat": 41.7850792,
-    "long": -87.80024259941692,
-    "L_dist": [
-      "Midway",
-      3.21
-    ],
-    "crime_sc": {
-      "drug_score": 4.63,
-      "gun_score": 9.97,
-      "murder_score": 3.46,
-      "perv_score": 2.74,
-      "theft_score": 31.23,
-      "violence_score": 31.51,
-      "property_d_score": 0.27
-    }
-  },
   "9387796852": {
     "source": "www.realtor.com",
     "price": 1900.0,
@@ -43611,6 +43197,276 @@
       "theft_score": 44.75,
       "violence_score": 23.84,
       "property_d_score": 0.12
+    }
+  },
+  "bs3evv9": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2401-w-lexington-st-chicago-il/bs3evv9/",
+    "address": "2401 W Lexington St, Chicago, IL 60612",
+    "date_pulled": "02-28-2025_08-17-04",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.8718742,
+    "long": -87.68639769966268,
+    "L_dist": [
+      "Western",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 3.12,
+      "gun_score": 7.0,
+      "murder_score": 1.99,
+      "perv_score": 1.67,
+      "theft_score": 40.14,
+      "violence_score": 26.74,
+      "property_d_score": 0.16
+    }
+  },
+  "ktbyceb": {
+    "source": "www.apartments.com",
+    "price": 2447.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2451-w-howard-st-chicago-il/ktbyceb/",
+    "address": "2451 W Howard St, Chicago, IL 60645",
+    "date_pulled": "02-28-2025_08-17-04",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 42.0189415,
+    "long": -87.69251170473181,
+    "L_dist": [
+      "South Boulevard",
+      0.94
+    ],
+    "crime_sc": {
+      "drug_score": 0.88,
+      "gun_score": 3.65,
+      "murder_score": 0.76,
+      "perv_score": 1.6,
+      "theft_score": 46.31,
+      "violence_score": 23.74,
+      "property_d_score": 0.11
+    }
+  },
+  "trtmrjb": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3532-w-shakespeare-ave-chicago-il/trtmrjb/",
+    "address": "3532 W Shakespeare Ave, Chicago, IL 60647",
+    "date_pulled": "02-28-2025_08-17-04",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9202748,
+    "long": -87.71494223367478,
+    "L_dist": [
+      "Logan Square",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.26,
+      "gun_score": 5.79,
+      "murder_score": 1.68,
+      "perv_score": 1.57,
+      "theft_score": 42.15,
+      "violence_score": 25.48,
+      "property_d_score": 0.13
+    }
+  },
+  "cj30rvg": {
+    "source": "www.apartments.com",
+    "price": 1425.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4435-w-fullerton-ave-chicago-il/cj30rvg/",
+    "address": "4435 W Fullerton Ave, Chicago, IL 60639",
+    "date_pulled": "02-28-2025_08-17-04",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.92426832116986,
+    "long": -87.73800259109022,
+    "L_dist": [
+      "Logan Square",
+      1.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 6.13,
+      "murder_score": 1.91,
+      "perv_score": 1.69,
+      "theft_score": 40.91,
+      "violence_score": 26.32,
+      "property_d_score": 0.15
+    }
+  },
+  "0h67b41": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1724-n-talman-ave-chicago-il/0h67b41/",
+    "address": "1724 N Talman Ave, Chicago, IL 60647",
+    "date_pulled": "02-28-2025_08-17-04",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.912826949999996,
+    "long": -87.69366330971329,
+    "L_dist": [
+      "Western",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.23,
+      "gun_score": 5.94,
+      "murder_score": 1.7,
+      "perv_score": 1.56,
+      "theft_score": 42.08,
+      "violence_score": 25.62,
+      "property_d_score": 0.14
+    }
+  },
+  "8kf26h2": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3210-w-lawrence-ave-chicago-il/8kf26h2/",
+    "address": "3210 W Lawrence Ave, Chicago, IL 60625",
+    "date_pulled": "02-28-2025_08-20-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 748.0,
+    "lat": 41.968362,
+    "long": -87.70883873739075,
+    "L_dist": [
+      "Kedzie",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 3.19,
+      "gun_score": 5.28,
+      "murder_score": 1.33,
+      "perv_score": 1.59,
+      "theft_score": 43.78,
+      "violence_score": 24.25,
+      "property_d_score": 0.12
+    }
+  },
+  "185336920": {
+    "source": "www.redfin.com",
+    "price": 2595.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2112-W-Division-St-60622/unit-3/home/185336920",
+    "address": "2112 W Division St Unit 3, Chicago, IL, 60622",
+    "date_pulled": "02-28-2025_08-22-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9034131,
+    "long": -87.6803328,
+    "L_dist": [
+      "Damen",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.19,
+      "gun_score": 6.18,
+      "murder_score": 1.76,
+      "perv_score": 1.66,
+      "theft_score": 41.88,
+      "violence_score": 25.77,
+      "property_d_score": 0.14
+    }
+  },
+  "187408392": {
+    "source": "www.redfin.com",
+    "price": 1750.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3735-N-Kimball-Ave-60618/unit-3N/home/187408392",
+    "address": "3735 N Kimball Ave Unit 3N, Chicago, IL, 60618",
+    "date_pulled": "02-28-2025_08-23-32",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.9494494,
+    "long": -87.7125823,
+    "L_dist": [
+      "Addison",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.4,
+      "gun_score": 5.6,
+      "murder_score": 1.53,
+      "perv_score": 1.57,
+      "theft_score": 42.51,
+      "violence_score": 25.07,
+      "property_d_score": 0.13
+    }
+  },
+  "sxl99k6": {
+    "source": "www.apartments.com",
+    "price": 1750.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3735-n-kimball-ave-chicago-il/sxl99k6/",
+    "address": "3735 N Kimball Ave, Chicago, IL 60618",
+    "date_pulled": "02-28-2025_08-23-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.94945885,
+    "long": -87.71252827023305,
+    "L_dist": [
+      "Addison",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.4,
+      "gun_score": 5.6,
+      "murder_score": 1.53,
+      "perv_score": 1.57,
+      "theft_score": 42.51,
+      "violence_score": 25.08,
+      "property_d_score": 0.13
+    }
+  },
+  "d2f66lk": {
+    "source": "www.apartments.com",
+    "price": 2409.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3346-n-central-park-ave-chicago-il/d2f66lk/",
+    "address": "3346 N Central Park Ave, Chicago, IL 60618",
+    "date_pulled": "02-28-2025_08-24-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9424249,
+    "long": -87.71775813304238,
+    "L_dist": [
+      "Addison",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 5.7,
+      "murder_score": 1.64,
+      "perv_score": 1.59,
+      "theft_score": 42.29,
+      "violence_score": 25.26,
+      "property_d_score": 0.13
     }
   }
 }

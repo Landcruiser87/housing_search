@@ -102,7 +102,17 @@ def clean_data(json_f:dict) -> pd.DataFrame:
     data["date_pulled"] = data["date_pulled"].apply(date_convert)
     #Unify neighborhoods
     data["neigh"] = data["neigh"].apply(neighborhood_convert)
-    
+
+    #Remap the following neighborhoods to a secondary field. 
+        #?  To remap the values , or put them in the secondary neigh..?
+    missing_neigh = {
+        "wicker park":"west town",
+        "mayfair":"albany park",
+        "budlong woods":"lincoln square",
+        "ravenswood":"lincoln square",
+        "roscoe village":"north park"
+    }
+    data["neigh"].map(missing_neigh)
 
     #Set types for strings
     for col in ["source","neigh", "address"]:
@@ -147,25 +157,26 @@ def load_graph():
         #Determine whether we're using neighborhoods or zips
         area = check_m_type.get_checked_labels()[0]
         if area == "Neighborhood":
-            df_prime = chi_data["neigh"].merge(
-                right = df,
+            df_prime = df.merge(
+                right=chi_data["neigh"],
                 on = "neigh",
-                how = "outer",
-                validate = "m:m"
+                how = "left",
+                validate = "m:1"
             )
             #TODO - Could merge neigh on secondary neighborhood, but just amend the to include
-            #the missing neighborhoods in the first one!  ha!  donezo and easy and 
+            #the missing neighborhoods ine the first one!  ha!  donezo and easy and 
             #takes care of their group assignment
         
         elif area == "Zip":
-            df_prime = chi_data["zip"].merge(
-                right = df,
-                on = "zip",
-                how = "outer",
-                validate = "m:m"
-            )        
+            df_prime = df.merge(
+                right = chi_data["zip"],
+                on = "neigh",
+                how = "left",
+                validate = "m:1"
+            )
         if metric.startswith("Listing"):
-            pass
+            plotdata = df_prime
+            #Group by neighborhood for counts
         elif metric.startswith("Price"):
             #I want to return prices for that neighborhood
             pass
@@ -174,6 +185,7 @@ def load_graph():
         elif metric.startswith("Health"):
             pass
 
+        return plotdata
 
     def update_main(xmin:datetime=None, xmax:datetime=None):
         #Get active labels in the checkboxes
@@ -346,7 +358,7 @@ def main():
 
     global data, chi_data
     #Load city data from data.cityofchicago.org 
-    chi_data = support.socrata_api() #Pass in True to update city data
+    chi_data = support.socrata_api(True) #Pass in True to update city data
     #Load / clean data into a df
     data = clean_data(json_f)
     #Load GUI
