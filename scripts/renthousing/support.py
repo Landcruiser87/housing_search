@@ -11,7 +11,6 @@ from shapely.geometry import Polygon
 from shapely.ops import unary_union
 import geodatasets
 import logging
-
 #Progress bar fun
 from rich.progress import (
     Progress,
@@ -342,8 +341,6 @@ class CustomEncoder(json.JSONEncoder):
             return obj.to_json(orient='records')
         elif isinstance(obj, dict):
             return obj.__dict__
-        elif isinstance(obj, str):
-            return str(obj)
         elif isinstance(obj, datetime.datetime):
             return datetime.datetime.strftime(obj, "%m-%d-%Y_%H-%M-%S")
         else:
@@ -578,10 +575,12 @@ def send_housing_email(urls:str):
 
 #FUNCTION Load neighborhood boundaries
 def socrata_api(update:bool=False):
-                
     def load_shape_objects(polygon:str):
+        if isinstance(polygon, str):
+            pass
         return shape(polygon)
-    
+
+    chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
     if update:
         with open('./secret/chicagodata.txt') as login_file:
             login = login_file.read().splitlines()
@@ -595,7 +594,6 @@ def socrata_api(update:bool=False):
             "pop"   :{"id":"85cm-7uqa"},
             "city"  :{"id":"qqq8-j68g"}
         }
-        chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
         for db_name in datasets.keys():
             try:
                 #Grab neighborhood coords
@@ -653,23 +651,12 @@ def socrata_api(update:bool=False):
         merged_zip.loc[cityrows, "shape_len"] = datasets["city"].loc[:, "shape_len"]
         merged_zip.loc[cityrows, "objectid"] = 0
         
-        #I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
+        #BUG I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
         #zipcode based datasets
-            #pop
-            #zip
-                #Note. Getting 4 more rows than expected and not sure why.  
-                #Wierd, it two random zip codes??  oooooook
-                # 60707, 60643
-        #neighborhoodbased datasets
-            #health
-            #chicago
-            #map
+
         savejson = {"zip":merged_zip, "neigh":merged_neigh}
         merged_zip.to_csv(f"./data/chicago_zip.csv", sep=",", index=False)
         merged_neigh.to_csv(f"./data/chicago_neigh.csv", sep=",", index=False)
-        # out_json = json.dumps(savejson, indent=2, cls=CustomEncoder)
-        # with open("./data/chicago_merged.json", "w") as out_f:
-        #     out_f.write(out_json)
         return savejson
     
     else:
@@ -677,7 +664,14 @@ def socrata_api(update:bool=False):
         fp2 = "./data/chicago_neigh.csv"
         merged_zip = pd.read_csv(fp1)
         merged_neigh = pd.read_csv(fp2)
-        return {"zip":merged_zip, "neigh":merged_neigh}
+        merged_neigh["the_geom"] = merged_neigh["the_geom"].apply(load_shape_objects)
+        merged_zip["the_geom"] = merged_zip["the_geom"].apply(load_shape_objects)
+
+        return {
+            "neigh":gpd.GeoDataFrame(merged_neigh, geometry="the_geom"),
+            "zip":gpd.GeoDataFrame(merged_zip, geometry="the_geom")
+        }
+            
 
     #IDEA
     #towed vehicles = ygr5-vcbg

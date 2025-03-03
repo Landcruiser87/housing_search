@@ -2,17 +2,16 @@
 import numpy as np
 import pandas as pd
 import support
-import json
 import datetime
 import geopandas as gpd
 from itertools import cycle
 from pathlib import Path, PurePath
+from collections import Counter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.gridspec as gridspec
 from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, Arrow
-
 from matplotlib.widgets import CheckButtons, Button, RadioButtons, SpanSelector, TextBox
 
 #Neighborhoods searched
@@ -103,8 +102,9 @@ def clean_data(json_f:dict) -> pd.DataFrame:
     #Unify neighborhoods
     data["neigh"] = data["neigh"].apply(neighborhood_convert)
 
-    #Remap the following neighborhoods to a secondary field. 
-        #?  To remap the values , or put them in the secondary neigh..?
+    #?To remap the values chang ethe primary neigh, or add them to secondary neigh
+        #Might switch this back, but want the ability to 
+        #search by sub neighborhoods.  Or at least group them
     missing_neigh = {
         "wicker park":"west town",
         "mayfair":"albany park",
@@ -112,14 +112,21 @@ def clean_data(json_f:dict) -> pd.DataFrame:
         "ravenswood":"lincoln square",
         "roscoe village":"north park"
     }
-    data["neigh"].map(missing_neigh)
+    for neigh, large_neigh in missing_neigh.items():
+        idx = chi_data["neigh"][chi_data["neigh"]["neigh"]==large_neigh]["sec_neigh"]
+        sec_neighs = idx.item().split(",")
+        if neigh not in sec_neighs:
+            sec_neighs.append(neigh)
+            chi_data["neigh"].iloc[idx.index, 38] = ",".join(sec_neighs)
 
     #Set types for strings
-    for col in ["source","neigh", "address"]:
+    for col in ["source","neigh","address"]:
         data[col] = data[col].astype(str)
+    
     #Set types for floats
     for col in ["price", "bed", "bath"]:
         data[col] = data[col].astype(float)
+    
     #replace bs in lat long and turn to float
     for col in ["lat", "long"]:
         data[col] = data[col].replace(r'^\s*$', np.nan, regex=True)
@@ -156,6 +163,7 @@ def load_graph():
     def data_transform(df:pd.DataFrame, metric:str):
         #Determine whether we're using neighborhoods or zips
         area = check_m_type.get_checked_labels()[0]
+        
         if area == "Neighborhood":
             df_prime = df.merge(
                 right=chi_data["neigh"],
@@ -163,9 +171,18 @@ def load_graph():
                 how = "left",
                 validate = "m:1"
             )
-            #TODO - Could merge neigh on secondary neighborhood, but just amend the to include
-            #the missing neighborhoods ine the first one!  ha!  donezo and easy and 
-            #takes care of their group assignment
+            #Loop the blank neighborhood indexes and look for their secondary neighborhood
+            #BUG - Will probably need a general chicago one with craigs listings. 
+            blank_idx = df_prime["the_geom"].isnull()
+            if blank_idx.shape[0] > 0:
+                for idx in df_prime[blank_idx==True].index: 
+                    missing_neigh = df_prime.iloc[idx, 2]
+                    if missing_neigh == "chicago":
+                        #Stored the city wide in the other df so.  pulling it in here for the whole city
+                        df_prime.iloc[idx, 50] = chi_data["zip"][chi_data["zip"]["zip"]=="Chicago"]["the_geom"][0]
+                    else:
+                        miss_row = [row for row, x in enumerate(chi_data["neigh"]["sec_neigh"]) if isinstance(x, str) and missing_neigh in x.split(",")]
+                        df_prime.iloc[idx, 50] = chi_data["neigh"].iloc[miss_row[0], 37]
         
         elif area == "Zip":
             df_prime = df.merge(
@@ -174,18 +191,25 @@ def load_graph():
                 how = "left",
                 validate = "m:1"
             )
+        #Group by neighborhood for counts
         if metric.startswith("Listing"):
-            plotdata = df_prime
-            #Group by neighborhood for counts
+            plotdata = pd.DataFrame(df_prime["neigh"].value_counts(), columns=["count", "the_geom"])
+            for neigh in plotdata.index:
+                plotdata.loc[neigh, "the_geom"] = df_prime["the_geom"][df_prime["neigh"]==neigh].iloc[0]
+            
+            #index-neighborhood 
+            #listing counts
+            #geometry
+            
         elif metric.startswith("Price"):
             #I want to return prices for that neighborhood
-            pass
+            plotdata = df_prime.groupby("neigh")["price"].mean()
         elif metric.startswith("Population"):
             pass
         elif metric.startswith("Health"):
             pass
 
-        return plotdata
+        return gpd.GeoDataFrame(data=plotdata, geometry="the_geom")
 
     def update_main(xmin:datetime=None, xmax:datetime=None):
         #Get active labels in the checkboxes
@@ -215,8 +239,8 @@ def load_graph():
         #Now filter and join wth chi_data depending on selection. 
         #Need the ability to select different analysis blocks
         metric_val = checkb_metric.value_selected
-        df = data_transform(filtdata, metric_val)
-        df.plot(ax=sp_map)
+        main_df = data_transform(filtdata, metric_val)
+        main_df.plot(ax=sp_map)
         sp_map.set_title(f"{metric_val}")
 
         # fig.canvas.draw_idle()
