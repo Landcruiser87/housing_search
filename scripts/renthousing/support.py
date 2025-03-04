@@ -644,6 +644,7 @@ def socrata_api(update:bool=False):
         #Then update their polygons only keeping the ones that have data. 
         merged_neigh = datasets["chicago"].merge(datasets["health"], on="neigh", how="outer")
         merged_neigh = merged_neigh.merge(datasets["map"], on="neigh", how="left")
+        merged_neigh.drop(columns=["geometry"], inplace=True)
         merged_zip = datasets["zip"].merge(datasets["pop"], on="zip", how="right", validate="m:m")
         cityrows = merged_zip.loc[:, "zip"] == "Chicago"
         merged_zip.loc[cityrows, "the_geom"] = datasets["city"].loc[:, "the_geom"]
@@ -654,20 +655,17 @@ def socrata_api(update:bool=False):
         #BUG I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
         #zipcode based datasets
         
-        savejson = {"zip":merged_zip, "neigh":merged_neigh}
-        zip_json = merged_zip.to_json(na="null")
-        neigh_json = merged_neigh.to_json(na="null")
-        for jfile, fname in zip([zip_json, neigh_json], ["neigh", "zip"]):
-            with open(f"./data/chi_{fname}.json", "w") as out_f:
-                out_f.write(jfile)
+        save_dict = {"zip":merged_zip, "neigh":merged_neigh}
+        # for jfile, fname in zip([merged_zip, merged_neigh], ["neigh", "zip"]):
+        #     jfile.to_file(filename = f"./data/chi_{fname}.shp", mode="w")
 
-        return savejson
+        return save_dict
     
     else:
-        fp1 ="./data/chi_zip.json"
-        fp2 = "./data/chi_neigh.json"
-        merged_zip = pd.read_csv(fp1)
-        merged_neigh = pd.read_csv(fp2)
+        fp1 ="./data/chi_zip.shp"
+        fp2 = "./data/chi_neigh.shp"
+        merged_zip = pd.read_file(fp1)
+        merged_neigh = pd.read_file(fp2)
         merged_neigh["the_geom"] = merged_neigh["the_geom"].apply(load_shape_objects)
         merged_zip["the_geom"] = merged_zip["the_geom"].apply(load_shape_objects)
 

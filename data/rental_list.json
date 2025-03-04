@@ -44158,5 +44158,161 @@
       "violence_score": 23.62,
       "property_d_score": 0.12
     }
+  },
+  "189925397": {
+    "source": "www.redfin.com",
+    "price": 1825.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4010-W-Warwick-Ave-60641/unit-G/home/189925397",
+    "address": "4010 W Warwick Ave Unit G, Chicago, IL, 60641",
+    "date_pulled": "03-04-2025_08-24-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 848.0,
+    "lat": 41.9492947,
+    "long": -87.7279779,
+    "L_dist": [
+      "Irving Park",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.77,
+      "murder_score": 1.65,
+      "perv_score": 1.62,
+      "theft_score": 41.79,
+      "violence_score": 25.57,
+      "property_d_score": 0.14
+    }
+  },
+  "9692510611": {
+    "source": "www.realtor.com",
+    "price": 2300.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3400-N-Keeler-Ave-2_Chicago_IL_60641_M96925-10611",
+    "address": "3400 N Keeler Ave Unit 2 Chicago, IL 60641",
+    "date_pulled": "03-04-2025_08-24-24",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "183851118": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4518-N-Kedzie-Ave-60625/unit-2D/home/183851118",
+    "address": "4518 N Kedzie Ave Unit 2D, Chicago, IL, 60625",
+    "date_pulled": "03-04-2025_08-24-43",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.9635624,
+    "long": -87.7084675,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 5.42,
+      "murder_score": 1.44,
+      "perv_score": 1.57,
+      "theft_score": 43.29,
+      "violence_score": 24.54,
+      "property_d_score": 0.12
+    }
+  },
+  "194931707": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3210-W-Lawrence-Ave-60625/unit-2A/home/194931707",
+    "address": "3210 W Lawrence Ave Unit 2A, Chicago, IL, 60625",
+    "date_pulled": "03-04-2025_08-24-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 748.0,
+    "lat": 41.9685926,
+    "long": -87.7090396,
+    "L_dist": [
+      "Kedzie",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.2,
+      "gun_score": 5.28,
+      "murder_score": 1.35,
+      "perv_score": 1.58,
+      "theft_score": 43.67,
+      "violence_score": 24.29,
+      "property_d_score": 0.12
+    }
+  },
+  "9747255370": {
+    "source": "www.realtor.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3210-W-Lawrence-Ave-2A_Chicago_IL_60625_M97472-55370",
+    "address": "3210 W Lawrence Ave Unit 2A Chicago, IL 60625",
+    "date_pulled": "03-04-2025_08-25-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 748.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "7409609940": {
+    "source": "www.realtor.com",
+    "price": 2169.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4701-N-Albany-Ave-Apt-1_Chicago_IL_60625_M74096-09940",
+    "address": "4701 N Albany Ave Apt 1 Chicago, IL 60625",
+    "date_pulled": "03-04-2025_08-25-23",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1237.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "50pzk2p": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1040-w-18th-st-chicago-il/50pzk2p/",
+    "address": "1040 W 18th St, Chicago, IL 60608",
+    "date_pulled": "03-04-2025_08-26-59",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8582459,
+    "long": -87.65311247217758,
+    "L_dist": [
+      "18th",
+      0.82
+    ],
+    "crime_sc": {
+      "drug_score": 3.16,
+      "gun_score": 7.45,
+      "murder_score": 2.21,
+      "perv_score": 1.61,
+      "theft_score": 39.92,
+      "violence_score": 26.84,
+      "property_d_score": 0.18
+    }
   }
 }

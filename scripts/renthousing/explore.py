@@ -47,6 +47,14 @@ TIME_DICT = {
     "month":6,
     "year":2
 }
+MISSING_NEIGH = {
+    "wicker park":"west town",
+    "mayfair":"albany park",
+    "budlong woods":"lincoln square",
+    "ravenswood":"lincoln square",
+    "roscoe village":"north park"
+}
+
 #Load a logger instance
 # logger = support.get_logger("", support.console)
 
@@ -105,19 +113,12 @@ def clean_data(json_f:dict) -> pd.DataFrame:
     #?To remap the values chang ethe primary neigh, or add them to secondary neigh
         #Might switch this back, but want the ability to 
         #search by sub neighborhoods.  Or at least group them
-    missing_neigh = {
-        "wicker park":"west town",
-        "mayfair":"albany park",
-        "budlong woods":"lincoln square",
-        "ravenswood":"lincoln square",
-        "roscoe village":"north park"
-    }
-    for neigh, large_neigh in missing_neigh.items():
+    for neigh, large_neigh in MISSING_NEIGH.items():
         idx = chi_data["neigh"][chi_data["neigh"]["neigh"]==large_neigh]["sec_neigh"]
         sec_neighs = idx.item().split(",")
         if neigh not in sec_neighs:
             sec_neighs.append(neigh)
-            chi_data["neigh"].iloc[idx.index, 38] = ",".join(sec_neighs)
+            chi_data["neigh"].iloc[idx.index, 37] = ",".join(sec_neighs)
 
     #Set types for strings
     for col in ["source","neigh","address"]:
@@ -135,7 +136,6 @@ def clean_data(json_f:dict) -> pd.DataFrame:
     return data
 
 def load_graph():
-    
     ################## widget functions ###############################
     def checkb_site_action(val):
         update_main()
@@ -176,14 +176,17 @@ def load_graph():
             blank_idx = df_prime["the_geom"].isnull()
             if blank_idx.shape[0] > 0:
                 for idx in df_prime[blank_idx==True].index: 
-                    missing_neigh = df_prime.iloc[idx, 2]
-                    if missing_neigh == "chicago":
+                    miss_neigh = df_prime.iloc[idx, 2]
+                    if miss_neigh == "chicago":
                         #Stored the city wide in the other df so.  pulling it in here for the whole city
-                        df_prime.iloc[idx, 50] = chi_data["zip"][chi_data["zip"]["zip"]=="Chicago"]["the_geom"][0]
+                        df_prime.iloc[idx, 49] = chi_data["zip"][chi_data["zip"]["zip"]=="Chicago"]["the_geom"][0]
                     else:
-                        miss_row = [row for row, x in enumerate(chi_data["neigh"]["sec_neigh"]) if isinstance(x, str) and missing_neigh in x.split(",")]
-                        df_prime.iloc[idx, 50] = chi_data["neigh"].iloc[miss_row[0], 37]
-        
+                        miss_row = [row for row, x in enumerate(chi_data["neigh"]["sec_neigh"]) if isinstance(x, str) and miss_neigh in x.split(",")]
+                        if miss_row:
+                            df_prime.iloc[idx, 49] = chi_data["neigh"].iloc[miss_row[0], 36]
+                        else:
+                            raise ValueError("No matching neighborhood found in secondary neighborhood")
+                
         elif area == "Zip":
             df_prime = df.merge(
                 right = chi_data["zip"],
@@ -194,12 +197,20 @@ def load_graph():
         #Group by neighborhood for counts
         if metric.startswith("Listing"):
             plotdata = pd.DataFrame(df_prime["neigh"].value_counts(), columns=["count", "the_geom"])
+            #Fill in all geoms
             for neigh in plotdata.index:
                 plotdata.loc[neigh, "the_geom"] = df_prime["the_geom"][df_prime["neigh"]==neigh].iloc[0]
-            
+            for subneigh, neigh in MISSING_NEIGH.items():
+                if neigh in plotdata.index:
+                    plotdata.loc[neigh, "count"] += plotdata.loc[subneigh, "count"]
+                    plotdata.drop(labels=subneigh, axis=0, inplace=True)
+                elif subneigh in plotdata.index:
+                    plotdata.loc[neigh] = plotdata.loc[subneigh]
+            #Find the one's who are the same, remove the lower value and replace with the upper?
             #index-neighborhood 
             #listing counts
             #geometry
+            #Need to combine neighborhoods with the same polygons. 
             
         elif metric.startswith("Price"):
             #I want to return prices for that neighborhood
@@ -236,11 +247,15 @@ def load_graph():
         idx_mask = source_mask & neigh_mask & dmin_mask & dmax_mask
         filtdata = data[idx_mask].copy()
 
+        metric_cols = {
+            "Listing Frequency":"count",
+        }
         #Now filter and join wth chi_data depending on selection. 
         #Need the ability to select different analysis blocks
         metric_val = checkb_metric.value_selected
         main_df = data_transform(filtdata, metric_val)
-        main_df.plot(ax=sp_map)
+        main_df.plot(ax=sp_map, column=metric_cols[metric_val], cmap="Set1", edgecolor = "k", legend=True)
+        main_df.boundary.plot(ax=sp_map)
         sp_map.set_title(f"{metric_val}")
 
         # fig.canvas.draw_idle()
@@ -304,9 +319,9 @@ def load_graph():
     sp_section.set_xticklabels(tickslabels, rotation=40)
 
     span = SpanSelector(
-        sp_section,
-        onselect_func,
-        "horizontal",
+        ax = sp_section,
+        onselect = onselect_func,
+        direction = "horizontal",
         useblit=True,
         props=dict(alpha=0.5, facecolor="tab:orange"),
         interactive=True,
@@ -357,7 +372,7 @@ def load_graph():
     # update_trend(tw, amount)
 
     #Set actions for GUI items.     
-    span.on_changed(onselect_func)
+    # span.onselect(onselect_func)
     cycle_time_button.on_clicked(cycle_time)        
 
     #Main checkbutton actions
