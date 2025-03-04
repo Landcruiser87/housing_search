@@ -376,14 +376,14 @@ def load_graph():
     plt.show()
 
 def main():
-    #Load historical json
-    fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
-    json_f = support.load_historical(fp)
 
     global data, chi_data
     #Load city data from data.cityofchicago.org 
     chi_data = support.socrata_api(True) #Pass in True to update city data
     #Load / clean data into a df
+    #Load historical json
+    fp = PurePath(Path.cwd(), Path(f"./data/rental_list.json"))
+    json_f = support.load_historical(fp)
     data = clean_data(json_f)
     #Load GUI
     graph = load_graph()

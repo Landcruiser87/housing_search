@@ -653,15 +653,19 @@ def socrata_api(update:bool=False):
         
         #BUG I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
         #zipcode based datasets
-
+        
         savejson = {"zip":merged_zip, "neigh":merged_neigh}
-        merged_zip.to_csv(f"./data/chicago_zip.csv", sep=",", index=False)
-        merged_neigh.to_csv(f"./data/chicago_neigh.csv", sep=",", index=False)
+        zip_json = merged_zip.to_json(na="null")
+        neigh_json = merged_neigh.to_json(na="null")
+        for jfile, fname in zip([zip_json, neigh_json], ["neigh", "zip"]):
+            with open(f"./data/chi_{fname}.json", "w") as out_f:
+                out_f.write(jfile)
+
         return savejson
     
     else:
-        fp1 ="./data/chicago_zip.csv"
-        fp2 = "./data/chicago_neigh.csv"
+        fp1 ="./data/chi_zip.json"
+        fp2 = "./data/chi_neigh.json"
         merged_zip = pd.read_csv(fp1)
         merged_neigh = pd.read_csv(fp2)
         merged_neigh["the_geom"] = merged_neigh["the_geom"].apply(load_shape_objects)

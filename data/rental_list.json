@@ -44050,5 +44050,113 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7831500901": {
+    "source": "www.craigslist.org",
+    "price": 2100.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-avondale-bed-top-floor-central/7831500901.html",
+    "address": "West George St, Chicago, IL 60618",
+    "date_pulled": "03-03-2025_18-00-12",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.933763,
+    "long": -87.720916,
+    "L_dist": [
+      "Belmont",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 5.77,
+      "murder_score": 1.7,
+      "perv_score": 1.56,
+      "theft_score": 42.11,
+      "violence_score": 25.37,
+      "property_d_score": 0.13
+    }
+  },
+  "7831443890": {
+    "source": "www.craigslist.org",
+    "price": 2450.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-river-west-modern-large-bed/7831443890.html",
+    "address": "1224 West Augusta, Chicago, IL 60642",
+    "date_pulled": "03-03-2025_18-00-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 13002.0,
+    "lat": 41.899932,
+    "long": -87.657875,
+    "L_dist": [
+      "Chicago",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 3.25,
+      "gun_score": 6.16,
+      "murder_score": 1.74,
+      "perv_score": 1.65,
+      "theft_score": 42.47,
+      "violence_score": 25.31,
+      "property_d_score": 0.14
+    }
+  },
+  "13573878": {
+    "source": "www.redfin.com",
+    "price": 1375.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/7340-N-Hoyne-Ave-60645/home/13573878",
+    "address": "The Onyx on Hoyne - 7340 N Hoyne Ave, Chicago, IL, 60645",
+    "date_pulled": "03-03-2025_18-00-58",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": 753952.0,
+    "lat": 42.0153384,
+    "long": -87.6831751,
+    "L_dist": [
+      "Howard",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 0.89,
+      "gun_score": 3.83,
+      "murder_score": 0.74,
+      "perv_score": 1.6,
+      "theft_score": 46.42,
+      "violence_score": 23.58,
+      "property_d_score": 0.11
+    }
+  },
+  "184998798": {
+    "source": "www.redfin.com",
+    "price": 1925.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3225-W-Catalpa-Ave-60625/unit-3/home/184998798",
+    "address": "3225 W Catalpa Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "03-03-2025_18-00-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.9811468,
+    "long": -87.7103805,
+    "L_dist": [
+      "Kimball",
+      0.92
+    ],
+    "crime_sc": {
+      "drug_score": 2.6,
+      "gun_score": 4.87,
+      "murder_score": 1.15,
+      "perv_score": 1.38,
+      "theft_score": 45.19,
+      "violence_score": 23.62,
+      "property_d_score": 0.12
+    }
   }
 }
