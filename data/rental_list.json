@@ -44314,5 +44314,393 @@
       "violence_score": 26.84,
       "property_d_score": 0.18
     }
+  },
+  "9073771367": {
+    "source": "www.realtor.com",
+    "price": 2495.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2346-W-Wilson-Ave-Apt-3_Chicago_IL_60625_M90737-71367",
+    "address": "2346 W Wilson Ave Apt 3 Chicago, IL 60625",
+    "date_pulled": "03-04-2025_18-09-22",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9656603176": {
+    "source": "www.realtor.com",
+    "price": 1750.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2737-W-Berwyn-Ave-G_Chicago_IL_60625_M96566-03176",
+    "address": "2737 W Berwyn Ave # G Chicago, IL 60625",
+    "date_pulled": "03-04-2025_18-10-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 975.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "wdhny7k": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3400-n-keeler-ave-chicago-il/wdhny7k/",
+    "address": "3400 N Keeler Ave, Chicago, IL 60641",
+    "date_pulled": "03-05-2025_08-17-42",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.94280365,
+    "long": -87.73241090677405,
+    "L_dist": [
+      "Irving Park",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.95,
+      "murder_score": 1.81,
+      "perv_score": 1.68,
+      "theft_score": 41.4,
+      "violence_score": 25.86,
+      "property_d_score": 0.14
+    }
+  },
+  "561mf5q": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/451-e-pershing-rd-chicago-il/561mf5q/",
+    "address": "451 E Pershing Rd, Chicago, IL 60653",
+    "date_pulled": "03-05-2025_08-17-42",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1177.0,
+    "lat": 41.8235625,
+    "long": -87.61461105000001,
+    "L_dist": [
+      "Indiana",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 2.24,
+      "gun_score": 7.97,
+      "murder_score": 2.62,
+      "perv_score": 1.39,
+      "theft_score": 38.71,
+      "violence_score": 28.15,
+      "property_d_score": 0.19
+    }
+  },
+  "jkl0bb4": {
+    "source": "www.apartments.com",
+    "price": 1995.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2442-n-ashland-ave-chicago-il/jkl0bb4/",
+    "address": "2442 N Ashland Ave, Chicago, IL 60614",
+    "date_pulled": "03-05-2025_08-17-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.92645865,
+    "long": -87.66848813193315,
+    "L_dist": [
+      "Fullerton",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 3.43,
+      "gun_score": 5.81,
+      "murder_score": 1.71,
+      "perv_score": 1.54,
+      "theft_score": 42.47,
+      "violence_score": 25.29,
+      "property_d_score": 0.13
+    }
+  },
+  "tq5jql9": {
+    "source": "www.apartments.com",
+    "price": 1550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/915-w-32nd-st-chicago-il/tq5jql9/",
+    "address": "915 W 32nd St, Chicago, IL 60608",
+    "date_pulled": "03-05-2025_08-17-42",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.836195950000004,
+    "long": -87.64937445492856,
+    "L_dist": [
+      "Halsted",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.04,
+      "gun_score": 7.96,
+      "murder_score": 2.52,
+      "perv_score": 1.63,
+      "theft_score": 38.56,
+      "violence_score": 27.85,
+      "property_d_score": 0.19
+    }
+  },
+  "qf36y8z": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1535-n-campbell-ave-chicago-il/qf36y8z/",
+    "address": "1535 N Campbell Ave, Chicago, IL 60622",
+    "date_pulled": "03-05-2025_08-17-42",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.90953304999999,
+    "long": -87.68936886045566,
+    "L_dist": [
+      "Western",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.24,
+      "gun_score": 6.0,
+      "murder_score": 1.7,
+      "perv_score": 1.58,
+      "theft_score": 42.05,
+      "violence_score": 25.59,
+      "property_d_score": 0.14
+    }
+  },
+  "9806731354": {
+    "source": "www.realtor.com",
+    "price": 2000.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2956-N-Spaulding-Ave-Apt-1R_Chicago_IL_60618_M98067-31354",
+    "address": "2956 N Spaulding Ave Apt 1R Chicago, IL 60618",
+    "date_pulled": "03-05-2025_08-19-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "sjy8945": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4518-n-kedzie-ave-chicago-il/sjy8945/",
+    "address": "4518 N Kedzie Ave, Chicago, IL 60625",
+    "date_pulled": "03-05-2025_08-20-30",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.963754949999995,
+    "long": -87.70862416284587,
+    "L_dist": [
+      "Kedzie",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 5.4,
+      "murder_score": 1.42,
+      "perv_score": 1.57,
+      "theft_score": 43.31,
+      "violence_score": 24.52,
+      "property_d_score": 0.12
+    }
+  },
+  "194944041": {
+    "source": "www.redfin.com",
+    "price": 2495.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2346-W-Wilson-Ave-60625/unit-3/home/194944041",
+    "address": "2346 W Wilson Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "03-05-2025_18-01-49",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9649882,
+    "long": -87.6881436,
+    "L_dist": [
+      "Western",
+      0.08
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 5.42,
+      "murder_score": 1.41,
+      "perv_score": 1.58,
+      "theft_score": 43.48,
+      "violence_score": 24.46,
+      "property_d_score": 0.12
+    }
+  },
+  "194945343": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1538-N-Milwaukee-Ave-60622/unit-3/home/194945343",
+    "address": "1538 N Milwaukee Ave Unit 3, Chicago, IL, 60622",
+    "date_pulled": "03-05-2025_18-03-48",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9092909,
+    "long": -87.6761846,
+    "L_dist": [
+      "Damen",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 3.27,
+      "gun_score": 6.04,
+      "murder_score": 1.71,
+      "perv_score": 1.56,
+      "theft_score": 42.08,
+      "violence_score": 25.59,
+      "property_d_score": 0.13
+    }
+  },
+  "9959335059": {
+    "source": "www.realtor.com",
+    "price": 2400.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4119-N-Narragansett-Ave-403_Chicago_IL_60634_M99593-35059",
+    "address": "4119 N Narragansett Ave Unit 403 Chicago, IL 60634",
+    "date_pulled": "03-06-2025_07-44-15",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1224.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "184586271": {
+    "source": "www.redfin.com",
+    "price": 1925.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3225-W-Catalpa-Ave-60625/unit-2/home/184586271",
+    "address": "3225 W Catalpa Ave Unit 2, Chicago, IL, 60625",
+    "date_pulled": "03-06-2025_07-44-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9811468,
+    "long": -87.7103805,
+    "L_dist": [
+      "Kimball",
+      0.92
+    ],
+    "crime_sc": {
+      "drug_score": 2.62,
+      "gun_score": 4.85,
+      "murder_score": 1.15,
+      "perv_score": 1.39,
+      "theft_score": 45.23,
+      "violence_score": 23.58,
+      "property_d_score": 0.12
+    }
+  },
+  "j1rt2e5": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/451-e-pershing-rd-chicago-il/j1rt2e5/",
+    "address": "451 E Pershing Rd, Chicago, IL 60653",
+    "date_pulled": "03-06-2025_07-45-18",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1177.0,
+    "lat": 41.8235625,
+    "long": -87.61461105000001,
+    "L_dist": [
+      "Indiana",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 2.24,
+      "gun_score": 7.97,
+      "murder_score": 2.61,
+      "perv_score": 1.39,
+      "theft_score": 38.71,
+      "violence_score": 28.14,
+      "property_d_score": 0.19
+    }
+  },
+  "dcf5s3h": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1040-w-18th-st-chicago-il/dcf5s3h/",
+    "address": "1040 W 18th St, Chicago, IL 60608",
+    "date_pulled": "03-06-2025_07-45-18",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1020.0,
+    "lat": 41.8582459,
+    "long": -87.65311247217758,
+    "L_dist": [
+      "18th",
+      0.82
+    ],
+    "crime_sc": {
+      "drug_score": 3.18,
+      "gun_score": 7.44,
+      "murder_score": 2.2,
+      "perv_score": 1.62,
+      "theft_score": 39.93,
+      "violence_score": 26.81,
+      "property_d_score": 0.17
+    }
+  },
+  "b7y0rdb": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6409-s-ellis-ave-chicago-il/b7y0rdb/",
+    "address": "6409 S Ellis Ave, Chicago, IL 60637",
+    "date_pulled": "03-06-2025_07-45-18",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.77823555,
+    "long": -87.60013031774807,
+    "L_dist": [
+      "Cottage Grove",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 1.75,
+      "gun_score": 9.14,
+      "murder_score": 3.24,
+      "perv_score": 1.48,
+      "theft_score": 34.86,
+      "violence_score": 30.72,
+      "property_d_score": 0.22
+    }
   }
 }

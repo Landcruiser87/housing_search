@@ -102,7 +102,6 @@ def clean_data(json_f:dict) -> pd.DataFrame:
             #  'mayfair', 'north-center', 'north-park', 'portage-park', 'ravenswood',
             #  'roscoe-village', 'wicker-park']
 
-    
     #Load data frame:
     data = pd.DataFrame.from_dict(json_f, orient="index")
     #Convert Dates to np.datetime64s
@@ -159,7 +158,6 @@ def load_graph():
         
         return actives
     ################## plot functions ###############################
-
     def data_transform(df:pd.DataFrame, metric:str):
         #Determine whether we're using neighborhoods or zips
         area = check_m_type.get_checked_labels()[0]
@@ -186,7 +184,7 @@ def load_graph():
                             df_prime.iloc[idx, 49] = chi_data["neigh"].iloc[miss_row[0], 36]
                         else:
                             raise ValueError("No matching neighborhood found in secondary neighborhood")
-                
+
         elif area == "Zip":
             df_prime = df.merge(
                 right = chi_data["zip"],
@@ -196,21 +194,28 @@ def load_graph():
             )
         #Group by neighborhood for counts
         if metric.startswith("Listing"):
-            plotdata = pd.DataFrame(df_prime["neigh"].value_counts(), columns=["count", "the_geom"])
+            plotdata = df_prime["neigh"].value_counts().to_frame()
+            plotdata["the_geom"] = np.nan
+            plotdata.rename(columns={"count":"freqs"}, inplace=True)
+            plotdata = gpd.GeoDataFrame(data=plotdata, geometry="the_geom", crs=chi_data["zip"].crs)
             #Fill in all geoms
             for neigh in plotdata.index:
                 plotdata.loc[neigh, "the_geom"] = df_prime["the_geom"][df_prime["neigh"]==neigh].iloc[0]
             for subneigh, neigh in MISSING_NEIGH.items():
-                if neigh in plotdata.index:
-                    plotdata.loc[neigh, "count"] += plotdata.loc[subneigh, "count"]
+                if subneigh in plotdata.index:
+                    if neigh in plotdata.index:
+                        plotdata.loc[neigh, "freqs"] += plotdata.loc[subneigh, "freqs"]
+                    else:
+                        plotdata.loc[neigh, "freqs"] = plotdata.loc[subneigh, "freqs"]
+                        plotdata.loc[neigh, "the_geom"] = plotdata.loc[subneigh, "the_geom"]
+
                     plotdata.drop(labels=subneigh, axis=0, inplace=True)
-                elif subneigh in plotdata.index:
-                    plotdata.loc[neigh] = plotdata.loc[subneigh]
+
             #Find the one's who are the same, remove the lower value and replace with the upper?
-            #index-neighborhood 
-            #listing counts
-            #geometry
-            #Need to combine neighborhoods with the same polygons. 
+                #index-neighborhood 
+                #listing counts
+                #geometry
+                #Need to combine neighborhoods with the same polygons. 
             
         elif metric.startswith("Price"):
             #I want to return prices for that neighborhood
@@ -220,7 +225,7 @@ def load_graph():
         elif metric.startswith("Health"):
             pass
 
-        return gpd.GeoDataFrame(data=plotdata, geometry="the_geom")
+        return plotdata
 
     def update_main(xmin:datetime=None, xmax:datetime=None):
         #Get active labels in the checkboxes
@@ -248,16 +253,23 @@ def load_graph():
         filtdata = data[idx_mask].copy()
 
         metric_cols = {
-            "Listing Frequency":"count",
+            "Listing Frequency":"freqs",
         }
         #Now filter and join wth chi_data depending on selection. 
         #Need the ability to select different analysis blocks
         metric_val = checkb_metric.value_selected
         main_df = data_transform(filtdata, metric_val)
-        main_df.plot(ax=sp_map, column=metric_cols[metric_val], cmap="Set1", edgecolor = "k", legend=True)
         main_df.boundary.plot(ax=sp_map)
+        main_df.plot(
+            # figsize=gs[:1], 
+            ax=sp_map, 
+            # column=metric_cols[metric_val], 
+            cmap="Set1", 
+            # edgecolor = "k", 
+            legend=True
+        )
+        
         sp_map.set_title(f"{metric_val}")
-
         # fig.canvas.draw_idle()
 
     def cycle_time():
@@ -288,11 +300,11 @@ def load_graph():
 
     ################## Loading plot objects ###############################
     global sp_map, sp_trend, sp_section, gs, tw
-    fig = plt.figure(figsize=(14, 10))
+    fig = plt.figure(figsize=(16, 8))
     gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[4, 2, 1], width_ratios=[5, 1])
     plt.subplots_adjust(hspace=0.2)
     sp_map = fig.add_subplot(gs[0, 0], label="mainplot")
-    rax = sp_map.inset_axes([0.0, 0.0, 0.15, 0.17])
+    rax = sp_map.inset_axes([0.0, 0.0, 0.18, 0.17])
     boxcolors = ["blue", "green"]
     check_m_type = CheckButtons(
         ax = rax,
