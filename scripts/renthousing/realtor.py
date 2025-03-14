@@ -41,13 +41,13 @@ def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
                     res.append(rental["description"].get(key))
             if category == "bed":
                 if res:
-                    beds = float(sorted(res)[0], reverse=True)
+                    beds = float(sorted(res, reverse=True)[0])
             elif category == "bath":
                 if res:
-                    baths = float(sorted(res)[0], reverse=True)
+                    baths = float(sorted(res, reverse=True)[0] )
             elif category == "sqft":
                 if res:
-                    sqft = float(sorted(res)[0], reverse=True)
+                    sqft = float(sorted(res, reverse=True)[0])
         
         lat = rental["location"]["address"]["coordinate"]["lat"]
         long = rental["location"]["address"]["coordinate"]["lon"]
