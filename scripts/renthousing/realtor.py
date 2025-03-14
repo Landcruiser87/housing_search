@@ -1,14 +1,15 @@
 import logging
 from bs4 import BeautifulSoup
+import json
 import requests
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
+def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
-        result [BeautifulSoup object]: html of realtor page
+        resp_json (dict): dictionary of neighborhoods
         neigh (str): neighorhood being searched
         source (str): Source website
         Propertyinfo (dataclass) : Dataclass for housing individual listings
@@ -18,63 +19,29 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     """
 
     listings = []
-    listingid = price = beds = sqft = baths = pets = url = address = current_time = None
+    listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
     #Set the outer loop over each card returned. 
-    for card in result.select('div[class*="BasePropertyCard"]'):
-        filtertest = card.get("id")
-        if "placeholder_property" in filtertest:
-            continue
-        #Grab the id
-        listingid = card.get("id")
-        listingid = listingid.replace("property_id_", "")
+    for rental in resp_json["data"]["home_search"]["properties"]:
+        #Get the propertyid
+        listingid = rental.get("property_id")
 
         # Time of pull
         current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
         #First grab the link.
-        for link in card.find_all("a", class_="card-anchor"):
-            if link.get("href"):
-                url = "https://" + source + link.get("href")
-                break
+        url = "https://" + source + "/rentals/details/" + rental.get("permalink")
+
+        price = rental.get("list_price_max")
         
-        #grab the price
-        for search in card.find_all("div"):
-            if search.get("data-testid") == "card-price":
-                price = search.text
-                if any(x.isnumeric() for x in price):
-                    price = money_launderer(search.text)
-                break
+        beds = rental["description"].get("beds_max")
+        baths = rental["description"].get("baths_max")
+        sqft = rental["description"].get("sqft_max")
         
-        #grab the beds, baths, pets
-        for search in card.find_all("ul"):
-            if search.get("data-testid") == "card-meta":
-                sqft = None
-                for subsearch in search.find_all("li"):
-                    if subsearch.get("data-testid")=="property-meta-beds":
-                        beds = subsearch.find("span").text
-                        if any(x.isnumeric() for x in beds):
-                            beds = float("".join(x for x in beds if x.isnumeric()))
+        lat = rental["location"]["address"]["coordinate"]["lat"]
+        long = rental["location"]["address"]["coordinate"]["lon"]
+        addy = rental["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
+        address = addy.strip()
 
-                    elif subsearch.get("data-testid")=="property-meta-baths":
-                        baths = subsearch.find("span").text
-                        if any(x.isnumeric() for x in baths):
-                            baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
-
-                    elif subsearch.get("data-testid")=="property-meta-sqft":
-                        sqft = subsearch.find("span", class_="meta-value").text
-                        if sqft:
-                            if any(x.isnumeric() for x in sqft):
-                                sqft = float("".join(x for x in sqft if x.isnumeric()))
-            
-    
-
-        #grab address
-        for search in card.find_all("div", class_="card-address truncate-line"):
-            if search.get("data-testid") == "card-address":
-                addy = ""
-                for subsearch in search.find_all("div", class_="truncate-line"):
-                    addy += subsearch.text + " "
-                address = addy.strip()
         #Pets is already secured in the search query so we don't have to confirm it in the data.
         pets = True
 
@@ -85,6 +52,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             neigh=neigh.lower(),
             bed=beds,
             sqft=sqft,
+            lat=lat,
+            long=long,
             bath=baths,
             dogs=pets,
             link=url,
@@ -92,7 +61,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             date_pulled=current_time
         )
         listings.append(listing)
-        listingid = price = beds = sqft = baths = pets = url = address = current_time = None
+        listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
     return listings
 
 def money_launderer(price:list)->float:
@@ -224,13 +193,13 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
         return None
 
     #Get the HTML
-    bs4ob = BeautifulSoup(response.text, 'lxml')
+    resp_json = response.json()
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    results = bs4ob.find("section", {"data-testid":"property-list"})
-    if results:
-        property_listings = get_listings(results, neigh, source, Propertyinfo)
+    count = resp_json["data"]["home_search"].get("total", "")
+    if count > 0:
+        property_listings = get_listings(resp_json, neigh, source, Propertyinfo)
         logger.info(f'{len(property_listings)} listings returned from {source}')
         return property_listings
         

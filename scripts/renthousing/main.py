@@ -60,7 +60,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["homes", "apartments", "realtor", "redfin", "zillow", "craigs"]
+SITES = ["realtor", "homes", "apartments", "redfin", "zillow", "craigs"]
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Chicago"
@@ -205,7 +205,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    # shuffle(SITES) #Keep em guessin!
+    shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
