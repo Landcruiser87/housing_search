@@ -31,11 +31,20 @@ def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
         #First grab the link.
         url = "https://" + source + "/rentals/details/" + rental.get("permalink")
 
-        price = rental.get("list_price_max")
+        price = rental.get("list_price")
         
-        beds = rental["description"].get("beds_max")
-        baths = rental["description"].get("baths_max")
-        sqft = rental["description"].get("sqft_max")
+        #well shit.  Looks like beds and bath is nested in any number of different fields.  Will need to scan them, isolate values and return the highest
+        for category in ["bed", "bath", "sqft"]: #my hands wanted to type bed bath and beyond.  Lol
+            res = []
+            for key in rental["description"].keys():
+                if category in key and rental["description"][key] is not None:
+                    res.append(rental["description"][key])
+            if category == "bed":
+                beds = sorted(res)[0]
+            elif category == "bath":
+                baths = sorted(res)[0]
+            elif category == "sqft":
+                sqft = sorted(res)[0]        
         
         lat = rental["location"]["address"]["coordinate"]["lat"]
         long = rental["location"]["address"]["coordinate"]["lon"]
@@ -161,7 +170,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
                 'list_price': {
                     'max': MAXRENT,
                 },
-                'source_id': 'ZILL',
             },
             'limit': 42,
             'offset': 0,
