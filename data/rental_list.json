@@ -46300,33 +46300,6 @@
       "property_d_score": 0.13
     }
   },
-  "7692589287": {
-    "source": "www.realtor.com",
-    "price": 2200,
-    "neigh": "roscoe-village",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/1901-W-Addison-St_Chicago_IL_60613_M76925-89287",
-    "address": "1901 W Addison St Chicago, IL 60613",
-    "date_pulled": "03-13-2025_21-49-21",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 756,
-    "lat": 41.946613,
-    "long": -87.676336,
-    "L_dist": [
-      "Addison",
-      0.09
-    ],
-    "crime_sc": {
-      "drug_score": 3.56,
-      "gun_score": 5.69,
-      "murder_score": 1.57,
-      "perv_score": 1.55,
-      "theft_score": 42.48,
-      "violence_score": 25.07,
-      "property_d_score": 0.13
-    }
-  },
   "7wf019w0zwq5v": {
     "source": "www.homes.com",
     "price": 1850.0,
@@ -46343,571 +46316,328 @@
     "L_dist": "",
     "crime_sc": {}
   },
-  "9455215638": {
-    "source": "www.realtor.com",
-    "price": 1450,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4900-N-Saint-Louis-Ave_Chicago_IL_60625_M94552-15638",
-    "address": "4900 N Saint Louis Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 2,
-    "bath": 1,
-    "sqft": null,
-    "lat": 41.970383,
-    "long": -87.716187,
-    "L_dist": [
-      "Kimball",
-      0.23
-    ],
-    "crime_sc": {
-      "drug_score": 3.23,
-      "gun_score": 5.24,
-      "murder_score": 1.3,
-      "perv_score": 1.42,
-      "theft_score": 43.65,
-      "violence_score": 24.25,
-      "property_d_score": 0.12
-    }
-  },
-  "9659154220": {
-    "source": "www.realtor.com",
-    "price": 1475,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4412-N-Saint-Louis-Ave_Chicago_IL_60625_M96591-54220",
-    "address": "4412 N Saint Louis Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 2,
-    "bath": 1,
-    "sqft": null,
-    "lat": 41.961685,
-    "long": -87.716171,
-    "L_dist": [
-      "Kimball",
-      0.46
-    ],
-    "crime_sc": {
-      "drug_score": 3.44,
-      "gun_score": 5.4,
-      "murder_score": 1.43,
-      "perv_score": 1.55,
-      "theft_score": 43.06,
-      "violence_score": 24.59,
-      "property_d_score": 0.12
-    }
-  },
-  "7222603296": {
-    "source": "www.realtor.com",
-    "price": 2244,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3634-W-Montrose-Ave_Chicago_IL_60618_M72226-03296",
-    "address": "3634 W Montrose Ave Chicago, IL 60618",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 1016,
-    "lat": 41.961161,
-    "long": -87.719515,
-    "L_dist": [
-      "Kimball",
-      0.57
-    ],
-    "crime_sc": {
-      "drug_score": 3.45,
-      "gun_score": 5.43,
-      "murder_score": 1.45,
-      "perv_score": 1.56,
-      "theft_score": 42.96,
-      "violence_score": 24.63,
-      "property_d_score": 0.12
-    }
-  },
-  "7230425628": {
-    "source": "www.realtor.com",
-    "price": 1991,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4954-N-Christiana-Ave_Chicago_IL_60625_M72304-25628",
-    "address": "4954 N Christiana Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 1006,
-    "lat": 41.971841,
-    "long": -87.712587,
-    "L_dist": [
-      "Kimball",
-      0.27
-    ],
-    "crime_sc": {
-      "drug_score": 3.14,
-      "gun_score": 5.21,
-      "murder_score": 1.28,
-      "perv_score": 1.37,
-      "theft_score": 43.82,
-      "violence_score": 24.24,
-      "property_d_score": 0.12
-    }
-  },
-  "9961024630": {
-    "source": "www.realtor.com",
-    "price": 2422,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4447-N-Kedzie-Ave_Chicago_IL_60625_M99610-24630",
-    "address": "4447 N Kedzie Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 1047,
-    "lat": 41.962578,
-    "long": -87.707947,
-    "L_dist": [
-      "Kedzie",
-      0.24
-    ],
-    "crime_sc": {
-      "drug_score": 3.44,
-      "gun_score": 5.39,
-      "murder_score": 1.43,
-      "perv_score": 1.56,
-      "theft_score": 43.18,
-      "violence_score": 24.55,
-      "property_d_score": 0.12
-    }
-  },
-  "9026840148": {
-    "source": "www.realtor.com",
-    "price": 1895,
-    "neigh": "albany-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3002-10-W-Ainslie-St_Chicago_IL_60625_M90268-40148",
-    "address": "3002-10 W Ainslie St Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-50-13",
-    "bed": 3,
-    "bath": 1,
-    "sqft": 850,
-    "lat": 41.970634,
-    "long": -87.703979,
-    "L_dist": [
-      "Francisco",
-      0.34
-    ],
-    "crime_sc": {
-      "drug_score": 3.22,
-      "gun_score": 5.25,
-      "murder_score": 1.32,
-      "perv_score": 1.4,
-      "theft_score": 43.74,
-      "violence_score": 24.27,
-      "property_d_score": 0.12
-    }
-  },
-  "9795887310": {
-    "source": "www.realtor.com",
-    "price": 1995,
-    "neigh": "north-center",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2236-42-W-Byron-St_Chicago_IL_60618_M97958-87310",
-    "address": "2236-42 W Byron St Chicago, IL 60618",
-    "date_pulled": "03-13-2025_21-52-06",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 700,
-    "lat": 41.952426095377,
-    "long": -87.685009544964,
-    "L_dist": [
-      "Irving Park",
-      0.54
-    ],
-    "crime_sc": {
-      "drug_score": 3.58,
-      "gun_score": 5.61,
-      "murder_score": 1.52,
-      "perv_score": 1.57,
-      "theft_score": 42.52,
-      "violence_score": 24.97,
-      "property_d_score": 0.13
-    }
-  },
-  "7109988341": {
-    "source": "www.realtor.com",
-    "price": 1895,
-    "neigh": "avondale",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3000-N-Whipple-St_Chicago_IL_60618_M71099-88341",
-    "address": "3000 N Whipple St Chicago, IL 60618",
-    "date_pulled": "03-13-2025_21-52-45",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 817,
-    "lat": 41.935926,
-    "long": -87.70421,
-    "L_dist": [
-      "Belmont",
-      0.45
-    ],
-    "crime_sc": {
-      "drug_score": 3.42,
-      "gun_score": 5.74,
-      "murder_score": 1.69,
-      "perv_score": 1.57,
-      "theft_score": 42.18,
-      "violence_score": 25.28,
-      "property_d_score": 0.13
-    }
-  },
-  "9550054828": {
-    "source": "www.realtor.com",
-    "price": 1928,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4713-N-Western-Ave_Chicago_IL_60625_M95500-54828",
-    "address": "4713 N Western Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 1056,
-    "lat": 41.9671305,
-    "long": -87.6885439,
-    "L_dist": [
-      "Western",
-      0.07
-    ],
-    "crime_sc": {
-      "drug_score": 3.38,
-      "gun_score": 5.28,
-      "murder_score": 1.33,
-      "perv_score": 1.58,
-      "theft_score": 43.67,
-      "violence_score": 24.27,
-      "property_d_score": 0.12
-    }
-  },
-  "9118100258": {
-    "source": "www.realtor.com",
-    "price": 1895,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2103-23-W-Berwyn-Ave_Chicago_IL_60625_M91181-00258",
-    "address": "2103-23 W Berwyn Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 1151,
-    "lat": 41.977512,
-    "long": -87.682365,
-    "L_dist": [
-      "Damen",
-      0.8
-    ],
-    "crime_sc": {
-      "drug_score": 2.99,
-      "gun_score": 5.05,
-      "murder_score": 1.26,
-      "perv_score": 1.38,
-      "theft_score": 44.68,
-      "violence_score": 23.78,
-      "property_d_score": 0.12
-    }
-  },
-  "8909022592": {
-    "source": "www.realtor.com",
-    "price": 2404,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/1938-W-Lawrence-Ave_Chicago_IL_60640_M89090-22592",
-    "address": "1938 W Lawrence Ave Chicago, IL 60640",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 870,
-    "lat": 41.968907,
-    "long": -87.677899,
-    "L_dist": [
-      "Damen",
-      0.18
-    ],
-    "crime_sc": {
-      "drug_score": 3.34,
-      "gun_score": 5.31,
-      "murder_score": 1.36,
-      "perv_score": 1.54,
-      "theft_score": 43.76,
-      "violence_score": 24.22,
-      "property_d_score": 0.12
-    }
-  },
-  "7359550134": {
-    "source": "www.realtor.com",
-    "price": 1695,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/5054-N-Wolcott-Ave_Chicago_IL_60640_M73595-50134",
-    "address": "5054 N Wolcott Ave Chicago, IL 60640",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 775,
-    "lat": 41.974152,
-    "long": -87.676778,
-    "L_dist": [
-      "Damen",
-      0.55
-    ],
-    "crime_sc": {
-      "drug_score": 3.11,
-      "gun_score": 5.2,
-      "murder_score": 1.3,
-      "perv_score": 1.37,
-      "theft_score": 44.27,
-      "violence_score": 24.06,
-      "property_d_score": 0.12
-    }
-  },
-  "7687469610": {
-    "source": "www.realtor.com",
-    "price": 2050,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2600-W-Montrose-Ave_Chicago_IL_60618_M76874-69610",
-    "address": "2600 W Montrose Ave Chicago, IL 60618",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 1100,
-    "lat": 41.961541,
-    "long": -87.693844,
-    "L_dist": [
-      "Rockwell",
-      0.32
-    ],
-    "crime_sc": {
-      "drug_score": 3.49,
-      "gun_score": 5.45,
-      "murder_score": 1.46,
-      "perv_score": 1.57,
-      "theft_score": 43.11,
-      "violence_score": 24.62,
-      "property_d_score": 0.12
-    }
-  },
-  "9183452140": {
-    "source": "www.realtor.com",
-    "price": 2950,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2150-W-Lawrence-Ave_Chicago_IL_60625_M91834-52140",
-    "address": "2150 W Lawrence Ave Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 945,
-    "lat": 41.968979,
-    "long": -87.683685,
-    "L_dist": [
-      "Western",
-      0.31
-    ],
-    "crime_sc": {
-      "drug_score": 3.32,
-      "gun_score": 5.3,
-      "murder_score": 1.35,
-      "perv_score": 1.55,
-      "theft_score": 43.68,
-      "violence_score": 24.26,
-      "property_d_score": 0.12
-    }
-  },
-  "7370349307": {
-    "source": "www.realtor.com",
-    "price": 2295,
-    "neigh": "lincoln-square",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/2100-W-Ainslie-St_Chicago_IL_60625_M73703-49307",
-    "address": "2100 W Ainslie St Chicago, IL 60625",
-    "date_pulled": "03-13-2025_21-53-49",
-    "bed": 2,
-    "bath": 1,
-    "sqft": null,
-    "lat": 41.970664,
-    "long": -87.681858,
-    "L_dist": [
-      "Damen",
-      0.34
-    ],
-    "crime_sc": {
-      "drug_score": 3.29,
-      "gun_score": 5.3,
-      "murder_score": 1.33,
-      "perv_score": 1.38,
-      "theft_score": 43.8,
-      "violence_score": 24.25,
-      "property_d_score": 0.12
-    }
-  },
-  "7704675103": {
+  "8059134041": {
     "source": "www.realtor.com",
     "price": 1850,
     "neigh": "portage-park",
     "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/5111-W-Montrose-Ave_Chicago_IL_60641_M77046-75103",
-    "address": "5111 W Montrose Ave Chicago, IL 60641",
-    "date_pulled": "03-13-2025_21-56-23",
-    "bed": 3,
-    "bath": 2,
-    "sqft": 650,
-    "lat": 41.96035,
-    "long": -87.755129,
+    "link": "https://www.realtor.com/rentals/details/4535-N-Milwaukee-Ave-Apt-6_Chicago_IL_60630_M80591-34041",
+    "address": "4535 N Milwaukee Ave Unit 6B Chicago, IL 60630",
+    "date_pulled": "03-14-2025_08-08-54",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 955.0,
+    "lat": 41.963514,
+    "long": -87.75656,
     "L_dist": [
-      "Montrose",
-      0.6
+      "Jefferson Park",
+      0.54
     ],
     "crime_sc": {
-      "drug_score": 4.09,
-      "gun_score": 6.24,
-      "murder_score": 1.83,
-      "perv_score": 1.78,
-      "theft_score": 39.8,
-      "violence_score": 26.44,
+      "drug_score": 4.12,
+      "gun_score": 6.26,
+      "murder_score": 1.82,
+      "perv_score": 1.81,
+      "theft_score": 39.66,
+      "violence_score": 26.45,
       "property_d_score": 0.15
     }
   },
-  "7048208438": {
+  "9625810082": {
     "source": "www.realtor.com",
-    "price": 2050,
+    "price": 1675,
     "neigh": "portage-park",
     "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4050-N-Milwaukee-Ave_Chicago_IL_60641_M70482-08438",
-    "address": "4050 N Milwaukee Ave Chicago, IL 60641",
-    "date_pulled": "03-13-2025_21-56-23",
-    "bed": 3,
-    "bath": 1.5,
-    "sqft": 1034,
-    "lat": 41.954269,
-    "long": -87.749084,
+    "link": "https://www.realtor.com/rentals/details/3620-N-Lavergne-Ave_Chicago_IL_60641_M96258-10082",
+    "address": "3620 N Lavergne Ave Unit Garden Chicago, IL 60641",
+    "date_pulled": "03-14-2025_08-08-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.946674,
+    "long": -87.752228,
     "L_dist": [
       "Montrose",
-      0.58
+      1.12
     ],
     "crime_sc": {
-      "drug_score": 3.89,
-      "gun_score": 6.09,
-      "murder_score": 1.77,
-      "perv_score": 1.75,
-      "theft_score": 40.17,
-      "violence_score": 26.51,
-      "property_d_score": 0.15
+      "drug_score": 4.0,
+      "gun_score": 6.33,
+      "murder_score": 1.87,
+      "perv_score": 1.74,
+      "theft_score": 39.41,
+      "violence_score": 26.88,
+      "property_d_score": 0.16
     }
   },
-  "9833419389": {
+  "9332297678": {
     "source": "www.realtor.com",
-    "price": 1975,
+    "price": 2200,
     "neigh": "irving-park",
     "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/4321-23-N-Tripp-Ave_Chicago_IL_60641_M98334-19389",
-    "address": "4321-23 N Tripp Ave Chicago, IL 60641",
-    "date_pulled": "03-13-2025_21-57-31",
-    "bed": 2,
-    "bath": 2,
-    "sqft": 1162,
-    "lat": 41.959778,
-    "long": -87.733673,
+    "link": "https://www.realtor.com/rentals/details/4206-N-Sacramento-Ave-Apt-3F_Chicago_IL_60618_M93322-97678",
+    "address": "4206 N Sacramento Ave Apt 3F Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-09-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.957832,
+    "long": -87.703484,
     "L_dist": [
-      "Montrose",
-      0.52
+      "Francisco",
+      0.57
     ],
     "crime_sc": {
-      "drug_score": 3.61,
-      "gun_score": 5.72,
-      "murder_score": 1.63,
-      "perv_score": 1.67,
-      "theft_score": 41.9,
-      "violence_score": 25.36,
+      "drug_score": 3.49,
+      "gun_score": 5.49,
+      "murder_score": 1.46,
+      "perv_score": 1.58,
+      "theft_score": 42.82,
+      "violence_score": 24.75,
       "property_d_score": 0.13
     }
   },
-  "9118745700": {
+  "7770589809": {
     "source": "www.realtor.com",
-    "price": 1695,
-    "neigh": "irving-park",
+    "price": 1895,
+    "neigh": "north-center",
     "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3319-21-N-Karlov-Ave_Chicago_IL_60641_M91187-45700",
-    "address": "3319-21 N Karlov Ave Chicago, IL 60641",
-    "date_pulled": "03-13-2025_21-57-31",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 660,
-    "lat": 41.94149,
-    "long": -87.729439,
+    "link": "https://www.realtor.com/rentals/details/2336-W-Addison-St-Apt-1H_Chicago_IL_60618_M77705-89809",
+    "address": "2336 W Addison St Unit H1 Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-10-38",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.946882,
+    "long": -87.687326,
     "L_dist": [
       "Addison",
-      0.67
+      0.65
     ],
     "crime_sc": {
       "drug_score": 3.54,
-      "gun_score": 5.87,
-      "murder_score": 1.72,
-      "perv_score": 1.64,
-      "theft_score": 41.55,
-      "violence_score": 25.75,
-      "property_d_score": 0.14
-    }
-  },
-  "8326557379": {
-    "source": "www.realtor.com",
-    "price": 1750,
-    "neigh": "irving-park",
-    "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/3731-N-Kimball-Ave_Chicago_IL_60618_M83265-57379",
-    "address": "3731 N Kimball Ave Chicago, IL 60618",
-    "date_pulled": "03-13-2025_21-57-31",
-    "bed": 2,
-    "bath": 1,
-    "sqft": null,
-    "lat": 41.949471,
-    "long": -87.712498,
-    "L_dist": [
-      "Addison",
-      0.37
-    ],
-    "crime_sc": {
-      "drug_score": 3.47,
-      "gun_score": 5.57,
-      "murder_score": 1.5,
-      "perv_score": 1.56,
-      "theft_score": 42.48,
-      "violence_score": 25.0,
+      "gun_score": 5.66,
+      "murder_score": 1.55,
+      "perv_score": 1.57,
+      "theft_score": 42.4,
+      "violence_score": 25.09,
       "property_d_score": 0.13
     }
   },
-  "9241041685": {
-    "source": "www.realtor.com",
-    "price": 1895,
-    "neigh": "wicker-park",
+  "gksntxw": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
     "dogs": true,
-    "link": "https://www.realtor.com/rentals/details/1505-N-Hoyne-Ave_Chicago_IL_60622_M92410-41685",
-    "address": "1505 N Hoyne Ave Chicago, IL 60622",
-    "date_pulled": "03-13-2025_21-58-54",
-    "bed": 2,
-    "bath": 1,
-    "sqft": 633,
-    "lat": 41.908478,
-    "long": -87.679459,
+    "link": "https://www.apartments.com/3814-w-grenshaw-st-chicago-il/gksntxw/",
+    "address": "3814 W Grenshaw St, Chicago, IL 60624",
+    "date_pulled": "03-14-2025_08-12-59",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.86735995,
+    "long": -87.72094992746489,
     "L_dist": [
-      "Damen",
-      0.14
+      "Pulaski",
+      0.51
     ],
     "crime_sc": {
-      "drug_score": 3.29,
-      "gun_score": 6.05,
-      "murder_score": 1.69,
-      "perv_score": 1.56,
-      "theft_score": 41.98,
-      "violence_score": 25.58,
-      "property_d_score": 0.14
+      "drug_score": 3.44,
+      "gun_score": 6.98,
+      "murder_score": 1.94,
+      "perv_score": 1.68,
+      "theft_score": 39.96,
+      "violence_score": 26.52,
+      "property_d_score": 0.18
+    }
+  },
+  "7532089642": {
+    "source": "www.realtor.com",
+    "price": 2200,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5235-N-Winchester-Ave-3_Chicago_IL_60640_M75320-89642",
+    "address": "5235 N Winchester Ave Unit 3 Chicago, IL 60640",
+    "date_pulled": "03-14-2025_08-13-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.977227,
+    "long": -87.677702,
+    "L_dist": [
+      "Damen",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 3.02,
+      "gun_score": 5.06,
+      "murder_score": 1.26,
+      "perv_score": 1.38,
+      "theft_score": 44.68,
+      "violence_score": 23.82,
+      "property_d_score": 0.12
+    }
+  },
+  "8122235065": {
+    "source": "www.realtor.com",
+    "price": 1986,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4703-N-Albany-Ave-Apt-2_Chicago_IL_60625_M81222-35065",
+    "address": "4703 N Albany Ave Apt 2 Chicago, IL 60625",
+    "date_pulled": "03-14-2025_08-15-32",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 913.0,
+    "lat": 41.966842,
+    "long": -87.705696,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.33,
+      "gun_score": 5.23,
+      "murder_score": 1.32,
+      "perv_score": 1.58,
+      "theft_score": 43.6,
+      "violence_score": 24.26,
+      "property_d_score": 0.12
+    }
+  },
+  "9716723642": {
+    "source": "www.realtor.com",
+    "price": 1895,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3604-W-Roscoe-St-1R_Chicago_IL_60618_M97167-23642",
+    "address": "3604 W Roscoe St Unit 1R Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-16-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.942986,
+    "long": -87.717911,
+    "L_dist": [
+      "Addison",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 3.45,
+      "gun_score": 5.66,
+      "murder_score": 1.6,
+      "perv_score": 1.57,
+      "theft_score": 42.23,
+      "violence_score": 25.18,
+      "property_d_score": 0.13
+    }
+  },
+  "9143783795": {
+    "source": "www.realtor.com",
+    "price": 1650,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3223-N-Troy-St-1_Chicago_IL_60618_M91437-83795",
+    "address": "3223 N Troy St Unit 1 Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-16-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.940056,
+    "long": -87.706169,
+    "L_dist": [
+      "Belmont",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 3.45,
+      "gun_score": 5.69,
+      "murder_score": 1.65,
+      "perv_score": 1.57,
+      "theft_score": 42.24,
+      "violence_score": 25.22,
+      "property_d_score": 0.13
+    }
+  },
+  "9729766915": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3045-W-Addison-St-3_Chicago_IL_60618_M97297-66915",
+    "address": "3045 W Addison St Unit 3 Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-16-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.946449,
+    "long": -87.70475,
+    "L_dist": [
+      "Belmont",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 5.62,
+      "murder_score": 1.54,
+      "perv_score": 1.57,
+      "theft_score": 42.4,
+      "violence_score": 25.07,
+      "property_d_score": 0.13
+    }
+  },
+  "9184326195": {
+    "source": "www.realtor.com",
+    "price": 2250,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2842-W-Fletcher-St-Apt-2S_Chicago_IL_60618_M91843-26195",
+    "address": "2842 W Fletcher St Apt 2S Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-16-27",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.938667,
+    "long": -87.699532,
+    "L_dist": [
+      "Belmont",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 3.46,
+      "gun_score": 5.71,
+      "murder_score": 1.65,
+      "perv_score": 1.58,
+      "theft_score": 42.24,
+      "violence_score": 25.25,
+      "property_d_score": 0.13
+    }
+  },
+  "9047455296": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3328-N-Avers-Ave-Apt-1_Chicago_IL_60618_M90474-55296",
+    "address": "3328 N Avers Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "03-14-2025_08-16-27",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.941833,
+    "long": -87.723915,
+    "L_dist": [
+      "Addison",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 5.71,
+      "murder_score": 1.61,
+      "perv_score": 1.57,
+      "theft_score": 42.19,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
     }
   }
 }

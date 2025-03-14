@@ -185,26 +185,6 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
 
     response = requests.post('https://www.realtor.com/frontdoor/graphql', headers=headers, json=json_data)
 
-    #BUG - 
-        #I think some apts might be getting in.  Check tomorrow. 
-
-    # BASE_HEADERS = {
-    #     'accept': '*/*',
-    #     'accept-language': 'en-US,en;q=0.9',
-    #     'referer': url,
-    #     'origin':'https://www.realtor.com',
-    #     'priority': 'u=1, i',
-    #     'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="120", "Chromium";v="120"',
-    #     'sec-ch-ua-mobile': '?1',
-    #     'sec-ch-ua-platform': '"Android"',
-    #     'sec-fetch-dest': 'empty',
-    #     'sec-fetch-mode': 'cors',
-    #     'sec-fetch-site': 'cross-site',
-    #     'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-    # }
-          
-    # response = requests.get(url, headers=BASE_HEADERS)
-
     #Just in case we piss someone off
     if response.status_code != 200:
         # If there's an error, log it and return no data for that site
