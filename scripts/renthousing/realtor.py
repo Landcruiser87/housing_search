@@ -37,14 +37,17 @@ def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
         for category in ["bed", "bath", "sqft"]: #my hands wanted to type bed bath and beyond.  Lol
             res = []
             for key in rental["description"].keys():
-                if category in key and rental["description"][key] is not None:
-                    res.append(rental["description"][key])
+                if category in key and rental["description"].get(key) is not None:
+                    res.append(rental["description"].get(key))
             if category == "bed":
-                beds = sorted(res)[0]
+                if res:
+                    beds = float(sorted(res)[0], reverse=True)
             elif category == "bath":
-                baths = sorted(res)[0]
+                if res:
+                    baths = float(sorted(res)[0], reverse=True)
             elif category == "sqft":
-                sqft = sorted(res)[0]        
+                if res:
+                    sqft = float(sorted(res)[0], reverse=True)
         
         lat = rental["location"]["address"]["coordinate"]["lat"]
         long = rental["location"]["address"]["coordinate"]["lon"]
