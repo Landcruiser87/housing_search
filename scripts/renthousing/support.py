@@ -33,7 +33,7 @@ from pathlib import Path, PurePath
 
 ################################# Logging Funcs ####################################
 
-def get_file_handler(log_dir:Path, current_date:str)->logging.FileHandler:
+def get_file_handler(log_dir:Path)->logging.FileHandler:
     """Assigns the saved file logger format and location to be saved
 
     Args:
@@ -76,7 +76,7 @@ def get_logger(log_dir:Path, console:Console)->logging.Logger:
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
     logger.addHandler(get_file_handler(log_dir)) 
-    logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
+    # logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
     logger.propagate = False
     return logger
 
