@@ -33,7 +33,7 @@ from pathlib import Path, PurePath
 
 ################################# Logging Funcs ####################################
 
-def get_file_handler(log_dir:Path)->logging.FileHandler:
+def get_file_handler(log_dir:Path, current_date:str)->logging.FileHandler:
     """Assigns the saved file logger format and location to be saved
 
     Args:
@@ -43,9 +43,9 @@ def get_file_handler(log_dir:Path)->logging.FileHandler:
         filehandler(handler): This will handle the logger's format and file management
     """	
     LOG_FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-14s|%(message)s|" 
-    current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-    log_file = log_dir / f"{current_date}.log"
-    file_handler = logging.FileHandler(log_file)
+    # current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
+    # log_file = log_dir / f"{current_date}.log"
+    file_handler = logging.FileHandler(log_dir)
     file_handler.setFormatter(logging.Formatter(LOG_FORMAT, "%m-%d-%Y %H:%M:%S"))
     return file_handler
 
@@ -76,7 +76,7 @@ def get_logger(log_dir:Path, console:Console)->logging.Logger:
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
     logger.addHandler(get_file_handler(log_dir)) 
-    # logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
+    logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
     logger.propagate = False
     return logger
 
@@ -96,6 +96,29 @@ DATE_JSON = get_time().strftime("%m-%d-%Y_%H-%M-%S")
 console = Console(color_system="auto", stderr=True)
 log_dir = PurePath(Path.cwd(), Path(f'./data/logs/{DATE_JSON}.log'))
 logger = get_logger(log_dir=log_dir, console=console)
+
+#FUNCTION Log time
+################################# Timing Func ####################################
+def log_time(fn):
+    """Decorator timing function.  Accepts any function and returns a logging
+    statement with the amount of time it took to run. DJ, I use this code everywhere still.  Thank you bud!
+
+    Args:
+        fn (function): Input function you want to time
+    """	
+    def inner(*args, **kwargs):
+        tnow = time.time()
+        out = fn(*args, **kwargs)
+        te = time.time()
+        took = round(te - tnow, 2)
+        if took <= 60:
+            logging.warning(f"{fn.__name__} ran in {took:.2f}s")
+        elif took <= 3600:
+            logging.warning(f"{fn.__name__} ran in {(took)/60:.2f}m")		
+        else:
+            logging.warning(f"{fn.__name__} ran in {(took)/3600:.2f}h")
+        return out
+    return inner
 
 ################################# Rich Functions ####################################
 

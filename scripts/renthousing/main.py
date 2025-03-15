@@ -13,7 +13,7 @@ from pathlib import Path, PurePath
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
 #Import logger and console from support
-from support import logger, console
+from support import logger, console, log_time
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
@@ -125,28 +125,6 @@ class Propertyinfo():
     # cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
     # def dict(self):
     #     return {k: str(v) for k, v in asdict(self).items()}
-#FUNCTION Log time
-################################# Timing Func ####################################
-def log_time(fn):
-    """Decorator timing function.  Accepts any function and returns a logging
-    statement with the amount of time it took to run. DJ, I use this code everywhere still.  Thank you bud!
-
-    Args:
-        fn (function): Input function you want to time
-    """	
-    def inner(*args, **kwargs):
-        tnow = time.time()
-        out = fn(*args, **kwargs)
-        te = time.time()
-        took = round(te - tnow, 2)
-        if took <= 60:
-            logging.warning(f"{fn.__name__} ran in {took:.2f}s")
-        elif took <= 3600:
-            logging.warning(f"{fn.__name__} ran in {(took)/60:.2f}m")		
-        else:
-            logging.warning(f"{fn.__name__} ran in {(took)/3600:.2f}h")
-        return out
-    return inner
 
 ################################# Main Funcs ####################################
 #FUNCTION Add Data
@@ -298,7 +276,6 @@ def main():
     newlistings = []
     fp = "./data/rental_list.json"
     totalstops = len(AREAS) * len(SITES)
-
     layout, progbar, task, main_table = support.make_rich_display(totalstops)
 
     #Load rental_list.json
