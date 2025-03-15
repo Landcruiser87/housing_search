@@ -12,6 +12,8 @@ from pathlib import Path, PurePath
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
+#Import logger and console from support
+from support import logger, console
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
@@ -220,7 +222,7 @@ def scrape(neigh:str, progbar, task, layout):
             if source=="craigs" and c_scrape==False:
                 c_scrape = True
                 logger.info(f"scraping {site[0]}")
-                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, SEARCH_PARAMS, jsondata)
+                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS, jsondata)
 
             elif source=="craigs" and c_scrape==True:
                 continue
@@ -228,7 +230,7 @@ def scrape(neigh:str, progbar, task, layout):
             else:
                 #every other site, scrape it normally
                 logger.info(f"scraping {site[0]} for {neigh}")
-                data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, SEARCH_PARAMS)
+                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
             support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
@@ -297,10 +299,6 @@ def main():
     fp = "./data/rental_list.json"
     totalstops = len(AREAS) * len(SITES)
 
-    global logger, console
-    console = Console(color_system="auto")
-    log_path = PurePath(Path.cwd(), Path("./data/logs"))
-    logger = support.get_logger(log_path, console=console)
     layout, progbar, task, main_table = support.make_rich_display(totalstops)
 
     #Load rental_list.json

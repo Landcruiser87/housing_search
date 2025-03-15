@@ -29,9 +29,7 @@ from rich.table import Table
 from rich.text import Text
 from geopy import Nominatim, ArcGIS
 import geopandas as gpd
-from pathlib import Path
-
-console = Console(color_system="truecolor")
+from pathlib import Path, PurePath
 
 ################################# Logging Funcs ####################################
 
@@ -81,6 +79,23 @@ def get_logger(log_dir:Path, console:Console)->logging.Logger:
     # logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
     logger.propagate = False
     return logger
+
+#FUNCTION get time
+def get_time():
+    """Function for getting current time
+
+    Returns:
+        t_adjusted (str): String of current time
+    """
+    current_t_s = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
+    current_t = datetime.datetime.strptime(current_t_s, "%m-%d-%Y-%H-%M-%S")
+    return current_t
+
+########################## Global Variables ##########################################
+DATE_JSON = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+console = Console(color_system="auto", stderr=True)
+log_dir = PurePath(Path.cwd(), Path(f'./data/logs/{DATE_JSON}.log'))
+logger = get_logger(log_dir=log_dir, console=console)
 
 ################################# Rich Functions ####################################
 

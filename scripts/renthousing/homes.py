@@ -1,17 +1,17 @@
 import logging
 from bs4 import BeautifulSoup
+from support import logger
 import requests
 import time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo, PETS)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
         result (BeautifulSoup object): html of apartments page
         neigh (str): neighorhood being searched
         source (str): Source website
-        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass) : Dataclass for housing individual listings
         Pets (bool) : Whether or not you are searching for a furry friend
 
@@ -84,13 +84,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
 
     return listings
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
         neigh (Union[str,int]): Neighborhood or zipcode searched
         source (str): What site is being scraped
-        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
 
@@ -161,7 +160,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     if not nores and not errorres:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
-            property_listings = get_listings(results, neigh, source, logger, Propertyinfo, PETS)
+            property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
             

@@ -1,6 +1,7 @@
 import logging
 import json
 from bs4 import BeautifulSoup
+from support import logger
 import numpy as np
 import requests
 from urllib.parse import urlencode
@@ -100,13 +101,12 @@ def money_launderer(price:int)->str:
     else:
         return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
         neigh (Union[str,int]): Neighborhood or zipcode searched
         source (str): What site is being scraped
-        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
 

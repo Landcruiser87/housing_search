@@ -1,5 +1,6 @@
 import logging
 from bs4 import BeautifulSoup
+from support import logger
 import json
 import requests
 import time
@@ -89,13 +90,12 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
         neigh (Union[str,int]): Neighborhood or zipcode searched
         source (str): What site is being scraped
-        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
 
@@ -125,7 +125,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
     
     #Error Trapping
     else:
-        logging.critical("Inproper input for area, moving to next site")
+        logger.critical("Inproper input for area, moving to next site")
         return None
     
     headers = {
@@ -181,7 +181,7 @@ def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo,
             },
         },
         'query': 'query ConsumerSearchQuery($query: HomeSearchCriteria!, $limit: Int, $offset: Int, $sort: [SearchAPISort], $bucket: SearchAPIBucket, $search_promotion: SearchPromotionInput) {\n  home_search(\n    query: $query\n    sort: $sort\n    limit: $limit\n    offset: $offset\n    bucket: $bucket\n    search_promotion: $search_promotion\n  ) {\n    costar_counts {\n      costar_total\n      non_costar_total\n      __typename\n    }\n    total\n    count\n    search_promotion {\n      name\n      names\n      slots\n      promoted_properties {\n        id\n        from_other_page\n        __typename\n      }\n      __typename\n    }\n    properties: results {\n      property_id\n      listing_id\n      list_price\n      list_price_max\n      list_price_min\n      permalink\n      price_reduced_amount\n      matterport\n      has_specials\n      application_url\n      rentals_application_eligibility {\n        accepts_applications\n        __typename\n      }\n      search_promotions {\n        name\n        asset_id\n        __typename\n      }\n      virtual_tours {\n        href\n        __typename\n      }\n      status\n      list_date\n      lead_attributes {\n        lead_type\n        is_premium_ldp\n        is_schedule_a_tour\n        __typename\n      }\n      pet_policy {\n        cats\n        dogs\n        dogs_small\n        dogs_large\n        __typename\n      }\n      other_listings {\n        rdc {\n          listing_id\n          status\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_pending\n        __typename\n      }\n      photos(limit: 3, https: true) {\n        href\n        __typename\n      }\n      primary_photo(https: true) {\n        href\n        __typename\n      }\n      advertisers {\n        type\n        office {\n          name\n          phones {\n            number\n            type\n            primary\n            trackable\n            ext\n            __typename\n          }\n          __typename\n        }\n        phones {\n          number\n          type\n          primary\n          trackable\n          ext\n          __typename\n        }\n        rental_management {\n          fulfillment_id\n          customer_set\n          name\n          logo\n          href\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_new_listing\n        __typename\n      }\n      location {\n        address {\n          line\n          city\n          coordinate {\n            lat\n            lon\n            __typename\n          }\n          country\n          state_code\n          postal_code\n          __typename\n        }\n        county {\n          name\n          fips_code\n          __typename\n        }\n        __typename\n      }\n      description {\n        beds\n        beds_max\n        beds_min\n        baths_min\n        baths_max\n        baths_consolidated\n        garage\n        garage_min\n        garage_max\n        sqft\n        sqft_max\n        sqft_min\n        name\n        sub_type\n        type\n        year_built\n        __typename\n      }\n      units {\n        availability {\n          date\n          __typename\n        }\n        description {\n          baths_consolidated\n          baths\n          beds\n          sqft\n          __typename\n        }\n        list_price\n        __typename\n      }\n      branding {\n        type\n        photo\n        name\n        __typename\n      }\n      source {\n        id\n        community_id\n        type\n        feed_type\n        __typename\n      }\n      details {\n        category\n        text\n        parent_category\n        __typename\n      }\n      products {\n        products\n        brand_name\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}',
-}
+    }
 
     response = requests.post('https://www.realtor.com/frontdoor/graphql', headers=headers, json=json_data)
 

@@ -1,5 +1,5 @@
-import logging
 from bs4 import BeautifulSoup
+from support import logger
 import numpy as np
 import requests
 import time
@@ -47,7 +47,7 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
             links.append(url)
     return links
     
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logger, srch_par:tuple, jsondata:dict)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:dict)->list:
     """[Scrapes individual pages for listing information]
 
     Args:
@@ -55,7 +55,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         neigh (Union[str,int]): Neighborhood or zipcode searched
         source (str): What site is being scraped
         Propertyinfo (dataclass): Custom data object
-        logger (logging.logger): logger for logging
         srch_par (tuple): Tuple of search parameters
         jsondata (dict): Data uploaded from rental_list.json
 
@@ -183,12 +182,11 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, logg
         listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long =  None
     return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tuple, jsondata:dict):
+def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:dict):
     """[Outer scraping function to set up request pulls]
     Args:
         neigh (str): Neighborhood zip to be scraped
         source (str): Website we're searching
-        logger (logging): For all the logging
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
         jsondata (dict): Data uploaded from rental_list.json
@@ -274,7 +272,7 @@ def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, srch_par:tu
     results = bs4ob.find_all("li", class_="cl-static-search-result")
     if results:
         if len(results) > 0:
-            property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, logger, srch_par, jsondata)
+            property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, srch_par, jsondata)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
     

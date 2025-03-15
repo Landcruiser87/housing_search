@@ -46639,5 +46639,194 @@
       "violence_score": 25.2,
       "property_d_score": 0.13
     }
+  },
+  "184856288": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5019-N-Ashland-Ave-60640/unit-3R/home/184856288",
+    "address": "5019 N Ashland Ave Unit 3R, Chicago, IL, 60640",
+    "date_pulled": "03-15-2025_07-52-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9730537,
+    "long": -87.669188,
+    "L_dist": [
+      "Argyle",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 3.26,
+      "gun_score": 5.2,
+      "murder_score": 1.27,
+      "perv_score": 1.34,
+      "theft_score": 44.36,
+      "violence_score": 24.0,
+      "property_d_score": 0.12
+    }
+  },
+  "194977507": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4117-N-Narragansett-Ave-60634/unit-P102/home/194977507",
+    "address": "4117 N Narragansett Ave Unit P102, Chicago, IL, 60634",
+    "date_pulled": "03-15-2025_07-55-45",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1224.0,
+    "lat": 41.9552833,
+    "long": -87.7859925,
+    "L_dist": [
+      "Jefferson Park",
+      1.67
+    ],
+    "crime_sc": {
+      "drug_score": 5.39,
+      "gun_score": 7.34,
+      "murder_score": 2.2,
+      "perv_score": 1.99,
+      "theft_score": 35.39,
+      "violence_score": 28.56,
+      "property_d_score": 0.19
+    }
+  },
+  "8566909441": {
+    "source": "www.realtor.com",
+    "price": 2100,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2900-N-Talman-Ave-Apt-2_Chicago_IL_60618_M85669-09441",
+    "address": "2900 N Talman Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "03-15-2025_07-56-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.934074,
+    "long": -87.694363,
+    "L_dist": [
+      "Logan Square",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.44,
+      "gun_score": 5.74,
+      "murder_score": 1.68,
+      "perv_score": 1.58,
+      "theft_score": 42.17,
+      "violence_score": 25.31,
+      "property_d_score": 0.13
+    }
+  },
+  "9769088938": {
+    "source": "www.realtor.com",
+    "price": 1895,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3000-N-Whipple-St-4_Chicago_IL_60618_M97690-88938",
+    "address": "3000 N Whipple St Unit 4 Chicago, IL 60618",
+    "date_pulled": "03-15-2025_07-56-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 817.0,
+    "lat": 41.935936,
+    "long": -87.704216,
+    "L_dist": [
+      "Belmont",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 3.43,
+      "gun_score": 5.72,
+      "murder_score": 1.68,
+      "perv_score": 1.58,
+      "theft_score": 42.16,
+      "violence_score": 25.28,
+      "property_d_score": 0.13
+    }
+  },
+  "2083220489": {
+    "source": "www.zillow.com",
+    "price": 2100.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2900-N-Talman-Ave-2-Chicago-IL-60618/2083220489_zpid/",
+    "address": "2900 N Talman Ave #2, Chicago, IL 60618",
+    "date_pulled": "03-15-2025_07-57-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.934074,
+    "long": -87.69437,
+    "L_dist": [
+      "Logan Square",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.44,
+      "gun_score": 5.74,
+      "murder_score": 1.68,
+      "perv_score": 1.58,
+      "theft_score": 42.16,
+      "violence_score": 25.31,
+      "property_d_score": 0.13
+    }
+  },
+  "tzxjygb": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1817-s-peoria-st-chicago-il/tzxjygb/",
+    "address": "1817 S Peoria St, Chicago, IL 60608",
+    "date_pulled": "03-15-2025_07-59-10",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8560086762923,
+    "long": -87.64823505770848,
+    "L_dist": [
+      "Halsted",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 7.44,
+      "murder_score": 2.18,
+      "perv_score": 1.62,
+      "theft_score": 40.0,
+      "violence_score": 26.83,
+      "property_d_score": 0.17
+    }
+  },
+  "e96n2qq": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4535-n-milwaukee-ave-chicago-il/e96n2qq/",
+    "address": "4535 N Milwaukee Ave, Chicago, IL 60630",
+    "date_pulled": "03-15-2025_07-59-10",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 955.0,
+    "lat": 41.96342815,
+    "long": -87.75656815005308,
+    "L_dist": [
+      "Jefferson Park",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 6.26,
+      "murder_score": 1.82,
+      "perv_score": 1.81,
+      "theft_score": 39.64,
+      "violence_score": 26.47,
+      "property_d_score": 0.15
+    }
   }
 }

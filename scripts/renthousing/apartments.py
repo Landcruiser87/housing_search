@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import time
 from typing import Union
+from support import logger
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
@@ -115,13 +116,12 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:Union[str, int], source:str, logger:logging, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
         neigh (Union[str,int]): Neighborhood or zipcode searched
         source (str): What site is being scraped
-        logger (logging.logger): logger for Kenny loggin
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
 
