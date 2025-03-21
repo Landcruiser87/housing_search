@@ -7,7 +7,7 @@ Datasets are kept in the data folder.
 
 
 ### Base Python Requirements
-- Python >= 3.8
+- Python >= 3.11
 
 
 ### Required Libraries
@@ -18,7 +18,9 @@ Datasets are kept in the data folder.
   - Pandas
   - requests
   - BeautifulSoup - (I know i know.  But its the best way to parse html)
-    -No available json data for any of the housing sites so I had to use the soups. 
+  - matplotlib
+  - lxml
+    
 
 ### Other Requirements
 - In order to use the email functionality, you need to create a dummy account on gmail. 
@@ -42,6 +44,7 @@ Datasets are kept in the data folder.
 ### Sites to search
 - [x] - [apartments.com](https://www.apartments.com)
 - [x] - [craigslist](https://www.craiglist.org)
+- [x] - [homes](https://www.homes.com)
 - [x] - [realtor.com](https://www.realtor.com)
 - [x] - [redfin](https://www.redfin.com)
 - [x] - [zillow](https://www.zillow.com)
