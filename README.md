@@ -14,12 +14,13 @@ Datasets are kept in the data folder.
 - Found in the requirements.txt file
 - ipykernel installs a bunch of crap for me to use with python interative in VSCode.  
 - Basic libraries are:
+  - BeautifulSoup - (I know i know.  But its the best way to parse html)
+  - lxml
+  - matplotlib
   - Numpy
   - Pandas
   - requests
-  - BeautifulSoup - (I know i know.  But its the best way to parse html)
-  - matplotlib
-  - lxml
+  - Rich
     
 
 ### Other Requirements
