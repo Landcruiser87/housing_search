@@ -139,8 +139,9 @@ dmypy.json
 .DS_Store
 
 .vscode/*
-.housing_venv/*
-secret/*
+/.housing_venv
+/.venv
+/secret
 scrap/*
 scripts/__pycache__/
 scripts/housing/__pycache__/

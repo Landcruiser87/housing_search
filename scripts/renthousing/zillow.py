@@ -1,11 +1,10 @@
-import json
 from bs4 import BeautifulSoup
 from support import logger
+from typing import Union
 import numpy as np
 import requests
-from urllib.parse import urlencode, quote
+import json
 import time
-from typing import Union
 
 def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
