@@ -138,7 +138,7 @@ dmypy.json
 .Rhistory
 .DS_Store
 
-.vscode/*
+/.vscode
 /.housing_venv
 /.venv
 /secret
