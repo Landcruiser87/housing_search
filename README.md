@@ -43,10 +43,10 @@ Datasets are kept in the data folder.
    
 
 ### Sites to search
-- [x] - [apartments.com](https://www.apartments.com)
+- [x] - [apartments](https://www.apartments.com)
 - [x] - [craigslist](https://www.craiglist.org)
 - [x] - [homes](https://www.homes.com)
-- [x] - [realtor.com](https://www.realtor.com)
+- [x] - [realtor](https://www.realtor.com)
 - [x] - [redfin](https://www.redfin.com)
 - [x] - [zillow](https://www.zillow.com)
 
