@@ -48652,5 +48652,204 @@
       "violence_score": 25.27,
       "property_d_score": 0.13
     }
+  },
+  "2127090005": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4735-N-Washtenaw-Ave-APT-2-Chicago-IL-60625/2127090005_zpid/",
+    "address": "4735 N Washtenaw Ave APT 2, Chicago, IL 60625",
+    "date_pulled": "03-22-2025_08-24-07",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1850.0,
+    "lat": 41.9683,
+    "long": -87.69583,
+    "L_dist": [
+      "Rockwell",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.3,
+      "gun_score": 5.21,
+      "murder_score": 1.37,
+      "perv_score": 1.57,
+      "theft_score": 43.67,
+      "violence_score": 24.24,
+      "property_d_score": 0.12
+    }
+  },
+  "lh5zy9z364chn": {
+    "source": "www.homes.com",
+    "price": 2195.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1431-w-cortez-st-chicago-il-unit-1r/lh5zy9z364chn/",
+    "address": "1431 W Cortez St Unit 1R Chicago, IL 60642",
+    "date_pulled": "03-22-2025_08-24-31",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 2000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "bb3vk6hd04sc9": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3510-saint-paul-ave-bellwood-il-unit-ch/bb3vk6hd04sc9/",
+    "address": "3510 Saint Paul Ave Unit CH Bellwood, IL 60104 Chicago",
+    "date_pulled": "03-22-2025_08-24-31",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "grqfjqg3ze10n": {
+    "source": "www.homes.com",
+    "price": 1800.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2411-s-56th-ct-cicero-il-unit-1/grqfjqg3ze10n/",
+    "address": "2411 S 56th Ct Unit 1 Cicero, IL 60804 Chicago",
+    "date_pulled": "03-22-2025_08-24-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8645422727": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2111-W-Roscoe-St-Side-2_Chicago_IL_60618_M86454-22727",
+    "address": "2111 W Roscoe St Unit 2R Chicago, IL 60618",
+    "date_pulled": "03-22-2025_18-06-06",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.942903,
+    "long": -87.681392,
+    "L_dist": [
+      "Addison",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.58,
+      "gun_score": 5.7,
+      "murder_score": 1.69,
+      "perv_score": 1.55,
+      "theft_score": 42.22,
+      "violence_score": 25.19,
+      "property_d_score": 0.13
+    }
+  },
+  "vcjhb40c3bjpn": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1540-franklin-ave-river-forest-il-unit-b/vcjhb40c3bjpn/",
+    "address": "1540 Franklin Ave Unit B River Forest, IL 60305 Chicago",
+    "date_pulled": "03-22-2025_18-06-20",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1800.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "7669548541": {
+    "source": "www.realtor.com",
+    "price": 1850,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4711-N-Albany-Ave-1_Chicago_IL_60625_M76695-48541",
+    "address": "4711 N Albany Ave Unit 1 Chicago, IL 60625",
+    "date_pulled": "03-22-2025_18-11-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.967024,
+    "long": -87.705898,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.36,
+      "gun_score": 5.2,
+      "murder_score": 1.37,
+      "perv_score": 1.56,
+      "theft_score": 43.55,
+      "violence_score": 24.26,
+      "property_d_score": 0.12
+    }
+  },
+  "190107722": {
+    "source": "www.redfin.com",
+    "price": 1850.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4711-N-Albany-Ave-60625/unit-1/home/190107722",
+    "address": "4711 N Albany Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "03-22-2025_18-12-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.9670255,
+    "long": -87.7056046,
+    "L_dist": [
+      "Kedzie",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.36,
+      "gun_score": 5.2,
+      "murder_score": 1.37,
+      "perv_score": 1.56,
+      "theft_score": 43.54,
+      "violence_score": 24.27,
+      "property_d_score": 0.12
+    }
+  },
+  "9hsmld5": {
+    "source": "www.apartments.com",
+    "price": 1975.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/125-s-leavitt-st-chicago-il/9hsmld5/",
+    "address": "125 S Leavitt St, Chicago, IL 60612",
+    "date_pulled": "03-22-2025_18-13-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.8791711,
+    "long": -87.6811707145263,
+    "L_dist": [
+      "Illinois Medical District",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 3.22,
+      "gun_score": 6.69,
+      "murder_score": 1.9,
+      "perv_score": 1.65,
+      "theft_score": 40.72,
+      "violence_score": 26.23,
+      "property_d_score": 0.15
+    }
   }
 }
