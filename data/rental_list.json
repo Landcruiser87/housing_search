@@ -50427,5 +50427,59 @@
       "violence_score": 28.02,
       "property_d_score": 0.19
     }
+  },
+  "swm51q4": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/2751-n-whipple-st-chicago-il/swm51q4/",
+    "address": "2751 N Whipple St, Chicago, IL 60647",
+    "date_pulled": "03-31-2025_08-17-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.93181495,
+    "long": -87.70357369733345,
+    "L_dist": [
+      "Logan Square",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 3.47,
+      "gun_score": 5.66,
+      "murder_score": 1.75,
+      "perv_score": 1.56,
+      "theft_score": 42.05,
+      "violence_score": 25.32,
+      "property_d_score": 0.13
+    }
+  },
+  "2113479056": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2110-W-Cuyler-Ave-3-Chicago-IL-60618/2113479056_zpid/",
+    "address": "2110 W Cuyler Ave #3, Chicago, IL 60618",
+    "date_pulled": "03-31-2025_17-33-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.95531,
+    "long": -87.68174,
+    "L_dist": [
+      "Irving Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 5.52,
+      "murder_score": 1.56,
+      "perv_score": 1.57,
+      "theft_score": 42.5,
+      "violence_score": 24.96,
+      "property_d_score": 0.12
+    }
   }
 }
