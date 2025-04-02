@@ -38,6 +38,8 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
         url_pref = f"https://{CITY}.craigslist.org/doc"
     elif CITY == 'sfbay':
         url_pref = f"https://{CITY}.craigslist.org/sfc"
+    elif CITY == 'denver':
+        url_pref = f"https://{CITY}.craigslist.org/"
     else:
         url_pref = f"https://{CITY}.craigslist.org/"
 

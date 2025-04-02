@@ -50481,5 +50481,210 @@
       "violence_score": 24.96,
       "property_d_score": 0.12
     }
+  },
+  "qhqfrqy": {
+    "source": "www.apartments.com",
+    "price": 1750.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3735-n-kimball-ave-chicago-il/qhqfrqy/",
+    "address": "3735 N Kimball Ave, Chicago, IL 60618",
+    "date_pulled": "04-01-2025_08-08-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.94945885,
+    "long": -87.71252827023305,
+    "L_dist": [
+      "Addison",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.54,
+      "gun_score": 5.5,
+      "murder_score": 1.55,
+      "perv_score": 1.55,
+      "theft_score": 42.31,
+      "violence_score": 25.03,
+      "property_d_score": 0.13
+    }
+  },
+  "d7zhdtl": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5618-s-laflin-st-chicago-il/d7zhdtl/",
+    "address": "5618 S Laflin St, Chicago, IL 60636",
+    "date_pulled": "04-01-2025_08-11-00",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.79163885,
+    "long": -87.66235909310517,
+    "L_dist": [
+      "Ashland/63rd",
+      0.89
+    ],
+    "crime_sc": {
+      "drug_score": 2.89,
+      "gun_score": 8.56,
+      "murder_score": 3.03,
+      "perv_score": 1.68,
+      "theft_score": 35.54,
+      "violence_score": 29.57,
+      "property_d_score": 0.2
+    }
+  },
+  "kg8jqtb": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1918-n-california-ave-chicago-il/kg8jqtb/",
+    "address": "1918 N California Ave, Chicago, IL 60647",
+    "date_pulled": "04-01-2025_08-11-00",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.91632475,
+    "long": -87.69740845000001,
+    "L_dist": [
+      "California",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 3.38,
+      "gun_score": 5.77,
+      "murder_score": 1.71,
+      "perv_score": 1.55,
+      "theft_score": 41.92,
+      "violence_score": 25.5,
+      "property_d_score": 0.13
+    }
+  },
+  "87cc7j2": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2233-n-southport-ave-chicago-il/87cc7j2/",
+    "address": "2233 N Southport Ave, Chicago, IL 60614",
+    "date_pulled": "04-01-2025_08-11-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.92264365,
+    "long": -87.6629723,
+    "L_dist": [
+      "Fullerton",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.73,
+      "murder_score": 1.74,
+      "perv_score": 1.52,
+      "theft_score": 42.4,
+      "violence_score": 25.12,
+      "property_d_score": 0.13
+    }
+  },
+  "kd4jmkc": {
+    "source": "www.apartments.com",
+    "price": 2550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/848-n-wood-st-chicago-il/kd4jmkc/",
+    "address": "848 N Wood St, Chicago, IL 60622",
+    "date_pulled": "04-01-2025_08-11-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.89739075,
+    "long": -87.6724779495554,
+    "L_dist": [
+      "Division",
+      0.51
+    ],
+    "crime_sc": {
+      "drug_score": 3.33,
+      "gun_score": 6.16,
+      "murder_score": 1.81,
+      "perv_score": 1.66,
+      "theft_score": 41.76,
+      "violence_score": 25.63,
+      "property_d_score": 0.14
+    }
+  },
+  "z6hgr5qfgybdz": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2931-n-natoma-ave-chicago-il-unit-5/z6hgr5qfgybdz/",
+    "address": "2931 N Natoma Ave Unit 5 Chicago, IL 60634",
+    "date_pulled": "04-01-2025_17-22-26",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1742.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "l0qbrmf": {
+    "source": "www.apartments.com",
+    "price": 1995.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3508-w-cortland-st-chicago-il/l0qbrmf/",
+    "address": "3508 W Cortland St, Chicago, IL 60647",
+    "date_pulled": "04-01-2025_17-23-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 840.0,
+    "lat": 41.9157846,
+    "long": -87.71399974312705,
+    "L_dist": [
+      "California",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 5.73,
+      "murder_score": 1.65,
+      "perv_score": 1.56,
+      "theft_score": 41.88,
+      "violence_score": 25.49,
+      "property_d_score": 0.13
+    }
+  },
+  "7n1yx3x": {
+    "source": "www.apartments.com",
+    "price": 1650.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6446-n-seeley-ave-chicago-il/7n1yx3x/",
+    "address": "6446 N Seeley Ave, Chicago, IL 60645",
+    "date_pulled": "04-01-2025_17-23-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.99939585,
+    "long": -87.6816412746429,
+    "L_dist": [
+      "Morse",
+      1.02
+    ],
+    "crime_sc": {
+      "drug_score": 1.32,
+      "gun_score": 4.4,
+      "murder_score": 0.81,
+      "perv_score": 1.56,
+      "theft_score": 45.92,
+      "violence_score": 23.77,
+      "property_d_score": 0.12
+    }
   }
 }
