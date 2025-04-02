@@ -52,8 +52,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                 addy = subsearch.text
             #Grab bed bath
             for subsearch in card.find_all("div", class_="bedRange"):
-                extrafun = subsearch.text.lower()
-                if "ft" in extrafun:#lol
+                extrafun = subsearch.text.lower().strip()
+                extrafun = "".join(x for x in extrafun if x.isalnum() | x.isspace())
+                if "ft" in extrafun: #lol
                     #quick comma count
                     count = extrafun.count(",")
                     if count < 3:
@@ -72,9 +73,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
                         #Because some toolbag didn't put the baths in 
                         #their listing.  smh.  
                     elif "bed" in extrafun:
-                        beds = float(extrafun)
+                        beds = extrafun
                     elif "bath" in extrafun:
-                        baths = float(extrafun)
+                        baths = extrafun
 
                 if beds:
                     if any(x.isnumeric() for x in beds):

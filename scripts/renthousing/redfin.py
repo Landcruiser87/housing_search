@@ -190,18 +190,40 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
         else:
             url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning'#,has-parking
+
+        response = requests.get(url_search, headers = BASE_HEADERS)
+
     #Searchby ZipCode
     elif isinstance(neigh, int):
+        chrome_version = np.random.randint(120, 132)
+        INT_HEADERS = {
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'max-age=0',
+            'priority': 'u=0, i',
+            'referer': f'{source}',
+            'sec-ch-ua': f"'Google Chrome';v={chrome_version}, 'Not-A.Brand';v='8', 'Chromium';v={chrome_version}",
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'same-origin',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
+        }
         if PETS:
             url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
         else:
             url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
+        
+        response = requests.get(url_search, headers = INT_HEADERS)
     #Error Trapping
     else:
         logging.critical("Inproper input for redfin, moving to next site")
         return None
         
-    response = requests.get(url_search, headers = BASE_HEADERS)
+    
 
     #Just in case we piss someone off
     if response.status_code != 200:

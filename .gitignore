@@ -141,6 +141,7 @@ dmypy.json
 /.vscode
 /.housing_venv
 /.venv
+/scripts/backup
 /secret
 scrap/*
 scripts/__pycache__/

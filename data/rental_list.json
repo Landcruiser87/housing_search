@@ -50686,5 +50686,75 @@
       "violence_score": 23.77,
       "property_d_score": 0.12
     }
+  },
+  "xxn796p": {
+    "source": "www.apartments.com",
+    "price": 2375.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3707-n-lockwood-ave-chicago-il/xxn796p/",
+    "address": "3707 N Lockwood Ave, Chicago, IL 60641",
+    "date_pulled": "04-02-2025_08-21-24",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9480541,
+    "long": -87.75924475253623,
+    "L_dist": [
+      "Montrose",
+      1.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.45,
+      "gun_score": 6.52,
+      "murder_score": 2.01,
+      "perv_score": 1.78,
+      "theft_score": 38.48,
+      "violence_score": 27.07,
+      "property_d_score": 0.16
+    }
+  },
+  "pxwgmbt": {
+    "source": "www.apartments.com",
+    "price": 2325.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3637-w-belmont-chicago-il/pxwgmbt/",
+    "address": "3637 W belmont Unit #1, Chicago, IL 60618",
+    "date_pulled": "04-02-2025_08-22-20",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "6t96p3t": {
+    "source": "www.apartments.com",
+    "price": 2315.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1536-n-talman-ave-chicago-il/6t96p3t/",
+    "address": "1536 N Talman Ave, Chicago, IL 60622",
+    "date_pulled": "04-02-2025_08-22-20",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9095122,
+    "long": -87.69358045092565,
+    "L_dist": [
+      "Western",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.36,
+      "gun_score": 5.88,
+      "murder_score": 1.71,
+      "perv_score": 1.56,
+      "theft_score": 41.85,
+      "violence_score": 25.58,
+      "property_d_score": 0.13
+    }
   }
 }

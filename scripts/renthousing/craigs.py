@@ -271,7 +271,7 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
     bs4ob = BeautifulSoup(response.text, 'lxml')
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    results = bs4ob.find_all("li", class_="cl-static-search-result")
+    results = bs4ob.find_all("ol", class_="cl-static-search-results")
     if results:
         if len(results) > 0:
             property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, srch_par, jsondata)
@@ -281,3 +281,6 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
     else:
         logger.warning("No listings returned on craigs.  Moving to next site")
 
+#NOTE - Hangs on craigs.  Ugh.  So.   Craigs has changed their zero result return in denver to just be 9k generally random colorado residents.  
+#Suuuuuuuuuuuuuuuuuuuper annoying guys.   Ugh.  I don't see any obvious way to test if there's no results.  
+#Oh you bastards you just switched the li to an ol and added an s.  Ha!  They've got jokes!

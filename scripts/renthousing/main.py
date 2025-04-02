@@ -17,33 +17,36 @@ from support import logger, console, log_time
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
-# AREAS = [
-# 20003, 20007, 20008, 20009, 20057, 20015, 20016
-# #Problem zips 22201,22101, 22207 - In Arlington.  Need to run arlington separately
-# ]
+
+#NOTE - Be sure to run these as a list of ints.  This software uses the datatype to dictate logic
+AREAS = [80108, 80110, 80111, 80112, 80120, 80121, 80122,
+    80124, 80126, 80129, 80130, 80236, 80237
+]
+
+
 
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
-AREAS = [
-    'Ravenswood',
-    'Portage Park',    #
-    'Irving Park',     #
-    'Albany Park',     #
-    'North Center',    #
-    'North Park',      #
-    'Lincoln Square',  #    
-    'Avondale',        #    #New add
-    'Wicker Park',     #    #New add
-    'Roscoe Village',
-    'Budlong Woods',
-    'Mayfair',
-    # 'Jefferson Park',   #too far out
-    # 'West Ridge',       #too far out
-    # 'Rogers Park',
-    # 'West Town', 
-    # 'Humboldt Park'
-    # 'Ravenswood Gardens',
-]
+# AREAS = [
+#     'Ravenswood',
+#     'Portage Park',    #
+#     'Irving Park',     #
+#     'Albany Park',     #
+#     'North Center',    #
+#     'North Park',      #
+#     'Lincoln Square',  #    
+#     'Avondale',        #    #New add
+#     'Wicker Park',     #    #New add
+#     'Roscoe Village',
+#     'Budlong Woods',
+#     'Mayfair',
+#     # 'Jefferson Park',   #too far out
+#     # 'West Ridge',       #too far out
+#     # 'Rogers Park',
+#     # 'West Town', 
+#     # 'Humboldt Park'
+#     # 'Ravenswood Gardens',
+# ]
 
 # SF Testing
 # AREAS = [
@@ -62,11 +65,11 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["realtor", "homes", "apartments", "redfin", "zillow", "craigs"]
+SITES = ["craigs", "apartments", "realtor", "homes", "redfin", "zillow"]
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Chicago"
-STATE   = "IL"
+CITY    = "Denver"
+STATE   = "CO"
 MINBEDS = 2
 MAXRENT = 2600
 DOGS    = True
@@ -185,7 +188,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -287,7 +290,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
@@ -298,9 +301,9 @@ def main():
         # format the list of dataclassses to a url 
         # Send gmail alerting of new properties
         if newlistings:
-            support.save_data(jsondata)
-            links_html = support.urlformat(newlistings)
-            support.send_housing_email(links_html)
+            # support.save_data(jsondata)
+            # links_html = support.urlformat(newlistings)
+            # support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
             
         else:

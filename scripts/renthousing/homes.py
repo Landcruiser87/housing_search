@@ -29,7 +29,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
 
         #Grab the id
         search = card.find("article", class_=lambda x: x and x.startswith("search-placard for-rent"))
-        if search:  
+        if search:
             listingid = search.get("data-pk")
         else:
             logger.warning(f"missing id for card on {source} in {neigh}")
@@ -111,7 +111,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
         else:
             url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
-            #TODO - Come back and verify this works.  URL does some funny reformatting when its a single amenity
+            
     #Searchby ZipCode
     elif isinstance(neigh, int):
         if PETS:
