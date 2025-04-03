@@ -19,34 +19,34 @@ from support import logger, console, log_time
 # input custom area's here. Uncomment whichever way you want to search
 
 #NOTE - Be sure to run these as a list of ints.  This software uses the datatype to dictate logic
-# AREAS = [80108, 80110, 80111, 80112, 80120, 80121, 80122,
-#     80124, 80126, 80129, 80130, 80236, 80237
-# ]
+AREAS = [80108, 80110, 80111, 80112, 80120, 80121, 80122,
+    80124, 80126, 80129, 80130, 80236, 80237
+]
 
 
 
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
-AREAS = [
-    'Ravenswood',
-    'Portage Park',    #
-    'Irving Park',     #
-    'Albany Park',     #
-    'North Center',    #
-    'North Park',      #
-    'Lincoln Square',  #    
-    'Avondale',        #    #New add
-    'Wicker Park',     #    #New add
-    'Roscoe Village',
-    'Budlong Woods',
-    'Mayfair',
-    # 'Jefferson Park',   #too far out
-    # 'West Ridge',       #too far out
-    # 'Rogers Park',
-    # 'West Town', 
-    # 'Humboldt Park'
-    # 'Ravenswood Gardens',
-]
+# AREAS = [
+#     'Ravenswood',
+#     'Portage Park',    #
+#     'Irving Park',     #
+#     'Albany Park',     #
+#     'North Center',    #
+#     'North Park',      #
+#     'Lincoln Square',  #    
+#     'Avondale',        #    #New add
+#     'Wicker Park',     #    #New add
+#     'Roscoe Village',
+#     'Budlong Woods',
+#     'Mayfair',
+#     # 'Jefferson Park',   #too far out
+#     # 'West Ridge',       #too far out
+#     # 'Rogers Park',
+#     # 'West Town', 
+#     # 'Humboldt Park'
+#     # 'Ravenswood Gardens',
+# ]
 
 # SF Testing
 # AREAS = [
@@ -65,15 +65,14 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["craigs", "apartments", "realtor", "homes", "redfin", "zillow"]
+SITES = ["craigs", "realtor", "apartments", "homes", "redfin", "zillow"]
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Chicago"
-STATE   = "IL"
+CITY    = "Denver"
+STATE   = "CO"
 MINBEDS = 2
 MAXRENT = 2600
 DOGS    = True
-
 
 # DC test data notes
 # CITY    = "Washington"
@@ -188,7 +187,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -290,7 +289,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

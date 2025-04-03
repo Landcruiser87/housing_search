@@ -33,6 +33,8 @@ from pathlib import Path, PurePath
 
 ################################# Logging Funcs ####################################
 
+################################# Logger functions ####################################
+#FUNCTION Logging Futures
 def get_file_handler(log_dir:Path)->logging.FileHandler:
     """Assigns the saved file logger format and location to be saved
 
@@ -42,14 +44,14 @@ def get_file_handler(log_dir:Path)->logging.FileHandler:
     Returns:
         filehandler(handler): This will handle the logger's format and file management
     """	
-    LOG_FORMAT = "%(asctime)s|%(levelname)-8s|%(lineno)-3d|%(funcName)-14s|%(message)s|" 
-    # current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-    # log_file = log_dir / f"{current_date}.log"
+    log_format = "%(asctime)s|%(levelname)-8s|%(lineno)-4d|%(funcName)-13s|%(message)-108s|" 
+                 #f"%(asctime)s - [%(levelname)s] - (%(funcName)s(%(lineno)d)) - %(message)s"
+    # current_date = time.strftime("%m_%d_%Y")
     file_handler = logging.FileHandler(log_dir)
-    file_handler.setFormatter(logging.Formatter(LOG_FORMAT, "%m-%d-%Y %H:%M:%S"))
+    file_handler.setFormatter(logging.Formatter(log_format, "%m-%d-%Y %H:%M:%S"))
     return file_handler
 
-def get_rich_handler(console:Console):
+def get_rich_handler(console:Console)-> RichHandler:
     """Assigns the rich format that prints out to your terminal
 
     Args:
@@ -58,12 +60,12 @@ def get_rich_handler(console:Console):
     Returns:
         rh(RichHandler): This will format your terminal output
     """
-    FORMAT_RICH = "| %(levelname)-8s | %(funcName)-12s |%(message)s "#%(levelname)-8s | %(lineno)-3d
-    rh = RichHandler(level=logging.INFO, console=console)
-    rh.setFormatter(logging.Formatter(FORMAT_RICH))
+    rich_format = "|%(funcName)-13s| %(message)s"
+    rh = RichHandler(console=console)
+    rh.setFormatter(logging.Formatter(rich_format))
     return rh
 
-def get_logger(log_dir:Path, console:Console)->logging.Logger:
+def get_logger(console:Console, log_dir:Path)->logging.Logger:
     """Loads logger instance.  When given a path and access to the terminal output.  The logger will save a log of all records, as well as print it out to your terminal. Propogate set to False assigns all captured log messages to both handlers.
 
     Args:
@@ -73,12 +75,20 @@ def get_logger(log_dir:Path, console:Console)->logging.Logger:
     Returns:
         logger: Returns custom logger object.  Info level reporting with a file handler and rich handler to properly terminal print
     """	
-    logger = logging.getLogger(__name__)
+    #Load logger and set basic level
+    logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    logger.addHandler(get_file_handler(log_dir)) 
-    # logger.addHandler(get_rich_handler(console))  #Was causing flickering error in the rendering because the log statments kept trying to print
+    #Load file handler for how to format the log file.
+    file_handler = get_file_handler(log_dir)
+    file_handler.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
+    #Load rich handler for how to display the log in the console
+    rich_handler = get_rich_handler(console)
+    rich_handler.setLevel(logging.INFO)
+    logger.addHandler(rich_handler)
     logger.propagate = False
     return logger
+
 
 #FUNCTION get time
 def get_time():

@@ -50756,5 +50756,172 @@
       "violence_score": 25.58,
       "property_d_score": 0.13
     }
+  },
+  "195100800": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4843-N-Oakley-Ave-60625/unit-CH/home/195100800",
+    "address": "4843 N Oakley Ave Unit CH, Chicago, IL, 60625",
+    "date_pulled": "04-02-2025_20-53-44",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 806.0,
+    "lat": 41.9699422,
+    "long": -87.6862808,
+    "L_dist": [
+      "Western",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.36,
+      "gun_score": 5.21,
+      "murder_score": 1.39,
+      "perv_score": 1.48,
+      "theft_score": 43.53,
+      "violence_score": 24.35,
+      "property_d_score": 0.12
+    }
+  },
+  "hp4e3t0j36hy9": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4735-n-washtenaw-ave-chicago-il-unit-2/hp4e3t0j36hy9/",
+    "address": "4735 N Washtenaw Ave Unit 2 Chicago, IL 60625",
+    "date_pulled": "04-02-2025_20-54-35",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1850.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "53scf4rrd319v": {
+    "source": "www.homes.com",
+    "price": 2250.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2333-w-montana-st-chicago-il-unit-1/53scf4rrd319v/",
+    "address": "2333 W Montana St Unit 1 Chicago, IL 60647",
+    "date_pulled": "04-02-2025_20-55-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9364938851": {
+    "source": "www.realtor.com",
+    "price": 2400,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3121-N-Hoyne-Ave-2_Chicago_IL_60618_M93649-38851",
+    "address": "3121 N Hoyne Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "04-02-2025_20-57-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1450.0,
+    "lat": 41.938396,
+    "long": -87.680504,
+    "L_dist": [
+      "Paulina",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.6,
+      "gun_score": 5.68,
+      "murder_score": 1.75,
+      "perv_score": 1.56,
+      "theft_score": 42.09,
+      "violence_score": 25.28,
+      "property_d_score": 0.13
+    }
+  },
+  "9578686558": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5346-W-Leland-Ave-2_Chicago_IL_60630_M95786-86558",
+    "address": "5346 W Leland Ave Unit 2 Chicago, IL 60630",
+    "date_pulled": "04-02-2025_21-01-19",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.965809,
+    "long": -87.761963,
+    "L_dist": [
+      "Jefferson Park",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 4.34,
+      "gun_score": 6.24,
+      "murder_score": 1.86,
+      "perv_score": 1.86,
+      "theft_score": 39.25,
+      "violence_score": 26.52,
+      "property_d_score": 0.15
+    }
+  },
+  "185578300": {
+    "source": "www.redfin.com",
+    "price": 1850.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4451-N-Hamlin-Ave-60625/unit-3/home/185578300",
+    "address": "4451 N Hamlin Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "04-02-2025_21-02-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9625525,
+    "long": -87.7227114,
+    "L_dist": [
+      "Kimball",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.33,
+      "murder_score": 1.48,
+      "perv_score": 1.55,
+      "theft_score": 42.94,
+      "violence_score": 24.6,
+      "property_d_score": 0.12
+    }
+  },
+  "190376307": {
+    "source": "www.redfin.com",
+    "price": 1895.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3757-W-Sunnyside-Ave-60625/unit-1/home/190376307",
+    "address": "3757 W Sunnyside Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "04-02-2025_21-02-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9626881,
+    "long": -87.722624,
+    "L_dist": [
+      "Kimball",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.33,
+      "murder_score": 1.48,
+      "perv_score": 1.55,
+      "theft_score": 42.94,
+      "violence_score": 24.6,
+      "property_d_score": 0.12
+    }
   }
 }

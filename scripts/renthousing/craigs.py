@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from support import logger
+import support
 import numpy as np
 import requests
 import time
@@ -39,7 +40,7 @@ def get_links(bs4ob:BeautifulSoup, CITY:str)->list:
     elif CITY == 'sfbay':
         url_pref = f"https://{CITY}.craigslist.org/sfc"
     elif CITY == 'denver':
-        url_pref = f"https://{CITY}.craigslist.org/"
+        url_pref = f"https://{CITY}.craigslist.org/apa"
     else:
         url_pref = f"https://{CITY}.craigslist.org/"
 
@@ -106,7 +107,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, srch
         #Being that craigs doesn't put all the info in the search page cards,
         #we've gotta Dig for the details like we did last time by scraping each
         #listing.  Meaning more requests and longer wait times. 
-
+        logger.info(f"Processing {link}")
         response = requests.get(link, headers=HEADERS)
         time.sleep(np.random.randint(4, 6))
         bs4ob = BeautifulSoup(response.text, "lxml")
@@ -235,7 +236,6 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
         'sec-ch-ua-platform': '"Android"',
     }
     #Change these to suit your housing requirements
-    #!Update tprice and min bed
     params = (
         ("airconditioning","1"),
         ("hasPic", "1"),
@@ -273,11 +273,15 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
 
-    # rescontainer = bs4ob.find("div", class_="no-results-title")
-    # if rescontainer == "no results found ":
-    #     logger.warning(f"No listings on {CITY} Craigs. Count test fail")
-    #     return None
-
+    rescontainer = bs4ob.find_all("div", class_="no-results-title")
+    if rescontainer:
+        try:
+            if rescontainer.text == "no results found ":
+                logger.warning(f"No listings found on {CITY} Craigs.")
+                return None
+        except Exception as e:
+            logger.warning(f"error: {e}")
+            
     results = bs4ob.find_all("li", class_="cl-static-search-result")
     if results:
         if len(results) > 0:
