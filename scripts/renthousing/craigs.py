@@ -245,6 +245,7 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
         ("max_price", MAXRENT),
         ("min_bedrooms", MINBEDS),
         ("min_bathrooms", "1"),
+        ("isTrusted", "true"),
         # ("availabilityMode", "0"), #can't seem to verify this parameter in the url
         ("pets_dog", "1"),
         ("laundry", ["1", "2", "3"]),
@@ -271,7 +272,13 @@ def neighscrape(neigh:str, source:str, Propertyinfo, srch_par:tuple, jsondata:di
     bs4ob = BeautifulSoup(response.text, 'lxml')
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    results = bs4ob.find_all("ol", class_="cl-static-search-results")
+
+    # rescontainer = bs4ob.find("div", class_="no-results-title")
+    # if rescontainer == "no results found ":
+    #     logger.warning(f"No listings on {CITY} Craigs. Count test fail")
+    #     return None
+
+    results = bs4ob.find_all("li", class_="cl-static-search-result")
     if results:
         if len(results) > 0:
             property_listings = get_listings(bs4ob, neigh, source, Propertyinfo, srch_par, jsondata)
