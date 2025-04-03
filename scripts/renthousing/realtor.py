@@ -6,7 +6,7 @@ import requests
 import time
 from typing import Union
 
-def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
+def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -21,6 +21,8 @@ def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
 
     listings = []
     listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
+    if isinstance(neigh, str):
+        neigh = neigh.lower()
     #Set the outer loop over each card returned. 
     for rental in resp_json["data"]["home_search"]["properties"]:
         #Get the propertyid
@@ -62,7 +64,7 @@ def get_listings(resp_json:dict, neigh:str, source:str, Propertyinfo)->list:
             id=listingid,
             source=source,
             price=price,
-            neigh=neigh.lower(),
+            neigh=neigh,
             bed=beds,
             sqft=sqft,
             lat=lat,

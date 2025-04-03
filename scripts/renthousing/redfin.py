@@ -22,6 +22,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
     """
     listings = []
     listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
+    if isinstance(neigh, str):
+        neigh = neigh.lower()
+
     #Set the outer loop over each card returned. 
     for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
 
@@ -62,7 +65,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
             id=listingid,   
             source=source,
             price=price,    
-            neigh=neigh.lower(),
+            neigh=neigh,
             bed=beds,       
             sqft=sqft,      
             bath=baths,     

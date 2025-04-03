@@ -65,7 +65,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["craigs", "realtor", "apartments", "homes", "redfin", "zillow"]
+SITES = ["realtor", "apartments", "homes", "redfin", "zillow"]#"craigs", 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Denver"
@@ -289,7 +289,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    # shuffle(AREAS)
+    shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
