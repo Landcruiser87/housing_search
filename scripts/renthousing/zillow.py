@@ -86,9 +86,9 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     MAXRENT = int(srch_par[3])
 
     #First grab the map coordinates update our next request
+    chrome_version = np.random.randint(120, 132)
     BASE_HEADERS = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'referer':f'https://www.zillow.com/{CITY}-{STATE}/',
+        'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         'origin':'https://www.zillow.com',
     }
     #BUG - Getting errors here now.  Probably need to adjust the base_headers
@@ -103,8 +103,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_map = f'https://www.zillow.com/{CITY}-{STATE}-{neigh}/rentals/?'
-        srch_terms = f"{neigh} {CITY}, {STATE.upper()}"
+        url_map = f'https://www.zillow.com/homes/for_rent/{neigh}_rid/'
     
     #Error Trapping
     else:

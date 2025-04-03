@@ -50923,5 +50923,290 @@
       "violence_score": 24.6,
       "property_d_score": 0.12
     }
+  },
+  "j1xx00ym54z9w": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2110-w-cuyler-ave-chicago-il-unit-3/j1xx00ym54z9w/",
+    "address": "2110 W Cuyler Ave Unit 3 Chicago, IL 60618",
+    "date_pulled": "04-03-2025_13-40-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "dp7yemx8r533c": {
+    "source": "www.homes.com",
+    "price": 2565.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5056-n-winchester-ave-chicago-il-unit-1w/dp7yemx8r533c/",
+    "address": "5056 N Winchester Ave Unit 1W Chicago, IL 60640",
+    "date_pulled": "04-03-2025_13-40-34",
+    "bed": 2.0,
+    "bath": 2.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "rbk7kqkb4csy8": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5449-w-melrose-st-chicago-il-unit-2/rbk7kqkb4csy8/",
+    "address": "5449 W Melrose St Unit 2 Chicago, IL 60641",
+    "date_pulled": "04-03-2025_13-41-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9315200525": {
+    "source": "www.realtor.com",
+    "price": 1200,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3450-N-Lowell-Ave-G_Chicago_IL_60641_M93152-00525",
+    "address": "3450 N Lowell Ave # G Chicago, IL 60641",
+    "date_pulled": "04-03-2025_13-41-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.944092,
+    "long": -87.736221,
+    "L_dist": [
+      "Irving Park",
+      0.71
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 5.89,
+      "murder_score": 1.85,
+      "perv_score": 1.67,
+      "theft_score": 40.89,
+      "violence_score": 26.1,
+      "property_d_score": 0.14
+    }
+  },
+  "186007812": {
+    "source": "www.redfin.com",
+    "price": 2450.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3315-W-Cullom-Ave-60618/unit-G/home/186007812",
+    "address": "3315 W Cullom Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "04-03-2025_13-42-03",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.9591532,
+    "long": -87.7113387,
+    "L_dist": [
+      "Kedzie",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.36,
+      "murder_score": 1.51,
+      "perv_score": 1.57,
+      "theft_score": 42.77,
+      "violence_score": 24.73,
+      "property_d_score": 0.12
+    }
+  },
+  "cd0y6fpf316xz": {
+    "source": "www.homes.com",
+    "price": 2100.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/6226-n-cicero-ave-chicago-il-unit-a/cd0y6fpf316xz/",
+    "address": "6226 N Cicero Ave Unit A Chicago, IL 60646",
+    "date_pulled": "04-03-2025_13-42-20",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1400.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9000026870": {
+    "source": "www.realtor.com",
+    "price": 1585,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4512-N-Laporte-Ave-Apt-3_Chicago_IL_60630_M90000-26870",
+    "address": "4512 N Laporte Ave Apt 3 Chicago, IL 60630",
+    "date_pulled": "04-03-2025_13-44-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 880.0,
+    "lat": 41.962952,
+    "long": -87.751549,
+    "L_dist": [
+      "Montrose",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.94,
+      "murder_score": 1.77,
+      "perv_score": 1.77,
+      "theft_score": 40.16,
+      "violence_score": 26.23,
+      "property_d_score": 0.14
+    }
+  },
+  "195207719": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3121-N-Hoyne-Ave-60618/unit-3/home/195207719",
+    "address": "3121 N Hoyne Ave Unit 3, Chicago, IL, 60618",
+    "date_pulled": "04-03-2025_13-45-56",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1450.0,
+    "lat": 41.9383908,
+    "long": -87.6804951,
+    "L_dist": [
+      "Paulina",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.6,
+      "gun_score": 5.67,
+      "murder_score": 1.74,
+      "perv_score": 1.56,
+      "theft_score": 42.08,
+      "violence_score": 25.28,
+      "property_d_score": 0.13
+    }
+  },
+  "zqx5vqz": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7226-w-clarence-ave-chicago-il/zqx5vqz/",
+    "address": "7226 W Clarence Ave, Chicago, IL 60631",
+    "date_pulled": "04-03-2025_13-46-40",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.99468345,
+    "long": -87.80790205289286,
+    "L_dist": [
+      "Harlem",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 6.08,
+      "murder_score": 1.11,
+      "perv_score": 1.76,
+      "theft_score": 37.69,
+      "violence_score": 26.69,
+      "property_d_score": 0.19
+    }
+  },
+  "9339052748": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3734-W-Lawrence-Ave_Chicago_IL_60625_M93390-52748",
+    "address": "3734 W Lawrence Ave Chicago, IL 60625",
+    "date_pulled": "04-03-2025_13-47-55",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.968575,
+    "long": -87.722137,
+    "L_dist": [
+      "Kimball",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.31,
+      "gun_score": 5.18,
+      "murder_score": 1.37,
+      "perv_score": 1.57,
+      "theft_score": 43.36,
+      "violence_score": 24.34,
+      "property_d_score": 0.12
+    }
+  },
+  "vvpnlxkfftylq": {
+    "source": "www.homes.com",
+    "price": 2200.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2528-w-cortez-st-chicago-il-unit-gr/vvpnlxkfftylq/",
+    "address": "2528 W Cortez St Unit GR Chicago, IL 60622",
+    "date_pulled": "04-03-2025_13-48-57",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "etmy51hfszt2t": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2528-w-cortez-st-chicago-il-unit-2r/etmy51hfszt2t/",
+    "address": "2528 W Cortez St Unit 2R Chicago, IL 60622",
+    "date_pulled": "04-03-2025_13-48-57",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9076098734": {
+    "source": "www.realtor.com",
+    "price": 2250,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2032-W-Berwyn-Ave-2_Chicago_IL_60625_M90760-98734",
+    "address": "2032 W Berwyn Ave Unit 2 Chicago, IL 60625",
+    "date_pulled": "04-03-2025_13-49-26",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.978039,
+    "long": -87.680779,
+    "L_dist": [
+      "Damen",
+      0.82
+    ],
+    "crime_sc": {
+      "drug_score": 3.03,
+      "gun_score": 4.94,
+      "murder_score": 1.28,
+      "perv_score": 1.39,
+      "theft_score": 44.56,
+      "violence_score": 23.89,
+      "property_d_score": 0.12
+    }
   }
 }
