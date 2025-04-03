@@ -99,19 +99,80 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?'
-        
-
+        response = requests.get(url_map, headers=BASE_HEADERS)
+    
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url_map = f'https://www.zillow.com/homes/for_rent/{neigh}_rid/'
-    
+        headers = {
+            'accept': '*/*',
+            'accept-language': 'en-US,en;q=0.9',
+            'content-type': 'application/json',
+            'origin': 'https://www.zillow.com',
+            'sec-ch-ua': f'"Google Chrome";v={chrome_version}, "Not-A.Brand";v="8", "Chromium";v={chrome_version}',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
+            'x-caller-id': 'static-search-page-graphql',
+        }
+
+        params = {
+            'query': f'{neigh}',
+            'queryOptions': '',
+            'resultType': [
+                'REGIONS',
+                'FORSALE',
+                'RENTALS',
+                'SOLD',
+                'COMMUNITIES',
+                'SEMANTIC_REGIONS',
+            ],
+            'querySource': 'MANUAL',
+            'shouldSpellCorrect': 'false',
+            'operationName': 'getQueryUnderstandingResults',
+        }
+
+        json_data = {
+            'operationName': 'getQueryUnderstandingResults',
+            'variables': {
+                'query': f'{neigh}',
+                'queryOptions': {
+                    'maxResults': 2,
+                    'userSearchContext': 'FOR_RENT',
+                    'spellCheck': False,
+                },
+                'resultType': [
+                    'REGIONS',
+                    'FORSALE',
+                    'RENTALS',
+                    'SOLD',
+                    'COMMUNITIES',
+                    'SEMANTIC_REGIONS',
+                ],
+                'querySource': 'MANUAL',
+                'shouldSpellCorrect': False,
+            },
+            'query': 'query getQueryUnderstandingResults($query: String!, $queryOptions: SearchAssistanceQueryOptions, $querySource: SearchAssistanceQuerySource = UNKNOWN, $resultType: [SearchAssistanceResultType], $shouldSpellCorrect: Boolean = false) {\n  searchAssistanceResult: zgsQueryUnderstandingRequest(\n    query: $query\n    queryOptions: $queryOptions\n    querySource: $querySource\n    resultType: $resultType\n  ) {\n    requestId\n    results {\n      ...SearchAssistanceResultFields\n      ...RegionResultFields\n      ...SemanticResultFields\n      ...RentalCommunityResultFields\n      ...SchoolResultFields\n      ...AddressResultFields\n    }\n  }\n}\n\nfragment SearchAssistanceResultFields on SearchAssistanceResult {\n  __typename\n  id\n  spellCorrectedMetadata @include(if: $shouldSpellCorrect) {\n    ...SpellCorrectedFields\n  }\n}\n\nfragment SpellCorrectedFields on SpellCorrectedMetadata {\n  isSpellCorrected\n  spellCorrectedQuery\n  userQuery\n}\n\nfragment RegionResultFields on SearchAssistanceRegionResult {\n  regionId\n  subType\n}\n\nfragment SemanticResultFields on SearchAssistanceSemanticResult {\n  nearMe\n  regionIds\n  regionTypes\n  regionDisplayIds\n  queryResolutionStatus\n  schoolDistrictIds\n  schoolIds\n  viewLatitudeDelta\n  filters {\n    basementStatusType\n    baths {\n      min\n      max\n    }\n    beds {\n      min\n      max\n    }\n    excludeTypes\n    hoaFeesPerMonth {\n      min\n      max\n    }\n    homeType\n    keywords\n    listingStatusType\n    livingAreaSqft {\n      min\n      max\n    }\n    lotSizeSqft {\n      min\n      max\n    }\n    parkingSpots {\n      min\n      max\n    }\n    price {\n      min\n      max\n    }\n    searchRentalFilters {\n      monthlyPayment {\n        min\n        max\n      }\n      petsAllowed\n      rentalAvailabilityDate {\n        min\n        max\n      }\n    }\n    searchSaleFilters {\n      daysOnZillow {\n        min\n        max\n      }\n    }\n    showOnlyType\n    view\n    yearBuilt {\n      min\n      max\n    }\n  }\n}\n\nfragment RentalCommunityResultFields on SearchAssistanceRentalCommunityResult {\n  location {\n    latitude\n    longitude\n  }\n}\n\nfragment SchoolResultFields on SearchAssistanceSchoolResult {\n  id\n  schoolDistrictId\n  schoolId\n}\n\nfragment AddressResultFields on SearchAssistanceAddressResult {\n  zpid\n  addressSubType: subType\n  location {\n    latitude\n    longitude\n  }\n}\n',
+        }
+
+        response = requests.post('https://www.zillow.com/zg-graph', params=params, headers=headers, json=json_data)
+
+        #BUG - Unfortunately this request only returns the region id. 
+        # I need the map coordinates as well to be able to query 
+        # the async site.  
+
+
+
     #Error Trapping
     else:
         logging.critical("Inproper input for area, moving to next site")
         return
 
-    response = requests.get(url_map, headers=BASE_HEADERS)
-    
+    #TODO - Might need to move
+        #This underneath the string instance of neighborhood
+
     # If there's an error, log it and return no data for that site
     if response.status_code != 200:
         logger.warning("The way is shut!")
