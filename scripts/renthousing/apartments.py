@@ -53,7 +53,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
             #Grab bed bath
             for subsearch in card.find_all("div", class_="bedRange"):
                 extrafun = subsearch.text.lower().strip()
-                extrafun = "".join(x for x in extrafun if x.isalnum() | x.isspace())
                 if "ft" in extrafun: #lol
                     #quick comma count
                     count = extrafun.count(",")
