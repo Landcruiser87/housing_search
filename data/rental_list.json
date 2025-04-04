@@ -51208,5 +51208,140 @@
       "violence_score": 23.89,
       "property_d_score": 0.12
     }
+  },
+  "1mj2xh4": {
+    "source": "www.apartments.com",
+    "price": 2545.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4637-n-dover-st-chicago-il/1mj2xh4/",
+    "address": "4637 N Dover St, Chicago, IL 60640",
+    "date_pulled": "04-03-2025_21-26-22",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.966436599999994,
+    "long": -87.66522520000001,
+    "L_dist": [
+      "Lawrence",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.18,
+      "murder_score": 1.37,
+      "perv_score": 1.53,
+      "theft_score": 43.89,
+      "violence_score": 24.09,
+      "property_d_score": 0.12
+    }
+  },
+  "p28g38r": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6141-s-woodlawn-ave-chicago-il/p28g38r/",
+    "address": "6141 S Woodlawn Ave, Chicago, IL 60637",
+    "date_pulled": "04-03-2025_21-26-22",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.78291565,
+    "long": -87.59593161362746,
+    "L_dist": [
+      "Cottage Grove",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 1.62,
+      "gun_score": 8.78,
+      "murder_score": 2.98,
+      "perv_score": 1.43,
+      "theft_score": 35.72,
+      "violence_score": 30.25,
+      "property_d_score": 0.21
+    }
+  },
+  "m80ejsj": {
+    "source": "www.apartments.com",
+    "price": 2216.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2451-w-howard-st-chicago-il/m80ejsj/",
+    "address": "2451 W Howard St, Chicago, IL 60645",
+    "date_pulled": "04-03-2025_21-26-22",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 42.0189415,
+    "long": -87.69251170473181,
+    "L_dist": [
+      "South Boulevard",
+      0.94
+    ],
+    "crime_sc": {
+      "drug_score": 0.88,
+      "gun_score": 3.6,
+      "murder_score": 0.75,
+      "perv_score": 1.61,
+      "theft_score": 45.96,
+      "violence_score": 23.96,
+      "property_d_score": 0.11
+    }
+  },
+  "2121386922": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3455-N-Leavitt-St-1-Chicago-IL-60618/2121386922_zpid/",
+    "address": "3455 N Leavitt St #1, Chicago, IL 60618",
+    "date_pulled": "04-03-2025_21-27-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.94479,
+    "long": -87.683,
+    "L_dist": [
+      "Addison",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 5.61,
+      "murder_score": 1.64,
+      "perv_score": 1.56,
+      "theft_score": 42.17,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "wb95lgh": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1406-n-campbell-ave-chicago-il/wb95lgh/",
+    "address": "1406 N Campbell Ave, Chicago, IL 60622",
+    "date_pulled": "04-03-2025_21-31-02",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9069193,
+    "long": -87.68983468929794,
+    "L_dist": [
+      "Western",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.34,
+      "gun_score": 5.95,
+      "murder_score": 1.74,
+      "perv_score": 1.58,
+      "theft_score": 41.78,
+      "violence_score": 25.68,
+      "property_d_score": 0.13
+    }
   }
 }

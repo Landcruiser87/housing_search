@@ -91,7 +91,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         'origin':'https://www.zillow.com',
     }
-    #BUG - Getting errors here now.  Probably need to adjust the base_headers
+
     #Search by neighborhood
     if isinstance(neigh, str):
         neigh = neigh.lower()
@@ -101,7 +101,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?'
         response = requests.get(url_map, headers=BASE_HEADERS)
     
-    #Searchby ZipCode
+    #Search by ZipCode
     elif isinstance(neigh, int):
         headers = {
             'accept': '*/*',
