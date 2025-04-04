@@ -51343,5 +51343,59 @@
       "violence_score": 25.68,
       "property_d_score": 0.13
     }
+  },
+  "449347249": {
+    "source": "www.zillow.com",
+    "price": 2575.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3848-N-Oakley-Ave-1-Chicago-IL-60618/449347249_zpid/",
+    "address": "3848 N Oakley Ave #1, Chicago, IL 60618",
+    "date_pulled": "04-04-2025_12-18-08",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.951855,
+    "long": -87.686325,
+    "L_dist": [
+      "Irving Park",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 5.51,
+      "murder_score": 1.56,
+      "perv_score": 1.57,
+      "theft_score": 42.42,
+      "violence_score": 25.0,
+      "property_d_score": 0.12
+    }
+  },
+  "hwh9nt2": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6143-s-woodlawn-ave-chicago-il/hwh9nt2/",
+    "address": "6143 S Woodlawn Ave, Chicago, IL 60637",
+    "date_pulled": "04-04-2025_12-21-13",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.78291565,
+    "long": -87.59593161362746,
+    "L_dist": [
+      "Cottage Grove",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 1.62,
+      "gun_score": 8.78,
+      "murder_score": 2.99,
+      "perv_score": 1.43,
+      "theft_score": 35.71,
+      "violence_score": 30.25,
+      "property_d_score": 0.21
+    }
   }
 }
