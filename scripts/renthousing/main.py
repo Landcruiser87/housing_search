@@ -28,9 +28,9 @@ from support import logger, console, log_time
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    'Irving Park',     #
     'Ravenswood',
     'Portage Park',    #
-    'Irving Park',     #
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
@@ -65,7 +65,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["zillow", "realtor", "apartments", "homes", "redfin"]#"craigs", 
+SITES = ["homes", "zillow", "craigs", "realtor", "apartments", "redfin"]#"craigs", 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Chicago"
@@ -172,9 +172,14 @@ def check_ids(data:list)->list:
     n_ids = set([data[x].id for x in range(len(data))])
     newids = n_ids - j_ids
     if newids:
-        #Only add the listings that are new.  
         newdata = []
-        [newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
+        data_ids = [(idx, data[idx].id) for idx, _ in enumerate(range(len(data)))]
+        #Only add the listings that are new.  
+        for ids in newids:
+           indx = [x[0] for x in data_ids if x[1]==ids][0]
+           newdata.append(data[indx]) 
+        # newdata = []
+        # [newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
         return newdata
     else:
         logger.info("Listing(s) already stored in rental_list.json") 
@@ -187,7 +192,7 @@ def scrape(neigh:str, progbar, task, layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -289,7 +294,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

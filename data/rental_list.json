@@ -51397,5 +51397,102 @@
       "violence_score": 30.25,
       "property_d_score": 0.21
     }
+  },
+  "rln8lt9vyrlbc": {
+    "source": "www.homes.com",
+    "price": 1800.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1923-n-monticello-ave-chicago-il-unit-2/rln8lt9vyrlbc/",
+    "address": "1923 N Monticello Ave Unit 2 Chicago, IL 60647",
+    "date_pulled": "04-04-2025_18-02-03",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "7g3e5tw": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5418-n-western-ave-chicago-il/7g3e5tw/",
+    "address": "5418 N Western Ave, Chicago, IL 60625",
+    "date_pulled": "04-05-2025_08-22-11",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1290.0,
+    "lat": 41.980062700000005,
+    "long": -87.68966743640777,
+    "L_dist": [
+      "Western",
+      0.96
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 4.85,
+      "murder_score": 1.22,
+      "perv_score": 1.4,
+      "theft_score": 44.86,
+      "violence_score": 23.83,
+      "property_d_score": 0.12
+    }
+  },
+  "9285607574": {
+    "source": "www.realtor.com",
+    "price": 1800,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4750-N-Kenneth-Ave-N3_Chicago_IL_60630_M92856-07574",
+    "address": "4750 N Kenneth Ave Unit N3 Chicago, IL 60630",
+    "date_pulled": "04-05-2025_08-22-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.967957,
+    "long": -87.740288,
+    "L_dist": [
+      "Montrose",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 5.45,
+      "murder_score": 1.54,
+      "perv_score": 1.73,
+      "theft_score": 42.07,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "2080053196": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5418-N-Western-Ave-2-Chicago-IL-60625/2080053196_zpid/",
+    "address": "5418 N Western Ave #2, Chicago, IL 60625",
+    "date_pulled": "04-05-2025_08-26-35",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1290.0,
+    "lat": 41.980076,
+    "long": -87.6897,
+    "L_dist": [
+      "Western",
+      0.96
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 4.85,
+      "murder_score": 1.22,
+      "perv_score": 1.4,
+      "theft_score": 44.86,
+      "violence_score": 23.83,
+      "property_d_score": 0.12
+    }
   }
 }

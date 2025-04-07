@@ -1,4 +1,5 @@
 import logging
+import numpy as np
 from bs4 import BeautifulSoup
 from support import logger
 import requests
@@ -30,7 +31,11 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
         #Grab the id
         search = card.find("article", class_=lambda x: x and x.startswith("search-placard for-rent"))
         if search:
-            listingid = search.get("data-pk")
+            try:
+                listingid = search["data-pk"]
+            except Exception as e:
+                logger.warning(f"id extraction error on {source} in {neigh}")
+                continue
         else:
             logger.warning(f"missing id for card on {source} in {neigh}")
             continue
@@ -123,22 +128,20 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     else:
         logger.critical("Inproper input for area, moving to next site")
         return
-
+    chrome_version = np.random.randint(120, 132)
     headers = {
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
         'accept-language': 'en-US,en;q=0.9',
-        'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="122", "Chromium";v="122"',
+        'sec-ch-ua': f'"Not)A;Brand";v="99", "Google Chrome";v={chrome_version}, "Chromium";v={chrome_version}',
         'sec-ch-ua-mobile': '?1',
         'sec-ch-ua-platform': '"Android"',
         'sec-fetch-dest': 'iframe',
         'sec-fetch-mode': 'navigate',
         'sec-fetch-site': 'cross-site',
         'upgrade-insecure-requests': '1',
-        'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Mobile Safari/537.36',
+        'user-agent': f'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Mobile Safari/537.36',
         'referer': url,
         'origin':'https://www.homes.com',
-        # 'Content-Type': 'text/html',
-        # 'Content-Encoding':'gzip'
     }
 
     response = requests.get(url, headers=headers)
@@ -165,4 +168,4 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             return property_listings
             
     else:
-        logger.warning("No listings returned on apartments.  Moving to next site")
+        logger.warning("No listings returned on homes.  Moving to next site")
