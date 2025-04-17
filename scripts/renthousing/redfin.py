@@ -249,7 +249,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         return 
     
     if lcount > 0:
-        results = bs4ob.find("div", class_="PhotosView reversePosition")
+        results = bs4ob.find("div", class_="PhotosView reversePosition widerHomecardsContainer")
         if results:
             if results.get("data-rf-test-id") =='photos-view':
                 property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
