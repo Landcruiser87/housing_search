@@ -54655,5 +54655,140 @@
       "violence_score": 26.94,
       "property_d_score": 0.16
     }
+  },
+  "186122642": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1518-N-Elk-Grove-Ave-60622/unit-2/home/186122642",
+    "address": "1518 N Elk Grove Ave Unit 2, Chicago, IL, 60622",
+    "date_pulled": "04-17-2025_18-54-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 740.0,
+    "lat": 41.9095776,
+    "long": -87.6748526,
+    "L_dist": [
+      "Damen",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.51,
+      "gun_score": 5.8,
+      "murder_score": 1.71,
+      "perv_score": 1.56,
+      "theft_score": 41.76,
+      "violence_score": 25.51,
+      "property_d_score": 0.13
+    }
+  },
+  "189472645": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4700-N-Western-Ave-60625/unit-P012/home/189472645",
+    "address": "4700 N Western Ave Unit P012, Chicago, IL, 60625",
+    "date_pulled": "04-17-2025_18-55-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9669781,
+    "long": -87.6891931,
+    "L_dist": [
+      "Western",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 5.08,
+      "murder_score": 1.36,
+      "perv_score": 1.6,
+      "theft_score": 43.37,
+      "violence_score": 24.35,
+      "property_d_score": 0.12
+    }
+  },
+  "194928678": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4242-N-Kimball-Ave-60618/unit-1/home/194928678",
+    "address": "4242 N Kimball Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "04-17-2025_19-00-21",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9587911,
+    "long": -87.7133255,
+    "L_dist": [
+      "Kedzie",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 3.62,
+      "gun_score": 5.26,
+      "murder_score": 1.46,
+      "perv_score": 1.58,
+      "theft_score": 42.6,
+      "violence_score": 24.73,
+      "property_d_score": 0.12
+    }
+  },
+  "190012664": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3616-N-Troy-St-60618/unit-1/home/190012664",
+    "address": "3616 N Troy St Unit 1, Chicago, IL, 60618",
+    "date_pulled": "04-17-2025_19-00-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9472118,
+    "long": -87.7068892,
+    "L_dist": [
+      "Addison",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 5.42,
+      "murder_score": 1.58,
+      "perv_score": 1.58,
+      "theft_score": 42.14,
+      "violence_score": 25.06,
+      "property_d_score": 0.13
+    }
+  },
+  "178905792": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1916-W-Byron-St-60613/unit-3/home/178905792",
+    "address": "1916 W Byron St #3, Chicago, IL, 60613",
+    "date_pulled": "04-17-2025_19-02-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9525872,
+    "long": -87.6770151,
+    "L_dist": [
+      "Irving Park",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 5.42,
+      "murder_score": 1.56,
+      "perv_score": 1.58,
+      "theft_score": 42.3,
+      "violence_score": 24.95,
+      "property_d_score": 0.13
+    }
   }
 }
