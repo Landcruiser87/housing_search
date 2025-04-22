@@ -55859,5 +55859,86 @@
       "violence_score": 24.94,
       "property_d_score": 0.13
     }
+  },
+  "j19mcr4": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/5717-n-kimball-ave-chicago-il/j19mcr4/",
+    "address": "5717 N Kimball Ave, Chicago, IL 60659",
+    "date_pulled": "04-22-2025_08-18-45",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9855039,
+    "long": -87.7134661,
+    "L_dist": [
+      "Kimball",
+      1.22
+    ],
+    "crime_sc": {
+      "drug_score": 2.76,
+      "gun_score": 4.52,
+      "murder_score": 1.0,
+      "perv_score": 1.46,
+      "theft_score": 44.66,
+      "violence_score": 23.64,
+      "property_d_score": 0.12
+    }
+  },
+  "3cswyjd": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4655-w-84th-pl-chicago-il/3cswyjd/",
+    "address": "4655 W 84th Pl, Chicago, IL 60652",
+    "date_pulled": "04-22-2025_08-20-47",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.738524,
+    "long": -87.7382411,
+    "L_dist": [
+      "Midway",
+      3.32
+    ],
+    "crime_sc": {
+      "drug_score": 1.92,
+      "gun_score": 9.06,
+      "murder_score": 2.52,
+      "perv_score": 2.02,
+      "theft_score": 32.81,
+      "violence_score": 30.34,
+      "property_d_score": 0.26
+    }
+  },
+  "rdz7601": {
+    "source": "www.apartments.com",
+    "price": 1500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/9951-s-yates-blvd-chicago-il/rdz7601/",
+    "address": "9951 S Yates Blvd, Chicago, IL 60617",
+    "date_pulled": "04-22-2025_08-20-47",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1080.0,
+    "lat": 41.7642125,
+    "long": -87.5664757,
+    "L_dist": [
+      "Cottage Grove",
+      2.31
+    ],
+    "crime_sc": {
+      "drug_score": 1.51,
+      "gun_score": 9.24,
+      "murder_score": 3.3,
+      "perv_score": 1.47,
+      "theft_score": 34.37,
+      "violence_score": 31.09,
+      "property_d_score": 0.23
+    }
   }
 }
