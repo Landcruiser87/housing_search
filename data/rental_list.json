@@ -55940,5 +55940,291 @@
       "violence_score": 31.09,
       "property_d_score": 0.23
     }
+  },
+  "7852727250": {
+    "source": "www.realtor.com",
+    "price": 2195,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4036-N-Austin-Ave-1_Chicago_IL_60634_M78527-27250",
+    "address": "4036 N Austin Ave Unit 1 Chicago, IL 60634",
+    "date_pulled": "04-22-2025_17-42-31",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.954166,
+    "long": -87.777183,
+    "L_dist": [
+      "Jefferson Park",
+      1.41
+    ],
+    "crime_sc": {
+      "drug_score": 5.43,
+      "gun_score": 6.87,
+      "murder_score": 2.16,
+      "perv_score": 2.02,
+      "theft_score": 36.0,
+      "violence_score": 27.98,
+      "property_d_score": 0.17
+    }
+  },
+  "6l0sj0v": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3914-w-altgeld-st-chicago-il/6l0sj0v/",
+    "address": "3914 W Altgeld St, Chicago, IL 60647",
+    "date_pulled": "04-22-2025_17-44-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 613.0,
+    "lat": 41.926424,
+    "long": -87.725155,
+    "L_dist": [
+      "Logan Square",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 3.68,
+      "gun_score": 5.61,
+      "murder_score": 1.73,
+      "perv_score": 1.61,
+      "theft_score": 41.49,
+      "violence_score": 25.47,
+      "property_d_score": 0.14
+    }
+  },
+  "8esq7m1": {
+    "source": "www.apartments.com",
+    "price": 1995.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6104-n-paulina-st-chicago-il/8esq7m1/",
+    "address": "6104 N Paulina St, Chicago, IL 60660",
+    "date_pulled": "04-22-2025_17-44-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.9929699,
+    "long": -87.6722683,
+    "L_dist": [
+      "Granville",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 2.48,
+      "gun_score": 4.49,
+      "murder_score": 0.84,
+      "perv_score": 1.48,
+      "theft_score": 45.33,
+      "violence_score": 23.59,
+      "property_d_score": 0.12
+    }
+  },
+  "yhg1k2t": {
+    "source": "www.apartments.com",
+    "price": 2195.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1456-n-kedzie-ave-chicago-il/yhg1k2t/",
+    "address": "1456 N Kedzie Ave, Chicago, IL 60651",
+    "date_pulled": "04-22-2025_17-44-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9081449,
+    "long": -87.7073118,
+    "L_dist": [
+      "California",
+      1.09
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 5.79,
+      "murder_score": 1.71,
+      "perv_score": 1.58,
+      "theft_score": 41.58,
+      "violence_score": 25.56,
+      "property_d_score": 0.13
+    }
+  },
+  "r9c73r2": {
+    "source": "www.apartments.com",
+    "price": 1995.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2152-w-21st-st-chicago-il/r9c73r2/",
+    "address": "2152 W 21st St, Chicago, IL 60608",
+    "date_pulled": "04-22-2025_17-44-15",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 742.0,
+    "lat": 41.8541453,
+    "long": -87.6804591,
+    "L_dist": [
+      "Damen",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 3.41,
+      "gun_score": 7.23,
+      "murder_score": 2.2,
+      "perv_score": 1.65,
+      "theft_score": 39.04,
+      "violence_score": 27.12,
+      "property_d_score": 0.16
+    }
+  },
+  "4ryl4hdcjzkb6": {
+    "source": "www.homes.com",
+    "price": 2450.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1820-n-paulina-st-chicago-il-unit-2/4ryl4hdcjzkb6/",
+    "address": "1820 N Paulina St Unit 2 Chicago, IL 60622",
+    "date_pulled": "04-22-2025_17-46-05",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2081798789": {
+    "source": "www.zillow.com",
+    "price": 1900.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4130-N-Monticello-Ave-1-Chicago-IL-60618/2081798789_zpid/",
+    "address": "4130 N Monticello Ave #1, Chicago, IL 60618",
+    "date_pulled": "04-23-2025_07-39-49",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.95653,
+    "long": -87.719475,
+    "L_dist": [
+      "Irving Park",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.68,
+      "gun_score": 5.29,
+      "murder_score": 1.49,
+      "perv_score": 1.59,
+      "theft_score": 42.3,
+      "violence_score": 24.85,
+      "property_d_score": 0.13
+    }
+  },
+  "q55fksx": {
+    "source": "www.apartments.com",
+    "price": 2085.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3944-w-barry-ave-chicago-il/q55fksx/",
+    "address": "3944 W Barry Ave, Chicago, IL 60618",
+    "date_pulled": "04-23-2025_07-42-05",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9369603,
+    "long": -87.7252138,
+    "L_dist": [
+      "Belmont",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 3.73,
+      "gun_score": 5.58,
+      "murder_score": 1.73,
+      "perv_score": 1.6,
+      "theft_score": 41.49,
+      "violence_score": 25.44,
+      "property_d_score": 0.14
+    }
+  },
+  "9879016783": {
+    "source": "www.realtor.com",
+    "price": 2400,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4841-N-Bell-Ave-2_Chicago_IL_60625_M98790-16783",
+    "address": "4841 N Bell Ave Unit 2 Chicago, IL 60625",
+    "date_pulled": "04-23-2025_07-44-18",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.969887,
+    "long": -87.68502,
+    "L_dist": [
+      "Western",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 5.07,
+      "murder_score": 1.38,
+      "perv_score": 1.5,
+      "theft_score": 43.28,
+      "violence_score": 24.37,
+      "property_d_score": 0.12
+    }
+  },
+  "450174968": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4841-N-Bell-Ave-2-Chicago-IL-60625/450174968_zpid/",
+    "address": "4841 N Bell Ave #2, Chicago, IL 60625",
+    "date_pulled": "04-23-2025_07-45-02",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.969883,
+    "long": -87.68495,
+    "L_dist": [
+      "Western",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 5.07,
+      "murder_score": 1.38,
+      "perv_score": 1.5,
+      "theft_score": 43.28,
+      "violence_score": 24.37,
+      "property_d_score": 0.12
+    }
+  },
+  "757yknx": {
+    "source": "www.apartments.com",
+    "price": 2195.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4036-n-austin-ave-chicago-il/757yknx/",
+    "address": "4036 N Austin Ave, Chicago, IL 60634",
+    "date_pulled": "04-23-2025_07-47-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.9541677,
+    "long": -87.7771298,
+    "L_dist": [
+      "Jefferson Park",
+      1.41
+    ],
+    "crime_sc": {
+      "drug_score": 5.43,
+      "gun_score": 6.86,
+      "murder_score": 2.16,
+      "perv_score": 2.01,
+      "theft_score": 36.0,
+      "violence_score": 27.97,
+      "property_d_score": 0.17
+    }
   }
 }
