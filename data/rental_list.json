@@ -56226,5 +56226,248 @@
       "violence_score": 27.97,
       "property_d_score": 0.17
     }
+  },
+  "qvbmhb3hh4m6k": {
+    "source": "www.homes.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/6212-w-school-st-chicago-il/qvbmhb3hh4m6k/",
+    "address": "6212 W School St Chicago, IL 60634",
+    "date_pulled": "04-23-2025_17-53-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9404126,
+    "long": -87.7817675,
+    "L_dist": [
+      "Jefferson Park",
+      2.35
+    ],
+    "crime_sc": {
+      "drug_score": 5.56,
+      "gun_score": 7.15,
+      "murder_score": 2.4,
+      "perv_score": 1.98,
+      "theft_score": 35.3,
+      "violence_score": 28.53,
+      "property_d_score": 0.19
+    }
+  },
+  "8556139584": {
+    "source": "www.realtor.com",
+    "price": 1800,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4840-W-Henderson-St-Apt-3A_Chicago_IL_60641_M85561-39584",
+    "address": "4840 W Henderson St Apt 3A Chicago, IL 60641",
+    "date_pulled": "04-23-2025_17-56-47",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.941805,
+    "long": -87.748559,
+    "L_dist": [
+      "Irving Park",
+      1.25
+    ],
+    "crime_sc": {
+      "drug_score": 4.11,
+      "gun_score": 5.99,
+      "murder_score": 1.9,
+      "perv_score": 1.75,
+      "theft_score": 39.55,
+      "violence_score": 26.72,
+      "property_d_score": 0.16
+    }
+  },
+  "8250497990": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5709-W-Dakin-St_Chicago_IL_60634_M82504-97990",
+    "address": "5709 W Dakin St Chicago, IL 60634",
+    "date_pulled": "04-24-2025_09-51-53",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.951939,
+    "long": -87.769832,
+    "L_dist": [
+      "Jefferson Park",
+      1.37
+    ],
+    "crime_sc": {
+      "drug_score": 5.15,
+      "gun_score": 6.65,
+      "murder_score": 2.06,
+      "perv_score": 1.93,
+      "theft_score": 37.06,
+      "violence_score": 27.4,
+      "property_d_score": 0.17
+    }
+  },
+  "pjk4cpt": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/6212-w-school-st-chicago-il/pjk4cpt/",
+    "address": "6212 W School St, Chicago, IL 60634",
+    "date_pulled": "04-24-2025_09-52-20",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9404126,
+    "long": -87.7817675,
+    "L_dist": [
+      "Jefferson Park",
+      2.35
+    ],
+    "crime_sc": {
+      "drug_score": 5.56,
+      "gun_score": 7.16,
+      "murder_score": 2.41,
+      "perv_score": 1.99,
+      "theft_score": 35.3,
+      "violence_score": 28.51,
+      "property_d_score": 0.18
+    }
+  },
+  "h305ch0": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.apartments.com/5618-n-artesian-ave-chicago-il/h305ch0/",
+    "address": "5618 N Artesian Ave, Chicago, IL 60659",
+    "date_pulled": "04-24-2025_09-55-01",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.9837725,
+    "long": -87.6909748,
+    "L_dist": [
+      "Western",
+      1.22
+    ],
+    "crime_sc": {
+      "drug_score": 2.92,
+      "gun_score": 4.61,
+      "murder_score": 1.11,
+      "perv_score": 1.45,
+      "theft_score": 44.77,
+      "violence_score": 23.65,
+      "property_d_score": 0.12
+    }
+  },
+  "nf9d1hm": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1808-w-armitage-ave-chicago-il/nf9d1hm/",
+    "address": "1808 W Armitage Ave, Chicago, IL 60622",
+    "date_pulled": "04-24-2025_09-57-22",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.9179993,
+    "long": -87.6732003,
+    "L_dist": [
+      "Damen",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 5.65,
+      "murder_score": 1.73,
+      "perv_score": 1.55,
+      "theft_score": 41.81,
+      "violence_score": 25.36,
+      "property_d_score": 0.14
+    }
+  },
+  "1vzr477": {
+    "source": "www.apartments.com",
+    "price": 1400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2652-w-23rd-pl-chicago-il/1vzr477/",
+    "address": "2652 W 23rd Pl, Chicago, IL 60608",
+    "date_pulled": "04-24-2025_09-57-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8494221,
+    "long": -87.6925843,
+    "L_dist": [
+      "California",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 3.47,
+      "gun_score": 7.32,
+      "murder_score": 2.24,
+      "perv_score": 1.65,
+      "theft_score": 38.68,
+      "violence_score": 27.3,
+      "property_d_score": 0.17
+    }
+  },
+  "5n8fkcn": {
+    "source": "www.apartments.com",
+    "price": 2450.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1820-n-paulina-st-chicago-il/5n8fkcn/",
+    "address": "1820 N Paulina St, Chicago, IL 60622",
+    "date_pulled": "04-24-2025_09-57-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9149356,
+    "long": -87.6704981,
+    "L_dist": [
+      "Damen",
+      0.51
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 5.69,
+      "murder_score": 1.72,
+      "perv_score": 1.54,
+      "theft_score": 41.88,
+      "violence_score": 25.33,
+      "property_d_score": 0.13
+    }
+  },
+  "9595752180": {
+    "source": "www.realtor.com",
+    "price": 1795,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3752-W-Roscoe-St-Apt-1_Chicago_IL_60618_M95957-52180",
+    "address": "3752 W Roscoe St Apt 1 Chicago, IL 60618",
+    "date_pulled": "04-24-2025_09-59-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.942937,
+    "long": -87.72148,
+    "L_dist": [
+      "Addison",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 5.48,
+      "murder_score": 1.67,
+      "perv_score": 1.58,
+      "theft_score": 41.86,
+      "violence_score": 25.15,
+      "property_d_score": 0.13
+    }
   }
 }
