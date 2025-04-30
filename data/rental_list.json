@@ -57559,5 +57559,321 @@
       "violence_score": 25.61,
       "property_d_score": 0.13
     }
+  },
+  "347827948": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3617-N-Sawyer-Ave-APT-2-Chicago-IL-60618/347827948_zpid/",
+    "address": "3617 N Sawyer Ave APT 2, Chicago, IL 60618",
+    "date_pulled": "04-29-2025_17-49-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1600.0,
+    "lat": 41.947197,
+    "long": -87.7087,
+    "L_dist": [
+      "Addison",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.37,
+      "murder_score": 1.6,
+      "perv_score": 1.58,
+      "theft_score": 42.03,
+      "violence_score": 25.03,
+      "property_d_score": 0.13
+    }
+  },
+  "443631619": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3025-W-Irving-Park-Rd-UNIT-2W-Chicago-IL-60618/443631619_zpid/",
+    "address": "3025 W Irving Park Rd UNIT 2W, Chicago, IL 60618",
+    "date_pulled": "04-29-2025_17-49-34",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.953705,
+    "long": -87.704185,
+    "L_dist": [
+      "Francisco",
+      0.86
+    ],
+    "crime_sc": {}
+  },
+  "440240489": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3710-N-Drake-Ave-2-Chicago-IL-60618/440240489_zpid/",
+    "address": "3710 N Drake Ave #2, Chicago, IL 60618",
+    "date_pulled": "04-29-2025_17-49-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.948715,
+    "long": -87.71679,
+    "L_dist": [
+      "Addison",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.36,
+      "murder_score": 1.56,
+      "perv_score": 1.58,
+      "theft_score": 42.05,
+      "violence_score": 25.0,
+      "property_d_score": 0.13
+    }
+  },
+  "2093860992": {
+    "source": "www.zillow.com",
+    "price": 2375.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2824-N-Drake-Ave-2W-Chicago-IL-60618/2093860992_zpid/",
+    "address": "2824 N Drake Ave #2W, Chicago, IL 60618",
+    "date_pulled": "04-29-2025_17-53-24",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 825.0,
+    "lat": 41.932713,
+    "long": -87.71635,
+    "L_dist": [
+      "Belmont",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 3.64,
+      "gun_score": 5.46,
+      "murder_score": 1.7,
+      "perv_score": 1.58,
+      "theft_score": 41.82,
+      "violence_score": 25.22,
+      "property_d_score": 0.13
+    }
+  },
+  "9015795480": {
+    "source": "www.realtor.com",
+    "price": 2375,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2824-N-Drake-Ave-2W_Chicago_IL_60618_M90157-95480",
+    "address": "2824 N Drake Ave Unit 2W Chicago, IL 60618",
+    "date_pulled": "04-30-2025_08-05-19",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 825.0,
+    "lat": 41.93272,
+    "long": -87.716354,
+    "L_dist": [
+      "Belmont",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 5.46,
+      "murder_score": 1.7,
+      "perv_score": 1.58,
+      "theft_score": 41.82,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "0z131y0": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1332-n-campbell-ave-chicago-il/0z131y0/",
+    "address": "1332 N Campbell Ave, Chicago, IL 60622",
+    "date_pulled": "04-30-2025_08-05-36",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9058227,
+    "long": -87.6897931,
+    "L_dist": [
+      "Damen",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 3.51,
+      "gun_score": 5.82,
+      "murder_score": 1.75,
+      "perv_score": 1.59,
+      "theft_score": 41.52,
+      "violence_score": 25.57,
+      "property_d_score": 0.14
+    }
+  },
+  "f0wepkt": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3651-w-montrose-ave-chicago-il/f0wepkt/",
+    "address": "3651 W Montrose Ave, Chicago, IL 60618",
+    "date_pulled": "04-30-2025_08-08-04",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.9608772,
+    "long": -87.7200984,
+    "L_dist": [
+      "Kimball",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 5.18,
+      "murder_score": 1.49,
+      "perv_score": 1.59,
+      "theft_score": 42.55,
+      "violence_score": 24.64,
+      "property_d_score": 0.12
+    }
+  },
+  "9469480475": {
+    "source": "www.realtor.com",
+    "price": 1950,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3651-W-Montrose-Ave-Rear-1R_Chicago_IL_60618_M94694-80475",
+    "address": "3651 W Montrose Ave Unit 1R Chicago, IL 60618",
+    "date_pulled": "04-30-2025_08-09-52",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.960812,
+    "long": -87.720093,
+    "L_dist": [
+      "Kimball",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 5.19,
+      "murder_score": 1.49,
+      "perv_score": 1.59,
+      "theft_score": 42.54,
+      "violence_score": 24.64,
+      "property_d_score": 0.12
+    }
+  },
+  "566w83p": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1659-w-21st-st-chicago-il/566w83p/",
+    "address": "1659 W 21st St, Chicago, IL 60608",
+    "date_pulled": "04-30-2025_08-11-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 781.0,
+    "lat": 41.854038,
+    "long": -87.667666,
+    "L_dist": [
+      "18th",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.46,
+      "gun_score": 7.25,
+      "murder_score": 2.26,
+      "perv_score": 1.6,
+      "theft_score": 39.12,
+      "violence_score": 27.07,
+      "property_d_score": 0.17
+    }
+  },
+  "htql4b3": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/27-e-101st-pl-chicago-il/htql4b3/",
+    "address": "27 E 101st Pl, Chicago, IL 60628",
+    "date_pulled": "04-30-2025_08-11-30",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 2300.0,
+    "lat": 41.70971,
+    "long": -87.6223642,
+    "L_dist": [
+      "95th/Dan Ryan",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 1.57,
+      "gun_score": 9.56,
+      "murder_score": 3.28,
+      "perv_score": 1.55,
+      "theft_score": 33.01,
+      "violence_score": 31.7,
+      "property_d_score": 0.27
+    }
+  },
+  "x2n4d9n": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1519-e-marquette-rd-chicago-il/x2n4d9n/",
+    "address": "1519 E Marquette Rd, Chicago, IL 60637",
+    "date_pulled": "04-30-2025_08-11-30",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.7749314,
+    "long": -87.5880816,
+    "L_dist": [
+      "Cottage Grove",
+      0.99
+    ],
+    "crime_sc": {
+      "drug_score": 1.6,
+      "gun_score": 9.0,
+      "murder_score": 3.04,
+      "perv_score": 1.44,
+      "theft_score": 34.85,
+      "violence_score": 30.61,
+      "property_d_score": 0.22
+    }
+  },
+  "mdgq2sj": {
+    "source": "www.apartments.com",
+    "price": 2296.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3433-n-elaine-pl-chicago-il/mdgq2sj/",
+    "address": "3433 N Elaine Pl, Chicago, IL 60657",
+    "date_pulled": "04-30-2025_08-11-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9446097,
+    "long": -87.6473692,
+    "L_dist": [
+      "Addison",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 3.76,
+      "gun_score": 5.17,
+      "murder_score": 1.51,
+      "perv_score": 1.53,
+      "theft_score": 43.43,
+      "violence_score": 24.13,
+      "property_d_score": 0.12
+    }
   }
 }
