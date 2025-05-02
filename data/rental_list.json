@@ -58700,5 +58700,507 @@
       "violence_score": 24.75,
       "property_d_score": 0.13
     }
+  },
+  "195179733": {
+    "source": "www.redfin.com",
+    "price": 1400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/SAP-School-4015-23/apartment/195179733",
+    "address": "SAP School 4015-23 - 4015 W School St, Chicago, IL, 60641",
+    "date_pulled": "05-02-2025_18-05-45",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9405803,
+    "long": -87.7280148,
+    "L_dist": [
+      "Addison",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.62,
+      "murder_score": 1.76,
+      "perv_score": 1.63,
+      "theft_score": 41.17,
+      "violence_score": 25.63,
+      "property_d_score": 0.14
+    }
+  },
+  "190741159": {
+    "source": "www.redfin.com",
+    "price": 1825.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2945-N-Ridgeway-Ave-60618/unit-1R/home/190741159",
+    "address": "2945 N Ridgeway Ave Unit 1R, Chicago, IL, 60618",
+    "date_pulled": "05-02-2025_18-05-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.9346787,
+    "long": -87.719831,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 5.5,
+      "murder_score": 1.73,
+      "perv_score": 1.58,
+      "theft_score": 41.71,
+      "violence_score": 25.21,
+      "property_d_score": 0.13
+    }
+  },
+  "7847056559": {
+    "source": "www.craigslist.org",
+    "price": 2300.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-west-loop-stylish-loft-living/7847056559.html",
+    "address": "Van Buren, Chicago, IL 60607",
+    "date_pulled": "05-02-2025_18-06-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 11502.0,
+    "lat": 41.876532,
+    "long": -87.659453,
+    "L_dist": [
+      "Racine",
+      0.04
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 6.51,
+      "murder_score": 1.88,
+      "perv_score": 1.61,
+      "theft_score": 40.64,
+      "violence_score": 25.98,
+      "property_d_score": 0.14
+    }
+  },
+  "nwnhhdp": {
+    "source": "www.apartments.com",
+    "price": 2195.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/2850-w-barry-ave-chicago-il/nwnhhdp/",
+    "address": "2850 W Barry Ave, Chicago, IL 60618",
+    "date_pulled": "05-02-2025_18-06-47",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.937746,
+    "long": -87.699831,
+    "L_dist": [
+      "Belmont",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.51,
+      "murder_score": 1.74,
+      "perv_score": 1.58,
+      "theft_score": 41.87,
+      "violence_score": 25.16,
+      "property_d_score": 0.13
+    }
+  },
+  "190727678": {
+    "source": "www.redfin.com",
+    "price": 2350.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3707-N-Lockwood-Ave-60641/unit-1N/home/190727678",
+    "address": "3707 N Lockwood Ave Unit 1N, Chicago, IL, 60641",
+    "date_pulled": "05-02-2025_18-08-07",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9480976,
+    "long": -87.7592379,
+    "L_dist": [
+      "Montrose",
+      1.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.71,
+      "gun_score": 6.35,
+      "murder_score": 1.99,
+      "perv_score": 1.82,
+      "theft_score": 38.23,
+      "violence_score": 26.94,
+      "property_d_score": 0.16
+    }
+  },
+  "177704420": {
+    "source": "www.redfin.com",
+    "price": 1350.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4350-N-Cicero-Ave-60641/apartment/177704420",
+    "address": "4350-58 N. Cicero Ave/4801-13 W. Montrose Ave - 4350 N Cicero Ave, Chicago, IL, 60641",
+    "date_pulled": "05-02-2025_18-08-07",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.9603763,
+    "long": -87.7478119,
+    "L_dist": [
+      "Montrose",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 5.68,
+      "murder_score": 1.76,
+      "perv_score": 1.78,
+      "theft_score": 40.38,
+      "violence_score": 26.05,
+      "property_d_score": 0.14
+    }
+  },
+  "9675224773": {
+    "source": "www.realtor.com",
+    "price": 2150,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2723-W-Berwyn-Ave-Apt-3_Chicago_IL_60625_M96752-24773",
+    "address": "2723 W Berwyn Ave Apt 3 Chicago, IL 60625",
+    "date_pulled": "05-02-2025_18-08-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.977348,
+    "long": -87.697487,
+    "L_dist": [
+      "Rockwell",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.11,
+      "gun_score": 4.79,
+      "murder_score": 1.31,
+      "perv_score": 1.39,
+      "theft_score": 44.25,
+      "violence_score": 23.95,
+      "property_d_score": 0.12
+    }
+  },
+  "177894096": {
+    "source": "www.redfin.com",
+    "price": 1450.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Fairfield-Lawrence/apartment/177894096",
+    "address": "Fairfield & Lawrence - 4801 N Fairfield Ave, Chicago, IL, 60625",
+    "date_pulled": "05-02-2025_18-09-17",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": 515575.0,
+    "lat": 41.9687033,
+    "long": -87.6972665,
+    "L_dist": [
+      "Rockwell",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.46,
+      "gun_score": 5.04,
+      "murder_score": 1.39,
+      "perv_score": 1.58,
+      "theft_score": 43.33,
+      "violence_score": 24.3,
+      "property_d_score": 0.12
+    }
+  },
+  "195588409": {
+    "source": "www.redfin.com",
+    "price": 1825.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5133-N-Damen-Ave-60625/unit-2/home/195588409",
+    "address": "5133 N Damen Ave Unit 2, Chicago, IL, 60625",
+    "date_pulled": "05-02-2025_18-09-17",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.9757239,
+    "long": -87.6791391,
+    "L_dist": [
+      "Damen",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.25,
+      "gun_score": 4.91,
+      "murder_score": 1.37,
+      "perv_score": 1.37,
+      "theft_score": 43.94,
+      "violence_score": 24.09,
+      "property_d_score": 0.12
+    }
+  },
+  "179512399": {
+    "source": "www.redfin.com",
+    "price": 1775.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3746-W-Leland-Ave-60625/unit-1D/home/179512399",
+    "address": "3746 W Leland Ave Unit 1D, Chicago, IL, 60625",
+    "date_pulled": "05-02-2025_18-11-11",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.96667,
+    "long": -87.7227062,
+    "L_dist": [
+      "Kimball",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 3.53,
+      "gun_score": 5.05,
+      "murder_score": 1.39,
+      "perv_score": 1.58,
+      "theft_score": 43.13,
+      "violence_score": 24.32,
+      "property_d_score": 0.12
+    }
+  },
+  "145694004": {
+    "source": "www.redfin.com",
+    "price": 2195.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Wicker-Park-Connection/apartment/145694004",
+    "address": "Wicker Park Connection - 1640 W Division St, Chicago, IL, 60622",
+    "date_pulled": "05-02-2025_18-12-40",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": 4691153.0,
+    "lat": 41.9037494,
+    "long": -87.6692863,
+    "L_dist": [
+      "Division",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 3.59,
+      "gun_score": 5.88,
+      "murder_score": 1.78,
+      "perv_score": 1.58,
+      "theft_score": 41.68,
+      "violence_score": 25.48,
+      "property_d_score": 0.14
+    }
+  },
+  "yyz1bxs": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2340-w-thomas-st-chicago-il/yyz1bxs/",
+    "address": "2340 W Thomas St, Chicago, IL 60622",
+    "date_pulled": "05-02-2025_18-12-53",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.9014198,
+    "long": -87.6861449,
+    "L_dist": [
+      "Damen",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 5.92,
+      "murder_score": 1.76,
+      "perv_score": 1.66,
+      "theft_score": 41.53,
+      "violence_score": 25.58,
+      "property_d_score": 0.14
+    }
+  },
+  "qqdnbgw": {
+    "source": "www.apartments.com",
+    "price": 2450.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.apartments.com/3632-n-hermitage-ave-chicago-il/qqdnbgw/",
+    "address": "3632 N Hermitage Ave, Chicago, IL 60613",
+    "date_pulled": "05-02-2025_18-13-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9479611,
+    "long": -87.6727321,
+    "L_dist": [
+      "Addison",
+      0.12
+    ],
+    "crime_sc": {
+      "drug_score": 3.89,
+      "gun_score": 5.43,
+      "murder_score": 1.64,
+      "perv_score": 1.55,
+      "theft_score": 42.25,
+      "violence_score": 24.89,
+      "property_d_score": 0.13
+    }
+  },
+  "4sv2xgyhnqpt0": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4240-maple-ave-berwyn-il/4sv2xgyhnqpt0/",
+    "address": "4240 Maple Ave Berwyn, IL 60402 Chicago",
+    "date_pulled": "05-02-2025_18-14-04",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1450.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "5t0xrfp": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2035-w-arthur-ave-chicago-il/5t0xrfp/",
+    "address": "2035 W Arthur Ave, Chicago, IL 60645",
+    "date_pulled": "05-02-2025_18-14-47",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1175.0,
+    "lat": 41.9996007,
+    "long": -87.6816028,
+    "L_dist": [
+      "Morse",
+      1.01
+    ],
+    "crime_sc": {
+      "drug_score": 1.36,
+      "gun_score": 4.21,
+      "murder_score": 0.82,
+      "perv_score": 1.53,
+      "theft_score": 45.68,
+      "violence_score": 23.79,
+      "property_d_score": 0.12
+    }
+  },
+  "cd4ww0g": {
+    "source": "www.apartments.com",
+    "price": 2550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1921-w-summerdale-ave-chicago-il/cd4ww0g/",
+    "address": "1921 W Summerdale Ave, Chicago, IL 60640",
+    "date_pulled": "05-02-2025_18-14-47",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9785884,
+    "long": -87.6774431,
+    "L_dist": [
+      "Damen",
+      0.85
+    ],
+    "crime_sc": {
+      "drug_score": 3.16,
+      "gun_score": 4.77,
+      "murder_score": 1.3,
+      "perv_score": 1.37,
+      "theft_score": 44.51,
+      "violence_score": 23.79,
+      "property_d_score": 0.12
+    }
+  },
+  "5wrxyym": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1642-w-greenleaf-ave-chicago-il/5wrxyym/",
+    "address": "1642 W Greenleaf Ave, Chicago, IL 60626",
+    "date_pulled": "05-02-2025_18-14-47",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 42.010337,
+    "long": -87.6710716,
+    "L_dist": [
+      "Morse",
+      0.3
+    ],
+    "crime_sc": {
+      "drug_score": 0.92,
+      "gun_score": 3.65,
+      "murder_score": 0.64,
+      "perv_score": 1.53,
+      "theft_score": 46.58,
+      "violence_score": 23.41,
+      "property_d_score": 0.12
+    }
+  },
+  "180451091": {
+    "source": "www.redfin.com",
+    "price": 2150.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1849-W-Cornelia-Ave-60657/apartment/180451091",
+    "address": "1849-51 W. Cornelia / 3449-55 N. Wolcott - 1849 W Cornelia Ave, Chicago, IL, 60657",
+    "date_pulled": "05-02-2025_18-15-51",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": 518.0,
+    "lat": 41.9448041,
+    "long": -87.6758688,
+    "L_dist": [
+      "Addison",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 5.48,
+      "murder_score": 1.65,
+      "perv_score": 1.56,
+      "theft_score": 42.04,
+      "violence_score": 25.06,
+      "property_d_score": 0.13
+    }
+  },
+  "30k1e8f": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.apartments.com/2117-w-melrose-st-chicago-il/30k1e8f/",
+    "address": "2117 W Melrose St, Chicago, IL 60618",
+    "date_pulled": "05-02-2025_18-16-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9402581,
+    "long": -87.6815505,
+    "L_dist": [
+      "Addison",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.52,
+      "murder_score": 1.74,
+      "perv_score": 1.57,
+      "theft_score": 41.89,
+      "violence_score": 25.15,
+      "property_d_score": 0.13
+    }
   }
 }
