@@ -62441,5 +62441,264 @@
       "violence_score": 25.2,
       "property_d_score": 0.14
     }
+  },
+  "177571602": {
+    "source": "www.redfin.com",
+    "price": 1395.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3344-W-Ainslie-St-60625/apartment/177571602",
+    "address": "3344 W Ainslie St, Chicago, IL, 60625",
+    "date_pulled": "05-18-2025_16-38-49",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": 475.0,
+    "lat": 41.9703735,
+    "long": -87.7127187,
+    "L_dist": [
+      "Kimball",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.46,
+      "gun_score": 4.94,
+      "murder_score": 1.4,
+      "perv_score": 1.48,
+      "theft_score": 43.2,
+      "violence_score": 24.33,
+      "property_d_score": 0.12
+    }
+  },
+  "5d91q20fb9tss": {
+    "source": "www.homes.com",
+    "price": 1250.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/844-n-harding-ave-chicago-il-unit-basement/5d91q20fb9tss/",
+    "address": "844 N Harding Ave Unit BASEMENT Chicago, IL 60651",
+    "date_pulled": "05-18-2025_16-39-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "dpwb99j": {
+    "source": "www.apartments.com",
+    "price": 2131.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3050-w-cornelia-ave-chicago-il/dpwb99j/",
+    "address": "3050 W Cornelia Ave, Chicago, IL 60618",
+    "date_pulled": "05-18-2025_16-41-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9448513,
+    "long": -87.7049986,
+    "L_dist": [
+      "Belmont",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.34,
+      "murder_score": 1.66,
+      "perv_score": 1.61,
+      "theft_score": 41.89,
+      "violence_score": 25.08,
+      "property_d_score": 0.13
+    }
+  },
+  "2087567899": {
+    "source": "www.zillow.com",
+    "price": 2131.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3050-W-Cornelia-Ave-APT-3-Chicago-IL-60618/2087567899_zpid/",
+    "address": "3050 W Cornelia Ave APT 3, Chicago, IL 60618",
+    "date_pulled": "05-18-2025_16-41-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.944904,
+    "long": -87.705,
+    "L_dist": [
+      "Belmont",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.34,
+      "murder_score": 1.66,
+      "perv_score": 1.61,
+      "theft_score": 41.89,
+      "violence_score": 25.08,
+      "property_d_score": 0.13
+    }
+  },
+  "191124931": {
+    "source": "www.redfin.com",
+    "price": 2495.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3438-N-Milwaukee-Ave-60641/unit-3438-2S/home/191124931",
+    "address": "3438 N Milwaukee Ave Unit 3438-2S, Chicago, IL, 60641",
+    "date_pulled": "05-18-2025_16-42-51",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9436087,
+    "long": -87.7316064,
+    "L_dist": [
+      "Irving Park",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 5.59,
+      "murder_score": 1.84,
+      "perv_score": 1.7,
+      "theft_score": 40.88,
+      "violence_score": 25.71,
+      "property_d_score": 0.15
+    }
+  },
+  "9911703239": {
+    "source": "www.realtor.com",
+    "price": 2000,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4208-N-Sacramento-Ave-CH2_Chicago_IL_60618_M99117-03239",
+    "address": "4208 N Sacramento Ave Unit CH2 Chicago, IL 60618",
+    "date_pulled": "05-18-2025_16-43-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.957897,
+    "long": -87.703545,
+    "L_dist": [
+      "Francisco",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.19,
+      "murder_score": 1.54,
+      "perv_score": 1.63,
+      "theft_score": 42.36,
+      "violence_score": 24.75,
+      "property_d_score": 0.13
+    }
+  },
+  "tcbwwzb": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2211-w-mclean-ave-chicago-il/tcbwwzb/",
+    "address": "2211 W McLean Ave, Chicago, IL 60647",
+    "date_pulled": "05-18-2025_16-43-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9183377,
+    "long": -87.6828573,
+    "L_dist": [
+      "Western",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 5.55,
+      "murder_score": 1.74,
+      "perv_score": 1.59,
+      "theft_score": 41.58,
+      "violence_score": 25.41,
+      "property_d_score": 0.14
+    }
+  },
+  "34pzlvf": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7401-n-hoyne-ave-chicago-il/34pzlvf/",
+    "address": "7401 N Hoyne Ave, Chicago, IL 60645",
+    "date_pulled": "05-18-2025_16-43-56",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 42.016149,
+    "long": -87.6827337,
+    "L_dist": [
+      "Howard",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 0.96,
+      "gun_score": 3.44,
+      "murder_score": 0.71,
+      "perv_score": 1.58,
+      "theft_score": 45.67,
+      "violence_score": 23.91,
+      "property_d_score": 0.12
+    }
+  },
+  "9141897818": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4948-N-Albany-Ave-GF_Chicago_IL_60625_M91418-97818",
+    "address": "4948 N Albany Ave Unit Gf Chicago, IL 60625",
+    "date_pulled": "05-18-2025_16-45-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.971737,
+    "long": -87.706406,
+    "L_dist": [
+      "Kedzie",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 4.91,
+      "murder_score": 1.38,
+      "perv_score": 1.42,
+      "theft_score": 43.39,
+      "violence_score": 24.33,
+      "property_d_score": 0.12
+    }
+  },
+  "9762970594": {
+    "source": "www.realtor.com",
+    "price": 1450,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3224-12-N-Keating-Ave-G_Chicago_IL_60641_M97629-70594",
+    "address": "3224 1/2 N Keating Ave Unit G Chicago, IL 60641",
+    "date_pulled": "05-18-2025_16-47-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.939602,
+    "long": -87.745613,
+    "L_dist": [
+      "Irving Park",
+      1.25
+    ],
+    "crime_sc": {
+      "drug_score": 4.18,
+      "gun_score": 5.86,
+      "murder_score": 1.95,
+      "perv_score": 1.77,
+      "theft_score": 39.65,
+      "violence_score": 26.54,
+      "property_d_score": 0.16
+    }
   }
 }
