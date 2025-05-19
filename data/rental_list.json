@@ -62700,5 +62700,113 @@
       "violence_score": 26.54,
       "property_d_score": 0.16
     }
+  },
+  "9281251093": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3304-N-Hamilton-Ave-Apt-2_Chicago_IL_60618_M92812-51093",
+    "address": "3304 N Hamilton Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "05-19-2025_10-57-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.941612,
+    "long": -87.682297,
+    "L_dist": [
+      "Addison",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 3.86,
+      "gun_score": 5.44,
+      "murder_score": 1.74,
+      "perv_score": 1.6,
+      "theft_score": 41.78,
+      "violence_score": 25.16,
+      "property_d_score": 0.14
+    }
+  },
+  "189573791": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4948-N-Albany-Ave-60625/unit-GF/home/189573791",
+    "address": "4948 N Albany Ave Unit GF, Chicago, IL, 60625",
+    "date_pulled": "05-19-2025_11-00-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9717532,
+    "long": -87.7063725,
+    "L_dist": [
+      "Kedzie",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 4.9,
+      "murder_score": 1.39,
+      "perv_score": 1.42,
+      "theft_score": 43.39,
+      "violence_score": 24.32,
+      "property_d_score": 0.12
+    }
+  },
+  "8522730987": {
+    "source": "www.realtor.com",
+    "price": 2200,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4825-W-Hutchinson-St-2_Chicago_IL_60641_M85227-30987",
+    "address": "4825 W Hutchinson St Unit 2 Chicago, IL 60641",
+    "date_pulled": "05-19-2025_11-02-03",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.957737,
+    "long": -87.74855,
+    "L_dist": [
+      "Montrose",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.22,
+      "gun_score": 5.7,
+      "murder_score": 1.83,
+      "perv_score": 1.81,
+      "theft_score": 39.91,
+      "violence_score": 26.29,
+      "property_d_score": 0.15
+    }
+  },
+  "1shcxd4": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2640-w-cortland-st-chicago-il/1shcxd4/",
+    "address": "2640 W Cortland St, Chicago, IL 60647",
+    "date_pulled": "05-19-2025_11-04-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.915919,
+    "long": -87.6939032,
+    "L_dist": [
+      "Western",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 5.55,
+      "murder_score": 1.75,
+      "perv_score": 1.6,
+      "theft_score": 41.61,
+      "violence_score": 25.4,
+      "property_d_score": 0.14
+    }
   }
 }
