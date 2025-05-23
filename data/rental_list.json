@@ -62808,5 +62808,383 @@
       "violence_score": 25.4,
       "property_d_score": 0.14
     }
+  },
+  "r93fnd3": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/869-n-hermitage-ave-chicago-il/r93fnd3/",
+    "address": "869 N Hermitage Ave, Chicago, IL 60622",
+    "date_pulled": "05-20-2025_17-15-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.8980102,
+    "long": -87.6707922,
+    "L_dist": [
+      "Division",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 3.6,
+      "gun_score": 5.93,
+      "murder_score": 1.84,
+      "perv_score": 1.66,
+      "theft_score": 41.59,
+      "violence_score": 25.42,
+      "property_d_score": 0.14
+    }
+  },
+  "q2yxfbx": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3416-w-franklin-blvd-chicago-il/q2yxfbx/",
+    "address": "3416 W Franklin Blvd, Chicago, IL 60624",
+    "date_pulled": "05-20-2025_17-15-59",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1750.0,
+    "lat": 41.8905127,
+    "long": -87.7120394,
+    "L_dist": [
+      "Conservatory",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.59,
+      "gun_score": 6.07,
+      "murder_score": 1.85,
+      "perv_score": 1.69,
+      "theft_score": 40.84,
+      "violence_score": 25.72,
+      "property_d_score": 0.15
+    }
+  },
+  "189809047": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4825-W-Hutchinson-St-60641/unit-2/home/189809047",
+    "address": "4825 W Hutchinson St Unit 2, Chicago, IL, 60641",
+    "date_pulled": "05-20-2025_17-17-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9577539,
+    "long": -87.7485559,
+    "L_dist": [
+      "Montrose",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.23,
+      "gun_score": 5.69,
+      "murder_score": 1.83,
+      "perv_score": 1.82,
+      "theft_score": 39.92,
+      "violence_score": 26.27,
+      "property_d_score": 0.15
+    }
+  },
+  "l4bpmsg": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4825-w-hutchinson-st-chicago-il/l4bpmsg/",
+    "address": "4825 W Hutchinson St, Chicago, IL 60641",
+    "date_pulled": "05-20-2025_17-17-49",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9577494,
+    "long": -87.7485482,
+    "L_dist": [
+      "Montrose",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.23,
+      "gun_score": 5.69,
+      "murder_score": 1.83,
+      "perv_score": 1.82,
+      "theft_score": 39.92,
+      "violence_score": 26.27,
+      "property_d_score": 0.15
+    }
+  },
+  "452161687": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3208-W-Belle-Plaine-Ave-UNIT-2-Chicago-IL-60618/452161687_zpid/",
+    "address": "3208 W Belle Plaine Ave UNIT 2, Chicago, IL 60618",
+    "date_pulled": "05-20-2025_17-20-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.95574,
+    "long": -87.708466,
+    "L_dist": [
+      "Kedzie",
+      0.71
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 5.2,
+      "murder_score": 1.54,
+      "perv_score": 1.63,
+      "theft_score": 42.21,
+      "violence_score": 24.83,
+      "property_d_score": 0.13
+    }
+  },
+  "2103179081": {
+    "source": "www.zillow.com",
+    "price": 2250.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3240-N-Whipple-St-2-Chicago-IL-60618/2103179081_zpid/",
+    "address": "3240 N Whipple St #2, Chicago, IL 60618",
+    "date_pulled": "05-20-2025_17-22-33",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.94059,
+    "long": -87.70434,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.38,
+      "murder_score": 1.73,
+      "perv_score": 1.62,
+      "theft_score": 41.81,
+      "violence_score": 25.13,
+      "property_d_score": 0.14
+    }
+  },
+  "190136422": {
+    "source": "www.redfin.com",
+    "price": 1400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/SAP-School-4015-23/apartment/190136422",
+    "address": "SAP School 4015-23 - 4023 W School St, Chicago, IL, 60641",
+    "date_pulled": "05-20-2025_17-23-05",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9405631,
+    "long": -87.7281424,
+    "L_dist": [
+      "Addison",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 5.53,
+      "murder_score": 1.81,
+      "perv_score": 1.67,
+      "theft_score": 41.07,
+      "violence_score": 25.62,
+      "property_d_score": 0.14
+    }
+  },
+  "7851914883": {
+    "source": "www.craigslist.org",
+    "price": 2490.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7851914883.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "05-22-2025_15-54-35",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.83,
+      "gun_score": 8.45,
+      "murder_score": 2.66,
+      "perv_score": 1.44,
+      "theft_score": 35.82,
+      "violence_score": 29.87,
+      "property_d_score": 0.21
+    }
+  },
+  "9417802897": {
+    "source": "www.realtor.com",
+    "price": 2500,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4015-23-N-Narragansett_Chicago_IL_60634_M94178-02897",
+    "address": "4015-23 N Narragansett Chicago, IL 60634",
+    "date_pulled": "05-22-2025_15-58-16",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.953442,
+    "long": -87.786209,
+    "L_dist": [
+      "Jefferson Park",
+      1.76
+    ],
+    "crime_sc": {
+      "drug_score": 6.14,
+      "gun_score": 6.98,
+      "murder_score": 2.34,
+      "perv_score": 2.07,
+      "theft_score": 34.55,
+      "violence_score": 28.46,
+      "property_d_score": 0.18
+    }
+  },
+  "9216991516": {
+    "source": "www.realtor.com",
+    "price": 1795,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5321-W-Cornelia-Ave-2_Chicago_IL_60641_M92169-91516",
+    "address": "5321 W Cornelia Ave Unit 2 Chicago, IL 60641",
+    "date_pulled": "05-22-2025_15-58-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.943901,
+    "long": -87.760201,
+    "L_dist": [
+      "Montrose",
+      1.49
+    ],
+    "crime_sc": {
+      "drug_score": 4.82,
+      "gun_score": 6.35,
+      "murder_score": 2.14,
+      "perv_score": 1.87,
+      "theft_score": 37.82,
+      "violence_score": 27.17,
+      "property_d_score": 0.17
+    }
+  },
+  "5m4pmgq": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1134-w-granville-ave-chicago-il/5m4pmgq/",
+    "address": "1134 W Granville Ave, Chicago, IL 60660",
+    "date_pulled": "05-23-2025_07-49-24",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9946433,
+    "long": -87.6595498,
+    "L_dist": [
+      "Granville",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 2.13,
+      "gun_score": 4.22,
+      "murder_score": 0.82,
+      "perv_score": 1.44,
+      "theft_score": 45.94,
+      "violence_score": 23.47,
+      "property_d_score": 0.11
+    }
+  },
+  "t66x558": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1363-e-64th-st-chicago-il/t66x558/",
+    "address": "1363 E 64th St, Chicago, IL 60637",
+    "date_pulled": "05-23-2025_07-49-24",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.7788351,
+    "long": -87.5925749,
+    "L_dist": [
+      "Cottage Grove",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 1.69,
+      "gun_score": 8.71,
+      "murder_score": 2.88,
+      "perv_score": 1.48,
+      "theft_score": 35.2,
+      "violence_score": 30.3,
+      "property_d_score": 0.22
+    }
+  },
+  "vg2ggxd": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4938-n-monitor-ave-chicago-il/vg2ggxd/",
+    "address": "4938 N Monitor Ave, Chicago, IL 60630",
+    "date_pulled": "05-23-2025_07-49-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1075.0,
+    "lat": 41.9714867,
+    "long": -87.7749198,
+    "L_dist": [
+      "Jefferson Park",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 4.92,
+      "gun_score": 6.34,
+      "murder_score": 1.95,
+      "perv_score": 1.71,
+      "theft_score": 37.4,
+      "violence_score": 27.31,
+      "property_d_score": 0.16
+    }
+  },
+  "zzcd7dy": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1956-w-21st-pl-chicago-il/zzcd7dy/",
+    "address": "1956 W 21st Pl, Chicago, IL 60608",
+    "date_pulled": "05-23-2025_07-49-24",
+    "bed": 2.0,
+    "bath": 4.0,
+    "sqft": 800.0,
+    "lat": 41.8533051,
+    "long": -87.6757099,
+    "L_dist": [
+      "Damen",
+      0.08
+    ],
+    "crime_sc": {
+      "drug_score": 3.55,
+      "gun_score": 7.18,
+      "murder_score": 2.24,
+      "perv_score": 1.63,
+      "theft_score": 38.95,
+      "violence_score": 27.08,
+      "property_d_score": 0.17
+    }
   }
 }
