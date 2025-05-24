@@ -63186,5 +63186,40 @@
       "violence_score": 27.08,
       "property_d_score": 0.17
     }
+  },
+  "f5l3q0zgb3jcd": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/46-n-albert-st-mount-prospect-il/f5l3q0zgb3jcd/",
+    "address": "46 N Albert St Mount Prospect, IL 60056 Chicago",
+    "date_pulled": "05-23-2025_18-09-46",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "185579768": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2155-W-Potomac-Ave-60622/unit-CH-1/home/185579768",
+    "address": "2155 W Potomac Ave Unit CH-1, Chicago, IL, 60622",
+    "date_pulled": "05-24-2025_07-59-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.9047984,
+    "long": -87.6819011,
+    "L_dist": [
+      "Damen",
+      0.41
+    ],
+    "crime_sc": {}
   }
 }
