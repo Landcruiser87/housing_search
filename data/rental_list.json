@@ -63221,5 +63221,140 @@
       0.41
     ],
     "crime_sc": {}
+  },
+  "452453497": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4740-W-Addison-St-Chicago-IL-60641/452453497_zpid/",
+    "address": "4740 W Addison St, Chicago, IL 60641",
+    "date_pulled": "05-25-2025_08-21-44",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.94616,
+    "long": -87.7459,
+    "L_dist": [
+      "Irving Park",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 4.24,
+      "gun_score": 5.78,
+      "murder_score": 1.87,
+      "perv_score": 1.77,
+      "theft_score": 39.7,
+      "violence_score": 26.46,
+      "property_d_score": 0.15
+    }
+  },
+  "9887480325": {
+    "source": "www.realtor.com",
+    "price": 2295,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2617-W-Rascher-Ave-G_Chicago_IL_60625_M98874-80325",
+    "address": "2617 W Rascher Ave Unit G Chicago, IL 60625",
+    "date_pulled": "05-25-2025_08-23-26",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": 41.980198,
+    "long": -87.694916,
+    "L_dist": [
+      "Rockwell",
+      0.97
+    ],
+    "crime_sc": {
+      "drug_score": 3.01,
+      "gun_score": 4.62,
+      "murder_score": 1.27,
+      "perv_score": 1.42,
+      "theft_score": 44.46,
+      "violence_score": 23.89,
+      "property_d_score": 0.12
+    }
+  },
+  "191955497": {
+    "source": "www.redfin.com",
+    "price": 1550.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4803-N-Central-Park-Ave-60625/unit-P302/home/191955497",
+    "address": "4803 N Central Park Ave Unit P302, Chicago, IL, 60625",
+    "date_pulled": "05-25-2025_08-24-32",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.9684952,
+    "long": -87.7180793,
+    "L_dist": [
+      "Kimball",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 4.94,
+      "murder_score": 1.4,
+      "perv_score": 1.63,
+      "theft_score": 43.15,
+      "violence_score": 24.32,
+      "property_d_score": 0.12
+    }
+  },
+  "7853094390": {
+    "source": "www.craigslist.org",
+    "price": 2490.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7853094390.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "05-26-2025_11-11-53",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.84,
+      "gun_score": 8.43,
+      "murder_score": 2.7,
+      "perv_score": 1.45,
+      "theft_score": 35.84,
+      "violence_score": 29.82,
+      "property_d_score": 0.2
+    }
+  },
+  "9596797835": {
+    "source": "www.realtor.com",
+    "price": 2275,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2133-W-Crystal-St-G_Chicago_IL_60622_M95967-97835",
+    "address": "2133 W Crystal St # G Chicago, IL 60622",
+    "date_pulled": "05-26-2025_11-15-51",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.903802,
+    "long": -87.681056,
+    "L_dist": [
+      "Damen",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.62,
+      "gun_score": 5.82,
+      "murder_score": 1.81,
+      "perv_score": 1.64,
+      "theft_score": 41.35,
+      "violence_score": 25.56,
+      "property_d_score": 0.14
+    }
   }
 }
