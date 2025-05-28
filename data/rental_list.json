@@ -63356,5 +63356,199 @@
       "violence_score": 25.56,
       "property_d_score": 0.14
     }
+  },
+  "nt5l11q": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2500-e-98th-st-chicago-il/nt5l11q/",
+    "address": "2500 E 98th St, Chicago, IL 60617",
+    "date_pulled": "05-27-2025_08-27-56",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.7174068,
+    "long": -87.5632194,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.17
+    ],
+    "crime_sc": {
+      "drug_score": 1.48,
+      "gun_score": 9.45,
+      "murder_score": 3.26,
+      "perv_score": 1.5,
+      "theft_score": 33.72,
+      "violence_score": 31.3,
+      "property_d_score": 0.24
+    }
+  },
+  "312zp3e": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6322-n-francisco-ave-chicago-il/312zp3e/",
+    "address": "6322 N Francisco Ave, Chicago, IL 60659",
+    "date_pulled": "05-27-2025_08-27-56",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9964588,
+    "long": -87.7023226,
+    "L_dist": [
+      "Morse",
+      2.04
+    ],
+    "crime_sc": {
+      "drug_score": 1.41,
+      "gun_score": 4.22,
+      "murder_score": 0.88,
+      "perv_score": 1.58,
+      "theft_score": 45.18,
+      "violence_score": 24.04,
+      "property_d_score": 0.12
+    }
+  },
+  "8294814439": {
+    "source": "www.realtor.com",
+    "price": 1995,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2335-W-Barry-Ave-Apt-2_Chicago_IL_60618_M82948-14439",
+    "address": "2335 W Barry Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "05-27-2025_08-34-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.937381,
+    "long": -87.686955,
+    "L_dist": [
+      "Addison",
+      0.92
+    ],
+    "crime_sc": {
+      "drug_score": 3.85,
+      "gun_score": 5.45,
+      "murder_score": 1.76,
+      "perv_score": 1.61,
+      "theft_score": 41.65,
+      "violence_score": 25.24,
+      "property_d_score": 0.13
+    }
+  },
+  "rl9jbh01q0ryf": {
+    "source": "www.homes.com",
+    "price": 2100.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/330-higgins-rd-park-ridge-il-unit-a/rl9jbh01q0ryf/",
+    "address": "330 Higgins Rd Unit A Park Ridge, IL 60068 Chicago",
+    "date_pulled": "05-27-2025_17-57-52",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1421.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "0sczc675gwhgf": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4174-w-nelson-st-chicago-il-unit-1/0sczc675gwhgf/",
+    "address": "4174 W Nelson St Unit 1 Chicago, IL 60641",
+    "date_pulled": "05-27-2025_17-57-52",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9746152257": {
+    "source": "www.realtor.com",
+    "price": 1500,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4244-N-Lawndale-Ave-Apt-2_Chicago_IL_60618_M97461-52257",
+    "address": "4244 N Lawndale Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "05-27-2025_18-00-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.958755,
+    "long": -87.720711,
+    "L_dist": [
+      "Irving Park",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.16,
+      "murder_score": 1.52,
+      "perv_score": 1.62,
+      "theft_score": 42.31,
+      "violence_score": 24.75,
+      "property_d_score": 0.13
+    }
+  },
+  "9116235205": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4174-W-Nelson-St-1_Chicago_IL_60641_M91162-35205",
+    "address": "4174 W Nelson St Unit 1 Chicago, IL 60641",
+    "date_pulled": "05-27-2025_18-01-35",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.936569,
+    "long": -87.732437,
+    "L_dist": [
+      "Addison",
+      1.01
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 5.64,
+      "murder_score": 1.89,
+      "perv_score": 1.72,
+      "theft_score": 40.62,
+      "violence_score": 25.87,
+      "property_d_score": 0.15
+    }
+  },
+  "8661615713": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2200-W-Berteau-Ave-2_Chicago_IL_60618_M86616-15713",
+    "address": "2200 W Berteau Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "05-27-2025_18-03-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.957904,
+    "long": -87.683969,
+    "L_dist": [
+      "Irving Park",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 3.9,
+      "gun_score": 5.23,
+      "murder_score": 1.54,
+      "perv_score": 1.62,
+      "theft_score": 42.27,
+      "violence_score": 24.82,
+      "property_d_score": 0.13
+    }
   }
 }
