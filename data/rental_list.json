@@ -63836,5 +63836,1260 @@
       "violence_score": 24.78,
       "property_d_score": 0.13
     }
+  },
+  "t007zc9": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2007-s-allport-st-chicago-il/t007zc9/",
+    "address": "2007 S Allport St, Chicago, IL 60608",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1233.0,
+    "lat": 41.8549094,
+    "long": -87.6573197,
+    "L_dist": [
+      "18th",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 3.56,
+      "gun_score": 7.17,
+      "murder_score": 2.19,
+      "perv_score": 1.61,
+      "theft_score": 39.3,
+      "violence_score": 26.75,
+      "property_d_score": 0.16
+    }
+  },
+  "wtgbp7k": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2650-w-21st-pl-chicago-il/wtgbp7k/",
+    "address": "2650 W 21st Pl, Chicago, IL 60608",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 870.0,
+    "lat": 41.8532128,
+    "long": -87.6926081,
+    "L_dist": [
+      "California",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 7.1,
+      "murder_score": 2.17,
+      "perv_score": 1.66,
+      "theft_score": 38.89,
+      "violence_score": 26.93,
+      "property_d_score": 0.17
+    }
+  },
+  "mnlkbch": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1851-w-chicago-ave-chicago-il/mnlkbch/",
+    "address": "1851 W Chicago Ave, Chicago, IL 60622",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8957477,
+    "long": -87.6741679,
+    "L_dist": [
+      "Division",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 3.6,
+      "gun_score": 5.94,
+      "murder_score": 1.8,
+      "perv_score": 1.68,
+      "theft_score": 41.45,
+      "violence_score": 25.43,
+      "property_d_score": 0.14
+    }
+  },
+  "9gx4l37": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7645-n-sheridan-rd-chicago-il/9gx4l37/",
+    "address": "7645 N Sheridan Rd, Chicago, IL 60626",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 42.0206787,
+    "long": -87.6661329,
+    "L_dist": [
+      "Howard",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 0.91,
+      "gun_score": 3.27,
+      "murder_score": 0.7,
+      "perv_score": 1.5,
+      "theft_score": 46.16,
+      "violence_score": 23.97,
+      "property_d_score": 0.11
+    }
+  },
+  "n2lhjtq": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3604-s-lowe-ave-chicago-il/n2lhjtq/",
+    "address": "3604 S Lowe Ave, Chicago, IL 60609",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.8287855,
+    "long": -87.6426823,
+    "L_dist": [
+      "Sox-35th",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 3.22,
+      "gun_score": 7.71,
+      "murder_score": 2.4,
+      "perv_score": 1.52,
+      "theft_score": 37.87,
+      "violence_score": 27.91,
+      "property_d_score": 0.19
+    }
+  },
+  "88wglr2": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/17-w-36th-st-chicago-il/88wglr2/",
+    "address": "17 W 36th St, Chicago, IL 60609",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8275449,
+    "long": -87.6282099,
+    "L_dist": [
+      "Sox-35th",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.17,
+      "gun_score": 7.67,
+      "murder_score": 2.4,
+      "perv_score": 1.39,
+      "theft_score": 38.12,
+      "violence_score": 27.83,
+      "property_d_score": 0.18
+    }
+  },
+  "esvvxwm": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/10729-s-rhodes-ave-chicago-il/esvvxwm/",
+    "address": "10729 S Rhodes Ave, Chicago, IL 60628",
+    "date_pulled": "05-30-2025_07-53-12",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 892.0,
+    "lat": 41.6992104,
+    "long": -87.6096316,
+    "L_dist": [
+      "95th/Dan Ryan",
+      1.77
+    ],
+    "crime_sc": {
+      "drug_score": 1.7,
+      "gun_score": 9.51,
+      "murder_score": 3.21,
+      "perv_score": 1.53,
+      "theft_score": 32.38,
+      "violence_score": 31.92,
+      "property_d_score": 0.27
+    }
+  },
+  "180849028": {
+    "source": "www.redfin.com",
+    "price": 2233.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1830-W-Lawrence-Ave-60640/unit-2B/home/180849028",
+    "address": "1830 W Lawrence Ave Unit 2B, Chicago, IL, 60640",
+    "date_pulled": "05-30-2025_07-56-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9689677,
+    "long": -87.6757108,
+    "L_dist": [
+      "Damen",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 5.01,
+      "murder_score": 1.43,
+      "perv_score": 1.58,
+      "theft_score": 43.24,
+      "violence_score": 24.32,
+      "property_d_score": 0.12
+    }
+  },
+  "9313190267": {
+    "source": "www.realtor.com",
+    "price": 2400,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4711-N-Artesian-Ave-Apt-2_Chicago_IL_60625_M93131-90267",
+    "address": "4711 N Artesian Ave Apt 2F Chicago, IL 60625",
+    "date_pulled": "05-30-2025_07-56-34",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.967178,
+    "long": -87.689796,
+    "L_dist": [
+      "Western",
+      0.1
+    ],
+    "crime_sc": {
+      "drug_score": 3.65,
+      "gun_score": 4.97,
+      "murder_score": 1.4,
+      "perv_score": 1.64,
+      "theft_score": 43.17,
+      "violence_score": 24.33,
+      "property_d_score": 0.12
+    }
+  },
+  "9736152955": {
+    "source": "www.realtor.com",
+    "price": 2250,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2205-W-Grace-St-1_Chicago_IL_60618_M97361-52955",
+    "address": "2205 W Grace St Unit 1 Chicago, IL 60618",
+    "date_pulled": "05-30-2025_07-57-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.950298,
+    "long": -87.683816,
+    "L_dist": [
+      "Addison",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.32,
+      "murder_score": 1.6,
+      "perv_score": 1.61,
+      "theft_score": 41.94,
+      "violence_score": 24.98,
+      "property_d_score": 0.13
+    }
+  },
+  "184804109": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2935-N-Lawndale-Ave-60618/unit-G/home/184804109",
+    "address": "2935 N Lawndale Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "05-30-2025_07-59-49",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9349493,
+    "long": -87.7210968,
+    "L_dist": [
+      "Belmont",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.42,
+      "murder_score": 1.73,
+      "perv_score": 1.62,
+      "theft_score": 41.53,
+      "violence_score": 25.24,
+      "property_d_score": 0.13
+    }
+  },
+  "2097313064": {
+    "source": "www.zillow.com",
+    "price": 1850.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4015-N-Bernard-St-1-Chicago-IL-60618/2097313064_zpid/",
+    "address": "4015 N Bernard St #1, Chicago, IL 60618",
+    "date_pulled": "05-30-2025_08-01-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.95438,
+    "long": -87.713806,
+    "L_dist": [
+      "Addison",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 5.2,
+      "murder_score": 1.51,
+      "perv_score": 1.62,
+      "theft_score": 42.02,
+      "violence_score": 24.89,
+      "property_d_score": 0.13
+    }
+  },
+  "crtfxfm3qd5zn": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1305-s-lombard-ave-cicero-il/crtfxfm3qd5zn/?t=forrent",
+    "address": "1305 S Lombard Ave Cicero, IL 60804 Chicago",
+    "date_pulled": "05-30-2025_08-02-08",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 2777.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2083091822": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3328-W-Cuyler-Ave-2-Chicago-IL-60618/2083091822_zpid/",
+    "address": "3328 W Cuyler Ave #2, Chicago, IL 60618",
+    "date_pulled": "06-01-2025_08-18-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 3750.0,
+    "lat": 41.95509,
+    "long": -87.71168,
+    "L_dist": [
+      "Addison",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 5.21,
+      "murder_score": 1.49,
+      "perv_score": 1.63,
+      "theft_score": 42.1,
+      "violence_score": 24.84,
+      "property_d_score": 0.13
+    }
+  },
+  "186092554": {
+    "source": "www.redfin.com",
+    "price": 2095.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1969-W-Foster-Ave-60625/unit-1/home/186092554",
+    "address": "1969 W Foster Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "06-01-2025_08-19-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9757243,
+    "long": -87.6789049,
+    "L_dist": [
+      "Damen",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 4.85,
+      "murder_score": 1.4,
+      "perv_score": 1.41,
+      "theft_score": 43.74,
+      "violence_score": 24.17,
+      "property_d_score": 0.12
+    }
+  },
+  "185678039": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1963-W-Foster-Ave-60640/unit-3/home/185678039",
+    "address": "1963 W Foster Ave Unit 3, Chicago, IL, 60640",
+    "date_pulled": "06-01-2025_08-19-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9757497,
+    "long": -87.6788629,
+    "L_dist": [
+      "Damen",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 4.85,
+      "murder_score": 1.4,
+      "perv_score": 1.41,
+      "theft_score": 43.75,
+      "violence_score": 24.17,
+      "property_d_score": 0.12
+    }
+  },
+  "185548693": {
+    "source": "www.redfin.com",
+    "price": 1895.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1963-W-Foster-Ave-60640/unit-2/home/185548693",
+    "address": "1963 W Foster Ave Unit 2, Chicago, IL, 60640",
+    "date_pulled": "06-01-2025_08-19-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9757497,
+    "long": -87.6788629,
+    "L_dist": [
+      "Damen",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 4.85,
+      "murder_score": 1.4,
+      "perv_score": 1.41,
+      "theft_score": 43.75,
+      "violence_score": 24.17,
+      "property_d_score": 0.12
+    }
+  },
+  "185548504": {
+    "source": "www.redfin.com",
+    "price": 1895.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1967-W-Foster-Ave-60625/unit-3/home/185548504",
+    "address": "1967 W Foster Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "06-01-2025_08-19-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9757284,
+    "long": -87.678863,
+    "L_dist": [
+      "Damen",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 4.85,
+      "murder_score": 1.4,
+      "perv_score": 1.41,
+      "theft_score": 43.74,
+      "violence_score": 24.17,
+      "property_d_score": 0.12
+    }
+  },
+  "k24bxejbb2ll3": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2129-w-gladys-ave-chicago-il/k24bxejbb2ll3/",
+    "address": "2129 W Gladys Ave Chicago, IL 60612",
+    "date_pulled": "06-01-2025_08-19-56",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8767193,
+    "long": -87.6801464,
+    "L_dist": [
+      "Illinois Medical District",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.54,
+      "gun_score": 6.44,
+      "murder_score": 1.84,
+      "perv_score": 1.65,
+      "theft_score": 40.12,
+      "violence_score": 26.23,
+      "property_d_score": 0.14
+    }
+  },
+  "17557454": {
+    "source": "www.redfin.com",
+    "price": 2495.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1509-N-Western-Ave-60622/home/17557454",
+    "address": "1509 Western Apartments - 1509 N Western Ave, Chicago, IL, 60622",
+    "date_pulled": "06-01-2025_08-20-33",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": 8401014.0,
+    "lat": 41.9088694,
+    "long": -87.6868025,
+    "L_dist": [
+      "Damen",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.68,
+      "gun_score": 5.7,
+      "murder_score": 1.72,
+      "perv_score": 1.6,
+      "theft_score": 41.47,
+      "violence_score": 25.46,
+      "property_d_score": 0.13
+    }
+  },
+  "177522148": {
+    "source": "www.redfin.com",
+    "price": 1185.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Ainslie-Park/apartment/177522148",
+    "address": "Ainslie Park - 3010 W Ainslie St, Chicago, IL, 60625",
+    "date_pulled": "06-01-2025_08-22-42",
+    "bed": 3.0,
+    "bath": null,
+    "sqft": 550850.0,
+    "lat": 41.970493,
+    "long": -87.704133,
+    "L_dist": [
+      "Francisco",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 4.94,
+      "murder_score": 1.41,
+      "perv_score": 1.47,
+      "theft_score": 43.21,
+      "violence_score": 24.36,
+      "property_d_score": 0.12
+    }
+  },
+  "632byn8rh8e7c": {
+    "source": "www.homes.com",
+    "price": 2100.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/630-e-old-willow-rd-prospect-heights-il-unit-184a/632byn8rh8e7c/",
+    "address": "630 E Old Willow Rd Unit 184A Prospect Heights, IL 60070 Chicago",
+    "date_pulled": "06-01-2025_08-23-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "3zm2brf": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6134-s-tripp-ave-chicago-il/3zm2brf/",
+    "address": "6134 S Tripp Ave, Chicago, IL 60629",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.7811947,
+    "long": -87.7292218,
+    "L_dist": [
+      "Midway",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 8.72,
+      "murder_score": 2.83,
+      "perv_score": 2.05,
+      "theft_score": 32.79,
+      "violence_score": 30.38,
+      "property_d_score": 0.23
+    }
+  },
+  "9eln246": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2519-s-millard-ave-chicago-il/9eln246/",
+    "address": "2519 S Millard Ave, Chicago, IL 60623",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.8455603,
+    "long": -87.7157931,
+    "L_dist": [
+      "Central Park",
+      0.57
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 7.17,
+      "murder_score": 2.1,
+      "perv_score": 1.69,
+      "theft_score": 38.69,
+      "violence_score": 26.99,
+      "property_d_score": 0.18
+    }
+  },
+  "gd8b71x": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3100-w-polk-st-chicago-il/gd8b71x/",
+    "address": "3100 W Polk St, Chicago, IL 60612",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.8711986,
+    "long": -87.7035475,
+    "L_dist": [
+      "Kedzie-Homan",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.62,
+      "gun_score": 6.59,
+      "murder_score": 1.96,
+      "perv_score": 1.68,
+      "theft_score": 39.55,
+      "violence_score": 26.48,
+      "property_d_score": 0.15
+    }
+  },
+  "ytgybet": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7927-s-burnham-ave-chicago-il/ytgybet/",
+    "address": "7927 S Burnham Ave, Chicago, IL 60617",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1124.0,
+    "lat": 41.7510641,
+    "long": -87.5562495,
+    "L_dist": [
+      "Cottage Grove",
+      3.26
+    ],
+    "crime_sc": {
+      "drug_score": 1.41,
+      "gun_score": 9.09,
+      "murder_score": 3.15,
+      "perv_score": 1.43,
+      "theft_score": 34.36,
+      "violence_score": 31.05,
+      "property_d_score": 0.22
+    }
+  },
+  "el9qmlm": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2451-w-howard-st-chicago-il/el9qmlm/",
+    "address": "2451 W Howard St, Chicago, IL 60645",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 42.0189415,
+    "long": -87.6925117,
+    "L_dist": [
+      "South Boulevard",
+      0.94
+    ],
+    "crime_sc": {
+      "drug_score": 0.93,
+      "gun_score": 3.34,
+      "murder_score": 0.75,
+      "perv_score": 1.63,
+      "theft_score": 45.46,
+      "violence_score": 24.14,
+      "property_d_score": 0.11
+    }
+  },
+  "t66cqwb": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/227-w-112th-pl-chicago-il/t66cqwb/",
+    "address": "227 W 112th Pl, Chicago, IL 60628",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 910.0,
+    "lat": 41.6896152,
+    "long": -87.6289073,
+    "L_dist": [
+      "95th/Dan Ryan",
+      2.27
+    ],
+    "crime_sc": {
+      "drug_score": 1.66,
+      "gun_score": 9.34,
+      "murder_score": 3.1,
+      "perv_score": 1.53,
+      "theft_score": 32.2,
+      "violence_score": 31.92,
+      "property_d_score": 0.27
+    }
+  },
+  "drvwvnh": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/8854-s-may-st-chicago-il/drvwvnh/",
+    "address": "8854 S May St, Chicago, IL 60620",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 5.0,
+    "bath": 1.0,
+    "sqft": 2000.0,
+    "lat": 41.7325513,
+    "long": -87.6523161,
+    "L_dist": [
+      "87th",
+      1.44
+    ],
+    "crime_sc": {
+      "drug_score": 1.57,
+      "gun_score": 9.11,
+      "murder_score": 2.84,
+      "perv_score": 1.69,
+      "theft_score": 33.84,
+      "violence_score": 30.87,
+      "property_d_score": 0.24
+    }
+  },
+  "h4q0wn3": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4447-n-kedzie-ave-chicago-il/h4q0wn3/",
+    "address": "4447 N Kedzie Ave, Chicago, IL 60625",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1061.0,
+    "lat": 41.9625506,
+    "long": -87.7079916,
+    "L_dist": [
+      "Kedzie",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.09,
+      "murder_score": 1.49,
+      "perv_score": 1.63,
+      "theft_score": 42.61,
+      "violence_score": 24.58,
+      "property_d_score": 0.12
+    }
+  },
+  "tsnej08": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2856-w-rosemont-ave-chicago-il/tsnej08/",
+    "address": "2856 W Rosemont Ave, Chicago, IL 60659",
+    "date_pulled": "06-01-2025_08-24-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.9958231,
+    "long": -87.701623,
+    "L_dist": [
+      "Kimball",
+      2.02
+    ],
+    "crime_sc": {
+      "drug_score": 1.62,
+      "gun_score": 4.23,
+      "murder_score": 0.91,
+      "perv_score": 1.59,
+      "theft_score": 45.1,
+      "violence_score": 23.95,
+      "property_d_score": 0.12
+    }
+  },
+  "192380409": {
+    "source": "www.redfin.com",
+    "price": 1237.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4412-N-Saint-Louis-Ave-60625/home/192380409",
+    "address": "4412-26 N St Louis Ave. - 4412 N Saint Louis Ave, Chicago, IL, 60625",
+    "date_pulled": "06-01-2025_08-27-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9617026,
+    "long": -87.7160203,
+    "L_dist": [
+      "Kimball",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.1,
+      "murder_score": 1.47,
+      "perv_score": 1.62,
+      "theft_score": 42.5,
+      "violence_score": 24.62,
+      "property_d_score": 0.12
+    }
+  },
+  "185797639": {
+    "source": "www.redfin.com",
+    "price": 1600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4715-W-Cornelia-Ave-60641/unit-2W/home/185797639",
+    "address": "4715 W Cornelia Ave Unit 2W, Chicago, IL, 60641",
+    "date_pulled": "06-01-2025_08-28-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 617.0,
+    "lat": 41.9445268,
+    "long": -87.7449059,
+    "L_dist": [
+      "Irving Park",
+      0.99
+    ],
+    "crime_sc": {
+      "drug_score": 4.25,
+      "gun_score": 5.78,
+      "murder_score": 1.85,
+      "perv_score": 1.76,
+      "theft_score": 39.68,
+      "violence_score": 26.46,
+      "property_d_score": 0.15
+    }
+  },
+  "7447547556": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3040-N-California-Ave-Apt-1_Chicago_IL_60618_M74475-47556",
+    "address": "3040 N California Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "06-01-2025_18-45-39",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.936978,
+    "long": -87.698103,
+    "L_dist": [
+      "Logan Square",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.85,
+      "gun_score": 5.43,
+      "murder_score": 1.74,
+      "perv_score": 1.61,
+      "theft_score": 41.7,
+      "violence_score": 25.18,
+      "property_d_score": 0.13
+    }
+  },
+  "452784080": {
+    "source": "www.zillow.com",
+    "price": 1600.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4123-W-Wellington-Ave-G-Chicago-IL-60641/452784080_zpid/",
+    "address": "4123 W Wellington Ave #G, Chicago, IL 60641",
+    "date_pulled": "06-01-2025_18-46-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 600.0,
+    "lat": 41.935143,
+    "long": -87.730484,
+    "L_dist": [
+      "Belmont",
+      0.95
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.61,
+      "murder_score": 1.83,
+      "perv_score": 1.7,
+      "theft_score": 40.7,
+      "violence_score": 25.79,
+      "property_d_score": 0.15
+    }
+  },
+  "lkcvplfynj6nj": {
+    "source": "www.homes.com",
+    "price": 2490.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3628-n-albany-ave-chicago-il-unit-2/lkcvplfynj6nj/",
+    "address": "3628 N Albany Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "06-01-2025_18-47-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1026.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9360760626": {
+    "source": "www.realtor.com",
+    "price": 2490,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3628-N-Albany-Ave-2_Chicago_IL_60618_M93607-60626",
+    "address": "3628 N Albany Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "06-01-2025_18-48-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1026.0,
+    "lat": 41.947525,
+    "long": -87.705673,
+    "L_dist": [
+      "Addison",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 3.89,
+      "gun_score": 5.3,
+      "murder_score": 1.6,
+      "perv_score": 1.61,
+      "theft_score": 41.92,
+      "violence_score": 24.98,
+      "property_d_score": 0.13
+    }
+  },
+  "13490768": {
+    "source": "www.redfin.com",
+    "price": 1525.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Leland-Albany-Commons/apartment/13490768",
+    "address": "Leland Albany Commons - 3055 W Leland Ave, Chicago, IL, 60625",
+    "date_pulled": "06-01-2025_18-53-47",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9664077,
+    "long": -87.7057286,
+    "L_dist": [
+      "Kedzie",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 4.97,
+      "murder_score": 1.41,
+      "perv_score": 1.64,
+      "theft_score": 43.04,
+      "violence_score": 24.36,
+      "property_d_score": 0.12
+    }
+  },
+  "fwgpect": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6322-n-francisco-ave-chicago-il/fwgpect/",
+    "address": "6322 N Francisco Ave, Chicago, IL 60659",
+    "date_pulled": "06-02-2025_17-46-27",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9964588,
+    "long": -87.7023226,
+    "L_dist": [
+      "Morse",
+      2.04
+    ],
+    "crime_sc": {
+      "drug_score": 1.43,
+      "gun_score": 4.21,
+      "murder_score": 0.9,
+      "perv_score": 1.6,
+      "theft_score": 45.17,
+      "violence_score": 24.03,
+      "property_d_score": 0.12
+    }
+  },
+  "7mywqhx": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3040-n-california-ave-chicago-il/7mywqhx/",
+    "address": "3040 N California Ave, Chicago, IL 60618",
+    "date_pulled": "06-02-2025_17-46-27",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.9369707,
+    "long": -87.6979985,
+    "L_dist": [
+      "Logan Square",
+      0.74
+    ],
+    "crime_sc": {}
+  },
+  "9902852100": {
+    "source": "www.realtor.com",
+    "price": 1995,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4619-N-Hamlin-Ave-Apt-1R_Chicago_IL_60625_M99028-52100",
+    "address": "4619 N Hamlin Ave Apt 1R Chicago, IL 60625",
+    "date_pulled": "06-02-2025_17-48-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.965164,
+    "long": -87.722862,
+    "L_dist": [
+      "Kimball",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 5.04,
+      "murder_score": 1.45,
+      "perv_score": 1.62,
+      "theft_score": 42.79,
+      "violence_score": 24.49,
+      "property_d_score": 0.12
+    }
+  },
+  "344583208": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5224-W-Roscoe-St-FLOOR-1-Chicago-IL-60641/344583208_zpid/",
+    "address": "5224 W Roscoe St FLOOR 1, Chicago, IL 60641",
+    "date_pulled": "06-02-2025_17-52-20",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1350.0,
+    "lat": 41.9426,
+    "long": -87.75785,
+    "L_dist": [
+      "Montrose",
+      1.5
+    ],
+    "crime_sc": {
+      "drug_score": 4.8,
+      "gun_score": 6.3,
+      "murder_score": 2.07,
+      "perv_score": 1.86,
+      "theft_score": 37.84,
+      "violence_score": 27.16,
+      "property_d_score": 0.17
+    }
+  },
+  "2105958376": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/1914-W-Henderson-St-CH2-Chicago-IL-60657/2105958376_zpid/",
+    "address": "1914 W Henderson St #CH2, Chicago, IL 60657",
+    "date_pulled": "06-03-2025_08-10-05",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.942593,
+    "long": -87.67671,
+    "L_dist": [
+      "Paulina",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 5.43,
+      "murder_score": 1.73,
+      "perv_score": 1.59,
+      "theft_score": 41.75,
+      "violence_score": 25.15,
+      "property_d_score": 0.13
+    }
+  },
+  "ecw2gfm": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3240-n-whipple-st-chicago-il/ecw2gfm/",
+    "address": "3240 N Whipple St, Chicago, IL 60618",
+    "date_pulled": "06-03-2025_08-10-56",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9405941,
+    "long": -87.704252,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 5.37,
+      "murder_score": 1.7,
+      "perv_score": 1.61,
+      "theft_score": 41.7,
+      "violence_score": 25.16,
+      "property_d_score": 0.13
+    }
+  },
+  "rzkkgb2": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3628-n-albany-ave-chicago-il/rzkkgb2/",
+    "address": "3628 N Albany Ave, Chicago, IL 60618",
+    "date_pulled": "06-03-2025_08-10-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1026.0,
+    "lat": 41.9475289,
+    "long": -87.7056704,
+    "L_dist": [
+      "Addison",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 3.9,
+      "gun_score": 5.29,
+      "murder_score": 1.62,
+      "perv_score": 1.61,
+      "theft_score": 41.88,
+      "violence_score": 25.0,
+      "property_d_score": 0.13
+    }
+  },
+  "7782223020": {
+    "source": "www.realtor.com",
+    "price": 2200,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3240-N-Whipple-St-Apt-2_Chicago_IL_60618_M77822-23020",
+    "address": "3240 N Whipple St Apt 2 Chicago, IL 60618",
+    "date_pulled": "06-03-2025_08-11-42",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.940589,
+    "long": -87.704337,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 5.37,
+      "murder_score": 1.7,
+      "perv_score": 1.61,
+      "theft_score": 41.7,
+      "violence_score": 25.16,
+      "property_d_score": 0.13
+    }
+  },
+  "190579107": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5224-W-Roscoe-St-60641/unit-1/home/190579107",
+    "address": "5224 W Roscoe St Unit 1, Chicago, IL, 60641",
+    "date_pulled": "06-03-2025_08-11-59",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1350.0,
+    "lat": 41.9425616,
+    "long": -87.7578624,
+    "L_dist": [
+      "Montrose",
+      1.5
+    ],
+    "crime_sc": {
+      "drug_score": 4.82,
+      "gun_score": 6.3,
+      "murder_score": 2.09,
+      "perv_score": 1.86,
+      "theft_score": 37.81,
+      "violence_score": 27.16,
+      "property_d_score": 0.17
+    }
+  },
+  "5f98f6m": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/5f98f6m/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "06-03-2025_08-12-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 690.0,
+    "lat": 42.0197544,
+    "long": -87.6720228,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.94,
+      "gun_score": 3.31,
+      "murder_score": 0.72,
+      "perv_score": 1.52,
+      "theft_score": 45.92,
+      "violence_score": 24.03,
+      "property_d_score": 0.11
+    }
   }
 }
