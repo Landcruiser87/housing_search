@@ -65550,5 +65550,167 @@
       "violence_score": 27.49,
       "property_d_score": 0.18
     }
+  },
+  "dfqh5vk": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1846-s-loomis-st-chicago-il/dfqh5vk/",
+    "address": "1846 S Loomis St, Chicago, IL 60608",
+    "date_pulled": "06-05-2025_18-14-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1001.0,
+    "lat": 41.8563304,
+    "long": -87.661582,
+    "L_dist": [
+      "18th",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 7.16,
+      "murder_score": 2.18,
+      "perv_score": 1.6,
+      "theft_score": 39.27,
+      "violence_score": 26.76,
+      "property_d_score": 0.16
+    }
+  },
+  "9820233804": {
+    "source": "www.realtor.com",
+    "price": 1900,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4834-W-Newport-Ave-2_Chicago_IL_60641_M98202-33804",
+    "address": "4834 W Newport Ave Unit 2 Chicago, IL 60641",
+    "date_pulled": "06-06-2025_08-25-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.943588,
+    "long": -87.748444,
+    "L_dist": [
+      "Irving Park",
+      1.18
+    ],
+    "crime_sc": {
+      "drug_score": 4.37,
+      "gun_score": 5.87,
+      "murder_score": 1.96,
+      "perv_score": 1.77,
+      "theft_score": 39.29,
+      "violence_score": 26.69,
+      "property_d_score": 0.16
+    }
+  },
+  "186092441": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1626-N-Honore-St-60622/unit-2/home/186092441",
+    "address": "1626 N Honore St Unit 2, Chicago, IL, 60622",
+    "date_pulled": "06-06-2025_08-26-47",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9113824,
+    "long": -87.6740437,
+    "L_dist": [
+      "Damen",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 5.62,
+      "murder_score": 1.74,
+      "perv_score": 1.57,
+      "theft_score": 41.57,
+      "violence_score": 25.34,
+      "property_d_score": 0.14
+    }
+  },
+  "j596rc7": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2355-w-fullerton-ave-chicago-il/j596rc7/",
+    "address": "2355 W Fullerton Ave, Chicago, IL 60647",
+    "date_pulled": "06-06-2025_08-28-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9249896,
+    "long": -87.6869642,
+    "L_dist": [
+      "California",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 5.46,
+      "murder_score": 1.75,
+      "perv_score": 1.6,
+      "theft_score": 41.55,
+      "violence_score": 25.35,
+      "property_d_score": 0.13
+    }
+  },
+  "9181698646": {
+    "source": "www.realtor.com",
+    "price": 1495,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4415-N-Drake-Ave-Apt-3R_Chicago_IL_60625_M91816-98646",
+    "address": "4415 N Drake Ave Apt 3R Chicago, IL 60625",
+    "date_pulled": "06-06-2025_08-30-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.961643,
+    "long": -87.716515,
+    "L_dist": [
+      "Kimball",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.08,
+      "murder_score": 1.49,
+      "perv_score": 1.62,
+      "theft_score": 42.5,
+      "violence_score": 24.62,
+      "property_d_score": 0.12
+    }
+  },
+  "9639978773": {
+    "source": "www.realtor.com",
+    "price": 1575,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4415-N-Drake-Ave-Apt-1F_Chicago_IL_60625_M96399-78773",
+    "address": "4415 N Drake Ave Apt 1F Chicago, IL 60625",
+    "date_pulled": "06-06-2025_08-30-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.961643,
+    "long": -87.716515,
+    "L_dist": [
+      "Kimball",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.08,
+      "murder_score": 1.49,
+      "perv_score": 1.62,
+      "theft_score": 42.5,
+      "violence_score": 24.62,
+      "property_d_score": 0.12
+    }
   }
 }
