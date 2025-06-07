@@ -65712,5 +65712,113 @@
       "violence_score": 24.62,
       "property_d_score": 0.12
     }
+  },
+  "b1s746b": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6219-s-rhodes-ave-chicago-il/b1s746b/",
+    "address": "6219 S Rhodes Ave, Chicago, IL 60637",
+    "date_pulled": "06-07-2025_12-26-22",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.7814501,
+    "long": -87.6117796,
+    "L_dist": [
+      "King Drive",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 2.16,
+      "gun_score": 8.61,
+      "murder_score": 2.76,
+      "perv_score": 1.5,
+      "theft_score": 34.74,
+      "violence_score": 30.36,
+      "property_d_score": 0.2
+    }
+  },
+  "bzkbvjc": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/30-e-roosevelt-rd-chicago-il/bzkbvjc/",
+    "address": "30 E Roosevelt Rd, Chicago, IL 60605",
+    "date_pulled": "06-07-2025_12-26-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.8676082,
+    "long": -87.6262721,
+    "L_dist": [
+      "Roosevelt",
+      0.02
+    ],
+    "crime_sc": {
+      "drug_score": 3.3,
+      "gun_score": 6.46,
+      "murder_score": 1.86,
+      "perv_score": 1.29,
+      "theft_score": 41.28,
+      "violence_score": 25.71,
+      "property_d_score": 0.13
+    }
+  },
+  "gy6rccy": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1334-w-18th-pl-chicago-il/gy6rccy/",
+    "address": "1334 W 18th Pl, Chicago, IL 60608",
+    "date_pulled": "06-07-2025_12-26-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 535.0,
+    "lat": 41.8571733,
+    "long": -87.6602481,
+    "L_dist": [
+      "18th",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.64,
+      "gun_score": 7.12,
+      "murder_score": 2.14,
+      "perv_score": 1.59,
+      "theft_score": 39.33,
+      "violence_score": 26.7,
+      "property_d_score": 0.16
+    }
+  },
+  "2094574096": {
+    "source": "www.zillow.com",
+    "price": 2000.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3030-N-Milwaukee-Ave-2-Chicago-IL-60618/2094574096_zpid/",
+    "address": "3030 N Milwaukee Ave #2, Chicago, IL 60618",
+    "date_pulled": "06-07-2025_12-33-19",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": 41.93617,
+    "long": -87.71937,
+    "L_dist": [
+      "Belmont",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 3.86,
+      "gun_score": 5.38,
+      "murder_score": 1.74,
+      "perv_score": 1.61,
+      "theft_score": 41.53,
+      "violence_score": 25.21,
+      "property_d_score": 0.14
+    }
   }
 }
