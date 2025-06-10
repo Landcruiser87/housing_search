@@ -65820,5 +65820,159 @@
       "violence_score": 25.21,
       "property_d_score": 0.14
     }
+  },
+  "7856409903": {
+    "source": "www.craigslist.org",
+    "price": 2550.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7856409903.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "06-07-2025_23-12-40",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.88,
+      "gun_score": 8.36,
+      "murder_score": 2.63,
+      "perv_score": 1.43,
+      "theft_score": 35.87,
+      "violence_score": 29.78,
+      "property_d_score": 0.2
+    }
+  },
+  "21880178": {
+    "source": "www.redfin.com",
+    "price": 1975.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/HIGHPOINT-Old-Irving-Park/apartment/21880178",
+    "address": "HIGHPOINT Old Irving Park - 4323 N Tripp Ave, Chicago, IL, 60641",
+    "date_pulled": "06-07-2025_23-13-52",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1162.0,
+    "lat": 41.9598185,
+    "long": -87.7337265,
+    "L_dist": [
+      "Montrose",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 5.37,
+      "murder_score": 1.71,
+      "perv_score": 1.73,
+      "theft_score": 41.22,
+      "violence_score": 25.37,
+      "property_d_score": 0.14
+    }
+  },
+  "7235456684": {
+    "source": "www.realtor.com",
+    "price": 2000,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3221-N-Leavitt-St-Apt-3_Chicago_IL_60618_M72354-56684",
+    "address": "3221 N Leavitt St Apt 3 Chicago, IL 60618",
+    "date_pulled": "06-08-2025_06-40-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.940293,
+    "long": -87.683059,
+    "L_dist": [
+      "Addison",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.41,
+      "murder_score": 1.75,
+      "perv_score": 1.59,
+      "theft_score": 41.64,
+      "violence_score": 25.18,
+      "property_d_score": 0.13
+    }
+  },
+  "j716tv6": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1737-n-central-ave-chicago-il/j716tv6/",
+    "address": "1737 N Central Ave, Chicago, IL 60639",
+    "date_pulled": "06-08-2025_08-13-00",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9123374,
+    "long": -87.7652191,
+    "L_dist": [
+      "Central",
+      1.72
+    ],
+    "crime_sc": {
+      "drug_score": 5.06,
+      "gun_score": 6.66,
+      "murder_score": 2.13,
+      "perv_score": 1.9,
+      "theft_score": 37.0,
+      "violence_score": 27.52,
+      "property_d_score": 0.18
+    }
+  },
+  "184668541": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4124-W-School-St-60641/unit-1/home/184668541",
+    "address": "4124 W School St Unit 1, Chicago, IL, 60641",
+    "date_pulled": "06-09-2025_08-13-49",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9410954,
+    "long": -87.730797,
+    "L_dist": [
+      "Addison",
+      0.74
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 5.54,
+      "murder_score": 1.84,
+      "perv_score": 1.69,
+      "theft_score": 40.74,
+      "violence_score": 25.73,
+      "property_d_score": 0.14
+    }
+  },
+  "8806749256": {
+    "source": "www.realtor.com",
+    "price": 2400,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2200-W-Berteau-Ave-1_Chicago_IL_60618_M88067-49256",
+    "address": "2200 W Berteau Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "06-09-2025_08-20-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.957905,
+    "long": -87.683968,
+    "L_dist": [
+      "Irving Park",
+      0.52
+    ],
+    "crime_sc": {}
   }
 }
