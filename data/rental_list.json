@@ -65974,5 +65974,167 @@
       0.52
     ],
     "crime_sc": {}
+  },
+  "9452991259": {
+    "source": "www.realtor.com",
+    "price": 2150,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5428-N-Campbell-Ave-Apt-1S_Chicago_IL_60625_M94529-91259",
+    "address": "5428 N Campbell Ave Apt 1S Chicago, IL 60625",
+    "date_pulled": "06-10-2025_07-43-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.980392,
+    "long": -87.692017,
+    "L_dist": [
+      "Rockwell",
+      0.99
+    ],
+    "crime_sc": {
+      "drug_score": 3.08,
+      "gun_score": 4.56,
+      "murder_score": 1.26,
+      "perv_score": 1.43,
+      "theft_score": 44.42,
+      "violence_score": 23.84,
+      "property_d_score": 0.12
+    }
+  },
+  "185661494": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2546-W-George-St-60618/unit-2/home/185661494",
+    "address": "2546 W George St Unit 2, Chicago, IL, 60618",
+    "date_pulled": "06-10-2025_07-44-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9341271,
+    "long": -87.6923227,
+    "L_dist": [
+      "California",
+      0.87
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 5.39,
+      "murder_score": 1.75,
+      "perv_score": 1.6,
+      "theft_score": 41.61,
+      "violence_score": 25.21,
+      "property_d_score": 0.13
+    }
+  },
+  "187436389": {
+    "source": "www.redfin.com",
+    "price": 2290.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3611-W-Wolfram-St-60618/unit-2/home/187436389",
+    "address": "3611 W Wolfram St Unit 2, Chicago, IL, 60618",
+    "date_pulled": "06-10-2025_07-44-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9326466,
+    "long": -87.7178092,
+    "L_dist": [
+      "Belmont",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 3.86,
+      "gun_score": 5.34,
+      "murder_score": 1.71,
+      "perv_score": 1.6,
+      "theft_score": 41.54,
+      "violence_score": 25.23,
+      "property_d_score": 0.13
+    }
+  },
+  "7929101981": {
+    "source": "www.realtor.com",
+    "price": 2450,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2818-N-Spaulding-Ave-Apt-1_Chicago_IL_60618_M79291-01981",
+    "address": "2818 N Spaulding Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "06-10-2025_07-44-34",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.932601,
+    "long": -87.71023,
+    "L_dist": [
+      "Logan Square",
+      0.22
+    ],
+    "crime_sc": {
+      "drug_score": 3.85,
+      "gun_score": 5.33,
+      "murder_score": 1.71,
+      "perv_score": 1.6,
+      "theft_score": 41.64,
+      "violence_score": 25.18,
+      "property_d_score": 0.13
+    }
+  },
+  "402707435": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4945-N-Kilpatrick-Ave-2-Chicago-IL-60630/402707435_zpid/",
+    "address": "4945 N Kilpatrick Ave #2, Chicago, IL 60630",
+    "date_pulled": "06-10-2025_07-46-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.97102,
+    "long": -87.742065,
+    "L_dist": [
+      "Montrose",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.18,
+      "murder_score": 1.54,
+      "perv_score": 1.52,
+      "theft_score": 41.86,
+      "violence_score": 25.25,
+      "property_d_score": 0.14
+    }
+  },
+  "7996084682": {
+    "source": "www.realtor.com",
+    "price": 2375,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4426-N-Whipple-St-Apt-2_Chicago_IL_60625_M79960-84682",
+    "address": "4426 N Whipple St Apt 2 Chicago, IL 60625",
+    "date_pulled": "06-10-2025_07-47-04",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.962057,
+    "long": -87.704959,
+    "L_dist": [
+      "Francisco",
+      0.32
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 5.05,
+      "murder_score": 1.51,
+      "perv_score": 1.63,
+      "theft_score": 42.56,
+      "violence_score": 24.57,
+      "property_d_score": 0.12
+    }
   }
 }
