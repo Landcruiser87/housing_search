@@ -190,15 +190,16 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
         if PETS:
-            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
+            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
+                         # https://www.redfin.com/neighborhood/32483/IL/Chicago/Ravenswood/rentals/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed
         else:
-            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning'#,has-parking
+            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning'#,has-parking
 
         response = requests.get(url_search, headers = BASE_HEADERS)
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        chrome_version = np.random.randint(120, 132)
+        chrome_version = np.random.randint(120, 135)
         INT_HEADERS = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
@@ -216,17 +217,15 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         }
         if PETS:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
+            url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
         else:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/apartments-for-rent/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
+            url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
         
         response = requests.get(url_search, headers = INT_HEADERS)
     #Error Trapping
     else:
         logging.critical("Inproper input for redfin, moving to next site")
         return None
-        
-    
 
     #Just in case we piss someone off
     if response.status_code != 200:
@@ -240,8 +239,8 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
-    hcount = bs4ob.find("div", class_="homes summary reversePosition")
-    if len(hcount.text) > 0:
+    hcount = bs4ob.find_all("div", class_="homes summary reversePosition")
+    if hcount:
         lcount = hcount.text.split()[0]
         lcount = int("".join(x for x in lcount if x.isnumeric()))
     else:
