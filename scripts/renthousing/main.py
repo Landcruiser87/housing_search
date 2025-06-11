@@ -1,14 +1,11 @@
 #Import libraries
 import numpy as np
-import logging
-import time
 # from rich.logging import RichHandler
 from rich.console import Console
 from rich.live import Live
 from dataclasses import dataclass, field
 from os.path import exists
 from random import shuffle  
-from pathlib import Path, PurePath
 
 #Import supporting files
 import realtor, zillow, apartments, craigs, redfin, homes, support
