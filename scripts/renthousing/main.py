@@ -20,8 +20,6 @@ from support import logger, console, log_time
 #     80124, 80126, 80129, 80130, 80236, 80237
 # ]
 
-
-
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [

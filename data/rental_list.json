@@ -66373,5 +66373,226 @@
       "violence_score": 25.2,
       "property_d_score": 0.13
     }
+  },
+  "1heqe67": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2737-w-evergreen-ave-chicago-il/1heqe67/",
+    "address": "2737 W Evergreen Ave, Chicago, IL 60622",
+    "date_pulled": "06-12-2025_22-51-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9054043,
+    "long": -87.6959964,
+    "L_dist": [
+      "Western",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 5.7,
+      "murder_score": 1.76,
+      "perv_score": 1.6,
+      "theft_score": 41.36,
+      "violence_score": 25.48,
+      "property_d_score": 0.13
+    }
+  },
+  "7k9hc9qwqqsmr": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1431-w-cortez-st-chicago-il-unit-1f/7k9hc9qwqqsmr/",
+    "address": "1431 W Cortez St Unit 1F Chicago, IL 60642",
+    "date_pulled": "06-12-2025_22-52-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1133.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "l8tpx35zqkxzn": {
+    "source": "www.homes.com",
+    "price": 2595.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3608-n-bosworth-ave-chicago-il-unit-2/l8tpx35zqkxzn/",
+    "address": "3608 N Bosworth Ave Unit 2 Chicago, IL 60613",
+    "date_pulled": "06-12-2025_22-52-51",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "185447897": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1900-W-Oakdale-Ave-60657/unit-1R/home/185447897",
+    "address": "1900 W Oakdale Ave Unit 1R, Chicago, IL, 60657",
+    "date_pulled": "06-12-2025_22-53-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9353189,
+    "long": -87.6760074,
+    "L_dist": [
+      "Paulina",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.41,
+      "murder_score": 1.78,
+      "perv_score": 1.59,
+      "theft_score": 41.61,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "9687074568": {
+    "source": "www.realtor.com",
+    "price": 2500,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1900-W-Oakdale-Ave-Apt-1R_Chicago_IL_60657_M96870-74568",
+    "address": "1900 W Oakdale Ave Apt 1R Chicago, IL 60657",
+    "date_pulled": "06-12-2025_22-53-35",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.935268,
+    "long": -87.675957,
+    "L_dist": [
+      "Paulina",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.41,
+      "murder_score": 1.78,
+      "perv_score": 1.59,
+      "theft_score": 41.61,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "ty9ep8b": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/ty9ep8b/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "06-12-2025_22-55-14",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 690.0,
+    "lat": 42.0197544,
+    "long": -87.6720228,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.95,
+      "gun_score": 3.28,
+      "murder_score": 0.7,
+      "perv_score": 1.51,
+      "theft_score": 45.79,
+      "violence_score": 24.07,
+      "property_d_score": 0.11
+    }
+  },
+  "vt4gdpf": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1431-w-cortez-st-chicago-il/vt4gdpf/",
+    "address": "1431 W Cortez St, Chicago, IL 60642",
+    "date_pulled": "06-12-2025_22-55-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1133.0,
+    "lat": 41.9004159,
+    "long": -87.6637866,
+    "L_dist": [
+      "Division",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.8,
+      "murder_score": 1.75,
+      "perv_score": 1.62,
+      "theft_score": 41.79,
+      "violence_score": 25.17,
+      "property_d_score": 0.13
+    }
+  },
+  "jhg7eb7": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/11365-s-champlain-ave-chicago-il/jhg7eb7/",
+    "address": "11365 S Champlain Ave, Chicago, IL 60628",
+    "date_pulled": "06-13-2025_07-54-44",
+    "bed": 2.0,
+    "bath": 3.0,
+    "sqft": 1620.0,
+    "lat": 41.687568,
+    "long": -87.6068276,
+    "L_dist": [
+      "95th/Dan Ryan",
+      2.57
+    ],
+    "crime_sc": {
+      "drug_score": 1.75,
+      "gun_score": 9.38,
+      "murder_score": 3.12,
+      "perv_score": 1.53,
+      "theft_score": 32.16,
+      "violence_score": 32.05,
+      "property_d_score": 0.27
+    }
+  },
+  "qdccy0x": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1237-w-wellington-ave-chicago-il/qdccy0x/",
+    "address": "1237 W Wellington Ave, Chicago, IL 60657",
+    "date_pulled": "06-13-2025_07-54-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.9359698,
+    "long": -87.6603533,
+    "L_dist": [
+      "Wellington",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.06,
+      "gun_score": 5.31,
+      "murder_score": 1.74,
+      "perv_score": 1.56,
+      "theft_score": 42.16,
+      "violence_score": 24.74,
+      "property_d_score": 0.13
+    }
   }
 }
