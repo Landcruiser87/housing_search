@@ -66136,5 +66136,242 @@
       "violence_score": 24.57,
       "property_d_score": 0.12
     }
+  },
+  "177352991": {
+    "source": "www.redfin.com",
+    "price": 1125.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/Lamon-Courts-Apartments/apartment/177352991",
+    "address": "Lamon Courts Apartments - 3955 N Lamon Ave, Chicago, IL, 60641",
+    "date_pulled": "06-11-2025_12-35-29",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": 4351000.0,
+    "lat": 41.9530892,
+    "long": -87.7496721,
+    "L_dist": [
+      "Montrose",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 4.54,
+      "gun_score": 5.77,
+      "murder_score": 1.84,
+      "perv_score": 1.81,
+      "theft_score": 39.15,
+      "violence_score": 26.57,
+      "property_d_score": 0.15
+    }
+  },
+  "2100374987": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4805-W-Irving-Park-Rd-2-Chicago-IL-60641/2100374987_zpid/",
+    "address": "4805 W Irving Park Rd #2, Chicago, IL 60641",
+    "date_pulled": "06-11-2025_12-35-56",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1500.0,
+    "lat": 41.953213,
+    "long": -87.747635,
+    "L_dist": [
+      "Montrose",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 4.43,
+      "gun_score": 5.67,
+      "murder_score": 1.81,
+      "perv_score": 1.79,
+      "theft_score": 39.63,
+      "violence_score": 26.39,
+      "property_d_score": 0.15
+    }
+  },
+  "453072512": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5257-W-Eddy-St-2-Chicago-IL-60641/453072512_zpid/",
+    "address": "5257 W Eddy St #2, Chicago, IL 60641",
+    "date_pulled": "06-11-2025_12-35-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 2300.0,
+    "lat": 41.944805,
+    "long": -87.75915,
+    "L_dist": [
+      "Montrose",
+      1.41
+    ],
+    "crime_sc": {
+      "drug_score": 4.95,
+      "gun_score": 6.25,
+      "murder_score": 2.07,
+      "perv_score": 1.85,
+      "theft_score": 37.71,
+      "violence_score": 27.12,
+      "property_d_score": 0.17
+    }
+  },
+  "q5wzzlljflv6n": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1237-w-wellington-ave-chicago-il-unit-1/q5wzzlljflv6n/",
+    "address": "1237 W Wellington Ave Unit 1 Chicago, IL 60657",
+    "date_pulled": "06-11-2025_12-36-55",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "6pz0r1v": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1737-n-central-ave-chicago-il/6pz0r1v/",
+    "address": "1737 N Central Ave, Chicago, IL 60639",
+    "date_pulled": "06-11-2025_12-38-15",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9123374,
+    "long": -87.7652191,
+    "L_dist": [
+      "Central",
+      1.72
+    ],
+    "crime_sc": {
+      "drug_score": 5.08,
+      "gun_score": 6.62,
+      "murder_score": 2.12,
+      "perv_score": 1.91,
+      "theft_score": 36.98,
+      "violence_score": 27.55,
+      "property_d_score": 0.17
+    }
+  },
+  "6qv0ssv": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4149-s-cottage-grove-ave-chicago-il/6qv0ssv/",
+    "address": "4149 S Cottage Grove Ave, Chicago, IL 60653",
+    "date_pulled": "06-11-2025_12-38-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 760.0,
+    "lat": 41.8200145,
+    "long": -87.606685,
+    "L_dist": [
+      "43rd",
+      0.68
+    ],
+    "crime_sc": {
+      "drug_score": 1.89,
+      "gun_score": 7.54,
+      "murder_score": 2.23,
+      "perv_score": 1.37,
+      "theft_score": 39.16,
+      "violence_score": 27.92,
+      "property_d_score": 0.17
+    }
+  },
+  "195899697": {
+    "source": "www.redfin.com",
+    "price": 2415.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1640-N-Damen-Ave-60647/apartment/195899697",
+    "address": "1640 N Damen Apartments - 1640 N Damen Ave, Chicago, IL, 60647",
+    "date_pulled": "06-11-2025_12-39-34",
+    "bed": 1.0,
+    "bath": 1.0,
+    "sqft": 668.0,
+    "lat": 41.9116826,
+    "long": -87.6776748,
+    "L_dist": [
+      "Damen",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.57,
+      "murder_score": 1.74,
+      "perv_score": 1.57,
+      "theft_score": 41.47,
+      "violence_score": 25.41,
+      "property_d_score": 0.13
+    }
+  },
+  "wzdt0qk7zvgtg": {
+    "source": "www.homes.com",
+    "price": 2100.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2737-w-evergreen-ave-chicago-il-unit-3f/wzdt0qk7zvgtg/",
+    "address": "2737 W Evergreen Ave Unit 3F Chicago, IL 60622",
+    "date_pulled": "06-11-2025_12-40-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "77lrp7kljltmv": {
+    "source": "www.homes.com",
+    "price": 2050.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2737-w-evergreen-ave-chicago-il-unit-1f/77lrp7kljltmv/",
+    "address": "2737 W Evergreen Ave Unit 1F Chicago, IL 60622",
+    "date_pulled": "06-11-2025_12-40-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9734203914": {
+    "source": "www.realtor.com",
+    "price": 1600,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2825-N-Francisco-Ave-Gn_Chicago_IL_60618_M97342-03914",
+    "address": "2825 N Francisco Ave Unit Gn Chicago, IL 60618",
+    "date_pulled": "06-11-2025_12-40-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.932915,
+    "long": -87.699806,
+    "L_dist": [
+      "Logan Square",
+      0.5
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 5.36,
+      "murder_score": 1.74,
+      "perv_score": 1.6,
+      "theft_score": 41.65,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
   }
 }
