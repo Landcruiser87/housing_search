@@ -66867,5 +66867,86 @@
       "violence_score": 27.86,
       "property_d_score": 0.17
     }
+  },
+  "9779353516": {
+    "source": "www.realtor.com",
+    "price": 1995,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3824-N-Central-Park-Ave-1_Chicago_IL_60618_M97793-53516",
+    "address": "3824 N Central Park Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "06-16-2025_07-50-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.95092,
+    "long": -87.718018,
+    "L_dist": [
+      "Addison",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 5.17,
+      "murder_score": 1.58,
+      "perv_score": 1.62,
+      "theft_score": 41.84,
+      "violence_score": 24.96,
+      "property_d_score": 0.12
+    }
+  },
+  "194975396": {
+    "source": "www.redfin.com",
+    "price": 1995.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3824-N-Central-Park-Ave-60618/unit-1/home/194975396",
+    "address": "3824 N Central Park Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "06-16-2025_07-50-38",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9509283,
+    "long": -87.718029,
+    "L_dist": [
+      "Addison",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 5.17,
+      "murder_score": 1.58,
+      "perv_score": 1.62,
+      "theft_score": 41.84,
+      "violence_score": 24.96,
+      "property_d_score": 0.12
+    }
+  },
+  "3641292": {
+    "source": "www.zillow.com",
+    "price": 2000.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2830-W-Summerdale-Ave-APT-1E-Chicago-IL-60625/3641292_zpid/",
+    "address": "2830 W Summerdale Ave APT 1E, Chicago, IL 60625",
+    "date_pulled": "06-17-2025_10-39-53",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.978813,
+    "long": -87.70033,
+    "L_dist": [
+      "Francisco",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 3.22,
+      "gun_score": 4.56,
+      "murder_score": 1.32,
+      "perv_score": 1.44,
+      "theft_score": 44.22,
+      "violence_score": 23.87,
+      "property_d_score": 0.12
+    }
   }
 }
