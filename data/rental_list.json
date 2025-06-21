@@ -67471,5 +67471,21 @@
       "violence_score": 24.77,
       "property_d_score": 0.12
     }
+  },
+  "g7d583ykn3xfj": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4346-maple-ave-brookfield-il/g7d583ykn3xfj/",
+    "address": "4346 Maple Ave Brookfield, IL 60513 Chicago",
+    "date_pulled": "06-20-2025_17-31-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
