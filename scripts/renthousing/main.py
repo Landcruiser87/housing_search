@@ -30,7 +30,7 @@ AREAS = [
     'North Center',    #
     'North Park',      #
     'Lincoln Square',  #    
-    # 'Avondale',        #    #New add
+    'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Roscoe Village',
     'Budlong Woods',

@@ -67487,5 +67487,375 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7859923046": {
+    "source": "www.craigslist.org",
+    "price": 2550.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/naperville-1001-sara-ln-naperville/7859923046.html",
+    "address": null,
+    "date_pulled": "06-21-2025_10-55-51",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 22652.0,
+    "lat": 41.7328,
+    "long": -88.1282,
+    "L_dist": [
+      "Forest Park",
+      18.75
+    ],
+    "crime_sc": {}
+  },
+  "191078547": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5016-N-Harding-Ave-60625/unit-3N/home/191078547",
+    "address": "5016 N Harding Ave Unit 3N, Chicago, IL, 60625",
+    "date_pulled": "06-21-2025_10-57-41",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.972454,
+    "long": -87.7272072,
+    "L_dist": [
+      "Kimball",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.54,
+      "gun_score": 4.85,
+      "murder_score": 1.42,
+      "perv_score": 1.46,
+      "theft_score": 42.83,
+      "violence_score": 24.68,
+      "property_d_score": 0.13
+    }
+  },
+  "2122649048": {
+    "source": "www.zillow.com",
+    "price": 2295.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4763-N-Lincoln-Ave-APT-3R-Chicago-IL-60625/2122649048_zpid/",
+    "address": "4763 N Lincoln Ave APT 3R, Chicago, IL 60625",
+    "date_pulled": "06-21-2025_11-01-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.968346,
+    "long": -87.68806,
+    "L_dist": [
+      "Western",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 4.85,
+      "murder_score": 1.41,
+      "perv_score": 1.65,
+      "theft_score": 43.09,
+      "violence_score": 24.36,
+      "property_d_score": 0.12
+    }
+  },
+  "h753m03": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/941-w-50th-st-chicago-il/h753m03/",
+    "address": "941 W 50th St, Chicago, IL 60609",
+    "date_pulled": "06-21-2025_11-03-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.803145,
+    "long": -87.6494632,
+    "L_dist": [
+      "47th",
+      1.07
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 7.88,
+      "murder_score": 2.49,
+      "perv_score": 1.62,
+      "theft_score": 36.1,
+      "violence_score": 28.71,
+      "property_d_score": 0.17
+    }
+  },
+  "077lmd3": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1946-s-racine-ave-chicago-il/077lmd3/",
+    "address": "1946 S Racine Ave, Chicago, IL 60608",
+    "date_pulled": "06-21-2025_11-03-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8551828,
+    "long": -87.6566579,
+    "L_dist": [
+      "18th",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 6.99,
+      "murder_score": 2.09,
+      "perv_score": 1.58,
+      "theft_score": 39.22,
+      "violence_score": 26.8,
+      "property_d_score": 0.15
+    }
+  },
+  "7lmf88y": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/12200-s-lowe-ave-chicago-il/7lmf88y/",
+    "address": "12200 S Lowe Ave, Chicago, IL 60628",
+    "date_pulled": "06-21-2025_11-03-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.6722551,
+    "long": -87.6383513,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.54
+    ],
+    "crime_sc": {
+      "drug_score": 1.56,
+      "gun_score": 8.98,
+      "murder_score": 3.1,
+      "perv_score": 1.64,
+      "theft_score": 32.85,
+      "violence_score": 31.52,
+      "property_d_score": 0.25
+    }
+  },
+  "l00z4vd": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4534-s-ellis-ave-chicago-il/l00z4vd/",
+    "address": "4534 S Ellis Ave, Chicago, IL 60653",
+    "date_pulled": "06-22-2025_11-07-26",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1700.0,
+    "lat": 41.8121326,
+    "long": -87.6021424,
+    "L_dist": [
+      "47th",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 1.89,
+      "gun_score": 7.5,
+      "murder_score": 2.14,
+      "perv_score": 1.38,
+      "theft_score": 38.77,
+      "violence_score": 28.13,
+      "property_d_score": 0.16
+    }
+  },
+  "28vj359": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/614-n-troy-st-chicago-il/28vj359/",
+    "address": "614 N Troy St, Chicago, IL 60612",
+    "date_pulled": "06-22-2025_11-07-26",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.8924389,
+    "long": -87.7055199,
+    "L_dist": [
+      "Kedzie",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.89,
+      "murder_score": 1.73,
+      "perv_score": 1.68,
+      "theft_score": 40.83,
+      "violence_score": 25.69,
+      "property_d_score": 0.13
+    }
+  },
+  "2097666422": {
+    "source": "www.zillow.com",
+    "price": 2295.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4763-N-Lincoln-Ave-APT-2R-Chicago-IL-60625/2097666422_zpid/",
+    "address": "4763 N Lincoln Ave APT 2R, Chicago, IL 60625",
+    "date_pulled": "06-22-2025_11-09-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.968346,
+    "long": -87.68806,
+    "L_dist": [
+      "Western",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 4.85,
+      "murder_score": 1.39,
+      "perv_score": 1.65,
+      "theft_score": 43.09,
+      "violence_score": 24.35,
+      "property_d_score": 0.12
+    }
+  },
+  "453387471": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2947-N-Lawndale-Ave-UNIT-1-Chicago-IL-60618/453387471_zpid/",
+    "address": "2947 N Lawndale Ave UNIT 1, Chicago, IL 60618",
+    "date_pulled": "06-22-2025_11-13-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.935184,
+    "long": -87.720795,
+    "L_dist": [
+      "Belmont",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 5.28,
+      "murder_score": 1.68,
+      "perv_score": 1.62,
+      "theft_score": 41.36,
+      "violence_score": 25.29,
+      "property_d_score": 0.13
+    }
+  },
+  "453441171": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2952-W-Nelson-St-G-Chicago-IL-60618/453441171_zpid/",
+    "address": "2952 W Nelson St #G, Chicago, IL 60618",
+    "date_pulled": "06-22-2025_11-13-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.93762,
+    "long": -87.70184,
+    "L_dist": [
+      "Belmont",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.29,
+      "murder_score": 1.68,
+      "perv_score": 1.62,
+      "theft_score": 41.5,
+      "violence_score": 25.2,
+      "property_d_score": 0.13
+    }
+  },
+  "2119079799": {
+    "source": "www.zillow.com",
+    "price": 2100.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3700-W-Cornelia-Ave-APT-1-Chicago-IL-60618/2119079799_zpid/",
+    "address": "3700 W Cornelia Ave APT 1, Chicago, IL 60618",
+    "date_pulled": "06-22-2025_11-13-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.94491,
+    "long": -87.72023,
+    "L_dist": [
+      "Addison",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 5.21,
+      "murder_score": 1.61,
+      "perv_score": 1.61,
+      "theft_score": 41.57,
+      "violence_score": 25.13,
+      "property_d_score": 0.13
+    }
+  },
+  "8302525554": {
+    "source": "www.realtor.com",
+    "price": 2195,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2912-N-Albany-Ave-Apt-3E_Chicago_IL_60618_M83025-25554",
+    "address": "2912 N Albany Ave Apt 3E Chicago, IL 60618",
+    "date_pulled": "06-22-2025_11-14-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.934341,
+    "long": -87.705276,
+    "L_dist": [
+      "Logan Square",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.91,
+      "gun_score": 5.28,
+      "murder_score": 1.67,
+      "perv_score": 1.61,
+      "theft_score": 41.48,
+      "violence_score": 25.22,
+      "property_d_score": 0.13
+    }
+  },
+  "7150369335": {
+    "source": "www.realtor.com",
+    "price": 1895,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2912-N-Albany-Ave-Apt-1E_Chicago_IL_60618_M71503-69335",
+    "address": "2912 N Albany Ave Apt 1E Chicago, IL 60618",
+    "date_pulled": "06-22-2025_11-14-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.934342,
+    "long": -87.705279,
+    "L_dist": [
+      "Logan Square",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.91,
+      "gun_score": 5.28,
+      "murder_score": 1.67,
+      "perv_score": 1.61,
+      "theft_score": 41.48,
+      "violence_score": 25.22,
+      "property_d_score": 0.13
+    }
   }
 }
