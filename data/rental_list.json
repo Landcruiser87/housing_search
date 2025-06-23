@@ -67857,5 +67857,32 @@
       "violence_score": 25.22,
       "property_d_score": 0.13
     }
+  },
+  "d7h3n4k": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6330-s-ellis-ave-chicago-il/d7h3n4k/",
+    "address": "6330 S Ellis Ave, Chicago, IL 60637",
+    "date_pulled": "06-23-2025_08-29-04",
+    "bed": 4.0,
+    "bath": 1.0,
+    "sqft": 903.0,
+    "lat": 41.7795407,
+    "long": -87.6007285,
+    "L_dist": [
+      "Cottage Grove",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 1.96,
+      "gun_score": 8.47,
+      "murder_score": 2.58,
+      "perv_score": 1.48,
+      "theft_score": 35.01,
+      "violence_score": 30.36,
+      "property_d_score": 0.19
+    }
   }
 }
