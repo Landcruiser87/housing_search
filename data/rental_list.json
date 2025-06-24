@@ -67884,5 +67884,86 @@
       "violence_score": 30.36,
       "property_d_score": 0.19
     }
+  },
+  "9737908083": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5230-W-Henderson-St-1_Chicago_IL_60641_M97379-08083",
+    "address": "5230 W Henderson St Unit 1 Chicago, IL 60641",
+    "date_pulled": "06-23-2025_21-01-35",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1974.0,
+    "lat": 41.941631,
+    "long": -87.758072,
+    "L_dist": [
+      "Montrose",
+      1.56
+    ],
+    "crime_sc": {
+      "drug_score": 4.94,
+      "gun_score": 6.16,
+      "murder_score": 2.05,
+      "perv_score": 1.86,
+      "theft_score": 37.65,
+      "violence_score": 27.2,
+      "property_d_score": 0.17
+    }
+  },
+  "lw528xjz55cjz": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2318-n-keating-ave-chicago-il/lw528xjz55cjz/",
+    "address": "2318 N Keating Ave Chicago, IL 60639",
+    "date_pulled": "06-23-2025_21-02-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9230124,
+    "long": -87.7453216,
+    "L_dist": [
+      "Logan Square",
+      1.95
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 5.74,
+      "murder_score": 1.86,
+      "perv_score": 1.77,
+      "theft_score": 39.33,
+      "violence_score": 26.69,
+      "property_d_score": 0.15
+    }
+  },
+  "9751635765": {
+    "source": "www.realtor.com",
+    "price": 2150,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2717-W-Berwyn-Ave-Apt-1_Chicago_IL_60625_M97516-35765",
+    "address": "2717 W Berwyn Ave Apt 1 Chicago, IL 60625",
+    "date_pulled": "06-23-2025_21-03-17",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 975.0,
+    "lat": 41.977348,
+    "long": -87.697334,
+    "L_dist": [
+      "Rockwell",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.23,
+      "gun_score": 4.61,
+      "murder_score": 1.32,
+      "perv_score": 1.45,
+      "theft_score": 43.96,
+      "violence_score": 24.03,
+      "property_d_score": 0.12
+    }
   }
 }
