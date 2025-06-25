@@ -67965,5 +67965,113 @@
       "violence_score": 24.03,
       "property_d_score": 0.12
     }
+  },
+  "kezfgn9": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4174-w-nelson-st-chicago-il/kezfgn9/",
+    "address": "4174 W Nelson St, Chicago, IL 60641",
+    "date_pulled": "06-24-2025_20-20-33",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.9365346,
+    "long": -87.7324392,
+    "L_dist": [
+      "Addison",
+      1.02
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 5.5,
+      "murder_score": 1.81,
+      "perv_score": 1.72,
+      "theft_score": 40.39,
+      "violence_score": 25.91,
+      "property_d_score": 0.14
+    }
+  },
+  "9gevcm6": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4909-w-wellington-ave-chicago-il/9gevcm6/",
+    "address": "4909 W Wellington Ave, Chicago, IL 60641",
+    "date_pulled": "06-24-2025_20-20-33",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1179.0,
+    "lat": 41.9349226,
+    "long": -87.749628,
+    "L_dist": [
+      "Irving Park",
+      1.63
+    ],
+    "crime_sc": {
+      "drug_score": 4.49,
+      "gun_score": 5.85,
+      "murder_score": 1.93,
+      "perv_score": 1.81,
+      "theft_score": 38.67,
+      "violence_score": 26.94,
+      "property_d_score": 0.15
+    }
+  },
+  "zl5s16x": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4518-n-kedzie-ave-chicago-il/zl5s16x/",
+    "address": "4518 N Kedzie Ave, Chicago, IL 60625",
+    "date_pulled": "06-24-2025_20-20-33",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.9637549,
+    "long": -87.7086242,
+    "L_dist": [
+      "Kedzie",
+      0.16
+    ],
+    "crime_sc": {
+      "drug_score": 3.82,
+      "gun_score": 4.93,
+      "murder_score": 1.45,
+      "perv_score": 1.64,
+      "theft_score": 42.56,
+      "violence_score": 24.58,
+      "property_d_score": 0.12
+    }
+  },
+  "453826010": {
+    "source": "www.zillow.com",
+    "price": 1950.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4249-N-Francisco-Ave-G-Chicago-IL-60618/453826010_zpid/",
+    "address": "4249 N Francisco Ave #G, Chicago, IL 60618",
+    "date_pulled": "06-24-2025_20-23-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.959053,
+    "long": -87.7005,
+    "L_dist": [
+      "Francisco",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.04,
+      "murder_score": 1.51,
+      "perv_score": 1.63,
+      "theft_score": 42.26,
+      "violence_score": 24.7,
+      "property_d_score": 0.12
+    }
   }
 }
