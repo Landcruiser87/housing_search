@@ -68073,5 +68073,32 @@
       "violence_score": 24.7,
       "property_d_score": 0.12
     }
+  },
+  "ek3p5lq": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2318-n-keating-ave-chicago-il/ek3p5lq/",
+    "address": "2318 N Keating Ave, Chicago, IL 60639",
+    "date_pulled": "06-25-2025_09-04-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9230124,
+    "long": -87.7453216,
+    "L_dist": [
+      "Logan Square",
+      1.95
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 5.73,
+      "murder_score": 1.86,
+      "perv_score": 1.77,
+      "theft_score": 39.29,
+      "violence_score": 26.71,
+      "property_d_score": 0.15
+    }
   }
 }
