@@ -68100,5 +68100,113 @@
       "violence_score": 26.71,
       "property_d_score": 0.15
     }
+  },
+  "2079414233": {
+    "source": "www.zillow.com",
+    "price": 1500.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5407-N-Sawyer-Ave-G-Chicago-IL-60625/2079414233_zpid/",
+    "address": "5407 N Sawyer Ave #G, Chicago, IL 60625",
+    "date_pulled": "06-25-2025_22-34-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.97972,
+    "long": -87.70963,
+    "L_dist": [
+      "Kimball",
+      0.83
+    ],
+    "crime_sc": {
+      "drug_score": 3.05,
+      "gun_score": 4.5,
+      "murder_score": 1.29,
+      "perv_score": 1.46,
+      "theft_score": 44.17,
+      "violence_score": 23.93,
+      "property_d_score": 0.12
+    }
+  },
+  "0ngyxx3": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2750-n-kostner-ave-chicago-il/0ngyxx3/",
+    "address": "2750 N Kostner Ave, Chicago, IL 60639",
+    "date_pulled": "06-25-2025_22-35-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 725.0,
+    "lat": 41.9309832,
+    "long": -87.7369191,
+    "L_dist": [
+      "Belmont",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 4.17,
+      "gun_score": 5.57,
+      "murder_score": 1.85,
+      "perv_score": 1.73,
+      "theft_score": 39.97,
+      "violence_score": 26.24,
+      "property_d_score": 0.15
+    }
+  },
+  "7861124277": {
+    "source": "www.craigslist.org",
+    "price": 2495.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7861124277.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "06-26-2025_09-14-11",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.91,
+      "gun_score": 8.19,
+      "murder_score": 2.51,
+      "perv_score": 1.44,
+      "theft_score": 35.82,
+      "violence_score": 29.88,
+      "property_d_score": 0.19
+    }
+  },
+  "187387712": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3937-N-Monticello-Ave-60618/unit-2/home/187387712",
+    "address": "3937 N Monticello Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "06-26-2025_09-20-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": 41.9531124,
+    "long": -87.7187801,
+    "L_dist": [
+      "Addison",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 4.0,
+      "gun_score": 5.1,
+      "murder_score": 1.54,
+      "perv_score": 1.62,
+      "theft_score": 41.76,
+      "violence_score": 24.97,
+      "property_d_score": 0.13
+    }
   }
 }
