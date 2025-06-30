@@ -68208,5 +68208,280 @@
       "violence_score": 24.97,
       "property_d_score": 0.13
     }
+  },
+  "yw88eqt": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.apartments.com/5618-n-artesian-ave-chicago-il/yw88eqt/",
+    "address": "5618 N Artesian Ave, Chicago, IL 60659",
+    "date_pulled": "06-27-2025_09-43-57",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9837725,
+    "long": -87.6909748,
+    "L_dist": [
+      "Western",
+      1.22
+    ],
+    "crime_sc": {
+      "drug_score": 3.06,
+      "gun_score": 4.43,
+      "murder_score": 1.14,
+      "perv_score": 1.48,
+      "theft_score": 44.43,
+      "violence_score": 23.69,
+      "property_d_score": 0.12
+    }
+  },
+  "9hd84g5": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1806-s-trumbull-ave-chicago-il/9hd84g5/",
+    "address": "1806 S Trumbull Ave, Chicago, IL 60623",
+    "date_pulled": "06-27-2025_09-46-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.856915,
+    "long": -87.7117549,
+    "L_dist": [
+      "Central Park",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 6.78,
+      "murder_score": 1.96,
+      "perv_score": 1.66,
+      "theft_score": 38.85,
+      "violence_score": 26.81,
+      "property_d_score": 0.17
+    }
+  },
+  "7427743140": {
+    "source": "www.realtor.com",
+    "price": 2200,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4208-N-Leavitt-St-Apt-1_Chicago_IL_60618_M74277-43140",
+    "address": "4208 N Leavitt St Apt 1 Chicago, IL 60618",
+    "date_pulled": "06-27-2025_21-46-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.958026,
+    "long": -87.684076,
+    "L_dist": [
+      "Montrose",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 4.03,
+      "gun_score": 5.1,
+      "murder_score": 1.52,
+      "perv_score": 1.61,
+      "theft_score": 42.08,
+      "violence_score": 24.82,
+      "property_d_score": 0.13
+    }
+  },
+  "2071506637": {
+    "source": "www.zillow.com",
+    "price": 1650.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4349-N-Sawyer-Ave-E2-Chicago-IL-60618/2071506637_zpid/",
+    "address": "4349 N Sawyer Ave #E2, Chicago, IL 60618",
+    "date_pulled": "06-27-2025_21-49-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.961014,
+    "long": -87.70916,
+    "L_dist": [
+      "Kedzie",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 3.91,
+      "gun_score": 4.98,
+      "murder_score": 1.48,
+      "perv_score": 1.63,
+      "theft_score": 42.3,
+      "violence_score": 24.7,
+      "property_d_score": 0.12
+    }
+  },
+  "w71mrnl": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/717-n-parkside-ave-chicago-il/w71mrnl/",
+    "address": "717 N Parkside Ave, Chicago, IL 60644",
+    "date_pulled": "06-30-2025_09-50-19",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1550.0,
+    "lat": 41.8935243,
+    "long": -87.7663292,
+    "L_dist": [
+      "Central",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 5.15,
+      "gun_score": 6.9,
+      "murder_score": 2.19,
+      "perv_score": 2.02,
+      "theft_score": 36.43,
+      "violence_score": 27.8,
+      "property_d_score": 0.18
+    }
+  },
+  "kc5h6t9": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/10509-s-edbrooke-ave-chicago-il/kc5h6t9/",
+    "address": "10509 S Edbrooke Ave, Chicago, IL 60628",
+    "date_pulled": "06-30-2025_09-50-19",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 2307.0,
+    "lat": 41.7031891,
+    "long": -87.6194181,
+    "L_dist": [
+      "95th/Dan Ryan",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 1.73,
+      "gun_score": 9.11,
+      "murder_score": 2.96,
+      "perv_score": 1.56,
+      "theft_score": 32.88,
+      "violence_score": 31.66,
+      "property_d_score": 0.25
+    }
+  },
+  "jmtsgm5": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1301-w-71st-pl-chicago-il/jmtsgm5/",
+    "address": "1301 W 71st Pl, Chicago, IL 60636",
+    "date_pulled": "06-30-2025_09-50-19",
+    "bed": 5.0,
+    "bath": 2.0,
+    "sqft": 1057.0,
+    "lat": 41.7638841,
+    "long": -87.6574904,
+    "L_dist": [
+      "Ashland/63rd",
+      1.08
+    ],
+    "crime_sc": {
+      "drug_score": 2.08,
+      "gun_score": 8.65,
+      "murder_score": 2.71,
+      "perv_score": 1.61,
+      "theft_score": 33.98,
+      "violence_score": 30.65,
+      "property_d_score": 0.22
+    }
+  },
+  "9pn0f66": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5111-w-22nd-pl-cicero-il/9pn0f66/",
+    "address": "5111 W 22nd Pl, Cicero, IL 60804 Chicago",
+    "date_pulled": "06-30-2025_09-50-19",
+    "bed": 3.0,
+    "bath": 3.0,
+    "sqft": 1398.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "fdnm4ds8hebvg": {
+    "source": "www.homes.com",
+    "price": 2490.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/52-n-albert-st-mount-prospect-il/fdnm4ds8hebvg/",
+    "address": "52 N Albert St Mount Prospect, IL 60056 Chicago",
+    "date_pulled": "06-30-2025_09-51-31",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": 1452.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8423319518": {
+    "source": "www.realtor.com",
+    "price": 2195,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4335-N-Sacramento-Ave-Apt-3_Chicago_IL_60618_M84233-19518",
+    "address": "4335 N Sacramento Ave Apt 3 Chicago, IL 60618",
+    "date_pulled": "06-30-2025_09-53-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.960418,
+    "long": -87.703079,
+    "L_dist": [
+      "Francisco",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.94,
+      "gun_score": 4.99,
+      "murder_score": 1.51,
+      "perv_score": 1.63,
+      "theft_score": 42.3,
+      "violence_score": 24.68,
+      "property_d_score": 0.12
+    }
+  },
+  "2068896627": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3922-N-Monticello-Ave-1-Chicago-IL-60618/2068896627_zpid/",
+    "address": "3922 N Monticello Ave #1, Chicago, IL 60618",
+    "date_pulled": "06-30-2025_09-54-00",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1600.0,
+    "lat": 41.952698,
+    "long": -87.71931,
+    "L_dist": [
+      "Addison",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 5.11,
+      "murder_score": 1.56,
+      "perv_score": 1.62,
+      "theft_score": 41.7,
+      "violence_score": 24.97,
+      "property_d_score": 0.13
+    }
   }
 }
