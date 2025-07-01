@@ -68483,5 +68483,312 @@
       "violence_score": 24.97,
       "property_d_score": 0.13
     }
+  },
+  "vjj4c6d3t8w4w": {
+    "source": "www.homes.com",
+    "price": 1700.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/6461-n-newark-ave-chicago-il-unit-1/vjj4c6d3t8w4w/",
+    "address": "6461 N Newark Ave Unit 1 Chicago, IL 60631",
+    "date_pulled": "06-30-2025_19-40-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1600.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "rn3qtgw510qq0": {
+    "source": "www.homes.com",
+    "price": 1950.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1196-cove-dr-prospect-heights-il-unit-151c/rn3qtgw510qq0/",
+    "address": "1196 Cove Dr Unit 151C Prospect Heights, IL 60070 Chicago",
+    "date_pulled": "06-30-2025_19-41-38",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "403105399": {
+    "source": "www.zillow.com",
+    "price": 2350.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/1831-W-Melrose-St-2-Chicago-IL-60657/403105399_zpid/",
+    "address": "1831 W Melrose St #2, Chicago, IL 60657",
+    "date_pulled": "06-30-2025_19-43-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.94027,
+    "long": -87.675156,
+    "L_dist": [
+      "Paulina",
+      0.32
+    ],
+    "crime_sc": {
+      "drug_score": 4.06,
+      "gun_score": 5.31,
+      "murder_score": 1.71,
+      "perv_score": 1.6,
+      "theft_score": 41.51,
+      "violence_score": 25.19,
+      "property_d_score": 0.13
+    }
+  },
+  "9te2wqqwnvb6n": {
+    "source": "www.homes.com",
+    "price": 2200.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1417-w-cullerton-st-chicago-il/9te2wqqwnvb6n/",
+    "address": "1417 W Cullerton St Chicago, IL 60608",
+    "date_pulled": "07-01-2025_08-01-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.8549659,
+    "long": -87.6619974,
+    "L_dist": [
+      "18th",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 6.99,
+      "murder_score": 2.04,
+      "perv_score": 1.59,
+      "theft_score": 38.99,
+      "violence_score": 26.91,
+      "property_d_score": 0.16
+    }
+  },
+  "4cgpttgc397w1": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1417-w-cullerton-st-chicago-il-unit-2/4cgpttgc397w1/",
+    "address": "1417 W Cullerton St Unit 2 Chicago, IL 60608",
+    "date_pulled": "07-01-2025_08-01-00",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "185945953": {
+    "source": "www.redfin.com",
+    "price": 1725.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4750-N-Sacramento-Ave-60625/unit-3W/home/185945953",
+    "address": "4750 N Sacramento Ave Unit 3W, Chicago, IL, 60625",
+    "date_pulled": "07-01-2025_08-01-29",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.968242,
+    "long": -87.703778,
+    "L_dist": [
+      "Francisco",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 3.58,
+      "gun_score": 4.81,
+      "murder_score": 1.38,
+      "perv_score": 1.65,
+      "theft_score": 43.04,
+      "violence_score": 24.37,
+      "property_d_score": 0.13
+    }
+  },
+  "178437253": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4953-W-Belle-Plaine-Ave-60641/unit-2/home/178437253",
+    "address": "4953 W Belle Plaine Ave #2, Chicago, IL, 60641",
+    "date_pulled": "07-01-2025_08-03-53",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.954963,
+    "long": -87.75178,
+    "L_dist": [
+      "Montrose",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 4.59,
+      "gun_score": 5.72,
+      "murder_score": 1.84,
+      "perv_score": 1.81,
+      "theft_score": 38.83,
+      "violence_score": 26.67,
+      "property_d_score": 0.15
+    }
+  },
+  "gwvml2x": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6152-s-kolin-ave-chicago-il/gwvml2x/",
+    "address": "6152 S Kolin Ave, Chicago, IL 60629",
+    "date_pulled": "07-01-2025_08-07-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.7806738,
+    "long": -87.7316566,
+    "L_dist": [
+      "Midway",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 3.94,
+      "gun_score": 8.46,
+      "murder_score": 2.62,
+      "perv_score": 2.02,
+      "theft_score": 32.46,
+      "violence_score": 30.53,
+      "property_d_score": 0.23
+    }
+  },
+  "ts6vdsb": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6461-n-newark-ave-chicago-il/ts6vdsb/",
+    "address": "6461 N Newark Ave, Chicago, IL 60631",
+    "date_pulled": "07-01-2025_08-07-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1600.0,
+    "lat": 41.9988024,
+    "long": -87.7989675,
+    "L_dist": [
+      "Harlem",
+      1.25
+    ],
+    "crime_sc": {
+      "drug_score": 2.04,
+      "gun_score": 5.3,
+      "murder_score": 1.13,
+      "perv_score": 1.93,
+      "theft_score": 38.81,
+      "violence_score": 26.46,
+      "property_d_score": 0.16
+    }
+  },
+  "s5m00x7": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1417-w-cullerton-st-chicago-il/s5m00x7/",
+    "address": "1417 W Cullerton St, Chicago, IL 60608",
+    "date_pulled": "07-01-2025_08-07-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.8549659,
+    "long": -87.6619974,
+    "L_dist": [
+      "18th",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 6.99,
+      "murder_score": 2.04,
+      "perv_score": 1.59,
+      "theft_score": 38.99,
+      "violence_score": 26.91,
+      "property_d_score": 0.16
+    }
+  },
+  "hcflfe3": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1405-e-65th-pl-chicago-il/hcflfe3/",
+    "address": "1405 E 65th Pl, Chicago, IL 60637",
+    "date_pulled": "07-01-2025_08-07-41",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.7760724,
+    "long": -87.5876168,
+    "L_dist": [
+      "Cottage Grove",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 1.73,
+      "gun_score": 8.55,
+      "murder_score": 2.64,
+      "perv_score": 1.47,
+      "theft_score": 35.06,
+      "violence_score": 30.39,
+      "property_d_score": 0.2
+    }
+  },
+  "9tf115neltdsq": {
+    "source": "www.homes.com",
+    "price": 2050.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2737-w-evergreen-ave-chicago-il-unit-2r/9tf115neltdsq/",
+    "address": "2737 W Evergreen Ave Unit 2R Chicago, IL 60622",
+    "date_pulled": "07-01-2025_17-47-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9587905733": {
+    "source": "www.realtor.com",
+    "price": 2450,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4015-23-N-Narragansett_Chicago_IL_60634_M95879-05733",
+    "address": "4015-23 N Narragansett Chicago, IL 60634",
+    "date_pulled": "07-01-2025_17-53-35",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.953442,
+    "long": -87.786209,
+    "L_dist": [
+      "Jefferson Park",
+      1.76
+    ],
+    "crime_sc": {
+      "drug_score": 6.43,
+      "gun_score": 6.79,
+      "murder_score": 2.29,
+      "perv_score": 2.06,
+      "theft_score": 34.2,
+      "violence_score": 28.48,
+      "property_d_score": 0.18
+    }
   }
 }
