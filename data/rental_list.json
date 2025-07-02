@@ -68790,5 +68790,129 @@
       "violence_score": 28.48,
       "property_d_score": 0.18
     }
+  },
+  "2063567197": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3607-W-Ainslie-St-1-Chicago-IL-60625/2063567197_zpid/",
+    "address": "3607 W Ainslie St #1, Chicago, IL 60625",
+    "date_pulled": "07-02-2025_10-17-47",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.970173,
+    "long": -87.71878,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.58,
+      "gun_score": 4.8,
+      "murder_score": 1.38,
+      "perv_score": 1.5,
+      "theft_score": 42.97,
+      "violence_score": 24.43,
+      "property_d_score": 0.13
+    }
+  },
+  "sskkft4": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1304-n-campbell-ave-chicago-il/sskkft4/",
+    "address": "1304 N Campbell Ave, Chicago, IL 60622",
+    "date_pulled": "07-02-2025_10-19-01",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.9050838,
+    "long": -87.6897942,
+    "L_dist": [
+      "Damen",
+      0.71
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 5.62,
+      "murder_score": 1.69,
+      "perv_score": 1.61,
+      "theft_score": 41.2,
+      "violence_score": 25.58,
+      "property_d_score": 0.14
+    }
+  },
+  "ybxgnpv": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2737-w-evergreen-ave-chicago-il/ybxgnpv/",
+    "address": "2737 W Evergreen Ave, Chicago, IL 60622",
+    "date_pulled": "07-02-2025_10-19-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9054043,
+    "long": -87.6959964,
+    "L_dist": [
+      "Western",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 5.6,
+      "murder_score": 1.68,
+      "perv_score": 1.6,
+      "theft_score": 41.19,
+      "violence_score": 25.56,
+      "property_d_score": 0.14
+    }
+  },
+  "hz1qck1": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1407-s-59th-ct-cicero-il/hz1qck1/",
+    "address": "1407 S 59th Ct, Cicero, IL 60804 Chicago",
+    "date_pulled": "07-02-2025_10-20-44",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 650.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "g6d4swy": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2947-n-racine-ave-chicago-il/g6d4swy/",
+    "address": "2947 N Racine Ave, Chicago, IL 60657",
+    "date_pulled": "07-02-2025_10-20-44",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 890.0,
+    "lat": 41.9357886,
+    "long": -87.6585326,
+    "L_dist": [
+      "Wellington",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 5.25,
+      "murder_score": 1.65,
+      "perv_score": 1.56,
+      "theft_score": 42.05,
+      "violence_score": 24.77,
+      "property_d_score": 0.12
+    }
   }
 }
