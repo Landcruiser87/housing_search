@@ -68914,5 +68914,333 @@
       "violence_score": 24.77,
       "property_d_score": 0.12
     }
+  },
+  "6kkg7kqe4p0x7": {
+    "source": "www.homes.com",
+    "price": 2350.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/744-w-gordon-terrace-chicago-il-unit-108/6kkg7kqe4p0x7/",
+    "address": "744 W Gordon Terrace Unit 108 Chicago, IL 60613",
+    "date_pulled": "07-03-2025_13-34-51",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "kmpq5g3zm4rmb": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/744-w-gordon-terrace-chicago-il-unit-314/kmpq5g3zm4rmb/",
+    "address": "744 W Gordon Terrace Unit 314 Chicago, IL 60613",
+    "date_pulled": "07-03-2025_13-34-51",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "mkkr5b8dtg3h3": {
+    "source": "www.homes.com",
+    "price": 2350.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/744-w-gordon-terrace-chicago-il-unit-107/mkkr5b8dtg3h3/",
+    "address": "744 W Gordon Terrace Unit 107 Chicago, IL 60613",
+    "date_pulled": "07-03-2025_13-34-51",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "p5dcpdm1f3lf7": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/744-w-gordon-terrace-chicago-il-unit-316/p5dcpdm1f3lf7/",
+    "address": "744 W Gordon Terrace Unit 316 Chicago, IL 60613",
+    "date_pulled": "07-03-2025_13-34-51",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "191525811": {
+    "source": "www.redfin.com",
+    "price": 1895.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3321-N-Karlov-Ave-60641/unit-1W/home/191525811",
+    "address": "3321 N Karlov Ave Unit 1W, Chicago, IL, 60641",
+    "date_pulled": "07-03-2025_13-37-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9415108,
+    "long": -87.729372,
+    "L_dist": [
+      "Addison",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 4.13,
+      "gun_score": 5.37,
+      "murder_score": 1.77,
+      "perv_score": 1.67,
+      "theft_score": 40.67,
+      "violence_score": 25.78,
+      "property_d_score": 0.14
+    }
+  },
+  "3jj8yjd": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2538-w-haddon-ave-chicago-il/3jj8yjd/",
+    "address": "2538 W Haddon Ave, Chicago, IL 60622",
+    "date_pulled": "07-03-2025_13-37-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9022515,
+    "long": -87.6910655,
+    "L_dist": [
+      "Damen",
+      0.87
+    ],
+    "crime_sc": {
+      "drug_score": 3.73,
+      "gun_score": 5.65,
+      "murder_score": 1.67,
+      "perv_score": 1.64,
+      "theft_score": 41.18,
+      "violence_score": 25.62,
+      "property_d_score": 0.14
+    }
+  },
+  "8517758382": {
+    "source": "www.realtor.com",
+    "price": 2100,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5428-N-Campbell-Ave-Apt-3S_Chicago_IL_60625_M85177-58382",
+    "address": "5428 N Campbell Ave Apt 3S Chicago, IL 60625",
+    "date_pulled": "07-03-2025_13-39-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.980392,
+    "long": -87.692017,
+    "L_dist": [
+      "Rockwell",
+      0.99
+    ],
+    "crime_sc": {
+      "drug_score": 3.08,
+      "gun_score": 4.45,
+      "murder_score": 1.24,
+      "perv_score": 1.45,
+      "theft_score": 44.26,
+      "violence_score": 23.97,
+      "property_d_score": 0.12
+    }
+  },
+  "185678626": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3607-W-Ainslie-St-60625/unit-1/home/185678626",
+    "address": "3607 W Ainslie St Unit 1, Chicago, IL, 60625",
+    "date_pulled": "07-03-2025_13-40-16",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9700099,
+    "long": -87.718746,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.59,
+      "gun_score": 4.79,
+      "murder_score": 1.37,
+      "perv_score": 1.52,
+      "theft_score": 42.93,
+      "violence_score": 24.44,
+      "property_d_score": 0.13
+    }
+  },
+  "bbk0p5q7nl0bd": {
+    "source": "www.homes.com",
+    "price": 1900.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3800-elm-ave-brookfield-il/bbk0p5q7nl0bd/",
+    "address": "3800 Elm Ave Brookfield, IL 60513 Chicago",
+    "date_pulled": "07-03-2025_13-40-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "l682ktf": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/9900-s-paxton-ave-chicago-il/l682ktf/",
+    "address": "9900 S Paxton Ave, Chicago, IL 60617",
+    "date_pulled": "07-03-2025_13-42-01",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1584.0,
+    "lat": 41.7150946,
+    "long": -87.5697555,
+    "L_dist": [
+      "95th/Dan Ryan",
+      2.86
+    ],
+    "crime_sc": {
+      "drug_score": 1.6,
+      "gun_score": 9.09,
+      "murder_score": 2.92,
+      "perv_score": 1.51,
+      "theft_score": 33.65,
+      "violence_score": 31.53,
+      "property_d_score": 0.23
+    }
+  },
+  "7ee26zx": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5010-harold-ave-schiller-park-il/7ee26zx/",
+    "address": "5010 Harold Ave, Schiller Park, IL 60176 Chicago",
+    "date_pulled": "07-03-2025_13-42-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 650.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "qp86ksy": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/744-w-gordon-terrace-chicago-il/qp86ksy/",
+    "address": "744 W Gordon Terrace, Chicago, IL 60613",
+    "date_pulled": "07-03-2025_13-42-01",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9580218,
+    "long": -87.6491309,
+    "L_dist": [
+      "Sheridan",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 4.05,
+      "gun_score": 4.8,
+      "murder_score": 1.36,
+      "perv_score": 1.53,
+      "theft_score": 43.66,
+      "violence_score": 23.77,
+      "property_d_score": 0.11
+    }
+  },
+  "tbenze8": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/14247-s-marquette-ave-burnham-il/tbenze8/",
+    "address": "14247 S Marquette Ave, Burnham, IL 60633 Chicago",
+    "date_pulled": "07-03-2025_13-42-01",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1288.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2069606418": {
+    "source": "www.zillow.com",
+    "price": 2145.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3501-N-Albany-Ave-APT-3-Chicago-IL-60618/2069606418_zpid/",
+    "address": "3501 N Albany Ave APT 3, Chicago, IL 60618",
+    "date_pulled": "07-03-2025_13-43-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9449,
+    "long": -87.704956,
+    "L_dist": [
+      "Belmont",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 5.18,
+      "murder_score": 1.62,
+      "perv_score": 1.61,
+      "theft_score": 41.55,
+      "violence_score": 25.17,
+      "property_d_score": 0.13
+    }
+  },
+  "9047183531": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3856-W-Diversey-Ave-3_Chicago_IL_60647_M90471-83531",
+    "address": "3856 W Diversey Ave # 3 Chicago, IL 60647",
+    "date_pulled": "07-03-2025_13-43-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 0.0,
+    "lat": 41.932087,
+    "long": -87.724365,
+    "L_dist": [
+      "Belmont",
+      0.74
+    ],
+    "crime_sc": {
+      "drug_score": 4.0,
+      "gun_score": 5.3,
+      "murder_score": 1.68,
+      "perv_score": 1.62,
+      "theft_score": 41.1,
+      "violence_score": 25.49,
+      "property_d_score": 0.14
+    }
   }
 }
