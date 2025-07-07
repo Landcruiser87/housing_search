@@ -69242,5 +69242,307 @@
       "violence_score": 25.49,
       "property_d_score": 0.14
     }
+  },
+  "179942619": {
+    "source": "www.redfin.com",
+    "price": 2550.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3114-N-Clybourn-Ave-60618/unit-2R/home/179942619",
+    "address": "3114 N Clybourn Ave Unit 2R, Chicago, IL, 60618",
+    "date_pulled": "07-07-2025_08-27-11",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.9379786,
+    "long": -87.6863102,
+    "L_dist": [
+      "Addison",
+      0.87
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 5.24,
+      "murder_score": 1.68,
+      "perv_score": 1.61,
+      "theft_score": 41.43,
+      "violence_score": 25.26,
+      "property_d_score": 0.14
+    }
+  },
+  "k7vbwrz4zz6g2": {
+    "source": "www.homes.com",
+    "price": 2395.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3322-n-troy-st-chicago-il-unit-1/k7vbwrz4zz6g2/",
+    "address": "3322 N Troy St Unit 1 Chicago, IL 60618",
+    "date_pulled": "07-07-2025_08-27-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "jq1125yzrxjlw": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1900-w-ohio-st-chicago-il-unit-2f/jq1125yzrxjlw/",
+    "address": "1900 W Ohio St Unit 2F Chicago, IL 60622",
+    "date_pulled": "07-07-2025_08-28-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "h8l6se0": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1900-w-ohio-st-chicago-il/h8l6se0/",
+    "address": "1900 W Ohio St, Chicago, IL 60622",
+    "date_pulled": "07-07-2025_08-28-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8924994,
+    "long": -87.6746728,
+    "L_dist": [
+      "Ashland",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 5.82,
+      "murder_score": 1.72,
+      "perv_score": 1.65,
+      "theft_score": 41.07,
+      "violence_score": 25.62,
+      "property_d_score": 0.13
+    }
+  },
+  "hmhmdb2": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1426-n-greenview-ave-chicago-il/hmhmdb2/",
+    "address": "1426 N Greenview Ave, Chicago, IL 60642",
+    "date_pulled": "07-07-2025_08-28-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9078734,
+    "long": -87.6654284,
+    "L_dist": [
+      "Division",
+      0.32
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 5.52,
+      "murder_score": 1.65,
+      "perv_score": 1.54,
+      "theft_score": 41.57,
+      "violence_score": 25.31,
+      "property_d_score": 0.13
+    }
+  },
+  "2e5pjrc": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2129-w-gladys-ave-chicago-il/2e5pjrc/",
+    "address": "2129 W Gladys Ave, Chicago, IL 60612",
+    "date_pulled": "07-07-2025_08-28-58",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8767193,
+    "long": -87.6801464,
+    "L_dist": [
+      "Illinois Medical District",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.64,
+      "gun_score": 6.18,
+      "murder_score": 1.77,
+      "perv_score": 1.64,
+      "theft_score": 39.99,
+      "violence_score": 26.27,
+      "property_d_score": 0.14
+    }
+  },
+  "cv0bq6d": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1806-s-trumbull-ave-chicago-il/cv0bq6d/",
+    "address": "1806 S Trumbull Ave, Chicago, IL 60623",
+    "date_pulled": "07-07-2025_08-28-58",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.856915,
+    "long": -87.7117549,
+    "L_dist": [
+      "Central Park",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 6.68,
+      "murder_score": 1.94,
+      "perv_score": 1.66,
+      "theft_score": 38.9,
+      "violence_score": 26.83,
+      "property_d_score": 0.17
+    }
+  },
+  "9146856182": {
+    "source": "www.realtor.com",
+    "price": 1620,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4010-N-Lincoln-Ave-Apt-204_Chicago_IL_60618_M91468-56182",
+    "address": "4010 N Lincoln Ave Apt 204 Chicago, IL 60618",
+    "date_pulled": "07-07-2025_08-34-08",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 792.0,
+    "lat": 41.954552,
+    "long": -87.679352,
+    "L_dist": [
+      "Irving Park",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 4.07,
+      "gun_score": 5.06,
+      "murder_score": 1.56,
+      "perv_score": 1.62,
+      "theft_score": 41.89,
+      "violence_score": 24.93,
+      "property_d_score": 0.13
+    }
+  },
+  "9899785834": {
+    "source": "www.realtor.com",
+    "price": 2395,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3322-N-Troy-St-Apt-1_Chicago_IL_60618_M98997-85834",
+    "address": "3322 N Troy St Apt 1 Chicago, IL 60618",
+    "date_pulled": "07-07-2025_08-34-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.941799,
+    "long": -87.706734,
+    "L_dist": [
+      "Belmont",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 5.15,
+      "murder_score": 1.64,
+      "perv_score": 1.62,
+      "theft_score": 41.51,
+      "violence_score": 25.19,
+      "property_d_score": 0.13
+    }
+  },
+  "9488397839": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2737-W-Belmont-Ave_Chicago_IL_60618_M94883-97839",
+    "address": "2737 W Belmont Ave Chicago, IL 60618",
+    "date_pulled": "07-07-2025_08-34-25",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.93903,
+    "long": -87.696831,
+    "L_dist": [
+      "Belmont",
+      0.8
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.18,
+      "murder_score": 1.67,
+      "perv_score": 1.62,
+      "theft_score": 41.49,
+      "violence_score": 25.24,
+      "property_d_score": 0.13
+    }
+  },
+  "454640141": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2737-W-Belmont-Ave-Chicago-IL-60618/454640141_zpid/",
+    "address": "2737 W Belmont Ave, Chicago, IL 60618",
+    "date_pulled": "07-07-2025_08-35-11",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.939137,
+    "long": -87.69671,
+    "L_dist": [
+      "Belmont",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.18,
+      "murder_score": 1.67,
+      "perv_score": 1.62,
+      "theft_score": 41.49,
+      "violence_score": 25.24,
+      "property_d_score": 0.13
+    }
+  },
+  "454280706": {
+    "source": "www.zillow.com",
+    "price": 1675.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3507-N-Keeler-Ave-1S-Chicago-IL-60641/454280706_zpid/",
+    "address": "3507 N Keeler Ave #1S, Chicago, IL 60641",
+    "date_pulled": "07-07-2025_08-35-53",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.94508,
+    "long": -87.73202,
+    "L_dist": [
+      "Irving Park",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 4.16,
+      "gun_score": 5.33,
+      "murder_score": 1.77,
+      "perv_score": 1.71,
+      "theft_score": 40.55,
+      "violence_score": 25.78,
+      "property_d_score": 0.15
+    }
   }
 }
