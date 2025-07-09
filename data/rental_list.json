@@ -69544,5 +69544,291 @@
       "violence_score": 25.78,
       "property_d_score": 0.15
     }
+  },
+  "70458570": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3238-N-Kilbourn-Ave-UNIT-13-Chicago-IL-60641/70458570_zpid/",
+    "address": "3238 N Kilbourn Ave UNIT 13, Chicago, IL 60641",
+    "date_pulled": "07-09-2025_08-43-22",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.940117,
+    "long": -87.73994,
+    "L_dist": [
+      "Irving Park",
+      1.04
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 5.44,
+      "murder_score": 1.84,
+      "perv_score": 1.74,
+      "theft_score": 39.93,
+      "violence_score": 26.24,
+      "property_d_score": 0.15
+    }
+  },
+  "178451017": {
+    "source": "www.redfin.com",
+    "price": 2395.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3602-W-Grace-St-60618/home/178451017",
+    "address": "3602 W Grace St, Chicago, IL, 60618",
+    "date_pulled": "07-09-2025_08-43-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.9502728,
+    "long": -87.7179829,
+    "L_dist": [
+      "Addison",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.03,
+      "murder_score": 1.56,
+      "perv_score": 1.61,
+      "theft_score": 41.72,
+      "violence_score": 25.06,
+      "property_d_score": 0.13
+    }
+  },
+  "186194454": {
+    "source": "www.redfin.com",
+    "price": 1775.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3001-W-Lawrence-Ave-60625/unit-3E/home/186194454",
+    "address": "3001 W Lawrence Ave Unit 3E, Chicago, IL, 60625",
+    "date_pulled": "07-09-2025_08-44-49",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.968229,
+    "long": -87.703823,
+    "L_dist": [
+      "Francisco",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 3.56,
+      "gun_score": 4.71,
+      "murder_score": 1.36,
+      "perv_score": 1.64,
+      "theft_score": 43.07,
+      "violence_score": 24.37,
+      "property_d_score": 0.13
+    }
+  },
+  "7506161322": {
+    "source": "www.realtor.com",
+    "price": 1850,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2645-W-Carmen-Ave-Apt-202_Chicago_IL_60625_M75061-61322",
+    "address": "2645 W Carmen Ave Apt 202 Chicago, IL 60625",
+    "date_pulled": "07-09-2025_08-45-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.973759,
+    "long": -87.695718,
+    "L_dist": [
+      "Rockwell",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 4.64,
+      "murder_score": 1.34,
+      "perv_score": 1.45,
+      "theft_score": 43.49,
+      "violence_score": 24.35,
+      "property_d_score": 0.13
+    }
+  },
+  "1xnz5r4": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/2538-w-haddon-ave-chicago-il/1xnz5r4/",
+    "address": "2538 W Haddon Ave, Chicago, IL 60622",
+    "date_pulled": "07-09-2025_08-46-26",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9022515,
+    "long": -87.6910655,
+    "L_dist": [
+      "Damen",
+      0.87
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 5.57,
+      "murder_score": 1.65,
+      "perv_score": 1.65,
+      "theft_score": 41.2,
+      "violence_score": 25.62,
+      "property_d_score": 0.14
+    }
+  },
+  "454693931": {
+    "source": "www.zillow.com",
+    "price": 1500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5126-W-Cullom-Ave-G-Chicago-IL-60641/454693931_zpid/",
+    "address": "5126 W Cullom Ave #G, Chicago, IL 60641",
+    "date_pulled": "07-09-2025_08-50-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.95906,
+    "long": -87.75606,
+    "L_dist": [
+      "Montrose",
+      0.66
+    ],
+    "crime_sc": {
+      "drug_score": 4.82,
+      "gun_score": 5.74,
+      "murder_score": 1.87,
+      "perv_score": 1.86,
+      "theft_score": 38.44,
+      "violence_score": 26.69,
+      "property_d_score": 0.16
+    }
+  },
+  "g784r4y": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7006-n-glenwood-ave-chicago-il/g784r4y/",
+    "address": "7006 N Glenwood Ave, Chicago, IL 60626",
+    "date_pulled": "07-09-2025_08-50-28",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 42.009263,
+    "long": -87.6663349,
+    "L_dist": [
+      "Morse",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.99,
+      "gun_score": 3.47,
+      "murder_score": 0.69,
+      "perv_score": 1.5,
+      "theft_score": 46.45,
+      "violence_score": 23.56,
+      "property_d_score": 0.11
+    }
+  },
+  "p68v7rr": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/14247-s-marquette-ave-burnham-il/p68v7rr/",
+    "address": "14247 S Marquette Ave, Burnham, IL 60633 Chicago",
+    "date_pulled": "07-09-2025_08-50-28",
+    "bed": 4.0,
+    "bath": 1.0,
+    "sqft": 1288.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "lvlee3e": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1624-w-fullerton-ave-chicago-il/lvlee3e/",
+    "address": "1624 W Fullerton Ave, Chicago, IL 60614",
+    "date_pulled": "07-09-2025_08-50-28",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 800.0,
+    "lat": 41.9250445,
+    "long": -87.6699933,
+    "L_dist": [
+      "Fullerton",
+      0.88
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 5.27,
+      "murder_score": 1.67,
+      "perv_score": 1.57,
+      "theft_score": 41.53,
+      "violence_score": 25.29,
+      "property_d_score": 0.14
+    }
+  },
+  "pvqnpnv": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3100-w-polk-st-chicago-il/pvqnpnv/",
+    "address": "3100 W Polk St, Chicago, IL 60612",
+    "date_pulled": "07-09-2025_08-50-28",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.8711986,
+    "long": -87.7035475,
+    "L_dist": [
+      "Kedzie-Homan",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 6.3,
+      "murder_score": 1.84,
+      "perv_score": 1.66,
+      "theft_score": 39.41,
+      "violence_score": 26.55,
+      "property_d_score": 0.15
+    }
+  },
+  "y59t3hs": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6067-n-neva-ave-chicago-il/y59t3hs/",
+    "address": "6067 N Neva Ave, Chicago, IL 60631",
+    "date_pulled": "07-09-2025_08-50-28",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9919194,
+    "long": -87.8053086,
+    "L_dist": [
+      "Harlem",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 4.51,
+      "gun_score": 5.64,
+      "murder_score": 1.33,
+      "perv_score": 1.86,
+      "theft_score": 36.68,
+      "violence_score": 26.68,
+      "property_d_score": 0.2
+    }
   }
 }

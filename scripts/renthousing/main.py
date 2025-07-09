@@ -314,6 +314,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+    #BUG - Not iterating the correct amount of sites.  It doesn't exit the TUI anymore.  Weird.
 
     #TODO Add rotating proxy's
         #https://www.scrapehero.com/how-to-rotate-proxies-and-ip-addresses-using-python-3/
