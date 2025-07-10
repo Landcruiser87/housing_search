@@ -69911,5 +69911,140 @@
       "violence_score": 25.92,
       "property_d_score": 0.14
     }
+  },
+  "2079997767": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/1527-N-Claremont-Ave-1R-Chicago-IL-60622/2079997767_zpid/",
+    "address": "1527 N Claremont Ave #1R, Chicago, IL 60622",
+    "date_pulled": "07-10-2025_11-11-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.909355,
+    "long": -87.68562,
+    "L_dist": [
+      "Damen",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 5.45,
+      "murder_score": 1.63,
+      "perv_score": 1.59,
+      "theft_score": 41.24,
+      "violence_score": 25.54,
+      "property_d_score": 0.14
+    }
+  },
+  "180550528": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3549-W-Berteau-Ave-60618/unit-G/home/180550528",
+    "address": "3549 W Berteau Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "07-10-2025_11-17-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9573157,
+    "long": -87.7174483,
+    "L_dist": [
+      "Irving Park",
+      0.68
+    ],
+    "crime_sc": {
+      "drug_score": 3.91,
+      "gun_score": 4.92,
+      "murder_score": 1.48,
+      "perv_score": 1.62,
+      "theft_score": 42.06,
+      "violence_score": 24.85,
+      "property_d_score": 0.13
+    }
+  },
+  "l14mvdg": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2451-w-harrison-st-chicago-il/l14mvdg/",
+    "address": "2451 W Harrison St, Chicago, IL 60612",
+    "date_pulled": "07-10-2025_11-18-41",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.873655,
+    "long": -87.6881966,
+    "L_dist": [
+      "Western",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 6.22,
+      "murder_score": 1.79,
+      "perv_score": 1.65,
+      "theft_score": 39.61,
+      "violence_score": 26.49,
+      "property_d_score": 0.15
+    }
+  },
+  "1n3jhb7": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1451-w-augusta-blvd-chicago-il/1n3jhb7/",
+    "address": "1451 W Augusta Blvd, Chicago, IL 60642",
+    "date_pulled": "07-10-2025_11-18-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8995387,
+    "long": -87.6644748,
+    "L_dist": [
+      "Division",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.75,
+      "gun_score": 5.62,
+      "murder_score": 1.65,
+      "perv_score": 1.63,
+      "theft_score": 41.62,
+      "violence_score": 25.3,
+      "property_d_score": 0.13
+    }
+  },
+  "4fdfv7h": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2113-n-bingham-st-chicago-il/4fdfv7h/",
+    "address": "2113 N Bingham St, Chicago, IL 60647",
+    "date_pulled": "07-10-2025_11-18-41",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9191622,
+    "long": -87.6925938,
+    "L_dist": [
+      "California",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 3.82,
+      "gun_score": 5.29,
+      "murder_score": 1.62,
+      "perv_score": 1.6,
+      "theft_score": 41.3,
+      "violence_score": 25.5,
+      "property_d_score": 0.14
+    }
   }
 }
