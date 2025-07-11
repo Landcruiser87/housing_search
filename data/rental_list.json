@@ -70046,5 +70046,410 @@
       "violence_score": 25.5,
       "property_d_score": 0.14
     }
+  },
+  "7864861803": {
+    "source": "www.craigslist.org",
+    "price": 1500.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/berwyn-no-hoa-private-single-family/7864861803.html",
+    "address": null,
+    "date_pulled": "07-11-2025_08-39-12",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 11972.0,
+    "lat": 41.8193,
+    "long": -87.7891,
+    "L_dist": [
+      "54th/Cermak",
+      2.79
+    ],
+    "crime_sc": {
+      "drug_score": 7.66,
+      "gun_score": 8.27,
+      "murder_score": 2.85,
+      "perv_score": 2.29,
+      "theft_score": 30.65,
+      "violence_score": 30.42,
+      "property_d_score": 0.24
+    }
+  },
+  "9436073912": {
+    "source": "www.realtor.com",
+    "price": 1950,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2144-W-Montrose-Ave-Apt-2_Chicago_IL_60618_M94360-73912",
+    "address": "2144 W Montrose Ave Apt 2 Chicago, IL 60618",
+    "date_pulled": "07-11-2025_08-39-30",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1400.0,
+    "lat": 41.961613,
+    "long": -87.683258,
+    "L_dist": [
+      "Damen",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 4.91,
+      "murder_score": 1.52,
+      "perv_score": 1.61,
+      "theft_score": 42.34,
+      "violence_score": 24.69,
+      "property_d_score": 0.13
+    }
+  },
+  "9208521829": {
+    "source": "www.realtor.com",
+    "price": 1750,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2144-W-Montrose-Ave-Apt-1_Chicago_IL_60618_M92085-21829",
+    "address": "2144 W Montrose Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "07-11-2025_08-39-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.961613,
+    "long": -87.683258,
+    "L_dist": [
+      "Damen",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 4.91,
+      "murder_score": 1.52,
+      "perv_score": 1.61,
+      "theft_score": 42.34,
+      "violence_score": 24.69,
+      "property_d_score": 0.13
+    }
+  },
+  "2077827546": {
+    "source": "www.zillow.com",
+    "price": 2000.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2552-W-Eastwood-Ave-1E-Chicago-IL-60625/2077827546_zpid/",
+    "address": "2552 W Eastwood Ave #1E, Chicago, IL 60625",
+    "date_pulled": "07-11-2025_08-40-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.965733,
+    "long": -87.69256,
+    "L_dist": [
+      "Rockwell",
+      0.08
+    ],
+    "crime_sc": {
+      "drug_score": 3.78,
+      "gun_score": 4.78,
+      "murder_score": 1.43,
+      "perv_score": 1.63,
+      "theft_score": 42.84,
+      "violence_score": 24.48,
+      "property_d_score": 0.13
+    }
+  },
+  "eblj4v1bsrsex": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2646-w-cullerton-st-chicago-il/eblj4v1bsrsex/",
+    "address": "2646 W Cullerton St Chicago, IL 60608",
+    "date_pulled": "07-11-2025_08-42-54",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.8548847,
+    "long": -87.6924881,
+    "L_dist": [
+      "California",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.75,
+      "gun_score": 6.73,
+      "murder_score": 1.95,
+      "perv_score": 1.64,
+      "theft_score": 38.77,
+      "violence_score": 27.01,
+      "property_d_score": 0.17
+    }
+  },
+  "2zhwsbqc62x45": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1446-higgins-rd-park-ridge-il/2zhwsbqc62x45/",
+    "address": "1446 Higgins Rd Park Ridge, IL 60068 Chicago",
+    "date_pulled": "07-11-2025_08-42-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1700.0,
+    "lat": 41.9859072,
+    "long": -87.8334737,
+    "L_dist": [
+      "Cumberland",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 2.69,
+      "gun_score": 5.55,
+      "murder_score": 1.52,
+      "perv_score": 2.0,
+      "theft_score": 36.44,
+      "violence_score": 26.98,
+      "property_d_score": 0.26
+    }
+  },
+  "9nysjm6": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3322-n-troy-st-chicago-il/9nysjm6/",
+    "address": "3322 N Troy St, Chicago, IL 60618",
+    "date_pulled": "07-11-2025_08-44-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9417971,
+    "long": -87.7067378,
+    "L_dist": [
+      "Belmont",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.12,
+      "murder_score": 1.66,
+      "perv_score": 1.61,
+      "theft_score": 41.5,
+      "violence_score": 25.21,
+      "property_d_score": 0.14
+    }
+  },
+  "196346133": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4103-W-Nelson-St-60641/unit-1/home/196346133",
+    "address": "4103 W Nelson St Unit 1, Chicago, IL, 60641",
+    "date_pulled": "07-11-2025_08-44-43",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9361403,
+    "long": -87.7298584,
+    "L_dist": [
+      "Belmont",
+      0.91
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 5.32,
+      "murder_score": 1.77,
+      "perv_score": 1.69,
+      "theft_score": 40.6,
+      "violence_score": 25.82,
+      "property_d_score": 0.15
+    }
+  },
+  "181725616": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1527-N-Claremont-Ave-60622/unit-1R/home/181725616",
+    "address": "1527 N Claremont Ave Unit 1R, Chicago, IL, 60622",
+    "date_pulled": "07-11-2025_08-45-55",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.9093614,
+    "long": -87.6857195,
+    "L_dist": [
+      "Damen",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 5.44,
+      "murder_score": 1.65,
+      "perv_score": 1.58,
+      "theft_score": 41.24,
+      "violence_score": 25.55,
+      "property_d_score": 0.14
+    }
+  },
+  "190484546": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4222-N-Bernard-St-60618/unit-1/home/190484546",
+    "address": "4222 N Bernard St Unit 1, Chicago, IL, 60618",
+    "date_pulled": "07-11-2025_08-46-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.9582304,
+    "long": -87.7145555,
+    "L_dist": [
+      "Kedzie",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 4.9,
+      "murder_score": 1.49,
+      "perv_score": 1.61,
+      "theft_score": 42.12,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "7dq3ehy": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1846-s-loomis-st-chicago-il/7dq3ehy/",
+    "address": "1846 S Loomis St, Chicago, IL 60608",
+    "date_pulled": "07-11-2025_08-47-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1001.0,
+    "lat": 41.8563304,
+    "long": -87.661582,
+    "L_dist": [
+      "18th",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 6.85,
+      "murder_score": 1.97,
+      "perv_score": 1.58,
+      "theft_score": 39.12,
+      "violence_score": 26.9,
+      "property_d_score": 0.15
+    }
+  },
+  "v29wr2f": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1914-w-chase-ave-chicago-il/v29wr2f/",
+    "address": "1914 W Chase Ave, Chicago, IL 60626",
+    "date_pulled": "07-11-2025_08-47-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 42.0137782,
+    "long": -87.678685,
+    "L_dist": [
+      "Howard",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 0.97,
+      "gun_score": 3.32,
+      "murder_score": 0.68,
+      "perv_score": 1.63,
+      "theft_score": 45.43,
+      "violence_score": 23.98,
+      "property_d_score": 0.11
+    }
+  },
+  "jmnnxy6": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1645-s-miller-st-chicago-il/jmnnxy6/",
+    "address": "1645 S Miller St, Chicago, IL 60608",
+    "date_pulled": "07-11-2025_08-47-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8585236,
+    "long": -87.6519664,
+    "L_dist": [
+      "Halsted",
+      0.84
+    ],
+    "crime_sc": {
+      "drug_score": 3.66,
+      "gun_score": 6.73,
+      "murder_score": 1.92,
+      "perv_score": 1.59,
+      "theft_score": 39.45,
+      "violence_score": 26.68,
+      "property_d_score": 0.15
+    }
+  },
+  "ww6pmyj": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/452-n-may-st-chicago-il/ww6pmyj/",
+    "address": "452 N May St, Chicago, IL 60642",
+    "date_pulled": "07-11-2025_08-47-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8904759,
+    "long": -87.6562434,
+    "L_dist": [
+      "Chicago",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 3.76,
+      "gun_score": 5.77,
+      "murder_score": 1.72,
+      "perv_score": 1.61,
+      "theft_score": 41.54,
+      "violence_score": 25.21,
+      "property_d_score": 0.13
+    }
+  },
+  "spwxz87": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1516-w-19th-st-chicago-il/spwxz87/",
+    "address": "1516 W 19th St, Chicago, IL 60608",
+    "date_pulled": "07-11-2025_08-47-21",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.856313,
+    "long": -87.6644385,
+    "L_dist": [
+      "18th",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 6.85,
+      "murder_score": 1.97,
+      "perv_score": 1.59,
+      "theft_score": 39.06,
+      "violence_score": 26.95,
+      "property_d_score": 0.16
+    }
   }
 }
