@@ -70451,5 +70451,501 @@
       "violence_score": 26.95,
       "property_d_score": 0.16
     }
+  },
+  "7865204978": {
+    "source": "www.craigslist.org",
+    "price": 2495.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7865204978.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "07-14-2025_08-46-41",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.94,
+      "gun_score": 8.08,
+      "murder_score": 2.32,
+      "perv_score": 1.43,
+      "theft_score": 35.64,
+      "violence_score": 30.09,
+      "property_d_score": 0.18
+    }
+  },
+  "7864923822": {
+    "source": "www.craigslist.org",
+    "price": 2195.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-bed-15-bath-gut-rehab-in-rogers/7864923822.html",
+    "address": "North Sheridan Rd, Chicago, IL 60626",
+    "date_pulled": "07-14-2025_08-46-46",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": null,
+    "lat": 42.020431,
+    "long": -87.666757,
+    "L_dist": [
+      "Howard",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 0.94,
+      "gun_score": 3.08,
+      "murder_score": 0.63,
+      "perv_score": 1.55,
+      "theft_score": 45.77,
+      "violence_score": 24.13,
+      "property_d_score": 0.12
+    }
+  },
+  "fvbmerrkxd6k1": {
+    "source": "www.homes.com",
+    "price": 1700.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5433-n-magnet-ave-chicago-il-unit-2/fvbmerrkxd6k1/",
+    "address": "5433 N Magnet Ave Unit 2 Chicago, IL 60630",
+    "date_pulled": "07-14-2025_08-48-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "89941581": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3741-N-Milwaukee-Ave-APT-208-Chicago-IL-60641/89941581_zpid/",
+    "address": "3741 N Milwaukee Ave APT 208, Chicago, IL 60641",
+    "date_pulled": "07-14-2025_08-49-50",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 950.0,
+    "lat": 41.948883,
+    "long": -87.739265,
+    "L_dist": [
+      "Irving Park",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 4.31,
+      "gun_score": 5.33,
+      "murder_score": 1.76,
+      "perv_score": 1.74,
+      "theft_score": 40.03,
+      "violence_score": 26.12,
+      "property_d_score": 0.15
+    }
+  },
+  "7253140490": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3741-N-Milwaukee-Ave-Apt-208_Chicago_IL_60641_M72531-40490",
+    "address": "3741 N Milwaukee Ave Apt 208 Chicago, IL 60641",
+    "date_pulled": "07-14-2025_08-50-42",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 950.0,
+    "lat": 41.948882,
+    "long": -87.739268,
+    "L_dist": [
+      "Irving Park",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 4.31,
+      "gun_score": 5.33,
+      "murder_score": 1.76,
+      "perv_score": 1.74,
+      "theft_score": 40.03,
+      "violence_score": 26.12,
+      "property_d_score": 0.15
+    }
+  },
+  "454949000": {
+    "source": "www.zillow.com",
+    "price": 1700.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3461-W-Montrose-Ave-2-Chicago-IL-60618/454949000_zpid/",
+    "address": "3461 W Montrose Ave #2, Chicago, IL 60618",
+    "date_pulled": "07-14-2025_08-52-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 965.0,
+    "lat": 41.961124,
+    "long": -87.71492,
+    "L_dist": [
+      "Kedzie",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 4.83,
+      "murder_score": 1.5,
+      "perv_score": 1.61,
+      "theft_score": 42.23,
+      "violence_score": 24.75,
+      "property_d_score": 0.13
+    }
+  },
+  "zd3dpqz": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/614-n-troy-st-chicago-il/zd3dpqz/",
+    "address": "614 N Troy St, Chicago, IL 60612",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.8924389,
+    "long": -87.7055199,
+    "L_dist": [
+      "Kedzie",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.72,
+      "gun_score": 5.77,
+      "murder_score": 1.71,
+      "perv_score": 1.68,
+      "theft_score": 40.68,
+      "violence_score": 25.82,
+      "property_d_score": 0.14
+    }
+  },
+  "sp9f916": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3741-n-milwaukee-ave-chicago-il/sp9f916/",
+    "address": "3741 N Milwaukee Ave, Chicago, IL 60641",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 950.0,
+    "lat": 41.9487568,
+    "long": -87.739528,
+    "L_dist": [
+      "Irving Park",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 4.31,
+      "gun_score": 5.33,
+      "murder_score": 1.78,
+      "perv_score": 1.74,
+      "theft_score": 40.03,
+      "violence_score": 26.12,
+      "property_d_score": 0.15
+    }
+  },
+  "4br4cdj": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1509-n-kostner-ave-chicago-il/4br4cdj/",
+    "address": "1509 N Kostner Ave, Chicago, IL 60651",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9079571,
+    "long": -87.7360167,
+    "L_dist": [
+      "Cicero",
+      1.55
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 5.61,
+      "murder_score": 1.85,
+      "perv_score": 1.71,
+      "theft_score": 39.98,
+      "violence_score": 26.31,
+      "property_d_score": 0.16
+    }
+  },
+  "52rp0dn": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/8710-w-evelyn-ln-chicago-il/52rp0dn/",
+    "address": "8710 W Evelyn Ln, Chicago, IL 60656",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9770929,
+    "long": -87.8445664,
+    "L_dist": [
+      "Cumberland",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 3.66,
+      "gun_score": 5.66,
+      "murder_score": 1.99,
+      "perv_score": 1.9,
+      "theft_score": 34.91,
+      "violence_score": 28.41,
+      "property_d_score": 0.22
+    }
+  },
+  "4dgs32j": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1439-e-66th-pl-chicago-il/4dgs32j/",
+    "address": "1439 E 66th Pl, Chicago, IL 60637",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.7739934,
+    "long": -87.5898597,
+    "L_dist": [
+      "Cottage Grove",
+      0.93
+    ],
+    "crime_sc": {
+      "drug_score": 1.75,
+      "gun_score": 8.46,
+      "murder_score": 2.53,
+      "perv_score": 1.47,
+      "theft_score": 34.83,
+      "violence_score": 30.63,
+      "property_d_score": 0.2
+    }
+  },
+  "bqf3xp8": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2931-n-natoma-ave-chicago-il/bqf3xp8/",
+    "address": "2931 N Natoma Ave, Chicago, IL 60634",
+    "date_pulled": "07-14-2025_08-55-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1800.0,
+    "lat": 41.9336084,
+    "long": -87.7913229,
+    "L_dist": [
+      "Jefferson Park",
+      3.0
+    ],
+    "crime_sc": {
+      "drug_score": 6.58,
+      "gun_score": 6.93,
+      "murder_score": 2.44,
+      "perv_score": 2.11,
+      "theft_score": 32.94,
+      "violence_score": 29.27,
+      "property_d_score": 0.2
+    }
+  },
+  "7865987598": {
+    "source": "www.craigslist.org",
+    "price": 2200.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-min-walk-to-illinois-institute/7865987598.html",
+    "address": "3622 S State St, Chicago, IL 60609",
+    "date_pulled": "07-16-2025_10-00-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 10002.0,
+    "lat": 41.828306,
+    "long": -87.626739,
+    "L_dist": [
+      "35th-Bronzeville-IIT",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.29,
+      "gun_score": 7.35,
+      "murder_score": 2.17,
+      "perv_score": 1.37,
+      "theft_score": 38.01,
+      "violence_score": 27.99,
+      "property_d_score": 0.17
+    }
+  },
+  "px7c4bs": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4533-n-clark-st-chicago-il/px7c4bs/",
+    "address": "4533 N Clark St, Chicago, IL 60640",
+    "date_pulled": "07-16-2025_10-03-32",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 768.0,
+    "lat": 41.9640993,
+    "long": -87.6663758,
+    "L_dist": [
+      "Wilson",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 4.8,
+      "murder_score": 1.5,
+      "perv_score": 1.56,
+      "theft_score": 43.02,
+      "violence_score": 24.3,
+      "property_d_score": 0.13
+    }
+  },
+  "z9yqq55hnvddt": {
+    "source": "www.homes.com",
+    "price": 2599.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/unlisted-address/z9yqq55hnvddt/",
+    "address": "Unlisted Address IL",
+    "date_pulled": "07-16-2025_10-04-30",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "w9hqswxwkm822": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/484-poplar-dr-wheeling-il/w9hqswxwkm822/",
+    "address": "484 Poplar Dr Wheeling, IL 60090 Chicago",
+    "date_pulled": "07-16-2025_10-04-30",
+    "bed": 3.0,
+    "bath": 2.5,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "fwvpnz13fvm9d": {
+    "source": "www.homes.com",
+    "price": 2550.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/465-harmony-dr-wheeling-il-unit-4/fwvpnz13fvm9d/",
+    "address": "465 Harmony Dr Unit 4 Wheeling, IL 60090 Chicago",
+    "date_pulled": "07-16-2025_10-04-30",
+    "bed": 3.0,
+    "bath": 2.5,
+    "sqft": 1685.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8p51qj0": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/5711-n-kimball-ave-chicago-il/8p51qj0/",
+    "address": "5711 N Kimball Ave, Chicago, IL 60659",
+    "date_pulled": "07-16-2025_10-04-53",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9852634,
+    "long": -87.7134508,
+    "L_dist": [
+      "Kimball",
+      1.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.9,
+      "gun_score": 4.2,
+      "murder_score": 1.18,
+      "perv_score": 1.49,
+      "theft_score": 44.24,
+      "violence_score": 23.71,
+      "property_d_score": 0.13
+    }
+  },
+  "8517494801": {
+    "source": "www.realtor.com",
+    "price": 2150,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5711-N-Kimball-Ave-Apt-3N_Chicago_IL_60659_M85174-94801",
+    "address": "5711 N Kimball Ave Apt 3N Chicago, IL 60659",
+    "date_pulled": "07-16-2025_10-05-22",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.985264,
+    "long": -87.713473,
+    "L_dist": [
+      "Kimball",
+      1.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.9,
+      "gun_score": 4.2,
+      "murder_score": 1.18,
+      "perv_score": 1.49,
+      "theft_score": 44.24,
+      "violence_score": 23.71,
+      "property_d_score": 0.13
+    }
+  },
+  "9492994452": {
+    "source": "www.realtor.com",
+    "price": 2000,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3925-W-Wellington-Ave-1F_Chicago_IL_60618_M94929-94452",
+    "address": "3925 W Wellington Ave Unit 1F Chicago, IL 60618",
+    "date_pulled": "07-16-2025_10-05-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.935333,
+    "long": -87.725525,
+    "L_dist": [
+      "Belmont",
+      0.7
+    ],
+    "crime_sc": {
+      "drug_score": 4.02,
+      "gun_score": 5.22,
+      "murder_score": 1.74,
+      "perv_score": 1.64,
+      "theft_score": 40.9,
+      "violence_score": 25.61,
+      "property_d_score": 0.15
+    }
   }
 }
