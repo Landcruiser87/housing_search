@@ -70947,5 +70947,154 @@
       "violence_score": 25.61,
       "property_d_score": 0.15
     }
+  },
+  "cmfre6g": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1653-n-fairfield-ave-chicago-il/cmfre6g/",
+    "address": "1653 N Fairfield Ave, Chicago, IL 60647",
+    "date_pulled": "07-17-2025_08-06-57",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9118474,
+    "long": -87.695447,
+    "L_dist": [
+      "Western",
+      0.51
+    ],
+    "crime_sc": {}
+  },
+  "f4s488r": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2646-w-cullerton-st-chicago-il/f4s488r/",
+    "address": "2646 W Cullerton St, Chicago, IL 60608",
+    "date_pulled": "07-17-2025_08-07-23",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.8548847,
+    "long": -87.6924881,
+    "L_dist": [
+      "California",
+      0.13
+    ],
+    "crime_sc": {}
+  },
+  "wj3sj7l": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1519-w-thomas-st-chicago-il/wj3sj7l/",
+    "address": "1519 W Thomas St, Chicago, IL 60642",
+    "date_pulled": "07-17-2025_08-07-23",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9013378,
+    "long": -87.6657422,
+    "L_dist": [
+      "Division",
+      0.14
+    ],
+    "crime_sc": {}
+  },
+  "k58v1rc": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2620-w-cermak-rd-chicago-il/k58v1rc/",
+    "address": "2620 W Cermak Rd, Chicago, IL 60608",
+    "date_pulled": "07-17-2025_08-07-23",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8521719,
+    "long": -87.6914612,
+    "L_dist": [
+      "California",
+      0.22
+    ],
+    "crime_sc": {}
+  },
+  "8wgdk61": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/8wgdk61/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "07-17-2025_08-07-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 840.0,
+    "lat": 42.0197544,
+    "long": -87.6720228,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {}
+  },
+  "m9pm88h": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5433-n-magnet-ave-chicago-il/m9pm88h/",
+    "address": "5433 N Magnet Ave, Chicago, IL 60630",
+    "date_pulled": "07-17-2025_08-07-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9797844,
+    "long": -87.7726444,
+    "L_dist": [
+      "Jefferson Park",
+      0.87
+    ],
+    "crime_sc": {}
+  },
+  "186860338": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4419-N-Kildare-Ave-60630/unit-1/home/186860338",
+    "address": "4419 N Kildare Ave Unit 1, Chicago, IL, 60630",
+    "date_pulled": "07-17-2025_08-08-00",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9614796,
+    "long": -87.7352605,
+    "L_dist": [
+      "Montrose",
+      0.43
+    ],
+    "crime_sc": {}
+  },
+  "xx8jw168glc6x": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3310-wenonah-ave-berwyn-il/xx8jw168glc6x/",
+    "address": "3310 Wenonah Ave Berwyn, IL 60402 Chicago",
+    "date_pulled": "07-17-2025_08-10-32",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": 1525.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
