@@ -39,7 +39,12 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         else:
             logger.warning(f"missing url and id for card on {source} in {neigh}")
             continue
-
+        
+        #BUG - Price
+            #Looks like price isn't getting pulled in. 
+            #Looking at their dom it looks like they switched variable structdure
+            #from camelCase to hyphen separated.  Weird thing is, it still
+            #pulls in alot of the data..  
         #grab the property info
         for search in card.find_all("div", class_="propertyInfo"):
             #Grab price
