@@ -70947,5 +70947,426 @@
       "violence_score": 25.61,
       "property_d_score": 0.15
     }
+  },
+  "185807552": {
+    "source": "www.redfin.com",
+    "price": 2425.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3607-W-Ainslie-St-60625/unit-2/home/185807552",
+    "address": "3607 W Ainslie St Unit 2, Chicago, IL, 60625",
+    "date_pulled": "07-17-2025_16-49-55",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9700099,
+    "long": -87.718746,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.55,
+      "gun_score": 4.68,
+      "murder_score": 1.43,
+      "perv_score": 1.51,
+      "theft_score": 42.87,
+      "violence_score": 24.44,
+      "property_d_score": 0.13
+    }
+  },
+  "2071587656": {
+    "source": "www.zillow.com",
+    "price": 2425.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3609-W-Ainslie-St-2-Chicago-IL-60625/2071587656_zpid/",
+    "address": "3609 W Ainslie St #2, Chicago, IL 60625",
+    "date_pulled": "07-17-2025_16-50-27",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.970173,
+    "long": -87.7188,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.55,
+      "gun_score": 4.69,
+      "murder_score": 1.43,
+      "perv_score": 1.49,
+      "theft_score": 42.9,
+      "violence_score": 24.45,
+      "property_d_score": 0.13
+    }
+  },
+  "186860338": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4419-N-Kildare-Ave-60630/unit-1/home/186860338",
+    "address": "4419 N Kildare Ave Unit 1, Chicago, IL, 60630",
+    "date_pulled": "07-17-2025_16-51-03",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9614796,
+    "long": -87.7352605,
+    "L_dist": [
+      "Montrose",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 4.15,
+      "gun_score": 5.09,
+      "murder_score": 1.73,
+      "perv_score": 1.75,
+      "theft_score": 40.9,
+      "violence_score": 25.53,
+      "property_d_score": 0.15
+    }
+  },
+  "7137297735": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3301-N-Kilbourn-Ave-Apt-2_Chicago_IL_60641_M71372-97735",
+    "address": "3301 N Kilbourn Ave Apt 2 Chicago, IL 60641",
+    "date_pulled": "07-17-2025_16-51-14",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.940884,
+    "long": -87.739199,
+    "L_dist": [
+      "Irving Park",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 4.27,
+      "gun_score": 5.39,
+      "murder_score": 1.87,
+      "perv_score": 1.74,
+      "theft_score": 39.91,
+      "violence_score": 26.25,
+      "property_d_score": 0.16
+    }
+  },
+  "cmfre6g": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1653-n-fairfield-ave-chicago-il/cmfre6g/",
+    "address": "1653 N Fairfield Ave, Chicago, IL 60647",
+    "date_pulled": "07-17-2025_16-56-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9118474,
+    "long": -87.695447,
+    "L_dist": [
+      "Western",
+      0.51
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.34,
+      "murder_score": 1.67,
+      "perv_score": 1.58,
+      "theft_score": 41.19,
+      "violence_score": 25.51,
+      "property_d_score": 0.14
+    }
+  },
+  "wj3sj7l": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1519-w-thomas-st-chicago-il/wj3sj7l/",
+    "address": "1519 W Thomas St, Chicago, IL 60642",
+    "date_pulled": "07-17-2025_16-57-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9013378,
+    "long": -87.6657422,
+    "L_dist": [
+      "Division",
+      0.14
+    ],
+    "crime_sc": {
+      "drug_score": 3.82,
+      "gun_score": 5.58,
+      "murder_score": 1.68,
+      "perv_score": 1.59,
+      "theft_score": 41.44,
+      "violence_score": 25.4,
+      "property_d_score": 0.14
+    }
+  },
+  "k58v1rc": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2620-w-cermak-rd-chicago-il/k58v1rc/",
+    "address": "2620 W Cermak Rd, Chicago, IL 60608",
+    "date_pulled": "07-17-2025_16-57-58",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8521719,
+    "long": -87.6914612,
+    "L_dist": [
+      "California",
+      0.22
+    ],
+    "crime_sc": {
+      "drug_score": 3.76,
+      "gun_score": 6.78,
+      "murder_score": 2.02,
+      "perv_score": 1.63,
+      "theft_score": 38.59,
+      "violence_score": 27.12,
+      "property_d_score": 0.17
+    }
+  },
+  "9205548716": {
+    "source": "www.realtor.com",
+    "price": 1800,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5127-N-Springfield-Ave-1_Chicago_IL_60625_M92055-48716",
+    "address": "5127 N Springfield Ave Unit 1 Chicago, IL 60625",
+    "date_pulled": "07-19-2025_10-21-06",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.974545,
+    "long": -87.72551,
+    "L_dist": [
+      "Kimball",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.37,
+      "gun_score": 4.59,
+      "murder_score": 1.45,
+      "perv_score": 1.49,
+      "theft_score": 43.04,
+      "violence_score": 24.47,
+      "property_d_score": 0.14
+    }
+  },
+  "186324341": {
+    "source": "www.redfin.com",
+    "price": 2425.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3609-W-Ainslie-St-60625/unit-2/home/186324341",
+    "address": "3609 W Ainslie St Unit 2, Chicago, IL, 60625",
+    "date_pulled": "07-19-2025_10-21-50",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9700116,
+    "long": -87.7187861,
+    "L_dist": [
+      "Kimball",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.56,
+      "gun_score": 4.66,
+      "murder_score": 1.43,
+      "perv_score": 1.53,
+      "theft_score": 42.86,
+      "violence_score": 24.43,
+      "property_d_score": 0.13
+    }
+  },
+  "64296pv": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3328-w-congress-pkwy-chicago-il/64296pv/",
+    "address": "3328 W Congress Pkwy, Chicago, IL 60624",
+    "date_pulled": "07-19-2025_10-24-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8747935,
+    "long": -87.7095702,
+    "L_dist": [
+      "Kedzie-Homan",
+      0.18
+    ],
+    "crime_sc": {
+      "drug_score": 3.73,
+      "gun_score": 6.11,
+      "murder_score": 1.81,
+      "perv_score": 1.68,
+      "theft_score": 39.46,
+      "violence_score": 26.48,
+      "property_d_score": 0.16
+    }
+  },
+  "htrzh81": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6152-s-kolin-ave-chicago-il/htrzh81/",
+    "address": "6152 S Kolin Ave, Chicago, IL 60629",
+    "date_pulled": "07-19-2025_10-24-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.7806738,
+    "long": -87.7316566,
+    "L_dist": [
+      "Midway",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 4.02,
+      "gun_score": 8.33,
+      "murder_score": 2.46,
+      "perv_score": 2.03,
+      "theft_score": 32.34,
+      "violence_score": 30.66,
+      "property_d_score": 0.22
+    }
+  },
+  "f4s488r": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2646-w-cullerton-st-chicago-il/f4s488r/",
+    "address": "2646 W Cullerton St, Chicago, IL 60608",
+    "date_pulled": "07-19-2025_10-24-15",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.8548847,
+    "long": -87.6924881,
+    "L_dist": [
+      "California",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.78,
+      "gun_score": 6.7,
+      "murder_score": 1.99,
+      "perv_score": 1.63,
+      "theft_score": 38.64,
+      "violence_score": 27.05,
+      "property_d_score": 0.17
+    }
+  },
+  "8wgdk61": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/8wgdk61/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "07-19-2025_10-24-15",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 840.0,
+    "lat": 42.0197544,
+    "long": -87.6720228,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.96,
+      "gun_score": 3.09,
+      "murder_score": 0.66,
+      "perv_score": 1.6,
+      "theft_score": 45.48,
+      "violence_score": 24.12,
+      "property_d_score": 0.13
+    }
+  },
+  "zbtb8bz": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3301-n-kilbourn-ave-chicago-il/zbtb8bz/",
+    "address": "3301 N Kilbourn Ave, Chicago, IL 60641",
+    "date_pulled": "07-19-2025_10-24-15",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9408675,
+    "long": -87.7392558,
+    "L_dist": [
+      "Irving Park",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 4.29,
+      "gun_score": 5.37,
+      "murder_score": 1.87,
+      "perv_score": 1.76,
+      "theft_score": 39.82,
+      "violence_score": 26.26,
+      "property_d_score": 0.16
+    }
+  },
+  "455155969": {
+    "source": "www.zillow.com",
+    "price": 2000.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5018-W-Pensacola-Ave-G-Chicago-IL-60641/455155969_zpid/",
+    "address": "5018 W Pensacola Ave #G, Chicago, IL 60641",
+    "date_pulled": "07-19-2025_10-26-58",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.96001,
+    "long": -87.75283,
+    "L_dist": [
+      "Montrose",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 4.64,
+      "gun_score": 5.49,
+      "murder_score": 1.82,
+      "perv_score": 1.84,
+      "theft_score": 39.06,
+      "violence_score": 26.43,
+      "property_d_score": 0.16
+    }
+  },
+  "xx8jw168glc6x": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3310-wenonah-ave-berwyn-il/xx8jw168glc6x/",
+    "address": "3310 Wenonah Ave Berwyn, IL 60402 Chicago",
+    "date_pulled": "07-19-2025_10-27-46",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": 1525.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
