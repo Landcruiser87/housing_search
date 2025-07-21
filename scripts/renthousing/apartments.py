@@ -48,8 +48,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, logger:logging, Pr
         #grab the property info
         for search in card.find_all("div", class_="propertyInfo"):
             #Grab price
-            for subsearch in search.find_all("div", class_="priceRange left"):
-                price = subsearch.text
+            pricesearch = search.find("div", class_=lambda x:x.startswith("priceRange left"))
+            if pricesearch:
+                price = pricesearch.text.strip()
                 if any(x.isnumeric() for x in price):
                     price = money_launderer(price.split(" ")[0])
             #Grab address
