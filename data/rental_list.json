@@ -71368,5 +71368,156 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7866934789": {
+    "source": "www.craigslist.org",
+    "price": 2550.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-edgewater-2br-2ba-condo-steps/7866934789.html",
+    "address": "5740 N Sheridan rd, Chicago, IL 60660",
+    "date_pulled": "07-21-2025_08-14-29",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 12002.0,
+    "lat": 41.98657,
+    "long": -87.655556,
+    "L_dist": [
+      "Bryn Mawr",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 2.93,
+      "gun_score": 3.94,
+      "murder_score": 1.06,
+      "perv_score": 1.41,
+      "theft_score": 45.95,
+      "violence_score": 22.8,
+      "property_d_score": 0.11
+    }
+  },
+  "5hz981m": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/536-w-belmont-ave-chicago-il/5hz981m/",
+    "address": "536 W Belmont Ave, Chicago, IL 60657",
+    "date_pulled": "07-21-2025_08-15-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9401441,
+    "long": -87.6434132,
+    "L_dist": [
+      "Belmont",
+      0.51
+    ],
+    "crime_sc": {
+      "drug_score": 3.9,
+      "gun_score": 4.81,
+      "murder_score": 1.56,
+      "perv_score": 1.5,
+      "theft_score": 42.78,
+      "violence_score": 24.37,
+      "property_d_score": 0.12
+    }
+  },
+  "shtx554": {
+    "source": "www.apartments.com",
+    "price": null,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7006-n-glenwood-ave-chicago-il/shtx554/",
+    "address": "7006 N Glenwood Ave, Chicago, IL 60626",
+    "date_pulled": "07-21-2025_08-15-07",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 860.0,
+    "lat": 42.009263,
+    "long": -87.6663349,
+    "L_dist": [
+      "Morse",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 1.02,
+      "gun_score": 3.43,
+      "murder_score": 0.75,
+      "perv_score": 1.54,
+      "theft_score": 46.35,
+      "violence_score": 23.47,
+      "property_d_score": 0.12
+    }
+  },
+  "186040476": {
+    "source": "www.redfin.com",
+    "price": 1950.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5138-W-Montrose-Ave-60641/unit-2/home/186040476",
+    "address": "5138 W Montrose Ave Unit 2, Chicago, IL, 60641",
+    "date_pulled": "07-21-2025_08-16-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.9608217,
+    "long": -87.7560745,
+    "L_dist": [
+      "Montrose",
+      0.64
+    ],
+    "crime_sc": {
+      "drug_score": 4.83,
+      "gun_score": 5.61,
+      "murder_score": 1.89,
+      "perv_score": 1.9,
+      "theft_score": 38.42,
+      "violence_score": 26.61,
+      "property_d_score": 0.17
+    }
+  },
+  "191791581": {
+    "source": "www.redfin.com",
+    "price": 1800.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5127-N-Springfield-Ave-60625/unit-1/home/191791581",
+    "address": "5127 N Springfield Ave Unit 1, Chicago, IL, 60625",
+    "date_pulled": "07-21-2025_08-17-07",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.9745571,
+    "long": -87.7254965,
+    "L_dist": [
+      "Kimball",
+      0.79
+    ],
+    "crime_sc": {
+      "drug_score": 3.39,
+      "gun_score": 4.56,
+      "murder_score": 1.46,
+      "perv_score": 1.5,
+      "theft_score": 43.03,
+      "violence_score": 24.46,
+      "property_d_score": 0.14
+    }
+  },
+  "qhr0bww99ty6y": {
+    "source": "www.homes.com",
+    "price": 1900.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/9515-nerbonne-ave-franklin-park-il/qhr0bww99ty6y/",
+    "address": "9515 Nerbonne Ave Franklin Park, IL 60131 Chicago",
+    "date_pulled": "07-21-2025_08-17-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 748.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
