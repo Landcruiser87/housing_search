@@ -71519,5 +71519,32 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "7867552815": {
+    "source": "www.craigslist.org",
+    "price": 2495.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7867552815.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "07-21-2025_19-10-58",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.96,
+      "gun_score": 8.04,
+      "murder_score": 2.31,
+      "perv_score": 1.44,
+      "theft_score": 35.59,
+      "violence_score": 30.12,
+      "property_d_score": 0.19
+    }
   }
 }
