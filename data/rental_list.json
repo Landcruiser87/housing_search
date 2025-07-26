@@ -71546,5 +71546,668 @@
       "violence_score": 30.12,
       "property_d_score": 0.19
     }
+  },
+  "190584607": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5410-N-Campbell-Ave-60625/unit-G/home/190584607",
+    "address": "5410 N Campbell Ave Unit G, Chicago, IL, 60625",
+    "date_pulled": "07-22-2025_07-19-43",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9798843,
+    "long": -87.6920285,
+    "L_dist": [
+      "Rockwell",
+      0.96
+    ],
+    "crime_sc": {
+      "drug_score": 3.09,
+      "gun_score": 4.32,
+      "murder_score": 1.39,
+      "perv_score": 1.47,
+      "theft_score": 44.14,
+      "violence_score": 23.95,
+      "property_d_score": 0.13
+    }
+  },
+  "n36qdbm": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1422-w-lexington-st-chicago-il/n36qdbm/",
+    "address": "1422 W Lexington St, Chicago, IL 60607",
+    "date_pulled": "07-22-2025_18-01-36",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8727301,
+    "long": -87.6626972,
+    "L_dist": [
+      "Racine",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.71,
+      "gun_score": 6.25,
+      "murder_score": 1.86,
+      "perv_score": 1.6,
+      "theft_score": 39.86,
+      "violence_score": 26.24,
+      "property_d_score": 0.15
+    }
+  },
+  "8ltn971schnn9": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/8621-lincoln-dr-lyons-il/8ltn971schnn9/",
+    "address": "8621 Lincoln Dr Lyons, IL 60534 Chicago",
+    "date_pulled": "07-22-2025_18-02-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1032.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "zl6mmd8l4y62w": {
+    "source": "www.homes.com",
+    "price": 1900.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1316-s-millard-ave-chicago-il/zl6mmd8l4y62w/",
+    "address": "1316 S Millard Ave Chicago, IL 60623",
+    "date_pulled": "07-22-2025_18-02-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "sjmw2s6lf1v8s": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/842-n-racine-ave-chicago-il-unit-202/sjmw2s6lf1v8s/",
+    "address": "842 N Racine Ave Unit 202 Chicago, IL 60642",
+    "date_pulled": "07-22-2025_18-02-13",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "192758180": {
+    "source": "www.redfin.com",
+    "price": 1700.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5033-N-Springfield-Ave-60625/unit-GN/home/192758180",
+    "address": "5033 N Springfield Ave Unit GN, Chicago, IL, 60625",
+    "date_pulled": "07-22-2025_18-02-48",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1080.0,
+    "lat": 41.9729654,
+    "long": -87.7254222,
+    "L_dist": [
+      "Kimball",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 4.61,
+      "murder_score": 1.46,
+      "perv_score": 1.49,
+      "theft_score": 42.83,
+      "violence_score": 24.57,
+      "property_d_score": 0.14
+    }
+  },
+  "454506786": {
+    "source": "www.zillow.com",
+    "price": 2150.0,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2646-W-Catalpa-Ave-2-Chicago-IL-60625/454506786_zpid/",
+    "address": "2646 W Catalpa Ave #2, Chicago, IL 60625",
+    "date_pulled": "07-22-2025_18-03-18",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.981575,
+    "long": -87.69607,
+    "L_dist": [
+      "Rockwell",
+      1.07
+    ],
+    "crime_sc": {
+      "drug_score": 2.96,
+      "gun_score": 4.21,
+      "murder_score": 1.32,
+      "perv_score": 1.48,
+      "theft_score": 44.34,
+      "violence_score": 23.78,
+      "property_d_score": 0.13
+    }
+  },
+  "9311043133": {
+    "source": "www.realtor.com",
+    "price": 2150,
+    "neigh": "budlong-woods",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2646-W-Catalpa-Ave-2_Chicago_IL_60625_M93110-43133",
+    "address": "2646 W Catalpa Ave Unit 2 Chicago, IL 60625",
+    "date_pulled": "07-22-2025_18-03-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.98151,
+    "long": -87.696068,
+    "L_dist": [
+      "Rockwell",
+      1.07
+    ],
+    "crime_sc": {
+      "drug_score": 2.96,
+      "gun_score": 4.21,
+      "murder_score": 1.31,
+      "perv_score": 1.48,
+      "theft_score": 44.35,
+      "violence_score": 23.78,
+      "property_d_score": 0.13
+    }
+  },
+  "455238185": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3002-N-Troy-St-APT-1-Chicago-IL-60618/455238185_zpid/",
+    "address": "3002 N Troy St APT 1, Chicago, IL 60618",
+    "date_pulled": "07-22-2025_18-04-09",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.935886,
+    "long": -87.706665,
+    "L_dist": [
+      "Belmont",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 5.11,
+      "murder_score": 1.72,
+      "perv_score": 1.62,
+      "theft_score": 41.26,
+      "violence_score": 25.32,
+      "property_d_score": 0.14
+    }
+  },
+  "8170284224": {
+    "source": "www.realtor.com",
+    "price": 1600,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1529-N-Claremont-Ave-G_Chicago_IL_60622_M81702-84224",
+    "address": "1529 N Claremont Ave Unit G Chicago, IL 60622",
+    "date_pulled": "07-22-2025_18-05-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.909428,
+    "long": -87.685626,
+    "L_dist": [
+      "Damen",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.83,
+      "gun_score": 5.38,
+      "murder_score": 1.71,
+      "perv_score": 1.6,
+      "theft_score": 41.07,
+      "violence_score": 25.58,
+      "property_d_score": 0.14
+    }
+  },
+  "7782773419": {
+    "source": "www.realtor.com",
+    "price": 1800,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2050-W-Berwyn-Ave-G_Chicago_IL_60625_M77827-73419",
+    "address": "2050 W Berwyn Ave Unit G Chicago, IL 60625",
+    "date_pulled": "07-22-2025_18-06-18",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.978081,
+    "long": -87.681548,
+    "L_dist": [
+      "Damen",
+      0.83
+    ],
+    "crime_sc": {
+      "drug_score": 3.27,
+      "gun_score": 4.42,
+      "murder_score": 1.44,
+      "perv_score": 1.45,
+      "theft_score": 43.85,
+      "violence_score": 24.0,
+      "property_d_score": 0.13
+    }
+  },
+  "455255331": {
+    "source": "www.zillow.com",
+    "price": 1850.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4048-N-Kilbourn-Ave-APT-2-Chicago-IL-60641/455255331_zpid/",
+    "address": "4048 N Kilbourn Ave APT 2, Chicago, IL 60641",
+    "date_pulled": "07-23-2025_09-22-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.954987,
+    "long": -87.740875,
+    "L_dist": [
+      "Montrose",
+      0.47
+    ],
+    "crime_sc": {
+      "drug_score": 4.32,
+      "gun_score": 5.18,
+      "murder_score": 1.76,
+      "perv_score": 1.77,
+      "theft_score": 40.16,
+      "violence_score": 25.96,
+      "property_d_score": 0.15
+    }
+  },
+  "2101863461": {
+    "source": "www.zillow.com",
+    "price": 1850.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4349-N-Spaulding-Ave-2-Chicago-IL-60618/2101863461_zpid/",
+    "address": "4349 N Spaulding Ave #2, Chicago, IL 60618",
+    "date_pulled": "07-23-2025_19-06-02",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9608,
+    "long": -87.71048,
+    "L_dist": [
+      "Kedzie",
+      0.37
+    ],
+    "crime_sc": {
+      "drug_score": 3.94,
+      "gun_score": 4.78,
+      "murder_score": 1.57,
+      "perv_score": 1.64,
+      "theft_score": 42.13,
+      "violence_score": 24.73,
+      "property_d_score": 0.13
+    }
+  },
+  "nvj5773j8bneq": {
+    "source": "www.homes.com",
+    "price": 1900.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1316-s-millard-ave-chicago-il-unit-2/nvj5773j8bneq/?l=vcm98lhjd2kjm",
+    "address": "1316 S Millard Ave Unit 2 Chicago, IL 60623",
+    "date_pulled": "07-23-2025_19-06-20",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "6dk1g3dh5xbw6": {
+    "source": "www.homes.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1644-clarence-ave-berwyn-il/6dk1g3dh5xbw6/",
+    "address": "1644 Clarence Ave Berwyn, IL 60402 Chicago",
+    "date_pulled": "07-23-2025_19-06-20",
+    "bed": 2.0,
+    "bath": 2.5,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "s9gk70yw5h8wr": {
+    "source": "www.homes.com",
+    "price": 2595.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4152-deyo-ave-brookfield-il/s9gk70yw5h8wr/",
+    "address": "4152 Deyo Ave Brookfield, IL 60513 Chicago",
+    "date_pulled": "07-23-2025_19-06-20",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1732.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "hlvjxl1": {
+    "source": "www.apartments.com",
+    "price": 1600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1529-n-claremont-ave-chicago-il/hlvjxl1/",
+    "address": "1529 N Claremont Ave, Chicago, IL 60622",
+    "date_pulled": "07-23-2025_19-08-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9094331,
+    "long": -87.6857148,
+    "L_dist": [
+      "Damen",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.37,
+      "murder_score": 1.7,
+      "perv_score": 1.6,
+      "theft_score": 41.06,
+      "violence_score": 25.6,
+      "property_d_score": 0.14
+    }
+  },
+  "7868378364": {
+    "source": "www.craigslist.org",
+    "price": 2595.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-bed-bath-near-medical-district/7868378364.html",
+    "address": "West Jackson Blvd, Chicago, IL 60612",
+    "date_pulled": "07-25-2025_21-32-34",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.877432,
+    "long": -87.696154,
+    "L_dist": [
+      "Western",
+      0.42
+    ],
+    "crime_sc": {
+      "drug_score": 3.7,
+      "gun_score": 6.04,
+      "murder_score": 1.79,
+      "perv_score": 1.65,
+      "theft_score": 39.65,
+      "violence_score": 26.38,
+      "property_d_score": 0.15
+    }
+  },
+  "7868410958": {
+    "source": "www.craigslist.org",
+    "price": 2495.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-large-new-bedroom-bath-condo/7868410958.html",
+    "address": "61st, Chicago, IL 60637",
+    "date_pulled": "07-25-2025_21-32-30",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 16502.0,
+    "lat": 41.783969,
+    "long": -87.599466,
+    "L_dist": [
+      "Cottage Grove",
+      0.41
+    ],
+    "crime_sc": {
+      "drug_score": 1.97,
+      "gun_score": 8.02,
+      "murder_score": 2.28,
+      "perv_score": 1.45,
+      "theft_score": 35.53,
+      "violence_score": 30.1,
+      "property_d_score": 0.19
+    }
+  },
+  "c6tdrmg": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3521-n-keating-ave-chicago-il/c6tdrmg/",
+    "address": "3521 N Keating Ave, Chicago, IL 60641",
+    "date_pulled": "07-25-2025_21-34-38",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.9453621,
+    "long": -87.7450331,
+    "L_dist": [
+      "Irving Park",
+      0.97
+    ],
+    "crime_sc": {
+      "drug_score": 4.43,
+      "gun_score": 5.4,
+      "murder_score": 1.87,
+      "perv_score": 1.78,
+      "theft_score": 39.26,
+      "violence_score": 26.62,
+      "property_d_score": 0.16
+    }
+  },
+  "58pypkp": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1316-s-millard-ave-chicago-il/58pypkp/",
+    "address": "1316 S Millard Ave, Chicago, IL 60623",
+    "date_pulled": "07-25-2025_21-35-27",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.8639156,
+    "long": -87.7168503,
+    "L_dist": [
+      "Central Park",
+      0.7
+    ],
+    "crime_sc": {
+      "drug_score": 3.93,
+      "gun_score": 6.37,
+      "murder_score": 1.89,
+      "perv_score": 1.69,
+      "theft_score": 39.07,
+      "violence_score": 26.59,
+      "property_d_score": 0.17
+    }
+  },
+  "7nq0vsy": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4720-n-sheridan-rd-chicago-il/7nq0vsy/",
+    "address": "4720 N Sheridan Rd, Chicago, IL 60640",
+    "date_pulled": "07-25-2025_21-35-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9679641,
+    "long": -87.6552425,
+    "L_dist": [
+      "Lawrence",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 3.9,
+      "gun_score": 4.47,
+      "murder_score": 1.36,
+      "perv_score": 1.57,
+      "theft_score": 44.07,
+      "violence_score": 23.49,
+      "property_d_score": 0.12
+    }
+  },
+  "2b8zmmb": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4428-n-sheridan-rd-chicago-il/2b8zmmb/",
+    "address": "4428 N Sheridan Rd, Chicago, IL 60640",
+    "date_pulled": "07-25-2025_21-35-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9626304,
+    "long": -87.6550139,
+    "L_dist": [
+      "Wilson",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 4.65,
+      "murder_score": 1.49,
+      "perv_score": 1.56,
+      "theft_score": 43.36,
+      "violence_score": 23.86,
+      "property_d_score": 0.11
+    }
+  },
+  "9w7kkq5": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/8933-s-halsted-st-chicago-il/9w7kkq5/",
+    "address": "8933 S Halsted St, Chicago, IL 60620",
+    "date_pulled": "07-25-2025_21-35-27",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 1600.0,
+    "lat": 41.731545,
+    "long": -87.6431705,
+    "L_dist": [
+      "87th",
+      0.99
+    ],
+    "crime_sc": {
+      "drug_score": 1.66,
+      "gun_score": 8.73,
+      "murder_score": 2.46,
+      "perv_score": 1.67,
+      "theft_score": 33.56,
+      "violence_score": 31.31,
+      "property_d_score": 0.22
+    }
+  },
+  "9398983655": {
+    "source": "www.realtor.com",
+    "price": 2250,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4258-N-Damen-Ave-Apt-1_Chicago_IL_60618_M93989-83655",
+    "address": "4258 N Damen Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "07-25-2025_21-40-28",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.959499,
+    "long": -87.67926,
+    "L_dist": [
+      "Montrose",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 4.08,
+      "gun_score": 4.88,
+      "murder_score": 1.64,
+      "perv_score": 1.62,
+      "theft_score": 42.02,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "2092966128": {
+    "source": "www.zillow.com",
+    "price": 2250.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4258-N-Damen-Ave-1-Chicago-IL-60618/2092966128_zpid/",
+    "address": "4258 N Damen Ave #1, Chicago, IL 60618",
+    "date_pulled": "07-25-2025_21-40-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.95949,
+    "long": -87.67926,
+    "L_dist": [
+      "Montrose",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 4.08,
+      "gun_score": 4.88,
+      "murder_score": 1.64,
+      "perv_score": 1.62,
+      "theft_score": 42.02,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "185890544": {
+    "source": "www.redfin.com",
+    "price": 2490.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2814-N-Maplewood-Ave-60618/unit-DHFS/home/185890544",
+    "address": "2814 N Maplewood Ave Unit DHFS, Chicago, IL, 60618",
+    "date_pulled": "07-25-2025_21-41-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.9326687,
+    "long": -87.6918455,
+    "L_dist": [
+      "California",
+      0.78
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 5.12,
+      "murder_score": 1.72,
+      "perv_score": 1.62,
+      "theft_score": 41.26,
+      "violence_score": 25.37,
+      "property_d_score": 0.14
+    }
   }
 }
