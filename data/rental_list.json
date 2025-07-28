@@ -72209,5 +72209,253 @@
       "violence_score": 25.37,
       "property_d_score": 0.14
     }
+  },
+  "we7s17zpkg7tc": {
+    "source": "www.homes.com",
+    "price": 2325.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2737-w-lunt-ave-chicago-il-unit-1e/we7s17zpkg7tc/",
+    "address": "2737 W Lunt Ave Unit 1E Chicago, IL 60645",
+    "date_pulled": "07-28-2025_09-27-14",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "gh28y7x": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2515-w-augusta-blvd-chicago-il/gh28y7x/",
+    "address": "2515 W Augusta Blvd, Chicago, IL 60622",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.8991477,
+    "long": -87.690104,
+    "L_dist": [
+      "Damen",
+      0.98
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 5.51,
+      "murder_score": 1.68,
+      "perv_score": 1.67,
+      "theft_score": 40.89,
+      "violence_score": 25.68,
+      "property_d_score": 0.14
+    }
+  },
+  "l1k0y7f": {
+    "source": "www.apartments.com",
+    "price": 2050.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6422-s-drexel-ave-chicago-il/l1k0y7f/",
+    "address": "6422 S Drexel Ave, Chicago, IL 60637",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.7779187,
+    "long": -87.6031593,
+    "L_dist": [
+      "Cottage Grove",
+      0.22
+    ],
+    "crime_sc": {
+      "drug_score": 2.04,
+      "gun_score": 8.3,
+      "murder_score": 2.41,
+      "perv_score": 1.52,
+      "theft_score": 34.56,
+      "violence_score": 30.73,
+      "property_d_score": 0.19
+    }
+  },
+  "gddjb2z": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7616-n-marshfield-ave-chicago-il/gddjb2z/",
+    "address": "7616 N Marshfield Ave, Chicago, IL 60626",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 42.0197544,
+    "long": -87.6720228,
+    "L_dist": [
+      "Howard",
+      0.07
+    ],
+    "crime_sc": {
+      "drug_score": 0.98,
+      "gun_score": 3.08,
+      "murder_score": 0.66,
+      "perv_score": 1.62,
+      "theft_score": 45.4,
+      "violence_score": 24.17,
+      "property_d_score": 0.13
+    }
+  },
+  "p5ss3dr": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2052-n-campbell-ave-chicago-il/p5ss3dr/",
+    "address": "2052 N Campbell Ave, Chicago, IL 60647",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9191033,
+    "long": -87.6895226,
+    "L_dist": [
+      "Western",
+      0.23
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 5.18,
+      "murder_score": 1.69,
+      "perv_score": 1.61,
+      "theft_score": 41.07,
+      "violence_score": 25.55,
+      "property_d_score": 0.14
+    }
+  },
+  "y6h6jls": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3556-n-wilton-ave-chicago-il/y6h6jls/",
+    "address": "3556 N Wilton Ave, Chicago, IL 60657",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9470843,
+    "long": -87.6533773,
+    "L_dist": [
+      "Addison",
+      0.03
+    ],
+    "crime_sc": {
+      "drug_score": 4.2,
+      "gun_score": 4.84,
+      "murder_score": 1.6,
+      "perv_score": 1.54,
+      "theft_score": 42.44,
+      "violence_score": 24.42,
+      "property_d_score": 0.12
+    }
+  },
+  "f0f16yv": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4258-n-damen-ave-chicago-il/f0f16yv/",
+    "address": "4258 N Damen Ave, Chicago, IL 60618",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9594715,
+    "long": -87.6790243,
+    "L_dist": [
+      "Montrose",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 4.86,
+      "murder_score": 1.63,
+      "perv_score": 1.62,
+      "theft_score": 42.01,
+      "violence_score": 24.8,
+      "property_d_score": 0.13
+    }
+  },
+  "sk7dw64": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5211-s-monitor-ave-chicago-il/sk7dw64/",
+    "address": "5211 S Monitor Ave, Chicago, IL 60638",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.7977268,
+    "long": -87.7682856,
+    "L_dist": [
+      "Midway",
+      1.74
+    ],
+    "crime_sc": {
+      "drug_score": 7.04,
+      "gun_score": 8.31,
+      "murder_score": 2.9,
+      "perv_score": 2.21,
+      "theft_score": 30.49,
+      "violence_score": 30.85,
+      "property_d_score": 0.22
+    }
+  },
+  "p4xs2mr": {
+    "source": "www.apartments.com",
+    "price": 2550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2407-n-clybourn-ave-chicago-il/p4xs2mr/",
+    "address": "2407 N Clybourn Ave, Chicago, IL 60614",
+    "date_pulled": "07-28-2025_09-28-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 800.0,
+    "lat": 41.9253727,
+    "long": -87.6694783,
+    "L_dist": [
+      "Fullerton",
+      0.85
+    ],
+    "crime_sc": {
+      "drug_score": 4.05,
+      "gun_score": 5.14,
+      "murder_score": 1.73,
+      "perv_score": 1.57,
+      "theft_score": 41.32,
+      "violence_score": 25.33,
+      "property_d_score": 0.14
+    }
+  },
+  "98l0wdknceq9z": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5211-s-monitor-ave-chicago-il/98l0wdknceq9z/",
+    "address": "5211 S Monitor Ave Chicago, IL 60638",
+    "date_pulled": "07-28-2025_09-32-55",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
