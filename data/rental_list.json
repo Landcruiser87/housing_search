@@ -72662,5 +72662,172 @@
       "violence_score": 25.61,
       "property_d_score": 0.14
     }
+  },
+  "4w73r9mrx5qs3": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1800-s-ashland-ave-chicago-il-unit-205/4w73r9mrx5qs3/",
+    "address": "1800 S Ashland Ave Unit 205 Chicago, IL 60608",
+    "date_pulled": "07-30-2025_08-01-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "dzj3qr23zqek6": {
+    "source": "www.homes.com",
+    "price": 2350.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1800-s-ashland-ave-chicago-il-unit-206/dzj3qr23zqek6/",
+    "address": "1800 S Ashland Ave Unit 206 Chicago, IL 60608",
+    "date_pulled": "07-30-2025_08-01-11",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2083150206": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3328-W-Cuyler-Ave-Chicago-IL-60618/2083150206_zpid/",
+    "address": "3328 W Cuyler Ave, Chicago, IL 60618",
+    "date_pulled": "07-30-2025_08-01-37",
+    "bed": 3.0,
+    "bath": 4.0,
+    "sqft": 1400.0,
+    "lat": 41.95509,
+    "long": -87.71168,
+    "L_dist": [
+      "Addison",
+      0.65
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 4.85,
+      "murder_score": 1.57,
+      "perv_score": 1.63,
+      "theft_score": 41.67,
+      "violence_score": 24.99,
+      "property_d_score": 0.14
+    }
+  },
+  "2068413903": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5030-W-Hutchinson-St-1-Chicago-IL-60641/2068413903_zpid/",
+    "address": "5030 W Hutchinson St #1, Chicago, IL 60641",
+    "date_pulled": "07-30-2025_08-03-26",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.958176,
+    "long": -87.75334,
+    "L_dist": [
+      "Montrose",
+      0.55
+    ],
+    "crime_sc": {
+      "drug_score": 4.69,
+      "gun_score": 5.48,
+      "murder_score": 1.86,
+      "perv_score": 1.84,
+      "theft_score": 38.71,
+      "violence_score": 26.61,
+      "property_d_score": 0.17
+    }
+  },
+  "8bftrk1": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/524-n-armour-st-chicago-il/8bftrk1/",
+    "address": "524 N Armour St, Chicago, IL 60642",
+    "date_pulled": "07-30-2025_08-06-38",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.8918121,
+    "long": -87.6658089,
+    "L_dist": [
+      "Ashland",
+      0.46
+    ],
+    "crime_sc": {
+      "drug_score": 3.8,
+      "gun_score": 5.69,
+      "murder_score": 1.7,
+      "perv_score": 1.61,
+      "theft_score": 40.96,
+      "violence_score": 25.58,
+      "property_d_score": 0.14
+    }
+  },
+  "4wqpy7l": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1653-n-richmond-st-chicago-il/4wqpy7l/",
+    "address": "1653 N Richmond St, Chicago, IL 60647",
+    "date_pulled": "07-30-2025_08-06-38",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9117857,
+    "long": -87.7000032,
+    "L_dist": [
+      "Western",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.24,
+      "murder_score": 1.69,
+      "perv_score": 1.6,
+      "theft_score": 41.02,
+      "violence_score": 25.56,
+      "property_d_score": 0.14
+    }
+  },
+  "185650704": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3017-W-George-St-60618/unit-G/home/185650704",
+    "address": "3017 W George St Unit G, Chicago, IL, 60618",
+    "date_pulled": "07-30-2025_08-08-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9336066,
+    "long": -87.7033671,
+    "L_dist": [
+      "Logan Square",
+      0.38
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.07,
+      "murder_score": 1.71,
+      "perv_score": 1.61,
+      "theft_score": 41.21,
+      "violence_score": 25.35,
+      "property_d_score": 0.14
+    }
   }
 }
