@@ -72829,5 +72829,145 @@
       "violence_score": 25.35,
       "property_d_score": 0.14
     }
+  },
+  "w0vtkt9rk5ehe": {
+    "source": "www.homes.com",
+    "price": 2250.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2908-n-dawson-ave-chicago-il-unit-2/w0vtkt9rk5ehe/",
+    "address": "2908 N Dawson Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "07-31-2025_09-53-40",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "184902355": {
+    "source": "www.redfin.com",
+    "price": 1900.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/2113-W-Montrose-Ave-60618/unit-2F/home/184902355",
+    "address": "2113 W Montrose Ave Unit 2F, Chicago, IL, 60618",
+    "date_pulled": "07-31-2025_09-53-56",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9612228,
+    "long": -87.6820446,
+    "L_dist": [
+      "Montrose",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.02,
+      "gun_score": 4.81,
+      "murder_score": 1.61,
+      "perv_score": 1.62,
+      "theft_score": 42.03,
+      "violence_score": 24.78,
+      "property_d_score": 0.13
+    }
+  },
+  "rscph88cm4bte": {
+    "source": "www.homes.com",
+    "price": 2095.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1724-n-talman-ave-chicago-il-unit-1f/rscph88cm4bte/",
+    "address": "1724 N Talman Ave Unit 1F Chicago, IL 60647",
+    "date_pulled": "07-31-2025_09-57-08",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "dvh88qj": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/2908-n-dawson-ave-chicago-il/dvh88qj/",
+    "address": "2908 N Dawson Ave, Chicago, IL 60618",
+    "date_pulled": "07-31-2025_09-57-20",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9345362,
+    "long": -87.7120868,
+    "L_dist": [
+      "Belmont",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.93,
+      "gun_score": 5.04,
+      "murder_score": 1.69,
+      "perv_score": 1.62,
+      "theft_score": 41.15,
+      "violence_score": 25.36,
+      "property_d_score": 0.14
+    }
+  },
+  "9630472961": {
+    "source": "www.realtor.com",
+    "price": 2250,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2908-N-Dawson-Ave-2_Chicago_IL_60618_M96304-72961",
+    "address": "2908 N Dawson Ave Unit 2 Chicago, IL 60618",
+    "date_pulled": "07-31-2025_09-57-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.934536,
+    "long": -87.71209,
+    "L_dist": [
+      "Belmont",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 3.93,
+      "gun_score": 5.04,
+      "murder_score": 1.69,
+      "perv_score": 1.62,
+      "theft_score": 41.15,
+      "violence_score": 25.36,
+      "property_d_score": 0.14
+    }
+  },
+  "441012114": {
+    "source": "www.zillow.com",
+    "price": 2150.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3928-N-Albany-Ave-1-Chicago-IL-60618/441012114_zpid/",
+    "address": "3928 N Albany Ave #1, Chicago, IL 60618",
+    "date_pulled": "07-31-2025_10-00-28",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.95306,
+    "long": -87.7059,
+    "L_dist": [
+      "Addison",
+      0.78
+    ],
+    "crime_sc": {
+      "drug_score": 4.05,
+      "gun_score": 4.89,
+      "murder_score": 1.63,
+      "perv_score": 1.63,
+      "theft_score": 41.55,
+      "violence_score": 25.02,
+      "property_d_score": 0.14
+    }
   }
 }
