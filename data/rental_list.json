@@ -72969,5 +72969,113 @@
       "violence_score": 25.02,
       "property_d_score": 0.14
     }
+  },
+  "8851710385": {
+    "source": "www.realtor.com",
+    "price": 1800,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/1243-N-Damen-Ave-G_Chicago_IL_60622_M88517-10385",
+    "address": "1243 N Damen Ave Unit G Chicago, IL 60622",
+    "date_pulled": "07-31-2025_17-49-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.904518,
+    "long": -87.676956,
+    "L_dist": [
+      "Damen",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.45,
+      "murder_score": 1.7,
+      "perv_score": 1.6,
+      "theft_score": 40.91,
+      "violence_score": 25.66,
+      "property_d_score": 0.14
+    }
+  },
+  "28gcgzc": {
+    "source": "www.apartments.com",
+    "price": 2440.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/1227-n-rockwell-st-chicago-il/28gcgzc/",
+    "address": "1227 N Rockwell St, Chicago, IL 60622",
+    "date_pulled": "07-31-2025_17-50-01",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9038623,
+    "long": -87.6917031,
+    "L_dist": [
+      "Damen",
+      0.84
+    ],
+    "crime_sc": {
+      "drug_score": 3.76,
+      "gun_score": 5.42,
+      "murder_score": 1.68,
+      "perv_score": 1.63,
+      "theft_score": 40.89,
+      "violence_score": 25.68,
+      "property_d_score": 0.14
+    }
+  },
+  "441013295": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2737-W-Belmont-Ave-1-Chicago-IL-60618/441013295_zpid/",
+    "address": "2737 W Belmont Ave #1, Chicago, IL 60618",
+    "date_pulled": "07-31-2025_17-51-13",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.939137,
+    "long": -87.69671,
+    "L_dist": [
+      "Belmont",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 5.04,
+      "murder_score": 1.74,
+      "perv_score": 1.62,
+      "theft_score": 41.22,
+      "violence_score": 25.32,
+      "property_d_score": 0.14
+    }
+  },
+  "8018486162": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2737-W-Belmont-Ave-1_Chicago_IL_60618_M80184-86162",
+    "address": "2737 W Belmont Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "07-31-2025_17-51-58",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 41.939138,
+    "long": -87.696711,
+    "L_dist": [
+      "Belmont",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 5.04,
+      "murder_score": 1.74,
+      "perv_score": 1.62,
+      "theft_score": 41.22,
+      "violence_score": 25.32,
+      "property_d_score": 0.14
+    }
   }
 }
