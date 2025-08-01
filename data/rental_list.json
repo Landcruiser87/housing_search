@@ -73077,5 +73077,32 @@
       "violence_score": 25.32,
       "property_d_score": 0.14
     }
+  },
+  "189512059": {
+    "source": "www.redfin.com",
+    "price": 1625.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3757-W-Sunnyside-Ave-60625/unit-3/home/189512059",
+    "address": "3757 W Sunnyside Ave Unit 3, Chicago, IL, 60625",
+    "date_pulled": "08-01-2025_09-15-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9626881,
+    "long": -87.722624,
+    "L_dist": [
+      "Kimball",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.92,
+      "gun_score": 4.74,
+      "murder_score": 1.57,
+      "perv_score": 1.63,
+      "theft_score": 42.14,
+      "violence_score": 24.72,
+      "property_d_score": 0.14
+    }
   }
 }
