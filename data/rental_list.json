@@ -73104,5 +73104,140 @@
       "violence_score": 24.72,
       "property_d_score": 0.14
     }
+  },
+  "441017066": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4139-W-Fletcher-St-1-Chicago-IL-60641/441017066_zpid/",
+    "address": "4139 W Fletcher St #1, Chicago, IL 60641",
+    "date_pulled": "08-01-2025_18-00-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.937866,
+    "long": -87.731155,
+    "L_dist": [
+      "Addison",
+      0.9
+    ],
+    "crime_sc": {
+      "drug_score": 4.18,
+      "gun_score": 5.21,
+      "murder_score": 1.86,
+      "perv_score": 1.71,
+      "theft_score": 40.22,
+      "violence_score": 25.93,
+      "property_d_score": 0.16
+    }
+  },
+  "ywwqcpr": {
+    "source": "www.apartments.com",
+    "price": 2095.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1724-n-talman-ave-chicago-il/ywwqcpr/",
+    "address": "1724 N Talman Ave, Chicago, IL 60647",
+    "date_pulled": "08-02-2025_13-31-14",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9128269,
+    "long": -87.6936633,
+    "L_dist": [
+      "Western",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.23,
+      "murder_score": 1.69,
+      "perv_score": 1.58,
+      "theft_score": 41.0,
+      "violence_score": 25.56,
+      "property_d_score": 0.15
+    }
+  },
+  "213hcx8": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2702-s-union-ave-chicago-il/213hcx8/",
+    "address": "2702 S Union Ave, Chicago, IL 60616",
+    "date_pulled": "08-02-2025_13-31-14",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 990.0,
+    "lat": 41.8442554,
+    "long": -87.6442655,
+    "L_dist": [
+      "Halsted",
+      0.26
+    ],
+    "crime_sc": {
+      "drug_score": 3.45,
+      "gun_score": 6.99,
+      "murder_score": 2.07,
+      "perv_score": 1.55,
+      "theft_score": 38.44,
+      "violence_score": 27.52,
+      "property_d_score": 0.16
+    }
+  },
+  "185784195": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3630-N-Kimball-Ave-60618/unit-G/home/185784195",
+    "address": "3630 N Kimball Ave Unit G, Chicago, IL, 60618",
+    "date_pulled": "08-02-2025_13-33-13",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9475283,
+    "long": -87.7130455,
+    "L_dist": [
+      "Addison",
+      0.31
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 4.93,
+      "murder_score": 1.64,
+      "perv_score": 1.6,
+      "theft_score": 41.37,
+      "violence_score": 25.15,
+      "property_d_score": 0.14
+    }
+  },
+  "9755432046": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4224-N-Kimball-Ave-1_Chicago_IL_60618_M97554-32046",
+    "address": "4224 N Kimball Ave Unit 1 Chicago, IL 60618",
+    "date_pulled": "08-02-2025_13-33-25",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.958298,
+    "long": -87.713318,
+    "L_dist": [
+      "Kedzie",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 3.96,
+      "gun_score": 4.79,
+      "murder_score": 1.56,
+      "perv_score": 1.61,
+      "theft_score": 41.86,
+      "violence_score": 24.85,
+      "property_d_score": 0.14
+    }
   }
 }
