@@ -73239,5 +73239,86 @@
       "violence_score": 24.85,
       "property_d_score": 0.14
     }
+  },
+  "m0b7myl": {
+    "source": "www.apartments.com",
+    "price": 2475.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2455-w-armitage-ave-chicago-il/m0b7myl/",
+    "address": "2455 W Armitage Ave, Chicago, IL 60647",
+    "date_pulled": "08-03-2025_09-58-59",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.9173302,
+    "long": -87.6895153,
+    "L_dist": [
+      "Western",
+      0.14
+    ],
+    "crime_sc": {
+      "drug_score": 3.87,
+      "gun_score": 5.18,
+      "murder_score": 1.69,
+      "perv_score": 1.59,
+      "theft_score": 41.04,
+      "violence_score": 25.53,
+      "property_d_score": 0.15
+    }
+  },
+  "t1tyt98": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7006-n-paulina-st-chicago-il/t1tyt98/",
+    "address": "7006 N Paulina St, Chicago, IL 60626",
+    "date_pulled": "08-03-2025_09-58-59",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 42.0092547,
+    "long": -87.67236,
+    "L_dist": [
+      "Morse",
+      0.34
+    ],
+    "crime_sc": {
+      "drug_score": 1.05,
+      "gun_score": 3.46,
+      "murder_score": 0.83,
+      "perv_score": 1.6,
+      "theft_score": 45.94,
+      "violence_score": 23.67,
+      "property_d_score": 0.13
+    }
+  },
+  "g0b6dlx": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2451-w-howard-st-chicago-il/g0b6dlx/",
+    "address": "2451 W Howard St, Chicago, IL 60645",
+    "date_pulled": "08-03-2025_09-58-59",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 42.0189415,
+    "long": -87.6925117,
+    "L_dist": [
+      "South Boulevard",
+      0.94
+    ],
+    "crime_sc": {
+      "drug_score": 0.97,
+      "gun_score": 3.11,
+      "murder_score": 0.68,
+      "perv_score": 1.71,
+      "theft_score": 44.99,
+      "violence_score": 24.28,
+      "property_d_score": 0.13
+    }
   }
 }
