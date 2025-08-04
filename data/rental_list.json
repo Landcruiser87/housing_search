@@ -73320,5 +73320,32 @@
       "violence_score": 24.28,
       "property_d_score": 0.13
     }
+  },
+  "7871025057": {
+    "source": "www.craigslist.org",
+    "price": 2300.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-duplex-for-rent/7871025057.html",
+    "address": "2001 W 18th Place, Chicago, IL 60608",
+    "date_pulled": "08-04-2025_11-21-19",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.856632,
+    "long": -87.675953,
+    "L_dist": [
+      "Damen",
+      0.15
+    ],
+    "crime_sc": {
+      "drug_score": 3.76,
+      "gun_score": 6.64,
+      "murder_score": 1.94,
+      "perv_score": 1.6,
+      "theft_score": 38.61,
+      "violence_score": 27.11,
+      "property_d_score": 0.16
+    }
   }
 }
