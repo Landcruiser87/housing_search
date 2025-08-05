@@ -73347,5 +73347,86 @@
       "violence_score": 27.11,
       "property_d_score": 0.16
     }
+  },
+  "196812671": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/5001-N-Sawyer-Ave-60625/unit-G/home/196812671",
+    "address": "5001 N Sawyer Ave Unit G, Chicago, IL, 60625",
+    "date_pulled": "08-04-2025_22-34-46",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9722352,
+    "long": -87.7095634,
+    "L_dist": [
+      "Kimball",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 3.44,
+      "gun_score": 4.53,
+      "murder_score": 1.43,
+      "perv_score": 1.46,
+      "theft_score": 42.93,
+      "violence_score": 24.47,
+      "property_d_score": 0.14
+    }
+  },
+  "2055478585": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3330-W-Hutchinson-St-2-Chicago-IL-60618/2055478585_zpid/",
+    "address": "3330 W Hutchinson St #2, Chicago, IL 60618",
+    "date_pulled": "08-05-2025_09-48-21",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1168.0,
+    "lat": 41.95869,
+    "long": -87.71187,
+    "L_dist": [
+      "Kedzie",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 4.79,
+      "murder_score": 1.54,
+      "perv_score": 1.62,
+      "theft_score": 41.86,
+      "violence_score": 24.86,
+      "property_d_score": 0.14
+    }
+  },
+  "1k1m7d5": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5749-n-campbell-ave-chicago-il/1k1m7d5/",
+    "address": "5749 N Campbell Ave, Chicago, IL 60659",
+    "date_pulled": "08-05-2025_09-54-49",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1450.0,
+    "lat": 41.9864364,
+    "long": -87.691689,
+    "L_dist": [
+      "Rockwell",
+      1.41
+    ],
+    "crime_sc": {
+      "drug_score": 2.87,
+      "gun_score": 4.11,
+      "murder_score": 1.2,
+      "perv_score": 1.56,
+      "theft_score": 44.39,
+      "violence_score": 23.7,
+      "property_d_score": 0.14
+    }
   }
 }
