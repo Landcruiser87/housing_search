@@ -73428,5 +73428,167 @@
       "violence_score": 23.7,
       "property_d_score": 0.14
     }
+  },
+  "9390495346": {
+    "source": "www.realtor.com",
+    "price": 2500,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3801-W-Belle-Plaine-Ave-Apt-1_Chicago_IL_60618_M93904-95346",
+    "address": "3801 W Belle Plaine Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "08-06-2025_13-27-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.955399,
+    "long": -87.722961,
+    "L_dist": [
+      "Irving Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.99,
+      "gun_score": 4.85,
+      "murder_score": 1.58,
+      "perv_score": 1.63,
+      "theft_score": 41.59,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "2070939810": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3330-W-Hutchinson-St-1-Chicago-IL-60618/2070939810_zpid/",
+    "address": "3330 W Hutchinson St #1, Chicago, IL 60618",
+    "date_pulled": "08-06-2025_13-27-49",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1104.0,
+    "lat": 41.958702,
+    "long": -87.71186,
+    "L_dist": [
+      "Kedzie",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 4.79,
+      "murder_score": 1.54,
+      "perv_score": 1.62,
+      "theft_score": 41.87,
+      "violence_score": 24.84,
+      "property_d_score": 0.14
+    }
+  },
+  "rwsq9h1": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/125-s-leavitt-st-chicago-il/rwsq9h1/",
+    "address": "125 S Leavitt St, Chicago, IL 60612",
+    "date_pulled": "08-06-2025_13-28-53",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.8791711,
+    "long": -87.6811707,
+    "L_dist": [
+      "Illinois Medical District",
+      0.44
+    ],
+    "crime_sc": {
+      "drug_score": 3.69,
+      "gun_score": 5.9,
+      "murder_score": 1.76,
+      "perv_score": 1.65,
+      "theft_score": 39.86,
+      "violence_score": 26.24,
+      "property_d_score": 0.15
+    }
+  },
+  "8797335281": {
+    "source": "www.realtor.com",
+    "price": 2300,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5115-N-Springfield-Ave-Apt-B_Chicago_IL_60625_M87973-35281",
+    "address": "5115 N Springfield Ave Apt B Chicago, IL 60625",
+    "date_pulled": "08-06-2025_13-29-50",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1036.0,
+    "lat": 41.974224,
+    "long": -87.725448,
+    "L_dist": [
+      "Kimball",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 3.38,
+      "gun_score": 4.52,
+      "murder_score": 1.44,
+      "perv_score": 1.5,
+      "theft_score": 42.83,
+      "violence_score": 24.55,
+      "property_d_score": 0.15
+    }
+  },
+  "191850959": {
+    "source": "www.redfin.com",
+    "price": 2250.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3530-N-Elston-Ave-60618/unit-1/home/191850959",
+    "address": "3530 N Elston Ave Unit 1, Chicago, IL, 60618",
+    "date_pulled": "08-06-2025_13-34-01",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.94531,
+    "long": -87.7072981,
+    "L_dist": [
+      "Belmont",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 4.97,
+      "murder_score": 1.66,
+      "perv_score": 1.61,
+      "theft_score": 41.24,
+      "violence_score": 25.27,
+      "property_d_score": 0.14
+    }
+  },
+  "196838722": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3104-N-Sacramento-Ave-60618/unit-2/home/196838722",
+    "address": "3104 N Sacramento Ave Unit 2, Chicago, IL, 60618",
+    "date_pulled": "08-06-2025_13-34-01",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9377858,
+    "long": -87.7029491,
+    "L_dist": [
+      "Belmont",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 4.0,
+      "gun_score": 5.05,
+      "murder_score": 1.7,
+      "perv_score": 1.62,
+      "theft_score": 41.12,
+      "violence_score": 25.36,
+      "property_d_score": 0.14
+    }
   }
 }
