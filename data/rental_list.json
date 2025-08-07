@@ -73590,5 +73590,145 @@
       "violence_score": 25.36,
       "property_d_score": 0.14
     }
+  },
+  "186040113": {
+    "source": "www.redfin.com",
+    "price": 2100.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3228-N-Hamlin-Ave-60618/unit-1F/home/186040113",
+    "address": "3228 N Hamlin Ave Unit 1F, Chicago, IL, 60618",
+    "date_pulled": "08-07-2025_12-27-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9400897,
+    "long": -87.7226682,
+    "L_dist": [
+      "Addison",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 4.02,
+      "gun_score": 5.02,
+      "murder_score": 1.72,
+      "perv_score": 1.63,
+      "theft_score": 41.06,
+      "violence_score": 25.4,
+      "property_d_score": 0.15
+    }
+  },
+  "kfp7zfkb4z81g": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1429-w-jarvis-ave-chicago-il-unit-1b/kfp7zfkb4z81g/?l=bv3485vdmnd90",
+    "address": "1429 W Jarvis Ave Unit 1B Chicago, IL 60626",
+    "date_pulled": "08-07-2025_12-28-02",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "6fhert8pl16m3": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3628-n-milwaukee-ave-chicago-il-unit-1/6fhert8pl16m3/",
+    "address": "3628 N Milwaukee Ave Unit 1 Chicago, IL 60641",
+    "date_pulled": "08-07-2025_12-28-02",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "7690146672": {
+    "source": "www.realtor.com",
+    "price": 2000,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3628-N-Milwaukee-Ave-Ste-1_Chicago_IL_60641_M76901-46672",
+    "address": "3628 N Milwaukee Ave Ste 1 Chicago, IL 60641",
+    "date_pulled": "08-07-2025_12-31-45",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1200.0,
+    "lat": 41.946663,
+    "long": -87.736687,
+    "L_dist": [
+      "Irving Park",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 4.3,
+      "gun_score": 5.2,
+      "murder_score": 1.82,
+      "perv_score": 1.73,
+      "theft_score": 39.85,
+      "violence_score": 26.16,
+      "property_d_score": 0.17
+    }
+  },
+  "455768958": {
+    "source": "www.zillow.com",
+    "price": 2000.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3628-N-Milwaukee-Ave-1-Chicago-IL-60641/455768958_zpid/",
+    "address": "3628 N Milwaukee Ave #1, Chicago, IL 60641",
+    "date_pulled": "08-07-2025_12-32-08",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.946617,
+    "long": -87.73674,
+    "L_dist": [
+      "Irving Park",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 4.3,
+      "gun_score": 5.2,
+      "murder_score": 1.82,
+      "perv_score": 1.73,
+      "theft_score": 39.85,
+      "violence_score": 26.15,
+      "property_d_score": 0.17
+    }
+  },
+  "9y1epn4": {
+    "source": "www.apartments.com",
+    "price": 2425.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/515-sheridan-rd-evanston-il/9y1epn4/",
+    "address": "515 Sheridan Rd, Evanston, IL 60202 Chicago",
+    "date_pulled": "08-07-2025_12-32-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 42.0253681,
+    "long": -87.6665822,
+    "L_dist": [
+      "Howard",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 0.96,
+      "gun_score": 2.93,
+      "murder_score": 0.56,
+      "perv_score": 1.61,
+      "theft_score": 45.34,
+      "violence_score": 24.43,
+      "property_d_score": 0.12
+    }
   }
 }
