@@ -73730,5 +73730,248 @@
       "violence_score": 24.43,
       "property_d_score": 0.12
     }
+  },
+  "7871917151": {
+    "source": "www.craigslist.org",
+    "price": 2200.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-covered-parking-space/7871917151.html",
+    "address": "3522 S State St, Chicago, IL 60609",
+    "date_pulled": "08-08-2025_11-20-56",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 13402.0,
+    "lat": 41.830217,
+    "long": -87.626814,
+    "L_dist": [
+      "35th-Bronzeville-IIT",
+      0.11
+    ],
+    "crime_sc": {
+      "drug_score": 3.33,
+      "gun_score": 7.15,
+      "murder_score": 2.17,
+      "perv_score": 1.39,
+      "theft_score": 37.92,
+      "violence_score": 27.99,
+      "property_d_score": 0.16
+    }
+  },
+  "je0bh44": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3801-w-belle-plaine-ave-chicago-il/je0bh44/",
+    "address": "3801 W Belle Plaine Ave, Chicago, IL 60618",
+    "date_pulled": "08-08-2025_11-22-52",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.9553967,
+    "long": -87.7230835,
+    "L_dist": [
+      "Irving Park",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 4.0,
+      "gun_score": 4.84,
+      "murder_score": 1.59,
+      "perv_score": 1.64,
+      "theft_score": 41.56,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "98qknp7": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1725-n-kedzie-ave-chicago-il/98qknp7/",
+    "address": "1725 N Kedzie Ave, Chicago, IL 60647",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 994.0,
+    "lat": 41.9127455,
+    "long": -87.7065178,
+    "L_dist": [
+      "California",
+      0.8
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 5.17,
+      "murder_score": 1.65,
+      "perv_score": 1.6,
+      "theft_score": 40.9,
+      "violence_score": 25.58,
+      "property_d_score": 0.15
+    }
+  },
+  "m4n8vwj": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4249-w-potomac-ave-chicago-il/m4n8vwj/",
+    "address": "4249 W Potomac Ave, Chicago, IL 60651",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1800.0,
+    "lat": 41.9041245,
+    "long": -87.73322,
+    "L_dist": [
+      "Cicero",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 4.08,
+      "gun_score": 5.49,
+      "murder_score": 1.81,
+      "perv_score": 1.75,
+      "theft_score": 39.84,
+      "violence_score": 26.26,
+      "property_d_score": 0.17
+    }
+  },
+  "0s531k2": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3622-s-state-st-chicago-il/0s531k2/",
+    "address": "3622 S State St, Chicago, IL 60609",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8282097,
+    "long": -87.6268309,
+    "L_dist": [
+      "35th-Bronzeville-IIT",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.35,
+      "gun_score": 7.19,
+      "murder_score": 2.17,
+      "perv_score": 1.39,
+      "theft_score": 37.74,
+      "violence_score": 28.06,
+      "property_d_score": 0.17
+    }
+  },
+  "gn3m0dw": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6416-s-drexel-ave-chicago-il/gn3m0dw/",
+    "address": "6416 S Drexel Ave, Chicago, IL 60637",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.7780817,
+    "long": -87.6031354,
+    "L_dist": [
+      "Cottage Grove",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 2.06,
+      "gun_score": 8.18,
+      "murder_score": 2.38,
+      "perv_score": 1.53,
+      "theft_score": 34.51,
+      "violence_score": 30.76,
+      "property_d_score": 0.19
+    }
+  },
+  "9cspvt6": {
+    "source": "www.apartments.com",
+    "price": 2000.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3628-n-milwaukee-ave-chicago-il/9cspvt6/",
+    "address": "3628 N Milwaukee Ave, Chicago, IL 60641",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.9466753,
+    "long": -87.736666,
+    "L_dist": [
+      "Irving Park",
+      0.58
+    ],
+    "crime_sc": {
+      "drug_score": 4.3,
+      "gun_score": 5.19,
+      "murder_score": 1.81,
+      "perv_score": 1.74,
+      "theft_score": 39.84,
+      "violence_score": 26.17,
+      "property_d_score": 0.17
+    }
+  },
+  "v0q48zg": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4521-s-michigan-ave-chicago-il/v0q48zg/",
+    "address": "4521 S Michigan Ave, Chicago, IL 60653",
+    "date_pulled": "08-08-2025_11-23-54",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1600.0,
+    "lat": 41.8124452,
+    "long": -87.6224681,
+    "L_dist": [
+      "47th",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 3.05,
+      "gun_score": 7.35,
+      "murder_score": 2.21,
+      "perv_score": 1.42,
+      "theft_score": 36.99,
+      "violence_score": 28.69,
+      "property_d_score": 0.17
+    }
+  },
+  "9095460894": {
+    "source": "www.realtor.com",
+    "price": 2100,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2039-W-Wellington-Ave-Apt-1_Chicago_IL_60618_M90954-60894",
+    "address": "2039 W Wellington Ave Apt 1 Chicago, IL 60618",
+    "date_pulled": "08-08-2025_11-27-35",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.935782,
+    "long": -87.679695,
+    "L_dist": [
+      "Paulina",
+      0.7
+    ],
+    "crime_sc": {
+      "drug_score": 4.07,
+      "gun_score": 5.09,
+      "murder_score": 1.73,
+      "perv_score": 1.62,
+      "theft_score": 41.04,
+      "violence_score": 25.42,
+      "property_d_score": 0.14
+    }
   }
 }
