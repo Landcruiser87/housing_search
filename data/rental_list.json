@@ -73973,5 +73973,220 @@
       "violence_score": 25.42,
       "property_d_score": 0.14
     }
+  },
+  "kvgjg0jn0r2e1": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/1700-n-14th-ave-melrose-park-il/kvgjg0jn0r2e1/",
+    "address": "1700 N 14th Ave Melrose Park, IL 60160 Chicago",
+    "date_pulled": "08-11-2025_08-15-08",
+    "bed": 4.0,
+    "bath": 2.0,
+    "sqft": 1637.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "5bczd8fhq39jr": {
+    "source": "www.homes.com",
+    "price": 2595.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/13-s-waiola-ave-la-grange-il-unit-1/5bczd8fhq39jr/",
+    "address": "13 S Waiola Ave Unit 1 La Grange, IL 60525 Chicago",
+    "date_pulled": "08-11-2025_08-15-08",
+    "bed": 2.0,
+    "bath": 2.5,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2c6fl1p83v5h0": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/15-s-waiola-ave-la-grange-il-unit-4/2c6fl1p83v5h0/",
+    "address": "15 S Waiola Ave Unit 4 La Grange, IL 60525 Chicago",
+    "date_pulled": "08-11-2025_08-15-08",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "m7n2kfnr9mwdb": {
+    "source": "www.homes.com",
+    "price": 2200.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2227-s-9th-ave-riverside-il/m7n2kfnr9mwdb/",
+    "address": "2227 S 9th Ave Riverside, IL 60546 Chicago",
+    "date_pulled": "08-11-2025_08-15-08",
+    "bed": 2.0,
+    "bath": 1.5,
+    "sqft": 912.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "lywdsdd": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5443-s-federal-st-chicago-il/lywdsdd/",
+    "address": "5443 S Federal St, Chicago, IL 60609",
+    "date_pulled": "08-11-2025_08-17-27",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1028.0,
+    "lat": 41.7952072,
+    "long": -87.6275608,
+    "L_dist": [
+      "Garfield",
+      0.19
+    ],
+    "crime_sc": {
+      "drug_score": 3.1,
+      "gun_score": 7.58,
+      "murder_score": 2.28,
+      "perv_score": 1.41,
+      "theft_score": 35.78,
+      "violence_score": 29.26,
+      "property_d_score": 0.18
+    }
+  },
+  "yfw29cr": {
+    "source": "www.apartments.com",
+    "price": 1500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7431-n-hoyne-ave-chicago-il/yfw29cr/",
+    "address": "7431 N Hoyne Ave, Chicago, IL 60645",
+    "date_pulled": "08-11-2025_08-17-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 42.0167609,
+    "long": -87.6827966,
+    "L_dist": [
+      "Howard",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 1.03,
+      "gun_score": 3.19,
+      "murder_score": 0.68,
+      "perv_score": 1.69,
+      "theft_score": 44.93,
+      "violence_score": 24.22,
+      "property_d_score": 0.13
+    }
+  },
+  "ss3zp74": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1702-n-meade-ave-chicago-il/ss3zp74/",
+    "address": "1702 N Meade Ave, Chicago, IL 60639",
+    "date_pulled": "08-11-2025_08-17-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1065.0,
+    "lat": 41.9112709,
+    "long": -87.7780174,
+    "L_dist": [
+      "Austin",
+      1.67
+    ],
+    "crime_sc": {
+      "drug_score": 5.91,
+      "gun_score": 6.54,
+      "murder_score": 2.24,
+      "perv_score": 2.01,
+      "theft_score": 34.56,
+      "violence_score": 28.65,
+      "property_d_score": 0.2
+    }
+  },
+  "m2e8xdl": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6150-s-champlain-ave-chicago-il/m2e8xdl/",
+    "address": "6150 S Champlain Ave, Chicago, IL 60637",
+    "date_pulled": "08-11-2025_08-17-27",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.7830611,
+    "long": -87.6097491,
+    "L_dist": [
+      "Cottage Grove",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 2.2,
+      "gun_score": 7.93,
+      "murder_score": 2.29,
+      "perv_score": 1.52,
+      "theft_score": 34.92,
+      "violence_score": 30.38,
+      "property_d_score": 0.19
+    }
+  },
+  "13452718": {
+    "source": "www.redfin.com",
+    "price": 2400.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3104-N-Sacramento-Ave-60618/home/13452718",
+    "address": "3104 N Sacramento Ave, Chicago, IL, 60618",
+    "date_pulled": "08-11-2025_08-19-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9377727,
+    "long": -87.7029653,
+    "L_dist": [
+      "Belmont",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 4.02,
+      "gun_score": 5.01,
+      "murder_score": 1.7,
+      "perv_score": 1.61,
+      "theft_score": 41.06,
+      "violence_score": 25.36,
+      "property_d_score": 0.14
+    }
+  },
+  "bz9p1wqcml5t2": {
+    "source": "www.homes.com",
+    "price": 2550.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/161-w-franklin-dr-northlake-il/bz9p1wqcml5t2/",
+    "address": "161 W Franklin Dr Northlake, IL 60164 Chicago",
+    "date_pulled": "08-11-2025_08-20-13",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1306.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
