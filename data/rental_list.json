@@ -74188,5 +74188,226 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "10xgkgyrwj3xj": {
+    "source": "www.homes.com",
+    "price": 2000.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2341-n-leavitt-st-chicago-il/10xgkgyrwj3xj/",
+    "address": "2341 N Leavitt St Chicago, IL 60647",
+    "date_pulled": "08-12-2025_10-16-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9238975,
+    "long": -87.6824901,
+    "L_dist": [
+      "Western",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 5.11,
+      "murder_score": 1.69,
+      "perv_score": 1.58,
+      "theft_score": 40.88,
+      "violence_score": 25.57,
+      "property_d_score": 0.15
+    }
+  },
+  "9049360568": {
+    "source": "www.realtor.com",
+    "price": 2200,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3428-N-Damen-Ave-G_Chicago_IL_60618_M90493-60568",
+    "address": "3428 N Damen Ave Unit G Chicago, IL 60618",
+    "date_pulled": "08-12-2025_10-18-33",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.944164,
+    "long": -87.678741,
+    "L_dist": [
+      "Addison",
+      0.29
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 5.0,
+      "murder_score": 1.7,
+      "perv_score": 1.59,
+      "theft_score": 41.15,
+      "violence_score": 25.31,
+      "property_d_score": 0.15
+    }
+  },
+  "6vkm48r": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1846-s-loomis-st-chicago-il/6vkm48r/",
+    "address": "1846 S Loomis St, Chicago, IL 60608",
+    "date_pulled": "08-12-2025_10-20-32",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1001.0,
+    "lat": 41.8563304,
+    "long": -87.661582,
+    "L_dist": [
+      "18th",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.77,
+      "gun_score": 6.63,
+      "murder_score": 1.94,
+      "perv_score": 1.56,
+      "theft_score": 38.76,
+      "violence_score": 26.99,
+      "property_d_score": 0.16
+    }
+  },
+  "ntqxxvp": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3549-w-berteau-ave-chicago-il/ntqxxvp/",
+    "address": "3549 W Berteau Ave, Chicago, IL 60618",
+    "date_pulled": "08-12-2025_10-20-32",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9573529,
+    "long": -87.7175489,
+    "L_dist": [
+      "Irving Park",
+      0.67
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 4.77,
+      "murder_score": 1.53,
+      "perv_score": 1.63,
+      "theft_score": 41.65,
+      "violence_score": 24.96,
+      "property_d_score": 0.14
+    }
+  },
+  "qp7z9tx": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/614-n-troy-st-chicago-il/qp7z9tx/",
+    "address": "614 N Troy St, Chicago, IL 60612",
+    "date_pulled": "08-12-2025_10-20-32",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": 41.8924389,
+    "long": -87.7055199,
+    "L_dist": [
+      "Kedzie",
+      0.56
+    ],
+    "crime_sc": {
+      "drug_score": 3.77,
+      "gun_score": 5.57,
+      "murder_score": 1.67,
+      "perv_score": 1.66,
+      "theft_score": 40.36,
+      "violence_score": 25.87,
+      "property_d_score": 0.15
+    }
+  },
+  "2y9tdh9k6f16f": {
+    "source": "www.homes.com",
+    "price": 2400.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2231-s-61st-ct-cicero-il-unit-2/2y9tdh9k6f16f/",
+    "address": "2231 S 61st Ct Unit 2 Cicero, IL 60804 Chicago",
+    "date_pulled": "08-12-2025_10-21-59",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 2300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "k0y13bgsbcxwc": {
+    "source": "www.homes.com",
+    "price": 2300.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2231-s-61st-ct-cicero-il-unit-1/k0y13bgsbcxwc/",
+    "address": "2231 S 61st Ct Unit 1 Cicero, IL 60804 Chicago",
+    "date_pulled": "08-12-2025_10-21-59",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 2300.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "9163800017": {
+    "source": "www.realtor.com",
+    "price": 1700,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3549-W-Berteau-Ave-G_Chicago_IL_60618_M91638-00017",
+    "address": "3549 W Berteau Ave Unit G Chicago, IL 60618",
+    "date_pulled": "08-12-2025_10-23-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.957298,
+    "long": -87.717006,
+    "L_dist": [
+      "Addison",
+      0.69
+    ],
+    "crime_sc": {
+      "drug_score": 3.97,
+      "gun_score": 4.77,
+      "murder_score": 1.53,
+      "perv_score": 1.62,
+      "theft_score": 41.67,
+      "violence_score": 24.95,
+      "property_d_score": 0.14
+    }
+  },
+  "196986377": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4103-W-Nelson-St-60641/unit-DS1/home/196986377",
+    "address": "4103 W Nelson St Unit DS1, Chicago, IL, 60641",
+    "date_pulled": "08-12-2025_10-25-39",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9361403,
+    "long": -87.7298584,
+    "L_dist": [
+      "Belmont",
+      0.91
+    ],
+    "crime_sc": {
+      "drug_score": 4.16,
+      "gun_score": 5.15,
+      "murder_score": 1.78,
+      "perv_score": 1.69,
+      "theft_score": 40.22,
+      "violence_score": 25.91,
+      "property_d_score": 0.16
+    }
   }
 }
