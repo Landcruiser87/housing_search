@@ -74409,5 +74409,167 @@
       "violence_score": 25.91,
       "property_d_score": 0.16
     }
+  },
+  "hp52wx3": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/3705-n-kedzie-ave-chicago-il/hp52wx3/",
+    "address": "3705 N Kedzie Ave, Chicago, IL 60618",
+    "date_pulled": "08-13-2025_16-31-46",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.9486416,
+    "long": -87.7077656,
+    "L_dist": [
+      "Addison",
+      0.59
+    ],
+    "crime_sc": {
+      "drug_score": 4.05,
+      "gun_score": 4.89,
+      "murder_score": 1.6,
+      "perv_score": 1.61,
+      "theft_score": 41.25,
+      "violence_score": 25.19,
+      "property_d_score": 0.14
+    }
+  },
+  "380728192": {
+    "source": "www.zillow.com",
+    "price": 2250.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3025-W-Irving-Park-Rd-3S-Chicago-IL-60618/380728192_zpid/",
+    "address": "3025 W Irving Park Rd #3S, Chicago, IL 60618",
+    "date_pulled": "08-13-2025_16-32-52",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.953705,
+    "long": -87.704185,
+    "L_dist": [
+      "Francisco",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 4.05,
+      "gun_score": 4.83,
+      "murder_score": 1.57,
+      "perv_score": 1.62,
+      "theft_score": 41.43,
+      "violence_score": 25.06,
+      "property_d_score": 0.14
+    }
+  },
+  "rkmbrv0": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4054-s-indiana-ave-chicago-il/rkmbrv0/",
+    "address": "4054 S Indiana Ave, Chicago, IL 60653",
+    "date_pulled": "08-13-2025_16-34-28",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1000.0,
+    "lat": 41.820899,
+    "long": -87.6216362,
+    "L_dist": [
+      "Indiana",
+      0.06
+    ],
+    "crime_sc": {
+      "drug_score": 2.98,
+      "gun_score": 7.18,
+      "murder_score": 2.16,
+      "perv_score": 1.41,
+      "theft_score": 37.5,
+      "violence_score": 28.35,
+      "property_d_score": 0.17
+    }
+  },
+  "185661683": {
+    "source": "www.redfin.com",
+    "price": 2300.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4518-N-Kedzie-Ave-60625/unit-2E/home/185661683",
+    "address": "4518 N Kedzie Ave Unit 2E, Chicago, IL, 60625",
+    "date_pulled": "08-13-2025_16-37-26",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1150.0,
+    "lat": 41.9635624,
+    "long": -87.7084679,
+    "L_dist": [
+      "Kedzie",
+      0.17
+    ],
+    "crime_sc": {
+      "drug_score": 3.86,
+      "gun_score": 4.66,
+      "murder_score": 1.5,
+      "perv_score": 1.63,
+      "theft_score": 42.13,
+      "violence_score": 24.74,
+      "property_d_score": 0.14
+    }
+  },
+  "455915621": {
+    "source": "www.zillow.com",
+    "price": 1700.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3842-N-Central-Ave-UNIT-2-Chicago-IL-60634/455915621_zpid/",
+    "address": "3842 N Central Ave UNIT 2, Chicago, IL 60634",
+    "date_pulled": "08-13-2025_16-38-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.950844,
+    "long": -87.76728,
+    "L_dist": [
+      "Jefferson Park",
+      1.41
+    ],
+    "crime_sc": {
+      "drug_score": 5.55,
+      "gun_score": 5.99,
+      "murder_score": 2.0,
+      "perv_score": 1.92,
+      "theft_score": 36.33,
+      "violence_score": 27.62,
+      "property_d_score": 0.18
+    }
+  },
+  "9770355765": {
+    "source": "www.realtor.com",
+    "price": 2100,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5731-W-Giddings-St-1_Chicago_IL_60630_M97703-55765",
+    "address": "5731 W Giddings St Unit 1 Chicago, IL 60630",
+    "date_pulled": "08-14-2025_13-22-08",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.966621,
+    "long": -87.771179,
+    "L_dist": [
+      "Jefferson Park",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 5.32,
+      "gun_score": 5.79,
+      "murder_score": 1.94,
+      "perv_score": 2.03,
+      "theft_score": 36.72,
+      "violence_score": 27.33,
+      "property_d_score": 0.18
+    }
   }
 }
