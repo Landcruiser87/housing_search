@@ -74571,5 +74571,59 @@
       "violence_score": 27.33,
       "property_d_score": 0.18
     }
+  },
+  "196566927": {
+    "source": "www.redfin.com",
+    "price": 2200.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/4103-W-Nelson-St-60641/unit-2/home/196566927",
+    "address": "4103 W Nelson St Unit 2, Chicago, IL, 60641",
+    "date_pulled": "08-15-2025_10-26-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": 41.9361403,
+    "long": -87.7298584,
+    "L_dist": [
+      "Belmont",
+      0.91
+    ],
+    "crime_sc": {
+      "drug_score": 4.16,
+      "gun_score": 5.14,
+      "murder_score": 1.76,
+      "perv_score": 1.69,
+      "theft_score": 40.22,
+      "violence_score": 25.94,
+      "property_d_score": 0.16
+    }
+  },
+  "fpv1nfr": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1637-w-huron-st-chicago-il/fpv1nfr/",
+    "address": "1637 W Huron St, Chicago, IL 60622",
+    "date_pulled": "08-15-2025_10-28-30",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 650.0,
+    "lat": 41.8940348,
+    "long": -87.6687116,
+    "L_dist": [
+      "Ashland",
+      0.61
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.5,
+      "murder_score": 1.65,
+      "perv_score": 1.6,
+      "theft_score": 40.99,
+      "violence_score": 25.55,
+      "property_d_score": 0.15
+    }
   }
 }
