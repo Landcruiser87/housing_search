@@ -80,7 +80,7 @@ def get_logger(console:Console, log_dir:Path)->logging.Logger:
     logger.setLevel(logging.INFO)
     #Load file handler for how to format the log file.
     file_handler = get_file_handler(log_dir)
-    file_handler.setLevel(logging.DEBUG)
+    file_handler.setLevel(logging.INFO)
     logger.addHandler(file_handler)
     #Don't need to load rich handler in this instance because the TUI will handle all messaging
     # rich_handler = get_rich_handler(console)
@@ -222,7 +222,7 @@ def make_rich_display(totalstops:int):
         )
     )
 
-    for Lname in ["total", "apartments", "craigs", "homes", "redfin", "realtor", "zillow"]:
+    for Lname in ["total", "homes", "redfin", "realtor", "zillow"]:
         layout[Lname].update(
             Panel(
                 Align.center(Text("0"), vertical="middle"),
@@ -254,8 +254,6 @@ def make_layout() -> Layout:
     )
     layout["find_count"].split_row(
         Layout(name="total"),
-        Layout(name="apartments"),
-        Layout(name="craigs"),
         Layout(name="homes"),
         Layout(name="realtor"),
         Layout(name="redfin"),
@@ -411,31 +409,6 @@ def load_historical(fp:str)->json:
         with open(fp, "r") as f:
             jsondata = json.loads(f.read())
             return jsondata	
-
-#FUNCTION Closest L
-def closest_L_stop(data:list)->list:
-    #Load up Lstop data
-    stops = pd.read_csv(
-        "./data/CTA_Lstops.csv",
-        header=0,
-        index_col="STOP_ID"
-    )
-    for listing in data:
-        if listing.lat and listing.long:
-            lat1 = listing.lat
-            lon1 = listing.long
-
-            min_dist = 20000
-            for stop in stops.index:
-                lat2, lon2 = stops.loc[stop, "Location"].strip("()").split(",")
-                lat2, lon2 = float(lat2), float(lon2)
-                dist = haversine_distance(lat1, lon1, lat2, lon2)
-                if dist <= min_dist:
-                    min_dist = dist
-                    station = stops.loc[stop, "STATION_NAME"]
-            listing.L_dist = (station, round(min_dist, 2))
-
-    return data
 
 #FUNCTION Get Lat Long
 def get_lat_long(data:list, citystate:tuple, logger:logging.Logger, layout)->list:
@@ -620,125 +593,3 @@ def send_housing_email(urls:str):
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)		
         server.sendmail(sender_email, receiver_email, message.as_string())
-
-#FUNCTION Load neighborhood boundaries
-def socrata_api(update:bool=False):
-    def load_shape_objects(polygon:str):
-        if isinstance(polygon, str):
-            pass
-        return shape(polygon)
-
-    chicago = gpd.read_file(geodatasets.get_path("geoda.chicago_commpop"))
-    if update:
-        with open('./secret/chicagodata.txt') as login_file:
-            login = login_file.read().splitlines()
-            app_token = login[0].split(':')[1]
-            
-        client = Socrata("data.cityofchicago.org", app_token)
-        datasets = {
-            "map"   :{"id":"y6yq-dbs2"},
-            "health":{"id":"iqnk-2tcu"},
-            "zip"   :{"id":"unjd-c2ca"},
-            "pop"   :{"id":"85cm-7uqa"},
-            "city"  :{"id":"qqq8-j68g"}
-        }
-        for db_name in datasets.keys():
-            try:
-                #Grab neighborhood coords
-                results = client.get(
-                    datasets[db_name]["id"],
-                    limit=5000
-                )
-                df = pd.DataFrame.from_records(results)
-                if "the_geom" in df.columns.tolist():
-                    # df["the_geom"] = df["the_geom"].astype(str)
-                    df["the_geom"] = df["the_geom"].apply(load_shape_objects)
-                    df = gpd.GeoDataFrame(df, geometry="the_geom")
-                    df = df.set_crs(chicago.crs)
-                    
-                datasets[db_name] = df.copy()
-                # df.to_csv(f"./data/chicago_{db_name}.csv", sep=",", index=False)
-
-            except Exception as e:
-                raise e
-        
-        #Import last dataset and manual data cleaning
-        datasets["chicago"] = chicago
-        datasets["chicago"]["community"] = datasets["chicago"]["community"].apply(lambda x:x.lower().replace("montclare", "montclaire"))
-        datasets["health"]["community_area_name"] = datasets["health"]["community_area_name"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
-        datasets["map"]["pri_neigh"] = datasets["map"]["pri_neigh"].apply(lambda x:x.lower().replace("o'hare", "ohare"))
-        datasets["map"]["sec_neigh"] = datasets["map"]["sec_neigh"].apply(lambda x:x.lower())
-        #quick check
-        #[f"{x:_<21} {y}" for x, y in list(zip(datasets["map"]["pri_neigh"],datasets["map"]["sec_neigh"]))]
-        #rename columns and map city polygon to 
-        datasets["health"].rename(columns={"community_area_name":"neigh"}, inplace=True)
-        datasets["map"].rename(columns={"pri_neigh":"neigh"}, inplace=True)
-        datasets["pop"].rename(columns={"geography":"zip"}, inplace=True)
-        chicago.rename(columns={"community":"neigh"}, inplace=True)
-        #Two boundaries in the zip database have expanded and are stored as different records.  
-        #We need to manually combine the polygons, shape_area, and shape length, while keeping the original id. #not sure if that will hose us later. 
-        for area in ["60707", "60643"]:
-            rows = datasets["zip"][datasets["zip"]["zip"]==area]
-            cols = [(3, "shape_area"), (4, "shape_len"),(0, "the_geom")]
-            for col_idx, col in cols:
-                if col == "the_geom":
-                    combine = rows["the_geom"].unary_union
-                    datasets["zip"].iloc[rows.index[0], col_idx] = combine
-                    # datasets["zip"].iloc[rows.index[0], idx] = gpd.overlay(df1=bigpoly, df2=lilpoly, how="intersection")
-                else:
-                    datasets["zip"].iloc[rows.index[0], col_idx] = rows[col].astype(float).sum()
-        
-        #first merge chicago and health. then with maps.  
-        #Then update their polygons only keeping the ones that have data. 
-        merged_neigh = datasets["chicago"].merge(datasets["health"], on="neigh", how="outer")
-        merged_neigh = merged_neigh.merge(datasets["map"], on="neigh", how="left")
-        merged_neigh.drop(columns=["geometry"], inplace=True)
-        merged_zip = datasets["zip"].merge(datasets["pop"], on="zip", how="right", validate="m:m")
-        cityrows = merged_zip.loc[:, "zip"] == "Chicago"
-        merged_zip.loc[cityrows, "the_geom"] = datasets["city"].loc[:, "the_geom"]
-        merged_zip.loc[cityrows, "shape_area"] = datasets["city"].loc[:, "shape_area"]
-        merged_zip.loc[cityrows, "shape_len"] = datasets["city"].loc[:, "shape_len"]
-        merged_zip.loc[cityrows, "objectid"] = 0
-        
-        #BUG I don't think I can merge the two datasets.  I'd need to somehow merge and overlay appropriate sections.  
-        #zipcode based datasets
-        
-        save_dict = {"zip":merged_zip, "neigh":merged_neigh}
-        # for jfile, fname in zip([merged_zip, merged_neigh], ["neigh", "zip"]):
-        #     jfile.to_file(filename = f"./data/chi_{fname}.shp", mode="w")
-
-        return save_dict
-    
-    else:
-        fp1 ="./data/chi_zip.shp"
-        fp2 = "./data/chi_neigh.shp"
-        merged_zip = pd.read_file(fp1)
-        merged_neigh = pd.read_file(fp2)
-        merged_neigh["the_geom"] = merged_neigh["the_geom"].apply(load_shape_objects)
-        merged_zip["the_geom"] = merged_zip["the_geom"].apply(load_shape_objects)
-
-        return {
-            "neigh":gpd.GeoDataFrame(merged_neigh, geometry="the_geom"),
-            "zip":gpd.GeoDataFrame(merged_zip, geometry="the_geom")
-        }
-            
-
-    #IDEA
-    #towed vehicles = ygr5-vcbg
-    #police stations = gkur-vufi
-    #fire stations = hp65-bcxv
-    #population = 85cm-7uqa
-    #?  Could aggregate live crime data for each neighborhood too for the last year.  That would be awesome!
-
-    #BUG
-    #NOTES
-    #Main problem, is i've got different shapes for different key values.  
-    #zipcodes
-    #population data by zip
-    #neighborhoods
-    #neighborhood health 
-    #a chicago pop dataset/shapes from geodatasets
-        #How in the f do i merge them all to be usable????
-    #I have all the polygons for zip and neighborhoods... 
-        #maybe make a switch between them?  would be kinda cool.  
-        #

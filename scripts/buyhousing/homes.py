@@ -1,10 +1,10 @@
-import logging
-import numpy as np
-from bs4 import BeautifulSoup
-from support import logger
-import requests
 import time
+import json
+import requests
+import numpy as np
 from typing import Union
+from support import logger
+from bs4 import BeautifulSoup
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS)->list:
     """[Ingest HTML of summary page for listings info]
@@ -19,9 +19,21 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
     Returns:
         listings (list): [List of dataclass objects]
     """
-
     listings = []
-    listingid = price = beds = sqft = baths = pets = url = addy = current_time = None
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
+    if isinstance(neigh, str):
+        neigh = neigh.lower()
+
+    #Set the outer loop over each card returned. 
+    for subsearch in card.find_all("script", {"type":"application/ld+json"}):
+        listinginfo = json.loads(subsearch.text)
+        url = listinginfo[0].get("url")
+        listingid = url.split("/")[-1]
+        addy = listinginfo[0].get("name")
+        lat = float(listinginfo[0]["geo"].get("latitude"))
+        long = float(listinginfo[0]["geo"].get("longitude"))
+        beds = listinginfo[0].get("numberOfRooms")
+
 
     #Set the outer loop over each card returned. 
     for card in result.find_all("li", class_="placard-container"):
@@ -101,37 +113,36 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     Returns:
         property_listings (list): List of dataclass objects
     """    
-    CITY = srch_par[0].lower()
-    STATE = srch_par[1].lower()
+    CITY = neigh[0].lower()
+    STATE = neigh[1].lower()
+    MAXPRICE = int(srch_par[0])
+    MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
-    MAXRENT = int(srch_par[3])
-    PETS = srch_par[4]
+    
     #Search by neighborhood
-    if isinstance(neigh, str):
-        if " " in neigh:
-            neigh = "-".join(neigh.lower().split(" "))
-        else:
-            neigh = neigh.lower()
-        if PETS:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
-        else:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}-neighborhood/homes-for-rent/{MINBEDS}-{5}-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
+    if isinstance(neigh, tuple):
+        if " " in CITY:
+            CITY = "-".join(neigh.lower().split(" "))
+        url = f"https://www.homes.com/{CITY}-{STATE}/{MINBEDS}-{5}-bedroom/?property_type=1,2,32,8&bath-min={MINBATHS}&bath-max=5&price-max{MAXPRICE}"
             
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        if PETS:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/{MINBEDS}-to-5-bedroom/?property_type=1,2&am=31,16&price-min=1000&price-max={MAXRENT}"
-        else:
-            url = f"https://www.homes.com/{CITY}-{STATE}/{neigh}/homes-for-rent/{MINBEDS}-to-5-bedroom/?property_type=1,2&am=31&price-min=1000&price-max={MAXRENT}"
+        #BUG - here they need city state and zip to search by zip.  Might need a way to generate that eventually
+        ZIPCODE = neigh
+        url = f"https://www.homes.com/{CITY}-{STATE}/{ZIPCODE}/{MINBEDS}-{5}-bedroom/?property_type=1,2,32,8&bath-min={MINBATHS}&bath-max=5&price-max{MAXPRICE}"
 
     #Error Trapping
     else:
         logger.critical("Inproper input for area, moving to next site")
         return
-    chrome_version = np.random.randint(120, 132)
+
+    chrome_version = np.random.randint(120, 137)
     headers = {
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept': '*/*',
         'accept-language': 'en-US,en;q=0.9',
+        'content-type': 'application/json',        
+        # 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        # 'accept-language': 'en-US,en;q=0.9',
         'sec-ch-ua': f'"Not)A;Brand";v="99", "Google Chrome";v={chrome_version}, "Chromium";v={chrome_version}',
         'sec-ch-ua-mobile': '?1',
         'sec-ch-ua-platform': '"Android"',
@@ -163,7 +174,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     if not nores and not errorres:
         results = bs4ob.find("ul", class_="placards-list")
         if results:
-            property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
+            property_listings = get_listings(bs4ob, neigh, source, Propertyinfo)
             logger.info(f'{len(property_listings)} listings returned from {source}')
             return property_listings
             

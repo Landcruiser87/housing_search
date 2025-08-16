@@ -1,13 +1,14 @@
 #Import libraries
 import numpy as np
-from rich.console import Console
+from random import shuffle
 from rich.live import Live
-from dataclasses import dataclass, field
+from rich.progress import Progress
+from rich.layout import Layout
 from os.path import exists
-from random import shuffle  
+from dataclasses import dataclass, field
 
 #Import supporting files
-import realtor, zillow, apartments, craigs, redfin, homes, support
+import realtor, zillow, redfin, homes, support
 #Import logger and console from support
 from support import logger, console, log_time
 
@@ -22,96 +23,57 @@ from support import logger, console, log_time
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-    'Ravenswood',
-    'Irving Park',     #
-    'Portage Park',    #
-    'Albany Park',     #
-    'North Center',    #
-    'North Park',      #
-    'Lincoln Square',  #    
-    'Avondale',        #    #New add
-    'Wicker Park',     #    #New add
-    'Roscoe Village',
-    'Budlong Woods',
-    'Mayfair',    
-    # 'Jefferson Park',   #too far out
-    # 'West Ridge',       #too far out
-    # 'Rogers Park',
-    # 'West Town', 
-    # 'Humboldt Park'
-    # 'Ravenswood Gardens',
+    ('Coldwater','MI'),
+    ('Tekonsha','MI'),
+    ('Marshall','MI'),
+    ('Angola','IN'),
+    ('Fremont','IN'),
+    ('Mongo','IN'),
+    ('Auburn','IN'),
 ]
-
-# SF Testing
-# AREAS = [
-#     "Mission District",
-#     "Sunset District",
-#     "Chinatown",
-#     "Nob Hill"
-# ]
 
 SOURCES = {
     "realtor"   :("www.realtor.com"   , realtor),
-    "apartments":("www.apartments.com", apartments),
-    "craigs"    :("www.craigslist.org" , craigs),
     "zillow"    :("www.zillow.com"    , zillow),
     "redfin"    :("www.redfin.com"    , redfin),
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["redfin", "homes", "zillow", "craigs", "realtor", "apartments"] 
+SITES = ["homes", "realtor", "redfin", "zillow"] 
 
-# Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
-CITY    = "Chicago"
-STATE   = "IL"
-MINBEDS = 2
-MAXRENT = 2600
-DOGS    = True
-
-# DC test data notes
-# CITY    = "Washington"
-# STATE   = "DC"
-# MINBEDS = 2
-# MAXRENT = 4000
-# DOGS    = True
-
-# SF Testing
-# CITY    = "San Francisco"
-# STATE   = "CA"
-# MINBEDS = 2
-# MAXRENT = 3000
-# DOGS    = True
+#Define search parameters
+MAXPRICE = 800_000
+MINBATHS = 2
+MINBEDS   = 2
 
 SEARCH_PARAMS = (
-    CITY,
-    STATE,
+    MAXPRICE,
+    MINBATHS,
     MINBEDS,
-    MAXRENT,
-    DOGS
 )
+
 #Dictionary to keep track of which sites return data in a singular run
 LOST_N_FOUND = {
-    "apartments":False,
-    "craigs"    :False,
     "homes"     :False,
-    "redfin"    :False,
     "realtor"   :False,
+    "redfin"    :False,
     "zillow"    :False
 }
 
 #Define dataclass container
 @dataclass
 class Propertyinfo():
-    id          : str
     address     : str
-    status      : str
-    source      : str
     link        : str
+    id          : str
     price       : float
+    source      : str
+    status      : str
+    date_pulled : np.datetime64
     bed         : float = None
     bath        : float = None
-    date_pulled : np.datetime64
     htype       : str = None
+    lotsqft     : float = None
     sqft        : float = None
     lat         : float = ""
     long        : float = ""
@@ -119,7 +81,6 @@ class Propertyinfo():
     listdate    : np.datetime64 = None
     last_s_date : np.datetime64 = None
     last_s_price: float = ""
-    lotsqft     : float = None
     extras      : dict = field(default_factory=lambda:{})
     
 ################################# Main Funcs ####################################
@@ -172,44 +133,28 @@ def check_ids(data:list)->list:
         for ids in newids:
            indx = [x[0] for x in data_ids if x[1]==ids][0]
            newdata.append(data[indx]) 
-        # newdata = []
-        # [newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
         return newdata
+
     else:
         logger.info("Listing(s) already stored in rental_list.json") 
         return None
 
 #FUNCTION Scrape data
-def scrape(neigh:str, progbar, task, layout):
-    """This function will iterate through different resources scraping necessary information for ingestion. 
+def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
+    """This function will iterate through different resources scrapin g necessary information for ingestion. 
 
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    shuffle(SITES) #Keep em guessin!
+    # shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
             #Update and advance the overall progressbar
             progbar.advance(task)
-            progbar.update(task_id=task, description=f"{neigh}:{site[0]}")
-            #Because we can't search craigs by neighborhood, we only want to
-            #scrape it once.  So this sets a boolean of if we've scraped
-            #craigs, then flips the value to not scrape it again in the
-            #future neighborhoods that will be searched. 
-            global c_scrape
-            if source=="craigs" and c_scrape==False:
-                c_scrape = True
-                logger.info(f"scraping {site[0]}")
-                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS, jsondata)
-
-            elif source=="craigs" and c_scrape==True:
-                continue
-            
-            else:
-                #every other site, scrape it normally
-                logger.info(f"scraping {site[0]} for {neigh}")
-                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS)
+            progbar.update(task_id=task, description=f"{neigh[0]}:{site[0]}")
+            logger.info(f"scraping {site[0]} for {neigh[0]}")
+            data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
             support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
@@ -218,8 +163,6 @@ def scrape(neigh:str, progbar, task, layout):
             if data:
                 #If there was data found on a site, Update the site counter's border to 
                 #magenta.  Letting me know the site is still successfully returning data.
-                    #NOTE: Some sites will still return a 200 but change a variable name in the DOM
-                    # which leads to missing data.
                 res_test = LOST_N_FOUND[source]
                 if not res_test:
                     layout[source].update(support.update_border(layout, source))
@@ -242,23 +185,11 @@ def scrape(neigh:str, progbar, task, layout):
                                 layout[website].update(support.update_count(1, layout, website))
                                 break
                         
-                    #pull the lat long, score it and store it. 
-                    data = support.get_lat_long(data, (CITY, STATE), logger, layout)
-
-                    #If its chicago, do chicago things. 
-                    if CITY == 'Chicago':
-                        #Calculate the distance to closest L stop 
-                        #(haversine/as crow flies)
-                        data = support.closest_L_stop(data)
-
-                        #Score them according to chicago crime data
-                        data = support.crime_score(data, logger, layout)
-                        
-                    # elif CITY == 'DC':
-                        #TODO - Build DC search for 
-                        #closets train stop and 
-                        #crime score if you can find any data
-                    #Add the listings to the jsondata dict. 
+                    #pull the lat long, score it and store it.
+                    #TODO update LAT LONG extract.   
+                    # data = support.get_lat_long(data, (CITY, STATE), logger, layout)
+                    
+                    # Add the listings to the jsondata dict. 
                     add_data(data, (site[0], neigh))
                     del data
             else:
@@ -272,8 +203,7 @@ def scrape(neigh:str, progbar, task, layout):
 @log_time
 def main():
     #Global variables setup
-    global newlistings, jsondata, c_scrape
-    c_scrape = False
+    global newlistings, jsondata
     newlistings = []
     fp = "./data/buy_list.json"
     totalstops = len(AREAS) * len(SITES)
@@ -288,7 +218,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

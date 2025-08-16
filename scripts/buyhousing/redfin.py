@@ -216,12 +216,9 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             'upgrade-insecure-requests': '1',
             'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         }
-        if PETS:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning' #,has-parking
-        else:
-            url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
-        
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
         response = requests.get(url_search, headers = INT_HEADERS)
+
     #Error Trapping
     else:
         logging.critical("Inproper input for redfin, moving to next site")
