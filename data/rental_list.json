@@ -74625,5 +74625,62 @@
       "violence_score": 25.55,
       "property_d_score": 0.15
     }
+  },
+  "2116276475": {
+    "source": "www.zillow.com",
+    "price": 2145.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3050-W-Cornelia-Ave-APT-1-Chicago-IL-60618/2116276475_zpid/",
+    "address": "3050 W Cornelia Ave APT 1, Chicago, IL 60618",
+    "date_pulled": "08-16-2025_15-21-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.944904,
+    "long": -87.705,
+    "L_dist": [
+      "Belmont",
+      0.6
+    ],
+    "crime_sc": {}
+  },
+  "7398007576": {
+    "source": "www.realtor.com",
+    "price": 2400,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2217-W-Giddings-St-G_Chicago_IL_60625_M73980-07576",
+    "address": "2217 W Giddings St Unit G Chicago, IL 60625",
+    "date_pulled": "08-16-2025_15-24-18",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.967503,
+    "long": -87.684761,
+    "L_dist": [
+      "Western",
+      0.21
+    ],
+    "crime_sc": {}
+  },
+  "v9x23rf": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.apartments.com/2217-w-giddings-st-chicago-il/v9x23rf/",
+    "address": "2217 W Giddings St, Chicago, IL 60625",
+    "date_pulled": "08-16-2025_15-26-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.9675568,
+    "long": -87.6847492,
+    "L_dist": [
+      "Western",
+      0.22
+    ],
+    "crime_sc": {}
   }
 }
