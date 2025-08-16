@@ -1,250 +1,318 @@
 #Import libraries
-from datetime import datetime
 import numpy as np
-import pandas as pd
-import logging
-import time
-from rich.logging import RichHandler
-from dataclasses import dataclass, asdict, astuple, field
+from rich.console import Console
+from rich.live import Live
+from dataclasses import dataclass, field
 from os.path import exists
-from random import shuffle
+from random import shuffle  
 
 #Import supporting files
-import realtor, support, zillow #, apartments, craigs, redfin, 
+import realtor, zillow, apartments, craigs, redfin, homes, support
+#Import logger and console from support
+from support import logger, console, log_time
 
-#Format logger and load configuration
-FORMAT = "%(message)s" 
-# FORMAT = "[%(asctime)s]|[%(levelname)s]|[%(message)s]" #[%(name)s]
-current_date = time.strftime("%m-%d-%Y_%H-%M-%S")
-logging.basicConfig(
-	#filename=f"./data/logs/{current_date}.log",  
-	#filemode='w',
-	level="INFO", 
-	format=FORMAT, 
-	datefmt="%m-%d-%Y %H:%M:%S",
-	handlers=[RichHandler()] 
-)
+################################# Variable Setup ####################################
+# input custom area's here. Uncomment whichever way you want to search
 
-#Load logger
-logger = logging.getLogger(__name__) 
+#NOTE - Be sure to run these as a list of ints.  This software uses the datatype to dictate logic
+# AREAS = [80108, 80110, 80111, 80112, 80120, 80121, 80122,
+#     80124, 80126, 80129, 80130, 80236, 80237
+# ]
 
+# pound sign to the right of neighborhood means its a city of chicago neighborhood, 
+# if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
-	46703, #Atown
-	46737, #Fremont
-	# 46779, #Pleasant Lake
-	# 46776, #Orland
-	# 46746, #MONGOOOOOO
+    'Ravenswood',
+    'Irving Park',     #
+    'Portage Park',    #
+    'Albany Park',     #
+    'North Center',    #
+    'North Park',      #
+    'Lincoln Square',  #    
+    'Avondale',        #    #New add
+    'Wicker Park',     #    #New add
+    'Roscoe Village',
+    'Budlong Woods',
+    'Mayfair',    
+    # 'Jefferson Park',   #too far out
+    # 'West Ridge',       #too far out
+    # 'Rogers Park',
+    # 'West Town', 
+    # 'Humboldt Park'
+    # 'Ravenswood Gardens',
 ]
 
+# SF Testing
+# AREAS = [
+#     "Mission District",
+#     "Sunset District",
+#     "Chinatown",
+#     "Nob Hill"
+# ]
+
 SOURCES = {
-	"realtor"   :("www.realtor.com", realtor),
-	"zillow"    :("www.zillow.com", zillow),
-	# "craigs"    :("www.craiglist.org", craigs),
-	# "redfin"    :("www.redfin.com", redfin)
+    "realtor"   :("www.realtor.com"   , realtor),
+    "apartments":("www.apartments.com", apartments),
+    "craigs"    :("www.craigslist.org" , craigs),
+    "zillow"    :("www.zillow.com"    , zillow),
+    "redfin"    :("www.redfin.com"    , redfin),
+    "homes"     :("www.homes.com"     , homes)
 }
 
-# Define City / State
-CITY = "Angola"
-STATE = "IN"
+SITES = ["redfin", "homes", "zillow", "craigs", "realtor", "apartments"] 
+
+# Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
+CITY    = "Chicago"
+STATE   = "IL"
+MINBEDS = 2
+MAXRENT = 2600
+DOGS    = True
+
+# DC test data notes
+# CITY    = "Washington"
+# STATE   = "DC"
+# MINBEDS = 2
+# MAXRENT = 4000
+# DOGS    = True
+
+# SF Testing
+# CITY    = "San Francisco"
+# STATE   = "CA"
+# MINBEDS = 2
+# MAXRENT = 3000
+# DOGS    = True
+
+SEARCH_PARAMS = (
+    CITY,
+    STATE,
+    MINBEDS,
+    MAXRENT,
+    DOGS
+)
+#Dictionary to keep track of which sites return data in a singular run
+LOST_N_FOUND = {
+    "apartments":False,
+    "craigs"    :False,
+    "homes"     :False,
+    "redfin"    :False,
+    "realtor"   :False,
+    "zillow"    :False
+}
 
 #Define dataclass container
 @dataclass
 class Propertyinfo():
-	id           : str
-	source       : str
-	status       : str
-	price        : str
-	link         : str
-	address      : str
-	htype        : str = None
-	zipc         : int = None
-	listdate     : datetime = None
-	last_s_date  : datetime = None
-	last_s_price : float = ""
-	bed          : float = None
-	bath         : float = None
-	sqft         : float = None
-	lotsqft      : float = None
-	lat          : float = ""
-	long         : float = ""
-	extras       : dict = field(default_factory=lambda:{})
-	# L_dist  : float = ""
-	# crime_sc: dict = field(default_factory=lambda:{})
-	# cri_dat : np.ndarray #Eventually to store week to week crime data here for each listing
-
-	def dict(self):
-		return {k: str(v) for k, v in asdict(self).items()}
-
-#FUNCTION Check IDs
-def check_ids_at_the_door(data:list):
-	"""This function takes in a list of Propertyinfo objects, reformats them to
-	a dictionary, compares the property id's to existing JSON historical
-	property id keys, finds any new ones via set comparison. Then returns a list
-	of Propertyinfo objects that have those new id's (if any)
-
-	Args:
-		data (list): List of Propertyinfo objects
-
-	Returns:
-		data (list): List of only new Propertyinfo objects
-	"""	
-	#Reshape data to dict
-	#Pull out the ids
-	ids = [data[x].id for x in range(len(data))]
-	#make a new dict that can be json serialized with the id as the key
-	new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
-	#Pop the id from the dict underneath (no need to store it twice)
-	[new_dict[x].pop("id") for x in ids]
-
-	#Use sets for membership testing of old jsondata keys
-	#and new data keys (Looking for new listings)
-	j_ids = set(jsondata.keys())
-	n_ids = set(new_dict.keys())
-	newids = n_ids - j_ids
-	if newids:
-		#Only add the listings that are new.  
-		newdata = []
-		[newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
-		return newdata
-	else:
-		logger.info("Listing(s) already stored in rental_list.json") 
-		return None
-	#TODO - Check old listings. 
-		#Eventually I will want this to check the older listings and 
-		#look for price change
-
+    id          : str
+    address     : str
+    status      : str
+    source      : str
+    link        : str
+    price       : float
+    bed         : float = None
+    bath        : float = None
+    date_pulled : np.datetime64
+    htype       : str = None
+    sqft        : float = None
+    lat         : float = ""
+    long        : float = ""
+    zipc        : int = None
+    listdate    : np.datetime64 = None
+    last_s_date : np.datetime64 = None
+    last_s_price: float = ""
+    lotsqft     : float = None
+    extras      : dict = field(default_factory=lambda:{})
+    
+################################# Main Funcs ####################################
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
-	"""Adds Data to JSON Historical file
+    """Adds Data to JSON Historical file
 
-	Args:
-		data (list): List of Propertyinfo objects that are new (not in the historical)
-		siteinfo (tuple): Tuple of website and neighborhood/zip
-	"""	
-	#Reshape data to dict
-	#Pull out the ids
-	ids = [data[x].id for x in range(len(data))]
-	#make a new dict that can be json serialized with the id as the key
-	new_dict = {data[x].id : data[x].dict() for x in range(len(data))}
-	#Pop the id from the dict underneath (no need to store it twice)
-	[new_dict[x].pop("id") for x in ids]
+    Args:
+        data (list): List of Propertyinfo objects that are new (not in the historical)
+        siteinfo (tuple): Tuple of website and neighborhood/zip
+    """	
+    ids = [data[x].id for x in range(len(data))]
+    #Reshape data to dict
+    #make a new dict that can be json serialized with the id as the key
+    new_dict = {data[x].id : data[x].__dict__ for x in range(len(data))}
+    #Pop the id from the dict underneath (no need to store it twice)
+    [new_dict[x].pop("id") for x in ids]
 
-	#update main data container
-	jsondata.update(**new_dict)
-	#Grab the new urls for emailing
-	newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("zipc")), (new_dict[idx].get("price"))) for idx in ids]
-	#Extend the newlistings global list
-	newlistings.extend(newurls)
+    #update main data container
+    jsondata.update(new_dict)
+    
+    #make tuples of (urls, site, neighborhood) for emailing
+    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
+    #Extend the newlistings global list
+    newlistings.extend(newurls)
 
-	logger.info("Global dict updated")
-	logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
+    logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
+    logger.info(f"These ids were added to storage: {ids}")
+
+#FUNCTION Check IDs
+def check_ids(data:list)->list:
+    """This function takes in a list of Propertyinfo objects, reformats them to
+    a dictionary, compares the property id's to existing JSON historical
+    property id keys, finds any new ones via set comparison. Then returns a list
+    of Propertyinfo objects that have those new id's (if any)
+
+    Args:
+        data (list): List of Propertyinfo objects
+
+    Returns:
+        data (list): List of only new Propertyinfo objects
+    """
+    j_ids = set(jsondata.keys())
+    n_ids = set([data[x].id for x in range(len(data))])
+    newids = n_ids - j_ids
+    if newids:
+        newdata = []
+        data_ids = [(idx, data[idx].id) for idx, _ in enumerate(range(len(data)))]
+        #Only add the listings that are new.  
+        for ids in newids:
+           indx = [x[0] for x in data_ids if x[1]==ids][0]
+           newdata.append(data[indx]) 
+        # newdata = []
+        # [newdata.append(data[idx]) for idx, _ in enumerate(data) if data[idx].id in newids]
+        return newdata
+    else:
+        logger.info("Listing(s) already stored in rental_list.json") 
+        return None
 
 #FUNCTION Scrape data
-def scrape(neigh:str):
-	"""This function will iterate through different resources scraping necessary information for ingestion. 
+def scrape(neigh:str, progbar, task, layout):
+    """This function will iterate through different resources scraping necessary information for ingestion. 
 
-	Args:
-		neigh (str): Neighborhood or Zipcode
-	"""	
-	sources = ["zillow", "realtor", "redfin", "craigs"]
-	# shuffle(sources) #Keep em guessin!
-	for source in sources:
-		site = SOURCES.get(source)
-		if site:
-			#Because we can't search craigs by neighborhood, we only want to
-			#scrape it once.  So this sets a boolean of if we've scraped
-			#craigs, then flips the value to not scrape it again in the
-			#future neighborhoods that will be searched. 
-			global c_scrape
-			if source=="craigs" and c_scrape==False:
-				c_scrape = True
-				logger.info(f"scraping {site[0]}")
-				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE), jsondata)
+    Args:
+        neigh (str): Neighborhood or Zipcode
+    # """	
+    shuffle(SITES) #Keep em guessin!
+    for source in SITES:
+        site = SOURCES.get(source)
+        if site:
+            #Update and advance the overall progressbar
+            progbar.advance(task)
+            progbar.update(task_id=task, description=f"{neigh}:{site[0]}")
+            #Because we can't search craigs by neighborhood, we only want to
+            #scrape it once.  So this sets a boolean of if we've scraped
+            #craigs, then flips the value to not scrape it again in the
+            #future neighborhoods that will be searched. 
+            global c_scrape
+            if source=="craigs" and c_scrape==False:
+                c_scrape = True
+                logger.info(f"scraping {site[0]}")
+                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS, jsondata)
 
-			elif source=="craigs" and c_scrape==True:
-				continue
-			
-			else:
-				#every other site, scrape it normally
-				logger.info(f"scraping {site[0]} for {neigh}")
-				data = site[1].neighscrape(neigh, site[0], logger, Propertyinfo, (CITY, STATE))
+            elif source=="craigs" and c_scrape==True:
+                continue
+            
+            else:
+                #every other site, scrape it normally
+                logger.info(f"scraping {site[0]} for {neigh}")
+                data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS)
 
-			#Take a lil nap.  Be nice to the servers!
-			support.sleepspinner(np.random.randint(3,8), f'taking a nap at {site[0]}')
+            #Take a lil nap.  Be nice to the servers!
+            support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
 
-			#If data was returned
-			if data:
-				#This function will isolate new id's that aren't in the historical JSON
-				datacheck = check_ids_at_the_door(data)
-				if datacheck:
-					#  pull the lat long, score it and store it. 
-					data = datacheck
-					del datacheck
-					#Get lat longs for the address's
-						#BUG - Need this on an individual ID level. 
-						#Might call it somwhere else. 
-					# data = support.get_lat_long(data, (CITY, STATE), logger)
+            #If data was returned
+            if data:
+                #If there was data found on a site, Update the site counter's border to 
+                #magenta.  Letting me know the site is still successfully returning data.
+                    #NOTE: Some sites will still return a 200 but change a variable name in the DOM
+                    # which leads to missing data.
+                res_test = LOST_N_FOUND[source]
+                if not res_test:
+                    layout[source].update(support.update_border(layout, source))
+                    LOST_N_FOUND[source] = True
 
-					if CITY == "Chicago":
-						#Calculate the distance to closest L stop 
-						#(haversine/as crow flies)
-						data = support.closest_L_stop(data)
+                #This function will isolate new id's that aren't in the historical JSON
+                datacheck = check_ids(data)
+                if datacheck:
+                    logger.info("New data found, adding lat/lon/Lstop/crime")
+                    data = datacheck
+                    del datacheck
 
-						#Score them according to chicago crime data
-						data = support.crime_score(data)
+                    #update the total counter
+                    layout["total"].update(support.update_count(len(data), layout, "total"))
 
-					#Add the listings to the jsondata dict. 
-					add_data(data, (site[0], neigh))
-					del data
-			else:
-				logger.info(f"No new data found on {source}")
+                    #Update other counters
+                    for row in data:
+                        for website in SITES:
+                            if website in row.source:
+                                layout[website].update(support.update_count(1, layout, website))
+                                break
+                        
+                    #pull the lat long, score it and store it. 
+                    data = support.get_lat_long(data, (CITY, STATE), logger, layout)
 
-		else:
-			logger.warning(f"{source} is not in validated search list")
-	
+                    #If its chicago, do chicago things. 
+                    if CITY == 'Chicago':
+                        #Calculate the distance to closest L stop 
+                        #(haversine/as crow flies)
+                        data = support.closest_L_stop(data)
+
+                        #Score them according to chicago crime data
+                        data = support.crime_score(data, logger, layout)
+                        
+                    # elif CITY == 'DC':
+                        #TODO - Build DC search for 
+                        #closets train stop and 
+                        #crime score if you can find any data
+                    #Add the listings to the jsondata dict. 
+                    add_data(data, (site[0], neigh))
+                    del data
+            else:
+                logger.info(f"No new data found on {source}")
+
+        else:
+            logger.warning(f"{source} is not in validated search list")
+################################# Start Program ####################################
 #Driver code
 #FUNCTION Main start
+@log_time
 def main():
-	#Global variable setup
-	global newlistings, jsondata, c_scrape
-	c_scrape = False
-	newlistings = []
-	fp = "./data/buy_list.json"
-	#Load historical listings JSON
-	if exists(fp):
-		jsondata = support.load_historical(fp)
-		logger.info("historical data loaded")
-	else:
-		jsondata = {}
-		logger.warning("No historical data found")
-		
-	#Shuffle and search the neighborhoods/zips
-	# shuffle(AREAS)
-	for neigh in AREAS:
-		scrape(neigh)
+    #Global variables setup
+    global newlistings, jsondata, c_scrape
+    c_scrape = False
+    newlistings = []
+    fp = "./data/buy_list.json"
+    totalstops = len(AREAS) * len(SITES)
+    layout, progbar, task, main_table = support.make_rich_display(totalstops)
 
-	# If new listings are found, save the data to the json file, 
-	# format the list of dataclasesses to a url 
-	# Send gmail alerting of new properties
- 
-	if newlistings:
-		support.save_data(jsondata)
-		links_html = support.urlformat(newlistings)
-		# support.send_housing_email(links_html)
-		logger.info(f"{len(newlistings)} new listings found.  Email sent")
-	else:
-		logger.critical("No new listings were found")
+    #Load rental_list.json
+    if exists(fp):
+        jsondata = support.load_historical(fp)
+        logger.info("historical data loaded")
+    else:
+        jsondata = {}
+        logger.warning("No historical data found")
 
-	logger.info("Program shutting down")
+    #Shuffle and search the neighborhoods/zips
+    shuffle(AREAS)
+
+    with Live(layout, refresh_per_second=30, screen=True, transient=True):
+        logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
+        for neigh in AREAS:
+            scrape(neigh, progbar, task, layout)
+        
+        # If new listings are found, save the data to the json file, 
+        # format the list of dataclassses to a url 
+        # Send gmail alerting of new properties
+        if newlistings:
+            support.save_data(jsondata)
+            links_html = support.urlformat(newlistings)
+            support.send_housing_email(links_html)
+            logger.info(f"{len(newlistings)} new listings found.  Email sent")
+            
+        else:
+            logger.critical("No new listings were found")
+
+        logger.info("Site functionality summary")
+        logger.info(f"{list(LOST_N_FOUND.items())}")
+        logger.info("Program shutting down")
 
 if __name__ == "__main__":
-	main()
-
-
-#Notes
-# fp = "../../data/buy_list.json"
-# with open(fp, "r") as readf:
-# 	results = json.load(readf)	
+    main()
 
 #IDEA
 #What about using census data to survey area's of older populations.  

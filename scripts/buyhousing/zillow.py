@@ -1,247 +1,289 @@
-import logging
-import json
 from bs4 import BeautifulSoup
+from support import logger
+from typing import Union
 import numpy as np
-import pandas as pd
 import requests
-from urllib.parse import urlencode
+import json
 import time
-import support
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
-	"""[Gets the list of links to the individual postings]
+def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
+    """[Ingest HTML of summary page for listings info]
 
-	Args:
-		bs4ob ([BeautifulSoup object]): [html of realtor page]
+    Args:
+        result (BeautifulSoup object): html of zillow page
+        neigh (str): neighorhood being searched
+        source (str): Source website
+        Propertyinfo (dataclass) : Dataclass for housing individual listings
 
-	Returns:
-		properties (list[Propertyinfo]): [all the links in the summary page]
-	"""
-	listings = []
-	#Set the outer loop over each card returned. 
-	# check the count
-	count = result.find("span", class_="result-count")
-	if count:
-		count = int("".join(x for x in count.text if x.isnumeric()))
-		if count < 1:
-			return "No results found"
-	
-	for jres in result.find_all("li", class_=(lambda x:x and x.startswith("ListItem"))):
-		#early terminate if the data-test key is in the underlying object
-		if jres.get("data-test"):
-			continue
+    Returns:
+        listings (list): [List of dataclass objects]
+    """
+    listings = []
+    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
 
-		#grab lat / long
-		latlong = jres.find("script", {"type":"application/ld+json"})
-		if latlong:
-			res = json.loads(latlong.text)
-			lat = res["geo"]["latitude"]
-			long = res["geo"]["longitude"]
-			url = res["url"]
-			address = res["name"]
+    for res in result:
+        active_keys = list(res.keys())
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+        if "zpid" in active_keys:
+            listingid = res["zpid"]
+        else:
+            #If it doesn't have an ID, don't store it
+            continue
+        if "detailUrl" in active_keys:
+            url = res["detailUrl"]
+        if "unformattedPrice" in active_keys:
+            price = float(res["unformattedPrice"])
+        if "beds" in active_keys:
+            beds = float(res["beds"])
+        if "baths" in active_keys:
+            baths = float(res["baths"])
+        if "address" in active_keys:
+            addy = res["address"]
+        if "area" in active_keys:
+            sqft = float(res["area"])
+        if res["latLong"].get("latitude"):
+            lat = float(res["latLong"]["latitude"])
+        if res["latLong"].get("longitude"):
+            long = float(res["latLong"]["longitude"])
+        # daysonZ = res["variableData"]["text"]
+        pets = True
+        
+        listing = Propertyinfo(
+            id=listingid,   
+            source=source,
+            price=price,    
+            neigh=neigh,
+            bed=beds,       
+            sqft=sqft,      
+            bath=baths,     
+            dogs=pets,      
+            link=url,
+            lat=lat,
+            long=long,
+            address=addy,
+            date_pulled=current_time    
+        )
+        listings.append(listing)
+        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
+    return listings
 
-		#Put else in here in case latlong isn't available to get addy and url
-		for card in jres.find_all("article"):
-			#Grab the id
-			if card.get("data-test")=="property-card":
-				listingid = card.get("id")
-			
-			#grab the price
-			for search in card.find_all("span"):
-				if search.get("data-test")=="property-card-price":
-					text = search.text
-					#Sometimes these jokers put the beds in with the price just annoy people like me
-					if "+" in text:
-						price = text[:text.index("+")]
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+    """[Outer scraping function to set up request pulls]
 
-					price = float("".join(x for x in text if x.isnumeric()))
-					break
+    Args:
+        neigh (Union[str,int]): Neighborhood or zipcode searched
+        source (str): What site is being scraped
+        Propertyinfo (dataclass): Custom data object
+        srch_par (tuple): Tuple of search parameters
 
-			#Grab bed bath
-			for search in card.find_all("ul", class_=lambda x: x and x.startswith("StyledPropertyCardHomeDetailsList")):
-				if search:
-					status = search.text.strip("-").strip()
-				else:
-					status = None
-				
-				for subsearch in search.find_all("li"):
-					text = str(subsearch)
-					numtest = any(x.isnumeric() for x in text)
+    Returns:
+        property_listings (list): List of dataclass objects
+    """
+    #Check for spaces in the search neighborhood
+    CITY = srch_par[0].lower()
+    STATE = srch_par[1].lower()
+    MINBEDS = int(srch_par[2])
+    MAXRENT = int(srch_par[3])
 
-					if "bd" in text and numtest:
-						beds = float("".join(x for x in text if x.isnumeric()))
-					elif "ba" in text and numtest:
-						baths = float("".join(x for x in text if x.isnumeric()))
-					elif "sqft" in text and numtest:
-						sqft = float("".join(x for x in text if x.isnumeric()))
+    #First grab the map coordinates update our next request
+    chrome_version = np.random.randint(120, 132)
+    BASE_HEADERS = {
+        'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
+        'origin':'https://www.zillow.com',
+    }
 
-		#Janky way of making sure variables are filled if we missed any
-		if not "listingid" in locals():
-			listingid = None
-		if not "price" in locals():
-			price = None
-		if not "beds" in locals():
-			beds = None
-		if not "baths" in locals():
-			baths = None
-		if not "url" in locals():
-			url = None
-		if not "addy" in locals():
-			addy = None
-		if not "sqft" in locals():
-			sqft = None
-		if not "lat" in locals():
-			lat = None
-		if not "long" in locals():
-			long = None
-	
-		house = Propertyinfo(
-			id=listingid,
-			source=source,
-			status=status,
-			price=price,
-			link=url,
-			address=address,
-			# htype=htype,
-			zipc=neigh,
-			# listdate=listdate,
-			# last_s_date = last_s_date,
-			# last_s_price = last_s_price,
-			bed=beds,
-			bath=baths,
-			sqft=sqft,
-			# lotsqft=lotsqft,
-			lat=lat,
-			long=long,
-			# extras=extras,
-		)
+    #Search by neighborhood
+    if isinstance(neigh, str):
+        neigh = neigh.lower()
+        srch_terms = f"{neigh} {CITY} {STATE.upper()}"
+        if " " in neigh:
+            neigh = "-".join(neigh.split(" "))
+        url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?'
+        response = requests.get(url_map, headers=BASE_HEADERS)
+    
+    #Search by ZipCode
+    elif isinstance(neigh, int):
+        headers = {
+            'accept': '*/*',
+            'accept-language': 'en-US,en;q=0.9',
+            'content-type': 'application/json',
+            'origin': 'https://www.zillow.com',
+            'sec-ch-ua': f'"Google Chrome";v={chrome_version}, "Not-A.Brand";v="8", "Chromium";v={chrome_version}',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
+            'x-caller-id': 'static-search-page-graphql',
+        }
 
-		listings.append(house)
+        params = {
+            'query': f'{neigh}',
+            'queryOptions': '',
+            'resultType': [
+                'REGIONS',
+                'FORSALE',
+                'RENTALS',
+                'SOLD',
+                'COMMUNITIES',
+                'SEMANTIC_REGIONS',
+            ],
+            'querySource': 'MANUAL',
+            'shouldSpellCorrect': 'false',
+            'operationName': 'getQueryUnderstandingResults',
+        }
+
+        json_data = {
+            'operationName': 'getQueryUnderstandingResults',
+            'variables': {
+                'query': f'{neigh}',
+                'queryOptions': {
+                    'maxResults': 2,
+                    'userSearchContext': 'FOR_RENT',
+                    'spellCheck': False,
+                },
+                'resultType': [
+                    'REGIONS',
+                    'FORSALE',
+                    'RENTALS',
+                    'SOLD',
+                    'COMMUNITIES',
+                    'SEMANTIC_REGIONS',
+                ],
+                'querySource': 'MANUAL',
+                'shouldSpellCorrect': False,
+            },
+            'query': 'query getQueryUnderstandingResults($query: String!, $queryOptions: SearchAssistanceQueryOptions, $querySource: SearchAssistanceQuerySource = UNKNOWN, $resultType: [SearchAssistanceResultType], $shouldSpellCorrect: Boolean = false) {\n  searchAssistanceResult: zgsQueryUnderstandingRequest(\n    query: $query\n    queryOptions: $queryOptions\n    querySource: $querySource\n    resultType: $resultType\n  ) {\n    requestId\n    results {\n      ...SearchAssistanceResultFields\n      ...RegionResultFields\n      ...SemanticResultFields\n      ...RentalCommunityResultFields\n      ...SchoolResultFields\n      ...AddressResultFields\n    }\n  }\n}\n\nfragment SearchAssistanceResultFields on SearchAssistanceResult {\n  __typename\n  id\n  spellCorrectedMetadata @include(if: $shouldSpellCorrect) {\n    ...SpellCorrectedFields\n  }\n}\n\nfragment SpellCorrectedFields on SpellCorrectedMetadata {\n  isSpellCorrected\n  spellCorrectedQuery\n  userQuery\n}\n\nfragment RegionResultFields on SearchAssistanceRegionResult {\n  regionId\n  subType\n}\n\nfragment SemanticResultFields on SearchAssistanceSemanticResult {\n  nearMe\n  regionIds\n  regionTypes\n  regionDisplayIds\n  queryResolutionStatus\n  schoolDistrictIds\n  schoolIds\n  viewLatitudeDelta\n  filters {\n    basementStatusType\n    baths {\n      min\n      max\n    }\n    beds {\n      min\n      max\n    }\n    excludeTypes\n    hoaFeesPerMonth {\n      min\n      max\n    }\n    homeType\n    keywords\n    listingStatusType\n    livingAreaSqft {\n      min\n      max\n    }\n    lotSizeSqft {\n      min\n      max\n    }\n    parkingSpots {\n      min\n      max\n    }\n    price {\n      min\n      max\n    }\n    searchRentalFilters {\n      monthlyPayment {\n        min\n        max\n      }\n      petsAllowed\n      rentalAvailabilityDate {\n        min\n        max\n      }\n    }\n    searchSaleFilters {\n      daysOnZillow {\n        min\n        max\n      }\n    }\n    showOnlyType\n    view\n    yearBuilt {\n      min\n      max\n    }\n  }\n}\n\nfragment RentalCommunityResultFields on SearchAssistanceRentalCommunityResult {\n  location {\n    latitude\n    longitude\n  }\n}\n\nfragment SchoolResultFields on SearchAssistanceSchoolResult {\n  id\n  schoolDistrictId\n  schoolId\n}\n\nfragment AddressResultFields on SearchAssistanceAddressResult {\n  zpid\n  addressSubType: subType\n  location {\n    latitude\n    longitude\n  }\n}\n',
+        }
+
+        response = requests.post('https://www.zillow.com/zg-graph', params=params, headers=headers, json=json_data)
+
+        #BUG - Unfortunately this request only returns the region id. 
+        # I need the map coordinates as well to be able to query 
+        # the async site.  
 
 
-	return listings
 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
-	#Check for spaces in the search neighborhood
-	# CITY = citystate[0].lower()
-	# STATE = citystate[1].lower()
-	#First grab the map coordinates update our next request
-	BASE_HEADERS = {
-		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-		'referer':f'https://www.zillow.com/homes/{neigh}_rb',
-		'origin':'https://www.zillow.com',
-	}
-	# #Search by neighborhood
-	# if isinstance(neigh, str):
-	# 	if " " in neigh:
-	# 		neigh = "-".join(neigh.split(" "))
-	# 	neigh = neigh.lower()
-	# 	url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals'
-	
-	#Searchby ZipCode
-	if isinstance(neigh, int):
-		url_map = f'https://www.zillow.com/homes/{neigh}'
-	
-	#Error Trapping
-	else:
-		logging.critical("Inproper input for area, moving to next site")
-		return
+    #Error Trapping
+    else:
+        logging.critical("Inproper input for area, moving to next site")
+        return
 
-	response = requests.get(url_map, headers=BASE_HEADERS)
-	
-	# If there's an error, log it and return no data for that site
-	if response.status_code != 200:
-		logger.warning("The way is shut!")
-		logger.warning(f'Status code: {response.status_code}')
-		logger.warning(f'Reason: {response.reason}')
-		return None
+    #TODO - Might need to move
+        #This underneath the string instance of neighborhood
 
-	bs4ob = BeautifulSoup(response.text, 'lxml')
-	scripts = bs4ob.find_all("script")
-	coords = [x.text for x in scripts if "window.mapBounds" in x.text]
-	start = coords[0].index("mapBounds")
-	end = start + coords[0][start:].index(";\n")
-	mapcords = coords[0][start:end].split(" = ")[1]
+    # If there's an error, log it and return no data for that site
+    if response.status_code != 200:
+        logger.warning("The way is shut!")
+        logger.warning(f'Status code: {response.status_code}')
+        logger.warning(f'Reason: {response.reason}')
+        return None
 
-	#Get the map coordinates
-	map_coords = json.loads(mapcords)
-	#Pull out city zip from first request. 
-	citystate = bs4ob.find("meta", {"property":"og:url"})["content"]
-	if citystate:
-		url = citystate
-		CITY = citystate.split("-")[0]
-		CITY = CITY.split("/")[-1].lower()
-		STATE = citystate.split("-")[1].lower()
-	support.sleepspinner(np.random.randint(2, 8), "Map Request Nap")
-	
-	
-	#Stipulate subparameters of search
-	subparams = {
-		"usersSearchTerm":f"{neigh} {CITY}, {STATE.upper()}",
-		"mapBounds":map_coords,
-		"filterState":{
-			"isForSaleByAgent"    :{"value":True},
-			"isForSaleByOwner"    :{"value":True},
-			"isNewConstruction"   :{"value":False},
-			"isComingSoon"        :{"value":False},
-			"isAuction"           :{"value":False},
-			"isForSaleForeclosure":{"value":False},
-			"isAllHomes"          :{"value":True},
-			"beds"                :{"min":2},
-			"isApartmentOrCondo"  :{"value":False},
-			"isApartment"         :{"value":False},
-			"isCondo"             :{"value":False},
-			"price"               :{"min":0,"max":800_000},
-		},
-		"isListVisible":True,
-		"pagination" : {},
-		"mapZoom":11
-	}
-	params = {
-		"searchQueryState": subparams,
-		"wants": {"cat2": ["listResults"]},
-    	"requestId": 2 #np.random.randint(2, 3)
-	}
-	# if isinstance(neigh, str):
-	# 	url_search = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?' + urlencode(params)
+    bs4ob = BeautifulSoup(response.text, 'lxml')
+    scripts = bs4ob.find_all("script")
+    #Get the map coordinates
+    coords = [x.text for x in scripts if "window.mapBounds" in x.text]
+    start = coords[0].index("mapBounds")
+    end = start + coords[0][start:].index(";\n")
+    mapcords = coords[0][start:end].split(" = ")[1]
+    map_coords = json.loads(mapcords)
 
-	if isinstance(neigh, int):
-		if url:
-			url_search = url + "?"+ urlencode(params)
-		else:
-			url_search = f'https://www.zillow.com/homes/{CITY}-{STATE}-{neigh}/?' + urlencode(params)
-		
-	response = requests.get(url_search, headers = BASE_HEADERS)
+    #Region ID and Type is next
+    region = [x.text for x in scripts if "regionId" in x.text]
+    start = region[0].index("regionId")
+    end = start + region[0][start:].index("]") - 1
+    regionID, regionType = region[0][start:end].split(",")
+    regionID = int("".join([x for x in regionID if x.isnumeric()]))
+    regionType = int("".join([x for x in regionType if x.isnumeric()]))
+    
+    #Take a nap
+    time.sleep(np.random.randint(2, 6))
 
-	#Just in case we piss someone off
-	if response.status_code != 200:
-		# If there's an error, log it and return no data for that site
-		logger.warning(f'Status code: {response.status_code}')
-		logger.warning(f'Reason: {response.reason}')
-		return None
+    # Stipulate subparameters of search
+    subparams = {
+        "pagination"     : {"currentPage":1},
+        "isMapVisible"   :True,
+        "mapBounds"      :map_coords,
+        "filterState"    :{
+            "isForRent"           :{"value":True},        #fr #"isForRent"
+            "isForSaleByAgent"    :{"value":False},       #fsba #"isForSaleByAgent"
+            "isForSaleByOwner"    :{"value":False},       #fsbo #"isForSaleByOwner"
+            "isNewConstruction"   :{"value":False},       #nc #"isNewConstruction"
+            "isComingSoon"        :{"value":False},       #cmsn #"isComingSoon"
+            "isAuction"           :{"value":False},       #auc #"isAuction"
+            "isForSaleForeclosure":{"value":False},       #fore #"isForSaleForeclosure"
+            "mp"                  :{"max":str(MAXRENT)},  #mp #"mp"
+            "beds"                :{"min":str(MINBEDS)},  #beds #"beds"
+            "isManufactured"      :{"value":False},       #mf #"isManufactured"
+            "isApartmentOrCondo"  :{"value":False},       #apco #"isApartmentOrCondo"
+            "isApartment"         :{"value":False},       #apa #"isApartment"
+            "isCondo"             :{"value":False},       #con #"isCondo"
+            "ac"                  :{"value":True},        #ac #"ac"
+            "onlyRentalLargeDogs" :{"value":True},        #ldog #"onlyRentalLargeDogs"
+        },
+        "isListVisible"  :True,
+        "mapZoom"        :15,
+        "regionSelection":[{'regionId':regionID, "regionType":regionType}],
+        "usersSearchTerm":srch_terms
+    }
+    params = {
+        "searchQueryState": subparams,
+        "wants": {"cat1": ["listResults", "mapResults"], "cat2": ["total"]},
+        "requestId": np.random.randint(2, 10),
+        "isDebugrequest":"false"
+    }
 
-	#Get the HTML
-	bs4ob = BeautifulSoup(response.text, 'lxml')
+    RUN_HEADERS = {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Language": "en",
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+        "Sec-Ch-Ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": '"Windows"',
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    }
+    url_search = "https://www.zillow.com/async-create-search-page-state"
+    #Example
+    # https://github.com/johnbalvin/pyzill
+    response = requests.put(url_search, json = params, headers = RUN_HEADERS)
 
-	# Isolate the property-list from the expanded one (I don't want the 3 mile
-	# surrounding.  Just the neighborhood). 
-	#First look for the results count, 
-	#Then look for the results container if you've found the count
+    #Just in case we piss someone off
+    if response.status_code != 200:
+        # If there's an error, log it and return no data for that site
+        logger.warning(f'Status code: {response.status_code}')
+        logger.warning(f'Reason: {response.reason}')
+        return None
 
-	counts = bs4ob.find("span", class_="result-count")
-	if counts:
-		counttest = int("".join(x for x in counts.text if x.isnumeric()))
-	else:
-		logger.warning("No listings on Zillow")
-		return None
-	
-	if counttest > 0:
-		results = bs4ob.find("div", class_="result-list-container")
-		if results:
-			if results.get("id") =='grid-search-results':
-				property_listings = get_listings(results, neigh, source, Propertyinfo)
-				logger.info(f'{len(property_listings)} listings returned from {source}')
-				return property_listings
-		
-	else:
-		logger.warning("No listings returned on Zillow.  Moving to next site")
+    resp_json = response.json()
+    results = resp_json.get("cat1")["searchResults"]["listResults"]
+
+    if results:
+        counttest = 0
+        for res in range(len(results)):
+            #Sometimes they include listings that don't fit the search, but are encoded
+            #with their lat long as the ZPID.  No idea why, but ain't nobody got time for that. 
+            if not "-" in results[res]["zpid"]:
+                counttest += 1
+                results[res]["nonresult"] = False
+            else:
+                results[res]["nonresult"] = True
+    else:
+        logger.warning("No listings on Zillow. Count test fail")
+        return None
+    
+    if counttest > 0:
+        resultlist = [res for res in results if not res["nonresult"]]
+        property_listings = get_listings(resultlist, neigh, source, Propertyinfo)
+        logger.info(f'{len(property_listings)} listings returned from {source}')
+        return property_listings
+        
+    else:
+        logger.warning("No listings returned on Zillow.  Moving to next site")

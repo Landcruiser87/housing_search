@@ -1,233 +1,210 @@
 import logging
 from bs4 import BeautifulSoup
-import numpy as np
-import requests
+from support import logger
 import json
+import requests
+import time
+from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
-	"""[Gets the list of links to the individual postings]
+def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
+    """[Ingest HTML of summary page for listings info]
 
-	Args:
-		bs4ob ([BeautifulSoup object]): [html of realtor page]
+    Args:
+        resp_json (dict): dictionary of neighborhoods
+        neigh (str): neighorhood being searched
+        source (str): Source website
+        Propertyinfo (dataclass) : Dataclass for housing individual listings
 
-	Returns:
-		properties (list[Propertyinfo]): [all the links in the summary page]
-	"""
+    Returns:
+        listings (list): [List of dataclass objects]
+    """
 
-	listings = []
-	#Load the json data
-	listing_dict = json.loads(result.text)
-	varnames = [
-		"listingid", "price", "status", "url", "beds", "baths", "sqft", 
-		"lotsqft", "htype", "listdate", "lat", "long", "address", 
-		"last_s_price", "last_s_date", "extras"
-	]
+    listings = []
+    listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
+    if isinstance(neigh, str):
+        neigh = neigh.lower()
+    #Set the outer loop over each card returned. 
+    for rental in resp_json["data"]["home_search"]["properties"]:
+        #Get the propertyid
+        listingid = rental.get("property_id")
 
-	for listing in listing_dict["props"]["pageProps"]["properties"]:
-		listingid = listing.get("property_id")
-		price = listing.get("list_price")
-		status = listing.get("status")
-		url = "https://" + source + "/realestateandhomes-detail/" + listing.get("permalink")
-		#Janky way of making sure variables are filled if we missed any
-		beds = listing["description"].get("beds")
-		baths = listing["description"].get("baths_consolidated")
-		sqft = listing["description"].get("sqft")
-		lotsqft = listing["description"].get("lot_sqft")
-		htype = listing["description"].get("type")
-		listdate = listing.get("list_date")
-		lat = listing["location"]["address"]["coordinate"].get("lat")
-		long = listing["location"]["address"]["coordinate"].get("lon")
-		#Address
-		add_list = ["line", "city", "state_code", "postal_code"]
-		addy = ""
-		for key in add_list:
-			if key == "city":
-				addy += listing["location"]["address"][key] + ", "
-			else:
-				addy += listing["location"]["address"][key] + " "
-		address = addy
-		last_s_price = listing["description"].get("sold_price")
-		last_s_date = listing["description"].get("sold_date")
-		extras = {"price_reduced_amount":listing.get("price_reduced_amount")}
-		extras["community"] = listing.get("community")
-		flags = listing.get("flags")
-		extras.update(**flags)
+        # Time of pull
+        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
 
-		# for var in varnames:
-		# 	if var not in locals():
-		# 		locals()[var] = None
+        #First grab the link.
+        url = "https://" + source + "/rentals/details/" + rental.get("permalink")
 
-		house = Propertyinfo(
-			id=listingid,
-			source=source,
-			status=status,
-			price=price,
-			link=url,
-			address=address,
-			htype=htype,
-			zipc=neigh,
-			listdate=listdate,
-			last_s_date = last_s_date,
-			last_s_price = last_s_price,
-			bed=beds,
-			bath=baths,
-			sqft=sqft,
-			lotsqft=lotsqft,
-			lat=lat,
-			long=long,
-			extras=extras,
-		)
+        price = rental.get("list_price")
+        
+        #well shit.  Looks like beds and bath is nested in any number of different fields.  Will need to scan them, isolate values and return the highest
+        for category in ["bed", "bath", "sqft"]: #my hands wanted to type bed bath and beyond.  Lol
+            res = []
+            for key in rental["description"].keys():
+                if category in key and rental["description"].get(key) is not None:
+                    res.append(rental["description"].get(key))
+            if category == "bed":
+                if res:
+                    beds = float(sorted(res, reverse=True)[0])
+            elif category == "bath":
+                if res:
+                    baths = float(sorted(res, reverse=True)[0] )
+            elif category == "sqft":
+                if res:
+                    sqft = float(sorted(res, reverse=True)[0])
+        
+        lat = rental["location"]["address"]["coordinate"]["lat"]
+        long = rental["location"]["address"]["coordinate"]["lon"]
+        addy = rental["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
+        address = addy.strip()
 
-		listings.append(house)
+        #Pets is already secured in the search query so we don't have to confirm it in the data.
+        pets = True
 
-		#cleanup variables so no carryover
-		#BUG - This still doesn't work for deletion.  Doesn't really matter
-		#as the variables will always be remapped above by dict gets, but
-		#for code cleanliness, I'm curious how this is done. 
-		for var in varnames:
-			del locals()[var]
+        listing = Propertyinfo(
+            id=listingid,
+            source=source,
+            price=price,
+            neigh=neigh,
+            bed=beds,
+            sqft=sqft,
+            lat=lat,
+            long=long,
+            bath=baths,
+            dogs=pets,
+            link=url,
+            address=address,
+            date_pulled=current_time
+        )
+        listings.append(listing)
+        listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
+    return listings
 
-	return listings
+def money_launderer(price:list)->float:
+    """[Strips dollar signs and comma from the price]
 
-# 
-def neighscrape(neigh:str, source:str, logger:logging, Propertyinfo, citystate):
-	CITY = citystate[0]
-	STATE = citystate[1].upper()
-	
-	#TODO - Rebuild so you don't need a neighbborhood to search, just city state
-	# #Search by neighborhood
-	# if isinstance(neigh, str):
-	# 	if " " in neigh:
-	# 		neigh = "-".join(neigh.split(" "))
-	# 	url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-townhome,single-family-home/beds-2/price-na-2600/dog-friendly"
+    Args:
+        price (list): [list of prices as strs]
 
-	#Searchby ZipCode
-	if isinstance(neigh, int):
-		url = f"https://www.realtor.com/realestateandhomes-search/{neigh}/type-single-family-home,townhome,farms-ranches,land/beds-2/price-na-600000"
-	
-	#Error Trapping
-	else:
-		logging.critical("Inproper input for area, moving to next site")
-		return
-	
-	JSON_HEADERS = {
-    'accept': 'application/json, text/javascript',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-type': 'application/json',
-	'origin': 'https://www.realtor.com',
-	'referer': url,
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-	}
-          
-	response = requests.get(url, headers=JSON_HEADERS)
+    Returns:
+        price (list): [list of prices as floats]
+    """	
+    if isinstance(price, str):
+        return float(price.replace("$", "").replace(",", ""))
+    return price
 
-	#Just in case we piss someone off
-	if response.status_code != 200:
-		# If there's an error, log it and return no data for that site
-		logger.warning(f'Status code: {response.status_code}')
-		logger.warning(f'Reason: {response.reason}')
-		return None
+def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+    """[Outer scraping function to set up request pulls]
 
-	#Get the HTML
-	bs4ob = BeautifulSoup(response.text, 'lxml')
+    Args:
+        neigh (Union[str,int]): Neighborhood or zipcode searched
+        source (str): What site is being scraped
+        Propertyinfo (dataclass): Custom data object
+        srch_par (tuple): Tuple of search parameters
 
-	# Isolate the property-list from the expanded one (I don't want the 3 mile
-	# surrounding.  Just the neighborhood)
-	lcount = bs4ob.find("div", {"data-testid":"total-results"}).text
-	lcount = int("".join(x for x in lcount if x.isnumeric()))
-	if lcount > 0:
-		results = bs4ob.find("script", {"type":"application/json"})
-		property_listings = get_listings(results, neigh, source, Propertyinfo)
-		logger.info(f'{len(property_listings)} listings returned from {source}')
-		return property_listings
-		
-	else:
-		logger.warning("No listings returned on realtor.  Moving to next site")
-	
+    Returns:
+        property_listings (list): List of dataclass objects
+    """    
+    CITY = srch_par[0]
+    STATE = srch_par[1].upper()
+    MINBEDS = int(srch_par[2])
+    MAXRENT = int(srch_par[3])
+    PETS = srch_par[4]
+    #Search by neighborhood
+    if isinstance(neigh, str):
+        if " " in neigh:
+            neigh = "-".join(neigh.split(" "))
+        if PETS:
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
+        else:
+            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
 
+    #Searchby ZipCode
+    elif isinstance(neigh, int):
+        if PETS:
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
+        else:
+            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
+    
+    #Error Trapping
+    else:
+        logger.critical("Inproper input for area, moving to next site")
+        return None
+    
+    headers = {
+        'accept': '*/*',
+        'accept-language': 'en-US,en;q=0.9',
+        'content-type': 'application/json',
+        'origin': 'https://www.realtor.com',
+        'priority': 'u=1, i',
+        'rdc-client-name': 'RDC_WEB_SRP_FR_PAGE',
+        'rdc-client-version': '3.x.x',
+        'referer': url,
+        'sec-ch-ua': '"Chromium";v="120", "Not:A-Brand";v="24", "Google Chrome";v="120"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'srp-consumer-triggered-request': 'rdc-search-for-rent',
+        'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+        'x-is-bot': 'false',
+    }
 
-#Old code, Sadly it won't load past 8 results with a headless browser
-#and i vowed never to use those pieces of shit.  Instead we'll grab the application
-# json nested at the end of the html for each page
+    json_data = {
+        'operationName': 'ConsumerSearchQuery',
+        'variables': {
+            'query': {
+                'primary': True,
+                'status': [
+                    'for_rent',
+                ],
+                'search_location': {
+                    'location': f'{neigh}, {CITY}, {STATE}',
+                },
+                'beds': {
+                    'min': MINBEDS,
+                },
+                'type': [
+                    'townhomes',
+                    'condo_townhome_rowhome_coop',
+                    'duplex_triplex',
+                    'condo_townhome',
+                    'single_family']
+                ,
+                'dogs': True,
+                'list_price': {
+                    'max': MAXRENT,
+                },
+            },
+            'limit': 42,
+            'offset': 0,
+            'bucket': {
+                'sort': 'fractal_v1.1.3_fr',
+            },
+        },
+        'query': 'query ConsumerSearchQuery($query: HomeSearchCriteria!, $limit: Int, $offset: Int, $sort: [SearchAPISort], $bucket: SearchAPIBucket, $search_promotion: SearchPromotionInput) {\n  home_search(\n    query: $query\n    sort: $sort\n    limit: $limit\n    offset: $offset\n    bucket: $bucket\n    search_promotion: $search_promotion\n  ) {\n    costar_counts {\n      costar_total\n      non_costar_total\n      __typename\n    }\n    total\n    count\n    search_promotion {\n      name\n      names\n      slots\n      promoted_properties {\n        id\n        from_other_page\n        __typename\n      }\n      __typename\n    }\n    properties: results {\n      property_id\n      listing_id\n      list_price\n      list_price_max\n      list_price_min\n      permalink\n      price_reduced_amount\n      matterport\n      has_specials\n      application_url\n      rentals_application_eligibility {\n        accepts_applications\n        __typename\n      }\n      search_promotions {\n        name\n        asset_id\n        __typename\n      }\n      virtual_tours {\n        href\n        __typename\n      }\n      status\n      list_date\n      lead_attributes {\n        lead_type\n        is_premium_ldp\n        is_schedule_a_tour\n        __typename\n      }\n      pet_policy {\n        cats\n        dogs\n        dogs_small\n        dogs_large\n        __typename\n      }\n      other_listings {\n        rdc {\n          listing_id\n          status\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_pending\n        __typename\n      }\n      photos(limit: 3, https: true) {\n        href\n        __typename\n      }\n      primary_photo(https: true) {\n        href\n        __typename\n      }\n      advertisers {\n        type\n        office {\n          name\n          phones {\n            number\n            type\n            primary\n            trackable\n            ext\n            __typename\n          }\n          __typename\n        }\n        phones {\n          number\n          type\n          primary\n          trackable\n          ext\n          __typename\n        }\n        rental_management {\n          fulfillment_id\n          customer_set\n          name\n          logo\n          href\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_new_listing\n        __typename\n      }\n      location {\n        address {\n          line\n          city\n          coordinate {\n            lat\n            lon\n            __typename\n          }\n          country\n          state_code\n          postal_code\n          __typename\n        }\n        county {\n          name\n          fips_code\n          __typename\n        }\n        __typename\n      }\n      description {\n        beds\n        beds_max\n        beds_min\n        baths_min\n        baths_max\n        baths_consolidated\n        garage\n        garage_min\n        garage_max\n        sqft\n        sqft_max\n        sqft_min\n        name\n        sub_type\n        type\n        year_built\n        __typename\n      }\n      units {\n        availability {\n          date\n          __typename\n        }\n        description {\n          baths_consolidated\n          baths\n          beds\n          sqft\n          __typename\n        }\n        list_price\n        __typename\n      }\n      branding {\n        type\n        photo\n        name\n        __typename\n      }\n      source {\n        id\n        community_id\n        type\n        feed_type\n        __typename\n      }\n      details {\n        category\n        text\n        parent_category\n        __typename\n      }\n      products {\n        products\n        brand_name\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}',
+    }
 
+    response = requests.post('https://www.realtor.com/frontdoor/graphql', headers=headers, json=json_data)
 
-	# def money_launderer(price:list)->float:
-	#  	"""[Strips dollar signs and comma from the price]
-	#  	Args:
-	#  		price (list): [list of prices as strs]
-	#  	Returns:
-	#  		price (list): [list of prices as floats]
-	#  	"""	
-	#  	if isinstance(price, str):
-	#  		return float(price.replace("$", "").replace(",", ""))
-	#  	return price
+    #Just in case we piss someone off
+    if response.status_code != 200:
+        # If there's an error, log it and return no data for that site
+        logger.warning(f'Status code: {response.status_code}')
+        logger.warning(f'Reason: {response.reason}')
+        return None
 
-	# BASE_HEADERS = {
-	# 	'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-	# 	'referer': url,
-	# 	'origin':'https://www.realtor.com',
-	# }
-	
+    #Get the HTML
+    resp_json = response.json()
 
-	# for card in result.find_all("div", class_=lambda x: x and x.startswith("BasePropertyCard"), id=lambda x: x and x.startswith("property_id")):
-	# 	listingid = card.get("id")
-	# 	listingid = listingid.replace("property_id_", "")
-
-	# 	#First grab the link.
-	# 	for link in card.find_all("a", class_=lambda x: x and x.startswith("LinkComponent")):
-	# 		if link.get("href"):
-	# 			url = "https://" + source + link.get("href")
-	# 			break
-		
-	# 	#[x] - Might want house status too as an input. 
-		
-	# 	for search in card.find_all("div", {"data-testid":"card-content"}):
-	# 		#grab the price
-	# 		for subsearch in search.find_all("div"):
-	# 			if subsearch.get("data-testid") == "card-price":
-	# 				price = subsearch.text
-	# 				if any(x.isnumeric() for x in price):
-	# 					price = money_launderer(subsearch.text)
-	# 					break
-	# 		#Grab home status
-	# 		for subsearch in search.find_all("div", class_=lambda x: x and x.startswith("base__StyledType")):
-	# 			status = subsearch.text
-	# 			break
-		
-	# 	#grab the beds, baths, pets
-	# 	for search in card.find_all("ul"):
-	# 		if search.get("data-testid") == "card-meta":
-	# 			sqft = None
-	# 			for subsearch in search.find_all("li"):
-	# 				if subsearch.get("data-testid")=="property-meta-beds":
-	# 					beds = subsearch.find("span").text
-	# 					if any(x.isnumeric() for x in beds):
-	# 						beds = float("".join(x for x in beds if x.isnumeric()))
-
-	# 				elif subsearch.get("data-testid")=="property-meta-baths":
-	# 					baths = subsearch.find("span").text
-	# 					if any(x.isnumeric() for x in baths):
-	# 						baths = float("".join(x for x in baths if x.isnumeric()))
-
-	# 				elif subsearch.get("data-testid")=="property-meta-sqft":
-	# 					sqft = subsearch.find("span", class_="meta-value").text
-	# 					if sqft:
-	# 						if any(x.isnumeric() for x in sqft):
-	# 							sqft = float("".join(x for x in sqft if x.isnumeric()))
-
-	# 				elif subsearch.get("data-testid")=="property-meta-lot-size":
-	# 					lotsqft = subsearch.find("span", class_="meta-value").text
-	# 					if lotsqft:
-	# 						if any(x.isnumeric() for x in lotsqft):
-	# 							lotsqft = float("".join(x for x in lotsqft if x.isnumeric()))
-
-	# 	#grab address
-	# 	for search in card.find_all("div", class_="card-address truncate-line"):
-	# 		if search.get("data-testid") == "card-address":
-	# 			addy = ""
-	# 			for subsearch in search.find_all("div", class_="truncate-line"):
-	# 				addy += subsearch.text + " "
-	# 			address = addy.strip()
+    # Isolate the property-list from the expanded one (I don't want the 3 mile
+    # surrounding.  Just the neighborhood)
+    count = resp_json["data"]["home_search"].get("total", "")
+    if count > 0:
+        property_listings = get_listings(resp_json, neigh, source, Propertyinfo)
+        logger.info(f'{len(property_listings)} listings returned from {source}')
+        return property_listings
+        
+    else:
+        logger.warning("No listings returned on realtor.  Moving to next site")
+    
