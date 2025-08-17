@@ -1,12 +1,11 @@
-import logging
-from bs4 import BeautifulSoup
-from support import logger
-import json
-import requests
 import time
+import requests
+import numpy as np
 from typing import Union
+from support import logger
+from dataclasses import dataclass
 
-def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
+def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -21,8 +20,7 @@ def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
 
     listings = []
     listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
-    if isinstance(neigh, str):
-        neigh = neigh.lower()
+
     #Set the outer loop over each card returned. 
     for rental in resp_json["data"]["home_search"]["properties"]:
         #Get the propertyid
@@ -57,9 +55,6 @@ def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
         addy = rental["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
         address = addy.strip()
 
-        #Pets is already secured in the search query so we don't have to confirm it in the data.
-        pets = True
-
         listing = Propertyinfo(
             id=listingid,
             source=source,
@@ -92,7 +87,7 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tuple)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
@@ -104,32 +99,26 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     Returns:
         property_listings (list): List of dataclass objects
     """    
-    CITY = srch_par[0]
-    STATE = srch_par[1].upper()
+    CITY = neigh[0].lower()
+    STATE = neigh[1].lower()
+    MAXPRICE = int(srch_par[0])
+    MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
-    MAXRENT = int(srch_par[3])
-    PETS = srch_par[4]
+    
     #Search by neighborhood
-    if isinstance(neigh, str):
-        if " " in neigh:
-            neigh = "-".join(neigh.split(" "))
-        if PETS:
-            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
-        else:
-            url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
+    if " " in CITY:
+        CITY = "-".join(neigh.lower().split(" "))
+        url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXPRICE}"#g1
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        if PETS:
-            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}/dog-friendly"#g1
-        else:
-            url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXRENT}"#g1
+        url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXPRICE}"#g1
     
     #Error Trapping
     else:
         logger.critical("Inproper input for area, moving to next site")
         return None
-    
+    chrome_version = np.random.randint(120, 137)
     headers = {
         'accept': '*/*',
         'accept-language': 'en-US,en;q=0.9',
@@ -139,14 +128,14 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         'rdc-client-name': 'RDC_WEB_SRP_FR_PAGE',
         'rdc-client-version': '3.x.x',
         'referer': url,
-        'sec-ch-ua': '"Chromium";v="120", "Not:A-Brand";v="24", "Google Chrome";v="120"',
+        'sec-ch-ua': f'"Chromium";v={chrome_version}, "Not:A-Brand";v="24", "Google Chrome";v={chrome_version}',
         'sec-ch-ua-mobile': '?1',
         'sec-ch-ua-platform': '"Android"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        'srp-consumer-triggered-request': 'rdc-search-for-rent',
-        'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+        'srp-consumer-triggered-request': 'rdc-search-for-sale',
+        'user-agent': f'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Mobile Safari/537.36',
         'x-is-bot': 'false',
     }
 
@@ -156,13 +145,16 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             'query': {
                 'primary': True,
                 'status': [
-                    'for_rent',
+                    'for_sale',
                 ],
                 'search_location': {
-                    'location': f'{neigh}, {CITY}, {STATE}',
+                    'location': f'{CITY}, {STATE}', #BUG Need ability to zip search here
                 },
                 'beds': {
                     'min': MINBEDS,
+                },
+                'baths': {
+                    'max': MINBEDS,
                 },
                 'type': [
                     'townhomes',
@@ -171,9 +163,8 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
                     'condo_townhome',
                     'single_family']
                 ,
-                'dogs': True,
                 'list_price': {
-                    'max': MAXRENT,
+                    'max': MAXPRICE,
                 },
             },
             'limit': 42,

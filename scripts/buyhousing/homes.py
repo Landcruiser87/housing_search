@@ -21,9 +21,9 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
     listings = []
 
     #Set the outer loop over each card returned. 
-    for search in result.find_all("script", {"type":"application/ld+json"}):
-        if search:
-            listinginfo = json.loads(search.text)
+    for search_results in result.find_all("script", {"type":"application/ld+json"}):
+        if search_results:
+            listinginfo = json.loads(search_results.text)
             k1 = "mainEntity"
             k2 = "itemListElement"
             defaultval = None
