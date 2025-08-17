@@ -2,7 +2,7 @@ import time
 import requests
 import numpy as np
 from typing import Union
-from support import logger
+from support import logger, get_time
 from dataclasses import dataclass
 
 def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo)->list:
@@ -19,27 +19,23 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
     """
 
     listings = []
-    listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
-
+    defaultval = None
     #Set the outer loop over each card returned. 
-    for rental in resp_json["data"]["home_search"]["properties"]:
-        #Get the propertyid
-        listingid = rental.get("property_id")
+    for search_result in resp_json["data"]["home_search"]["properties"]:
+        listing = Propertyinfo()
 
-        # Time of pull
-        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+        listing.id           = search_result.get("property_id", defaultval)
+        listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
 
-        #First grab the link.
-        url = "https://" + source + "/rentals/details/" + rental.get("permalink")
-
-        price = rental.get("list_price")
+        url = "https://" + source + "/rentals/details/" + search_result.get("permalink")
+        price = search_result.get("list_price")
         
         #well shit.  Looks like beds and bath is nested in any number of different fields.  Will need to scan them, isolate values and return the highest
         for category in ["bed", "bath", "sqft"]: #my hands wanted to type bed bath and beyond.  Lol
             res = []
-            for key in rental["description"].keys():
-                if category in key and rental["description"].get(key) is not None:
-                    res.append(rental["description"].get(key))
+            for key in search_result["description"].keys():
+                if category in key and search_result["description"].get(key) is not None:
+                    res.append(search_result["description"].get(key))
             if category == "bed":
                 if res:
                     beds = float(sorted(res, reverse=True)[0])
@@ -50,28 +46,12 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
                 if res:
                     sqft = float(sorted(res, reverse=True)[0])
         
-        lat = rental["location"]["address"]["coordinate"]["lat"]
-        long = rental["location"]["address"]["coordinate"]["lon"]
-        addy = rental["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
+        lat = search_result["location"]["address"]["coordinate"]["lat"]
+        long = search_result["location"]["address"]["coordinate"]["lon"]
+        addy = search_result["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
         address = addy.strip()
-
-        listing = Propertyinfo(
-            id=listingid,
-            source=source,
-            price=price,
-            neigh=neigh,
-            bed=beds,
-            sqft=sqft,
-            lat=lat,
-            long=long,
-            bath=baths,
-            dogs=pets,
-            link=url,
-            address=address,
-            date_pulled=current_time
-        )
         listings.append(listing)
-        listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
+
     return listings
 
 def money_launderer(price:list)->float:
@@ -99,25 +79,26 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
     Returns:
         property_listings (list): List of dataclass objects
     """    
-    CITY = neigh[0].lower()
-    STATE = neigh[1].lower()
+    CITY = neigh[0]
+    STATE = neigh[1]
     MAXPRICE = int(srch_par[0])
     MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
     
     #Search by neighborhood
-    if " " in CITY:
-        CITY = "-".join(neigh.lower().split(" "))
-        url = f"https://www.realtor.com/apartments/{neigh}_{CITY}_{STATE}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXPRICE}"#g1
+    if isinstance(neigh, tuple):
+        url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        url = f"https://www.realtor.com/apartments/{neigh}/type-townhome,single-family-home/beds-{MINBEDS}/price-na-{MAXPRICE}"#g1
+        #TODO - Update this for zip search
+        url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
     
     #Error Trapping
     else:
         logger.critical("Inproper input for area, moving to next site")
         return None
+    
     chrome_version = np.random.randint(120, 137)
     headers = {
         'accept': '*/*',
@@ -125,7 +106,7 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
         'content-type': 'application/json',
         'origin': 'https://www.realtor.com',
         'priority': 'u=1, i',
-        'rdc-client-name': 'RDC_WEB_SRP_FR_PAGE',
+        'rdc-client-name': 'RDC_WEB_SRP_FS_PAGE',
         'rdc-client-version': '3.x.x',
         'referer': url,
         'sec-ch-ua': f'"Chromium";v={chrome_version}, "Not:A-Brand";v="24", "Google Chrome";v={chrome_version}',
@@ -146,6 +127,7 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
                 'primary': True,
                 'status': [
                     'for_sale',
+                    'ready_to_build',
                 ],
                 'search_location': {
                     'location': f'{CITY}, {STATE}', #BUG Need ability to zip search here
@@ -157,23 +139,26 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
                     'max': MINBEDS,
                 },
                 'type': [
+                    'single_family',
                     'townhomes',
-                    'condo_townhome_rowhome_coop',
                     'duplex_triplex',
                     'condo_townhome',
-                    'single_family']
+                    'farm',
+                    'land'
+                    ]
                 ,
                 'list_price': {
                     'max': MAXPRICE,
                 },
             },
-            'limit': 42,
+            'limit': 100,
             'offset': 0,
+            'sort_type': 'relevant',
             'bucket': {
-                'sort': 'fractal_v1.1.3_fr',
+                'sort': 'fractal_v6.2.0',
             },
         },
-        'query': 'query ConsumerSearchQuery($query: HomeSearchCriteria!, $limit: Int, $offset: Int, $sort: [SearchAPISort], $bucket: SearchAPIBucket, $search_promotion: SearchPromotionInput) {\n  home_search(\n    query: $query\n    sort: $sort\n    limit: $limit\n    offset: $offset\n    bucket: $bucket\n    search_promotion: $search_promotion\n  ) {\n    costar_counts {\n      costar_total\n      non_costar_total\n      __typename\n    }\n    total\n    count\n    search_promotion {\n      name\n      names\n      slots\n      promoted_properties {\n        id\n        from_other_page\n        __typename\n      }\n      __typename\n    }\n    properties: results {\n      property_id\n      listing_id\n      list_price\n      list_price_max\n      list_price_min\n      permalink\n      price_reduced_amount\n      matterport\n      has_specials\n      application_url\n      rentals_application_eligibility {\n        accepts_applications\n        __typename\n      }\n      search_promotions {\n        name\n        asset_id\n        __typename\n      }\n      virtual_tours {\n        href\n        __typename\n      }\n      status\n      list_date\n      lead_attributes {\n        lead_type\n        is_premium_ldp\n        is_schedule_a_tour\n        __typename\n      }\n      pet_policy {\n        cats\n        dogs\n        dogs_small\n        dogs_large\n        __typename\n      }\n      other_listings {\n        rdc {\n          listing_id\n          status\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_pending\n        __typename\n      }\n      photos(limit: 3, https: true) {\n        href\n        __typename\n      }\n      primary_photo(https: true) {\n        href\n        __typename\n      }\n      advertisers {\n        type\n        office {\n          name\n          phones {\n            number\n            type\n            primary\n            trackable\n            ext\n            __typename\n          }\n          __typename\n        }\n        phones {\n          number\n          type\n          primary\n          trackable\n          ext\n          __typename\n        }\n        rental_management {\n          fulfillment_id\n          customer_set\n          name\n          logo\n          href\n          __typename\n        }\n        __typename\n      }\n      flags {\n        is_new_listing\n        __typename\n      }\n      location {\n        address {\n          line\n          city\n          coordinate {\n            lat\n            lon\n            __typename\n          }\n          country\n          state_code\n          postal_code\n          __typename\n        }\n        county {\n          name\n          fips_code\n          __typename\n        }\n        __typename\n      }\n      description {\n        beds\n        beds_max\n        beds_min\n        baths_min\n        baths_max\n        baths_consolidated\n        garage\n        garage_min\n        garage_max\n        sqft\n        sqft_max\n        sqft_min\n        name\n        sub_type\n        type\n        year_built\n        __typename\n      }\n      units {\n        availability {\n          date\n          __typename\n        }\n        description {\n          baths_consolidated\n          baths\n          beds\n          sqft\n          __typename\n        }\n        list_price\n        __typename\n      }\n      branding {\n        type\n        photo\n        name\n        __typename\n      }\n      source {\n        id\n        community_id\n        type\n        feed_type\n        __typename\n      }\n      details {\n        category\n        text\n        parent_category\n        __typename\n      }\n      products {\n        products\n        brand_name\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}',
+        'query': 'query ConsumerSearchQuery($query: HomeSearchCriteria!, $limit: Int, $offset: Int, $search_promotion: SearchPromotionInput, $sort: [SearchAPISort], $sort_type: SearchSortType, $client_data: JSON, $bucket: SearchAPIBucket, $mortgage_params: MortgageParamsInput, $photosLimit: Int) {\n  home_search: home_search(\n    query: $query\n    sort: $sort\n    limit: $limit\n    offset: $offset\n    sort_type: $sort_type\n    client_data: $client_data\n    bucket: $bucket\n    search_promotion: $search_promotion\n    mortgage_params: $mortgage_params\n  ) {\n    count\n    total\n    search_promotion {\n      names\n      slots\n      promoted_properties {\n        id\n        from_other_page\n        __typename\n      }\n      __typename\n    }\n    mortgage_params {\n      interest_rate\n      __typename\n    }\n    properties: results {\n      property_id\n      list_price\n      rmn_listing_attribution\n      search_promotions {\n        name\n        asset_id\n        __typename\n      }\n      primary_photo(https: true) {\n        href\n        __typename\n      }\n      listing_id\n      matterport\n      virtual_tours {\n        href\n        type\n        __typename\n      }\n      status\n      products {\n        products\n        brand_name\n        __typename\n      }\n      source {\n        id\n        name\n        type\n        spec_id\n        plan_id\n        agents {\n          office_name\n          __typename\n        }\n        listing_id\n        __typename\n      }\n      lead_attributes {\n        show_contact_an_agent\n        market_type\n        opcity_lead_attributes {\n          cashback_enabled\n          flip_the_market_enabled\n          __typename\n        }\n        lead_type\n        ready_connect_mortgage {\n          show_contact_a_lender\n          show_veterans_united\n          __typename\n        }\n        __typename\n      }\n      community {\n        description {\n          name\n          __typename\n        }\n        property_id\n        permalink\n        advertisers {\n          office {\n            hours\n            phones {\n              type\n              number\n              primary\n              trackable\n              __typename\n            }\n            __typename\n          }\n          __typename\n        }\n        promotions {\n          description\n          href\n          headline\n          __typename\n        }\n        __typename\n      }\n      permalink\n      price_reduced_amount\n      description {\n        name\n        beds\n        baths_consolidated\n        sqft\n        lot_sqft\n        baths_max\n        baths_min\n        beds_min\n        beds_max\n        sqft_min\n        sqft_max\n        type\n        sub_type\n        sold_price\n        sold_date\n        year_built\n        garage\n        __typename\n      }\n      location {\n        street_view_url\n        address {\n          line\n          postal_code\n          state\n          state_code\n          city\n          coordinate {\n            lat\n            lon\n            __typename\n          }\n          __typename\n        }\n        county {\n          name\n          fips_code\n          __typename\n        }\n        __typename\n      }\n      open_houses {\n        start_date\n        end_date\n        __typename\n      }\n      branding {\n        type\n        name\n        photo\n        __typename\n      }\n      flags {\n        is_coming_soon\n        is_new_listing(days: 14)\n        is_price_reduced(days: 30)\n        is_foreclosure\n        is_new_construction\n        is_pending\n        is_contingent\n        __typename\n      }\n      list_date\n      photos(limit: $photosLimit, https: true) {\n        href\n        __typename\n      }\n      advertisers {\n        type\n        fulfillment_id\n        name\n        builder {\n          name\n          href\n          logo\n          fulfillment_id\n          __typename\n        }\n        email\n        office {\n          name\n          __typename\n        }\n        phones {\n          number\n          __typename\n        }\n        __typename\n      }\n      consumer_advertisers {\n        type\n        agent_id\n        name\n        __typename\n      }\n      last_status_change_date\n      last_price_change_amount\n      __typename\n    }\n    __typename\n  }\n  commute_polygon: get_commute_polygon(query: $query) {\n    areas {\n      id\n      breakpoints {\n        width\n        height\n        zoom\n        __typename\n      }\n      radius\n      center {\n        lat\n        lng\n        __typename\n      }\n      __typename\n    }\n    boundary\n    __typename\n  }\n}',
     }
 
     response = requests.post('https://www.realtor.com/frontdoor/graphql', headers=headers, json=json_data)
@@ -190,6 +175,8 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
+    #Not going to expand to multi page because there probably
+    #will never be more than 100 listings at at time
     count = resp_json["data"]["home_search"].get("total", "")
     if count > 0:
         property_listings = get_listings(resp_json, neigh, source, Propertyinfo)

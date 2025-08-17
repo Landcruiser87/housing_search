@@ -39,7 +39,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["homes", "realtor", "redfin", "zillow"] 
+SITES = ["realtor", "homes", "redfin", "zillow"] 
 
 #Define search parameters
 MAXPRICE = 800_000
@@ -69,7 +69,6 @@ class Propertyinfo():
     state       : str = None
     url         : str = None
     price       : float = None
-    
     source      : str = None
     status      : str = None
     img_url     : str = None
@@ -110,7 +109,7 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("link"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
+    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
@@ -198,7 +197,7 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                     
                     # Add the listings to the jsondata dict. 
                     #TODO update add data with new neigh var
-                    add_data(data, (site[0], neigh))
+                    add_data(data, (site[0], neigh[0]))
                     del data
             else:
                 logger.info(f"No new data found on {source}")
