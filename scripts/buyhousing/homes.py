@@ -3,101 +3,63 @@ import json
 import requests
 import numpy as np
 from typing import Union
-from support import logger
+from support import logger, get_time
 from bs4 import BeautifulSoup
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS)->list:
+def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
         result (BeautifulSoup object): html of apartments page
-        neigh (str): neighorhood being searched
+        neigh (tuple|str): area being searched
         source (str): Source website
         Propertyinfo (dataclass) : Dataclass for housing individual listings
-        Pets (bool) : Whether or not you are searching for a furry friend
 
     Returns:
         listings (list): [List of dataclass objects]
     """
     listings = []
-    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
-    if isinstance(neigh, str):
-        neigh = neigh.lower()
 
     #Set the outer loop over each card returned. 
-    for subsearch in card.find_all("script", {"type":"application/ld+json"}):
-        listinginfo = json.loads(subsearch.text)
-        url = listinginfo[0].get("url")
-        listingid = url.split("/")[-1]
-        addy = listinginfo[0].get("name")
-        lat = float(listinginfo[0]["geo"].get("latitude"))
-        long = float(listinginfo[0]["geo"].get("longitude"))
-        beds = listinginfo[0].get("numberOfRooms")
-
-
-    #Set the outer loop over each card returned. 
-    for card in result.find_all("li", class_="placard-container"):
-        # Time of pull
-        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
-
-        #Grab the id
-        search = card.find("article", class_=lambda x: x and x.startswith("search-placard for-rent"))
+    for search in result.find_all("script", {"type":"application/ld+json"}):
         if search:
-            try:
-                listingid = search["data-pk"]
-            except Exception as e:
-                logger.warning(f"id extraction error on {source} in {neigh}")
-                continue
-        else:
-            logger.warning(f"missing id for card on {source} in {neigh}")
-            continue
-
-        details = card.find("div", class_=lambda x: x and x.startswith("for-rent-content-container"))
-        if details:
-            #grab address
-            res = card.find("address")
-            if res:
-                addy = " ".join(res.text.strip("\n").split())
-            #grab price
-            res = card.find("p", class_="current-price")
-            if res:
-                price = float("".join(x for x in res.text if x.isnumeric()))
-            #grab url
-            res = card.find("a")
-            if res:
-                url = "https://" + source + res.get("href")
-
-            search = card.find("ul", class_="detailed-info-container")
-            for subsearch in search.find_all("li"):
-                testval = subsearch.text
-                if testval:
-                    #Grab Beds
-                    if "beds" in testval.lower():
-                        beds = float("".join(x for x in testval if x.isnumeric()))
-                    #Grab baths
-                    elif "bath" in testval.lower():
-                        baths = float("".join(x for x in testval if x.isnumeric() or x == "."))
-                    
-                    elif ("sq" in testval.lower()) | ("ft" in testval.lower()):
-                        sqft = float("".join(x for x in testval if x.isnumeric()))
-
-        pets = PETS
-
-        listing = Propertyinfo(
-            id=listingid,
-            source=source,
-            price=price,
-            neigh=neigh,
-            bed=beds,
-            sqft=sqft,
-            bath=baths,
-            dogs=pets,
-            link=url,
-            address=addy,
-            date_pulled=current_time
-        )
-        listings.append(listing)
-        listingid = price = beds = sqft = baths = pets = url = addy = current_time = None
+            listinginfo = json.loads(search.text)
+            k1 = "mainEntity"
+            k2 = "itemListElement"
+            defaultval = None
+            listinginfo = listinginfo["@graph"][0]
+            numlistings = listinginfo[k1]["numberOfItems"]
+            for idx in range(numlistings):
+                listing = Propertyinfo()
+                listing.url = listinginfo[k1][k2][idx].get("url", defaultval)
+                if listing.url.endswith("/"):
+                    listing.id = listing.url.split("/")[-2]
+                else:
+                    listing.id = listing.url.split("/")[-1]
+                listing.img_url      = listinginfo[k1][k2][idx][k1].get("image", defaultval) 
+                listing.htype        = listinginfo[k1][k2][idx][k1].get("@type", defaultval)
+                listing.address      = listinginfo[k1][k2][idx].get("name", defaultval)
+                listing.city         = listinginfo[k1][k2][idx][k1]["address"].get("addressLocality", defaultval)
+                listing.state        = listinginfo[k1][k2][idx][k1]["address"].get("addressRegion", defaultval)
+                listing.zipc         = listinginfo[k1][k2][idx][k1]["address"].get("postalCode", defaultval)
+                listing.beds         = listinginfo[k1][k2][idx][k1].get("numberOfBedrooms", defaultval)
+                listing.baths        = listinginfo[k1][k2][idx][k1].get("numberOfBathroomsTotal", defaultval)
+                listing.sqft         = listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)             
+                listing.source       = source
+                listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
+                listing.price        = listinginfo[k1][k2][idx]["offers"].get("price", defaultval)
+                listing.description  = listinginfo[k1][k2][idx].get("description", defaultval)
+                listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+                listing.seller       = listinginfo[k1][k2][idx]["offers"].get("seller", defaultval)
+                listing.sellerinfo   = listinginfo[k1][k2][idx]["offers"].get("offeredBy", defaultval)
+                listing.last_s_date  = None
+                listing.last_s_price = None
+                listing.list_dt      = None
+                listing.lotsqft      = None
+                listing.extras       = None
+                # listing.lat = float(listinginfo[k1][idx]["geo"].get("latitude", defaultval))
+                # listing.long = float(listinginfo[k1][idx]["geo"].get("longitude", defaultval))
+                listings.append(listing)
 
     return listings
 

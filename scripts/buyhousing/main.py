@@ -63,24 +63,31 @@ LOST_N_FOUND = {
 #Define dataclass container
 @dataclass
 class Propertyinfo():
-    address     : str
-    link        : str
-    id          : str
-    price       : float
-    source      : str
-    status      : str
-    date_pulled : np.datetime64
-    bed         : float = None
-    bath        : float = None
+    id          : str = None
+    address     : str = None
+    city        : str = None
+    state       : str = None
+    url         : str = None
+    price       : float = None
+    
+    source      : str = None
+    status      : str = None
+    img_url     : str = None
+    date_pulled : np.datetime64 = None
+    beds        : float = None
+    baths       : float = None
+    description : str = None
     htype       : str = None
     lotsqft     : float = None
     sqft        : float = None
-    lat         : float = ""
-    long        : float = ""
+    lat         : float = None
+    long        : float = None
     zipc        : int = None
-    listdate    : np.datetime64 = None
+    list_dt    : np.datetime64 = None
     last_s_date : np.datetime64 = None
     last_s_price: float = ""
+    seller      : dict = field(default_factory=lambda:{})
+    sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
     
 ################################# Main Funcs ####################################
@@ -190,6 +197,7 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                     # data = support.get_lat_long(data, (CITY, STATE), logger, layout)
                     
                     # Add the listings to the jsondata dict. 
+                    #TODO update add data with new neigh var
                     add_data(data, (site[0], neigh))
                     del data
             else:
