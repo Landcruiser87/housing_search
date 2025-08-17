@@ -74682,5 +74682,32 @@
       0.22
     ],
     "crime_sc": {}
+  },
+  "ehvmkfp": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6547-s-woodlawn-ave-chicago-il/ehvmkfp/",
+    "address": "6547 S Woodlawn Ave, Chicago, IL 60637",
+    "date_pulled": "08-17-2025_09-31-41",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1700.0,
+    "lat": 41.7754326,
+    "long": -87.59578,
+    "L_dist": [
+      "Cottage Grove",
+      0.62
+    ],
+    "crime_sc": {
+      "drug_score": 1.89,
+      "gun_score": 8.13,
+      "murder_score": 2.42,
+      "perv_score": 1.5,
+      "theft_score": 34.56,
+      "violence_score": 30.71,
+      "property_d_score": 0.19
+    }
   }
 }
