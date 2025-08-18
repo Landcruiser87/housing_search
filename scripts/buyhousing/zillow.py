@@ -1,10 +1,10 @@
-from bs4 import BeautifulSoup
-from support import logger
-from typing import Union
-import numpy as np
-import requests
-import json
 import time
+import json
+import requests
+import numpy as np
+from typing import Union
+from bs4 import BeautifulSoup
+from support import logger, get_time
 
 def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
@@ -18,55 +18,90 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
     Returns:
         listings (list): [List of dataclass objects]
     """
-    listings = []
-    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
 
-    for res in result:
-        active_keys = list(res.keys())
-        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
-        if "zpid" in active_keys:
-            listingid = res["zpid"]
-        else:
-            #If it doesn't have an ID, don't store it
-            continue
-        if "detailUrl" in active_keys:
-            url = res["detailUrl"]
-        if "unformattedPrice" in active_keys:
-            price = float(res["unformattedPrice"])
-        if "beds" in active_keys:
-            beds = float(res["beds"])
-        if "baths" in active_keys:
-            baths = float(res["baths"])
-        if "address" in active_keys:
-            addy = res["address"]
-        if "area" in active_keys:
-            sqft = float(res["area"])
-        if res["latLong"].get("latitude"):
-            lat = float(res["latLong"]["latitude"])
-        if res["latLong"].get("longitude"):
-            long = float(res["latLong"]["longitude"])
-        # daysonZ = res["variableData"]["text"]
-        pets = True
+    listings = []
+    defaultval = None
+    results = result.select_one("script[id='__NEXT_DATA__'][type='application/json']")
+    #Set the outer loop over each card returned. 
+    for card in results:
+        listinginfo = json.loads(card.text)
+        if isinstance(listinginfo, list):
+            listing              = Propertyinfo()
+            listing.url          = listinginfo[1].get("url", defaultval)
+            if listing.url.endswith("/"):
+                listing.id = listing.url.split("/")[-2]
+            else:
+                listing.id = listing.url.split("/")[-1]
+            listing.status       = "For Sale"
+            listing.source       = source
+            listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)
+            listing.state        = listinginfo[0]["address"].get("addressRegion", defaultval)
+            listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
+            listing.address      = listinginfo[0].get("name", defaultval)
+            listing.htype        = listinginfo[0].get("@type", defaultval)
+            listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
+            listing.price        = int(listinginfo[1]["offers"].get("price", 0))
+            listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
+            listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
+            if "numberOfBaths" in listinginfo[0].keys():
+                listing.baths    = bedbath_format(listinginfo[0].get("numberOfBaths", defaultval))
+            if "numberOfRooms" in listinginfo[0].keys():
+                listing.beds     = bedbath_format(listinginfo[0].get("numberOfRooms", defaultval))
+            #Vars not on the page scan below
+            # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
+            # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
+            # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
+            # listing.seller       = search_result["branding"][0].get("name", defaultval)
+            # listing.sellerinfo   = search_result.get("advertisers", defaultval)
+            # listing.img_url = listinginfo.get("photos", defaultval)
+            # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+
+            listings.append(listing)
+    
+    #OLD Code
+    # for res in result:
+    #     active_keys = list(res.keys())
+    #     current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+    #     if "zpid" in active_keys:
+    #         listingid = res["zpid"]
+    #     else:
+    #         #If it doesn't have an ID, don't store it
+    #         continue
+    #     if "detailUrl" in active_keys:
+    #         url = res["detailUrl"]
+    #     if "unformattedPrice" in active_keys:
+    #         price = float(res["unformattedPrice"])
+    #     if "beds" in active_keys:
+    #         beds = float(res["beds"])
+    #     if "baths" in active_keys:
+    #         baths = float(res["baths"])
+    #     if "address" in active_keys:
+    #         addy = res["address"]
+    #     if "area" in active_keys:
+    #         sqft = float(res["area"])
+    #     if res["latLong"].get("latitude"):
+    #         lat = float(res["latLong"]["latitude"])
+    #     if res["latLong"].get("longitude"):
+    #         long = float(res["latLong"]["longitude"])
+    #     # daysonZ = res["variableData"]["text"]
+    #     # pets = True
         
-        listing = Propertyinfo(
-            id=listingid,   
-            source=source,
-            price=price,    
-            neigh=neigh,
-            bed=beds,       
-            sqft=sqft,      
-            bath=baths,     
-            dogs=pets,      
-            link=url,
-            lat=lat,
-            long=long,
-            address=addy,
-            date_pulled=current_time    
-        )
         listings.append(listing)
-        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
     return listings
 
+def bedbath_format(sample:str):
+    if isinstance(sample, (int, float)):
+        return float(sample)
+    clean = "".join([x for x in sample if (x.isnumeric()) | (x == ".")])
+    try:
+        number = float(clean)
+        return number
+
+    except (ValueError, TypeError) as e:
+        logger.warning(f"Error: Invalid input. The input must be a an int or float:\n {e}")
+        return None
+    
 def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
@@ -80,25 +115,24 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         property_listings (list): List of dataclass objects
     """
     #Check for spaces in the search neighborhood
-    CITY = srch_par[0].lower()
-    STATE = srch_par[1].lower()
+    CITY = neigh[0]
+    STATE = neigh[1]
+    MAXPRICE = int(srch_par[0])
+    MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
-    MAXRENT = int(srch_par[3])
+    chrome_version = np.random.randint(120, 137)
 
-    #First grab the map coordinates update our next request
-    chrome_version = np.random.randint(120, 132)
     BASE_HEADERS = {
         'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         'origin':'https://www.zillow.com',
     }
 
-    #Search by neighborhood
-    if isinstance(neigh, str):
-        neigh = neigh.lower()
-        srch_terms = f"{neigh} {CITY} {STATE.upper()}"
-        if " " in neigh:
-            neigh = "-".join(neigh.split(" "))
-        url_map = f'https://www.zillow.com/{neigh}-{CITY}-{STATE}/rentals/?'
+    #Search by CITY/State
+    if isinstance(neigh, tuple):
+        srch_terms = f"{CITY} {STATE.upper()}"
+        if " " in CITY:
+            CITY = "-".join(CITY.split(" "))
+        url_map = f'https://www.zillow.com/homes/for_sale/'
         response = requests.get(url_map, headers=BASE_HEADERS)
     
     #Search by ZipCode
@@ -163,15 +197,10 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         # I need the map coordinates as well to be able to query 
         # the async site.  
 
-
-
     #Error Trapping
     else:
-        logging.critical("Inproper input for area, moving to next site")
-        return
-
-    #TODO - Might need to move
-        #This underneath the string instance of neighborhood
+        logger.critical("Inproper input for Zillow, moving to next site")
+        return None
 
     # If there's an error, log it and return no data for that site
     if response.status_code != 200:
@@ -206,21 +235,21 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         "isMapVisible"   :True,
         "mapBounds"      :map_coords,
         "filterState"    :{
-            "isForRent"           :{"value":True},        #fr #"isForRent"
-            "isForSaleByAgent"    :{"value":False},       #fsba #"isForSaleByAgent"
-            "isForSaleByOwner"    :{"value":False},       #fsbo #"isForSaleByOwner"
+            "isForRent"           :{"value":False},       #fr #"isForRent"
+            "isForSaleByAgent"    :{"value":True},        #fsba #"isForSaleByAgent"
+            "isForSaleByOwner"    :{"value":True},        #fsbo #"isForSaleByOwner"
             "isNewConstruction"   :{"value":False},       #nc #"isNewConstruction"
-            "isComingSoon"        :{"value":False},       #cmsn #"isComingSoon"
-            "isAuction"           :{"value":False},       #auc #"isAuction"
-            "isForSaleForeclosure":{"value":False},       #fore #"isForSaleForeclosure"
-            "mp"                  :{"max":str(MAXRENT)},  #mp #"mp"
+            "isComingSoon"        :{"value":True},        #cmsn #"isComingSoon"
+            "isAuction"           :{"value":True},        #auc #"isAuction"
+            "isForSaleForeclosure":{"value":True},        #fore #"isForSaleForeclosure"
+            "mp"                  :{"max":str(MAXPRICE)}, #mp #"mp"
+            "baths"               :{"min":str(MINBATHS)}, #baths #baths
             "beds"                :{"min":str(MINBEDS)},  #beds #"beds"
             "isManufactured"      :{"value":False},       #mf #"isManufactured"
             "isApartmentOrCondo"  :{"value":False},       #apco #"isApartmentOrCondo"
             "isApartment"         :{"value":False},       #apa #"isApartment"
             "isCondo"             :{"value":False},       #con #"isCondo"
             "ac"                  :{"value":True},        #ac #"ac"
-            "onlyRentalLargeDogs" :{"value":True},        #ldog #"onlyRentalLargeDogs"
         },
         "isListVisible"  :True,
         "mapZoom"        :15,

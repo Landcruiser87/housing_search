@@ -39,7 +39,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["redfin", "realtor", "homes", "zillow"] 
+SITES = ["zillow", "redfin", "realtor", "homes"] 
 
 #Define search parameters
 MAXPRICE = 800_000
@@ -238,8 +238,7 @@ def main():
             scrape(neigh, progbar, task, layout)
         
         # If new listings are found, save the data to the json file, 
-        # format the list of dataclassses to a url 
-        # Send gmail alerting of new properties
+        # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
             support.save_data(jsondata)
             links_html = support.urlformat(newlistings)

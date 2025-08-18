@@ -81,7 +81,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
     
-    #Search by neighborhood
+    #Search by CITY/State
     if isinstance(neigh, tuple):
         if " " in CITY:
             CITY = "-".join(neigh.lower().split(" "))

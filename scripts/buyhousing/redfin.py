@@ -55,10 +55,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             # listing.sellerinfo   = search_result.get("advertisers", defaultval)
             # listing.img_url = listinginfo.get("photos", defaultval)
             # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
-
             listings.append(listing)
-
     return listings
+
 def bedbath_format(sample:str):
     if isinstance(sample, (int, float)):
         return float(sample)
@@ -118,7 +117,7 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
         'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
     }
 
-    #Search by neighborhood
+    #Search by CITY/State
     if isinstance(neigh, tuple):
         # First grab the map coordinates update our next request
         #Because redfin dumps their own numerical zip for neighborhoods, I need to make
