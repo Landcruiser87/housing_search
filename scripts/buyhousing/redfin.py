@@ -114,16 +114,7 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
     chrome_version = np.random.randint(120, 137)
     neighid = None
     BASE_HEADERS = {
-        # 'accept': '*/*',
-        # 'accept-language': 'en-US,en;q=0.9',
-        # 'priority': 'u=1, i',
         'origin':'https://www.redfin.com',
-        # 'sec-ch-ua': f'"Chromium";v={chrome_version}, "Not:A-Brand";v="24", "Google Chrome";v={chrome_version}',
-        # 'sec-ch-ua-mobile': '?1',
-        # 'sec-ch-ua-platform': '"Android"',
-        # 'sec-fetch-dest': 'empty',
-        # 'sec-fetch-mode': 'cors',
-        # 'sec-fetch-site': 'same-origin',
         'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
     }
 
