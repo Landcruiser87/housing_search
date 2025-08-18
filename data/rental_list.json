@@ -74709,5 +74709,167 @@
       "violence_score": 30.71,
       "property_d_score": 0.19
     }
+  },
+  "cglehz2v9pqft": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/5809-n-rogers-ave-chicago-il/cglehz2v9pqft/",
+    "address": "5809 N Rogers Ave Chicago, IL 60646",
+    "date_pulled": "08-18-2025_09-27-37",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 715.0,
+    "lat": 41.9891438,
+    "long": -87.7335639,
+    "L_dist": [
+      "Kimball",
+      1.81
+    ],
+    "crime_sc": {
+      "drug_score": 2.8,
+      "gun_score": 4.04,
+      "murder_score": 1.14,
+      "perv_score": 1.68,
+      "theft_score": 43.55,
+      "violence_score": 24.08,
+      "property_d_score": 0.15
+    }
+  },
+  "vk7bc0g": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1152-w-19th-pl-chicago-il/vk7bc0g/",
+    "address": "1152 W 19th Pl, Chicago, IL 60608",
+    "date_pulled": "08-18-2025_09-33-19",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.8560408,
+    "long": -87.6552353,
+    "L_dist": [
+      "18th",
+      0.73
+    ],
+    "crime_sc": {
+      "drug_score": 3.79,
+      "gun_score": 6.58,
+      "murder_score": 1.89,
+      "perv_score": 1.54,
+      "theft_score": 38.78,
+      "violence_score": 26.98,
+      "property_d_score": 0.15
+    }
+  },
+  "f7z8gps": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5809-n-rogers-ave-chicago-il/f7z8gps/",
+    "address": "5809 N Rogers Ave, Chicago, IL 60646",
+    "date_pulled": "08-18-2025_09-33-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 715.0,
+    "lat": 41.9863063,
+    "long": -87.7379354,
+    "L_dist": [
+      "Jefferson Park",
+      1.6
+    ],
+    "crime_sc": {
+      "drug_score": 2.94,
+      "gun_score": 4.1,
+      "murder_score": 1.18,
+      "perv_score": 1.67,
+      "theft_score": 43.29,
+      "violence_score": 24.25,
+      "property_d_score": 0.15
+    }
+  },
+  "8d8cyc3": {
+    "source": "www.apartments.com",
+    "price": 1550.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1226-s-springfield-ave-chicago-il/8d8cyc3/",
+    "address": "1226 S Springfield Ave, Chicago, IL 60623",
+    "date_pulled": "08-18-2025_09-33-19",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1300.0,
+    "lat": 41.8653419,
+    "long": -87.7230067,
+    "L_dist": [
+      "Pulaski",
+      0.6
+    ],
+    "crime_sc": {
+      "drug_score": 4.08,
+      "gun_score": 6.16,
+      "murder_score": 1.79,
+      "perv_score": 1.66,
+      "theft_score": 38.95,
+      "violence_score": 26.52,
+      "property_d_score": 0.17
+    }
+  },
+  "90vhke6": {
+    "source": "www.apartments.com",
+    "price": 1500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5022-s-elizabeth-st-chicago-il/90vhke6/",
+    "address": "5022 S Elizabeth St, Chicago, IL 60609",
+    "date_pulled": "08-18-2025_09-33-19",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.8025497,
+    "long": -87.6565497,
+    "L_dist": [
+      "Garfield",
+      1.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.9,
+      "gun_score": 7.48,
+      "murder_score": 2.34,
+      "perv_score": 1.57,
+      "theft_score": 35.61,
+      "violence_score": 28.9,
+      "property_d_score": 0.17
+    }
+  },
+  "8fytwk2": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1800-s-ashland-ave-chicago-il/8fytwk2/",
+    "address": "1800 S Ashland Ave, Chicago, IL 60608",
+    "date_pulled": "08-18-2025_09-33-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.8576308,
+    "long": -87.6665516,
+    "L_dist": [
+      "18th",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.84,
+      "gun_score": 6.55,
+      "murder_score": 1.91,
+      "perv_score": 1.56,
+      "theft_score": 38.61,
+      "violence_score": 27.07,
+      "property_d_score": 0.16
+    }
   }
 }
