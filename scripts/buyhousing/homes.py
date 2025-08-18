@@ -47,7 +47,7 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.sqft         = listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)             
                 listing.source       = source
                 listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
-                listing.price        = listinginfo[k1][k2][idx]["offers"].get("price", defaultval)
+                listing.price        = int(listinginfo[k1][k2][idx]["offers"].get("price", defaultval))
                 listing.description  = listinginfo[k1][k2][idx].get("description", defaultval)
                 listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
                 listing.seller       = listinginfo[k1][k2][idx]["offers"].get("seller", defaultval)

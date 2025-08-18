@@ -38,7 +38,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
         listing.sqft         = search_result["description"].get("sqft", defaultval)
         listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
-        listing.price        = search_result.get("list_price", defaultval)
+        listing.price        = int(search_result.get("list_price", defaultval))
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
         listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)

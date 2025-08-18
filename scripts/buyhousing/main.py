@@ -68,7 +68,7 @@ class Propertyinfo():
     city        : str = None
     state       : str = None
     url         : str = None
-    price       : float = None
+    price       : int = None
     source      : str = None
     status      : str = None
     img_url     : str = None

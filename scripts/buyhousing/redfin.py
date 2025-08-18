@@ -22,12 +22,6 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     listings = []
     defaultval = None
     #Set the outer loop over each card returned. 
-    search_results = None
-    
-    # for card in result.select('div[id^="MapHomeCard"][class^="HomeCardsContainer"]'):
-    # for card in result.find_all("div", id=id_patt,_class=class_patt):
-        # for subsearch in card.find_all("script", {"type":"application/ld+json"}):
-        # search_results = card.find("script", {"type":"application/ld+json"})
     for card in result.find_all("script", {"type":"application/ld+json"}):
         listinginfo = json.loads(card.text)
         if isinstance(listinginfo, list):
@@ -44,15 +38,16 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
             listing.address      = listinginfo[0].get("name", defaultval)
             listing.htype        = listinginfo[0].get("@type", defaultval)
+            listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
+            listing.price        = int(listinginfo[1]["offers"].get("price", 0))
+            listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
+            listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
             if "numberOfBaths" in listinginfo[0].keys():
                 listing.baths    = bedbath_format(listinginfo[0].get("numberOfBaths", defaultval))
             if "numberOfRooms" in listinginfo[0].keys():
                 listing.beds     = bedbath_format(listinginfo[0].get("numberOfRooms", defaultval))
-            listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
-            listing.price        = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
-            listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
-            listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
+            #Vars not on the page scan below
             # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
             # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
             # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
