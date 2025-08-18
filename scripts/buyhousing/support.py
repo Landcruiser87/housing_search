@@ -452,7 +452,7 @@ def date_convert(time_big:datetime)->datetime:
 #FUNCTION Save Data
 def save_data(jsond:dict):
     out_json = json.dumps(jsond, indent=2, cls=CustomEncoder)
-    with open("./data/rental_list.json", "w") as out_f:
+    with open("./data/buy_list.json", "w") as out_f:
         out_f.write(out_json)
 
 #FUNCTION Load Historical
@@ -575,23 +575,52 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 
 #FUNCTION URL Format
 def urlformat(urls:list)->str:
-    """This formats each of the list items into an html list for easy ingestion into the email server
+    """
+    Formats the list of URLs into an HTML list with site and category printed once per group,
+    followed by a list of titles as links.
 
     Args:
-        urls (list): List of new listings found
+        urls (list): List of new listings found, where each item is a tuple:
+                     (link, site, category, title).
 
     Returns:
-        str: HTML formatted string for emailing
-    """	
-    
-    links_html = "<ol>"
-    if len(urls) > 1:
-        for link, site, neigh in urls:
-            links_html += f"<li><a href='{link}'> {site} - {neigh} </a></li>"
-    else:
-        links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} - {urls[0][2]} </a></li>"
-    links_html = links_html + "</ol>"
+        str: HTML formatted string for emailing.
+    """
+
+    if not urls:
+        return "<p>No new links found.</p>"
+
+    links_html = ""
+    prev_site_cat = None
+
+    for link, site, city, addy in urls:
+        current_site_cat = (site, city)
+        if current_site_cat != prev_site_cat:
+            if prev_site_cat is not None:
+                links_html += "</ol>\n" + "-" * 45 + "\n" 
+            links_html += f"<br><i><b>{site} - {city}</b></i>\n<ol>"
+            prev_site_cat = current_site_cat
+        links_html += f"<li><a href='{link}'>{addy}</a></li>"
+    links_html += "</ol>" # close the final list.
     return links_html
+
+    # """This formats each of the list items into an html list for easy ingestion into the email server
+
+    # Args:
+    #     urls (list): List of new listings found
+
+    # Returns:
+    #     str: HTML formatted string for emailing
+    # """	
+    
+    # links_html = "<ol>"
+    # if len(urls) > 1:
+    #     for link, site, neigh in urls:
+    #         links_html += f"<li><a href='{link}'> {site} - {neigh} </a></li>"
+    # else:
+    #     links_html = f"<li><a href='{urls[0][0]}'> {urls[0][1]} - {urls[0][2]} </a></li>"
+    # links_html = links_html + "</ol>"
+    # return links_html
 
 #FUNCTION Send Housing Email
 def send_housing_email(urls:str):

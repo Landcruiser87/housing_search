@@ -109,14 +109,9 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], (new_dict[idx].get("neigh"))) for idx in new_dict.keys()]
+    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address")) for idx in new_dict.keys()]
     #Extend the newlistings global list
     newlistings.extend(newurls)
-
-    #TODO - Add logic for detecting price changes.  
-        # Could put that in the checkIDs function?
-        #Not sure what that looks like.
-        #Or maybe its a separate function overall.
 
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
     logger.info(f"These ids were added to storage: {ids}")
@@ -134,6 +129,12 @@ def check_ids(data:list)->list:
     Returns:
         data (list): List of only new Propertyinfo objects
     """
+
+    #TODO - Add logic for detecting price changes.  
+        # Could put that in the checkIDs function?
+        #Not sure what that looks like.
+        #Or maybe its a separate function overall.
+
     j_ids = set(jsondata.keys())
     n_ids = set([data[x].id for x in range(len(data))])
     newids = n_ids - j_ids
@@ -201,7 +202,6 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                     # data = support.get_lat_long(data, (CITY, STATE), logger, layout)
                     
                     # Add the listings to the jsondata dict. 
-                    #TODO update add data with new neigh var
                     add_data(data, (site[0], neigh[0]))
                     del data
             else:
