@@ -19,6 +19,7 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
         listings (list): [List of dataclass objects]
     """
     listings = []
+    defaultval = None
 
     #Set the outer loop over each card returned. 
     for search_results in result.find_all("script", {"type":"application/ld+json"}):
@@ -26,7 +27,6 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
             listinginfo = json.loads(search_results.text)
             k1 = "mainEntity"
             k2 = "itemListElement"
-            defaultval = None
             listinginfo = listinginfo["@graph"][0]
             numlistings = listinginfo[k1]["numberOfItems"]
             for idx in range(numlistings):

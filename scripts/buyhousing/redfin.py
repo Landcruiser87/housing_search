@@ -23,40 +23,44 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     defaultval = None
     #Set the outer loop over each card returned. 
 
-    for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
-        for subsearch in card.find_all("script", {"type":"application/ld+json"}):
-            listinginfo = json.loads(subsearch.text)
-            listing         = Propertyinfo()
-            listing.url     = listinginfo[0].get("url")
-            listing.id      = listing.url.split("/")[-1]
-            listing.address = listinginfo[0].get("name")
-            listing.lat     = float(listinginfo[0]["geo"].get("latitude"))
-            listing.long    = float(listinginfo[0]["geo"].get("longitude"))
-            beds = listinginfo[0].get("numberOfRooms")
-            if "-" in beds: 
-                beds = float(beds.split("-")[-1])
-            elif "," in beds: 
-                beds = float(beds.split(",")[-1])
-            else:
-                beds = float(beds)
-                
-            if "value" in listinginfo[0]["floorSize"].keys():
-                sqft = listinginfo[0].get("floorSize")["value"]
-                if "," in sqft:
-                    sqft = sqft.replace(",", "")
-                sqft = float("".join(x for x in sqft if x.isnumeric()))
-            price = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
-    
-        # Time of pull
-        current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
+    for card in result.find_all("div", _class=lambda x: x and x.startswith("HomeCardsContainer")):
+        # for subsearch in card.find_all("script", {"type":"application/ld+json"}):
+        for search_results in card.find_all("script", {"type":"application/ld+json"}):
+            if search_results:
+                listinginfo = json.loads(search_results.text)
+                listing         = Propertyinfo()
+                listing.url     = listinginfo[0].get("url", defaultval)
+                listing.id      = listing.url.split("/")[-1]
+                listing.address = listinginfo[0].get("name")
+                listing.lat     = float(listinginfo[0]["geo"].get("latitude"))
+                listing.long    = float(listinginfo[0]["geo"].get("longitude"))
+                listing.beds    = listinginfo[0].get("numberOfRooms")
+                listing.price = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
 
-        #Bathrooms weren't in the json.  So we'll grab those manually
-        for subsearch in card.find_all("span", class_=lambda x: x and "bath" in x):
-            baths = subsearch.text
-            baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
-            break
-        
-        listings.append(listing)
+                # listing.id           = search_result.get("listing_id", defaultval)
+                # listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
+                # listing.img_url      = search_result.get("photos", defaultval)
+                # listing.status       = search_result.get("status", defaultval)
+                # listing.source       = source
+                # listing.city         = search_result["location"]["address"].get("city", defaultval)
+                # listing.state        = search_result["location"]["address"].get("state_code", defaultval)
+                # listing.zipc         = search_result["location"]["address"].get("postal_code", defaultval)
+                # listing.address      = search_result["location"]["address"]["line"] + ", " + listing.city + ", " + listing.state + " " + listing.zipc 
+                # listing.htype        = search_result["description"].get("type", defaultval)
+                # listing.baths        = bedbath_format(search_result["description"].get("baths_consolidated", defaultval))
+                # listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
+                # listing.sqft         = search_result["description"].get("sqft", defaultval)
+                # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+                # listing.price        = search_result.get("list_price", defaultval)
+                # listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+                # listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
+                # listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
+                # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
+                # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
+                # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
+                # listing.seller       = search_result["branding"][0].get("name", defaultval)
+                # listing.sellerinfo   = search_result.get("advertisers", defaultval)
+            listings.append(listing)
 
     return listings
 
@@ -126,18 +130,19 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
             "iss": "false",
             "ooa": "true",
             "mrs": "false",
-            "region_id": 29470,
+            "region_id": 4433,
             "region_type": 6,
             "lat": 41.833670000000005,
             "lng": -87.73184,
-            "includeAddressInfo": "false"
+            "includeAddressInfo": "false",
+            "lastSearches":""
         }
 
         # https://www.redfin.com/stingray/api/v1/search/rentals
     
         #Search by neighborhood
         if isinstance(neigh, tuple):
-            url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
+            url_map = "https://www.redfin.com/stingray/do/location-autocomplete?" + urlencode(SH_PARAMS)
             # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
         #Error Trapping
@@ -171,6 +176,7 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
+        #TODO - Update these headers and URL when you get to zipcodes
         INT_HEADERS = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
@@ -187,7 +193,6 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
             'upgrade-insecure-requests': '1',
             'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         }
-        #TODO - Update this URL when you get to zipcodes
         url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXPRICE},min-beds={MINBEDS},air-conditioning' #,has-parking
         response = requests.get(url_search, headers = INT_HEADERS)
 
@@ -206,27 +211,23 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
     #Get the HTML
     bs4ob = BeautifulSoup(response.text, 'lxml')
 
-    # Isolate the property-list from the expanded one (I don't want the 3 mile
-    # surrounding.  Just the neighborhood)
-    hcount = bs4ob.find("div", class_="homes summary reversePosition")
-    if hcount != None:
-        lcount = hcount.text.split()[0]
+    # Find how many results there were
+    housecount = bs4ob.find("div", class_="homes summary reversePosition")
+    if housecount != None:
+        lcount = housecount.text.split()[0]
         lcount = int("".join(x for x in lcount if x.isnumeric()))
     else:
         logger.warning("No count found on redfin.  Moving to next site")
-        return 
-    
+        return None
+
     if lcount > 0:
-        results = bs4ob.find("div", class_="PhotosView reversePosition widerHomecardsContainer")
-        if results:
-            if results.get("data-rf-test-id") =='photos-view':
-                property_listings = get_listings(results, neigh, source, Propertyinfo)
-                logger.info(f'{len(property_listings)} listings returned from {source}')
-                return property_listings
-            else:
-                logger.warning("The soups hath failed you")		
+        property_listings = get_listings(bs4ob, neigh, source, Propertyinfo)
+        logger.info(f'{len(property_listings)} listings returned from {source}')
+        return property_listings
+
     else:
         logger.warning("No listings returned on Redfin.  Moving to next site")
+        return None
 
 #Notes
 # https://github.com/ryansherby/RedfinScraper/blob/main/redfin_scraper/core/redfin_scraper.py

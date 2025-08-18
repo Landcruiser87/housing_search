@@ -22,6 +22,7 @@ from support import logger, console, log_time
 
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
+
 AREAS = [
     ('Coldwater','MI'),
     ('Tekonsha','MI'),
@@ -39,7 +40,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["realtor", "homes", "redfin", "zillow"] 
+SITES = ["redfin", "realtor", "homes", "zillow"] 
 
 #Define search parameters
 MAXPRICE = 800_000

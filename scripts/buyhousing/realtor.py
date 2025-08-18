@@ -6,8 +6,6 @@ import datetime
 from support import logger, get_time
 from dataclasses import dataclass
 
-
-
 def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
@@ -188,14 +186,14 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
         logger.warning(f'Reason: {response.reason}')
         return None
 
-    #Get the HTML
+    #Get the JSON data
     resp_json = response.json()
 
     # Isolate the property-list from the expanded one (I don't want the 3 mile
     # surrounding.  Just the neighborhood)
     #Not going to expand to multi page because there probably
     #will never be more than 100 listings at at time
-    count = resp_json["data"]["home_search"].get("total", "")
+    count = resp_json["data"]["home_search"].get("total", 0)
     if count > 0:
         property_listings = get_listings(resp_json, neigh, source, Propertyinfo)
         logger.info(f'{len(property_listings)} listings returned from {source}')
@@ -203,4 +201,4 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
         
     else:
         logger.warning("No listings returned on realtor.  Moving to next site")
-    
+        return None
