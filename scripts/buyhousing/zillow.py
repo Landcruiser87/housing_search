@@ -6,7 +6,7 @@ from typing import Union
 from bs4 import BeautifulSoup
 from support import logger, get_time
 
-def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
+def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -21,71 +21,39 @@ def get_listings(result:dict, neigh:str, source:str, Propertyinfo)->list:
 
     listings = []
     defaultval = None
-    results = result.select_one("script[id='__NEXT_DATA__'][type='application/json']")
+    seller_keys = ["isZillowOwned", "pgapt", "info2String", "info6String", "brokerName", "marketingStatusSimplifiedCd"]
     #Set the outer loop over each card returned. 
-    for card in results:
-        listinginfo = json.loads(card.text)
-        if isinstance(listinginfo, list):
-            listing              = Propertyinfo()
-            listing.url          = listinginfo[1].get("url", defaultval)
-            if listing.url.endswith("/"):
-                listing.id = listing.url.split("/")[-2]
-            else:
-                listing.id = listing.url.split("/")[-1]
-            listing.status       = "For Sale"
-            listing.source       = source
-            listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)
-            listing.state        = listinginfo[0]["address"].get("addressRegion", defaultval)
-            listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
-            listing.address      = listinginfo[0].get("name", defaultval)
-            listing.htype        = listinginfo[0].get("@type", defaultval)
-            listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
-            listing.price        = int(listinginfo[1]["offers"].get("price", 0))
-            listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
-            listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
-            if "numberOfBaths" in listinginfo[0].keys():
-                listing.baths    = bedbath_format(listinginfo[0].get("numberOfBaths", defaultval))
-            if "numberOfRooms" in listinginfo[0].keys():
-                listing.beds     = bedbath_format(listinginfo[0].get("numberOfRooms", defaultval))
-            #Vars not on the page scan below
-            # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
-            # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
-            # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
-            # listing.seller       = search_result["branding"][0].get("name", defaultval)
-            # listing.sellerinfo   = search_result.get("advertisers", defaultval)
-            # listing.img_url = listinginfo.get("photos", defaultval)
-            # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+    for listinginfo in result:
+        listing              = Propertyinfo()
+        listing.id           = listinginfo.get("zpid", defaultval)
+        listing.url          = listinginfo.get("detailUrl", defaultval)
+        listing.img_url      = listinginfo.get("imgSrc", defaultval)
+        listing.status       = listinginfo.get("statusType", defaultval)
+        listing.source       = source
+        listing.city         = listinginfo.get("addressCity", defaultval)
+        listing.state        = listinginfo.get("addressState", defaultval)
+        listing.zipc         = listinginfo.get("addressZipcode", defaultval)
+        listing.address      = listinginfo.get("address", defaultval)
+        listing.htype        = listinginfo["hdpData"]["homeInfo"].get("homeType", defaultval)
+        listing.sqft         = listinginfo.get("area", defaultval)
+        listing.price        = int(listinginfo.get("unformattedPrice", defaultval))
+        listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+        listing.description  = listinginfo.get("flexFieldText", defaultval)
+        listing.daysOnZillow = listinginfo["hdpData"]["homeInfo"].get("daysOnZillow", defaultval)
+        listing.lat          = float(listinginfo["latLong"].get("latitude", defaultval))
+        listing.long         = float(listinginfo["latLong"].get("longitude", defaultval))
+        listing.baths        = bedbath_format(listinginfo.get("beds", defaultval))
+        listing.beds         = bedbath_format(listinginfo.get("baths", defaultval))
+        listing.seller       = listinginfo.get("brokerName", defaultval)
+        listing.sellerinfo   = {k:listinginfo.get(k, defaultval) for k in seller_keys}
+        listing.lotsqft      = str(round(listinginfo["hdpData"]["homeInfo"].get("lotAreaValue", defaultval) , 2)) + " " + listinginfo["hdpData"]["homeInfo"].get("lotAreaUnit", defaultval)
+        if "zestimate" in listinginfo.keys():
+            listing.zestimate    = int(listinginfo.get("zestimate", defaultval))
 
-            listings.append(listing)
-    
-    #OLD Code
-    # for res in result:
-    #     active_keys = list(res.keys())
-    #     current_time = time.strftime("%m-%d-%Y_%H-%M-%S")
-    #     if "zpid" in active_keys:
-    #         listingid = res["zpid"]
-    #     else:
-    #         #If it doesn't have an ID, don't store it
-    #         continue
-    #     if "detailUrl" in active_keys:
-    #         url = res["detailUrl"]
-    #     if "unformattedPrice" in active_keys:
-    #         price = float(res["unformattedPrice"])
-    #     if "beds" in active_keys:
-    #         beds = float(res["beds"])
-    #     if "baths" in active_keys:
-    #         baths = float(res["baths"])
-    #     if "address" in active_keys:
-    #         addy = res["address"]
-    #     if "area" in active_keys:
-    #         sqft = float(res["area"])
-    #     if res["latLong"].get("latitude"):
-    #         lat = float(res["latLong"]["latitude"])
-    #     if res["latLong"].get("longitude"):
-    #         long = float(res["latLong"]["longitude"])
-    #     # daysonZ = res["variableData"]["text"]
-    #     # pets = True
+        #Vars not on the page scan below
+        # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
+        # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
+        # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
         
         listings.append(listing)
     return listings
@@ -132,7 +100,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         srch_terms = f"{CITY} {STATE.upper()}"
         if " " in CITY:
             CITY = "-".join(CITY.split(" "))
-        url_map = f'https://www.zillow.com/homes/for_sale/'
+        url_map = f'https://www.zillow.com/{CITY}-{STATE}/for_sale/?'
         response = requests.get(url_map, headers=BASE_HEADERS)
     
     #Search by ZipCode
