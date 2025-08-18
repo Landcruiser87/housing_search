@@ -2,8 +2,11 @@ import time
 import requests
 import numpy as np
 from typing import Union
+import datetime
 from support import logger, get_time
 from dataclasses import dataclass
+
+
 
 def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
@@ -23,36 +26,45 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
     #Set the outer loop over each card returned. 
     for search_result in resp_json["data"]["home_search"]["properties"]:
         listing = Propertyinfo()
-
-        listing.id           = search_result.get("property_id", defaultval)
+        listing.id           = search_result.get("listing_id", defaultval)
+        listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
+        listing.img_url      = search_result.get("photos", defaultval)
+        listing.status       = search_result.get("status", defaultval)
+        listing.city         = search_result["location"]["address"].get("city", defaultval)
+        listing.state        = search_result["location"]["address"].get("state_code", defaultval)
+        listing.zipc         = search_result["location"]["address"].get("postal_code", defaultval)
+        listing.address      = search_result["location"]["address"]["line"] + ", " + listing.city + ", " + listing.state + " " + listing.zipc 
+        listing.htype        = search_result["description"].get("type", defaultval)
+        listing.baths        = bedbath_format(search_result["description"].get("baths_consolidated", defaultval))
+        listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
+        listing.sqft         = search_result["description"].get("sqft", defaultval)
+        listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+        listing.price        = search_result.get("list_price", defaultval)
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-
-        url = "https://" + source + "/rentals/details/" + search_result.get("permalink")
-        price = search_result.get("list_price")
-        
-        #well shit.  Looks like beds and bath is nested in any number of different fields.  Will need to scan them, isolate values and return the highest
-        for category in ["bed", "bath", "sqft"]: #my hands wanted to type bed bath and beyond.  Lol
-            res = []
-            for key in search_result["description"].keys():
-                if category in key and search_result["description"].get(key) is not None:
-                    res.append(search_result["description"].get(key))
-            if category == "bed":
-                if res:
-                    beds = float(sorted(res, reverse=True)[0])
-            elif category == "bath":
-                if res:
-                    baths = float(sorted(res, reverse=True)[0] )
-            elif category == "sqft":
-                if res:
-                    sqft = float(sorted(res, reverse=True)[0])
-        
-        lat = search_result["location"]["address"]["coordinate"]["lat"]
-        long = search_result["location"]["address"]["coordinate"]["lon"]
-        addy = search_result["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
-        address = addy.strip()
+        listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
+        listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
+        listing.list_dt      = date_format(search_result.get("list_date", defaultval))
+        listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
+        listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
+        listing.seller       = search_result["branding"][0].get("name", defaultval)
+        listing.sellerinfo   = search_result.get("advertisers", defaultval)
         listings.append(listing)
 
     return listings
+
+def date_format(sample:str):
+    dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%S.%fZ")
+    return dt_obj.strftime("%m-%d-%Y_%H-%M-%S")
+
+def bedbath_format(sample:str):
+    clean = "".join(x for x in sample if x.isnumeric())
+    try:
+        number = float(clean)
+        return number
+
+    except (ValueError, TypeError) as e:
+        logger.warning(f"Error: Invalid input. The input must be a number. Details: {e}")
+        return None
 
 def money_launderer(price:list)->float:
     """[Strips dollar signs and comma from the price]

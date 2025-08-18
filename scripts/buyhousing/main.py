@@ -82,9 +82,9 @@ class Propertyinfo():
     lat         : float = None
     long        : float = None
     zipc        : int = None
-    list_dt    : np.datetime64 = None
-    last_s_date : np.datetime64 = None
-    last_s_price: float = ""
+    list_dt     : np.datetime64 = None
+    last_pri_dat: np.datetime64 = None
+    last_pri_cha: float = None
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
