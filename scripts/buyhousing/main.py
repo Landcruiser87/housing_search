@@ -24,10 +24,10 @@ from support import logger, console, log_time
 # if doesn't have one, its a smaller targeted neighborhood.
 
 AREAS = [
-    ('Coldwater','MI'),
-    ('Tekonsha','MI'),
-    ('Marshall','MI'),
-    ('Angola','IN'),
+    # ('Coldwater','MI'),
+    # ('Tekonsha','MI'),
+    # ('Marshall','MI'),
+    # ('Angola','IN'),
     ('Fremont','IN'),
     ('Auburn','IN'),
 ]

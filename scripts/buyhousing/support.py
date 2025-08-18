@@ -30,6 +30,7 @@ from rich.text import Text
 from geopy import Nominatim, ArcGIS
 import geopandas as gpd
 from pathlib import Path, PurePath
+from collections import defaultdict
 
 ################################# Logging Funcs ####################################
 
@@ -576,12 +577,12 @@ def haversine_distance(lat1:float, lon1:float, lat2:float, lon2:float)->float:
 #FUNCTION URL Format
 def urlformat(urls:list)->str:
     """
-    Formats the list of URLs into an HTML list with site and category printed once per group,
+    Formats the list of URLs into an HTML list with site and city printed once per group,
     followed by a list of titles as links.
 
     Args:
         urls (list): List of new listings found, where each item is a tuple:
-                     (link, site, category, title).
+                     (link, site, city, address).
 
     Returns:
         str: HTML formatted string for emailing.
@@ -589,19 +590,28 @@ def urlformat(urls:list)->str:
 
     if not urls:
         return "<p>No new links found.</p>"
+    urls = sorted(urls, key=lambda x:(x[2], x[1]))
+
+    grouped_by_city = defaultdict(list)
+    for link, site, city, address in urls:
+        grouped_by_city[city].append({'link': link, 'site': site, 'address': address})
 
     links_html = ""
-    prev_site_cat = None
+    # Use an index to add a separator between cities
+    sorted_cities = sorted(grouped_by_city.keys())
+    for i, city in enumerate(sorted_cities):
+        # Add a horizontal rule before each city except the first one
+        if i > 0:
+            links_html += "<hr>\n"
+            
+        links_html += f"<h2>{city}</h2>\n<ul>"
+        
+        # Iterate through the listings for each city
+        for listing in grouped_by_city[city]:
+            links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
+        
+        links_html += "</ul>"
 
-    for link, site, city, addy in urls:
-        current_site_cat = (site, city)
-        if current_site_cat != prev_site_cat:
-            if prev_site_cat is not None:
-                links_html += "</ol>\n" + "-" * 45 + "\n" 
-            links_html += f"<br><i><b>{site} - {city}</b></i>\n<ol>"
-            prev_site_cat = current_site_cat
-        links_html += f"<li><a href='{link}'>{addy}</a></li>"
-    links_html += "</ol>" # close the final list.
     return links_html
 
 #FUNCTION Send Housing Email
