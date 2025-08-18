@@ -46,7 +46,7 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
         listing.beds         = bedbath_format(listinginfo.get("baths", defaultval))
         listing.seller       = listinginfo.get("brokerName", defaultval)
         listing.sellerinfo   = {k:listinginfo.get(k, defaultval) for k in seller_keys}
-        listing.lotsqft      = str(round(listinginfo["hdpData"]["homeInfo"].get("lotAreaValue", defaultval) , 2)) + " " + listinginfo["hdpData"]["homeInfo"].get("lotAreaUnit", defaultval)
+        listing.lotsqft      = str(listinginfo["hdpData"]["homeInfo"].get("lotAreaValue", defaultval)) + " " + listinginfo["hdpData"]["homeInfo"].get("lotAreaUnit", defaultval)
         if "zestimate" in listinginfo.keys():
             listing.zestimate    = int(listinginfo.get("zestimate", defaultval))
 

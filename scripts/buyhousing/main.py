@@ -158,7 +158,7 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
     Args:
         neigh (str): Neighborhood or Zipcode
     # """	
-    # shuffle(SITES) #Keep em guessin!
+    shuffle(SITES) #Keep em guessin!
     for source in SITES:
         site = SOURCES.get(source)
         if site:
