@@ -72,7 +72,7 @@ class Propertyinfo():
     source      : str = None
     status      : str = None
     img_url     : str = None
-    date_pulled : np.datetime64 = None
+    date_pulled : str = None
     beds        : float = None
     baths       : float = None
     description : str = None
@@ -82,8 +82,8 @@ class Propertyinfo():
     lat         : float = None
     long        : float = None
     zipc        : int = None
-    list_dt     : np.datetime64 = None
-    last_pri_dat: np.datetime64 = None
+    list_dt     : str = None
+    last_pri_dat: str = None
     last_pri_cha: float = None
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    

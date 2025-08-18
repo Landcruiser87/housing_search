@@ -43,7 +43,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
         listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
-        listing.list_dt      = date_format(search_result.get("list_date", defaultval))
+        listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
         listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
         listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
         listing.seller       = search_result["branding"][0].get("name", defaultval)
@@ -52,8 +52,11 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
 
     return listings
 
-def date_format(sample:str):
-    dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%S.%fZ")
+def date_format(sample:str, decimals:bool=False):
+    if decimals:
+        dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%S.%fZ")
+    else:
+        dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%SZ")
     return dt_obj.strftime("%m-%d-%Y_%H-%M-%S")
 
 def bedbath_format(sample:str):
