@@ -57,7 +57,9 @@ def date_format(sample:str):
     return dt_obj.strftime("%m-%d-%Y_%H-%M-%S")
 
 def bedbath_format(sample:str):
-    clean = "".join(x for x in sample if x.isnumeric())
+    if isinstance(sample, (int, float)):
+        return float(sample)
+    clean = "".join([x for x in sample if (x.isnumeric()) | (x == ".")])
     try:
         number = float(clean)
         return number
