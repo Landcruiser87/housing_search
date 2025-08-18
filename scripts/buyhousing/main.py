@@ -24,19 +24,19 @@ from support import logger, console, log_time
 # if doesn't have one, its a smaller targeted neighborhood.
 
 AREAS = [
+    ('Angola'   ,'IN'),
+    ('Auburn'   ,'IN'),
+    ('Fremont'  ,'IN'),
+    ('Marshall' ,'MI'),
+    ('Tekonsha' ,'MI'),
     ('Coldwater','MI'),
-    ('Tekonsha','MI'),
-    ('Marshall','MI'),
-    ('Angola','IN'),
-    ('Fremont','IN'),
-    ('Auburn','IN'),
 ]
 
 SOURCES = {
-    "realtor"   :("www.realtor.com"   , realtor),
-    "zillow"    :("www.zillow.com"    , zillow),
-    "redfin"    :("www.redfin.com"    , redfin),
-    "homes"     :("www.homes.com"     , homes)
+    "realtor" :("www.realtor.com"   , realtor),
+    "zillow"  :("www.zillow.com"    , zillow),
+    "redfin"  :("www.redfin.com"    , redfin),
+    "homes"   :("www.homes.com"     , homes)
 }
 
 SITES = ["zillow", "redfin", "realtor", "homes"] 
@@ -54,10 +54,10 @@ SEARCH_PARAMS = (
 
 #Dictionary to keep track of which sites return data in a singular run
 LOST_N_FOUND = {
-    "homes"     :False,
-    "realtor"   :False,
-    "redfin"    :False,
-    "zillow"    :False
+    "homes"   :False,
+    "realtor" :False,
+    "redfin"  :False,
+    "zillow"  :False
 }
 
 #Define dataclass container
@@ -73,10 +73,10 @@ class Propertyinfo():
     status      : str = None
     img_url     : str = None
     date_pulled : str = None
-    beds        : float = None
-    baths       : float = None
     description : str = None
     htype       : str = None
+    beds        : float = None
+    baths       : float = None
     lotsqft     : float = None
     sqft        : float = None
     lat         : float = None
