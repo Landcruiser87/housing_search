@@ -95,8 +95,8 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
 
     #Error Trapping
     else:
-        logger.critical("Inproper input for area, moving to next site")
-        return
+        logger.critical("Inproper input for homes, moving to next site")
+        return None
 
     chrome_version = np.random.randint(120, 137)
     headers = {

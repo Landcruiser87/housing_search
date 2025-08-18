@@ -1,14 +1,13 @@
-import logging
-import json
-from bs4 import BeautifulSoup
-from support import logger
-import numpy as np
-import requests
-from urllib.parse import urlencode
 import time
+import json
+import requests
+import numpy as np
+from urllib.parse import urlencode
+from bs4 import BeautifulSoup
+from support import logger, state_dict, get_time
 from typing import Union
 
-def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS)->list:
+def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
 
     Args:
@@ -21,20 +20,18 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
         listings (list): [List of dataclass objects]
     """
     listings = []
-    listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
-    if isinstance(neigh, str):
-        neigh = neigh.lower()
-
+    defaultval = None
     #Set the outer loop over each card returned. 
-    for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
 
+    for card in result.find_all("div", id=lambda x: x and x.startswith("MapHomeCard")):
         for subsearch in card.find_all("script", {"type":"application/ld+json"}):
             listinginfo = json.loads(subsearch.text)
-            url = listinginfo[0].get("url")
-            listingid = url.split("/")[-1]
-            addy = listinginfo[0].get("name")
-            lat = float(listinginfo[0]["geo"].get("latitude"))
-            long = float(listinginfo[0]["geo"].get("longitude"))
+            listing         = Propertyinfo()
+            listing.url     = listinginfo[0].get("url")
+            listing.id      = listing.url.split("/")[-1]
+            listing.address = listinginfo[0].get("name")
+            listing.lat     = float(listinginfo[0]["geo"].get("latitude"))
+            listing.long    = float(listinginfo[0]["geo"].get("longitude"))
             beds = listinginfo[0].get("numberOfRooms")
             if "-" in beds: 
                 beds = float(beds.split("-")[-1])
@@ -59,27 +56,8 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo, PETS
             baths = float("".join(x for x in baths if x.isnumeric() or x == "."))
             break
         
-        pets = PETS
-        
-        listing = Propertyinfo(
-            id=listingid,   
-            source=source,
-            price=price,    
-            neigh=neigh,
-            bed=beds,       
-            sqft=sqft,      
-            bath=baths,     
-            dogs=pets,
-            lat=lat,
-            long=long,
-            link=url,		
-            address=addy,
-            date_pulled=current_time    
-        )
-
         listings.append(listing)
-        listingid = price = beds = sqft = baths = pets = url = addy = current_time = lat = long = None
-        
+
     return listings
 
 def money_launderer(price:int)->str:
@@ -104,7 +82,7 @@ def money_launderer(price:int)->str:
     else:
         return price
 
-def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
@@ -117,34 +95,33 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         property_listings (list): List of dataclass objects
     """    
     #Check for spaces in the search neighborhood
-    CITY = srch_par[0].lower()
-    if CITY == "washington":
-        CITY = "washington dc"
-    STATE = srch_par[1]
+    CITY = neigh[0].lower()
+    STATE = neigh[1].lower()
+    MAXPRICE = int(srch_par[0])
+    MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
-    MAXRENT = money_launderer(int(srch_par[3]))
-    PETS = srch_par[4]
+    chrome_version = np.random.randint(120, 137)
+
     BASE_HEADERS = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         'origin':'https://www.redfin.com',
     }
 
     #Search by neighborhood
-    if isinstance(neigh, str):
-            #First grab the map coordinates update our next request
- 
+    if isinstance(neigh, tuple):
+        # First grab the map coordinates update our next request
         #BUG stupid neighborhood encodings. 
-            #Beeeeecause redfin dumps their own numerical zip for neighborhoods, I need to make
+            #Beecause redfin dumps their own numerical zip for neighborhoods, I need to make
             #two requests when searching redfin by string
             #1. Make a request to see what neighborhood code goes with the search term. 
             #2. Request the appropriate neigh with paramaterized search. 
 
         SH_PARAMS = {
-            "location": f"{neigh}",
+            "location":"",
             "start": 0,
             "count": 10,
             "v": 2,
-            "market": f"{CITY.lower()}",
+            "market": f"{state_dict[STATE]}",
             "al": 1,
             "iss": "false",
             "ooa": "true",
@@ -159,20 +136,20 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         # https://www.redfin.com/stingray/api/v1/search/rentals
     
         #Search by neighborhood
-        if isinstance(neigh, str):
+        if isinstance(neigh, tuple):
             url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
             # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
         #Error Trapping
         else:
-            logging.critical("Inproper input for redfin, moving to next site")
+            logger.critical("Inproper input for redfin, moving to next site")
             return
 
         response = requests.get(url_map, headers=BASE_HEADERS)
         
         # If there's an error, log it and return no data for that site
         if response.status_code != 200:
-            logger.warning("The way is shut!")
+            logger.warning("redfin prefetch request failed!")
             logger.warning(f'Status code: {response.status_code}')
             logger.warning(f'Reason: {response.reason}')
             return None
@@ -189,17 +166,11 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
 
         if " " in neigh:
             neigh = "-".join(neigh.split(" "))
-        if PETS:
-            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},dogs-allowed,air-conditioning'#,has-parking
-                         # https://www.redfin.com/neighborhood/32483/IL/Chicago/Ravenswood/rentals/filter/property-type=house+townhouse,max-price=2.6k,min-beds=2,dogs-allowed
-        else:
-            url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning'#,has-parking
-
+        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/filter/property-type=house+townhouse+multifamily+land,max-price={MAXPRICE},min-beds={MINBEDS}'
         response = requests.get(url_search, headers = BASE_HEADERS)
 
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        chrome_version = np.random.randint(120, 135)
         INT_HEADERS = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
@@ -216,12 +187,13 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             'upgrade-insecure-requests': '1',
             'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
         }
-        url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXRENT},min-beds={MINBEDS},air-conditioning' #,has-parking
+        #TODO - Update this URL when you get to zipcodes
+        url_search = f'https://www.redfin.com/zipcode/{neigh}/rentals/filter/property-type=house+townhouse,max-price={MAXPRICE},min-beds={MINBEDS},air-conditioning' #,has-parking
         response = requests.get(url_search, headers = INT_HEADERS)
 
     #Error Trapping
     else:
-        logging.critical("Inproper input for redfin, moving to next site")
+        logger.critical("Inproper input for redfin, moving to next site")
         return None
 
     #Just in case we piss someone off
@@ -248,7 +220,7 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
         results = bs4ob.find("div", class_="PhotosView reversePosition widerHomecardsContainer")
         if results:
             if results.get("data-rf-test-id") =='photos-view':
-                property_listings = get_listings(results, neigh, source, Propertyinfo, PETS)
+                property_listings = get_listings(results, neigh, source, Propertyinfo)
                 logger.info(f'{len(property_listings)} listings returned from {source}')
                 return property_listings
             else:

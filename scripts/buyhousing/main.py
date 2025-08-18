@@ -113,6 +113,11 @@ def add_data(data:list, siteinfo:tuple):
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
+    #TODO - Add logic for detecting price changes.  
+        # Could put that in the checkIDs function?
+        #Not sure what that looks like.
+        #Or maybe its a separate function overall.
+
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
     logger.info(f"These ids were added to storage: {ids}")
 
