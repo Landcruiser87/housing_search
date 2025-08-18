@@ -130,14 +130,24 @@ def check_ids(data:list)->list:
         data (list): List of only new Propertyinfo objects
     """
 
-    #TODO - Add logic for detecting price changes.  
-        # Could put that in the checkIDs function?
-        #Not sure what that looks like.
-        #Or maybe its a separate function overall.
 
     j_ids = set(jsondata.keys())
     n_ids = set([data[x].id for x in range(len(data))])
+    
+    #Look for new ids (difference)
     newids = n_ids - j_ids
+
+    #Look for same ids in the new vs old (intersection)
+    common_ids = n_ids & j_ids
+    p_chn_ids = set()
+    for ids in common_ids:
+        idx = [data[x].id == ids for x in range(len(data))]
+        if jsondata[ids].get("price") != data[idx[0]].price:
+            p_chn_ids.add(ids)
+
+    #Combine the two sets (union)
+    newids = newids | p_chn_ids
+
     if newids:
         newdata = []
         data_ids = [(idx, data[idx].id) for idx, _ in enumerate(range(len(data)))]
