@@ -142,7 +142,8 @@ def check_ids(data:list)->list:
     p_chn_ids = set()
     for ids in common_ids:
         idx = [data[x].id == ids for x in range(len(data))]
-        if jsondata[ids].get("price") != data[idx[0]].price:
+        idx = idx.index(True)
+        if jsondata[ids].get("price") != data[idx].price:
             p_chn_ids.add(ids)
 
     #Combine the two sets (union)
