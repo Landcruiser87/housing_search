@@ -52,12 +52,15 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
     return listings
 
 def date_format(sample:str, decimals:bool=False):
-    if decimals:
-        dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%S.%fZ")
+    if sample != None:
+        if decimals:
+            dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%S.%fZ")
+        else:
+            dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%SZ")
+        return dt_obj.strftime("%m-%d-%Y_%H-%M-%S")
     else:
-        dt_obj = datetime.datetime.strptime(sample, "%Y-%m-%dT%H:%M:%SZ")
-    return dt_obj.strftime("%m-%d-%Y_%H-%M-%S")
-
+        return None
+    
 def bedbath_format(sample:str):
     if isinstance(sample, (int, float)):
         return float(sample)

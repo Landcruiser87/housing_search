@@ -29,7 +29,6 @@ AREAS = [
     ('Marshall','MI'),
     ('Angola','IN'),
     ('Fremont','IN'),
-    ('Mongo','IN'),
     ('Auburn','IN'),
 ]
 
@@ -231,7 +230,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    # shuffle(AREAS)
+    shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

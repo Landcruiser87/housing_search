@@ -22,47 +22,59 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     listings = []
     defaultval = None
     #Set the outer loop over each card returned. 
-
-    for card in result.find_all("div", _class=lambda x: x and x.startswith("HomeCardsContainer")):
+    search_results = None
+    
+    # for card in result.select('div[id^="MapHomeCard"][class^="HomeCardsContainer"]'):
+    # for card in result.find_all("div", id=id_patt,_class=class_patt):
         # for subsearch in card.find_all("script", {"type":"application/ld+json"}):
-        for search_results in card.find_all("script", {"type":"application/ld+json"}):
-            if search_results:
-                listinginfo = json.loads(search_results.text)
-                listing         = Propertyinfo()
-                listing.url     = listinginfo[0].get("url", defaultval)
-                listing.id      = listing.url.split("/")[-1]
-                listing.address = listinginfo[0].get("name")
-                listing.lat     = float(listinginfo[0]["geo"].get("latitude"))
-                listing.long    = float(listinginfo[0]["geo"].get("longitude"))
-                listing.beds    = listinginfo[0].get("numberOfRooms")
-                listing.price = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
+        # search_results = card.find("script", {"type":"application/ld+json"})
+    for card in result.find_all("script", {"type":"application/ld+json"}):
+        listinginfo = json.loads(card.text)
+        if isinstance(listinginfo, list):
+            listing              = Propertyinfo()
+            listing.url          = listinginfo[1].get("url", defaultval)
+            if listing.url.endswith("/"):
+                listing.id = listing.url.split("/")[-2]
+            else:
+                listing.id = listing.url.split("/")[-1]
+            listing.status       = "For Sale"
+            listing.source       = source
+            listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)
+            listing.state        = listinginfo[0]["address"].get("addressRegion", defaultval)
+            listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
+            listing.address      = listinginfo[0].get("name", defaultval)
+            listing.htype        = listinginfo[0].get("@type", defaultval)
+            if "numberOfBaths" in listinginfo[0].keys():
+                listing.baths    = bedbath_format(listinginfo[0].get("numberOfBaths", defaultval))
+            if "numberOfRooms" in listinginfo[0].keys():
+                listing.beds     = bedbath_format(listinginfo[0].get("numberOfRooms", defaultval))
+            listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
+            listing.price        = float("".join(x for x in listinginfo[1]["offers"]["price"] if x.isnumeric()))
+            listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
+            listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
+            # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
+            # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
+            # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
+            # listing.seller       = search_result["branding"][0].get("name", defaultval)
+            # listing.sellerinfo   = search_result.get("advertisers", defaultval)
+            # listing.img_url = listinginfo.get("photos", defaultval)
+            # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
 
-                # listing.id           = search_result.get("listing_id", defaultval)
-                # listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
-                # listing.img_url      = search_result.get("photos", defaultval)
-                # listing.status       = search_result.get("status", defaultval)
-                # listing.source       = source
-                # listing.city         = search_result["location"]["address"].get("city", defaultval)
-                # listing.state        = search_result["location"]["address"].get("state_code", defaultval)
-                # listing.zipc         = search_result["location"]["address"].get("postal_code", defaultval)
-                # listing.address      = search_result["location"]["address"]["line"] + ", " + listing.city + ", " + listing.state + " " + listing.zipc 
-                # listing.htype        = search_result["description"].get("type", defaultval)
-                # listing.baths        = bedbath_format(search_result["description"].get("baths_consolidated", defaultval))
-                # listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
-                # listing.sqft         = search_result["description"].get("sqft", defaultval)
-                # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
-                # listing.price        = search_result.get("list_price", defaultval)
-                # listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-                # listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
-                # listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
-                # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
-                # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
-                # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
-                # listing.seller       = search_result["branding"][0].get("name", defaultval)
-                # listing.sellerinfo   = search_result.get("advertisers", defaultval)
             listings.append(listing)
 
     return listings
+def bedbath_format(sample:str):
+    if isinstance(sample, (int, float)):
+        return float(sample)
+    clean = "".join([x for x in sample if (x.isnumeric()) | (x == ".")])
+    try:
+        number = float(clean)
+        return number
+
+    except (ValueError, TypeError) as e:
+        logger.warning(f"Error: Invalid input. The input must be a an int or float:\n {e}")
+        return None
 
 def money_launderer(price:int)->str:
     """[Formats price to a single decimal k format.  This is redfins weird encoding nonsense]
@@ -99,58 +111,61 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
         property_listings (list): List of dataclass objects
     """    
     #Check for spaces in the search neighborhood
-    CITY = neigh[0].lower()
-    STATE = neigh[1].lower()
+    CITY = neigh[0]
+    STATE = neigh[1]
     MAXPRICE = int(srch_par[0])
     MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
     chrome_version = np.random.randint(120, 137)
-
+    neighid = None
     BASE_HEADERS = {
-        'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
+        # 'accept': '*/*',
+        # 'accept-language': 'en-US,en;q=0.9',
+        # 'priority': 'u=1, i',
         'origin':'https://www.redfin.com',
+        # 'sec-ch-ua': f'"Chromium";v={chrome_version}, "Not:A-Brand";v="24", "Google Chrome";v={chrome_version}',
+        # 'sec-ch-ua-mobile': '?1',
+        # 'sec-ch-ua-platform': '"Android"',
+        # 'sec-fetch-dest': 'empty',
+        # 'sec-fetch-mode': 'cors',
+        # 'sec-fetch-site': 'same-origin',
+        'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36',
     }
 
     #Search by neighborhood
     if isinstance(neigh, tuple):
         # First grab the map coordinates update our next request
-        #BUG stupid neighborhood encodings. 
-            #Beecause redfin dumps their own numerical zip for neighborhoods, I need to make
-            #two requests when searching redfin by string
+        #Because redfin dumps their own numerical zip for neighborhoods, I need to make
+        #two requests when searching redfin by string
             #1. Make a request to see what neighborhood code goes with the search term. 
             #2. Request the appropriate neigh with paramaterized search. 
 
         SH_PARAMS = {
-            "location":"",
+            "location":f"{CITY.lower()}, {STATE.lower()}",
             "start": 0,
             "count": 10,
             "v": 2,
-            "market": f"{state_dict[STATE]}",
+            "market": f"{state_dict[STATE].lower()}",
             "al": 1,
             "iss": "false",
             "ooa": "true",
             "mrs": "false",
-            "region_id": 4433,
-            "region_type": 6,
+            "region_id": "NaN",
+            "region_type": "NaN",
             "lat": 41.833670000000005,
-            "lng": -87.73184,
-            "includeAddressInfo": "false",
+            "lng": -85.01138,
+            "includeAddressInfo":"false",
             "lastSearches":""
         }
 
-        # https://www.redfin.com/stingray/api/v1/search/rentals
-    
         #Search by neighborhood
-        if isinstance(neigh, tuple):
-            url_map = "https://www.redfin.com/stingray/do/location-autocomplete?" + urlencode(SH_PARAMS)
+        url_map = "https://www.redfin.com/stingray/do/rental-location-autocomplete?" + urlencode(SH_PARAMS)
+            #NOTE - For some reason this works on the rentals, but not on the house buying endpoint? 
+                # ¯\_(ツ)_/¯
+            # BASE_HEADERS["referer"] = url_map
             # url_map = f'https://www.redfin.com/stingray/do/gis-search/' + urlencode(SH_PARAMS)
 
-        #Error Trapping
-        else:
-            logger.critical("Inproper input for redfin, moving to next site")
-            return
-
-        response = requests.get(url_map, headers=BASE_HEADERS)
+        response = requests.get(url_map[:-1], headers=BASE_HEADERS)
         
         # If there's an error, log it and return no data for that site
         if response.status_code != 200:
@@ -165,15 +180,16 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
         #Look up neighborhood id from autocomplete search query
         temp_dict = json.loads(response.text[4:])
         for neighborhood in temp_dict["payload"]['sections'][0]["rows"]:
-            if neighborhood.get("name").lower() == neigh.lower():
+            if neighborhood.get("name").lower() == CITY.lower():
                 neighid = neighborhood.get("id")[2:]
                 break
-
-        if " " in neigh:
-            neigh = "-".join(neigh.split(" "))
-        url_search = f'https://www.redfin.com/neighborhood/{neighid}/{STATE}/{CITY}/filter/property-type=house+townhouse+multifamily+land,max-price={MAXPRICE},min-beds={MINBEDS}'
-        response = requests.get(url_search, headers = BASE_HEADERS)
-
+        if neighid != None:
+            url_search = f'https://www.redfin.com/city/{neighid}/{STATE}/{CITY}/filter/property-type=house+townhouse+multifamily+land,max-price={MAXPRICE},min-beds={MINBEDS},min-baths={MINBATHS}'
+            response = requests.get(url_search, headers = BASE_HEADERS)
+        else:
+            logger.warning("Missing neighID")
+            return None
+        
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #TODO - Update these headers and URL when you get to zipcodes
