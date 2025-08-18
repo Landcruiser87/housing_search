@@ -30,6 +30,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
         listing.img_url      = search_result.get("photos", defaultval)
         listing.status       = search_result.get("status", defaultval)
+        listing.source       = source
         listing.city         = search_result["location"]["address"].get("city", defaultval)
         listing.state        = search_result["location"]["address"].get("state_code", defaultval)
         listing.zipc         = search_result["location"]["address"].get("postal_code", defaultval)
@@ -68,7 +69,7 @@ def bedbath_format(sample:str):
         return number
 
     except (ValueError, TypeError) as e:
-        logger.warning(f"Error: Invalid input. The input must be a number. Details: {e}")
+        logger.warning(f"Error: Invalid input. The input must be a an int or float:\n {e}")
         return None
 
 def money_launderer(price:list)->float:
