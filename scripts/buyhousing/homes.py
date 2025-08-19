@@ -87,6 +87,8 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             CITY = "-".join(neigh.lower().split(" "))
         url = f"https://www.homes.com/{CITY}-{STATE}/{MINBEDS}-{5}-bedroom/?property_type=1,2,32,8&bath-min={MINBATHS}&bath-max=5&price-max{MAXPRICE}"
             
+    
+    #TODO - Update this for zip search
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #BUG - here they need city state and zip to search by zip.  Might need a way to generate that eventually

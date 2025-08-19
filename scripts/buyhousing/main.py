@@ -144,6 +144,8 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
+            jsondata[ids]["last_pri_cha"] = jsondata[ids]["price"]
+            jsondata[ids]["price"] = data[idx].price
             p_chn_ids.add(ids)
 
     #Combine the two sets (union)
@@ -151,7 +153,7 @@ def check_ids(data:list)->list:
 
     if newids:
         newdata = []
-        data_ids = [(idx, data[idx].id) for idx, _ in enumerate(range(len(data)))]
+        data_ids = [(idx, data[idx].id) for idx in range(len(data))]
         #Only add the listings that are new.  
         for ids in newids:
            indx = [x[0] for x in data_ids if x[1]==ids][0]

@@ -174,7 +174,8 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
         else:
             logger.warning("Missing neighID")
             return None
-        
+    
+    #TODO - Update zipcode selection
     #Searchby ZipCode
     elif isinstance(neigh, int):
         #TODO - Update these headers and URL when you get to zipcodes

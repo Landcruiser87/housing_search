@@ -108,9 +108,10 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
     if isinstance(neigh, tuple):
         url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
 
+
+    #TODO - Update this for zip search
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        #TODO - Update this for zip search
         url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
     
     #Error Trapping
