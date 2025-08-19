@@ -42,9 +42,9 @@ SOURCES = {
 SITES = ["homes", "zillow", "redfin", "realtor"] 
 
 #Define search parameters
-MAXPRICE = 800_000
+MAXPRICE = 900_000
 MINBATHS = 2
-MINBEDS   = 4
+MINBEDS  = 4
 
 SEARCH_PARAMS = (
     MAXPRICE,
@@ -196,7 +196,7 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                 #This function will isolate new id's that aren't in the historical JSON
                 datacheck = check_ids(data)
                 if datacheck:
-                    logger.info("New data found, adding lat/lon/Lstop/crime")
+                    logger.info("New data found, checking lat/lon")
                     data = datacheck
                     del datacheck
 
