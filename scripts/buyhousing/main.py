@@ -147,7 +147,12 @@ def check_ids(data:list)->list:
             jsondata[ids]["last_pri_cha"] = jsondata[ids]["price"]
             jsondata[ids]["price"] = data[idx].price
             p_chn_ids.add(ids)
-
+    #BUG - Price changes
+        # Currently the price change id's just their price point updated
+        # I would like a way to flag it in the email that there's been
+        # a price change. 
+            #Could go off if the price change is null in the record and include it in the url tuple as a boolean
+        
     #Combine the two sets (union)
     newids = newids | p_chn_ids
 

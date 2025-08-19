@@ -28,9 +28,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             listing              = Propertyinfo()
             listing.url          = listinginfo[1].get("url", defaultval)
             if listing.url.endswith("/"):
-                listing.id = listing.url.split("/")[-2]
+                listing.id       = listing.url.split("/")[-2]
             else:
-                listing.id = listing.url.split("/")[-1]
+                listing.id       = listing.url.split("/")[-1]
             listing.status       = "For_Sale"
             listing.source       = source
             listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)

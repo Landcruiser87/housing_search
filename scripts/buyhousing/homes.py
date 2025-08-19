@@ -33,9 +33,9 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing = Propertyinfo()
                 listing.url = listinginfo[k1][k2][idx].get("url", defaultval)
                 if listing.url.endswith("/"):
-                    listing.id = listing.url.split("/")[-2]
+                    listing.id       = listing.url.split("/")[-2]
                 else:
-                    listing.id = listing.url.split("/")[-1]
+                    listing.id       = listing.url.split("/")[-1]
                 listing.img_url      = listinginfo[k1][k2][idx][k1].get("image", defaultval) 
                 listing.htype        = listinginfo[k1][k2][idx][k1].get("@type", defaultval)
                 listing.address      = listinginfo[k1][k2][idx].get("name", defaultval)
