@@ -611,7 +611,11 @@ def urlformat(urls:list)->str:
         for listing in grouped_by_city[city]:
             pchanged = listing['p_change']
             if pchanged:
-                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <i><b>{listing['p_change']}</b></i></li>"
+                if pchanged < 0:
+                    color = "green"
+                else:
+                    color = "red"
+                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <span style='color:{color}; font-weight: bold;'>{listing['p_change']}</span></li>"
             else:
                 links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
         

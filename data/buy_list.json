@@ -27510,253 +27510,6 @@
     ],
     "extras": {}
   },
-  "2983260278": {
-    "address": "404 N Elizabeth St, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/404-N-Elizabeth-St_Angola_IN_46703_M45437-38554",
-    "price": 179900,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b3210580393s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1608575440s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b663544812s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1323703077s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1864079428s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b4223179193s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b2821672138s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b3029832833s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b670226519s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b3994403677s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b527795045s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b489632800s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b2931169794s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b2796663286s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1878233759s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b515408005s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1789452574s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b836708980s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b2057906247s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/e247500916ceab3cd9d9a4667161311el-b1939748901s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_09-21-37",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 1.5,
-    "lotsqft": null,
-    "sqft": 1360,
-    "lat": 41.637683,
-    "long": 41.637683,
-    "zipc": "46703",
-    "list_dt": "06-18-2025_16-30-15",
-    "last_pri_dat": "06-18-2025_16-30-15",
-    "last_pri_cha": null,
-    "seller": "RE MAX Results",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "1958448",
-        "name": "Tracey Musser",
-        "builder": null,
-        "email": "traceymusser@remax.net",
-        "office": {
-          "name": "RE MAX Results",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2606686663",
-            "__typename": "AdvertiserPhone"
-          },
-          {
-            "number": "2606686663",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "74664723": {
-    "address": "116 N West St, Tekonsha, MI 49092",
-    "city": "Tekonsha",
-    "state": "MI",
-    "url": "https://www.zillow.com/homedetails/116-N-West-St-Tekonsha-MI-49092/74664723_zpid/",
-    "price": 179900,
-    "source": "www.zillow.com",
-    "status": "FOR_SALE",
-    "img_url": "https://photos.zillowstatic.com/fp/767bc8687a8d9803a35781c8a17aa2cb-p_e.jpg",
-    "date_pulled": "08-19-2025_09-21-45",
-    "description": "Price cut: $5,000 (8/19)",
-    "htype": "SINGLE_FAMILY",
-    "beds": 2.0,
-    "baths": 4.0,
-    "lotsqft": "0.3 acres",
-    "sqft": 1640,
-    "lat": 42.093193,
-    "long": -84.99402,
-    "zipc": "49092",
-    "list_dt": null,
-    "last_pri_dat": null,
-    "last_pri_cha": null,
-    "seller": "Hauska Home and Farm",
-    "sellerinfo": {
-      "isZillowOwned": false,
-      "pgapt": "ForSale",
-      "info2String": null,
-      "info6String": null,
-      "brokerName": "Hauska Home and Farm",
-      "marketingStatusSimplifiedCd": "For Sale by Agent"
-    },
-    "extras": {},
-    "daysOnZillow": 11,
-    "zestimate": 178500
-  },
-  "dwfnjzgtkx9je": {
-    "address": "395 Hyannis Hills Dr, Tekonsha, MI 49092",
-    "city": "Tekonsha",
-    "state": "MI",
-    "url": "https://www.homes.com/property/395-hyannis-hills-dr-tekonsha-mi/dwfnjzgtkx9je/",
-    "price": 289900,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/9357691834-669755991/395-hyannis-hills-dr-tekonsha-mi-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_09-21-49",
-    "description": "Buyer backed out on day of closing due to health issues. This home is a perfect fit for a buyer to consider the FHA 203k mortgage.  Update your kitchen, baths, flooring, anything about the house, including the walkout basement, just the way ''you want it'' and it happens within 90 days after you close! 1.43 acres, approx. 26 x 150 ft on the canal with immediate access on Vincent Lake.  Very",
-    "htype": "SingleFamilyResidence",
-    "beds": 4,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 3282,
-    "lat": null,
-    "long": null,
-    "zipc": "49092",
-    "list_dt": null,
-    "last_pri_dat": null,
-    "last_pri_cha": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "Remerica United Realty"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/F1LPoAotjUvpC1HwOVdmcr3Ww0N0nMR9EaxdBStKGKs/105/image.jpg?t=p&p=1",
-      "telephone": "(734) 612-8959",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Remerica United Realty"
-      },
-      "name": "Robert Merry"
-    },
-    "extras": null,
-    "last_s_date": null,
-    "last_s_price": null
-  },
-  "qpkj93zy851bs": {
-    "address": "116 N West St, Tekonsha, MI 49092",
-    "city": "Tekonsha",
-    "state": "MI",
-    "url": "https://www.homes.com/property/116-n-west-st-tekonsha-mi/qpkj93zy851bs/",
-    "price": 179900,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/6980096444-196312202/116-n-west-st-tekonsha-mi-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_09-21-49",
-    "description": "This beautifully maintained 4-bedroom, 2-bathroom ranch offers comfort, style, and convenience all in one. Step inside to discover newer luxury vinyl flooring and carpeting throughout, adding a fresh, modern touch. Enjoy the open floor plan with a skylight that fills the kitchen with natural light. The kitchen features ample cabinetry, a cozy coffee bar, and an eat-in area perfect for casual",
-    "htype": "SingleFamilyResidence",
-    "beds": 4,
-    "baths": 2,
-    "lotsqft": null,
-    "sqft": 1640,
-    "lat": null,
-    "long": null,
-    "zipc": "49092",
-    "list_dt": null,
-    "last_pri_dat": null,
-    "last_pri_cha": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "Hauska Home and Farm"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/6o5GSZ9a5RGCmnRkXtN3AtOSmbrfcgQ4CCRMZQla4R0/105/image.jpg?t=p&p=1",
-      "telephone": "(269) 251-4139",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Hauska Home and Farm"
-      },
-      "name": "Jami Lind"
-    },
-    "extras": null,
-    "last_s_date": null,
-    "last_s_price": null
-  },
   "2985141959": {
     "address": "116 N West St, Tekonsha, MI 49092",
     "city": "Tekonsha",
@@ -28564,7 +28317,7 @@
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-19-2025_17-01-25",
+    "date_pulled": "08-19-2025_17-14-53",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
@@ -28577,7 +28330,7 @@
     "list_dt": null,
     "price_ch_amt": 15000,
     "last_price": 810000,
-    "price_c_dat": "08-19-2025_17-01-31",
+    "price_c_dat": "08-19-2025_17-14-59",
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -29189,7 +28942,7 @@
         "__typename": "HomePhoto"
       }
     ],
-    "date_pulled": "08-19-2025_17-02-30",
+    "date_pulled": "08-19-2025_17-14-20",
     "description": null,
     "htype": "single_family",
     "beds": 5.0,
@@ -29200,9 +28953,9 @@
     "long": 42.292456,
     "zipc": "49068",
     "list_dt": "06-19-2025_13-59-42",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "06-19-2025_13-59-42",
+    "price_ch_amt": 99000,
+    "last_price": 800000,
+    "price_c_dat": "08-19-2025_17-14-27",
     "seller": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
     "sellerinfo": [
       {
@@ -29324,7 +29077,7 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/220-Lane-101FA-Jimmerson-Lk_Angola_IN_46703_M42405-54523",
-    "price": 889900,
+    "price": 930900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": [
@@ -29486,7 +29239,7 @@
     "list_dt": "08-17-2025_09-18-18",
     "price_ch_amt": null,
     "last_price": null,
-    "price_c_dat": "08-17-2025_09-18-18",
+    "price_c_dat": null,
     "seller": "CENTURY 21 Bradley Realty, Inc.",
     "sellerinfo": [
       {
@@ -30097,6 +29850,122 @@
         "__typename": "HomeAdvertiser"
       }
     ],
+    "extras": {}
+  },
+  "74664723": {
+    "address": "116 N West St, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/116-N-West-St-Tekonsha-MI-49092/74664723_zpid/",
+    "price": 179900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/767bc8687a8d9803a35781c8a17aa2cb-p_e.jpg",
+    "date_pulled": "08-19-2025_17-15-33",
+    "description": "Price cut: $5,000 (8/19)",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "0.3 acres",
+    "sqft": 1640,
+    "lat": 42.093193,
+    "long": -84.99402,
+    "zipc": "49092",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Hauska Home and Farm",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "Hauska Home and Farm",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 11,
+    "zestimate": 178500
+  },
+  "dwfnjzgtkx9je": {
+    "address": "395 Hyannis Hills Dr, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.homes.com/property/395-hyannis-hills-dr-tekonsha-mi/dwfnjzgtkx9je/",
+    "price": 289900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/9357691834-669755991/395-hyannis-hills-dr-tekonsha-mi-primaryphoto.jpg",
+    "date_pulled": "08-19-2025_17-15-38",
+    "description": "Buyer backed out on day of closing due to health issues. This home is a perfect fit for a buyer to consider the FHA 203k mortgage.  Update your kitchen, baths, flooring, anything about the house, including the walkout basement, just the way ''you want it'' and it happens within 90 days after you close! 1.43 acres, approx. 26 x 150 ft on the canal with immediate access on Vincent Lake.  Very",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": 3282,
+    "lat": null,
+    "long": null,
+    "zipc": "49092",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Remerica United Realty"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/F1LPoAotjUvpC1HwOVdmcr3Ww0N0nMR9EaxdBStKGKs/105/image.jpg?t=p&p=1",
+      "telephone": "(734) 612-8959",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Remerica United Realty"
+      },
+      "name": "Robert Merry"
+    },
+    "extras": {}
+  },
+  "qpkj93zy851bs": {
+    "address": "116 N West St, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.homes.com/property/116-n-west-st-tekonsha-mi/qpkj93zy851bs/",
+    "price": 179900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/6980096444-196312202/116-n-west-st-tekonsha-mi-primaryphoto.jpg",
+    "date_pulled": "08-19-2025_17-15-38",
+    "description": "This beautifully maintained 4-bedroom, 2-bathroom ranch offers comfort, style, and convenience all in one. Step inside to discover newer luxury vinyl flooring and carpeting throughout, adding a fresh, modern touch. Enjoy the open floor plan with a skylight that fills the kitchen with natural light. The kitchen features ample cabinetry, a cozy coffee bar, and an eat-in area perfect for casual",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 1640,
+    "lat": null,
+    "long": null,
+    "zipc": "49092",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Hauska Home and Farm"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/6o5GSZ9a5RGCmnRkXtN3AtOSmbrfcgQ4CCRMZQla4R0/105/image.jpg?t=p&p=1",
+      "telephone": "(269) 251-4139",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Hauska Home and Farm"
+      },
+      "name": "Jami Lind"
+    },
     "extras": {}
   }
 }
