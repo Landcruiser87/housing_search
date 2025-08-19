@@ -604,13 +604,13 @@ def urlformat(urls:list)->str:
         if i > 0:
             links_html += "<hr>\n"
             
-        links_html += f"<h2>{city}</h2>\n<ul>"
+        links_html += f"<h2>{city}</h2>\n<ol>"
         
         # Iterate through the listings for each city
         for listing in grouped_by_city[city]:
             links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
         
-        links_html += "</ul>"
+        links_html += "</ol>"
 
     return links_html
 

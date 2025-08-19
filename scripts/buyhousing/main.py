@@ -39,12 +39,12 @@ SOURCES = {
     "homes"   :("www.homes.com"     , homes)
 }
 
-SITES = ["zillow", "redfin", "realtor", "homes"] 
+SITES = ["homes", "zillow", "redfin", "realtor"] 
 
 #Define search parameters
 MAXPRICE = 800_000
 MINBATHS = 2
-MINBEDS   = 2
+MINBEDS   = 4
 
 SEARCH_PARAMS = (
     MAXPRICE,
