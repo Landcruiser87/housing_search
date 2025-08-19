@@ -615,7 +615,7 @@ def urlformat(urls:list)->str:
                     color = "green"
                 else:
                     color = "red"
-                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <span style='color:{color}; font-weight: bold;'>{listing['p_change']}</span></li>"
+                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <span style='color:{color}; font-weight: bold;'>${listing['p_change']}</span></li>"
             else:
                 links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
         
