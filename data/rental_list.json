@@ -74871,5 +74871,156 @@
       "violence_score": 27.07,
       "property_d_score": 0.16
     }
+  },
+  "456076779": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2959-N-Hamlin-Ave-3B-Chicago-IL-60618/456076779_zpid/",
+    "address": "2959 N Hamlin Ave #3B, Chicago, IL 60618",
+    "date_pulled": "08-19-2025_09-56-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.935413,
+    "long": -87.72189,
+    "L_dist": [
+      "Belmont",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 4.03,
+      "gun_score": 4.97,
+      "murder_score": 1.64,
+      "perv_score": 1.62,
+      "theft_score": 40.9,
+      "violence_score": 25.48,
+      "property_d_score": 0.15
+    }
+  },
+  "3659282": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/6236-W-Patterson-Ave-Chicago-IL-60634/3659282_zpid/",
+    "address": "6236 W Patterson Ave, Chicago, IL 60634",
+    "date_pulled": "08-19-2025_09-58-23",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1080.0,
+    "lat": 41.946877,
+    "long": -87.78296,
+    "L_dist": [
+      "Jefferson Park",
+      1.99
+    ],
+    "crime_sc": {
+      "drug_score": 6.34,
+      "gun_score": 6.42,
+      "murder_score": 2.21,
+      "perv_score": 2.02,
+      "theft_score": 34.14,
+      "violence_score": 28.65,
+      "property_d_score": 0.2
+    }
+  },
+  "456069929": {
+    "source": "www.zillow.com",
+    "price": 2100.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/2526-W-Gunnison-St-1-Chicago-IL-60625/456069929_zpid/",
+    "address": "2526 W Gunnison St #1, Chicago, IL 60625",
+    "date_pulled": "08-19-2025_09-59-43",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.96999,
+    "long": -87.692444,
+    "L_dist": [
+      "Rockwell",
+      0.28
+    ],
+    "crime_sc": {
+      "drug_score": 3.66,
+      "gun_score": 4.53,
+      "murder_score": 1.42,
+      "perv_score": 1.56,
+      "theft_score": 42.65,
+      "violence_score": 24.54,
+      "property_d_score": 0.14
+    }
+  },
+  "9708360310": {
+    "source": "www.realtor.com",
+    "price": 2100,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2526-W-Gunnison-St-1_Chicago_IL_60625_M97083-60310",
+    "address": "2526 W Gunnison St Unit 1 Chicago, IL 60625",
+    "date_pulled": "08-19-2025_10-00-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 850.0,
+    "lat": 41.969887,
+    "long": -87.692451,
+    "L_dist": [
+      "Rockwell",
+      0.27
+    ],
+    "crime_sc": {
+      "drug_score": 3.66,
+      "gun_score": 4.53,
+      "murder_score": 1.42,
+      "perv_score": 1.57,
+      "theft_score": 42.64,
+      "violence_score": 24.54,
+      "property_d_score": 0.14
+    }
+  },
+  "2081384254": {
+    "source": "www.zillow.com",
+    "price": 2400.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5037-N-Western-Ave-APT-3S-Chicago-IL-60625/2081384254_zpid/",
+    "address": "5037 N Western Ave APT 3S, Chicago, IL 60625",
+    "date_pulled": "08-19-2025_10-01-46",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1100.0,
+    "lat": 41.973305,
+    "long": -87.688805,
+    "L_dist": [
+      "Western",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.45,
+      "gun_score": 4.47,
+      "murder_score": 1.4,
+      "perv_score": 1.49,
+      "theft_score": 42.97,
+      "violence_score": 24.49,
+      "property_d_score": 0.14
+    }
+  },
+  "ptrk1pv": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2420-w-fillmore-st-chicago-il/ptrk1pv/",
+    "address": "2420 W Fillmore St Unit 3, Chicago, IL 60612",
+    "date_pulled": "08-19-2025_10-04-14",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
   }
 }
