@@ -33,13 +33,13 @@ AREAS = [
 ]
 
 SOURCES = {
-    "realtor" :("www.realtor.com"   , realtor),
-    "zillow"  :("www.zillow.com"    , zillow),
-    "redfin"  :("www.redfin.com"    , redfin),
-    "homes"   :("www.homes.com"     , homes)
+    "homes"  :("www.homes.com"  , homes),
+    "realtor":("www.realtor.com", realtor),
+    "redfin" :("www.redfin.com" , redfin),
+    "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["homes", "zillow", "redfin", "realtor"] 
+SITES = ["homes", "realtor", "redfin", "zillow"] 
 
 #Define search parameters
 MAXPRICE = 900_000
@@ -245,7 +245,7 @@ def main():
     global newlistings, jsondata
     newlistings = []
     fp = "./data/buy_list.json"
-    totalstops = len(AREAS) * len(SITES)
+    totalstops = len(AREAS) * len(SITES) + 1
     layout, progbar, task, main_table = support.make_rich_display(totalstops)
 
     #Load rental_list.json

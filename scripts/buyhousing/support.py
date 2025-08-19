@@ -430,20 +430,21 @@ class CustomEncoder(json.JSONEncoder):
         json (object): Json serialized format
     """	
     def default(self, obj):
-        if isinstance(obj, np.integer):
-            return int(obj)
-        elif isinstance(obj, np.floating):
-            return float(obj)
-        elif isinstance(obj, np.ndarray):
-            return obj.tolist()
-        elif isinstance(obj, pd.DataFrame):
-            return obj.to_json(orient='records')
-        elif isinstance(obj, dict):
-            return obj.__dict__
-        elif isinstance(obj, datetime.datetime):
-            return datetime.datetime.strftime(obj, "%m-%d-%Y_%H-%M-%S")
-        else:
-            return super(CustomEncoder, self).default(obj)
+        match obj:
+            case np.integer():
+                return int(obj)
+            case np.floating:
+                return float(obj)
+            case np.ndarray:
+                return obj.tolist()
+            case pd.DataFrame:
+                return obj.to_json(orient='records')
+            case dict():
+                return obj.__dict__
+            case datetime.datetime():
+                return datetime.datetime.strftime(obj, "%m-%d-%Y_%H-%M-%S")
+            case _:
+                return super(CustomEncoder, self).default(obj)
 
 #FUNCTION Convert Date
 def date_convert(time_big:datetime)->datetime:
