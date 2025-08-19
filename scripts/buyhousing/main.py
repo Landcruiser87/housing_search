@@ -24,12 +24,12 @@ from support import logger, console, log_time, get_time
 # if doesn't have one, its a smaller targeted neighborhood.
 
 AREAS = [
-    # ('Angola'   ,'IN'),
-    # ('Auburn'   ,'IN'),
-    # ('Fremont'  ,'IN'),
+    ('Angola'   ,'IN'),
+    ('Auburn'   ,'IN'),
+    ('Fremont'  ,'IN'),
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-    # ('Coldwater','MI'),
+    ('Coldwater','MI'),
 ]
 
 SOURCES = {
