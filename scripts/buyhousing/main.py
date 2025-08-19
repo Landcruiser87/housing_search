@@ -84,8 +84,8 @@ class Propertyinfo():
     zipc        : int = None
     list_dt     : str = None
     price_change: bool = False
-    last_pri_dat: str = None
-    last_pri_cha: float = None
+    price_ch_amt: float = None #last_pri_cha
+    price_c_dat : str = None
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
@@ -145,37 +145,38 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
-            jsondata[ids]["last_pri_cha"] = jsondata[ids]["price"]
-            jsondata[ids]["last_pri_dt"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            jsondata[ids]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
+            jsondata[ids]["last_pri_dat"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
             jsondata[ids]["price_changed"] = True
             jsondata[ids]["price"] = data[idx].price
             p_chn_ids.add(ids)
-    #BUG - Price changes
-        # Currently the price change id's just their price point updated
-        # I would like a way to flag it in the email that there's been
-        # a price change. 
-            #Could go off if the price change is null in the record and include it in the url tuple as a boolean
         
     if newids:
         # Filter the list of properties by id
         newdata = filter(lambda listing : listing.id in newids, data)
-        if p_chn_ids:
-            pricechanges = filter(lambda listing : listing.id in p_chn_ids, jsondata)
-            return list(newdata).extend(pricechanges)
-        else:
-            return list(newdata)
-        
-        # newdata = []
-        # data_ids = [(idx, data[idx].id) for idx in range(len(data))]
-        # #Only add the listings that are new.  
-        # for ids in newids:
-        #    indx = [x[0] for x in data_ids if x[1]==ids][0]
-        #    newdata.append(data[indx]) 
-        # return newdata
-
+    if p_chn_ids:
+        #Filter the saved jsondata for price changes
+        pricechanges = filter(lambda listing : listing.id in p_chn_ids, jsondata)
+    
+    if newdata & pricechanges:
+        return list(newdata).extend(list(pricechanges))
+    elif newdata:
+        return list(newdata)
+    elif pricechanges:      
+        return list(pricechanges)  
     else:
         logger.info("Listing(s) already stored in rental_list.json") 
         return None
+    
+    #Old code keeping for now
+    # newdata = []
+    # data_ids = [(idx, data[idx].id) for idx in range(len(data))]
+    # #Only add the listings that are new.  
+    # for ids in newids:
+    #    indx = [x[0] for x in data_ids if x[1]==ids][0]
+    #    newdata.append(data[indx]) 
+    # return newdata
+
 
 #FUNCTION Scrape data
 def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):

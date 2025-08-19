@@ -55,11 +55,11 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
                 listing.seller       = listinginfo[k1][k2][idx]["offers"].get("seller", defaultval)
                 listing.sellerinfo   = listinginfo[k1][k2][idx]["offers"].get("offeredBy", defaultval)
-                listing.last_s_date  = None
-                listing.last_s_price = None
-                listing.list_dt      = None
-                listing.lotsqft      = None
-                listing.extras       = None
+                # listing.last_s_date  = None
+                # listing.last_s_price = None
+                # listing.list_dt      = None
+                # listing.lotsqft      = None
+                # listing.extras       = None
                 # listing.lat = float(listinginfo[k1][idx]["geo"].get("latitude", defaultval))
                 # listing.long = float(listinginfo[k1][idx]["geo"].get("longitude", defaultval))
                 listings.append(listing)
