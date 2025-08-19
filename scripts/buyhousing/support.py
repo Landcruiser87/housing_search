@@ -593,8 +593,8 @@ def urlformat(urls:list)->str:
     urls = sorted(urls, key=lambda x:(x[2], x[1]))
 
     grouped_by_city = defaultdict(list)
-    for link, site, city, address in urls:
-        grouped_by_city[city].append({'link': link, 'site': site, 'address': address})
+    for link, site, city, address, pchange in urls:
+        grouped_by_city[city].append({'link': link, 'site': site, 'address': address, 'p_change':pchange})
 
     links_html = ""
     # Use an index to add a separator between cities
@@ -608,7 +608,11 @@ def urlformat(urls:list)->str:
         
         # Iterate through the listings for each city
         for listing in grouped_by_city[city]:
-            links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
+            pchanged = listing['pchange']
+            if pchanged:
+                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <i><b>{listing['p_change']}</b></i></li>"
+            else:
+                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
         
         links_html += "</ol>"
 

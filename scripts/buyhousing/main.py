@@ -83,7 +83,6 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
-    price_change: bool = False
     price_ch_amt: int = None #last_pri_cha
     last_price  : int = None
     price_c_dat : str = None
@@ -111,7 +110,7 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address")) for idx in new_dict.keys()]
+    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx].get("price_ch_amt")) for idx in new_dict.keys()]
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
@@ -147,10 +146,9 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
-            data[idx]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
-            data[idx]["price_c_dat"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            data[idx]["price_changed"] = True
-            data[idx]["last_price"] = jsondata[ids]["price"]
+            data[idx].price_ch_amt = data[idx].price - jsondata[ids]["price"]
+            data[idx].price_c_dat = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            data[idx].last_price = jsondata[ids]["price"]
             p_chn_ids.add(ids)
         
     if newids:
@@ -158,7 +156,7 @@ def check_ids(data:list)->list:
         newdata = list(filter(lambda listing : listing.id in newids, data))
     if p_chn_ids:
         #Filter the saved jsondata for price changes
-        pricechanges = list(filter(lambda listing : listing in p_chn_ids, jsondata.keys()))
+        pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
     
     if (newdata != None) & (pricechanges != None):
         return newdata.extend(pricechanges)
