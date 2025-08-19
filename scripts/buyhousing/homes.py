@@ -36,6 +36,9 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                     listing.id       = listing.url.split("/")[-2]
                 else:
                     listing.id       = listing.url.split("/")[-1]
+                if listing.id == None:
+                    logger.warning("id not found")
+                    continue
                 listing.img_url      = listinginfo[k1][k2][idx][k1].get("image", defaultval) 
                 listing.htype        = listinginfo[k1][k2][idx][k1].get("@type", defaultval)
                 listing.address      = listinginfo[k1][k2][idx].get("name", defaultval)

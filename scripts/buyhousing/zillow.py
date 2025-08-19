@@ -26,6 +26,9 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
     for listinginfo in result:
         listing              = Propertyinfo()
         listing.id           = listinginfo.get("zpid", defaultval)
+        if listing.id == None:
+            logger.warning("id not found")
+            continue
         listing.url          = listinginfo.get("detailUrl", defaultval)
         listing.img_url      = listinginfo.get("imgSrc", defaultval)
         listing.status       = listinginfo.get("statusType", defaultval)

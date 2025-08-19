@@ -31,6 +31,9 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
                 listing.id       = listing.url.split("/")[-2]
             else:
                 listing.id       = listing.url.split("/")[-1]
+            if listing.id == None:
+                logger.warning("id not found")
+                continue
             listing.status       = "For_Sale"
             listing.source       = source
             listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)

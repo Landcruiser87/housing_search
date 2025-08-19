@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 #Import supporting files
 import realtor, zillow, redfin, homes, support
 #Import logger and console from support
-from support import logger, console, log_time
+from support import logger, console, log_time, get_time
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
@@ -83,6 +83,7 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
+    price_change: bool = False
     last_pri_dat: str = None
     last_pri_cha: float = None
     seller      : dict = field(default_factory=lambda:{})
@@ -145,6 +146,8 @@ def check_ids(data:list)->list:
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
             jsondata[ids]["last_pri_cha"] = jsondata[ids]["price"]
+            jsondata[ids]["last_pri_dt"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            jsondata[ids]["price_changed"] = True
             jsondata[ids]["price"] = data[idx].price
             p_chn_ids.add(ids)
     #BUG - Price changes
@@ -153,17 +156,22 @@ def check_ids(data:list)->list:
         # a price change. 
             #Could go off if the price change is null in the record and include it in the url tuple as a boolean
         
-    #Combine the two sets (union)
-    newids = newids | p_chn_ids
-
     if newids:
-        newdata = []
-        data_ids = [(idx, data[idx].id) for idx in range(len(data))]
-        #Only add the listings that are new.  
-        for ids in newids:
-           indx = [x[0] for x in data_ids if x[1]==ids][0]
-           newdata.append(data[indx]) 
-        return newdata
+        # Filter the list of properties by id
+        newdata = filter(lambda listing : listing.id in newids, data)
+        if p_chn_ids:
+            pricechanges = filter(lambda listing : listing.id in p_chn_ids, jsondata)
+            return list(newdata).extend(pricechanges)
+        else:
+            return list(newdata)
+        
+        # newdata = []
+        # data_ids = [(idx, data[idx].id) for idx in range(len(data))]
+        # #Only add the listings that are new.  
+        # for ids in newids:
+        #    indx = [x[0] for x in data_ids if x[1]==ids][0]
+        #    newdata.append(data[indx]) 
+        # return newdata
 
     else:
         logger.info("Listing(s) already stored in rental_list.json") 

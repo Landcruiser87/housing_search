@@ -25,6 +25,10 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
     for search_result in resp_json["data"]["home_search"]["properties"]:
         listing = Propertyinfo()
         listing.id           = search_result.get("listing_id", defaultval)
+        if listing.id == None:
+            logger.warning("id not found")
+            continue
+        
         listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
         listing.img_url      = search_result.get("photos", defaultval)
         listing.status       = search_result.get("status", defaultval)
