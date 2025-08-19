@@ -84,7 +84,8 @@ class Propertyinfo():
     zipc        : int = None
     list_dt     : str = None
     price_change: bool = False
-    price_ch_amt: float = None #last_pri_cha
+    price_ch_amt: int = None #last_pri_cha
+    last_price  : int = None
     price_c_dat : str = None
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
@@ -137,6 +138,7 @@ def check_ids(data:list)->list:
     
     #Look for new ids (difference)
     newids = n_ids - j_ids
+    newdata, pricechanges = None, None
 
     #Look for same ids in the new vs old (intersection)
     common_ids = n_ids & j_ids
@@ -145,25 +147,25 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
-            jsondata[ids]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
-            jsondata[ids]["last_pri_dat"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            jsondata[ids]["price_changed"] = True
-            jsondata[ids]["price"] = data[idx].price
+            data[idx]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
+            data[idx]["price_c_dat"] = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            data[idx]["price_changed"] = True
+            data[idx]["last_price"] = jsondata[ids]["price"]
             p_chn_ids.add(ids)
         
     if newids:
         # Filter the list of properties by id
-        newdata = filter(lambda listing : listing.id in newids, data)
+        newdata = list(filter(lambda listing : listing.id in newids, data))
     if p_chn_ids:
         #Filter the saved jsondata for price changes
-        pricechanges = filter(lambda listing : listing.id in p_chn_ids, jsondata)
+        pricechanges = list(filter(lambda listing : listing in p_chn_ids, jsondata.keys()))
     
-    if newdata & pricechanges:
-        return list(newdata).extend(list(pricechanges))
+    if (newdata != None) & (pricechanges != None):
+        return newdata.extend(pricechanges)
     elif newdata:
-        return list(newdata)
+        return newdata
     elif pricechanges:      
-        return list(pricechanges)  
+        return pricechanges
     else:
         logger.info("Listing(s) already stored in rental_list.json") 
         return None
