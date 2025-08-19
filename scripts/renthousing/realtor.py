@@ -20,11 +20,11 @@ def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
     """
 
     listings = []
-    listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
     if isinstance(neigh, str):
         neigh = neigh.lower()
     #Set the outer loop over each card returned. 
     for rental in resp_json["data"]["home_search"]["properties"]:
+        listingid = price = beds = sqft = lat = long = baths = pets = url = address = current_time = None
         #Get the propertyid
         listingid = rental.get("property_id")
 
@@ -54,9 +54,15 @@ def get_listings(resp_json:dict, neigh:str|int, source:str, Propertyinfo)->list:
         
         lat = rental["location"]["address"]["coordinate"]["lat"]
         long = rental["location"]["address"]["coordinate"]["lon"]
-        addy = rental["location"]["address"].get("line") + " " + rental["location"]["address"].get("city") + ", " + rental["location"]["address"].get("state_code") + " " + rental["location"]["address"].get("postal_code")
-        address = addy.strip()
-
+        line = rental["location"]["address"].get("line")
+        city = rental["location"]["address"].get("city")
+        state =rental["location"]["address"].get("state_code")
+        zipc = rental["location"]["address"].get("postal_code")
+        if line:
+            addy = ", ".join([line, city]) + ", " + " ".join([state, zipc])
+            address = addy.strip()
+        else:
+            continue
         #Pets is already secured in the search query so we don't have to confirm it in the data.
         pets = True
 

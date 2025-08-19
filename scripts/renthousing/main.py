@@ -23,13 +23,14 @@ from support import logger, console, log_time
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 AREAS = [
+    'Lincoln Square',  #    
     'Ravenswood',
     'Irving Park',     #
     'Portage Park',    #
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
-    'Lincoln Square',  #    
+    
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Roscoe Village',
@@ -60,7 +61,7 @@ SOURCES = {
     "homes"     :("www.homes.com"     , homes)
 }
 
-SITES = ["redfin", "homes", "zillow", "craigs", "realtor", "apartments"] 
+SITES = ["realtor", "redfin", "homes", "zillow", "craigs", "apartments"] 
 
 # Define City / State / Minimum beds, Max rent, and whether you have a dog (sorry cat people.  You're on your own.  Lol)
 CITY    = "Chicago"
