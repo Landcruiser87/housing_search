@@ -509,7 +509,7 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         if not listing.address:
             continue
         
-        logger.info(f"GPS extracted for {address}")
+        logger.info(f"GPS extracted for {listing.address}")
         run_sleep(np.random.randint(3, 8), f"Get Lat/Long @ {listing.address.split(",")[0]}", layout)
         address = listing.address
         
