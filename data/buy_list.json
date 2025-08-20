@@ -27881,1348 +27881,6 @@
     ],
     "extras": {}
   },
-  "2981410141": {
-    "address": "3300 W Shady Side Rd, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/3300-W-Shady-Side-Rd_Angola_IN_46703_M45558-49985",
-    "price": 899000,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m962010995s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3881172715s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m950882567s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2741682586s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m4201003934s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m484227403s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2755281398s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2816120106s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2858014352s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3666201983s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m247166151s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1772576769s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3111114757s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2493514534s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1863020257s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1879262090s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1097734264s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2338411412s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2514844942s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1813980377s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3665979322s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m925647260s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3675332838s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m159631394s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m4259986255s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m4239499979s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3239056843s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1025214368s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2056699752s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1878759630s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2699275043s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m962010995s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m1617739601s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m4020635641s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m2503921454s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m3944087331s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 2.0,
-    "lotsqft": null,
-    "sqft": 1560,
-    "lat": 41.669055,
-    "long": 41.669055,
-    "zipc": "46703",
-    "list_dt": "05-04-2025_17-03-14",
-    "price_ch_amt": -51000,
-    "last_price": null,
-    "price_c_dat": "05-04-2025_17-03-14",
-    "seller": "Coldwell Banker Real Estate Group - Angola",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "2058286",
-        "name": "Erica Amans",
-        "builder": null,
-        "email": "erica@coldwellhomes.com",
-        "office": {
-          "name": "Coldwell Banker Real Estate Group - Angola",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2607408673",
-            "__typename": "AdvertiserPhone"
-          },
-          {
-            "number": "2607408673",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "2982707492": {
-    "address": "1150 N 155 W, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/1150-N-155-W_Angola_IN_46703_M99122-09516",
-    "price": 299900,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3525754481s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2968358204s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3905228973s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b430163610s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2792455555s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1105372097s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2098122728s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1491312040s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3965781957s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1459693913s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b691972426s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1115323460s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b74260650s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b366497030s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3415273441s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1883919269s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b600710143s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b4074190253s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2885253118s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b4272105260s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3116097927s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2555990135s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3668330694s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b935404025s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3220656221s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b155890509s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3209134030s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2615179581s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b20963408s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3296227602s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b506921949s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b1115945583s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b2863497580s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b52902741s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 2.5,
-    "lotsqft": null,
-    "sqft": 1906,
-    "lat": 41.659552,
-    "long": 41.659552,
-    "zipc": "46703",
-    "list_dt": "06-04-2025_18-41-35",
-    "price_ch_amt": -9100,
-    "last_price": null,
-    "price_c_dat": "06-04-2025_18-41-35",
-    "seller": "RE MAX Results",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "3029242",
-        "name": "Jeremy Bracey",
-        "builder": null,
-        "email": "jbracey6@gmail.com",
-        "office": {
-          "name": "RE MAX Results",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2604665037",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "2983801650": {
-    "address": "2080 Lane 200 Lake James, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/2080-Lane-200-Lake-James_Angola_IN_46703_M44252-70124",
-    "price": 885000,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3156081931s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1509142203s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1552837564s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1109557143s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m649756857s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3504650222s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3267480849s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2457185355s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2691148980s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1229416676s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3793033744s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3114116090s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1532691277s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3647242613s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2432908748s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m4194565842s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1247723239s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3670160791s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2184150529s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1972906474s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m568379722s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1159726078s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3023157742s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m645583291s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m653629218s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m333612347s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m4289739981s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2615190534s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m2861092160s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3716928487s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3905913287s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m61337543s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m4003797032s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m1229303360s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 2.0,
-    "lotsqft": null,
-    "sqft": 1736,
-    "lat": 41.686716,
-    "long": 41.686716,
-    "zipc": "46703",
-    "list_dt": "07-01-2025_16-39-43",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "07-01-2025_16-39-43",
-    "seller": "Coldwell Banker Real Estate Group - Angola",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "109421",
-        "name": "Barbara Hendrick",
-        "builder": null,
-        "email": "barbara.hendrick@gmail.com",
-        "office": {
-          "name": "Coldwell Banker Real Estate Group - Angola",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2608334698",
-            "__typename": "AdvertiserPhone"
-          },
-          {
-            "number": "2608336334",
-            "__typename": "AdvertiserPhone"
-          },
-          {
-            "number": "2608334698",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "2984389404": {
-    "address": "4537 W Black Oak Cir, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/4537-W-Black-Oak-Cir_Angola_IN_46703_M30892-74712",
-    "price": 667500,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m12689082s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3543048202s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1954617400s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2988464806s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2483047171s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m491823240s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3961193789s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1078577495s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m219500529s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2618981824s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2476204527s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1075684935s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1230270188s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m4242554073s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1785733401s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m137408993s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m967368988s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1974385244s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3306597938s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2567974433s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1568329510s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1558181425s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m316783244s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2016117825s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m4259400242s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1560317359s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3893924511s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m1733840657s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m291132689s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3460097957s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3382416576s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m3830905457s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m2477797856s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m4107720088s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m4001739184s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 5.0,
-    "baths": 3.0,
-    "lotsqft": null,
-    "sqft": 3630,
-    "lat": 41.673553,
-    "long": 41.673553,
-    "zipc": "46703",
-    "list_dt": "07-17-2025_20-45-17",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "07-17-2025_20-45-17",
-    "seller": "Prestige Realty & Associates Llc",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "2211732",
-        "name": "Missy Burkhalter",
-        "builder": null,
-        "email": "missyb@prestigesold.com",
-        "office": {
-          "name": "Prestige Realty & Associates Llc",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2603016108",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "2983949656": {
-    "address": "687 Sully Ct, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/687-Sully-Ct_Angola_IN_46703_M43768-73341",
-    "price": 355000,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m441860656s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2198078982s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m3135204715s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m706894322s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m509527615s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2637243853s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2036767916s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1118564707s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1601376693s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m381181059s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m39892393s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1881834723s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1430812275s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m281889797s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2513882347s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m218239268s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1023281506s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m276221730s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1465921322s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m3010001068s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m219570888s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1548464247s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1170978552s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2961756896s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1700275507s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1935216293s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m796983930s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m2701824444s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m681588759s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m866348953s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m350578680s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m3079342438s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m3446876814s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m3391003329s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1020401822s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m1700785411s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 2.5,
-    "lotsqft": null,
-    "sqft": 1716,
-    "lat": 41.657221,
-    "long": 41.657221,
-    "zipc": "46703",
-    "list_dt": "07-06-2025_13-45-10",
-    "price_ch_amt": -5000,
-    "last_price": null,
-    "price_c_dat": "07-06-2025_13-45-10",
-    "seller": "Mike Thomas Associates",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "3354040",
-        "name": "Travis Williamson",
-        "builder": null,
-        "email": "twilliamson@mikethomasrealtor.com",
-        "office": {
-          "name": "Mike Thomas Associates",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2606688877",
-            "__typename": "AdvertiserPhone"
-          },
-          {
-            "number": "2603165564",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "2981029238": {
-    "address": "2915 N State Road 827 Rd, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.realtor.com/realestateandhomes-detail/2915-N-State-Road-827_Angola_IN_46703_M48619-15171",
-    "price": 459000,
-    "source": "www.realtor.com",
-    "status": "for_sale",
-    "img_url": [
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2170820334s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m4244141678s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3524537970s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1139521537s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m226865233s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m4202245099s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2563592897s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3906830229s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3850657567s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m4011132204s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m978309416s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2271686240s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2289381638s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1204363283s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2727218172s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2588984710s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m766008090s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2839569355s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m607539292s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m204182262s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m672520447s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1261434994s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m725161730s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1311832283s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2922572279s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1461294047s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1418296247s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3612922749s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2491614572s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1217728069s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2048156154s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3991586941s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m513818867s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m1608204838s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3582049149s.jpg",
-        "__typename": "HomePhoto"
-      },
-      {
-        "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m3201673346s.jpg",
-        "__typename": "HomePhoto"
-      }
-    ],
-    "date_pulled": "08-19-2025_17-38-26",
-    "description": null,
-    "htype": "single_family",
-    "beds": 4.0,
-    "baths": 2.5,
-    "lotsqft": null,
-    "sqft": 2226,
-    "lat": 41.685254,
-    "long": 41.685254,
-    "zipc": "46703",
-    "list_dt": "04-26-2025_04-11-35",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "07-12-2025_14-56-37",
-    "seller": "Coldwell Banker Real Estate Group - Fort Wayne - Stellhorn",
-    "sellerinfo": [
-      {
-        "type": "seller",
-        "fulfillment_id": "2014108",
-        "name": "Tony Picillo",
-        "builder": null,
-        "email": "tpicillo@coldwellhomes.com",
-        "office": {
-          "name": "Coldwell Banker Real Estate Group - Fort Wayne - Stellhorn",
-          "__typename": "HomeAdvertiserOffice"
-        },
-        "phones": [
-          {
-            "number": "2604664551",
-            "__typename": "AdvertiserPhone"
-          }
-        ],
-        "__typename": "HomeAdvertiser"
-      }
-    ],
-    "extras": {}
-  },
-  "y069jjn9t2yv2": {
-    "address": "4460 N 425 W, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.homes.com/property/4460-n-425-w-angola-in/y069jjn9t2yv2/",
-    "price": 1249900,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/2750495834-852076991/4460-n-425-w-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_17-38-33",
-    "description": "Lake Life at Its Finest on Jimmerson Lake  Welcome to this stunning 3,800 sq ft home with 50 feet of frontage on the highly sought-after Jimmerson Lake\u2014part of Northeast Indiana\u2019s premier 5-lake ski chain. Situated on a generous 1.81-acre lakefront lot, this property offers space, privacy, and luxury in one exceptional package.  Inside, you'll find custom countertops, designer lighting, and a",
-    "htype": "SingleFamilyResidence",
-    "beds": 5,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 3793,
-    "lat": null,
-    "long": null,
-    "zipc": "46703",
-    "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "RE/MAX Results - Angola office"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/-YLVJ2qDMH1Da6dyDYRNY4yNSfAAdCBylRFtUw4q-kA/105/image.jpg?t=p&p=1",
-      "telephone": "(260) 319-0633",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "RE/MAX Results - Angola office"
-      },
-      "name": "Tony Isa"
-    },
-    "extras": {}
-  },
-  "2197gfvsl4e18": {
-    "address": "900 Ln 105 Lake James, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.homes.com/property/900-ln-105-lake-james-angola-in/2197gfvsl4e18/",
-    "price": 1399900,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/8825228144-166336891/900-ln-105-lake-james-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_17-38-33",
-    "description": "Welcome to this incredible turnkey lakefront home on Lone Tree Point on Lake James in Steuben County, Indiana. This spacious 5 bedroom, 3.5 bathroom home offers an abundance of living and storage space and includes 54 feet of privately owned lake frontage with a beautiful firm beach area\u2014perfect for swimming and lakeside fun. The home is being sold fully furnished, including indoor and outdoor",
-    "htype": "SingleFamilyResidence",
-    "beds": 5,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 2933,
-    "lat": null,
-    "long": null,
-    "zipc": "46703",
-    "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "United Country Real Estate/Anchor Realty"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/OnzLNCQF7G6iDfw57F-vZSe98mesmMJAVNIeeXkpjbY/105/image.jpg?t=p&p=1",
-      "telephone": "(260) 402-0744",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "United Country Real Estate/Anchor Realty"
-      },
-      "name": "Scott Marker"
-    },
-    "extras": {}
-  },
-  "p4kmg4mefv3xd": {
-    "address": "60 Lane 101d Jimmerson Lake, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.homes.com/property/60-lane-101d-jimmerson-lake-angola-in/p4kmg4mefv3xd/",
-    "price": 825000,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/4846022444-142840202/60-lane-101d-jimmerson-lake-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_17-38-33",
-    "description": "Enjoy 100 feet of pristine water frontage and panoramic lake views from this exceptional home on Jimmerson Lake. Just a short stroll to the lively 4 Corners area\u2014home to Tom\u2019s Donuts, local eateries, and a bait shop. Located off the beaten path, this property offers both serenity and convenience. Currently a popular weekly rental with an impressive rental history. The spacious lot is perfect for",
-    "htype": "SingleFamilyResidence",
-    "beds": 4,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 3384,
-    "lat": null,
-    "long": null,
-    "zipc": "46703",
-    "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "Coldwell Banker Real Estate Group"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/iwcd5v0-fElH7qNGd4FovvgyAaY1_xrW3QpZ-lb0fnc/105/image.jpg?t=p&p=1",
-      "telephone": "(260) 833-4698",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Coldwell Banker Real Estate Group"
-      },
-      "name": "Barbara Hendrick"
-    },
-    "extras": {}
-  },
-  "t2xwt7symtyzd": {
-    "address": "700 Lane 274 Crooked Lake, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.homes.com/property/700-lane-274-crooked-lake-angola-in/t2xwt7symtyzd/",
-    "price": 999000,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/0594471444-422918102/700-lane-274-crooked-lake-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_17-38-33",
-    "description": "This gorgeous 5 bedroom and 3.5 bath home is ready for you! Take in the incredible lake view the moment you step into the house. With over 3500 finished sqft you've got all the room you could need. Open great room with field stone fireplace, dining area, and kitchen with breakfast bar. Massive walls of windows allow for ample natural light and serene 3rd basin views. The main level holds the main",
-    "htype": "SingleFamilyResidence",
-    "beds": 5,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 3592,
-    "lat": null,
-    "long": null,
-    "zipc": "46703",
-    "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "Coldwell Banker Real Estate Group"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/M-uIUvtHoSjYTu_XZOptF1CtGQmU76vDnwj2QBoFgQg/105/image.jpg?t=p&p=1",
-      "telephone": "(260) 243-1466",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Coldwell Banker Real Estate Group"
-      },
-      "name": "Patti Couperthwaite"
-    },
-    "extras": {}
-  },
-  "4jjpf4le1rstd": {
-    "address": "2245 W Orland Rd, Angola, IN 46703",
-    "city": "Angola",
-    "state": "IN",
-    "url": "https://www.homes.com/property/2245-w-orland-rd-angola-in/4jjpf4le1rstd/",
-    "price": 1159900,
-    "source": "www.homes.com",
-    "status": "Offer",
-    "img_url": "https://images.homes.com/listings/111/5451448244-601495102/2245-w-orland-rd-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-19-2025_17-38-33",
-    "description": "Escape to your own slice of paradise at this stunning lakefront retreat on Crooked Lake's first basin that has a firm sandy beach. Built in 2010 by Bob Buescher Homes, this 3,466 square foot home combines open-concept living with breathtaking water views that'll make your morning coffee taste even better. The heart of the home offers an open concept, where a wall of windows from the kitchen,",
-    "htype": "SingleFamilyResidence",
-    "beds": 4,
-    "baths": 4,
-    "lotsqft": null,
-    "sqft": 3466,
-    "lat": null,
-    "long": null,
-    "zipc": "46703",
-    "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "seller": {
-      "@type": "Organization",
-      "name": "Coldwell Banker Real Estate Group"
-    },
-    "sellerinfo": {
-      "@type": "Person",
-      "image": "https://imagescdn.homes.com/i2/N_gbXgTF6TOMdd5TWYOcUIbUcjhKnJqdcu5D1FWhas8/105/image.jpg?t=p&p=1",
-      "telephone": "(260) 740-8673",
-      "jobTitle": "Listing Agent",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Coldwell Banker Real Estate Group"
-      },
-      "name": "Erica Amans"
-    },
-    "extras": {}
-  },
   "ybhpnbn5d55p7": {
     "address": "100 Lane 270a Crooked Lake, Angola, IN 46703",
     "city": "Angola",
@@ -29347,7 +28005,7 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/2280-lane-105-lake-james-angola-in/pkzeq8hpjwq1b/",
-    "price": 1150000,
+    "price": 1100000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/5205795524-887091591/2280-lane-105-lake-james-angola-in-primaryphoto.jpg",
@@ -29386,7 +28044,7 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/107-w-felicity-st-angola-in/yrjx0gx5fn896/",
-    "price": 310000,
+    "price": 510000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/7211024504-547737881/107-w-felicity-st-angola-in-primaryphoto.jpg",
@@ -29927,6 +28585,515 @@
         "name": "RE/MAX Results - Angola office"
       },
       "name": "Christy Thomson"
+    },
+    "extras": {}
+  },
+  "2981410141": {
+    "address": "3300 W Shady Side Rd, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/3300-W-Shady-Side-Rd_Angola_IN_46703_M45558-49985",
+    "price": 899000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/de7fd4ed2a7a736a38181b6c440df780l-m962010995s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1560,
+    "lat": 41.669055,
+    "long": 41.669055,
+    "zipc": "46703",
+    "list_dt": "05-04-2025_17-03-14",
+    "price_ch_amt": -51000,
+    "last_price": null,
+    "price_c_dat": "05-04-2025_17-03-14",
+    "seller": "Coldwell Banker Real Estate Group - Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2058286",
+          "name": "Erica Amans",
+          "builder": null,
+          "email": "erica@coldwellhomes.com",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2607408673",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2607408673",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": false,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": true,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 1926
+  },
+  "2982707492": {
+    "address": "1150 N 155 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/1150-N-155-W_Angola_IN_46703_M99122-09516",
+    "price": 299900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/a508134753ac61a4f4608ebf082fe9ael-b3525754481s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 1906,
+    "lat": 41.659552,
+    "long": 41.659552,
+    "zipc": "46703",
+    "list_dt": "06-04-2025_18-41-35",
+    "price_ch_amt": -9100,
+    "last_price": null,
+    "price_c_dat": "06-04-2025_18-41-35",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3029242",
+          "name": "Jeremy Bracey",
+          "builder": null,
+          "email": "jbracey6@gmail.com",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2604665037",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": false,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": true,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 2022
+  },
+  "2983801650": {
+    "address": "2080 Lane 200 Lake James, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/2080-Lane-200-Lake-James_Angola_IN_46703_M44252-70124",
+    "price": 885000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/9a0fb612502d944144919ca59a1c71c1l-m3156081931s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1736,
+    "lat": 41.686716,
+    "long": 41.686716,
+    "zipc": "46703",
+    "list_dt": "07-01-2025_16-39-43",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "07-01-2025_16-39-43",
+    "seller": "Coldwell Banker Real Estate Group - Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "109421",
+          "name": "Barbara Hendrick",
+          "builder": null,
+          "email": "barbara.hendrick@gmail.com",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2608334698",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2608336334",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2608334698",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": true,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 1965
+  },
+  "2984389404": {
+    "address": "4537 W Black Oak Cir, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/4537-W-Black-Oak-Cir_Angola_IN_46703_M30892-74712",
+    "price": 667500,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m12689082s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 3630,
+    "lat": 41.673553,
+    "long": 41.673553,
+    "zipc": "46703",
+    "list_dt": "07-17-2025_20-45-17",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "07-17-2025_20-45-17",
+    "seller": "Prestige Realty & Associates Llc",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2211732",
+          "name": "Missy Burkhalter",
+          "builder": null,
+          "email": "missyb@prestigesold.com",
+          "office": {
+            "name": "Prestige Realty & Associates Llc",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603016108",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Prestige Realty & Associates Llc",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 1992
+  },
+  "2983949656": {
+    "address": "687 Sully Ct, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/687-Sully-Ct_Angola_IN_46703_M43768-73341",
+    "price": 355000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/b695806f0b1ed6213b220d30d8b1c068l-m441860656s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 1716,
+    "lat": 41.657221,
+    "long": 41.657221,
+    "zipc": "46703",
+    "list_dt": "07-06-2025_13-45-10",
+    "price_ch_amt": -5000,
+    "last_price": null,
+    "price_c_dat": "07-06-2025_13-45-10",
+    "seller": "Mike Thomas Associates",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3354040",
+          "name": "Travis Williamson",
+          "builder": null,
+          "email": "twilliamson@mikethomasrealtor.com",
+          "office": {
+            "name": "Mike Thomas Associates",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2606688877",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2603165564",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": true,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Mike Thomas Associates",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 2019
+  },
+  "2981029238": {
+    "address": "2915 N State Road 827 Rd, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/2915-N-State-Road-827_Angola_IN_46703_M48619-15171",
+    "price": 459000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/f64db9cd93e9f7e1c2378fc1425b064cl-m2170820334s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-19-2025_21-19-39",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 2226,
+    "lat": 41.685254,
+    "long": 41.685254,
+    "zipc": "46703",
+    "list_dt": "04-26-2025_04-11-35",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "07-12-2025_14-56-37",
+    "seller": "Coldwell Banker Real Estate Group - Fort Wayne - Stellhorn",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2014108",
+          "name": "Tony Picillo",
+          "builder": null,
+          "email": "tpicillo@coldwellhomes.com",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Fort Wayne - Stellhorn",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2604664551",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": true,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Fort Wayne - Stellhorn",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_build": 1992
+  },
+  "110552719": {
+    "address": "13 Friendship Ln, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Marshall/13-Friendship-Ln-49068/home/110552719",
+    "price": 299900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-19-2025_21-21-55",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2578,
+    "lat": 42.2586015,
+    "long": -85.0114926,
+    "zipc": "49068",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "q17msd2ygvnjj": {
+    "address": "13 Friendship Ln, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.homes.com/property/13-friendship-ln-marshall-mi/q17msd2ygvnjj/",
+    "price": 299900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/2696569544-234426202/13-friendship-ln-marshall-mi-primaryphoto.jpg",
+    "date_pulled": "08-19-2025_21-22-01",
+    "description": "BEAUTIFUL SETTING IN SQUAW CREEK ON THE KALAMAZOO RIVER. 100 Ft of water frontage to be exact!  Home sits back off of road on 3/4 of an acre, plenty of yard for pets & all of the outdoor activities. This home offers 4 beds,(1 of which is in the basement) and 3 full baths (2 on main floor and 1 in the finished walk-out basement. Basement also has an additional family room and a large unfinished",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": 2578,
+    "lat": null,
+    "long": null,
+    "zipc": "49068",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Perrett Associates - Marshall"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/0eJVn8y460NJRmEi4bDO0pJKYeitZMhmi_AbSWX4xx0/105/image.jpg?t=p&p=1",
+      "telephone": "(269) 781-8100",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Perrett Associates - Marshall"
+      },
+      "name": "Shelly Hope"
     },
     "extras": {}
   }
