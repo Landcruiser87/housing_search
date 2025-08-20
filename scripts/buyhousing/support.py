@@ -668,7 +668,7 @@ def send_housing_email(urls:str):
         <html>
             <body>
                 <p>Helloooooooooo!<br>
-                You have new houses to look at!<br>
+                There are new houses on the market!<br>
                 """ + urls + """
                 </p>
             </body>
@@ -689,7 +689,7 @@ def send_housing_email(urls:str):
     html = inputdatlink(urls)
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "New Housing Found!"
+    message["Subject"] = "New Homes for Sale!"
     message["From"] = sender_email
     message["To"] = ", ".join(receiver_email)   #message[To] needs to be a str, 
                                                 #but sendmail wants it as a list????  OOOK
