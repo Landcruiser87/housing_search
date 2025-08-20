@@ -487,7 +487,7 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         if not listing.address:
             continue
 
-        run_sleep(np.random.randint(2, 6), f"Extract Lat/Long @ {listing.address}", layout)
+        run_sleep(np.random.randint(3, 8), f"Get Lat/Long @ {listing.address}", layout)
         address = listing.address
         logger.info(f"Pulling Lat/Lon for {address}")
         #If city and state aren't present, add them
