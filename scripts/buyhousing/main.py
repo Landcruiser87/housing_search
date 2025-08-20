@@ -190,7 +190,8 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
     Args:
         area (str): City or or Zipcode
     # """	
-    shuffle(SITES) #Keep em guessin!
+    #Keep em guessin!
+    shuffle(SITES) 
     for source in SITES:
         site = SOURCES.get(source)
         if site:

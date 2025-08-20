@@ -133,9 +133,7 @@ def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
 
     #Get the HTML
     bs4ob = BeautifulSoup(response.text, 'lxml')
-
-    # Isolate the property-list from the expanded one (I don't want the 3 mile
-    # surrounding.  Just the neighborhood)
+    #Look for no evidence of no results
     nores = bs4ob.find_all("div", class_="no-results-container")
     errorres = bs4ob.find_all("div", class_="error-results-container")
     if not nores and not errorres:
