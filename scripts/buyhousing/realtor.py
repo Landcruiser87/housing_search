@@ -21,6 +21,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
 
     listings = []
     defaultval = None
+    seller_keys = ["advertisers", "offeredBy", "flags", "branding"]
     #Set the outer loop over each card returned. 
     for search_result in resp_json["data"]["home_search"]["properties"]:
         listing = Propertyinfo()
@@ -30,7 +31,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
             continue
         
         listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
-        listing.img_url      = search_result.get("photos", defaultval)
+        listing.img_url      = search_result.get("primary_photo", defaultval)
         listing.status       = search_result.get("status", defaultval)
         listing.source       = source
         listing.city         = search_result["location"]["address"].get("city", defaultval)
@@ -42,6 +43,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
         listing.sqft         = search_result["description"].get("sqft", defaultval)
         listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+        listing.year_build   = search_result["description"].get("year_built", defaultval)
         listing.price        = int(search_result.get("list_price", defaultval))
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
@@ -50,7 +52,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
         listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))
         listing.seller       = search_result["branding"][0].get("name", defaultval)
-        listing.sellerinfo   = search_result.get("advertisers", defaultval)
+        listing.sellerinfo   = {k:search_result.get(k, defaultval) for k in seller_keys}
         listings.append(listing)
 
     return listings

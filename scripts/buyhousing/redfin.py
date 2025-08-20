@@ -21,6 +21,7 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
     """
     listings = []
     defaultval = None
+    # seller_keys = ["offeredBy"]
     #Set the outer loop over each card returned. 
     for card in result.find_all("script", {"type":"application/ld+json"}):
         listinginfo = json.loads(card.text)
@@ -41,23 +42,28 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
             listing.address      = listinginfo[0].get("name", defaultval)
             listing.htype        = listinginfo[0].get("@type", defaultval)
+
             listing.sqft         = listinginfo[0]["floorSize"].get("value", defaultval)
             listing.price        = int(listinginfo[1]["offers"].get("price", 0))
             listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
             listing.lat          = float(listinginfo[0]["geo"].get("latitude", defaultval))
             listing.long         = float(listinginfo[0]["geo"].get("longitude", defaultval))
+            
             if "numberOfBaths" in listinginfo[0].keys():
                 listing.baths    = bedbath_format(listinginfo[0].get("numberOfBaths", defaultval))
             if "numberOfRooms" in listinginfo[0].keys():
                 listing.beds     = bedbath_format(listinginfo[0].get("numberOfRooms", defaultval))
+
             #Vars not on the page scan below
+            # listing.description  = listinginfo["itemListElement"][2]["item"].get("description", defaultval)
             # listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
             # listing.last_pri_cha = search_result.get("last_price_change_amount", defaultval)
             # listing.last_pri_dat = date_format(search_result.get("last_status_change_date", defaultval))
             # listing.seller       = search_result["branding"][0].get("name", defaultval)
-            # listing.sellerinfo   = search_result.get("advertisers", defaultval)
+            # listing.sellerinfo   = {k:listinginfo[0].get(k, defaultval) for k in seller_keys}
             # listing.img_url = listinginfo.get("photos", defaultval)
             # listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
+
             listings.append(listing)
     return listings
 

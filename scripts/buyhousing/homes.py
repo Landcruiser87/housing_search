@@ -20,7 +20,7 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
     """
     listings = []
     defaultval = None
-
+    seller_keys = ["offeredBy"]
     #Set the outer loop over each card returned. 
     for search_results in result.find_all("script", {"type":"application/ld+json"}):
         if search_results:
