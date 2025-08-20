@@ -29,7 +29,7 @@ AREAS = [
     ('Fremont'  ,'IN'),
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-    ('Coldwater','MI'),
+    ('Coldwater','MI'),#guuuurl.  You gots lots of housing price cuts.  No bueno market!
 ]
 
 SOURCES = {
