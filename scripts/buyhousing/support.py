@@ -591,11 +591,11 @@ def urlformat(urls:list)->str:
 
     if not urls:
         return "<p>No new links found.</p>"
-    urls = sorted(urls, key=lambda x:(x[2], x[1]))
+    urls = sorted(urls, key=lambda x:(x[2], x[1], x[5]))
 
     grouped_by_city = defaultdict(list)
-    for link, site, city, address, pchange in urls:
-        grouped_by_city[city].append({'link': link, 'site': site, 'address': address, 'p_change':pchange})
+    for link, site, city, address, pchange, price in urls:
+        grouped_by_city[city].append({'link': link, 'site': site, 'address': address, 'p_change':pchange, 'price':price})
 
     links_html = ""
     # Use an index to add a separator between cities
@@ -615,9 +615,9 @@ def urlformat(urls:list)->str:
                     color = "green"
                 else:
                     color = "red"
-                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a> | <span style='color:{color}; font-weight: bold;'>${listing['p_change']}</span></li>"
+                links_html += f"<li>{listing['site']} | {listing['price']} | <a href='{listing['link']}'>{listing['address']}</a> | <span style='color:{color}; font-weight: bold;'>${listing['p_change']}</span></li>"
             else:
-                links_html += f"<li>{listing['site']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
+                links_html += f"<li>{listing['site']} | {listing['price']} | <a href='{listing['link']}'>{listing['address']}</a></li>"
         
         links_html += "</ol>"
 

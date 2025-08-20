@@ -110,7 +110,7 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx].get("price_ch_amt")) for idx in new_dict.keys()]
+    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx].get("price_ch_amt"), new_dict[idx].get("price")) for idx in new_dict.keys()]
     #Extend the newlistings global list
     newlistings.extend(newurls)
 
@@ -180,7 +180,6 @@ def check_ids(data:list)->list:
     #    indx = [x[0] for x in data_ids if x[1]==ids][0]
     #    newdata.append(data[indx]) 
     # return newdata
-
 
 #FUNCTION Scrape data
 def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
