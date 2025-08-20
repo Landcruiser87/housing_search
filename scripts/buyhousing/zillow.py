@@ -77,11 +77,11 @@ def bedbath_format(sample:str):
         logger.warning(f"Error: Invalid input. The input must be a an int or float:\n {e}")
         return None
     
-def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
-        neigh (Union[str,int]): Neighborhood or zipcode searched
+        neigh (Union[str,int]): City or zipcode searched
         source (str): What site is being scraped
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters
@@ -89,7 +89,6 @@ def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     Returns:
         property_listings (list): List of dataclass objects
     """
-    #Check for spaces in the search neighborhood
     CITY = neigh[0]
     STATE = neigh[1]
     MAXPRICE = int(srch_par[0])

@@ -66,11 +66,11 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
 
     return listings
 
-def neighscrape(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
+def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
-        neigh (Union[str,int]): Neighborhood or zipcode searched
+        neigh (Union[str,int]): City or zipcode searched
         source (str): What site is being scraped
         Propertyinfo (dataclass): Custom data object
         srch_par (tuple): Tuple of search parameters

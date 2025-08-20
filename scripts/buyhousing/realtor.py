@@ -92,7 +92,7 @@ def money_launderer(price:list)->float:
         return float(price.replace("$", "").replace(",", ""))
     return price
 
-def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tuple)->list:
+def area_search(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tuple)->list:
     """[Outer scraping function to set up request pulls]
 
     Args:
@@ -110,7 +110,7 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
     MINBATHS = int(srch_par[1])
     MINBEDS = int(srch_par[2])
     
-    #Search by neighborhood
+    #Search by City/State
     if isinstance(neigh, tuple):
         url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
 

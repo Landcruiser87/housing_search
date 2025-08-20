@@ -198,7 +198,7 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
             progbar.advance(task)
             progbar.update(task_id=task, description=f"{area[0]}:{site[0]}")
             logger.info(f"scraping {site[0]} for {area[0]}")
-            data = site[1].neighscrape(area, site[0], Propertyinfo, SEARCH_PARAMS)
+            data = site[1].area_search(area, site[0], Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
             support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
