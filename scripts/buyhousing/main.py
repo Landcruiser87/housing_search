@@ -61,6 +61,7 @@ LOST_N_FOUND = {
     "zillow"  :False
 }
 
+
 #Define dataclass container
 @dataclass
 class Propertyinfo():
@@ -280,7 +281,7 @@ def main():
 
         logger.info("Site functionality summary")
         logger.info(f"{list(LOST_N_FOUND.items())}")
-        logger.info(f"Site counts {Counter([x[1] for x in newlistings])}")
+        logger.info(f"Site counts {list(Counter([x[1] for x in newlistings]).items())}")
         logger.info("Program shutting down")
 
 if __name__ == "__main__":

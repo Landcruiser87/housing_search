@@ -4,7 +4,7 @@ import requests
 import numpy as np
 from urllib.parse import urlencode
 from bs4 import BeautifulSoup
-from support import logger, state_dict, get_time
+from support import logger, get_time, STATE_DICT
 from typing import Union
 
 def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->list:
@@ -139,7 +139,7 @@ def neighscrape(neigh:Union[tuple, int], source:str, Propertyinfo, srch_par)->li
             "start": 0,
             "count": 10,
             "v": 2,
-            "market": f"{state_dict[STATE].lower()}",
+            "market": f"{STATE_DICT[STATE].lower()}",
             "al": 1,
             "iss": "false",
             "ooa": "true",

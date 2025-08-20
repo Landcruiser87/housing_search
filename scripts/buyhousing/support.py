@@ -28,6 +28,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 from geopy import Nominatim, ArcGIS
+from geopy.extra.rate_limiter import RateLimiter
 import geopandas as gpd
 from pathlib import Path, PurePath
 from collections import defaultdict
@@ -107,7 +108,7 @@ start_time = get_time().strftime("%m-%d-%Y_%H-%M-%S")
 console = Console(color_system="auto", stderr=True)
 log_dir = PurePath(Path.cwd(), Path(f'./data/logs/{start_time}.log'))
 logger = get_logger(log_dir=log_dir, console=console)
-state_dict = {
+STATE_DICT = {
     'AL': 'Alabama',
     'AK': 'Alaska',
     'AZ': 'Arizona',
@@ -160,6 +161,24 @@ state_dict = {
     'WY': 'Wyoming',
     'DC': 'District of Columbia',
 }
+
+#Additional USER agents
+USER_AGENTS = [
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+    'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2919.83 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
+    'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19577',
+    'Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16.2',
+    'Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16',
+    'Opera/9.80 (Macintosh; Intel Mac OS X 10.14.1) Presto/2.12.388 Version/12.16'
+]
+
 #FUNCTION Log time
 ################################# Timing Func ####################################
 def log_time(fn):
@@ -466,19 +485,22 @@ def load_historical(fp:str)->json:
 
 #FUNCTION Get Lat Long
 def get_lat_long(data:list, citystate:tuple, layout)->list:
+    #Set up Nomatim - Free GPS extract
     noma_params = {
         "user_agent":"myApp",
         "timeout":5,
     }
     geolocator = Nominatim(**noma_params)
-    #ArcGIS has up to 20k free geocode requests a month.  That should be plenty
-    # arc_params = {
-    # 	"exactly_one":True,
-    # 	"timeout":10,
-    # }
-    # backupgeo = ArcGIS()
-
+    Noma_rate = RateLimiter(geolocator.geocode, min_delay_seconds=2)
     
+    #ArcGIS has up to 20k free geocode requests a month.  That should be plenty
+    arc_params = {
+        "user_agent":np.random.choice(USER_AGENTS),
+        "timeout":5,
+    }
+    backupgeo = ArcGIS(**arc_params)
+    Arcgis_rate = RateLimiter(backupgeo.geocode, min_delay_seconds=2)
+
     for listing in data:
         #Early termination to the loop if lat/long already exist
         if isinstance(listing.lat, float) and isinstance(listing.long, float):
@@ -486,10 +508,11 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         #Or if the listing doesn't have an address????  Come on people.
         if not listing.address:
             continue
-
-        run_sleep(np.random.randint(3, 8), f"Get Lat/Long @ {listing.address}", layout)
+        
+        logger.info(f"GPS extracted for {address}")
+        run_sleep(np.random.randint(3, 8), f"Get Lat/Long @ {listing.address.split(",")[0]}", layout)
         address = listing.address
-        logger.info(f"Pulling Lat/Lon for {address}")
+        
         #If city and state aren't present, add them
         if citystate[0].lower() not in address.lower():
             listing.address = address + " " + citystate[0]
@@ -499,23 +522,29 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         srch_add = listing.address + " USA"
         #First search Novatim
         try:
-            location = geolocator.geocode(srch_add)
+            # location = geolocator.geocode(srch_add)
+            location = Noma_rate(srch_add)
+            #If a location is found, assign lat long
+            if location:
+                lat, long = location.latitude, location.longitude
+                listing.lat = lat
+                listing.long = long
+
         except Exception as error:
-            logger.warning(f"an error occured in Nominatim\n{error}")
-            location = None
+            logger.warning(f"an error occured on Nominatim\n{error}")
+            try:
+                #If that fails, search ARCgis
+                logger.warning("Trying backup ARCGis GPS extract")
 
-        #If a location is found, assign lat long
-        if location:
-            lat, long = location.latitude, location.longitude
-            listing.lat = lat
-            listing.long = long
+                # locatedos = backupgeo(srch_add)
+                locatedos = Arcgis_rate(srch_add)
+                if locatedos:
+                    lat, long = location.latitude, location.longitude
+                    listing.lat = lat
+                    listing.long = long
+            except Exception as error:
+                logger.warning(f"an error occured on ARCgis\n{error}")
 
-        #If that fails, search ARCgis
-        # locatedos = backupgeo(srch_add)
-        # if locatedos:
-        # 	lat, long = location.latitude, location.longitude
-        # 	listing.lat = lat
-        # 	listing.long = long
 
     return data
 
