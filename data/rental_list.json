@@ -75049,5 +75049,167 @@
       "violence_score": 25.1,
       "property_d_score": 0.14
     }
+  },
+  "7875063395": {
+    "source": "www.craigslist.org",
+    "price": 1930.0,
+    "neigh": "chicago",
+    "dogs": true,
+    "link": "https://chicago.craigslist.org/chc/apa/d/chicago-in-unit-laundry-bed-ss-appl-w/7875063395.html",
+    "address": "W Ardmore Ave, Chicago, IL 60659",
+    "date_pulled": "08-20-2025_10-06-49",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.986831,
+    "long": -87.694457,
+    "L_dist": [
+      "Rockwell",
+      1.43
+    ],
+    "crime_sc": {
+      "drug_score": 2.83,
+      "gun_score": 4.03,
+      "murder_score": 1.17,
+      "perv_score": 1.59,
+      "theft_score": 44.31,
+      "violence_score": 23.76,
+      "property_d_score": 0.14
+    }
+  },
+  "g8bxcdx": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5816-n-artesian-ave-chicago-il/g8bxcdx/",
+    "address": "5816 N Artesian Ave, Chicago, IL 60659",
+    "date_pulled": "08-20-2025_10-07-32",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.9873544,
+    "long": -87.6910931,
+    "L_dist": [
+      "Western",
+      1.47
+    ],
+    "crime_sc": {
+      "drug_score": 2.82,
+      "gun_score": 4.03,
+      "murder_score": 1.15,
+      "perv_score": 1.59,
+      "theft_score": 44.33,
+      "violence_score": 23.76,
+      "property_d_score": 0.14
+    }
+  },
+  "215z149": {
+    "source": "www.apartments.com",
+    "price": 1650.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4237-w-potomac-ave-chicago-il/215z149/",
+    "address": "4237 W Potomac Ave, Chicago, IL 60651",
+    "date_pulled": "08-20-2025_10-07-32",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.904167,
+    "long": -87.7327794,
+    "L_dist": [
+      "Pulaski",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 4.11,
+      "gun_score": 5.43,
+      "murder_score": 1.74,
+      "perv_score": 1.73,
+      "theft_score": 39.77,
+      "violence_score": 26.28,
+      "property_d_score": 0.17
+    }
+  },
+  "4drdqeh": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/904-w-erie-st-chicago-il/4drdqeh/",
+    "address": "904 W Erie St, Chicago, IL 60642",
+    "date_pulled": "08-20-2025_10-07-32",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 41.8935654,
+    "long": -87.6503434,
+    "L_dist": [
+      "Grand",
+      0.22
+    ],
+    "crime_sc": {
+      "drug_score": 3.78,
+      "gun_score": 5.39,
+      "murder_score": 1.5,
+      "perv_score": 1.58,
+      "theft_score": 41.65,
+      "violence_score": 25.11,
+      "property_d_score": 0.13
+    }
+  },
+  "9540563169": {
+    "source": "www.realtor.com",
+    "price": 1600,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4308-N-Central-Park-Ave_Chicago_IL_60618_M95405-63169",
+    "address": "4308 N Central Park Ave # #gdn, Chicago, IL 60618",
+    "date_pulled": "08-20-2025_10-09-31",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": 650.0,
+    "lat": 41.95956,
+    "long": -87.718269,
+    "L_dist": [
+      "Kimball",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 4.01,
+      "gun_score": 4.71,
+      "murder_score": 1.48,
+      "perv_score": 1.62,
+      "theft_score": 41.76,
+      "violence_score": 24.91,
+      "property_d_score": 0.14
+    }
+  },
+  "65549754": {
+    "source": "www.zillow.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3951-W-Ainslie-St-APT-3-Chicago-IL-60625/65549754_zpid/",
+    "address": "3951 W Ainslie St APT 3, Chicago, IL 60625",
+    "date_pulled": "08-20-2025_10-11-04",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.96955,
+    "long": -87.727585,
+    "L_dist": [
+      "Kimball",
+      0.75
+    ],
+    "crime_sc": {
+      "drug_score": 3.74,
+      "gun_score": 4.6,
+      "murder_score": 1.45,
+      "perv_score": 1.65,
+      "theft_score": 42.05,
+      "violence_score": 24.91,
+      "property_d_score": 0.15
+    }
   }
 }

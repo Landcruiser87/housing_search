@@ -30,7 +30,6 @@ AREAS = [
     'Albany Park',     #
     'North Center',    #
     'North Park',      #
-    
     'Avondale',        #    #New add
     'Wicker Park',     #    #New add
     'Roscoe Village',
@@ -289,7 +288,7 @@ def main():
         jsondata = {}
         logger.warning("No historical data found")
 
-    #Shuffle and search the neighborhoods/zips
+    #Shuffle and search the neighborhoods/zips  
     shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
@@ -302,8 +301,8 @@ def main():
         # Send gmail alerting of new properties
         if newlistings:
             support.save_data(jsondata)
-            links_html = support.urlformat(newlistings)
-            support.send_housing_email(links_html)
+            # links_html = support.urlformat(newlistings)
+            # support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
             
         else:
