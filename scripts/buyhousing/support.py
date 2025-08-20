@@ -465,23 +465,21 @@ def load_historical(fp:str)->json:
             return jsondata	
 
 #FUNCTION Get Lat Long
-def get_lat_long(data:list, citystate:tuple, logger:logging.Logger, layout)->list:
+def get_lat_long(data:list, citystate:tuple, layout)->list:
     noma_params = {
         "user_agent":"myApp",
         "timeout":5,
     }
     geolocator = Nominatim(**noma_params)
+    #ArcGIS has up to 20k free geocode requests a month.  That should be plenty
     # arc_params = {
     # 	"exactly_one":True,
     # 	"timeout":10,
     # }
     # backupgeo = ArcGIS()
 
-    #TODO.  Add backup geocoder?  Going with ARCGis
-        #ArcGIS has up to 20k free geocode requests a month.  That should be plenty
     
     for listing in data:
-        
         #Early termination to the loop if lat/long already exist
         if isinstance(listing.lat, float) and isinstance(listing.long, float):
             continue
@@ -489,9 +487,9 @@ def get_lat_long(data:list, citystate:tuple, logger:logging.Logger, layout)->lis
         if not listing.address:
             continue
 
-        run_sleep(np.random.randint(2, 6), "ohhh GPS sleepys", layout)
+        run_sleep(np.random.randint(2, 6), f"Extract Lat/Long @ {listing.address}", layout)
         address = listing.address
-        logger.info(f"searching GPS for {address}")
+        logger.info(f"Pulling Lat/Lon for {address}")
         #If city and state aren't present, add them
         if citystate[0].lower() not in address.lower():
             listing.address = address + " " + citystate[0]

@@ -43,7 +43,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
         listing.sqft         = search_result["description"].get("sqft", defaultval)
         listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
-        listing.year_build   = search_result["description"].get("year_built", defaultval)
+        listing.year_built   = search_result["description"].get("year_built", defaultval)
         listing.price        = int(search_result.get("list_price", defaultval))
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
@@ -113,7 +113,6 @@ def neighscrape(neigh:tuple|int, source:str, Propertyinfo:dataclass, srch_par:tu
     #Search by neighborhood
     if isinstance(neigh, tuple):
         url = f"https://www.realtor.com/realestateandhomes-search/{CITY}_{STATE}/type-single-family-home,townhome,farms-ranches,land/beds-{MINBEDS}/baths-{MINBATHS}/price-na-{MAXPRICE}"#g1
-
 
     #TODO - Update this for zip search
     #Searchby ZipCode

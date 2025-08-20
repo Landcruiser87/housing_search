@@ -163,7 +163,7 @@ def check_ids(data:list)->list:
     if (newdata != None) & (pricechanges != None):
         return newdata.extend(pricechanges)
 
-    elif newdata:
+    if newdata:
         return newdata
     
     elif pricechanges:      
@@ -227,9 +227,8 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                                 layout[website].update(support.update_count(1, layout, website))
                                 break
                         
-                    #pull the lat long, score it and store it.
-                    #TODO update LAT LONG extract.   
-                    # data = support.get_lat_long(data, (CITY, STATE), logger, layout)
+                    #pull the lat long
+                    data = support.get_lat_long(data, neigh,layout)
                     
                     # Add the listings to the jsondata dict. 
                     add_data(data, (site[0], neigh[0]))
