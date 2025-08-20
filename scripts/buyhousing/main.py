@@ -6,6 +6,7 @@ from rich.progress import Progress
 from rich.layout import Layout
 from os.path import exists
 from dataclasses import dataclass, field
+from collections import Counter
 
 #Import supporting files
 import realtor, zillow, redfin, homes, support
@@ -182,11 +183,11 @@ def check_ids(data:list)->list:
     # return newdata
 
 #FUNCTION Scrape data
-def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
+def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
     """This function will iterate through different resources scrapin g necessary information for ingestion. 
 
     Args:
-        neigh (str): Neighborhood or Zipcode
+        area (str): City or or Zipcode
     # """	
     shuffle(SITES) #Keep em guessin!
     for source in SITES:
@@ -194,9 +195,9 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
         if site:
             #Update and advance the overall progressbar
             progbar.advance(task)
-            progbar.update(task_id=task, description=f"{neigh[0]}:{site[0]}")
-            logger.info(f"scraping {site[0]} for {neigh[0]}")
-            data = site[1].neighscrape(neigh, site[0], Propertyinfo, SEARCH_PARAMS)
+            progbar.update(task_id=task, description=f"{area[0]}:{site[0]}")
+            logger.info(f"scraping {site[0]} for {area[0]}")
+            data = site[1].neighscrape(area, site[0], Propertyinfo, SEARCH_PARAMS)
 
             #Take a lil nap.  Be nice to the servers!
             support.run_sleep(np.random.randint(3,8), f'Napping at {site[0]}', layout)
@@ -228,10 +229,10 @@ def scrape(neigh:tuple|str, progbar:Progress, task:int, layout:Layout):
                                 break
                         
                     #pull the lat long
-                    data = support.get_lat_long(data, neigh,layout)
+                    data = support.get_lat_long(data, area, layout)
                     
                     # Add the listings to the jsondata dict. 
-                    add_data(data, (site[0], neigh[0]))
+                    add_data(data, (site[0], area[0]))
                     del data
             else:
                 logger.info(f"No new data found on {source}")
@@ -263,8 +264,8 @@ def main():
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
-        for neigh in AREAS:
-            scrape(neigh, progbar, task, layout)
+        for area in AREAS:
+            scrape(area, progbar, task, layout)
         
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
@@ -279,6 +280,7 @@ def main():
 
         logger.info("Site functionality summary")
         logger.info(f"{list(LOST_N_FOUND.items())}")
+        logger.info(f"Site counts {Counter([x[1] for x in newlistings])}")
         logger.info("Program shutting down")
 
 if __name__ == "__main__":
