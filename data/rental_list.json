@@ -75211,5 +75211,59 @@
       "violence_score": 24.91,
       "property_d_score": 0.15
     }
+  },
+  "197282826": {
+    "source": "www.redfin.com",
+    "price": 2521.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3035-W-Irving-Park-Rd-60618/unit-204/home/197282826",
+    "address": "3035 W Irving Park Rd Unit 204, Chicago, IL, 60618",
+    "date_pulled": "08-20-2025_15-13-54",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.9536846,
+    "long": -87.7045542,
+    "L_dist": [
+      "Addison",
+      0.86
+    ],
+    "crime_sc": {
+      "drug_score": 4.09,
+      "gun_score": 4.8,
+      "murder_score": 1.53,
+      "perv_score": 1.62,
+      "theft_score": 41.4,
+      "violence_score": 25.1,
+      "property_d_score": 0.14
+    }
+  },
+  "8773789319": {
+    "source": "www.realtor.com",
+    "price": 1795,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/4946-N-Harding-Ave-Apt-3W_Chicago_IL_60625_M87737-89319",
+    "address": "4946 N Harding Ave Apt 3W, Chicago, IL 60625",
+    "date_pulled": "08-20-2025_15-18-50",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.97146,
+    "long": -87.727256,
+    "L_dist": [
+      "Kimball",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 3.6,
+      "gun_score": 4.56,
+      "murder_score": 1.42,
+      "perv_score": 1.53,
+      "theft_score": 42.26,
+      "violence_score": 24.86,
+      "property_d_score": 0.15
+    }
   }
 }

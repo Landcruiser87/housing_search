@@ -145,3 +145,4 @@ def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             
     else:
         logger.warning("No listings returned on homes.  Moving to next site")
+        return None
