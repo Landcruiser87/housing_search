@@ -75022,5 +75022,32 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "456087743": {
+    "source": "www.zillow.com",
+    "price": 2567.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3045-W-Irving-Park-Rd-Chicago-IL-60618/456087743_zpid/",
+    "address": "3045 W Irving Park Rd, Chicago, IL 60618",
+    "date_pulled": "08-19-2025_18-11-59",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1100.0,
+    "lat": 41.95364,
+    "long": -87.70491,
+    "L_dist": [
+      "Addison",
+      0.85
+    ],
+    "crime_sc": {
+      "drug_score": 4.08,
+      "gun_score": 4.79,
+      "murder_score": 1.54,
+      "perv_score": 1.61,
+      "theft_score": 41.41,
+      "violence_score": 25.1,
+      "property_d_score": 0.14
+    }
   }
 }
