@@ -47,11 +47,12 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.zipc         = listinginfo[k1][k2][idx][k1]["address"].get("postalCode", defaultval)
                 listing.beds         = listinginfo[k1][k2][idx][k1].get("numberOfBedrooms", defaultval)
                 listing.baths        = listinginfo[k1][k2][idx][k1].get("numberOfBathroomsTotal", defaultval)
-                listing.sqft         = int("".join([x for x in str(listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)) if x.isnumeric()]))             
+                listing.sqft         = "".join([x for x in str(listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)) if x.isnumeric()])
                 listing.source       = source
                 listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
                 listing.price        = int(listinginfo[k1][k2][idx]["offers"].get("price", defaultval))
-                listing.price_sqft   = int(listing.price // listing.sqft)
+                if (listing.price !=None) & (listing.sqft != None):
+                    listing.price_sqft   = listing.price // int(listing.sqft)
                 listing.description  = listinginfo[k1][k2][idx].get("description", defaultval)
                 listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
                 listing.seller       = listinginfo[k1][k2][idx]["offers"].get("seller", defaultval)
