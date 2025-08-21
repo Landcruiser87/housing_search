@@ -8558,11 +8558,11 @@
     "city": "Bellevue",
     "state": "MI",
     "url": "https://www.redfin.com/MI/Bellevue/10950-W-Dr-N-49021/home/110634934",
-    "price": 365000,
+    "price": 355000,
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-26",
+    "date_pulled": "08-20-2025_19-03-28",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
@@ -8573,9 +8573,9 @@
     "long": -85.0839438,
     "zipc": "49021",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -10000,
+    "last_price": 365000,
+    "price_c_dat": "08-20-2025_19-03-34",
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -17235,5 +17235,434 @@
     },
     "extras": {},
     "year_built": 1928
+  },
+  "140465334": {
+    "address": "680 N Easton Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Angola/680-N-Easton-Dr-46703/home/140465334",
+    "price": 399900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-20-2025_19-04-07",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 5.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 4517,
+    "lat": 41.6528097,
+    "long": -84.9839887,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "85722665": {
+    "address": "680 N Easton Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/680-N-Easton-Dr-Angola-IN-46703/85722665_zpid/",
+    "price": 399900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/778f7468795f63071081dce05eea831b-p_e.jpg",
+    "date_pulled": "08-20-2025_19-04-20",
+    "description": "6 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 5.0,
+    "lotsqft": "0.38 acres",
+    "sqft": 4517,
+    "lat": 41.6528,
+    "long": -84.98398,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Booth Rose Krebs, Inc",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Craig A Rice",
+      "brokerName": "Booth Rose Krebs, Inc",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 392300
+  },
+  "0bm5g9tdr5h78": {
+    "address": "680 N Easton Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/680-n-easton-dr-angola-in/0bm5g9tdr5h78/",
+    "price": 399900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1718920644-034446202/680-n-easton-dr-angola-in-primaryphoto.jpg",
+    "date_pulled": "08-20-2025_19-04-25",
+    "description": "This spacious home on a full basement is impressive with 5 bedrooms, 3 baths, formal living space, formal dining room all with 10 foot plus ceilings.  Large master suite with walk in closet and double vanities.  The split floor plan allows for a comfortable living space with two bedrooms and bath on one side of the home.  The massive basement has a large family room for all kinds of activity plus",
+    "htype": "SingleFamilyResidence",
+    "beds": 5,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": 4517,
+    "lat": 41.6527288,
+    "long": -84.9842227,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Booth Rose Krebs, Inc"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/5v1QsogNb3sIIMQ20F34lsHwnSerOIVNA5sSbvU7zhM/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 316-2570",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Booth Rose Krebs, Inc"
+      },
+      "name": "Craig Rice"
+    },
+    "extras": {}
+  },
+  "2985526925": {
+    "address": "680 N Easton Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/680-N-Easton-Dr_Angola_IN_46703_M47150-87358",
+    "price": 399900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/f544d9f79f9869265d86e4f2b330dc5fl-m3283701136s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-20-2025_19-04-36",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 4517,
+    "lat": 41.652771,
+    "long": 41.652771,
+    "zipc": "46703",
+    "list_dt": "08-20-2025_17-06-56",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-20-2025_17-06-56",
+    "seller": "Booth Rose Krebs, Inc",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "191041",
+          "name": "Craig A Rice",
+          "builder": null,
+          "email": "MARLENE@REXNET.NET;craigrice1@hotmail.com",
+          "office": {
+            "name": "Booth Rose Krebs, Inc",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603479283",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2603479283",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Booth Rose Krebs, Inc",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1998
+  },
+  "2971256378": {
+    "address": "11580 E 565 N, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/11580-E-565-N_Orland_IN_46776_M42322-06128",
+    "price": 879000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/ed0da35ab076e0df1191e1f46ace0372l-b3372917751s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-20-2025_19-04-42",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 4243,
+    "lat": 41.724316,
+    "long": 41.724316,
+    "zipc": "46776",
+    "list_dt": "08-27-2024_20-26-27",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-27-2024_20-26-27",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3108826",
+          "name": "Linda Mynhier",
+          "builder": null,
+          "email": "lindam1@remax.net",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603369090",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2603369090",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2008
+  },
+  "dpqmvgl22wp48": {
+    "address": "11580 E 565 N, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.homes.com/property/11580-e-565-n-orland-in/dpqmvgl22wp48/",
+    "price": 879000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/4331869093-516810281/11580-e-565-n-orland-in-primaryphoto.jpg",
+    "date_pulled": "08-20-2025_19-04-48",
+    "description": "MOTIVATED SELLER!  Situated on 1.75 ACRES with 100 FEET OF LAKE FRONTAGE on the south shoreline of WALL LAKE... this STUNNING LAKE FRONT 4+ BR HOME provides the Best of Both Worlds!   Relax on the front porch to soak in the serene lake views or gather on the rear patio to enjoy a cookout in the privacy of your backyard. This custom-designed main home abounds with character and bright open spaces!",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 5,
+    "lotsqft": null,
+    "sqft": 4243,
+    "lat": 41.7247518,
+    "long": -85.203744,
+    "zipc": "46776",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Results - Angola office"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "telephone": "(260) 665-2414",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Results - Angola office"
+      },
+      "name": "Linda Mynhier"
+    },
+    "extras": {}
+  },
+  "124614907": {
+    "address": "11580 E 565 N, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/11580-E-565-N-Orland-IN-46776/124614907_zpid/",
+    "price": 879000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/f9ded8d0bdbabde414c80cf82d3f45d7-p_e.jpg",
+    "date_pulled": "08-20-2025_19-05-13",
+    "description": "358 days on Zillow",
+    "htype": "SINGLE_FAMILY",
+    "beds": 5.0,
+    "baths": 4.0,
+    "lotsqft": "1.75 acres",
+    "sqft": 4243,
+    "lat": 41.72436,
+    "long": -85.203835,
+    "zipc": "46776",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Linda Mynhier",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 358
+  },
+  "85180994": {
+    "address": "717 N Main St, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/717-N-Main-St-Auburn-IN-46706/85180994_zpid/",
+    "price": 815000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/784ee871815e59674386d113390d9ca8-p_e.jpg",
+    "date_pulled": "08-20-2025_19-05-53",
+    "description": "7 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 5.0,
+    "baths": 6.0,
+    "lotsqft": "0.44 acres",
+    "sqft": 4000,
+    "lat": 41.370964,
+    "long": -85.056274,
+    "zipc": "46706",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": null,
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": null,
+      "marketingStatusSimplifiedCd": "For Sale by Owner"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 685200
+  },
+  "28d9899ey5h7d": {
+    "address": "17 Alandale Dr, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/17-alandale-dr-coldwater-mi/28d9899ey5h7d/",
+    "price": 374900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/6415570644-801856202/17-alandale-dr-coldwater-mi-primaryphoto.jpg",
+    "date_pulled": "08-20-2025_19-06-25",
+    "description": "Spacious 4 bedroom, 3.5 bath home with an in-ground pool and fenced backyard, perfect for summer fun and outdoor entertaining. The kitchen features a snack bar and dining area, opening to a comfortable three-season room overlooking the pool. A main floor laundry adds convenience, while the finished basement with a large rec room provides plenty of space for gatherings, game nights, or a home",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": 2493,
+    "lat": null,
+    "long": null,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Southern Marsh Realty"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "telephone": "(517) 282-2822",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Southern Marsh Realty"
+      },
+      "name": "Terry Whelan"
+    },
+    "extras": {}
+  },
+  "96664962": {
+    "address": "17 Alandale Dr, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/17-Allandale-Dr-49036/home/96664962",
+    "price": 374900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-20-2025_19-06-37",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2493,
+    "lat": 41.9542767,
+    "long": -85.0115585,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
   }
 }

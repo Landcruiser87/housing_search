@@ -28,9 +28,11 @@ AREAS = [
     ('Angola'   ,'IN'),
     ('Auburn'   ,'IN'),
     ('Fremont'  ,'IN'),
+    ('Orland'   ,'IN'),
+    ('Coldwater','MI'),    #guuuurl.  You gots lots of housing price cuts.  No bueno market!
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-    ('Coldwater','MI'),#guuuurl.  You gots lots of housing price cuts.  No bueno market!
+    # ('Portage'  ,'MI'),
 ]
 
 SOURCES = {
@@ -141,7 +143,7 @@ def check_ids(data:list)->list:
     newids = n_ids - j_ids
     newdata, pricechanges = None, None
 
-    #Look for same ids in the new vs old (intersection)
+    #Look for same ids in the new and old (intersection)
     common_ids = n_ids & j_ids
     p_chn_ids = set()
     for ids in common_ids:
@@ -185,7 +187,7 @@ def check_ids(data:list)->list:
 
 #FUNCTION Scrape data
 def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
-    """This function will iterate through different resources scrapin g necessary information for ingestion. 
+    """This function will iterate through different resources scraping necessary information for ingestion. 
 
     Args:
         area (str): City or or Zipcode
