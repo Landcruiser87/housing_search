@@ -47,7 +47,6 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.price        = int(search_result.get("list_price", defaultval))
         if (listing.price !=None) & (listing.sqft != None):
             listing.price_sqft   = listing.price // int(listing.sqft)
-            logger.info(f"{listing.price_sqft}")
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
         listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
