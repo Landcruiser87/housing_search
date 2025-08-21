@@ -68,7 +68,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1949
+    "year_built": 1949,
+    "price_sqft": 88
   },
   "2983926481": {
     "address": "2312 Northgate Blvd, Auburn, IN 46706",
@@ -143,7 +144,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1997
+    "year_built": 1997,
+    "price_sqft": 145
   },
   "2985038551": {
     "address": "1205 N Dewey St, Auburn, IN 46706",
@@ -218,7 +220,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2002
+    "year_built": 2002,
+    "price_sqft": 149
   },
   "2982737924": {
     "address": "257 Center St, Auburn, IN 46706",
@@ -289,7 +292,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 65
   },
   "2979679456": {
     "address": "5962 Deer Hollow Rd, Auburn, IN 46706",
@@ -364,7 +368,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2014
+    "year_built": 2014,
+    "price_sqft": 159
   },
   "2985457101": {
     "address": "5525 Kodiak Trl, Auburn, IN 46706",
@@ -435,7 +440,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2016
+    "year_built": 2016,
+    "price_sqft": 178
   },
   "2983499007": {
     "address": "6170 County Road 39, Auburn, IN 46706",
@@ -506,7 +512,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1995
+    "year_built": 1995,
+    "price_sqft": 152
   },
   "2982462596": {
     "address": "714 Hazel St, Auburn, IN 46706",
@@ -572,7 +579,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1952
+    "year_built": 1952,
+    "price_sqft": 128
   },
   "2981455074": {
     "address": "2034 County Road 68, Auburn, IN 46706",
@@ -643,7 +651,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1994
+    "year_built": 1994,
+    "price_sqft": 170
   },
   "2984151673": {
     "address": "2217 Golfview Dr, Auburn, IN 46706",
@@ -714,7 +723,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2025
+    "year_built": 2025,
+    "price_sqft": 212
   },
   "2982561996": {
     "address": "804 S Jackson St, Auburn, IN 46706",
@@ -785,7 +795,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 132
   },
   "2979971170": {
     "address": "1801 Golfview Dr, Auburn, IN 46706",
@@ -860,7 +871,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2024
+    "year_built": 2024,
+    "price_sqft": 239
   },
   "2983052518": {
     "address": "1051 Morningstar Rd, Auburn, IN 46706",
@@ -931,7 +943,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1981
+    "year_built": 1981,
+    "price_sqft": 188
   },
   "2985203809": {
     "address": "3425 Bruin Pass, Auburn, IN 46706",
@@ -1002,7 +1015,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2024
+    "year_built": 2024,
+    "price_sqft": 156
   },
   "2983155956": {
     "address": "1209 S Jackson St, Auburn, IN 46706",
@@ -1073,7 +1087,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1930
+    "year_built": 1930,
+    "price_sqft": 112
   },
   "2983616251": {
     "address": "5327 County Road 427 Rd, Auburn, IN 46706",
@@ -1144,7 +1159,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2002
+    "year_built": 2002,
+    "price_sqft": 92
   },
   "2984142160": {
     "address": "5617 Bear Creek Pass, Auburn, IN 46706",
@@ -1215,7 +1231,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2022
+    "year_built": 2022,
+    "price_sqft": 181
   },
   "2984112447": {
     "address": "18607 Tonkel Rd, Auburn, IN 46706",
@@ -1290,7 +1307,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2013
+    "year_built": 2013,
+    "price_sqft": 186
   },
   "2980801635": {
     "address": "329 W 19th St, Auburn, IN 46706",
@@ -1361,7 +1379,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1960
+    "year_built": 1960,
+    "price_sqft": 169
   },
   "2982594067": {
     "address": "3427 Bruin Pass, Auburn, IN 46706",
@@ -1436,7 +1455,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2025
+    "year_built": 2025,
+    "price_sqft": 174
   },
   "85181618": {
     "address": "714 Hazel St, Auburn, IN 46706",
@@ -1471,7 +1491,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 82
+    "daysOnZillow": 82,
+    "price_sqft": 128
   },
   "85181061": {
     "address": "501 N Van Buren St, Auburn, IN 46706",
@@ -1507,7 +1528,8 @@
     },
     "extras": {},
     "daysOnZillow": 57,
-    "zestimate": 322500
+    "zestimate": 322500,
+    "price_sqft": 88
   },
   "85179651": {
     "address": "2312 Northgate Blvd, Auburn, IN 46706",
@@ -1543,7 +1565,8 @@
     },
     "extras": {},
     "daysOnZillow": 46,
-    "zestimate": 344200
+    "zestimate": 344200,
+    "price_sqft": 145
   },
   "85180159": {
     "address": "1205 N Dewey St, Auburn, IN 46706",
@@ -1579,7 +1602,8 @@
     },
     "extras": {},
     "daysOnZillow": 14,
-    "zestimate": 604200
+    "zestimate": 604200,
+    "price_sqft": 149
   },
   "85184890": {
     "address": "5936 County Road 427, Auburn, IN 46706",
@@ -1615,7 +1639,8 @@
     },
     "extras": {},
     "daysOnZillow": 93,
-    "zestimate": 807300
+    "zestimate": 807300,
+    "price_sqft": 185
   },
   "2067082404": {
     "address": "2217 Golfview Dr, Auburn, IN 46706",
@@ -1650,7 +1675,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 39
+    "daysOnZillow": 39,
+    "price_sqft": 212
   },
   "180466373": {
     "address": "5962 Deer Hollow Rd, Auburn, IN 46706",
@@ -1686,7 +1712,8 @@
     },
     "extras": {},
     "daysOnZillow": 151,
-    "zestimate": 689000
+    "zestimate": 689000,
+    "price_sqft": 159
   },
   "439278431": {
     "address": "3425 Bruin Pass, Auburn, IN 46706",
@@ -1722,7 +1749,8 @@
     },
     "extras": {},
     "daysOnZillow": 10,
-    "zestimate": 401400
+    "zestimate": 401400,
+    "price_sqft": 156
   },
   "85186135": {
     "address": "2034 County Road 68, Auburn, IN 46706",
@@ -1758,7 +1786,8 @@
     },
     "extras": {},
     "daysOnZillow": 106,
-    "zestimate": 665000
+    "zestimate": 665000,
+    "price_sqft": 170
   },
   "119747353": {
     "address": "1051 Morningstar Rd, Auburn, IN 46706",
@@ -1794,7 +1823,8 @@
     },
     "extras": {},
     "daysOnZillow": 68,
-    "zestimate": 672300
+    "zestimate": 672300,
+    "price_sqft": 188
   },
   "244517262": {
     "address": "5525 Kodiak Trl, Auburn, IN 46706",
@@ -1830,7 +1860,8 @@
     },
     "extras": {},
     "daysOnZillow": 1,
-    "zestimate": 396900
+    "zestimate": 396900,
+    "price_sqft": 178
   },
   "252072720": {
     "address": "5617 Bear Creek Pass, Auburn, IN 46706",
@@ -1866,7 +1897,8 @@
     },
     "extras": {},
     "daysOnZillow": 40,
-    "zestimate": 405600
+    "zestimate": 405600,
+    "price_sqft": 181
   },
   "244517272": {
     "address": "2002 Approach Dr, Auburn, IN 46706",
@@ -1901,7 +1933,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 152
+    "daysOnZillow": 152,
+    "price_sqft": 246
   },
   "l4w1b6p08bsln": {
     "address": "2002 Approach Dr, Auburn, IN 46706",
@@ -1941,7 +1974,8 @@
       },
       "name": "Aaron Hoover"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 246
   },
   "6nn7q0rd6fkf7": {
     "address": "5962 Deer Hollow Rd, Auburn, IN 46706",
@@ -1979,7 +2013,8 @@
       },
       "name": "Brad Minear"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 159
   },
   "?l=xsvzzgtznbjgs": {
     "address": "5936 County Road 427, Auburn, IN 46706",
@@ -2014,7 +2049,8 @@
       "jobTitle": "Listing Agent",
       "name": "Andrew Malott"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 185
   },
   "xlgt4vjex5mhr": {
     "address": "1205 N Dewey St, Auburn, IN 46706",
@@ -2054,7 +2090,8 @@
       },
       "name": "Mary Anne Taylor"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 149
   },
   "v17jke6sthpsq": {
     "address": "1051 Morningstar Rd, Auburn, IN 46706",
@@ -2094,7 +2131,8 @@
       },
       "name": "Donna Mink"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 188
   },
   "5drhmh5nvsh5q": {
     "address": "5272 Greyson Heights Dr, Auburn, IN 46706",
@@ -2134,7 +2172,8 @@
       },
       "name": "Elizabeth Urschel"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 221
   },
   "qwzwd8b52kgfw": {
     "address": "2034 County Road 68, Auburn, IN 46706",
@@ -2174,7 +2213,8 @@
       },
       "name": "Jennie Holcomb"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 170
   },
   "frr6s45cn8glc": {
     "address": "1801 Golfview Dr, Auburn, IN 46706",
@@ -2214,7 +2254,8 @@
       },
       "name": "Emily Witmer"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 239
   },
   "z9rjn72dq13fy": {
     "address": "5525 Kodiak Trail, Auburn, IN 46706",
@@ -2253,7 +2294,8 @@
       },
       "name": "Brock Noye"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 178
   },
   "1gbbj5lel8kny": {
     "address": "3425 Bruin Pass, Auburn, IN 46706",
@@ -2292,7 +2334,8 @@
       },
       "name": "Jill Salgado"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "ymd5c1jsf1xpg": {
     "address": "5617 Bear Creek Pass, Auburn, IN 46706",
@@ -2332,7 +2375,8 @@
       },
       "name": "Brandon Schueler"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 181
   },
   "sxy7f664fdh5j": {
     "address": "2312 Northgate Blvd, Auburn, IN 46706",
@@ -2372,7 +2416,8 @@
       },
       "name": "Lynda Carper"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 145
   },
   "143837517": {
     "address": "5525 Kodiak Trl, Auburn, IN 46706",
@@ -2399,7 +2444,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 178
   },
   "191531267": {
     "address": "3425 Bruin Pass, Auburn, IN 46706",
@@ -2426,7 +2472,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "120847562": {
     "address": "1205 N Dewey, Auburn, IN 46706",
@@ -2453,7 +2500,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 149
   },
   "168264805": {
     "address": "5617 Bear Creek Pass, Auburn, IN 46706",
@@ -2480,7 +2528,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 181
   },
   "120973433": {
     "address": "2312 Northgate Blvd, Auburn, IN 46706",
@@ -2507,7 +2556,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 145
   },
   "120899127": {
     "address": "1051 Morningstar Rd, Auburn, IN 46706",
@@ -2534,7 +2584,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 188
   },
   "179916372": {
     "address": "1801 Golfview Dr, Auburn, IN 46706",
@@ -2561,7 +2612,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 239
   },
   "116321367": {
     "address": "5962 Deer Hollow Rd, Auburn, IN 46706",
@@ -2588,7 +2640,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 159
   },
   "196017502": {
     "address": "653 Atilla Way, Huntertown, IN 46748",
@@ -2615,7 +2668,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 194
   },
   "196884725": {
     "address": "3356 Sika Trl, Waterloo, IN 46793",
@@ -2642,7 +2696,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 152
   },
   "115596580": {
     "address": "15114 Lions Psge, Leo, IN 46765",
@@ -2669,7 +2724,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 154
   },
   "120990775": {
     "address": "144 W Oak St, Butler, IN 46721",
@@ -2696,7 +2752,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 50
   },
   "168192269": {
     "address": "314 Artisan Pass, Fort Wayne, IN 46845",
@@ -2723,7 +2780,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 225
   },
   "191588249": {
     "address": "1353 Cascata Trl, Huntertown, IN 46748",
@@ -2750,7 +2808,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 289
   },
   "175170807": {
     "address": "508 Pioneer St, Garrett, IN 46738",
@@ -2777,7 +2836,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "115732990": {
     "address": "16120 Gemma Pass, Huntertown, IN 46748",
@@ -2804,7 +2864,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 190
   },
   "179909850": {
     "address": "658 Skillet Ave, Huntertown, IN 46748",
@@ -2831,7 +2892,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 229
   },
   "196813720": {
     "address": "1577 Bracht Ct, Huntertown, IN 46748",
@@ -2858,7 +2920,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 178
   },
   "115628642": {
     "address": "10235 Consta Verde Cmns, Leo, IN 46765",
@@ -2885,7 +2948,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 135
   },
   "196783735": {
     "address": "17468 Creekside Crossing Run, Huntertown, IN 46748",
@@ -2912,7 +2976,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 202
   },
   "175170781": {
     "address": "1904 Waynedale Dr, Garrett, IN 46738",
@@ -2939,7 +3004,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 162
   },
   "120835365": {
     "address": "311 Maxine Dr, Garrett, IN 46738",
@@ -2966,7 +3032,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 149
   },
   "196694446": {
     "address": "1423 Herdsman Blvd, Huntertown, IN 46748",
@@ -2993,7 +3060,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 212
   },
   "191588243": {
     "address": "1256 Cascata Trl, Huntertown, IN 46748",
@@ -3020,7 +3088,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 230
   },
   "116648763": {
     "address": "10229 Consta Verde Cmns, Leo, IN 46765",
@@ -3047,7 +3116,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 113
   },
   "115727964": {
     "address": "15417 Timber Hollow Trl, Fort Wayne, IN 46845",
@@ -3074,7 +3144,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 135
   },
   "175206595": {
     "address": "17714 Letterbrick Run, Leo, IN 46765",
@@ -3101,7 +3172,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 230
   },
   "120897587": {
     "address": "123 Michigan Ave, Corunna, IN 46730",
@@ -3128,7 +3200,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 130
   },
   "2066859359": {
     "address": "220 Lane 101fa Jimmerson Lk, Angola, IN 46703",
@@ -3163,7 +3236,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 3
+    "daysOnZillow": 3,
+    "price_sqft": 261
   },
   "126944973": {
     "address": "575 Ln 100 Pine Cyn, Angola, IN 46703",
@@ -3199,7 +3273,8 @@
     },
     "extras": {},
     "daysOnZillow": 106,
-    "zestimate": 585500
+    "zestimate": 585500,
+    "price_sqft": 158
   },
   "85723393": {
     "address": "215 S Wayne St, Angola, IN 46703",
@@ -3235,7 +3310,8 @@
     },
     "extras": {},
     "daysOnZillow": 0,
-    "zestimate": 229600
+    "zestimate": 229600,
+    "price_sqft": 136
   },
   "85724119": {
     "address": "710 Bluffview Dr, Angola, IN 46703",
@@ -3271,7 +3347,8 @@
     },
     "extras": {},
     "daysOnZillow": 4,
-    "zestimate": 305400
+    "zestimate": 305400,
+    "price_sqft": 133
   },
   "2089945831": {
     "address": "60 Lane 101d Jimmerson Lk, Angola, IN 46703",
@@ -3306,7 +3383,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 15
+    "daysOnZillow": 15,
+    "price_sqft": 243
   },
   "85723469": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -3342,7 +3420,8 @@
     },
     "extras": {},
     "daysOnZillow": 11,
-    "zestimate": 315200
+    "zestimate": 315200,
+    "price_sqft": 123
   },
   "453452408": {
     "address": "115 Lane 230 Jimmerson Lk, Angola, IN 46703",
@@ -3378,7 +3457,8 @@
     },
     "extras": {},
     "daysOnZillow": 63,
-    "zestimate": 517700
+    "zestimate": 517700,
+    "price_sqft": 184
   },
   "120211427": {
     "address": "3095 W 100 N, Angola, IN 46703",
@@ -3414,7 +3494,8 @@
     },
     "extras": {},
     "daysOnZillow": 40,
-    "zestimate": 548000
+    "zestimate": 548000,
+    "price_sqft": 213
   },
   "85721815": {
     "address": "360 E 280 N, Angola, IN 46703",
@@ -3450,7 +3531,8 @@
     },
     "extras": {},
     "daysOnZillow": 53,
-    "zestimate": 264900
+    "zestimate": 264900,
+    "price_sqft": 123
   },
   "401713682": {
     "address": "195 Lane 272 Crooked Lk, Angola, IN 46703",
@@ -3486,7 +3568,8 @@
     },
     "extras": {},
     "daysOnZillow": 21,
-    "zestimate": 477000
+    "zestimate": 477000,
+    "price_sqft": 269
   },
   "126945983": {
     "address": "280 Lane 345 Lake James, Angola, IN 46703",
@@ -3521,7 +3604,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 33
+    "daysOnZillow": 33,
+    "price_sqft": 403
   },
   "85722218": {
     "address": "3300 W Shady Side Rd, Angola, IN 46703",
@@ -3557,7 +3641,8 @@
     },
     "extras": {},
     "daysOnZillow": 107,
-    "zestimate": 858000
+    "zestimate": 858000,
+    "price_sqft": 576
   },
   "112583034": {
     "address": "4460 N 425 W, Angola, IN 46703",
@@ -3593,7 +3678,8 @@
     },
     "extras": {},
     "daysOnZillow": 57,
-    "zestimate": 1195600
+    "zestimate": 1195600,
+    "price_sqft": 329
   },
   "452788278": {
     "address": "900 Ln 105 Lake James, Angola, IN 46703",
@@ -3629,7 +3715,8 @@
     },
     "extras": {},
     "daysOnZillow": 79,
-    "zestimate": 1342900
+    "zestimate": 1342900,
+    "price_sqft": 477
   },
   "350850970": {
     "address": "105 2280th Ln, Angola, IN 46703",
@@ -3665,7 +3752,8 @@
     },
     "extras": {},
     "daysOnZillow": 143,
-    "zestimate": 1108400
+    "zestimate": 1108400,
+    "price_sqft": 372
   },
   "442583757": {
     "address": "135 Lane 335 Lake James, Angola, IN 46703",
@@ -3700,7 +3788,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 279
+    "daysOnZillow": 279,
+    "price_sqft": 197
   },
   "2067899994": {
     "address": "1021 E 145th Rd N, Angola, IN 46703",
@@ -3736,7 +3825,8 @@
     },
     "extras": {},
     "daysOnZillow": 15,
-    "zestimate": 477800
+    "zestimate": 477800,
+    "price_sqft": 121
   },
   "99223536": {
     "address": "501 W Fox Lake Rd, Angola, IN 46703",
@@ -3772,7 +3862,8 @@
     },
     "extras": {},
     "daysOnZillow": 85,
-    "zestimate": 570300
+    "zestimate": 570300,
+    "price_sqft": 111
   },
   "85722440": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -3808,7 +3899,8 @@
     },
     "extras": {},
     "daysOnZillow": 22,
-    "zestimate": 612900
+    "zestimate": 612900,
+    "price_sqft": 235
   },
   "350784762": {
     "address": "2080 Lane 200 Lake James, Angola, IN 46703",
@@ -3843,7 +3935,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 49
+    "daysOnZillow": 49,
+    "price_sqft": 509
   },
   "85722053": {
     "address": "1150 N 155 W, Angola, IN 46703",
@@ -3879,7 +3972,8 @@
     },
     "extras": {},
     "daysOnZillow": 76,
-    "zestimate": 297100
+    "zestimate": 297100,
+    "price_sqft": 157
   },
   "115591754": {
     "address": "2245 W Orland Rd, Angola, IN 46703",
@@ -3915,7 +4009,8 @@
     },
     "extras": {},
     "daysOnZillow": 27,
-    "zestimate": 1109000
+    "zestimate": 1109000,
+    "price_sqft": 334
   },
   "94590952": {
     "address": "3795 W Sycamore Beach Rd, Angola, IN 46703",
@@ -3951,7 +4046,8 @@
     },
     "extras": {},
     "daysOnZillow": 120,
-    "zestimate": 1209300
+    "zestimate": 1209300,
+    "price_sqft": 337
   },
   "85723168": {
     "address": "404 N Elizabeth St, Angola, IN 46703",
@@ -3987,7 +4083,8 @@
     },
     "extras": {},
     "daysOnZillow": 62,
-    "zestimate": 175100
+    "zestimate": 175100,
+    "price_sqft": 132
   },
   "440497705": {
     "address": "100 Lane 270a Crooked Lake, Angola, IN 46703",
@@ -4023,7 +4120,8 @@
     },
     "extras": {},
     "daysOnZillow": 109,
-    "zestimate": 1070900
+    "zestimate": 1070900,
+    "price_sqft": 337
   },
   "244146800": {
     "address": "255 Lane 345 Crooked Lk, Angola, IN 46703",
@@ -4059,7 +4157,8 @@
     },
     "extras": {},
     "daysOnZillow": 40,
-    "zestimate": 1196200
+    "zestimate": 1196200,
+    "price_sqft": 461
   },
   "118950286": {
     "address": "15 Ln 200eb Lake James, Angola, IN 46703",
@@ -4095,7 +4194,8 @@
     },
     "extras": {},
     "daysOnZillow": 138,
-    "zestimate": 1489000
+    "zestimate": 1489000,
+    "price_sqft": 419
   },
   "85724244": {
     "address": "4537 W Black Oak Cir, Angola, IN 46703",
@@ -4131,7 +4231,8 @@
     },
     "extras": {},
     "daysOnZillow": 33,
-    "zestimate": 637700
+    "zestimate": 637700,
+    "price_sqft": 183
   },
   "2123891557": {
     "address": "700 Lane 274 Crooked Lk, Angola, IN 46703",
@@ -4167,7 +4268,8 @@
     },
     "extras": {},
     "daysOnZillow": 20,
-    "zestimate": 955800
+    "zestimate": 955800,
+    "price_sqft": 278
   },
   "85723926": {
     "address": "107 W Felicity St, Angola, IN 46703",
@@ -4202,7 +4304,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 281
+    "daysOnZillow": 281,
+    "price_sqft": 98
   },
   "244148899": {
     "address": "687 Sully Ct, Angola, IN 46703",
@@ -4238,7 +4341,8 @@
     },
     "extras": {},
     "daysOnZillow": 45,
-    "zestimate": 350200
+    "zestimate": 350200,
+    "price_sqft": 206
   },
   "85723175": {
     "address": "210 E Broad St, Angola, IN 46703",
@@ -4273,7 +4377,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Owner"
     },
     "extras": {},
-    "daysOnZillow": 43
+    "daysOnZillow": 43,
+    "price_sqft": 123
   },
   "85723206": {
     "address": "109 E Broad St, Angola, IN 46703",
@@ -4308,7 +4413,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 306
+    "daysOnZillow": 306,
+    "price_sqft": 123
   },
   "2985397653": {
     "address": "710 Bluffview Dr, Angola, IN 46703",
@@ -4379,7 +4485,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1981
+    "year_built": 1981,
+    "price_sqft": 133
   },
   "2985428697": {
     "address": "220 Lane 101FA Jimmerson Lk, Angola, IN 46703",
@@ -4454,7 +4561,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2019
+    "year_built": 2019,
+    "price_sqft": 261
   },
   "2983219822": {
     "address": "115 Lane 230 Jimmerson Lk, Angola, IN 46703",
@@ -4520,7 +4628,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1996
+    "year_built": 1996,
+    "price_sqft": 184
   },
   "2985165283": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -4595,7 +4704,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1880
+    "year_built": 1880,
+    "price_sqft": 123
   },
   "2981446987": {
     "address": "575 Lane 100 Pine Canyon Lk, Angola, IN 46703",
@@ -4666,7 +4776,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1998
+    "year_built": 1998,
+    "price_sqft": 158
   },
   "2983301486": {
     "address": "204 S West St, Angola, IN 46703",
@@ -4737,7 +4848,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1955
+    "year_built": 1955,
+    "price_sqft": 80
   },
   "2984996143": {
     "address": "60 Lane 101D Jimmerson Lk, Angola, IN 46703",
@@ -4816,7 +4928,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1957
+    "year_built": 1957,
+    "price_sqft": 243
   },
   "2985352747": {
     "address": "316 S West St, Angola, IN 46703",
@@ -4895,7 +5008,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2025
+    "year_built": 2025,
+    "price_sqft": 198
   },
   "2983260278": {
     "address": "404 N Elizabeth St, Angola, IN 46703",
@@ -4970,7 +5084,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1925
+    "year_built": 1925,
+    "price_sqft": 132
   },
   "2984877873": {
     "address": "2080 S State Road 1, Angola, IN 46703",
@@ -5041,7 +5156,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 157
   },
   "2983427202": {
     "address": "275 Lane 440 Lake James, Angola, IN 46703",
@@ -5116,7 +5232,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1935
+    "year_built": 1935,
+    "price_sqft": 223
   },
   "2984798777": {
     "address": "195 Lane 272 Crooked Lk, Angola, IN 46703",
@@ -5182,7 +5299,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1943
+    "year_built": 1943,
+    "price_sqft": 269
   },
   "2974939489": {
     "address": "135 Lane 335 Lake James, Angola, IN 46703",
@@ -5248,7 +5366,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2005
+    "year_built": 2005,
+    "price_sqft": 197
   },
   "2983628214": {
     "address": "360 E 280 N, Angola, IN 46703",
@@ -5327,7 +5446,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1976
+    "year_built": 1976,
+    "price_sqft": 123
   },
   "2984998697": {
     "address": "1021 E 145 Rd, Angola, IN 46703",
@@ -5402,7 +5522,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2003
+    "year_built": 2003,
+    "price_sqft": 121
   },
   "2984746239": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -5477,7 +5598,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1985
+    "year_built": 1985,
+    "price_sqft": 235
   },
   "2984113572": {
     "address": "3095 W 100 N Loon Lk, Angola, IN 46703",
@@ -5552,7 +5674,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 213
   },
   "2974817385": {
     "address": "107 W Felicity St, Angola, IN 46703",
@@ -5623,7 +5746,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1920
+    "year_built": 1920,
+    "price_sqft": 98
   },
   "2981410141": {
     "address": "3300 W Shady Side Rd, Angola, IN 46703",
@@ -5698,7 +5822,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1926
+    "year_built": 1926,
+    "price_sqft": 576
   },
   "2983801650": {
     "address": "2080 Lane 200 Lake James, Angola, IN 46703",
@@ -5777,7 +5902,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1965
+    "year_built": 1965,
+    "price_sqft": 509
   },
   "2982707492": {
     "address": "1150 N 155 W, Angola, IN 46703",
@@ -5848,7 +5974,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2022
+    "year_built": 2022,
+    "price_sqft": 157
   },
   "2984389404": {
     "address": "4537 W Black Oak Cir, Angola, IN 46703",
@@ -5919,7 +6046,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1992
+    "year_built": 1992,
+    "price_sqft": 183
   },
   "2983949656": {
     "address": "687 Sully Ct, Angola, IN 46703",
@@ -5994,7 +6122,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2019
+    "year_built": 2019,
+    "price_sqft": 206
   },
   "y069jjn9t2yv2": {
     "address": "4460 N 425 W, Angola, IN 46703",
@@ -6034,7 +6163,8 @@
       },
       "name": "Tony Isa"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 329
   },
   "2197gfvsl4e18": {
     "address": "900 Ln 105 Lake James, Angola, IN 46703",
@@ -6074,7 +6204,8 @@
       },
       "name": "Scott Marker"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 477
   },
   "p4kmg4mefv3xd": {
     "address": "60 Lane 101d Jimmerson Lake, Angola, IN 46703",
@@ -6114,7 +6245,8 @@
       },
       "name": "Barbara Hendrick"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 243
   },
   "t2xwt7symtyzd": {
     "address": "700 Lane 274 Crooked Lake, Angola, IN 46703",
@@ -6154,7 +6286,8 @@
       },
       "name": "Patti Couperthwaite"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 278
   },
   "4jjpf4le1rstd": {
     "address": "2245 W Orland Rd, Angola, IN 46703",
@@ -6194,7 +6327,8 @@
       },
       "name": "Erica Amans"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 334
   },
   "ybhpnbn5d55p7": {
     "address": "100 Lane 270a Crooked Lake, Angola, IN 46703",
@@ -6234,7 +6368,8 @@
       },
       "name": "Erica Amans"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 337
   },
   "1vmnbvwgbksez": {
     "address": "316 S West St, Angola, IN 46703",
@@ -6273,7 +6408,8 @@
       },
       "name": "Brian Waters"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 198
   },
   "rqf9czj6ezlc8": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -6313,7 +6449,8 @@
       },
       "name": "Robert Rolf"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 123
   },
   "b2yh0v2l5jd19": {
     "address": "2080 S State Road 1, Angola, IN 46703",
@@ -6353,7 +6490,8 @@
       },
       "name": "Christy Thomson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 157
   },
   "1kct53p9z5d8y": {
     "address": "195 Lane 272 Crooked Lake, Angola, IN 46703",
@@ -6392,7 +6530,8 @@
       },
       "name": "Darlene Myers"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 269
   },
   "eghc6d74e2xdj": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -6432,7 +6571,8 @@
       },
       "name": "Craig Rice"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 235
   },
   "r40t654gs3xpe": {
     "address": "4537 W Black Oak Cir, Angola, IN 46703",
@@ -6472,7 +6612,8 @@
       },
       "name": "Missy Burkhalter"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 183
   },
   "2zch9vs1dksm8": {
     "address": "280 Lane 345 Lake James, Angola, IN 46703",
@@ -6512,7 +6653,8 @@
       },
       "name": "Sandra Ginn"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 403
   },
   "tjel6rbyj5cd8": {
     "address": "3095 W 100 N, Angola, IN 46703",
@@ -6552,7 +6694,8 @@
       },
       "name": "Erica Amans"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 213
   },
   "96demzlgb7pjy": {
     "address": "687 Sully Ct, Angola, IN 46703",
@@ -6592,7 +6735,8 @@
       },
       "name": "Travis Williamson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 206
   },
   "0y0snsyn65z86": {
     "address": "501 W Fox Lake Rd, Angola, IN 46703",
@@ -6632,7 +6776,8 @@
       },
       "name": "Tyler Dohner"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 111
   },
   "e7lbvxs0g0fgz": {
     "address": "575 Lane 100 Pine Canyon Lake, Angola, IN 46703",
@@ -6672,7 +6817,8 @@
       },
       "name": "Christy Thomson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 158
   },
   "e1tbnd9fc15hr": {
     "address": "3795 W Sycamore Beach Rd, Angola, IN 46703",
@@ -6712,7 +6858,8 @@
       },
       "name": "Christy Thomson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 337
   },
   "ple08444elyhb": {
     "address": "15 Ln 200eb Lake James, Angola, IN 46703",
@@ -6751,7 +6898,8 @@
       },
       "name": "Teresa Stuckey"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 419
   },
   "pkzeq8hpjwq1b": {
     "address": "2280 Lane 105 Lake James, Angola, IN 46703",
@@ -6790,7 +6938,8 @@
       },
       "name": "Justin Smallwood"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 372
   },
   "yrjx0gx5fn896": {
     "address": "107 W Felicity St, Angola, IN 46703",
@@ -6830,7 +6979,8 @@
       },
       "name": "Mike Shoup"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 98
   },
   "140537164": {
     "address": "60 Lane 101d Jimmerson Lk Lk, Angola, IN 46703",
@@ -6857,7 +7007,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 243
   },
   "140556192": {
     "address": "710 Bluffview Dr, Angola, IN 46703",
@@ -6884,7 +7035,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 133
   },
   "140436043": {
     "address": "316 S West St, Angola, IN 46703",
@@ -6911,7 +7063,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 198
   },
   "140532737": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -6938,7 +7091,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 123
   },
   "140485319": {
     "address": "195 Lane 272 Crooked Lake Lk, Angola, IN 46703",
@@ -6965,7 +7119,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 269
   },
   "196752981": {
     "address": "2080 S State Road 1, Angola, IN 46703",
@@ -6992,7 +7147,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 157
   },
   "140535240": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -7019,7 +7175,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 235
   },
   "140439055": {
     "address": "575 Lane 100 Pine Canyon Lk, Angola, IN 46703",
@@ -7046,7 +7203,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 158
   },
   "140675337": {
     "address": "3095 W 100 N Loon Lk, Angola, IN 46703",
@@ -7073,7 +7231,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 213
   },
   "140601765": {
     "address": "4537 W Black Oak Cir, Angola, IN 46703",
@@ -7100,7 +7259,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 183
   },
   "143930282": {
     "address": "687 Sully Ct, Angola, IN 46703",
@@ -7127,7 +7287,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 206
   },
   "140489346": {
     "address": "501 W Fox Lake Rd, Angola, IN 46730",
@@ -7154,7 +7315,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 111
   },
   "140428151": {
     "address": "109 E Broad St, Angola, IN 46703",
@@ -7181,7 +7343,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 123
   },
   "164337677": {
     "address": "107 W Felicity St St, Angola, IN 46703",
@@ -7208,7 +7371,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 98
   },
   "140499022": {
     "address": "200 LN 101 Lk Minifenokee, Fremont, IN 46737",
@@ -7235,7 +7399,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 174
   },
   "196745557": {
     "address": "18405 County Road 2 50 Rd, Edon, OH 43518",
@@ -7262,7 +7427,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 382
   },
   "140494650": {
     "address": "8860 E 710 N Clear Lake Ests, Fremont, IN 46737",
@@ -7289,7 +7455,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 97
   },
   "140484184": {
     "address": "1001 Nicholas Trl, Fremont, IN 46737",
@@ -7316,7 +7483,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 164
   },
   "195987556": {
     "address": "Elements 2700 Plan, Fremont, IN 46737",
@@ -7343,7 +7511,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 133
   },
   "131001487": {
     "address": "5575 S 930 E, Wolcottville, IN 46795",
@@ -7370,7 +7539,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 197
   },
   "190735768": {
     "address": "Integrity 1880 Plan, Fremont, IN 46737",
@@ -7397,7 +7567,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 154
   },
   "188270686": {
     "address": "Integrity 1830 Plan, Fremont, IN 46737",
@@ -7424,7 +7595,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 154
   },
   "189780786": {
     "address": "Integrity 1910 Plan, Fremont, IN 46737",
@@ -7451,7 +7623,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 153
   },
   "140507899": {
     "address": "4495 S 1000 St, Hudson, IN 46747",
@@ -7478,7 +7651,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 142
   },
   "140492036": {
     "address": "700 Nicholas Trl, Fremont, IN 46737",
@@ -7505,7 +7679,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 139
   },
   "140575126": {
     "address": "2286 W 500 S, Pleasant Lake, IN 46779",
@@ -7532,7 +7707,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 157
   },
   "130842885": {
     "address": "11580 E 565 N, Orland, IN 46776",
@@ -7559,7 +7735,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 207
   },
   "74655818": {
     "address": "13 Friendship Ln, Marshall, MI 49068",
@@ -7595,7 +7772,8 @@
     },
     "extras": {},
     "daysOnZillow": 0,
-    "zestimate": 291100
+    "zestimate": 291100,
+    "price_sqft": 116
   },
   "74649339": {
     "address": "508 Orchard Rd, Marshall, MI 49068",
@@ -7631,7 +7809,8 @@
     },
     "extras": {},
     "daysOnZillow": 1,
-    "zestimate": 534300
+    "zestimate": 534300,
+    "price_sqft": 163
   },
   "74654909": {
     "address": "16266 Fifteen Mile Rd, Marshall, MI 49068",
@@ -7667,7 +7846,8 @@
     },
     "extras": {},
     "daysOnZillow": 36,
-    "zestimate": 344300
+    "zestimate": 344300,
+    "price_sqft": 201
   },
   "74668638": {
     "address": "410 N Eagle St, Marshall, MI 49068",
@@ -7703,7 +7883,8 @@
     },
     "extras": {},
     "daysOnZillow": 17,
-    "zestimate": 1388200
+    "zestimate": 1388200,
+    "price_sqft": 231
   },
   "74654952": {
     "address": "16385 17 1/2 Mile Rd, Marshall, MI 49068",
@@ -7738,7 +7919,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Owner"
     },
     "extras": {},
-    "daysOnZillow": 43
+    "daysOnZillow": 43,
+    "price_sqft": 156
   },
   "74649434": {
     "address": "17026 H Dr S, Marshall, MI 49068",
@@ -7773,7 +7955,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 117
+    "daysOnZillow": 117,
+    "price_sqft": 189
   },
   "74655102": {
     "address": "14011 Verona Rd, Marshall, MI 49068",
@@ -7808,7 +7991,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 62
+    "daysOnZillow": 62,
+    "price_sqft": 216
   },
   "74655945": {
     "address": "17872 Victors Ln, Marshall, MI 49068",
@@ -7843,7 +8027,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 68
+    "daysOnZillow": 68,
+    "price_sqft": 144
   },
   "126673143": {
     "address": "155 Hickory Hls, Marshall, MI 49068",
@@ -7879,7 +8064,8 @@
     },
     "extras": {},
     "daysOnZillow": 39,
-    "zestimate": 484400
+    "zestimate": 484400,
+    "price_sqft": 156
   },
   "74655046": {
     "address": "15705 Kesselwood Trl, Marshall, MI 49068",
@@ -7914,7 +8100,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 99
+    "daysOnZillow": 99,
+    "price_sqft": 144
   },
   "74655004": {
     "address": "100 Alto Relievo Way, Marshall, MI 49068",
@@ -7949,7 +8136,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 53
+    "daysOnZillow": 53,
+    "price_sqft": 187
   },
   "207756705": {
     "address": "17867 K Line Way, Marshall, MI 49068",
@@ -7984,7 +8172,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 121
+    "daysOnZillow": 121,
+    "price_sqft": 157
   },
   "110552719": {
     "address": "13 Friendship Ln, Marshall, MI 49068",
@@ -8011,7 +8200,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 116
   },
   "110534294": {
     "address": "822 W Green St, Marshall, MI 49068",
@@ -8038,7 +8228,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 102
   },
   "110713220": {
     "address": "16266 15 Mile Rd, Marshall, MI 49068",
@@ -8065,7 +8256,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 201
   },
   "110674248": {
     "address": "155 Hickory Hls, Marshall, MI 49068",
@@ -8092,7 +8284,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "96600418": {
     "address": "17872 Victors Ln, Marshall, MI 49068",
@@ -8119,7 +8312,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 144
   },
   "110752037": {
     "address": "14011 Verona Rd, Marshall, MI 49068",
@@ -8146,7 +8340,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 216
   },
   "110737934": {
     "address": "922 Forest St, Marshall, MI 49068",
@@ -8173,7 +8368,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 174
   },
   "96706768": {
     "address": "100 Alto Relievo Way, Marshall, MI 49068",
@@ -8200,7 +8396,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 187
   },
   "96296060": {
     "address": "17026 H Dr S, Marshall, MI 49068",
@@ -8227,7 +8424,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 189
   },
   "110605539": {
     "address": "17867 K-line Way, Marshall, MI 49068",
@@ -8254,7 +8452,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 157
   },
   "110685659": {
     "address": "924 Forest St, Marshall, MI 49068",
@@ -8281,7 +8480,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "96588233": {
     "address": "15705 Kesselwood Trl, Marshall, MI 49068",
@@ -8308,7 +8508,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 144
   },
   "110614988": {
     "address": "919 Forest St, Marshall, MI 49068",
@@ -8335,7 +8536,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "188265525": {
     "address": "Integrity 1830 Plan, Marshall, MI 49068",
@@ -8362,7 +8564,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 162
   },
   "195888605": {
     "address": "Elements 2700 Plan, Marshall, MI 49068",
@@ -8389,7 +8592,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 134
   },
   "194900652": {
     "address": "Integrity 1880 Plan, Marshall, MI 49068",
@@ -8416,7 +8620,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 161
   },
   "188265084": {
     "address": "Integrity 2080 Plan, Marshall, MI 49068",
@@ -8443,7 +8648,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 151
   },
   "188265016": {
     "address": "Integrity 2000 Plan, Marshall, MI 49068",
@@ -8470,7 +8676,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 153
   },
   "110497635": {
     "address": "109 W Leigh St, Homer, MI 49245",
@@ -8497,7 +8704,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 77
   },
   "110523733": {
     "address": "116 N West St, Tekonsha, MI 49092",
@@ -8524,7 +8732,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 109
   },
   "96440687": {
     "address": "214 S Hillsdale St, Homer, MI 49245",
@@ -8551,7 +8760,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 89
   },
   "110634934": {
     "address": "10950 W Dr N, Bellevue, MI 49021",
@@ -8578,7 +8788,8 @@
     "price_c_dat": "08-20-2025_19-03-34",
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 168
   },
   "143244290": {
     "address": "332 Community Dr, Pennfield Charter Township, MI 49014",
@@ -8605,7 +8816,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 216
   },
   "96168637": {
     "address": "11303 W Dr N, Bellevue, MI 49021",
@@ -8632,7 +8844,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 126
   },
   "2985509548": {
     "address": "13 Friendship Ln, Marshall, MI 49068",
@@ -8703,7 +8916,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1977
+    "year_built": 1977,
+    "price_sqft": 116
   },
   "2983955673": {
     "address": "501 E Michigan Ave, Marshall, MI 49068",
@@ -8792,7 +9006,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1898
+    "year_built": 1898,
+    "price_sqft": 66
   },
   "2984464719": {
     "address": "822 W Green St, Marshall, MI 49068",
@@ -8863,7 +9078,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1915
+    "year_built": 1915,
+    "price_sqft": 102
   },
   "2985513457": {
     "address": "213 W Prospect St, Marshall, MI 49068",
@@ -8938,7 +9154,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1910
+    "year_built": 1910,
+    "price_sqft": 164
   },
   "2985317295": {
     "address": "314 N Linden St, Marshall, MI 49068",
@@ -9009,7 +9226,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1928
+    "year_built": 1928,
+    "price_sqft": 111
   },
   "2983224725": {
     "address": "20821 J Dr N, Marshall, MI 49068",
@@ -9080,7 +9298,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 186
   },
   "2984277746": {
     "address": "16266 15 Mile Rd, Marshall, MI 49068",
@@ -9159,7 +9378,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1966
+    "year_built": 1966,
+    "price_sqft": 201
   },
   "2980247177": {
     "address": "919 Forest St, Marshall, MI 49068",
@@ -9228,7 +9448,8 @@
       ]
     },
     "extras": {},
-    "year_built": null
+    "year_built": null,
+    "price_sqft": 156
   },
   "2983655675": {
     "address": "924 Forest St, Marshall, MI 49068",
@@ -9297,7 +9518,8 @@
       ]
     },
     "extras": {},
-    "year_built": null
+    "year_built": null,
+    "price_sqft": 172
   },
   "2984047159": {
     "address": "18011 20 Mile Rd, Marshall, MI 49068",
@@ -9368,7 +9590,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 213
   },
   "2984365449": {
     "address": "17997 H Dr S, Marshall, MI 49068",
@@ -9461,7 +9684,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1968
+    "year_built": 1968,
+    "price_sqft": 142
   },
   "2984160135": {
     "address": "155 Hickory Hls, Marshall, MI 49068",
@@ -9536,7 +9760,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2014
+    "year_built": 2014,
+    "price_sqft": 156
   },
   "2983298964": {
     "address": "14011 Verona Rd, Marshall, MI 49068",
@@ -9637,7 +9862,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1853
+    "year_built": 1853,
+    "price_sqft": 216
   },
   "2980795624": {
     "address": "17867 Line Way, Marshall, MI 49068",
@@ -9712,7 +9938,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2013
+    "year_built": 2013,
+    "price_sqft": 157
   },
   "2983646322": {
     "address": "100 Alto Relievo Way, Marshall, MI 49068",
@@ -9783,7 +10010,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1987
+    "year_built": 1987,
+    "price_sqft": 187
   },
   "2984218957": {
     "address": "922 Forest St, Marshall, MI 49068",
@@ -9852,7 +10080,8 @@
       ]
     },
     "extras": {},
-    "year_built": null
+    "year_built": null,
+    "price_sqft": 174
   },
   "2980957181": {
     "address": "17026 H Dr S, Marshall, MI 49068",
@@ -9923,7 +10152,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2008
+    "year_built": 2008,
+    "price_sqft": 189
   },
   "2983430696": {
     "address": "350 N Marshall Ave, Marshall, MI 49068",
@@ -9998,7 +10228,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1928
+    "year_built": 1928,
+    "price_sqft": 125
   },
   "2983131841": {
     "address": "217 S Marshall Ave, Marshall, MI 49068",
@@ -10069,7 +10300,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1880
+    "year_built": 1880,
+    "price_sqft": 109
   },
   "2984180647": {
     "address": "17777 20 Mile Rd, Marshall, MI 49068",
@@ -10140,7 +10372,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2018
+    "year_built": 2018,
+    "price_sqft": 227
   },
   "2983057668": {
     "address": "17872 Victors Ln, Marshall, MI 49068",
@@ -10211,7 +10444,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2003
+    "year_built": 2003,
+    "price_sqft": 144
   },
   "2981069151": {
     "address": "15705 Kesselwood Trl, Marshall, MI 49068",
@@ -10304,7 +10538,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2003
+    "year_built": 2003,
+    "price_sqft": 144
   },
   "2958606002": {
     "address": "920 Forest St, Marshall, MI 49068",
@@ -10375,7 +10610,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2023
+    "year_built": 2023,
+    "price_sqft": 117
   },
   "2983081387": {
     "address": "14747 A Dr N, Marshall, MI 49068",
@@ -10450,7 +10686,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1956
+    "year_built": 1956,
+    "price_sqft": 155
   },
   "2983631080": {
     "address": "926 Forest St, Marshall, MI 49068",
@@ -10521,7 +10758,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2025
+    "year_built": 2025,
+    "price_sqft": 172
   },
   "2978381007": {
     "address": "928 Forest St, Marshall, MI 49068",
@@ -10592,7 +10830,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2025
+    "year_built": 2025,
+    "price_sqft": 149
   },
   "c9neph4vfszqk": {
     "address": "1110 Verona Rd, Marshall, MI 49068",
@@ -10632,7 +10871,8 @@
       },
       "name": "Aron Hodo"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 245
   },
   "3emy04qgq8gzm": {
     "address": "410 N Eagle St, Marshall, MI 49068",
@@ -10672,7 +10912,8 @@
       },
       "name": "Steve Jackson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 231
   },
   "0p4wp9d1m4gw1": {
     "address": "919 Forest St MI",
@@ -10699,7 +10940,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "2t3cpgv9g9stb": {
     "address": "922 Forest St MI",
@@ -10726,7 +10968,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 174
   },
   "pn69c2jsghc2d": {
     "address": "924 Forest St MI",
@@ -10753,7 +10996,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "s9kxfmrky69ej": {
     "address": "923 Forest St Unit 36471110, Marshall, MI 49068",
@@ -10780,7 +11024,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 153
   },
   "ntrywwjlmb1hv": {
     "address": "923 Forest St Unit 36460761, Marshall, MI 49068",
@@ -10807,7 +11052,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 161
   },
   "jerzykl3zjrqq": {
     "address": "923 Forest St Unit 36449500, Marshall, MI 49068",
@@ -10834,7 +11080,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 162
   },
   "0dsl1bpyezgh2": {
     "address": "923 Forest St Unit 36485279, Marshall, MI 49068",
@@ -10861,7 +11108,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 134
   },
   "2zlnc2kh0pp11": {
     "address": "923 Forest St Unit 36501069, Marshall, MI 49068",
@@ -10888,7 +11136,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 151
   },
   "kcz536g0jlp0d": {
     "address": "155 Hickory Hills, Marshall, MI 49068",
@@ -10928,7 +11177,8 @@
       },
       "name": "Gregory McPherson"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "jzv2h7hhl7gvq": {
     "address": "17872 Victors Ln, Marshall, MI 49068",
@@ -10967,7 +11217,8 @@
       },
       "name": "Marie Dennis"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 144
   },
   "mh7d8ff5cbnwc": {
     "address": "15705 Kesselwood Trail, Marshall, MI 49068",
@@ -11006,7 +11257,8 @@
       },
       "name": "Julie Shouldice"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 144
   },
   "q17msd2ygvnjj": {
     "address": "13 Friendship Ln, Marshall, MI 49068",
@@ -11046,7 +11298,8 @@
       },
       "name": "Shelly Hope"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 116
   },
   "lzsx5pbdyx7yh": {
     "address": "822 W Green St, Marshall, MI 49068",
@@ -11086,7 +11339,8 @@
       },
       "name": "Matt Davis"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 102
   },
   "6bc7z5qgz75s4": {
     "address": "16266 15 Mile Rd, Marshall, MI 49068",
@@ -11126,7 +11380,8 @@
       },
       "name": "Kyle McMaster"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 201
   },
   "0mhh0d52lddd2": {
     "address": "100 Alto Relievo Way, Marshall, MI 49068",
@@ -11165,7 +11420,8 @@
       },
       "name": "Brian Fazekas"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 187
   },
   "e5m438hclymvj": {
     "address": "14011 Verona Rd, Marshall, MI 49068",
@@ -11205,7 +11461,8 @@
       },
       "name": "Mary Crosby"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 216
   },
   "58heedc7ex6vj": {
     "address": "17026 H Dr S, Marshall, MI 49068",
@@ -11244,7 +11501,8 @@
       },
       "name": "Kevin Hershock"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 189
   },
   "4ktgrrztrr6q3": {
     "address": "17867 K-Line Way, Marshall, MI 49068",
@@ -11284,7 +11542,8 @@
       },
       "name": "Clint Burghdorf"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 157
   },
   "wnmpd9wb2h584": {
     "address": "923 Forest St Unit 36458549, Marshall, MI 49068",
@@ -11311,7 +11570,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 159
   },
   "l9rwvtpfsn4ky": {
     "address": "923 Forest St Unit 36483948, Marshall, MI 49068",
@@ -11338,7 +11598,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 152
   },
   "2974487103": {
     "address": "382 W Russell Dr, Coldwater, MI 49036",
@@ -11427,7 +11688,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1970
+    "year_built": 1970,
+    "price_sqft": 139
   },
   "2985368423": {
     "address": "92 Thompson Blvd, Coldwater, MI 49036",
@@ -11498,7 +11760,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1998
+    "year_built": 1998,
+    "price_sqft": 100
   },
   "2983880950": {
     "address": "166 N Clay St, Coldwater, MI 49036",
@@ -11569,7 +11832,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1930
+    "year_built": 1930,
+    "price_sqft": 107
   },
   "2982514557": {
     "address": "614 Marshall Rd, Coldwater, MI 49036",
@@ -11644,7 +11908,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 121
   },
   "2985192372": {
     "address": "538 Patricia Dr, Coldwater, MI 49036",
@@ -11715,7 +11980,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1966
+    "year_built": 1966,
+    "price_sqft": 145000
   },
   "2984115905": {
     "address": "500 W Chicago St, Coldwater, MI 49036",
@@ -11790,7 +12056,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1880
+    "year_built": 1880,
+    "price_sqft": 82
   },
   "2985059086": {
     "address": "275 Hillcrest Dr, Coldwater, MI 49036",
@@ -11861,7 +12128,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1965
+    "year_built": 1965,
+    "price_sqft": 176
   },
   "2981805039": {
     "address": "169 E Washington St, Coldwater, MI 49036",
@@ -11932,7 +12200,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1960
+    "year_built": 1960,
+    "price_sqft": 131
   },
   "2984712949": {
     "address": "213 W Chicago St, Coldwater, MI 49036",
@@ -12007,7 +12276,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1855
+    "year_built": 1855,
+    "price_sqft": 104
   },
   "2985213891": {
     "address": "600 One Straight Dr, Coldwater, MI 49036",
@@ -12096,7 +12366,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2005
+    "year_built": 2005,
+    "price_sqft": 219
   },
   "2983409060": {
     "address": "755 Tomahawk Trl, Coldwater, MI 49036",
@@ -12171,7 +12442,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1993
+    "year_built": 1993,
+    "price_sqft": 172
   },
   "2981192148": {
     "address": "566 Angler Ave, Coldwater, MI 49036",
@@ -12242,7 +12514,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2008
+    "year_built": 2008,
+    "price_sqft": 105
   },
   "2984009224": {
     "address": "426 Morse St, Coldwater, MI 49036",
@@ -12313,7 +12586,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1901
+    "year_built": 1901,
+    "price_sqft": 124
   },
   "2983921995": {
     "address": "85 Arrowhead Dr, Coldwater, MI 49036",
@@ -12384,7 +12658,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2004
+    "year_built": 2004,
+    "price_sqft": 191
   },
   "2981116103": {
     "address": "895 Flint Rd, Coldwater, MI 49036",
@@ -12473,7 +12748,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1912
+    "year_built": 1912,
+    "price_sqft": 166
   },
   "2984732508": {
     "address": "299 Bater Rd, Coldwater, MI 49036",
@@ -12544,7 +12820,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1925
+    "year_built": 1925,
+    "price_sqft": 135
   },
   "2983217868": {
     "address": "29 Douglas Ave, Coldwater, MI 49036",
@@ -12615,7 +12892,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1973
+    "year_built": 1973,
+    "price_sqft": 128
   },
   "2983888693": {
     "address": "314 Nash Rd, Coldwater, MI 49036",
@@ -12686,7 +12964,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1960
+    "year_built": 1960,
+    "price_sqft": 133
   },
   "2983800248": {
     "address": "335 Fairway Dr, Coldwater, MI 49036",
@@ -12757,7 +13036,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1988
+    "year_built": 1988,
+    "price_sqft": 166
   },
   "2984002818": {
     "address": "293 N Fiske Rd, Coldwater, MI 49036",
@@ -12828,7 +13108,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1970
+    "year_built": 1970,
+    "price_sqft": 144
   },
   "2984896064": {
     "address": "77 Maple Ln, Coldwater, MI 49036",
@@ -12899,7 +13180,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1959
+    "year_built": 1959,
+    "price_sqft": 156
   },
   "2981975418": {
     "address": "586 Schaeffer Dr, Coldwater, MI 49036",
@@ -12970,7 +13252,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1992
+    "year_built": 1992,
+    "price_sqft": 192
   },
   "2980731532": {
     "address": "450 Sycamore Dr, Coldwater, MI 49036",
@@ -13041,7 +13324,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2005
+    "year_built": 2005,
+    "price_sqft": 273
   },
   "2984347860": {
     "address": "429 Grand St, Coldwater, MI 49036",
@@ -13112,7 +13396,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1960
+    "year_built": 1960,
+    "price_sqft": 139
   },
   "2984114772": {
     "address": "278 E Southern Rd, Coldwater, MI 49036",
@@ -13187,7 +13472,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 173
   },
   "2979581710": {
     "address": "50 Thompson Blvd, Coldwater, MI 49036",
@@ -13258,7 +13544,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2022
+    "year_built": 2022,
+    "price_sqft": 172
   },
   "2983207359": {
     "address": "218 Adolph Shores Dr, Coldwater, MI 49036",
@@ -13329,7 +13616,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1978
+    "year_built": 1978,
+    "price_sqft": 130
   },
   "2981420756": {
     "address": "37 N Monroe St, Coldwater, MI 49036",
@@ -13400,7 +13688,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1950
+    "year_built": 1950,
+    "price_sqft": 132
   },
   "2984536311": {
     "address": "284 Hillcrest Dr, Coldwater, MI 49036",
@@ -13475,7 +13764,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1965
+    "year_built": 1965,
+    "price_sqft": 109
   },
   "96248322": {
     "address": "92 Thompson Blvd, Coldwater, MI 49036",
@@ -13502,7 +13792,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 100
   },
   "96383736": {
     "address": "600 One Straight Dr, Coldwater, MI 49036",
@@ -13529,7 +13820,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 219
   },
   "99876822": {
     "address": "213 W Chicago St, Coldwater, MI 49036",
@@ -13556,7 +13848,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 104
   },
   "99870436": {
     "address": "275 Hillcrest Dr, Coldwater, MI 49036",
@@ -13583,7 +13876,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 176
   },
   "96131632": {
     "address": "500 W Chicago St, Coldwater, MI 49036",
@@ -13610,7 +13904,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 82
   },
   "96297586": {
     "address": "77 Maple Ln, Coldwater, MI 49036",
@@ -13637,7 +13932,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "96381340": {
     "address": "166 N Clay St, Coldwater, MI 49036",
@@ -13664,7 +13960,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 107
   },
   "99867715": {
     "address": "614 Marshall Rd, Coldwater, MI 49036",
@@ -13691,7 +13988,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 121
   },
   "99869403": {
     "address": "426 Morse St, Coldwater, MI 49036",
@@ -13718,7 +14016,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 124
   },
   "96271381": {
     "address": "755 Tomahawk Trl, Coldwater, MI 49036",
@@ -13745,7 +14044,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "96153685": {
     "address": "335 Fairway Dr, Coldwater, MI 49036",
@@ -13772,7 +14072,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 166
   },
   "99876520": {
     "address": "85 Arrowhead Dr, Coldwater, MI 49036",
@@ -13799,7 +14100,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 191
   },
   "96436875": {
     "address": "586 Schaeffer Dr, Coldwater, MI 49036",
@@ -13826,7 +14128,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 192
   },
   "99864519": {
     "address": "382 W Russell Dr, Coldwater, MI 49036",
@@ -13853,7 +14156,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 139
   },
   "99867711": {
     "address": "219 Adolph Shores Dr, Coldwater, MI 49036",
@@ -13880,7 +14184,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 132
   },
   "99873834": {
     "address": "450 Sycamore Dr, Coldwater, MI 49036",
@@ -13907,7 +14212,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 273
   },
   "99875840": {
     "address": "50 Thompson Blvd, Coldwater, MI 49036",
@@ -13934,7 +14240,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "99867119": {
     "address": "1210 Day Rd, Union City, MI 49094",
@@ -13961,7 +14268,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 267
   },
   "99866400": {
     "address": "395 Hyannis Hills Dr, Tekonsha, MI 49092",
@@ -13988,7 +14296,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 88
   },
   "99871193": {
     "address": "42 W Chicago St, Quincy, MI 49082",
@@ -14015,7 +14324,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 37
   },
   "96380777": {
     "address": "34 W Liberty St, Quincy, MI 49082",
@@ -14042,7 +14352,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 93
   },
   "96752454": {
     "address": "313 N Matteson St, Bronson, MI 49028",
@@ -14069,7 +14380,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 109
   },
   "99870976": {
     "address": "117 Ridge Rd, Quincy, MI 49082",
@@ -14096,7 +14408,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 185
   },
   "99870951": {
     "address": "804 Cornell Rd, Quincy, MI 49082",
@@ -14123,7 +14436,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 124
   },
   "96839534": {
     "address": "46 W Chicago St, Quincy Village, MI 49082",
@@ -14150,7 +14464,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 88
   },
   "99870992": {
     "address": "216 Sandalwood Dr, Quincy, MI 49082",
@@ -14177,7 +14492,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 231
   },
   "mejb36c3v25rg": {
     "address": "85 Arrowhead Dr, Coldwater, MI 49036",
@@ -14217,7 +14533,8 @@
       },
       "name": "Karmen Case"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 191
   },
   "zge7frj3rzktj": {
     "address": "335 Fairway Dr, Coldwater, MI 49036",
@@ -14257,7 +14574,8 @@
       },
       "name": "Karmen Case"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 166
   },
   "ng1p7svzc1wtx": {
     "address": "755 Tomahawk Trail, Coldwater, MI 49036",
@@ -14296,7 +14614,8 @@
       },
       "name": "Desiree Thomas"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "wjdlmpxr6d4le": {
     "address": "586 Schaeffer Dr, Coldwater, MI 49036",
@@ -14336,7 +14655,8 @@
       },
       "name": "Grace Roberts Elevate Team"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 192
   },
   "wcr0cem4zwby0": {
     "address": "450 Sycamore Dr, Coldwater, MI 49036",
@@ -14376,7 +14696,8 @@
       },
       "name": "Rachel Tell"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 273
   },
   "mqlvgklcnr8x0": {
     "address": "92 Thompson Blvd, Coldwater, MI 49036",
@@ -14416,7 +14737,8 @@
       },
       "name": "Angie Marsh"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 100
   },
   "ctpcqdp39zsvt": {
     "address": "600 One Straight Dr Unit 74, Coldwater, MI 49036",
@@ -14456,7 +14778,8 @@
       },
       "name": "Kelly Schaffer"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 219
   },
   "j5x5y8m6t37sl": {
     "address": "275 Hillcrest Dr, Coldwater, MI 49036",
@@ -14496,7 +14819,8 @@
       },
       "name": "Karmen Case"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 176
   },
   "8zl7kptys2xdd": {
     "address": "77 Maple Ln, Coldwater, MI 49036",
@@ -14536,7 +14860,8 @@
       },
       "name": "Brian McDonald"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 156
   },
   "584jw1pgk0mgw": {
     "address": "213 W Chicago St, Coldwater, MI 49036",
@@ -14576,7 +14901,8 @@
       },
       "name": "Jami Lind"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 104
   },
   "nzkrgmsgd32cm": {
     "address": "166 N Clay St, Coldwater, MI 49036",
@@ -14616,7 +14942,8 @@
       },
       "name": "Jim Borden"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 107
   },
   "yj5sdbw43k8b6": {
     "address": "500 W Chicago St, Coldwater, MI 49036",
@@ -14656,7 +14983,8 @@
       },
       "name": "Marilyn Ostrander"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 82
   },
   "r6l6cd8dt7d6c": {
     "address": "426 Morse St, Coldwater, MI 49036",
@@ -14696,7 +15024,8 @@
       },
       "name": "Rachel Tell"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 124
   },
   "cmb1l212xb1sr": {
     "address": "550 Lake Dr, Coldwater, MI 49036",
@@ -14736,7 +15065,8 @@
       },
       "name": "Anette Booth"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 358
   },
   "esdmtml46yeyn": {
     "address": "614 Marshall Rd, Coldwater, MI 49036",
@@ -14776,7 +15106,8 @@
       },
       "name": "Jami Lind"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 121
   },
   "whmff0e9ht6y3": {
     "address": "497 Iyopawa Rd, Coldwater, MI 49036",
@@ -14816,7 +15147,8 @@
       },
       "name": "Karmen Case"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 461
   },
   "4fxf0dwl267cc": {
     "address": "219 Adolph Shores Rd, Coldwater, MI 49036",
@@ -14856,7 +15188,8 @@
       },
       "name": "Karmen Case"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 132
   },
   "jpz4k5gf5br1t": {
     "address": "50 Thompson Blvd, Coldwater, MI 49036",
@@ -14896,7 +15229,8 @@
       },
       "name": "Angie Marsh"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 172
   },
   "zytwhyqctvjmm": {
     "address": "382 W Russell Dr, Coldwater, MI 49036",
@@ -14935,7 +15269,8 @@
       },
       "name": "Debbie Lounds"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 139
   },
   "106259945": {
     "address": "275 Hillcrest Dr, Coldwater, MI 49036",
@@ -14971,7 +15306,8 @@
     },
     "extras": {},
     "daysOnZillow": 14,
-    "zestimate": 215000
+    "zestimate": 215000,
+    "price_sqft": 176
   },
   "120537766": {
     "address": "299 Bater Rd, Coldwater, MI 49036",
@@ -15007,7 +15343,8 @@
     },
     "extras": {},
     "daysOnZillow": 23,
-    "zestimate": 220000
+    "zestimate": 220000,
+    "price_sqft": 135
   },
   "106248551": {
     "address": "382 W Russell Dr, Coldwater, MI 49036",
@@ -15042,7 +15379,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 289
+    "daysOnZillow": 289,
+    "price_sqft": 139
   },
   "106255914": {
     "address": "92 Thompson Blvd, Coldwater, MI 49036",
@@ -15078,7 +15416,8 @@
     },
     "extras": {},
     "daysOnZillow": 5,
-    "zestimate": 285500
+    "zestimate": 285500,
+    "price_sqft": 100
   },
   "2053659214": {
     "address": "497 Iyopawa Rd, Coldwater, MI 49036",
@@ -15114,7 +15453,8 @@
     },
     "extras": {},
     "daysOnZillow": 108,
-    "zestimate": 939700
+    "zestimate": 939700,
+    "price_sqft": 461
   },
   "106249287": {
     "address": "600 One Straight Dr, Coldwater, MI 49036",
@@ -15150,7 +15490,8 @@
     },
     "extras": {},
     "daysOnZillow": 9,
-    "zestimate": 853700
+    "zestimate": 853700,
+    "price_sqft": 219
   },
   "106258256": {
     "address": "213 W Chicago St, Coldwater, MI 49036",
@@ -15186,7 +15527,8 @@
     },
     "extras": {},
     "daysOnZillow": 24,
-    "zestimate": 349600
+    "zestimate": 349600,
+    "price_sqft": 104
   },
   "106248716": {
     "address": "550 Lake Dr, Coldwater, MI 49036",
@@ -15222,7 +15564,8 @@
     },
     "extras": {},
     "daysOnZillow": 46,
-    "zestimate": 1127100
+    "zestimate": 1127100,
+    "price_sqft": 358
   },
   "106258009": {
     "address": "85 Arrowhead Dr, Coldwater, MI 49036",
@@ -15258,7 +15601,8 @@
     },
     "extras": {},
     "daysOnZillow": 47,
-    "zestimate": 626200
+    "zestimate": 626200,
+    "price_sqft": 191
   },
   "106259970": {
     "address": "586 Schaeffer Dr, Coldwater, MI 49036",
@@ -15294,7 +15638,8 @@
     },
     "extras": {},
     "daysOnZillow": 95,
-    "zestimate": 605400
+    "zestimate": 605400,
+    "price_sqft": 192
   },
   "106252327": {
     "address": "755 Tomahawk Trl, Coldwater, MI 49036",
@@ -15330,7 +15675,8 @@
     },
     "extras": {},
     "daysOnZillow": 58,
-    "zestimate": 388600
+    "zestimate": 388600,
+    "price_sqft": 172
   },
   "106260283": {
     "address": "335 Fairway Dr, Coldwater, MI 49036",
@@ -15366,7 +15712,8 @@
     },
     "extras": {},
     "daysOnZillow": 49,
-    "zestimate": 576100
+    "zestimate": 576100,
+    "price_sqft": 166
   },
   "106260356": {
     "address": "219 Adolph Shores Dr, Coldwater, MI 49036",
@@ -15402,7 +15749,8 @@
     },
     "extras": {},
     "daysOnZillow": 120,
-    "zestimate": 825400
+    "zestimate": 825400,
+    "price_sqft": 132
   },
   "106262033": {
     "address": "804 Cornell Rd, Quincy, MI 49082",
@@ -15438,7 +15786,8 @@
     },
     "extras": {},
     "daysOnZillow": 117,
-    "zestimate": 330100
+    "zestimate": 330100,
+    "price_sqft": 124
   },
   "106256762": {
     "address": "426 Morse St, Coldwater, MI 49036",
@@ -15474,7 +15823,8 @@
     },
     "extras": {},
     "daysOnZillow": 42,
-    "zestimate": 327800
+    "zestimate": 327800,
+    "price_sqft": 124
   },
   "106248363": {
     "address": "450 Sycamore Dr, Coldwater, MI 49036",
@@ -15510,7 +15860,8 @@
     },
     "extras": {},
     "daysOnZillow": 124,
-    "zestimate": 403400
+    "zestimate": 403400,
+    "price_sqft": 273
   },
   "222035342": {
     "address": "50 Thompson Blvd, Coldwater, MI 49036",
@@ -15546,7 +15897,8 @@
     },
     "extras": {},
     "daysOnZillow": 153,
-    "zestimate": 297300
+    "zestimate": 297300,
+    "price_sqft": 172
   },
   "106256985": {
     "address": "77 Maple Ln, Coldwater, MI 49036",
@@ -15582,7 +15934,8 @@
     },
     "extras": {},
     "daysOnZillow": 19,
-    "zestimate": 349900
+    "zestimate": 349900,
+    "price_sqft": 156
   },
   "74664723": {
     "address": "116 N West St, Tekonsha, MI 49092",
@@ -15618,7 +15971,8 @@
     },
     "extras": {},
     "daysOnZillow": 12,
-    "zestimate": 178700
+    "zestimate": 178700,
+    "price_sqft": 109
   },
   "2985141959": {
     "address": "116 N West St, Tekonsha, MI 49092",
@@ -15693,7 +16047,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2000
+    "year_built": 2000,
+    "price_sqft": 109
   },
   "2983346277": {
     "address": "395 Hyannis Hills Dr, Tekonsha, MI 49092",
@@ -15772,7 +16127,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1978
+    "year_built": 1978,
+    "price_sqft": 88
   },
   "2984938009": {
     "address": "328 N Main St, Tekonsha, MI 49092",
@@ -15824,7 +16180,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1907
+    "year_built": 1907,
+    "price_sqft": 105
   },
   "dwfnjzgtkx9je": {
     "address": "395 Hyannis Hills Dr, Tekonsha, MI 49092",
@@ -15864,7 +16221,8 @@
       },
       "name": "Robert Merry"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 88
   },
   "qpkj93zy851bs": {
     "address": "116 N West St, Tekonsha, MI 49092",
@@ -15904,7 +16262,8 @@
       },
       "name": "Jami Lind"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 109
   },
   "94591901": {
     "address": "380 Schaeffers Ct, Fremont, IN 46737",
@@ -15940,7 +16299,8 @@
     },
     "extras": {},
     "daysOnZillow": 68,
-    "zestimate": 288300
+    "zestimate": 288300,
+    "price_sqft": 148
   },
   "443188648": {
     "address": "315 Lake Dr #130A, Fremont, IN 46737",
@@ -15975,7 +16335,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 256
+    "daysOnZillow": 256,
+    "price_sqft": 321
   },
   "99223662": {
     "address": "200 Ln 101 Lake Minifenokee, Fremont, IN 46737",
@@ -16011,7 +16372,8 @@
     },
     "extras": {},
     "daysOnZillow": 10,
-    "zestimate": 473400
+    "zestimate": 473400,
+    "price_sqft": 174
   },
   "450899829": {
     "address": "60 Lane 585b, Fremont, IN 46737",
@@ -16047,7 +16409,8 @@
     },
     "extras": {},
     "daysOnZillow": 103,
-    "zestimate": 1684400
+    "zestimate": 1684400,
+    "price_sqft": 384
   },
   "450583654": {
     "address": "120 Lane 140, Fremont, IN 46737",
@@ -16083,7 +16446,8 @@
     },
     "extras": {},
     "daysOnZillow": 167,
-    "zestimate": 620000
+    "zestimate": 620000,
+    "price_sqft": 430
   },
   "452160512": {
     "address": "80 LN 140C Lake George, Fremont, IN 46737",
@@ -16119,7 +16483,8 @@
     },
     "extras": {},
     "daysOnZillow": 91,
-    "zestimate": 1134800
+    "zestimate": 1134800,
+    "price_sqft": 410
   },
   "85719975": {
     "address": "307 Prairie Ln, Fremont, IN 46737",
@@ -16155,7 +16520,8 @@
     },
     "extras": {},
     "daysOnZillow": 173,
-    "zestimate": 284900
+    "zestimate": 284900,
+    "price_sqft": 178
   },
   "244144840": {
     "address": "409 N Sierer St, Fremont, IN 46737",
@@ -16190,7 +16556,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 39
+    "daysOnZillow": 39,
+    "price_sqft": 129
   },
   "450015488": {
     "address": "101 565 & 535 Lane Lake Pleasant, Fremont, IN 46737",
@@ -16226,7 +16593,8 @@
     },
     "extras": {},
     "daysOnZillow": 127,
-    "zestimate": 1269400
+    "zestimate": 1269400,
+    "price_sqft": 514
   },
   "e0wcw5gl1ngyt": {
     "address": "900 Nicholas Trail Unit 36463610, Fremont, IN 46737",
@@ -16253,7 +16621,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 154
   },
   "zev4bt4srlcfk": {
     "address": "900 Nicholas Trail Unit 36471743, Fremont, IN 46737",
@@ -16280,7 +16649,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 154
   },
   "s8wznwvz9b0jl": {
     "address": "900 Nicholas Trail Unit 36486618, Fremont, IN 46737",
@@ -16307,7 +16677,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 133
   },
   "zqnr0ee1627ev": {
     "address": "900 Nicholas Trail Unit 36501951, Fremont, IN 46737",
@@ -16334,7 +16705,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 153
   },
   "626ch92sj53z6": {
     "address": "1001 Nicholas Trail IN",
@@ -16361,7 +16733,8 @@
     "price_c_dat": null,
     "seller": null,
     "sellerinfo": null,
-    "extras": {}
+    "extras": {},
+    "price_sqft": 164
   },
   "zjf887y5d67qp": {
     "address": "200 Ln 101 Lake Minifenokee, Fremont, IN 46737",
@@ -16401,7 +16774,8 @@
       },
       "name": "Alice Fitzpatrick-Welch"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 174
   },
   "lrq09x6nfjdyz": {
     "address": "8860 E 710 N Clear Lake Estates, Fremont, IN 46737",
@@ -16441,7 +16815,8 @@
       },
       "name": "Tracey Musser"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 97
   },
   "fzye12qxmbtj8": {
     "address": "80 Ln 140c Lake George, Fremont, IN 46737",
@@ -16481,7 +16856,8 @@
       },
       "name": "Matthew Stezowski"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 410
   },
   "r997d4knpq29b": {
     "address": "60 Ln 585b Lake James, Fremont, IN 46737",
@@ -16521,7 +16897,8 @@
       },
       "name": "Erica Amans"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 384
   },
   "kczfvbxdgnp62": {
     "address": "565 & 535 Ln 101 Lake Pleasant, Fremont, IN 46737",
@@ -16561,7 +16938,8 @@
       },
       "name": "Sherri Recht"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 514
   },
   "2984664877": {
     "address": "119 Lakeside Ct, Fremont, IN 46737",
@@ -16632,7 +17010,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1950
+    "year_built": 1950,
+    "price_sqft": 198
   },
   "2983941659": {
     "address": "8860 E 710 N Clear Lake Ests, Fremont, IN 46737",
@@ -16707,7 +17086,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2000
+    "year_built": 2000,
+    "price_sqft": 97
   },
   "2985206050": {
     "address": "200 Lane 101 Lake Minifenokee, Fremont, IN 46737",
@@ -16786,7 +17166,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1998
+    "year_built": 1998,
+    "price_sqft": 174
   },
   "2982568500": {
     "address": "1001 Nicholas Trl, Fremont, IN 46737",
@@ -16855,7 +17236,8 @@
       ]
     },
     "extras": {},
-    "year_built": null
+    "year_built": null,
+    "price_sqft": 164
   },
   "2975883658": {
     "address": "315 N Lane 130A Lake George, Fremont, IN 46737",
@@ -16930,7 +17312,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1900
+    "year_built": 1900,
+    "price_sqft": 321
   },
   "2983075042": {
     "address": "380 Schaeffer Ct Fish Lk, Fremont, IN 46737",
@@ -17009,7 +17392,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1965
+    "year_built": 1965,
+    "price_sqft": 148
   },
   "2984174409": {
     "address": "409 N Sierer St, Fremont, IN 46737",
@@ -17080,7 +17464,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2002
+    "year_built": 2002,
+    "price_sqft": 129
   },
   "2978794007": {
     "address": "307 Prairie Ln, Fremont, IN 46737",
@@ -17159,7 +17544,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2015
+    "year_built": 2015,
+    "price_sqft": 178
   },
   "2979010413": {
     "address": "120 Lane 140 Lake George, Fremont, IN 46737",
@@ -17234,7 +17620,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1928
+    "year_built": 1928,
+    "price_sqft": 430
   },
   "140465334": {
     "address": "680 N Easton Dr, Angola, IN 46703",
@@ -17261,7 +17648,8 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 88
   },
   "85722665": {
     "address": "680 N Easton Dr, Angola, IN 46703",
@@ -17297,7 +17685,8 @@
     },
     "extras": {},
     "daysOnZillow": 0,
-    "zestimate": 392300
+    "zestimate": 392300,
+    "price_sqft": 88
   },
   "0bm5g9tdr5h78": {
     "address": "680 N Easton Dr, Angola, IN 46703",
@@ -17337,7 +17726,8 @@
       },
       "name": "Craig Rice"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 88
   },
   "2985526925": {
     "address": "680 N Easton Dr, Angola, IN 46703",
@@ -17412,7 +17802,8 @@
       ]
     },
     "extras": {},
-    "year_built": 1998
+    "year_built": 1998,
+    "price_sqft": 88
   },
   "2971256378": {
     "address": "11580 E 565 N, Orland, IN 46776",
@@ -17487,7 +17878,8 @@
       ]
     },
     "extras": {},
-    "year_built": 2008
+    "year_built": 2008,
+    "price_sqft": 207
   },
   "dpqmvgl22wp48": {
     "address": "11580 E 565 N, Orland, IN 46776",
@@ -17526,7 +17918,8 @@
       },
       "name": "Linda Mynhier"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 207
   },
   "124614907": {
     "address": "11580 E 565 N, Orland, IN 46776",
@@ -17561,7 +17954,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 358
+    "daysOnZillow": 358,
+    "price_sqft": 207
   },
   "85180994": {
     "address": "717 N Main St, Auburn, IN 46706",
@@ -17597,7 +17991,8 @@
     },
     "extras": {},
     "daysOnZillow": 0,
-    "zestimate": 685200
+    "zestimate": 685200,
+    "price_sqft": 203
   },
   "28d9899ey5h7d": {
     "address": "17 Alandale Dr, Coldwater, MI 49036",
@@ -17636,7 +18031,8 @@
       },
       "name": "Terry Whelan"
     },
-    "extras": {}
+    "extras": {},
+    "price_sqft": 150
   },
   "96664962": {
     "address": "17 Alandale Dr, Coldwater, MI 49036",
@@ -17663,6 +18059,347 @@
     "price_c_dat": null,
     "seller": {},
     "sellerinfo": {},
-    "extras": {}
+    "extras": {},
+    "price_sqft": 150
+  },
+  "2985545954": {
+    "address": "174 S Fillmore Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/174-S-Fillmore-Rd_Coldwater_MI_49036_M42379-14145",
+    "price": 94900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/b5eb8f996755cace50535c36d3dda76fl-m3082355452s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-21-2025_07-47-38",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 1.0,
+    "lotsqft": null,
+    "sqft": 2256,
+    "lat": 41.887061,
+    "long": 41.887061,
+    "zipc": "49036",
+    "list_dt": "08-21-2025_00-54-57",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-21-2025_00-54-57",
+    "seller": "CENTURY 21 Drews Realty",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "100690566",
+          "name": "Kayse O'Donnell",
+          "builder": null,
+          "email": "kayse.odonnell@gmail.com",
+          "office": {
+            "name": "CENTURY 21 Drews Realty",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "5176779260",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        },
+        {
+          "type": "co_seller",
+          "fulfillment_id": "920879",
+          "name": "Jim Drews",
+          "builder": null,
+          "email": "Jim@C21Drews.com",
+          "office": {
+            "name": "CENTURY 21 Drews Realty",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "5176101610",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "CENTURY 21 Drews Realty",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1930,
+    "price_sqft": 42
+  },
+  "2985545966": {
+    "address": "17 Allandale Dr, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/17-Allandale-Dr_Coldwater_MI_49036_M37309-76817",
+    "price": 374900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/3a9235dfc4e6ed0521bac0e27bc573edl-m843010765s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-21-2025_07-47-38",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 2493,
+    "lat": 41.954333,
+    "long": 41.954333,
+    "zipc": "49036",
+    "list_dt": "08-21-2025_00-54-57",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-21-2025_00-54-57",
+    "seller": "Southern Marsh Realty",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "100421967",
+          "name": "Terry Whelan",
+          "builder": null,
+          "email": "terry.southernmarsh@gmail.com",
+          "office": {
+            "name": "Southern Marsh Realty",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "5172822822",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Southern Marsh Realty",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1969,
+    "price_sqft": 150
+  },
+  "120842790": {
+    "address": "914 S Duesenberg Dr, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Auburn/914-Duesenberg-Dr-46706/home/120842790",
+    "price": 299900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-21-2025_07-47-59",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2704,
+    "lat": 41.3610703,
+    "long": -85.0373747,
+    "zipc": "46706",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {},
+    "price_sqft": 110
+  },
+  "85182836": {
+    "address": "914 Duesenberg Dr, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/914-Duesenberg-Dr-Auburn-IN-46706/85182836_zpid/",
+    "price": 299900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/4125f02781bf4a8bd5a3aba6d83c1cd8-p_e.jpg",
+    "date_pulled": "08-21-2025_07-48-11",
+    "description": "11 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "0.42 acres",
+    "sqft": 2704,
+    "lat": 41.36106,
+    "long": -85.03735,
+    "zipc": "46706",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "American Dream Team Real Estate Brokers",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Baylee McMaken",
+      "brokerName": "American Dream Team Real Estate Brokers",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 290700,
+    "price_sqft": 110
+  },
+  "2985548513": {
+    "address": "914 S Duesenberg Dr, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/914-Duesenberg-Dr_Auburn_IN_46706_M32364-18506",
+    "price": 299900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/d60bf5e6140793a2c603feff6cea4152l-m1778618307s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-21-2025_07-48-16",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 2704,
+    "lat": 41.361083,
+    "long": 41.361083,
+    "zipc": "46706",
+    "list_dt": "08-21-2025_01-26-40",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-21-2025_01-26-40",
+    "seller": "American Dream Team Real Estate Brokers",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "100007747",
+          "name": "Baylee Mcmaken",
+          "builder": null,
+          "email": "baylee.realtor27@gmail.com",
+          "office": {
+            "name": "American Dream Team Real Estate Brokers",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2607404080",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "American Dream Team Real Estate Brokers",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1987,
+    "price_sqft": 110
+  },
+  "nbzftc0dxqdjy": {
+    "address": "914 S Duesenberg Dr, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.homes.com/property/914-s-duesenberg-dr-auburn-in/nbzftc0dxqdjy/",
+    "price": 299900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/6900201644-710566202/914-s-duesenberg-dr-auburn-in-primaryphoto.jpg",
+    "date_pulled": "08-21-2025_07-48-23",
+    "description": "Beautiful 4-Bedroom Waterfront Home in the Heart of Auburn! This 4 bedroom, 2.5 bath home sits on a stunning waterfront lot offering incredible views and endless potential. Enjoy morning coffee or evening sunsets from your private balcony overlooking the water. With spacious living areas and a prime location in the heart of Auburn, this property is the perfect opportunity to create your dream",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 2704,
+    "lat": 41.35607,
+    "long": -85.0372473,
+    "zipc": "46706",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "American Dream Team Real Estate Brokers"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/ly_-raPyoEBDq8AUIOoe-wYVB1SdpxWNbHGQ9dCNB-U/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 740-4080",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "American Dream Team Real Estate Brokers"
+      },
+      "name": "Baylee McMaken"
+    },
+    "extras": {},
+    "price_sqft": 110
   }
 }

@@ -83,6 +83,7 @@ class Propertyinfo():
     baths       : float = None
     lotsqft     : float = None
     sqft        : float = None
+    price_sqft  : int = None
     lat         : float = None
     long        : float = None
     zipc        : int = None

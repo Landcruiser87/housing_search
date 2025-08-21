@@ -38,8 +38,9 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
         listing.zipc         = listinginfo.get("addressZipcode", defaultval)
         listing.address      = listinginfo.get("address", defaultval)
         listing.htype        = listinginfo["hdpData"]["homeInfo"].get("homeType", defaultval)
-        listing.sqft         = listinginfo.get("area", defaultval)
+        listing.sqft         = int("".join([x for x in str(listinginfo.get("area", defaultval)) if x.isnumeric()]))
         listing.price        = int(listinginfo.get("unformattedPrice", defaultval))
+        listing.price_sqft   = listing.price // listing.sqft
         listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
         listing.description  = listinginfo.get("flexFieldText", defaultval)
         listing.daysOnZillow = listinginfo["hdpData"]["homeInfo"].get("daysOnZillow", defaultval)

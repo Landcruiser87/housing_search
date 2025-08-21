@@ -701,3 +701,13 @@ def send_housing_email(urls:str):
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)		
         server.sendmail(sender_email, receiver_email, message.as_string())
+
+
+for key, val in jsondata.items():
+    price = int(val.get("price"))
+    sqft = int(val.get("sqft"))
+    if price and sqft:
+        jsondata[key]["price_sqft"] = price // sqft
+    else:
+        jsondata[key]["price_sqft"] = None
+
