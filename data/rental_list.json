@@ -75265,5 +75265,253 @@
       "violence_score": 24.86,
       "property_d_score": 0.15
     }
+  },
+  "ygl4y3yzy21h5": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.homes.com/property/3951-w-ainslie-st-chicago-il-unit-3/ygl4y3yzy21h5/",
+    "address": "3951 W Ainslie St Unit 3 Chicago, IL 60625",
+    "date_pulled": "08-22-2025_12-13-39",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "gcpd1vz": {
+    "source": "www.apartments.com",
+    "price": 1795.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4946-n-harding-ave-chicago-il/gcpd1vz/",
+    "address": "4946 N Harding Ave, Chicago, IL 60625",
+    "date_pulled": "08-22-2025_12-14-10",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.971462,
+    "long": -87.7272656,
+    "L_dist": [
+      "Kimball",
+      0.77
+    ],
+    "crime_sc": {
+      "drug_score": 3.61,
+      "gun_score": 4.56,
+      "murder_score": 1.44,
+      "perv_score": 1.53,
+      "theft_score": 42.22,
+      "violence_score": 24.86,
+      "property_d_score": 0.15
+    }
+  },
+  "sh8fyx7": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7649-s-paxton-ave-chicago-il/sh8fyx7/",
+    "address": "7649 S Paxton Ave, Chicago, IL 60649",
+    "date_pulled": "08-22-2025_12-14-10",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1651.0,
+    "lat": 41.7556592,
+    "long": -87.5708932,
+    "L_dist": [
+      "Cottage Grove",
+      2.48
+    ],
+    "crime_sc": {
+      "drug_score": 1.72,
+      "gun_score": 8.42,
+      "murder_score": 2.56,
+      "perv_score": 1.51,
+      "theft_score": 33.94,
+      "violence_score": 31.31,
+      "property_d_score": 0.2
+    }
+  },
+  "jkjkhc7": {
+    "source": "www.apartments.com",
+    "price": 2450.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4902-s-forrestville-ave-chicago-il/jkjkhc7/",
+    "address": "4902 S Forrestville Ave, Chicago, IL 60615",
+    "date_pulled": "08-22-2025_12-14-10",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1600.0,
+    "lat": 41.8056459,
+    "long": -87.6126932,
+    "L_dist": [
+      "51st",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 2.52,
+      "gun_score": 7.27,
+      "murder_score": 2.12,
+      "perv_score": 1.37,
+      "theft_score": 37.11,
+      "violence_score": 28.85,
+      "property_d_score": 0.16
+    }
+  },
+  "db14jvk": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/3951-w-ainslie-st-chicago-il/db14jvk/",
+    "address": "3951 W Ainslie St, Chicago, IL 60625",
+    "date_pulled": "08-22-2025_12-14-10",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.969689,
+    "long": -87.7276113,
+    "L_dist": [
+      "Kimball",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 3.75,
+      "gun_score": 4.6,
+      "murder_score": 1.49,
+      "perv_score": 1.62,
+      "theft_score": 42.02,
+      "violence_score": 24.91,
+      "property_d_score": 0.15
+    }
+  },
+  "2113917077": {
+    "source": "www.zillow.com",
+    "price": 1795.0,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4055-N-Spaulding-Ave-3-Chicago-IL-60618/2113917077_zpid/",
+    "address": "4055 N Spaulding Ave #3, Chicago, IL 60618",
+    "date_pulled": "08-22-2025_12-15-19",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.955482,
+    "long": -87.710304,
+    "L_dist": [
+      "Addison",
+      0.72
+    ],
+    "crime_sc": {
+      "drug_score": 4.03,
+      "gun_score": 4.77,
+      "murder_score": 1.51,
+      "perv_score": 1.62,
+      "theft_score": 41.49,
+      "violence_score": 25.05,
+      "property_d_score": 0.14
+    }
+  },
+  "456149224": {
+    "source": "www.zillow.com",
+    "price": 2200.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4704-W-Patterson-Ave-2-Chicago-IL-60641/456149224_zpid/",
+    "address": "4704 W Patterson Ave #2, Chicago, IL 60641",
+    "date_pulled": "08-22-2025_12-19-57",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.94732,
+    "long": -87.74487,
+    "L_dist": [
+      "Irving Park",
+      0.89
+    ],
+    "crime_sc": {
+      "drug_score": 4.52,
+      "gun_score": 5.26,
+      "murder_score": 1.76,
+      "perv_score": 1.75,
+      "theft_score": 39.11,
+      "violence_score": 26.64,
+      "property_d_score": 0.17
+    }
+  },
+  "ey5xje34nwjgs": {
+    "source": "www.homes.com",
+    "price": 1950.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2546-w-iowa-st-chicago-il-unit-2/ey5xje34nwjgs/",
+    "address": "2546 W Iowa St Unit 2 Chicago, IL 60622",
+    "date_pulled": "08-22-2025_12-21-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "8003116635": {
+    "source": "www.realtor.com",
+    "price": 2500,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3951-W-Ainslie-St-Apt-3_Chicago_IL_60625_M80031-16635",
+    "address": "3951 W Ainslie St Apt 3, Chicago, IL 60625",
+    "date_pulled": "08-22-2025_12-22-15",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.969828,
+    "long": -87.727591,
+    "L_dist": [
+      "Kimball",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 3.75,
+      "gun_score": 4.6,
+      "murder_score": 1.49,
+      "perv_score": 1.61,
+      "theft_score": 42.04,
+      "violence_score": 24.89,
+      "property_d_score": 0.15
+    }
+  },
+  "12675523": {
+    "source": "www.redfin.com",
+    "price": 2500.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3951-W-Ainslie-St-60625/unit-3/home/12675523",
+    "address": "3951 W Ainslie St #3, Chicago, IL, 60625",
+    "date_pulled": "08-22-2025_12-22-44",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9696989,
+    "long": -87.7276467,
+    "L_dist": [
+      "Kimball",
+      0.76
+    ],
+    "crime_sc": {
+      "drug_score": 3.75,
+      "gun_score": 4.6,
+      "murder_score": 1.49,
+      "perv_score": 1.61,
+      "theft_score": 42.0,
+      "violence_score": 24.9,
+      "property_d_score": 0.15
+    }
   }
 }
