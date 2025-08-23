@@ -7099,28 +7099,28 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/195-Lane-272-Crooked-Lk-46703/home/140485319",
-    "price": 499900,
+    "price": 475000,
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-08",
+    "date_pulled": "08-23-2025_11-08-37",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
-    "sqft": 1856,
+    "sqft": "1856",
+    "price_sqft": 255,
     "lat": 41.6853898,
     "long": -85.0705878,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -24900,
+    "last_price": 499900,
+    "price_c_dat": "08-23-2025_11-08-40",
     "seller": {},
     "sellerinfo": {},
-    "extras": {},
-    "price_sqft": 269
+    "extras": {}
   },
   "196752981": {
     "address": "2080 S State Road 1, Angola, IN 46703",
@@ -18975,5 +18975,539 @@
     "seller": {},
     "sellerinfo": {},
     "extras": {}
+  },
+  "jsmk4gcnfvbvm": {
+    "address": "44 Candlewood Ct, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/44-candlewood-ct-coldwater-mi/jsmk4gcnfvbvm/",
+    "price": 549900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/7231933644-149737202/44-candlewood-ct-coldwater-mi-primaryphoto.jpg",
+    "date_pulled": "08-23-2025_11-07-52",
+    "description": "CALL LORI STURDEVANT 269-579-3626 FOR YOUR OPPORTUNITY TO TOUR THIS CUSTOM BUILT 4 BEDROOM, 4 BATH HOME FEATURING SUPERIOR QUALITY. Prime location near the North Chain of Lakes and walking distance to Heritage Park with ball fields, Rec Center, Aquatic Center, and Coldwater Schools. In 2022, a 4-season sun-room was added with a new deck and sunshade, expanding year-round living space. Inside, the",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3829",
+    "price_sqft": 143,
+    "lat": 41.9523359,
+    "long": -85.0271531,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Berkshire Hathaway HomeServices Michigan Real Estate"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/npMAB5fIhPNqPbklUlALPMYVK3cTVb4fdtCVzMkKvq8/105/image.jpg?t=p&p=1",
+      "telephone": "(269) 558-0105",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Berkshire Hathaway HomeServices Michigan Real Estate"
+      },
+      "name": "Lori Sturdevant"
+    },
+    "extras": {}
+  },
+  "b9jtbm1qx5tm2": {
+    "address": "370 Bishop Ave, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/370-bishop-ave-coldwater-mi/b9jtbm1qx5tm2/",
+    "price": 599900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/7951713644-768237202/370-bishop-ave-coldwater-mi-primaryphoto.jpg",
+    "date_pulled": "08-23-2025_11-07-52",
+    "description": "Welcome to this exquisite custom-built Bob Buescher Home. Located in one of the area's most desirable neighborhoods near Heritage Park! Offering 4-5 bedrooms, 3.5 bath, with an open-concept kitchen and living area perfect for entertaining and everyday use. Primary ensuite and laundry room accommodate on the main level. Along with a private office that could be a 5th bedroom. The finished walk-out",
+    "htype": "SingleFamilyResidence",
+    "beds": 5,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3517",
+    "price_sqft": 170,
+    "lat": 41.9511714,
+    "long": -85.0260113,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Case Realty Group"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/wwsrbPECGXBNuhN6dsblJ1U5JS71Bn8ta_FsSuA0p3A/105/image.jpg?t=p&p=1",
+      "telephone": "(517) 677-5087",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Case Realty Group"
+      },
+      "name": "Karmen Case"
+    },
+    "extras": {}
+  },
+  "99876410": {
+    "address": "44 Candlewood Ct, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/44-Candlewood-Ct-49036/home/99876410",
+    "price": 549900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-23-2025_11-08-12",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3829",
+    "price_sqft": 143,
+    "lat": 41.9520635,
+    "long": -85.0276294,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "99876371": {
+    "address": "370 Bishop Ave, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/370-Bishop-Ave-49036/home/99876371",
+    "price": 599900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-23-2025_11-08-12",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 5.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3517",
+    "price_sqft": 170,
+    "lat": 41.9517978,
+    "long": -85.0257378,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "140483483": {
+    "address": "9710 W State Road 120, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Orland/9710-W-State-Road-120-46776/home/140483483",
+    "price": 245000,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-23-2025_11-08-12",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "1628",
+    "price_sqft": 150,
+    "lat": 41.7300079,
+    "long": -85.1755678,
+    "zipc": "46776",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "2985615368": {
+    "address": "44 Candlewood Ct, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/44-Candlewood-Ct_Coldwater_MI_49036_M43896-23797",
+    "price": 549900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/ab37c5eeb7db7b3ee3d3e3e08712bdcfl-m930156631s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-23-2025_11-08-19",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 3829,
+    "price_sqft": 143,
+    "lat": 41.952005,
+    "long": 41.952005,
+    "zipc": "49036",
+    "list_dt": "08-22-2025_17-53-47",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-22-2025_17-53-47",
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3238303",
+          "name": "Lori Sturdevant",
+          "builder": null,
+          "email": "loristurdevant@gmail.com",
+          "office": {
+            "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2695580105",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2005
+  },
+  "2985610887": {
+    "address": "370 Bishop Ave, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/370-Bishop-Ave_Coldwater_MI_49036_M43892-88403",
+    "price": 599900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/594aa67e8fb0f2ceeee0067312700329l-m2448185007s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-23-2025_11-08-19",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 3517,
+    "price_sqft": 170,
+    "lat": 41.951858,
+    "long": 41.951858,
+    "zipc": "49036",
+    "list_dt": "08-22-2025_16-24-01",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-22-2025_16-24-01",
+    "seller": "Case Realty Group",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3241262",
+          "name": "Karmen Case",
+          "builder": null,
+          "email": "karmencase@gmail.com",
+          "office": {
+            "name": "Case Realty Group",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "5172385588",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Case Realty Group",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2009
+  },
+  "106257214": {
+    "address": "370 Bishop Ave, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/370-Bishop-Ave-Coldwater-MI-49036/106257214_zpid/",
+    "price": 599900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/8b168d9597536c29a476ddf604a03bac-p_e.jpg",
+    "date_pulled": "08-23-2025_11-08-28",
+    "description": "22 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 5.0,
+    "lotsqft": "0.55 acres",
+    "sqft": "3517",
+    "price_sqft": 170,
+    "lat": 41.95183,
+    "long": -85.02585,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Case Realty Group",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "Case Realty Group",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 570700
+  },
+  "106257196": {
+    "address": "44 Candlewood Ct, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/44-Candlewood-Ct-Coldwater-MI-49036/106257196_zpid/",
+    "price": 549900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/392179c49ebdf98519b260690af6a4cc-p_e.jpg",
+    "date_pulled": "08-23-2025_11-08-28",
+    "description": "21 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "0.49 acres",
+    "sqft": "3829",
+    "price_sqft": 143,
+    "lat": 41.95207,
+    "long": -85.0277,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "Berkshire Hathaway HomeServices Michigan Real Estate",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 528900
+  },
+  "p5vw3q8ry0tm9": {
+    "address": "9710 W State Road 120, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.homes.com/property/9710-w-state-road-120-orland-in/p5vw3q8ry0tm9/",
+    "price": 245000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/116/3097653644-204347202/9710-w-state-road-120-orland-in-primaryphoto.jpg?t=p",
+    "date_pulled": "08-23-2025_11-08-41",
+    "description": "Welcome to this completely updated 4-bedroom, 3-bathroom home that has been thoughtfully renovated from top to bottom. Every detail has been designed for comfort, convenience, and style. The main level offers a spacious open-concept living room, kitchen, and dining area\u2014perfect for entertaining or everyday living. The beautifully updated kitchen flows seamlessly into the living spaces, creating a",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "1628",
+    "price_sqft": 150,
+    "lat": null,
+    "long": null,
+    "zipc": "46776",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Century 21 Bradley-Angola"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/WVQb_eh5fcqznTDnlgXNqPzp7k56oeb0OauN83Uftyo/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 200-0210",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Century 21 Bradley-Angola"
+      },
+      "name": "Erika Wise"
+    },
+    "extras": {}
+  },
+  "85721192": {
+    "address": "9710 W State Road 120, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/9710-W-State-Road-120-Orland-IN-46776/85721192_zpid/",
+    "price": 245000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/a4c1078447c47d0b8888ef9baf7d5e80-p_e.jpg",
+    "date_pulled": "08-23-2025_11-08-54",
+    "description": "19 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "0.34 acres",
+    "sqft": "1628",
+    "price_sqft": 150,
+    "lat": 41.729996,
+    "long": -85.17557,
+    "zipc": "46776",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Erika Gaetz",
+      "brokerName": "Century 21 Bradley-Angola",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 237100
+  },
+  "2985620833": {
+    "address": "9710 W State Road 120, Orland, IN 46776",
+    "city": "Orland",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/9710-W-State-Road-120_Orland_IN_46776_M30619-21510",
+    "price": 245000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/c389874b00f4c72aaf29ff45b108b2b2l-b350906867s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-23-2025_11-08-58",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 1628,
+    "price_sqft": 150,
+    "lat": 41.730116,
+    "long": 41.730116,
+    "zipc": "46776",
+    "list_dt": "08-22-2025_19-21-31",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-22-2025_19-21-31",
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3118796",
+          "name": "Erika Wise",
+          "builder": null,
+          "email": "erika@christythomson.com",
+          "office": {
+            "name": "Century 21 Bradley-Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2602000210",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Century 21 Bradley-Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1895
   }
 }

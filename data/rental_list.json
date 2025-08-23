@@ -75513,5 +75513,102 @@
       "violence_score": 24.9,
       "property_d_score": 0.15
     }
+  },
+  "7gwsg2zy08ssh": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/unlisted-address/7gwsg2zy08ssh/",
+    "address": "Unlisted Address IL",
+    "date_pulled": "08-23-2025_10-59-23",
+    "bed": 4.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "bkjl869": {
+    "source": "www.apartments.com",
+    "price": 2295.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1520-w-touhy-ave-chicago-il/bkjl869/",
+    "address": "1520 W Touhy Ave, Chicago, IL 60626",
+    "date_pulled": "08-23-2025_11-00-23",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1250.0,
+    "lat": 42.0130096,
+    "long": -87.669041,
+    "L_dist": [
+      "Jarvis",
+      0.2
+    ],
+    "crime_sc": {
+      "drug_score": 1.05,
+      "gun_score": 3.2,
+      "murder_score": 0.62,
+      "perv_score": 1.65,
+      "theft_score": 45.38,
+      "violence_score": 23.97,
+      "property_d_score": 0.13
+    }
+  },
+  "0r0rr13": {
+    "source": "www.apartments.com",
+    "price": 1850.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5170-w-64th-pl-chicago-il/0r0rr13/",
+    "address": "5170 W 64th Pl, Chicago, IL 60638",
+    "date_pulled": "08-23-2025_11-00-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 984.0,
+    "lat": 41.7753368,
+    "long": -87.7515946,
+    "L_dist": [
+      "Midway",
+      1.05
+    ],
+    "crime_sc": {
+      "drug_score": 4.28,
+      "gun_score": 8.03,
+      "murder_score": 2.25,
+      "perv_score": 2.2,
+      "theft_score": 31.16,
+      "violence_score": 31.14,
+      "property_d_score": 0.22
+    }
+  },
+  "drb5plj": {
+    "source": "www.apartments.com",
+    "price": 1950.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2546-w-iowa-st-chicago-il/drb5plj/",
+    "address": "2546 W Iowa St, Chicago, IL 60622",
+    "date_pulled": "08-23-2025_11-00-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.8977085,
+    "long": -87.6911955,
+    "L_dist": [
+      "California",
+      0.97
+    ],
+    "crime_sc": {
+      "drug_score": 3.81,
+      "gun_score": 5.4,
+      "murder_score": 1.58,
+      "perv_score": 1.66,
+      "theft_score": 40.6,
+      "violence_score": 25.75,
+      "property_d_score": 0.14
+    }
   }
 }
