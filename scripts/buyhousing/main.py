@@ -174,7 +174,7 @@ def check_ids(data:list)->list:
     elif pricechanges:      
         return pricechanges
     else:
-        logger.info("Listing(s) already stored in rental_list.json") 
+        logger.info("Listing(s) already stored in buy_list.json") 
         return None
     
     #Old code keeping for now
