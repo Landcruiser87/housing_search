@@ -42,7 +42,7 @@ SOURCES = {
     "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["zillow", "homes", "realtor", "redfin"] 
+SITES = ["homes", "realtor", "redfin","zillow"] 
 
 #Define search parameters
 MAXPRICE = 900_000
@@ -160,23 +160,27 @@ def check_ids(data:list)->list:
     if newids:
         # Filter the list of properties by id
         newdata = list(filter(lambda listing : listing.id in newids, data))
-
+        
     if p_chn_ids:
         #Filter the saved jsondata for price changes
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
-        logger.info(f"Price changes on {p_chn_ids}")
+        
 
     newcheck = isinstance(newdata, list)
     pricecheck = isinstance(pricechanges, list)
 
     if newcheck & pricecheck:
         newdata.extend(pricechanges)
+        logger.info(f"New homes {newids} and price changes {pricechanges} ")        
+
         return newdata
 
     elif newcheck:
+        logger.info(f"New homes found on {newids}")
         return newdata
     
     elif pricecheck:
+        logger.info(f"Price changes on {p_chn_ids}")
         return pricechanges
     else:
         logger.info("Listing(s) already stored in buy_list.json") 
@@ -199,7 +203,7 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
         area (str): City or or Zipcode
     # """	
     #Keep em guessin!
-    # shuffle(SITES) 
+    shuffle(SITES) 
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -270,7 +274,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    # shuffle(AREAS)
+    shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))

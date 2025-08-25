@@ -509,7 +509,7 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         if not listing.address:
             continue
         
-        logger.info(f"GPS extracted for {listing.address}")
+        logger.info(f"Extracting GPS for {listing.address}")
         run_sleep(np.random.randint(3, 8), f"Get Lat/Long @ {listing.address.split(",")[0]}", layout)
         address = listing.address
         
@@ -522,7 +522,6 @@ def get_lat_long(data:list, citystate:tuple, layout)->list:
         srch_add = listing.address + " USA"
         #First search Novatim
         try:
-            # location = geolocator.geocode(srch_add)
             location = Noma_rate(srch_add)
             #If a location is found, assign lat long
             if location:
