@@ -3833,24 +3833,25 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/501-W-Fox-Lake-Rd-Angola-IN-46703/99223536_zpid/",
-    "price": 610000,
+    "price": 605000,
     "source": "www.zillow.com",
     "status": "FOR_SALE",
     "img_url": "https://photos.zillowstatic.com/fp/79cbaab65d8007260a9b772e90bc6a0d-p_e.jpg",
-    "date_pulled": "08-20-2025_09-54-41",
+    "date_pulled": "08-25-2025_17-20-04",
     "description": "3D Tour",
     "htype": "SINGLE_FAMILY",
     "beds": 6.0,
     "baths": 6.0,
     "lotsqft": "2.1 acres",
-    "sqft": 5466,
+    "sqft": "5466",
+    "price_sqft": 110,
     "lat": 41.624073,
     "long": -85.0041,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -5000,
+    "last_price": 610000,
+    "price_c_dat": "08-25-2025_17-20-09",
     "seller": "CENTURY 21 Bradley Realty, Inc",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -3861,9 +3862,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 85,
-    "zestimate": 570300,
-    "price_sqft": 111
+    "daysOnZillow": 91,
+    "zestimate": 565900
   },
   "85722440": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -5240,27 +5240,28 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/195-Lane-272-Crooked-Lk_Angola_IN_46703_M45974-01511",
-    "price": 499900,
+    "price": 475000,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/f4b1b5ffbb4c85bbb614f93ab32d690fl-b589357017s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-20-2025_09-54-48",
+    "date_pulled": "08-25-2025_17-19-05",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.0,
     "lotsqft": null,
     "sqft": 1856,
+    "price_sqft": 255,
     "lat": 41.685388,
     "long": 41.685388,
     "zipc": "46703",
     "list_dt": "07-30-2025_00-48-15",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "07-30-2025_00-48-15",
+    "price_ch_amt": -24900,
+    "last_price": 499900,
+    "price_c_dat": "08-25-2025_17-19-12",
     "seller": "RE MAX Results",
     "sellerinfo": {
       "advertisers": [
@@ -5282,7 +5283,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": false,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -5299,8 +5300,7 @@
       ]
     },
     "extras": {},
-    "year_built": 1943,
-    "price_sqft": 269
+    "year_built": 1943
   },
   "2974939489": {
     "address": "135 Lane 335 Lake James, Angola, IN 46703",
@@ -6498,24 +6498,25 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/195-lane-272-crooked-lake-angola-in/1kct53p9z5d8y/",
-    "price": 499900,
+    "price": 475000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/9949064344-999687102/195-lane-272-crooked-lake-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-20-2025_09-54-56",
+    "date_pulled": "08-25-2025_17-19-12",
     "description": "WOW! Just a short drive from Chicago, Toledo or Indianapolis awaits this incredible opportunity! This completely remodeled lake home features a 2-car garage and come's with 4 additional lots, including 2 with lake frontage.  Located in the beautiful nature-filled, 3rd Basin area of Crooked Lake, this property is truly a rare find. Bonuses :2 bedrooms on the main floor, huge deck and plenty of",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 2,
     "lotsqft": null,
-    "sqft": 1856,
+    "sqft": "1856",
+    "price_sqft": 255,
     "lat": null,
     "long": null,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -24900,
+    "last_price": 499900,
+    "price_c_dat": "08-25-2025_17-19-19",
     "seller": {
       "@type": "Organization",
       "name": "RE/MAX Results - Angola office"
@@ -6530,8 +6531,7 @@
       },
       "name": "Darlene Myers"
     },
-    "extras": {},
-    "price_sqft": 269
+    "extras": {}
   },
   "eghc6d74e2xdj": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -6743,24 +6743,25 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/501-w-fox-lake-rd-angola-in/0y0snsyn65z86/",
-    "price": 610000,
+    "price": 605000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/3022110434-131933891/501-w-fox-lake-rd-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-20-2025_09-54-56",
+    "date_pulled": "08-25-2025_17-19-12",
     "description": "Welcome to 501 Fox Lake Road, where countryside charm meets modern living. Nestled on a picturesque 2-acre lot, this beautifully rebuilt 6,200 sqft home offers the perfect blend of rustic elegance and contemporary comfort. Step inside to discover rich natural wood finishes and an abundance of natural light throughout. The thoughtfully designed floor plan features oversized bedrooms, two spacious",
     "htype": "SingleFamilyResidence",
     "beds": 6,
     "baths": 6,
     "lotsqft": null,
-    "sqft": 5466,
+    "sqft": "5466",
+    "price_sqft": 110,
     "lat": 41.6243508,
     "long": -85.0041369,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -5000,
+    "last_price": 610000,
+    "price_c_dat": "08-25-2025_17-19-19",
     "seller": {
       "@type": "Organization",
       "name": "CENTURY 21 Bradley Realty, Inc"
@@ -6776,8 +6777,7 @@
       },
       "name": "Tyler Dohner"
     },
-    "extras": {},
-    "price_sqft": 111
+    "extras": {}
   },
   "e7lbvxs0g0fgz": {
     "address": "575 Lane 100 Pine Canyon Lake, Angola, IN 46703",
@@ -7295,28 +7295,28 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/501-Fox-Lake-Rd-46703/home/140489346",
-    "price": 610000,
+    "price": 605000,
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-08",
+    "date_pulled": "08-25-2025_17-20-14",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 6.0,
     "baths": null,
     "lotsqft": null,
-    "sqft": 5466,
+    "sqft": "5466",
+    "price_sqft": 110,
     "lat": 41.6240592,
     "long": -85.0040905,
     "zipc": "46730",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -5000,
+    "last_price": 610000,
+    "price_c_dat": "08-25-2025_17-20-18",
     "seller": {},
     "sellerinfo": {},
-    "extras": {},
-    "price_sqft": 111
+    "extras": {}
   },
   "140428151": {
     "address": "109 E Broad St, Angola, IN 46703",
@@ -8740,28 +8740,28 @@
     "city": "Homer",
     "state": "MI",
     "url": "https://www.redfin.com/MI/Homer/214-S-Hillsdale-St-49245/home/96440687",
-    "price": 170000,
+    "price": 150000,
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-26",
+    "date_pulled": "08-25-2025_17-18-00",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
-    "sqft": 1904,
+    "sqft": "1904",
+    "price_sqft": 78,
     "lat": 42.1441276,
     "long": -84.8085981,
     "zipc": "49245",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_ch_amt": -20000,
+    "last_price": 170000,
+    "price_c_dat": "08-25-2025_17-18-06",
     "seller": {},
     "sellerinfo": {},
-    "extras": {},
-    "price_sqft": 89
+    "extras": {}
   },
   "110634934": {
     "address": "10950 W Dr N, Bellevue, MI 49021",
@@ -19557,6 +19557,883 @@
     "price_sqft": 112,
     "lat": 41.6717912,
     "long": -85.0233435,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "96230390": {
+    "address": "105 N Fremont St, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/105-N-Fremont-St-49036/home/96230390",
+    "price": 110000,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-25-2025_17-18-10",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "1800",
+    "price_sqft": 61,
+    "lat": 41.9454757,
+    "long": -85.0105946,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "96642061": {
+    "address": "147 Winona St, Bronson, MI 49028",
+    "city": "Bronson",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Bronson/147-Winona-St-49028/home/96642061",
+    "price": 264900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-25-2025_17-18-10",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 6.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "2176",
+    "price_sqft": 121,
+    "lat": 41.8740982,
+    "long": -85.1923798,
+    "zipc": "49028",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "2985709465": {
+    "address": "105 N Fremont St, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/105-N-Fremont-St_Coldwater_MI_49036_M42234-54959",
+    "price": 110000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/c7f65a95ba4094fc7a9bffef091b8234l-m102682503s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-25-2025_17-18-13",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 1800,
+    "price_sqft": 61,
+    "lat": 41.945459,
+    "long": 41.945459,
+    "zipc": "49036",
+    "list_dt": "08-25-2025_15-02-42",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-25-2025_15-02-42",
+    "seller": "JPAR Bay City - Great Lakes Bay Region",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "99980357",
+          "name": "Troy Schearer",
+          "builder": null,
+          "email": "troytherealtormi@gmail.com",
+          "office": {
+            "name": "JPAR Bay City - Great Lakes Bay Region",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "9897928200",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "9897082430",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "JPAR Bay City - Great Lakes Bay Region",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1900
+  },
+  "ymhf2r2521s46": {
+    "address": "105 N Fremont St, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/105-n-fremont-st-coldwater-mi/ymhf2r2521s46/",
+    "price": 110000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/116/5681845644-104008202/105-n-fremont-st-coldwater-mi-primaryphoto.jpg?t=p",
+    "date_pulled": "08-25-2025_17-18-26",
+    "description": "105 N Fremont St, Coldwater, MI \u2013 Spacious 4-Bedroom Home with Potential!  Welcome to this 4-bedroom, 1.5-bath home located just two blocks from Coldwater High School! Plus a den that walks out to the back patio, this property has great potential for someone ready to bring their vision and a little TLC.  Inside, you\u2019ll find a mix of original character and updates throughout. The main floor",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": "1800",
+    "price_sqft": 61,
+    "lat": 41.9452995,
+    "long": -85.0103975,
+    "zipc": "49036",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "JPAR - Great Lakes Bay Region"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/RLVO0r9ZcB45xVXE4lLcIPpoxpmv7goDDAY8NfYKDZI/105/image.jpg?t=p&p=1",
+      "telephone": "(989) 708-2430",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "JPAR - Great Lakes Bay Region"
+      },
+      "name": "Troy Schearer"
+    },
+    "extras": {}
+  },
+  "2985720513": {
+    "address": "312 W Pleasant St, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/312-W-Pleasant-St_Angola_IN_46703_M46374-99665",
+    "price": 269900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/bf5c51ef58aac5419204a86976be2af3l-m261049541s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-25-2025_17-19-05",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 3120,
+    "price_sqft": 86,
+    "lat": 41.629837,
+    "long": 41.629837,
+    "zipc": "46703",
+    "list_dt": "08-25-2025_19-20-40",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-25-2025_19-20-40",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2898999",
+          "name": "Anthony Isa",
+          "builder": null,
+          "email": "tonyisa@remax.net",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603190633",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "8008602414",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "8008602414",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1956
+  },
+  "2985722082": {
+    "address": "102 Chaudoin Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/102-Chaudoin-Dr_Angola_IN_46703_M48671-69669",
+    "price": 415000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/5b84210497c56fb36e40845309b01ab0l-m3950838482s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-25-2025_17-19-05",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 3538,
+    "price_sqft": 117,
+    "lat": 41.62291,
+    "long": 41.62291,
+    "zipc": "46703",
+    "list_dt": "08-25-2025_19-51-35",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-25-2025_19-51-35",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "1958448",
+          "name": "Tracey Musser",
+          "builder": null,
+          "email": "traceymusser@remax.net",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2606686663",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2606686663",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1998
+  },
+  "2985611513": {
+    "address": "1740 W 200 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/1740-W-200-N_Angola_IN_46703_M31682-71051",
+    "price": 359900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/53c317cba913674b9622b647edb7e871l-b4049316393s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-25-2025_17-19-05",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 3185,
+    "price_sqft": 112,
+    "lat": 41.671853,
+    "long": 41.671853,
+    "zipc": "46703",
+    "list_dt": "08-22-2025_16-23-36",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-22-2025_16-23-36",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3029242",
+          "name": "Jeremy Bracey",
+          "builder": null,
+          "email": "jbracey6@gmail.com",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2604665037",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1965
+  },
+  "2985663952": {
+    "address": "925 N 280 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/925-N-280-W_Angola_IN_46703_M46233-75873",
+    "price": 385000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/ebcc69a55544976db00cd7be14d5fea3l-b1942708002s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-25-2025_17-19-05",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 3184,
+    "price_sqft": 120,
+    "lat": 41.655811,
+    "long": 41.655811,
+    "zipc": "46703",
+    "list_dt": "08-23-2025_18-21-47",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-23-2025_18-21-47",
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3118796",
+          "name": "Erika Wise",
+          "builder": null,
+          "email": "erika@christythomson.com",
+          "office": {
+            "name": "Century 21 Bradley-Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2602000210",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Century 21 Bradley-Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1995
+  },
+  "8zgc3pnfyg61g": {
+    "address": "1740 W 200 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/1740-w-200-n-angola-in/8zgc3pnfyg61g/",
+    "price": 359900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1510713644-528237202/1740-w-200-n-angola-in-primaryphoto.jpg",
+    "date_pulled": "08-25-2025_17-19-12",
+    "description": "Spacious 4-bedroom, 3.5-bath home with a rare two story 3.5-car garage, set on nearly an acre of land! Enjoy the perfect blend of country living with the convenience of being just 1 mile from major shopping and amenities. This property features a huge deck for entertaining, plenty of outdoor space, and room to spread out inside and out. A must-see opportunity for those wanting privacy without",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3185",
+    "price_sqft": 112,
+    "lat": 41.6713859,
+    "long": -85.0098253,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Results - Angola office"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/wjKdTKfTSr3jQyIGZUpOhg7tK1eNP9k94vrGZSB_22E/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 466-5037",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Results - Angola office"
+      },
+      "name": "Jeremy Bracey"
+    },
+    "extras": {}
+  },
+  "rt136vvftmw91": {
+    "address": "102 Chaudoin Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/102-chaudoin-dr-angola-in/rt136vvftmw91/",
+    "price": 415000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/4751475644-875908202/102-chaudoin-dr-angola-in-primaryphoto.jpg",
+    "date_pulled": "08-25-2025_17-19-12",
+    "description": "OPEN HOUSE THIS SATURDAY 1:00-3:00    Check out this 4 bedroom 4 bath beauty just south of Angola in an upscale neighborhood.  As you walk in you are greeted with a vaulted grand entrance.  The main floor boasts a  kitchen with island seating and overlooks the back yard plus a formal dining room, half bath  and living room with gas fireplace to cozy up to. Upstairs you have a large main suite",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3538",
+    "price_sqft": 117,
+    "lat": 41.6236681,
+    "long": -84.9982121,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Results - Angola office"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/8A8P3fwbPtXj8HAFSVGFR2G3ZxMW6uVuVQMdb8Q_nfU/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 668-6663",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Results - Angola office"
+      },
+      "name": "Tracey Musser"
+    },
+    "extras": {}
+  },
+  "k4x7fxkkkk919": {
+    "address": "312 W Pleasant St, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/312-w-pleasant-st-angola-in/k4x7fxkkkk919/",
+    "price": 269900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/8508965644-739708202/312-w-pleasant-st-angola-in-primaryphoto.jpg",
+    "date_pulled": "08-25-2025_17-19-12",
+    "description": "Historic charm meets modern living in this 3,000+ sq ft home! Ideally located near Trine University and Angola\u2019s vibrant town center, you\u2019ll be just steps from the farmers market, festivals, shops, and dining. Enjoy a large lot with a beautiful, spacious deck accessed by double doors, original hardwood floors, a modern kitchen with granite countertops and stainless steel appliances, and updated",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "3120",
+    "price_sqft": 86,
+    "lat": 41.6297763,
+    "long": -85.0017357,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Results - Angola office"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/-YLVJ2qDMH1Da6dyDYRNY4yNSfAAdCBylRFtUw4q-kA/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 319-0633",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Results - Angola office"
+      },
+      "name": "Tony Isa"
+    },
+    "extras": {}
+  },
+  "j2s23z5b7kqvj": {
+    "address": "925 N 280 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/925-n-280-w-angola-in/j2s23z5b7kqvj/",
+    "price": 385000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/3240915644-430077202/925-n-280-w-angola-in-primaryphoto.jpg",
+    "date_pulled": "08-25-2025_17-19-12",
+    "description": "Welcome to this beautifully updated 4-bedroom, 3-bathroom home with a 2-car garage, offering the perfect balance of convenience and tranquility. Located just minutes from town, yet far enough to enjoy peace and quiet, this move-in ready gem is packed with modern upgrades and thoughtful features. Inside, you\u2019ll find brand-new flooring, new baseboards and door trim, and new exterior entry doors",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "3184",
+    "price_sqft": 120,
+    "lat": null,
+    "long": null,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "Century 21 Bradley-Angola"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/WVQb_eh5fcqznTDnlgXNqPzp7k56oeb0OauN83Uftyo/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 200-0210",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Century 21 Bradley-Angola"
+      },
+      "name": "Erika Wise"
+    },
+    "extras": {}
+  },
+  "85723915": {
+    "address": "102 Chaudoin Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/102-Chaudoin-Dr-Angola-IN-46703/85723915_zpid/",
+    "price": 415000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/536241185f31d072e3e4f86c6ebc9525-p_e.jpg",
+    "date_pulled": "08-25-2025_17-20-04",
+    "description": "2 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "0.49 acres",
+    "sqft": "3538",
+    "price_sqft": 117,
+    "lat": 41.6231,
+    "long": -84.99849,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Tracey Musser",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 403000
+  },
+  "85723348": {
+    "address": "312 W Pleasant St, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/312-W-Pleasant-St-Angola-IN-46703/85723348_zpid/",
+    "price": 269900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/07906fec2d2b5c838e8b7bc8e000be81-p_e.jpg",
+    "date_pulled": "08-25-2025_17-20-04",
+    "description": "2 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "9147.6 sqft",
+    "sqft": "3120",
+    "price_sqft": 86,
+    "lat": 41.62986,
+    "long": -85.002304,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Anthony Isa",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 262700
+  },
+  "85721657": {
+    "address": "1740 W 200 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/1740-W-200-N-Angola-IN-46703/85721657_zpid/",
+    "price": 359900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/6bf9cde19d0a3fdb1074af38e42cf154-p_e.jpg",
+    "date_pulled": "08-25-2025_17-20-04",
+    "description": "Plenty of outdoor space",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "0.93 acres",
+    "sqft": "3185",
+    "price_sqft": 112,
+    "lat": 41.6718,
+    "long": -85.02337,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Jeremy Bracey",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 3,
+    "zestimate": 349100
+  },
+  "85722367": {
+    "address": "925 N 280 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/925-N-280-W-Angola-IN-46703/85722367_zpid/",
+    "price": 385000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/26adfea3a5abf80566e16da3311ea94b-p_e.jpg",
+    "date_pulled": "08-25-2025_17-20-04",
+    "description": "Finished basement",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "0.41 acres",
+    "sqft": "3184",
+    "price_sqft": 120,
+    "lat": 41.6558,
+    "long": -85.044014,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Erika Gaetz",
+      "brokerName": "Century 21 Bradley-Angola",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 2,
+    "zestimate": 375700
+  },
+  "456223769": {
+    "address": "272 195th Ln, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/272-195th-Ln-Angola-IN-46703/456223769_zpid/",
+    "price": 475000,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/f27c1138ffbba4bb756335eb708cf976-p_e.jpg",
+    "date_pulled": "08-25-2025_17-20-04",
+    "description": "Price cut: $24,900 (8/22)",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "0.74 acres",
+    "sqft": "1856",
+    "price_sqft": 255,
+    "lat": 41.68539,
+    "long": -85.07059,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Darlene Myers",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 26
+  },
+  "140512791": {
+    "address": "102 Chaudoin Dr, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Angola/102-Chaudoin-Dr-46703/home/140512791",
+    "price": 415000,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-25-2025_17-20-14",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3538",
+    "price_sqft": 117,
+    "lat": 41.6231231,
+    "long": -84.9984979,
+    "zipc": "46703",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "140563303": {
+    "address": "312 W Pleasant St, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Angola/312-W-Pleasant-St-46703/home/140563303",
+    "price": 269900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-25-2025_17-20-14",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3120",
+    "price_sqft": 86,
+    "lat": 41.6298776,
+    "long": -85.0023145,
     "zipc": "46703",
     "list_dt": null,
     "price_ch_amt": null,

@@ -164,14 +164,12 @@ def check_ids(data:list)->list:
     if p_chn_ids:
         #Filter the saved jsondata for price changes
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
-        
 
     newcheck = isinstance(newdata, list)
     pricecheck = isinstance(pricechanges, list)
-
     if newcheck & pricecheck:
         newdata.extend(pricechanges)
-        logger.info(f"New homes {newids} and price changes {pricechanges} ")        
+        logger.info(f"New homes {newids} and price changes {p_chn_ids} ")        
         return newdata
 
     elif newcheck:
