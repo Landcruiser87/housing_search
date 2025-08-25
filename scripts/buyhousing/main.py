@@ -42,7 +42,7 @@ SOURCES = {
     "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["homes", "realtor", "redfin", "zillow"] 
+SITES = ["zillow", "homes", "realtor", "redfin"] 
 
 #Define search parameters
 MAXPRICE = 900_000
@@ -104,6 +104,7 @@ def add_data(data:list, siteinfo:tuple):
         data (list): List of Propertyinfo objects that are new (not in the historical)
         siteinfo (tuple): Tuple of website and neighborhood/zip
     """	
+    
     ids = [data[x].id for x in range(len(data))]
     #Reshape data to dict
     #make a new dict that can be json serialized with the id as the key
@@ -116,9 +117,9 @@ def add_data(data:list, siteinfo:tuple):
     
     #make tuples of (urls, site, neighborhood) for emailing
     newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx].get("price_ch_amt"), new_dict[idx].get("price")) for idx in new_dict.keys()]
+    
     #Extend the newlistings global list
     newlistings.extend(newurls)
-
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
     logger.info(f"These ids were added to storage: {ids}")
 
@@ -165,13 +166,17 @@ def check_ids(data:list)->list:
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
         logger.info(f"Price changes on {p_chn_ids}")
 
-    if (newdata != None) & (pricechanges != None):
-        return newdata.extend(pricechanges)
+    newcheck = isinstance(newdata, list)
+    pricecheck = isinstance(pricechanges, list)
 
-    if newdata:
+    if newcheck & pricecheck:
+        newdata.extend(pricechanges)
+        return newdata
+
+    elif newcheck:
         return newdata
     
-    elif pricechanges:      
+    elif pricecheck:
         return pricechanges
     else:
         logger.info("Listing(s) already stored in buy_list.json") 
@@ -194,7 +199,7 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
         area (str): City or or Zipcode
     # """	
     #Keep em guessin!
-    shuffle(SITES) 
+    # shuffle(SITES) 
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -265,7 +270,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
@@ -275,7 +280,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
-            support.save_data(jsondata)
+            # support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
