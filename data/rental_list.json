@@ -75680,5 +75680,86 @@
       "violence_score": 31.49,
       "property_d_score": 0.21
     }
+  },
+  "nj0pzvq": {
+    "source": "www.apartments.com",
+    "price": 2250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2531-w-lyndale-st-chicago-il/nj0pzvq/",
+    "address": "2531 W Lyndale St, Chicago, IL 60647",
+    "date_pulled": "08-25-2025_15-27-02",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1500.0,
+    "lat": 41.9222139,
+    "long": -87.6905644,
+    "L_dist": [
+      "California",
+      0.33
+    ],
+    "crime_sc": {
+      "drug_score": 4.0,
+      "gun_score": 5.06,
+      "murder_score": 1.63,
+      "perv_score": 1.6,
+      "theft_score": 40.83,
+      "violence_score": 25.6,
+      "property_d_score": 0.14
+    }
+  },
+  "2117799295": {
+    "source": "www.zillow.com",
+    "price": 2300.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/1938-W-Melrose-St-1-Chicago-IL-60657/2117799295_zpid/",
+    "address": "1938 W Melrose St #1, Chicago, IL 60657",
+    "date_pulled": "08-25-2025_15-29-29",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.940754,
+    "long": -87.67748,
+    "L_dist": [
+      "Paulina",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 4.18,
+      "gun_score": 4.98,
+      "murder_score": 1.67,
+      "perv_score": 1.59,
+      "theft_score": 41.03,
+      "violence_score": 25.38,
+      "property_d_score": 0.14
+    }
+  },
+  "7605878350": {
+    "source": "www.realtor.com",
+    "price": 2600,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/5036-W-Pensacola-Ave-Unit-302_Chicago_IL_60641_M76058-78350",
+    "address": "5036 W Pensacola Ave Unit 302, Chicago, IL 60641",
+    "date_pulled": "08-25-2025_15-32-58",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.96013,
+    "long": -87.753642,
+    "L_dist": [
+      "Montrose",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 4.79,
+      "gun_score": 5.38,
+      "murder_score": 1.73,
+      "perv_score": 1.85,
+      "theft_score": 38.55,
+      "violence_score": 26.64,
+      "property_d_score": 0.17
+    }
   }
 }

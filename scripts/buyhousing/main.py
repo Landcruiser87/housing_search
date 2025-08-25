@@ -172,7 +172,6 @@ def check_ids(data:list)->list:
     if newcheck & pricecheck:
         newdata.extend(pricechanges)
         logger.info(f"New homes {newids} and price changes {pricechanges} ")        
-
         return newdata
 
     elif newcheck:
@@ -186,15 +185,6 @@ def check_ids(data:list)->list:
         logger.info("Listing(s) already stored in buy_list.json") 
         return None
     
-    #Old code keeping for now
-    # newdata = []
-    # data_ids = [(idx, data[idx].id) for idx in range(len(data))]
-    # #Only add the listings that are new.  
-    # for ids in newids:
-    #    indx = [x[0] for x in data_ids if x[1]==ids][0]
-    #    newdata.append(data[indx]) 
-    # return newdata
-
 #FUNCTION Scrape data
 def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
     """This function will iterate through different resources scraping necessary information for ingestion. 
