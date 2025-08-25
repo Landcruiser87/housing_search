@@ -284,7 +284,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
-            # support.save_data(jsondata)
+            support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
