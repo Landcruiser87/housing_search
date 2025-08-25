@@ -452,11 +452,11 @@ class CustomEncoder(json.JSONEncoder):
         match obj:
             case np.integer():
                 return int(obj)
-            case np.floating:
+            case np.floating():
                 return float(obj)
-            case np.ndarray:
+            case np.ndarray():
                 return obj.tolist()
-            case pd.DataFrame:
+            case pd.DataFrame():
                 return obj.to_json(orient='records')
             case dict():
                 return obj.__dict__
