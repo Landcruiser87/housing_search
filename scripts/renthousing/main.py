@@ -295,7 +295,7 @@ def main():
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
         for neigh in AREAS:
             scrape(neigh, progbar, task, layout)
-        
+
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url 
         # Send gmail alerting of new properties

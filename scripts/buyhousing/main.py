@@ -91,6 +91,7 @@ class Propertyinfo():
     price_ch_amt: int = None #last_pri_cha
     last_price  : int = None
     price_c_dat : str = None
+    price_hist  : dict = field(default_factory=lambda:{})
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
@@ -164,6 +165,11 @@ def check_ids(data:list)->list:
     if p_chn_ids:
         #Filter the saved jsondata for price changes
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
+
+    #TODO - 
+        # Add a routine that can check if the house has sold.  
+            # Price, date?
+        # I would want to see if the had sold.  
 
     newcheck = isinstance(newdata, list)
     pricecheck = isinstance(pricechanges, list)

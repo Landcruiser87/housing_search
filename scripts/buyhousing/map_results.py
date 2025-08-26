@@ -1,3 +1,37 @@
+#Import libraries
+import numpy as np
+from os.path import exists
+import support
+
+#Import logger and console from support
+from support import logger, log_time, get_time
+
+
+def sir_plots_alot():
+    pass    
+
+################################# Start Program ####################################
+#Driver code
+#FUNCTION Main start
+@log_time
+def main():
+    #Global variables setup
+    global jsondata
+    fp = "./data/buy_list.json"
+
+    #Load rental_list.json
+    if exists(fp):
+        jsondata = support.load_historical(fp)
+        logger.info("historical data loaded")
+    else:
+        logger.warning("No historical data found")
+        raise ValueError("Data source not found")
+
+    sir_plots_alot()
+
+if __name__ == "__main__":
+    main()
+
 #TODO -
 # Build this file out to visualize and sort through different dates
 # I'd like to have a date select function.  Make it like the slider.py
@@ -27,6 +61,8 @@
         # - price change
         # - price
         # - lotsqft 
+        # - time on market
+        # - Sold?
 # Possible supplimental datasets (Census.gov and BLS.gov)
     # Property Sales
     # Census Demographics
