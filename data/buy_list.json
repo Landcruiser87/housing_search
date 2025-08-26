@@ -20442,5 +20442,183 @@
     "seller": {},
     "sellerinfo": {},
     "extras": {}
+  },
+  "hz1xt8h8c6447": {
+    "address": "3217 E 700 N, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.homes.com/property/3217-e-700-n-fremont-in/hz1xt8h8c6447/",
+    "price": 599900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1585006644-908718202/3217-e-700-n-fremont-in-primaryphoto.jpg",
+    "date_pulled": "08-26-2025_07-58-14",
+    "description": "Escape to your own private retreat on 10+ serene acres, perfectly balanced with open space, wooded areas, and a peaceful pond. Fruit trees add charm and seasonal enjoyment, making this property a true nature lover\u2019s paradise, sit on the deck or patio and watch the deer wander by. Outdoor living is effortless with a covered porch/deck, patio, and firepit\u2014ideal for relaxing evenings or entertaining",
+    "htype": "SingleFamilyResidence",
+    "beds": 5,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "3528",
+    "price_sqft": 170,
+    "lat": null,
+    "long": null,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Results - Angola office"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/oIbZW26AABKT61uQhE0CmcFQ4Gk8O19A-51lrPQp0Kg/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 316-9940",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Results - Angola office"
+      },
+      "name": "Christy Thomson"
+    },
+    "extras": {}
+  },
+  "2985731511": {
+    "address": "3217 E 700 N, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/3217-E-700-N_Fremont_IN_46737_M32615-84847",
+    "price": 599900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/83829b4cb1502801d3bc20bde557bff8l-m3059935250s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-26-2025_07-58-26",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 3528,
+    "price_sqft": 170,
+    "lat": 41.744735,
+    "long": 41.744735,
+    "zipc": "46737",
+    "list_dt": "08-26-2025_00-35-54",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-26-2025_00-35-54",
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3118789",
+          "name": "Christy Thomson",
+          "builder": null,
+          "email": "christythomson@remax.net",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603169940",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1998
+  },
+  "224479869": {
+    "address": "3217 E 700 N, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/3217-E-700-N-Fremont-IN-46737/224479869_zpid/",
+    "price": 599900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/1064a66a0569f7b02bcc4d0e2bb633bb-p_e.jpg",
+    "date_pulled": "08-26-2025_07-58-38",
+    "description": "12 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 5.0,
+    "lotsqft": "10.87 acres",
+    "sqft": "3528",
+    "price_sqft": 170,
+    "lat": 41.74465,
+    "long": -84.93448,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Christy Thomson",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 571900
+  },
+  "146193852": {
+    "address": "3217 E 700 N, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Fremont/3217-E-700-N-46737/home/146193852",
+    "price": 599900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-26-2025_07-58-49",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 5.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3528",
+    "price_sqft": 170,
+    "lat": 41.7446639,
+    "long": -84.9344324,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
   }
 }
