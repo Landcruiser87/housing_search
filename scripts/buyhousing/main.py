@@ -95,7 +95,22 @@ class Propertyinfo():
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
-    
+    #TODO - Update price history
+        #As of now it only tracks one price change.  Index will be the date
+        #and make it the dictionary key.  
+        # Track
+            #Price change
+            #Change amount
+            #Change %
+
+        #amount changed, and % change.
+
+    #TODO - Save function 
+        #Need a way to save and compare listings similar to how Zillow does. 
+        #Might just use them as the source as they seem to have the most
+        #information on listings.  
+        #remember, there could be some that don't use them
+
 ################################# Main Funcs ####################################
 #FUNCTION Add Data
 def add_data(data:list, siteinfo:tuple):
