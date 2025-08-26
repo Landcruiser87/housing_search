@@ -23,3 +23,9 @@
         # - price change
         # - price
         # - lotsqft 
+# Possible supplimental datasets (Census.gov and BLS.gov)
+    # Property Sales
+    # Census Demographics
+    # Historical Weather
+    # Crime Data
+    # Public Transit (This one might not work)

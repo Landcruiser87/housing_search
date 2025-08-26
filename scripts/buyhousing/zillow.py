@@ -18,7 +18,6 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
     Returns:
         listings (list): [List of dataclass objects]
     """
-
     listings = []
     defaultval = None
     seller_keys = ["isZillowOwned", "pgapt", "info2String", "info6String", "brokerName", "marketingStatusSimplifiedCd"]
