@@ -11,7 +11,7 @@ from collections import Counter
 #Import supporting files
 import realtor, zillow, redfin, homes, support
 #Import logger and console from support
-from support import logger, console, log_time, get_time
+from support import logger, log_time, get_time
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
@@ -173,12 +173,13 @@ def check_ids(data:list)->list:
         return newdata
 
     elif newcheck:
-        logger.info(f"New homes found on {newids}")
+        logger.info(f"New homes at {newids}")
         return newdata
     
     elif pricecheck:
-        logger.info(f"Price changes on {p_chn_ids}")
+        logger.info(f"Price changes at {p_chn_ids}")
         return pricechanges
+    
     else:
         logger.info("Listing(s) already stored in buy_list.json") 
         return None

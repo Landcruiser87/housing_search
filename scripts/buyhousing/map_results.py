@@ -11,8 +11,12 @@
     # 2. Have a pop up that shows listing information...
     # 3. Color code cities/zips by amount of listings found.  
     # 4. Have a time window select of the last day, week, month.
-    # 5. Be able to save a home so that it always shows up
-        # when you're searching.  
+    # 5. Be able to save a home so that it always shows up when you're searching.
+        # 5b. If a home is saved, go to the individual 
+        # page (not sure which source) and save the rest of the 
+        # information about the house. 
+        # TODO - Figure out all the metrics you would want for a house
+
     # 6. Export button for saved homes.  
     # 7. Filter by site.
     # 8. If duplicate addresses found, maybe color code the point to how many of the 4 sites its on.   
