@@ -75761,5 +75761,167 @@
       "violence_score": 26.64,
       "property_d_score": 0.17
     }
+  },
+  "7tl934x": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6106-s-dorchester-ave-chicago-il/7tl934x/",
+    "address": "6106 S Dorchester Ave, Chicago, IL 60637",
+    "date_pulled": "08-26-2025_15-07-53",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 700.0,
+    "lat": 41.7839343,
+    "long": -87.5915361,
+    "L_dist": [
+      "Cottage Grove",
+      0.78
+    ],
+    "crime_sc": {
+      "drug_score": 1.81,
+      "gun_score": 7.71,
+      "murder_score": 2.19,
+      "perv_score": 1.44,
+      "theft_score": 35.63,
+      "violence_score": 30.05,
+      "property_d_score": 0.18
+    }
+  },
+  "kygl8bb": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/5036-w-pensacola-ave-chicago-il/kygl8bb/",
+    "address": "5036 W Pensacola Ave, Chicago, IL 60641",
+    "date_pulled": "08-26-2025_15-07-53",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.9599336,
+    "long": -87.7535408,
+    "L_dist": [
+      "Montrose",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 4.82,
+      "gun_score": 5.38,
+      "murder_score": 1.74,
+      "perv_score": 1.85,
+      "theft_score": 38.51,
+      "violence_score": 26.66,
+      "property_d_score": 0.17
+    }
+  },
+  "p1xs01r": {
+    "source": "www.apartments.com",
+    "price": 2475.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4447-n-kedzie-ave-chicago-il/p1xs01r/",
+    "address": "4447 N Kedzie Ave, Chicago, IL 60625",
+    "date_pulled": "08-26-2025_15-11-44",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1061.0,
+    "lat": 41.9625506,
+    "long": -87.7079916,
+    "L_dist": [
+      "Kedzie",
+      0.24
+    ],
+    "crime_sc": {
+      "drug_score": 3.98,
+      "gun_score": 4.66,
+      "murder_score": 1.46,
+      "perv_score": 1.64,
+      "theft_score": 41.94,
+      "violence_score": 24.81,
+      "property_d_score": 0.14
+    }
+  },
+  "9812436531": {
+    "source": "www.realtor.com",
+    "price": 2500,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/2310-W-Winnemac-Ave-Apt-1_Chicago_IL_60625_M98124-36531",
+    "address": "2310 W Winnemac Ave Apt 1, Chicago, IL 60625",
+    "date_pulled": "08-26-2025_15-13-42",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 780.0,
+    "lat": 41.973255,
+    "long": -87.687157,
+    "L_dist": [
+      "Western",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.5,
+      "gun_score": 4.48,
+      "murder_score": 1.39,
+      "perv_score": 1.48,
+      "theft_score": 42.91,
+      "violence_score": 24.48,
+      "property_d_score": 0.14
+    }
+  },
+  "80832726": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5036-W-Pensacola-Ave-UNIT-302-Chicago-IL-60641/80832726_zpid/",
+    "address": "5036 W Pensacola Ave UNIT 302, Chicago, IL 60641",
+    "date_pulled": "08-26-2025_15-15-27",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1400.0,
+    "lat": 41.959835,
+    "long": -87.75357,
+    "L_dist": [
+      "Montrose",
+      0.53
+    ],
+    "crime_sc": {
+      "drug_score": 4.82,
+      "gun_score": 5.39,
+      "murder_score": 1.75,
+      "perv_score": 1.85,
+      "theft_score": 38.49,
+      "violence_score": 26.68,
+      "property_d_score": 0.17
+    }
+  },
+  "2100913897": {
+    "source": "www.zillow.com",
+    "price": 1950.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3121-N-Kimball-Ave-2-Chicago-IL-60618/2100913897_zpid/",
+    "address": "3121 N Kimball Ave #2, Chicago, IL 60618",
+    "date_pulled": "08-26-2025_15-16-47",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.93813,
+    "long": -87.71208,
+    "L_dist": [
+      "Belmont",
+      0.01
+    ],
+    "crime_sc": {
+      "drug_score": 4.06,
+      "gun_score": 4.93,
+      "murder_score": 1.58,
+      "perv_score": 1.63,
+      "theft_score": 40.95,
+      "violence_score": 25.4,
+      "property_d_score": 0.14
+    }
   }
 }
