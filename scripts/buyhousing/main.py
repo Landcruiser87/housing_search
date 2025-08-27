@@ -10,17 +10,16 @@ from collections import Counter
 
 #Import supporting files
 import realtor, zillow, redfin, homes, support
+
 #Import logger and console from support
 from support import logger, log_time, get_time
 
 ################################# Variable Setup ####################################
 # input custom area's here. Uncomment whichever way you want to search
-
 #NOTE - Be sure to run these as a list of ints.  This software uses the datatype to dictate logic
 # AREAS = [80108, 80110, 80111, 80112, 80120, 80121, 80122,
 #     80124, 80126, 80129, 80130, 80236, 80237
 # ]
-
 # pound sign to the right of neighborhood means its a city of chicago neighborhood, 
 # if doesn't have one, its a smaller targeted neighborhood.
 
@@ -29,7 +28,7 @@ AREAS = [
     ('Auburn'   ,'IN'),
     ('Fremont'  ,'IN'),
     ('Orland'   ,'IN'),
-    ('Coldwater','MI'),    #guuuurl.  You gots lots of housing price cuts.  No bueno market!
+    ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
     # ('Portage'  ,'MI'),
@@ -42,7 +41,7 @@ SOURCES = {
     "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["homes", "realtor", "redfin","zillow"] 
+SITES = ["homes", "realtor", "redfin", "zillow"] 
 
 #Define search parameters
 MAXPRICE = 900_000
@@ -62,7 +61,6 @@ LOST_N_FOUND = {
     "redfin"  :False,
     "zillow"  :False
 }
-
 
 #Define dataclass container
 @dataclass
@@ -95,6 +93,7 @@ class Propertyinfo():
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
+
     #TODO - Update price history
         #As of now it only tracks one price change.  Index will be the date
         #and make it the dictionary key.  
@@ -119,7 +118,7 @@ def add_data(data:list, siteinfo:tuple):
     Args:
         data (list): List of Propertyinfo objects that are new (not in the historical)
         siteinfo (tuple): Tuple of website and neighborhood/zip
-    """	
+    """
     
     ids = [data[x].id for x in range(len(data))]
     #Reshape data to dict
