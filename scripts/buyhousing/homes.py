@@ -96,7 +96,7 @@ def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
     #TODO - Update this for zip search
     #Searchby ZipCode
     elif isinstance(neigh, int):
-        #BUG - here they need city state and zip to search by zip.  Might need a way to generate that eventually
+        #BUG - here they need city state and zip to search by zip.  Might need a way to generate that eventually, free api call?
         ZIPCODE = neigh
         url = f"https://www.homes.com/{CITY}-{STATE}/{ZIPCODE}/{MINBEDS}-{5}-bedroom/?property_type=1,2,32,8&bath-min={MINBATHS}&bath-max=5&price-max{MAXPRICE}"
 
