@@ -86,9 +86,9 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
-    price_ch_amt: int = None #last_pri_cha
-    last_price  : int = None
-    price_c_dat : str = None
+    # price_ch_amt: int = None #last_pri_cha
+    # last_price  : int = None
+    # price_c_dat : str = None
     price_hist  : dict = field(default_factory=lambda:{})
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
@@ -167,9 +167,10 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
-            data[idx].price_ch_amt = data[idx].price - jsondata[ids]["price"]
-            data[idx].price_c_dat = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            data[idx].last_price = jsondata[ids]["price"]
+            pulldate = get_time().strftime("%m-%d-%Y_%H-%M-%S")
+            data[idx]["price_hist"][pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
+            data[idx]["price_hist"][pulldate]["price_c_dat"] = pulldate
+            data[idx]["price_hist"][pulldate]["last_price"] = jsondata[ids]["price"]
             p_chn_ids.add(ids)
         
     if newids:
@@ -195,11 +196,11 @@ def check_ids(data:list)->list:
     elif newcheck:
         logger.info(f"New homes at {newids}")
         return newdata
-    
+
     elif pricecheck:
         logger.info(f"Price changes at {p_chn_ids}")
         return pricechanges
-    
+
     else:
         logger.info("Listing(s) already stored in buy_list.json") 
         return None

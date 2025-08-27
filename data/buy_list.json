@@ -20207,7 +20207,7 @@
       "telephone": "(260) 200-0210",
       "jobTitle": "Listing Agent",
       "memberOf": {
-        "@type": "Organization",  
+        "@type": "Organization",
         "name": "Century 21 Bradley-Angola"
       },
       "name": "Erika Wise"
@@ -20813,5 +20813,367 @@
     },
     "extras": {},
     "year_built": 1920
+  },
+  "l35knx5b2ej7t": {
+    "address": "14605 19 Mile Rd, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.homes.com/property/14605-19-mile-rd-marshall-mi/l35knx5b2ej7t/",
+    "price": 499900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/5387387644-936778202/14605-19-mile-rd-marshall-mi-primaryphoto.jpg",
+    "date_pulled": "08-27-2025_17-31-59",
+    "description": "Rare investment opportunity in Marengo Township! This fully licensed 6-bed senior care home features private resident rooms, a spacious main-level layout, and a separate basement apartment currently used for staff housing. The home is leased by an established tenant/operator who has run her care business from the property for over 6 years and wishes to stay. Currently generating $4000/month in",
+    "htype": "SingleFamilyResidence",
+    "beds": 7,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3065",
+    "price_sqft": 163,
+    "lat": null,
+    "long": null,
+    "zipc": "49068",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Berkshire Hathaway HomeServices Michigan Real Estate"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "telephone": "(888) 501-7085",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Berkshire Hathaway HomeServices Michigan Real Estate"
+      },
+      "name": "Kevin Hershock"
+    },
+    "extras": {}
+  },
+  "96408441": {
+    "address": "14605 19 Mile Rd, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Marshall/14605-19-Mile-Rd-49068/home/96408441",
+    "price": 499900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-27-2025_17-32-16",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 7.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3065",
+    "price_sqft": 163,
+    "lat": 42.2845129,
+    "long": -84.9272246,
+    "zipc": "49068",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "2985786571": {
+    "address": "14605 19 Mile Rd, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/14605-19-Mile-Rd_Marshall_MI_49068_M44307-73131",
+    "price": 499900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/d4d72d676562b9bc6e6957ee605a0070l-m1834560245s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-27-2025_17-32-24",
+    "description": null,
+    "htype": "single_family",
+    "beds": 7.0,
+    "baths": 4.0,
+    "lotsqft": null,
+    "sqft": 3065,
+    "price_sqft": 163,
+    "lat": 42.284529,
+    "long": 42.284529,
+    "zipc": "49068",
+    "list_dt": "08-27-2025_18-11-57",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-27-2025_18-11-57",
+    "price_hist": {},
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "4694807",
+          "name": "Kevin Hershock",
+          "builder": null,
+          "email": "kevin.hershock@exprealty.com",
+          "office": {
+            "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2697890140",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1998
+  },
+  "74654086": {
+    "address": "14605 Nineteen Mile Rd, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/14605-Nineteen-Mile-Rd-Marshall-MI-49068/74654086_zpid/",
+    "price": 499900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/c33a2b039e659420ce3276f21fac8ebb-p_e.jpg",
+    "date_pulled": "08-27-2025_17-32-34",
+    "description": "4 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 7.0,
+    "lotsqft": "2.3 acres",
+    "sqft": "3065",
+    "price_sqft": 163,
+    "lat": 42.284473,
+    "long": -84.92751,
+    "zipc": "49068",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "Berkshire Hathaway HomeServices Michigan Real Estate",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0
+  },
+  "140594336": {
+    "address": "815 Cherry Hill Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Fremont/815-Cherry-Hill-Ct-46737/home/140594336",
+    "price": 649900,
+    "source": "www.redfin.com",
+    "status": "For_Sale",
+    "img_url": null,
+    "date_pulled": "08-27-2025_17-33-24",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3596",
+    "price_sqft": 180,
+    "lat": 41.7413498,
+    "long": -84.9466642,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "115592100": {
+    "address": "815 Cherry Hill Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/815-Cherry-Hill-Ct-Fremont-IN-46737/115592100_zpid/",
+    "price": 649900,
+    "source": "www.zillow.com",
+    "status": "FOR_SALE",
+    "img_url": "https://photos.zillowstatic.com/fp/4ea14f19577b02b141116f8b6f120807-p_e.jpg",
+    "date_pulled": "08-27-2025_17-34-38",
+    "description": "4 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "1.13 acres",
+    "sqft": "3596",
+    "price_sqft": 180,
+    "lat": 41.741356,
+    "long": -84.94666,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": "Keller Williams Realty Group",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Scott C Pressler",
+      "brokerName": "Keller Williams Realty Group",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 627900
+  },
+  "2985785758": {
+    "address": "815 Cherry Hill Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/815-Cherry-Hill-Ct_Fremont_IN_46737_M38690-54195",
+    "price": 649900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/cbfd965a141f18487ce8b787d96c275dl-m1891921123s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-27-2025_17-34-43",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 3596,
+    "price_sqft": 180,
+    "lat": 41.741458,
+    "long": 41.741458,
+    "zipc": "46737",
+    "list_dt": "08-27-2025_17-51-19",
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": "08-27-2025_17-51-19",
+    "price_hist": {},
+    "seller": "Keller Williams Fort Wayne",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "1522637",
+          "name": "Scott Pressler, Agent",
+          "builder": null,
+          "email": "scottpressler@kw.com",
+          "office": {
+            "name": "Keller Williams Fort Wayne",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603416666",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Keller Williams Fort Wayne",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2010
+  },
+  "fh42nq099y5n9": {
+    "address": "815 Cherry Hill Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.homes.com/property/815-cherry-hill-ct-fremont-in/fh42nq099y5n9/",
+    "price": 649900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/2125977644-703678202/815-cherry-hill-ct-fremont-in-primaryphoto.jpg",
+    "date_pulled": "08-27-2025_17-34-57",
+    "description": "A property like this doesn't show up often! This 4BR/3.5BA, 3,596 sq ft custom-built home offers privacy and convenience just minutes from I-69, the Toll Rd, schools, and shopping, all on 2.75 wooded acres! Features include a 3.5-car attached garage, 40x52 detached garage, and in-ground pool. Inside, enjoy a two-story foyer with Brazilian cherry floors, elegant staircase, and formal dining room.",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "3596",
+    "price_sqft": 180,
+    "lat": 41.7413644,
+    "long": -84.9466502,
+    "zipc": "46737",
+    "list_dt": null,
+    "price_ch_amt": null,
+    "last_price": null,
+    "price_c_dat": null,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Keller Williams Realty Group"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/kNbmLypb1tUKlaSf25Tj13IWPSMIe_6fws_S3jy6R6E/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 341-6666",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Keller Williams Realty Group"
+      },
+      "name": "Scott Pressler"
+    },
+    "extras": {}
   }
 }

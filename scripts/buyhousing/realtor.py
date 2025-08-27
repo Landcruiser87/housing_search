@@ -51,10 +51,14 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.lat          = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
         listing.long         = search_result["location"]["address"]["coordinate"].get("lat", defaultval)
         listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
-        listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
-        listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))
         listing.seller       = search_result["branding"][0].get("name", defaultval)
         listing.sellerinfo   = {k:search_result.get(k, defaultval) for k in seller_keys}
+        listing["price_hist"][listing.date_pulled]["price_ch_amt"] = int(search_result.get("last_price_change_amount", defaultval))
+        listing["price_hist"][listing.date_pulled]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
+        listing["price_hist"][listing.date_pulled]["last_price"]  = listing.price + listing["price_hist"][listing.date_pulled]["price_ch_amt"]
+        #Previous structure
+        # listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
+        # listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))
         listings.append(listing)
 
     return listings
