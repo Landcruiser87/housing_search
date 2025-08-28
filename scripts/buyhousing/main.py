@@ -41,7 +41,7 @@ SOURCES = {
     "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["homes", "realtor", "redfin", "zillow"] 
+SITES = ["realtor", "homes", "redfin", "zillow"] 
 P_LIST = ["price_ch_amt", "last_price", "price_c_dat", "perc_change"]
 
 #Define search parameters
@@ -176,6 +176,16 @@ def check_ids(data:list)->list:
         idx = idx.index(True)
         #Check for price changes between storage json and data pull
         if jsondata[ids].get("price") != data[idx].price:
+            #BUG - Multiple price changes from realtor. 
+                #because realtor actually knows hwen the last price change is, it will report it. 
+                #so we'll have a double entry.  Trying to think of ways to combat that. 
+            #if the current date | last price and amount are the same. 
+            # lastkey = sorted(data[idx].price_hist, key=lambda x:x, reverse=True)[0]
+            # lastprice = data[idx].price_hist[lastkey]["last_price"]
+            # lastamt = data[idx].price_hist[lastkey]["price_ch_amt"]
+            # curprice = data[idx].price - jsondata[ids]["price"]
+            # curammt = jsondata[ids]["price"]
+            #Checks if current date is in there.  I need it to check
             pulldate = get_time().strftime("%m-%d-%Y")
             if pulldate not in data[idx].price_hist.keys():
                 data[idx].price_hist[pulldate] = {key:None for key in P_LIST}
@@ -233,7 +243,7 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
         area (str): City or or Zipcode
     # """	
     #Keep em guessin!
-    shuffle(SITES) 
+    # shuffle(SITES) 
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -304,7 +314,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
