@@ -42,7 +42,7 @@ SOURCES = {
 }
 
 SITES = ["homes", "realtor", "redfin", "zillow"] 
-P_LIST = ["price_ch_amt", "last_price", "price_c_dat"]
+P_LIST = ["price_ch_amt", "last_price", "price_c_dat", "perc_change"]
 
 #Define search parameters
 MAXPRICE = 900_000

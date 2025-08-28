@@ -5,6 +5,7 @@ from typing import Union
 import datetime
 from support import logger, get_time
 from dataclasses import dataclass
+from main import P_LIST
 
 def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo)->list:
     """[Ingest HTML of summary page for listings info]
@@ -54,7 +55,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.seller       = search_result["branding"][0].get("name", defaultval)
         listing.sellerinfo   = {k:search_result.get(k, defaultval) for k in seller_keys}
         dp = listing.date_pulled.split("_")[0]
-        listing.price_hist[dp] = {k:None for k in ["price_ch_amt", "last_price", "price_c_dat"]}
+        listing.price_hist[dp] = {k:None for k in P_LIST}
         listing.price_hist[dp]["price_ch_amt"] = search_result.get("last_price_change_amount", defaultval)
         listing.price_hist[dp]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
         if isinstance(listing.price, int) & isinstance(listing.price_hist[dp]["price_ch_amt"], int):
