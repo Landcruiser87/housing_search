@@ -132,7 +132,7 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx].get("price_ch_amt"), new_dict[idx].get("price")) for idx in new_dict.keys()]
+    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx]["price_hist"][sorted(new_dict[idx]["price_hist"], key=lambda x:x in new_dict[idx]["price_hist"].keys(), reverse=True)[0]].get("price_ch_amt"), new_dict[idx].get("price")) for idx in new_dict.keys()]
     
     #Extend the newlistings global list
     newlistings.extend(newurls)
@@ -171,9 +171,9 @@ def check_ids(data:list)->list:
 
             #BUG WE've got two structure situations here
             #and two different timestamps between realtor and this routine. 
-
-            pulldate = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            data[idx].price_hist[pulldate] = {key:None for key in P_LIST}
+            pulldate = get_time().strftime("%m-%d-%Y")
+            if pulldate not in data[idx].price_hist.keys():
+                data[idx].price_hist[pulldate] = {key:None for key in P_LIST}
             data[idx].price_hist[pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
             data[idx].price_hist[pulldate]["price_c_dat"] = pulldate
             data[idx].price_hist[pulldate]["last_price"] = jsondata[ids]["price"]
