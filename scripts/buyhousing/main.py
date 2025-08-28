@@ -131,8 +131,15 @@ def add_data(data:list, siteinfo:tuple):
     #update main data container
     jsondata.update(new_dict)
     
-    #make tuples of (urls, site, neighborhood) for emailing
-    newurls = [(new_dict[idx].get("url"), siteinfo[0].split(".")[1], new_dict[idx].get("city"), new_dict[idx].get("address"), new_dict[idx]["price_hist"][sorted(new_dict[idx]["price_hist"], key=lambda x:x in new_dict[idx]["price_hist"].keys(), reverse=True)[0]].get("price_ch_amt"), new_dict[idx].get("price")) for idx in new_dict.keys()]
+    #make tuples of (urls, site, city, address, price change, price) for emailing
+    newurls = [
+        (new_dict[idx].get("url"), 
+         siteinfo[0].split(".")[1], 
+         new_dict[idx].get("city"), 
+         new_dict[idx].get("address"), 
+         new_dict[idx]["price_hist"][sorted(new_dict[idx]["price_hist"], key=lambda x:x in new_dict[idx]["price_hist"].keys(), reverse=True)[0]].get("price_ch_amt"), 
+         new_dict[idx].get("price")) for idx in new_dict.keys()
+    ]
     
     #Extend the newlistings global list
     newlistings.extend(newurls)

@@ -3723,24 +3723,29 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/105-2280th-Ln-Angola-IN-46703/350850970_zpid/",
-    "price": 1150000,
+    "price": 1125000,
     "source": "www.zillow.com",
     "status": "FOR_SALE",
     "img_url": "https://photos.zillowstatic.com/fp/99965f11623fe98bedbed9d96ed1f101-p_e.jpg",
-    "date_pulled": "08-20-2025_09-54-41",
-    "description": "Lakefront living",
+    "date_pulled": "08-27-2025_22-49-40",
+    "description": "Price cut: $25,000 (8/28)",
     "htype": "SINGLE_FAMILY",
     "beds": 3.0,
     "baths": 4.0,
     "lotsqft": "6534.0 sqft",
-    "sqft": 3088,
+    "sqft": "3088",
+    "price_sqft": 364,
     "lat": 41.699238,
     "long": -85.03059,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 1150000,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": "Indiana Flat Fee Realty",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -3751,9 +3756,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 143,
-    "zestimate": 1108400,
-    "price_sqft": 372
+    "daysOnZillow": 151,
+    "zestimate": 1106700
   },
   "442583757": {
     "address": "135 Lane 335 Lake James, Angola, IN 46703",
@@ -6906,24 +6910,29 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/2280-lane-105-lake-james-angola-in/pkzeq8hpjwq1b/",
-    "price": 1150000,
+    "price": 1125000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/5205795524-887091591/2280-lane-105-lake-james-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-20-2025_09-54-56",
+    "date_pulled": "08-27-2025_22-49-48",
     "description": "Welcome to the Ultimate Lake James Experience! Discover the perfect blend of space, comfort, and lakefront living in this beautifully maintained home boasting the most square footage for the money with over 3,000 square feet of finished living space. With 4 generously sized bedrooms and 2.5 baths, there\u2019s room for the whole family\u2014and then some. Ideally situated just a short stroll from the",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 2,
     "lotsqft": null,
-    "sqft": 3088,
+    "sqft": "3088",
+    "price_sqft": 364,
     "lat": 41.6992253,
     "long": -85.0304139,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 1150000,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Indiana Flat Fee Realty"
@@ -6938,8 +6947,7 @@
       },
       "name": "Justin Smallwood"
     },
-    "extras": {},
-    "price_sqft": 372
+    "extras": {}
   },
   "yrjx0gx5fn896": {
     "address": "107 W Felicity St, Angola, IN 46703",

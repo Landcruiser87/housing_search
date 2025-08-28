@@ -24,7 +24,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
     seller_keys = ["advertisers", "offeredBy", "flags", "branding"]
     #Set the outer loop over each card returned. 
     for search_result in resp_json["data"]["home_search"]["properties"]:
-        listing = Propertyinfo()
+        listing              = Propertyinfo()
         listing.id           = search_result.get("listing_id", defaultval)
         if listing.id == None:
             logger.warning("id not found")
@@ -58,7 +58,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.price_hist[dp]["price_ch_amt"] = search_result.get("last_price_change_amount", defaultval)
         listing.price_hist[dp]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
         if isinstance(listing.price, int) & isinstance(listing.price_hist[dp]["price_ch_amt"], int):
-            listing.price_hist[dp]["last_price"]  = listing.price + listing.price_hist[dp]["price_ch_amt"]
+            listing.price_hist[dp]["last_price"] = listing.price + listing.price_hist[dp]["price_ch_amt"]
         #Previous structure
         # listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
         # listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))
