@@ -56,15 +56,6 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
         listing.seller       = search_result["branding"][0].get("name", defaultval)
         listing.sellerinfo   = {k:search_result.get(k, defaultval) for k in seller_keys}
-        #BUG - Add's blank dictionary's
-            #Should probably put in logic to fix 
-            #wether or not there has been a price update change first. 
-            #The problem is do I want it to trigger the price change metrics here?
-            #OR just let the check_ids function handle it later.  
-                #Probably smarter to do it later and remove the direct inputs here. 
-            
-            #Only advantage to the former is the accurate change date/time
-
         ch_da = date_format(search_result.get("last_status_change_date", defaultval))
         ch_amt = search_result.get("last_price_change_amount", defaultval)
         if ch_da:
