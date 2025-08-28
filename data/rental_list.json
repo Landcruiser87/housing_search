@@ -75950,5 +75950,86 @@
       "violence_score": 26.49,
       "property_d_score": 0.17
     }
+  },
+  "deyghgj": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "lincoln-square",
+    "dogs": true,
+    "link": "https://www.apartments.com/2310-w-winnemac-ave-chicago-il/deyghgj/",
+    "address": "2310 W Winnemac Ave, Chicago, IL 60625",
+    "date_pulled": "08-28-2025_15-20-31",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 780.0,
+    "lat": 41.9732602,
+    "long": -87.687153,
+    "L_dist": [
+      "Western",
+      0.49
+    ],
+    "crime_sc": {
+      "drug_score": 3.48,
+      "gun_score": 4.48,
+      "murder_score": 1.39,
+      "perv_score": 1.48,
+      "theft_score": 42.93,
+      "violence_score": 24.49,
+      "property_d_score": 0.14
+    }
+  },
+  "f5ye0fs": {
+    "source": "www.apartments.com",
+    "price": 1700.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/6461-n-newark-ave-chicago-il/f5ye0fs/",
+    "address": "6461 N Newark Ave, Chicago, IL 60631",
+    "date_pulled": "08-28-2025_15-22-22",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1600.0,
+    "lat": 41.9988024,
+    "long": -87.7989675,
+    "L_dist": [
+      "Harlem",
+      1.25
+    ],
+    "crime_sc": {
+      "drug_score": 2.13,
+      "gun_score": 4.95,
+      "murder_score": 1.24,
+      "perv_score": 2.1,
+      "theft_score": 38.43,
+      "violence_score": 26.68,
+      "property_d_score": 0.19
+    }
+  },
+  "191017038": {
+    "source": "www.redfin.com",
+    "price": 2600.0,
+    "neigh": "wicker-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/1300-N-Milwaukee-Ave-60622/unit-3R/home/191017038",
+    "address": "1300 N Milwaukee Ave Unit 3R, Chicago, IL, 60622",
+    "date_pulled": "08-28-2025_15-23-34",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": 41.9052127,
+    "long": -87.6696531,
+    "L_dist": [
+      "Division",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 3.95,
+      "gun_score": 5.29,
+      "murder_score": 1.6,
+      "perv_score": 1.56,
+      "theft_score": 40.88,
+      "violence_score": 25.6,
+      "property_d_score": 0.15
+    }
   }
 }
