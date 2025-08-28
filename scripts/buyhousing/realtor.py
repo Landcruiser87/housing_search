@@ -34,6 +34,8 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.url          = "https://" + source + "/realestateandhomes-detail/" + search_result.get("permalink")
         listing.img_url      = search_result.get("primary_photo", defaultval)
         listing.status       = search_result.get("status", defaultval)
+        if listing.status:
+            listing.status = listing.status.lower()
         listing.source       = source
         listing.city         = search_result["location"]["address"].get("city", defaultval)
         listing.state        = search_result["location"]["address"].get("state_code", defaultval)
@@ -60,7 +62,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.price_hist[dp]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
         if isinstance(listing.price, int) & isinstance(listing.price_hist[dp]["price_ch_amt"], int):
             listing.price_hist[dp]["last_price"] = listing.price + listing.price_hist[dp]["price_ch_amt"]
-            listing.price_hist[dp]["perc_change"] = (listing.price_hist[dp]["price_ch_amt"] / listing.price ) * 100
+            listing.price_hist[dp]["perc_change"] = np.round((listing.price_hist[dp]["price_ch_amt"] / listing.price ) * 100, 2)
         #Previous structure
         # listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
         # listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))

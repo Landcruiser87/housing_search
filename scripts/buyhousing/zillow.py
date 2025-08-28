@@ -31,6 +31,8 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
         listing.url          = listinginfo.get("detailUrl", defaultval)
         listing.img_url      = listinginfo.get("imgSrc", defaultval)
         listing.status       = listinginfo.get("statusType", defaultval)
+        if listing.status:
+            listing.status = listing.status.lower()
         listing.source       = source
         listing.city         = listinginfo.get("addressCity", defaultval)
         listing.state        = listinginfo.get("addressState", defaultval)

@@ -87,6 +87,8 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
+    sale_dt     : str = None
+    sold        : bool = False
     price_hist  : dict = field(default_factory=lambda:{})
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
@@ -119,15 +121,26 @@ def add_data(data:list, siteinfo:tuple):
     jsondata.update(new_dict)
     
     #make tuples of (urls, site, city, address, price change, price) for emailing
-    newurls = [
-        (new_dict[idx].get("url"), 
-         siteinfo[0].split(".")[1], 
-         new_dict[idx].get("city"), 
-         new_dict[idx].get("address"), 
-         new_dict[idx]["price_hist"][sorted(new_dict[idx]["price_hist"], key=lambda x:x in new_dict[idx]["price_hist"].keys(), reverse=True)[0]].get("price_ch_amt"), 
-         new_dict[idx].get("price")) for idx in new_dict.keys()
-    ]
-    
+    newurls = []
+    for idx in new_dict.keys():
+        if len(new_dict[idx]["price_hist"].keys()) > 0:
+            newurls.append(
+                (new_dict[idx].get("url"), 
+                siteinfo[0].split(".")[1], 
+                new_dict[idx].get("city"), 
+                new_dict[idx].get("address"), 
+                new_dict[idx]["price_hist"][sorted(new_dict[idx]["price_hist"], key=lambda x:x in new_dict[idx]["price_hist"].keys(), reverse=True)[0]].get("price_ch_amt"), 
+                new_dict[idx].get("price"))
+            )
+        else:
+            newurls.append(
+                (new_dict[idx].get("url"), 
+                siteinfo[0].split(".")[1], 
+                new_dict[idx].get("city"), 
+                new_dict[idx].get("address"), 
+                None, 
+                new_dict[idx].get("price"))
+            )
     #Extend the newlistings global list
     newlistings.extend(newurls)
     logger.info(f"data added for {siteinfo[0]} in {siteinfo[1]}")
@@ -157,23 +170,26 @@ def check_ids(data:list)->list:
 
     #Look for same ids in the new and old (intersection)
     common_ids = n_ids & j_ids
-    p_chn_ids = set()
+    p_chn_ids, sold_ids = set(), set()
     for ids in common_ids:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
-
-            #BUG WE've got two structure situations here
-            #and two different timestamps between realtor and this routine. 
             pulldate = get_time().strftime("%m-%d-%Y")
             if pulldate not in data[idx].price_hist.keys():
                 data[idx].price_hist[pulldate] = {key:None for key in P_LIST}
             data[idx].price_hist[pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
             data[idx].price_hist[pulldate]["price_c_dat"] = pulldate
             data[idx].price_hist[pulldate]["last_price"] = jsondata[ids]["price"]
-            data[idx].price_hist[pulldate]["perc_change"] = (data[idx].price_hist[pulldate]["price_ch_amt"] / data[idx].price ) * 100
+            data[idx].price_hist[pulldate]["perc_change"] = np.round((data[idx].price_hist[pulldate]["price_ch_amt"] / data[idx].price ) * 100, 2)
             p_chn_ids.add(ids)
-        
+        #Check for property sales
+        elif jsondata[ids].get("status").lower() != "for_sale":
+            data[idx].sold = True
+            data[idx].sale_dt = pulldate
+            data[idx].status = "sold"
+            sold_ids.add(ids)
+            logger.info(f"Home sold {data[idx]} and price changes {sold_ids} ")            
     if newids:
         # Filter the list of properties by id
         newdata = list(filter(lambda listing : listing.id in newids, data))
@@ -182,7 +198,7 @@ def check_ids(data:list)->list:
         #Filter the saved jsondata for price changes
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
 
-    #TODO - 
+    #TODO - Sold alert function
         # Add a routine that can check if the house has sold.  
             # Price, date?
         # I would want to see if the had sold.  
@@ -315,9 +331,9 @@ if __name__ == "__main__":
 #What about using census data to survey area's of older populations.  
 #might be able to do some cool clustering with that. 
 
-for key, vals in jsondata.items():
-    if jsondata[key].get("price_ch_amt") != None:
-        pdate = jsondata[key].get("price_c_dat")
-        if pdate:
-            jsondata[key][pdate] = {}
-            jsondata[key][pdate]["price_ch_amt"] = vals.get("price_ch_amt")
+# for key, vals in jsondata.items():
+#     if jsondata[key].get("price_ch_amt") != None:
+#         pdate = jsondata[key].get("price_c_dat")
+#         if pdate:
+#             jsondata[key][pdate] = {}
+#             jsondata[key][pdate]["price_ch_amt"] = vals.get("price_ch_amt")
