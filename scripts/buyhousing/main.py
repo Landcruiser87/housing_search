@@ -42,6 +42,7 @@ SOURCES = {
 }
 
 SITES = ["homes", "realtor", "redfin", "zillow"] 
+P_LIST = ["price_ch_amt", "last_price", "price_c_dat"]
 
 #Define search parameters
 MAXPRICE = 900_000
@@ -86,7 +87,7 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
-    # price_ch_amt: int = None #last_pri_cha
+    # price_ch_amt: int = None
     # last_price  : int = None
     # price_c_dat : str = None
     price_hist  : dict = field(default_factory=lambda:{})
@@ -167,10 +168,15 @@ def check_ids(data:list)->list:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
         if jsondata[ids].get("price") != data[idx].price:
+
+            #BUG WE've got two structure situations here
+            #and two different timestamps between realtor and this routine. 
+
             pulldate = get_time().strftime("%m-%d-%Y_%H-%M-%S")
-            data[idx]["price_hist"][pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
-            data[idx]["price_hist"][pulldate]["price_c_dat"] = pulldate
-            data[idx]["price_hist"][pulldate]["last_price"] = jsondata[ids]["price"]
+            data[idx].price_hist[pulldate] = {key:None for key in P_LIST}
+            data[idx].price_hist[pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
+            data[idx].price_hist[pulldate]["price_c_dat"] = pulldate
+            data[idx].price_hist[pulldate]["last_price"] = jsondata[ids]["price"]
             p_chn_ids.add(ids)
         
     if newids:
@@ -294,7 +300,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
-            support.save_data(jsondata)
+            # support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
