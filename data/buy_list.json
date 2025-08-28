@@ -19339,12 +19339,12 @@
     "city": "Coldwater",
     "state": "MI",
     "url": "https://www.zillow.com/homedetails/44-Candlewood-Ct-Coldwater-MI-49036/106257196_zpid/",
-    "price": 600900,
+    "price": 549900,
     "source": "www.zillow.com",
     "status": "FOR_SALE",
     "img_url": "https://photos.zillowstatic.com/fp/392179c49ebdf98519b260690af6a4cc-p_e.jpg",
-    "date_pulled": "08-23-2025_11-08-28",
-    "description": "21 hours ago",
+    "date_pulled": "08-27-2025_20-35-58",
+    "description": "Solid oak floors",
     "htype": "SINGLE_FAMILY",
     "beds": 4.0,
     "baths": 4.0,
@@ -19355,9 +19355,13 @@
     "long": -85.0277,
     "zipc": "49036",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": -51000,
+        "last_price": 600900,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -19368,8 +19372,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 0,
-    "zestimate": 528900
+    "daysOnZillow": 5,
+    "zestimate": 529000
   },
   "p5vw3q8ry0tm9": {
     "address": "9710 W State Road 120, Orland, IN 46776",
@@ -19983,14 +19987,14 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/925-N-280-W_Angola_IN_46703_M46233-75873",
-    "price": 450000,
+    "price": 385000,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/ebcc69a55544976db00cd7be14d5fea3l-b1942708002s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-25-2025_17-19-05",
+    "date_pulled": "08-27-2025_20-36-26",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
@@ -20002,9 +20006,13 @@
     "long": 41.655811,
     "zipc": "46703",
     "list_dt": "08-23-2025_18-21-47",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "08-23-2025_18-21-47",
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": -65000,
+        "last_price": 450000,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": "Century 21 Bradley-Angola",
     "sellerinfo": {
       "advertisers": [
@@ -20860,11 +20868,11 @@
     "city": "Marshall",
     "state": "MI",
     "url": "https://www.redfin.com/MI/Marshall/14605-19-Mile-Rd-49068/home/96408441",
-    "price": 400900,
+    "price": 499900,
     "source": "www.redfin.com",
     "status": "For_Sale",
     "img_url": null,
-    "date_pulled": "08-27-2025_17-32-16",
+    "date_pulled": "08-27-2025_20-36-47",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 7.0,
@@ -20876,10 +20884,13 @@
     "long": -84.9272246,
     "zipc": "49068",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "price_hist": {},
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": 99000,
+        "last_price": 400900,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -21139,12 +21150,12 @@
     "city": "Fremont",
     "state": "IN",
     "url": "https://www.homes.com/property/815-cherry-hill-ct-fremont-in/fh42nq099y5n9/",
-    "price": 600900,
+    "price": 649900,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/2125977644-703678202/815-cherry-hill-ct-fremont-in-primaryphoto.jpg",
-    "date_pulled": "08-27-2025_17-34-57",
-    "description": "A property like this doesn't show up often! This 4BR/3.5BA, 3,596 sq ft custom-built home offers privacy and convenience just minutes from I-69, the Toll Rd, schools, and shopping, all on 2.75 wooded acres! Features include a 3.5-car attached garage, 40x52 detached garage, and in-ground pool. Inside, enjoy a two-story foyer with Brazilian cherry floors, elegant staircase, and formal dining room.",
+    "date_pulled": "08-27-2025_20-37-38",
+    "description": "A property like this doesn't show up often! This 4BR/3.5BA, 3,596 sq ft custom-built home offers privacy and convenience just minutes from I-69, the Toll Rd, schools, and shopping, all on 2.68 wooded acres! Features include a 3.5-car attached garage, 40x52 detached garage, and in-ground pool. Inside, enjoy a two-story foyer with Brazilian cherry floors, elegant staircase, and formal dining room.",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 4,
@@ -21155,10 +21166,13 @@
     "long": -84.9466502,
     "zipc": "46737",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
-    "price_hist": {},
+    "price_hist": {
+      "08-27-2025": {
+        "price_ch_amt": 49000,
+        "last_price": 600900,
+        "price_c_dat": "08-27-2025"
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Keller Williams Realty Group"
