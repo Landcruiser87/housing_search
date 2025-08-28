@@ -4934,27 +4934,35 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/316-S-West-St_Angola_IN_46703_M33591-09361",
-    "price": 304800,
+    "price": 299800,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/6ddda15f64081ea7b4a5d3f6c6faa300l-m14035663s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-20-2025_09-54-48",
+    "date_pulled": "08-28-2025_11-52-07",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.0,
     "lotsqft": null,
     "sqft": 1537,
+    "price_sqft": 195,
     "lat": 41.632309,
     "long": 41.632309,
     "zipc": "46703",
     "list_dt": "08-14-2025_20-04-46",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "08-14-2025_20-04-46",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-28-2025": {
+        "price_ch_amt": -5000,
+        "last_price": 304800,
+        "price_c_dat": "08-28-2025",
+        "perc_change": -1.67
+      }
+    },
     "seller": "Mentor Listing Realty Inc",
     "sellerinfo": {
       "advertisers": [
@@ -4989,7 +4997,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": true,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": true,
         "is_pending": null,
@@ -5006,8 +5014,7 @@
       ]
     },
     "extras": {},
-    "year_built": 2025,
-    "price_sqft": 198
+    "year_built": 2025
   },
   "2983260278": {
     "address": "404 N Elizabeth St, Angola, IN 46703",
@@ -6374,24 +6381,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/316-s-west-st-angola-in/1vmnbvwgbksez/",
-    "price": 304800,
+    "price": 299800,
     "source": "www.homes.com",
-    "status": "Offer",
+    "status": "for_sale",
     "img_url": "https://images.homes.com/listings/111/2208224544-274454202/316-s-west-st-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-20-2025_09-54-56",
+    "date_pulled": "08-28-2025_11-51-52",
     "description": "Brand new 4 bed 2 full bath open concept home near trine university.  Endless opportunities for you to live in or create an investment property near a college.     New lg appliances, dining room connected to kitchen and bar style eating area which is open to entire family room/foyer, trendy and modern colors, sleek/stylish white painted trim, painted white and gray Amish custom built cabinets in",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 2,
     "lotsqft": null,
-    "sqft": 1537,
+    "sqft": "1537",
+    "price_sqft": 195,
     "lat": 41.6328216,
     "long": -85.0016379,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-28-2025": {
+        "price_ch_amt": -5000,
+        "last_price": 304800,
+        "price_c_dat": "08-28-2025",
+        "perc_change": -1.67
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Mentor Listing Realty, Inc."
@@ -6406,8 +6421,7 @@
       },
       "name": "Brian Waters"
     },
-    "extras": {},
-    "price_sqft": 198
+    "extras": {}
   },
   "rqf9czj6ezlc8": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -7039,28 +7053,35 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/316-S-West-St-46703/home/140436043",
-    "price": 304800,
+    "price": 299800,
     "source": "www.redfin.com",
     "status": "for_sale",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-08",
+    "date_pulled": "08-28-2025_11-51-37",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
-    "sqft": 1537,
+    "sqft": "1537",
+    "price_sqft": 195,
     "lat": 41.632286,
     "long": -85.0017821,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-28-2025": {
+        "price_ch_amt": -5000,
+        "last_price": 304800,
+        "price_c_dat": "08-28-2025",
+        "perc_change": -1.67
+      }
+    },
     "seller": {},
     "sellerinfo": {},
-    "extras": {},
-    "price_sqft": 198
+    "extras": {}
   },
   "140532737": {
     "address": "513 S Wayne St, Angola, IN 46703",
@@ -21161,5 +21182,183 @@
       "name": "Scott Pressler"
     },
     "extras": {}
+  },
+  "wxwq0vjfe85c8": {
+    "address": "511 E Southern Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/511-e-southern-rd-coldwater-mi/wxwq0vjfe85c8/",
+    "price": 654999,
+    "source": "www.homes.com",
+    "status": "for_sale",
+    "img_url": "https://images.homes.com/listings/111/4907488644-537450302/511-e-southern-rd-coldwater-mi-primaryphoto.jpg",
+    "date_pulled": "08-28-2025_11-52-45",
+    "description": "511 E. Southern Rd. Coldwater, MI RED OAK HAND-FINISHED TRIM, AMISH BUILT CABINETS, CENTER ISLAND, WALKOUT BASEMENTRED, A WOOD BURNING FIREPLACE, ROLLING HILLS &WOODS. Single Family Residence Built in 2005 12.08 Acres Lot (zoned agriculture) Where can you get a 3300sqft home sitting on just over 12 acres, and 2 Pole Barns. ALSO first option to buy an 81 ft. Lake front lot on Huyck Lake!!! Just",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "3338",
+    "price_sqft": 196,
+    "lat": null,
+    "long": null,
+    "zipc": "49036",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "HomeCoin.com"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/TUpyYOw8wvfteE8xfwaznEdVByyvAsg9CmmwhY3W7sc/105/image.jpg?t=p&p=1",
+      "telephone": "(888) 400-2513",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "HomeCoin.com"
+      },
+      "name": "Jonathan Minerick"
+    },
+    "extras": {}
+  },
+  "2985813530": {
+    "address": "511 E Southern Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/511-E-Southern-Rd_Coldwater_MI_49036_M40830-74154",
+    "price": 654999,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/aaf0c1841e1794f03a388eac8912bd10l-m1387736067s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-28-2025_11-52-55",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 3338,
+    "price_sqft": 196,
+    "lat": 41.782564,
+    "long": 41.782564,
+    "zipc": "49036",
+    "list_dt": "08-28-2025_14-18-44",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "HOMECOIN.COM",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "1657853",
+          "name": "Jonathan Minerick",
+          "builder": null,
+          "email": "info@homecoin.com",
+          "office": {
+            "name": "HOMECOIN.COM",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "8884002513",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "HOMECOIN.COM",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2005
+  },
+  "99868895": {
+    "address": "511 E Southern Rd, Coldwater Township, MI 49036",
+    "city": "Coldwater Township",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/511-E-Southern-Rd-49036/home/99868895",
+    "price": 654999,
+    "source": "www.redfin.com",
+    "status": "for_sale",
+    "img_url": null,
+    "date_pulled": "08-28-2025_11-53-05",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3338",
+    "price_sqft": 196,
+    "lat": 41.782604,
+    "long": -84.978797,
+    "zipc": "49036",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "106251368": {
+    "address": "511 E Southern Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/511-E-Southern-Rd-Coldwater-MI-49036/106251368_zpid/",
+    "price": 654999,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/72d28dc1ee1b5eace29778573f55cc54-p_e.jpg",
+    "date_pulled": "08-28-2025_11-53-16",
+    "description": "2 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "12.5 acres",
+    "sqft": "3338",
+    "price_sqft": 196,
+    "lat": 41.782223,
+    "long": -84.97922,
+    "zipc": "49036",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "HomeCoin.com",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "HomeCoin.com",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 619200
   }
 }

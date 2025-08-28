@@ -174,6 +174,7 @@ def check_ids(data:list)->list:
     for ids in common_ids:
         idx = [data[x].id == ids for x in range(len(data))]
         idx = idx.index(True)
+        #Check for price changes between storage json and data pull
         if jsondata[ids].get("price") != data[idx].price:
             pulldate = get_time().strftime("%m-%d-%Y")
             if pulldate not in data[idx].price_hist.keys():
@@ -183,13 +184,20 @@ def check_ids(data:list)->list:
             data[idx].price_hist[pulldate]["last_price"] = jsondata[ids]["price"]
             data[idx].price_hist[pulldate]["perc_change"] = np.round((data[idx].price_hist[pulldate]["price_ch_amt"] / data[idx].price ) * 100, 2)
             p_chn_ids.add(ids)
-        #Check for property sales
-        elif jsondata[ids].get("status").lower() != "for_sale":
+
+        #TODO - Sold alert function
+            # Add a routine that can check if the house has sold.  
+
+        #Check for if any property sold.
+            #Right now it just logs if a home is sold.  Still not sure 
+            #how to feed that data into the email reporting
+        elif jsondata[ids].get("status").lower() not in ["for_sale", "offer"]:
             data[idx].sold = True
             data[idx].sale_dt = pulldate
             data[idx].status = "sold"
             sold_ids.add(ids)
-            logger.info(f"Home sold {data[idx]} and price changes {sold_ids} ")            
+            logger.warning(f"Home sold {data[idx].id} and price changes {sold_ids} ")            
+    
     if newids:
         # Filter the list of properties by id
         newdata = list(filter(lambda listing : listing.id in newids, data))
@@ -197,11 +205,6 @@ def check_ids(data:list)->list:
     if p_chn_ids:
         #Filter the saved jsondata for price changes
         pricechanges = list(filter(lambda listing : listing.id in p_chn_ids, data))
-
-    #TODO - Sold alert function
-        # Add a routine that can check if the house has sold.  
-            # Price, date?
-        # I would want to see if the had sold.  
 
     newcheck = isinstance(newdata, list)
     pricecheck = isinstance(pricechanges, list)
@@ -311,7 +314,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
-            # support.save_data(jsondata)
+            support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")

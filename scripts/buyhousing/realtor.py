@@ -56,13 +56,28 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.list_dt      = date_format(search_result.get("list_date", defaultval), True)
         listing.seller       = search_result["branding"][0].get("name", defaultval)
         listing.sellerinfo   = {k:search_result.get(k, defaultval) for k in seller_keys}
-        dp = listing.date_pulled.split("_")[0]
-        listing.price_hist[dp] = {k:None for k in P_LIST}
-        listing.price_hist[dp]["price_ch_amt"] = search_result.get("last_price_change_amount", defaultval)
-        listing.price_hist[dp]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
-        if isinstance(listing.price, int) & isinstance(listing.price_hist[dp]["price_ch_amt"], int):
-            listing.price_hist[dp]["last_price"] = listing.price + listing.price_hist[dp]["price_ch_amt"]
-            listing.price_hist[dp]["perc_change"] = np.round((listing.price_hist[dp]["price_ch_amt"] / listing.price ) * 100, 2)
+        #BUG - Add's blank dictionary's
+            #Should probably put in logic to fix 
+            #wether or not there has been a price update change first. 
+            #The problem is do I want it to trigger the price change metrics here?
+            #OR just let the check_ids function handle it later.  
+                #Probably smarter to do it later and remove the direct inputs here. 
+            
+            #Only advantage to the former is the accurate change date/time
+
+        ch_da = date_format(search_result.get("last_status_change_date", defaultval))
+        ch_amt = search_result.get("last_price_change_amount", defaultval)
+        if ch_da:
+            ch_da = ch_da.split("_")[0]
+            if (ch_da not in listing.price_hist.keys()) & (isinstance(ch_amt, int)):
+                listing.price_hist[ch_da] = {k:None for k in P_LIST}
+                listing.price_hist[ch_da]["price_ch_amt"] = search_result.get("last_price_change_amount", defaultval)
+                listing.price_hist[ch_da]["price_c_dat"] = date_format(search_result.get("last_status_change_date", defaultval))
+                if isinstance(listing.price, int) & isinstance(listing.price_hist[ch_da]["price_ch_amt"], int):
+                    listing.price_hist[ch_da]["last_price"] = listing.price - listing.price_hist[ch_da]["price_ch_amt"]
+                    listing.price_hist[ch_da]["perc_change"] = np.round((listing.price_hist[ch_da]["price_ch_amt"] / listing.price_hist[ch_da]["last_price"]) * 100, 2)
+
+    
         #Previous structure
         # listing.price_ch_amt = search_result.get("last_price_change_amount", defaultval)
         # listing.price_c_dat  = date_format(search_result.get("last_status_change_date", defaultval))
