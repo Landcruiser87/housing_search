@@ -87,23 +87,10 @@ class Propertyinfo():
     long        : float = None
     zipc        : int = None
     list_dt     : str = None
-    # price_ch_amt: int = None
-    # last_price  : int = None
-    # price_c_dat : str = None
     price_hist  : dict = field(default_factory=lambda:{})
     seller      : dict = field(default_factory=lambda:{})
     sellerinfo  : dict = field(default_factory=lambda:{})    
     extras      : dict = field(default_factory=lambda:{})
-
-    #TODO - Update price history
-        #As of now it only tracks one price change.  Index will be the date
-        #and make it the dictionary key.  
-        # Track
-            #Price change
-            #Change amount
-            #Change %
-
-        #amount changed, and % change.
 
     #TODO - Save function 
         #Need a way to save and compare listings similar to how Zillow does. 
@@ -184,6 +171,7 @@ def check_ids(data:list)->list:
             data[idx].price_hist[pulldate]["price_ch_amt"] = data[idx].price - jsondata[ids]["price"]
             data[idx].price_hist[pulldate]["price_c_dat"] = pulldate
             data[idx].price_hist[pulldate]["last_price"] = jsondata[ids]["price"]
+            data[idx].price_hist[pulldate]["perc_change"] = (data[idx].price_hist[pulldate]["price_ch_amt"] / data[idx].price ) * 100
             p_chn_ids.add(ids)
         
     if newids:
@@ -307,7 +295,7 @@ def main():
         # If new listings are found, save the data to the json file, 
         # format the list of dataclassses to a url, send gmail alerting of new properties
         if newlistings:
-            support.save_data(jsondata)
+            # support.save_data(jsondata)
             links_html = support.urlformat(newlistings)
             support.send_housing_email(links_html)
             logger.info(f"{len(newlistings)} new listings found.  Email sent")
@@ -326,3 +314,10 @@ if __name__ == "__main__":
 #IDEA
 #What about using census data to survey area's of older populations.  
 #might be able to do some cool clustering with that. 
+
+for key, vals in jsondata.items():
+    if jsondata[key].get("price_ch_amt") != None:
+        pdate = jsondata[key].get("price_c_dat")
+        if pdate:
+            jsondata[key][pdate] = {}
+            jsondata[key][pdate]["price_ch_amt"] = vals.get("price_ch_amt")

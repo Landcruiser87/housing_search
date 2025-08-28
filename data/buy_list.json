@@ -3739,13 +3739,7 @@
     "long": -85.03059,
     "zipc": "46703",
     "list_dt": null,
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": -25000,
-        "last_price": 1150000,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": "Indiana Flat Fee Realty",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -6926,13 +6920,7 @@
     "long": -85.0304139,
     "zipc": "46703",
     "list_dt": null,
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": -25000,
-        "last_price": 1150000,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": {
       "@type": "Organization",
       "name": "Indiana Flat Fee Realty"
@@ -19363,13 +19351,7 @@
     "long": -85.0277,
     "zipc": "49036",
     "list_dt": null,
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": -51000,
-        "last_price": 600900,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -20014,13 +19996,7 @@
     "long": 41.655811,
     "zipc": "46703",
     "list_dt": "08-23-2025_18-21-47",
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": -65000,
-        "last_price": 450000,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": "Century 21 Bradley-Angola",
     "sellerinfo": {
       "advertisers": [
@@ -20892,13 +20868,7 @@
     "long": -84.9272246,
     "zipc": "49068",
     "list_dt": null,
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": 99000,
-        "last_price": 400900,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -21174,13 +21144,7 @@
     "long": -84.9466502,
     "zipc": "46737",
     "list_dt": null,
-    "price_hist": {
-      "08-27-2025": {
-        "price_ch_amt": 49000,
-        "last_price": 600900,
-        "price_c_dat": "08-27-2025"
-      }
-    },
+    "price_hist": {},
     "seller": {
       "@type": "Organization",
       "name": "Keller Williams Realty Group"
