@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="mMrk4EEgQ4HNwiq-Zprm" name="Page-1">
-        <mxGraphModel dx="811" dy="2016" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1381" dy="1879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,25 +8,16 @@
                     <mxGeometry x="100" y="-350" width="850" height="490" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="Timeline scanner.&amp;nbsp; Barh that tracks time points by day, week, month" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="70" width="550" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="10" width="170" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="10" width="165" height="50" as="geometry"/>
+                    <mxGeometry x="170" y="60" width="550" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="-310" width="550" height="310" as="geometry"/>
-                </mxCell>
-                <mxCell id="8" value="Pull Census / BLS Data" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="530" y="10" width="190" height="50" as="geometry"/>
+                    <mxGeometry x="170" y="-310" width="550" height="360" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="Option select goes here for selecting various metrics.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Available Fields&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;price&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;sqft&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&amp;nbsp;beds&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;zip&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;price change&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;Census/BLS Fields&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="725" y="-310" width="165" height="370" as="geometry"/>
+                    <mxGeometry x="725" y="-310" width="165" height="360" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="select day / week/ month / year" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="725" y="70" width="165" height="40" as="geometry"/>
+                <mxCell id="10" value="option select, &lt;br&gt;select day / week/ month / year" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="725" y="60" width="165" height="50" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

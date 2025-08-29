@@ -76031,5 +76031,226 @@
       "violence_score": 25.6,
       "property_d_score": 0.15
     }
+  },
+  "j2fqsy58j0bep": {
+    "source": "www.homes.com",
+    "price": 2150.0,
+    "neigh": "roscoe-village",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2440-n-saint-louis-ave-chicago-il/j2fqsy58j0bep/",
+    "address": "2440 N Saint Louis Ave Chicago, IL 60647",
+    "date_pulled": "08-29-2025_15-04-12",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "187654408": {
+    "source": "www.redfin.com",
+    "price": 1600.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.redfin.com/IL/Chicago/3906-N-Linder-Ave-60641/home/187654408",
+    "address": "3906 N Linder Ave, Chicago, IL, 60641",
+    "date_pulled": "08-29-2025_15-06-49",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 950.0,
+    "lat": 41.9516225,
+    "long": -87.7646816,
+    "L_dist": [
+      "Montrose",
+      1.28
+    ],
+    "crime_sc": {
+      "drug_score": 5.52,
+      "gun_score": 5.89,
+      "murder_score": 1.93,
+      "perv_score": 1.92,
+      "theft_score": 36.54,
+      "violence_score": 27.5,
+      "property_d_score": 0.18
+    }
+  },
+  "16e7zz5": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "portage-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/6430-w-berteau-ave-chicago-il/16e7zz5/",
+    "address": "6430 W Berteau Ave, Chicago, IL 60634",
+    "date_pulled": "08-29-2025_15-07-05",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1420.0,
+    "lat": 41.9572773,
+    "long": -87.7877943,
+    "L_dist": [
+      "Jefferson Park",
+      1.66
+    ],
+    "crime_sc": {
+      "drug_score": 6.61,
+      "gun_score": 6.36,
+      "murder_score": 2.15,
+      "perv_score": 2.12,
+      "theft_score": 33.66,
+      "violence_score": 28.75,
+      "property_d_score": 0.2
+    }
+  },
+  "r9j4hv1": {
+    "source": "www.apartments.com",
+    "price": 1900.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4249-w-potomac-ave-chicago-il/r9j4hv1/",
+    "address": "4249 W Potomac Ave, Chicago, IL 60651",
+    "date_pulled": "08-29-2025_15-08-27",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1800.0,
+    "lat": 41.9041245,
+    "long": -87.73322,
+    "L_dist": [
+      "Cicero",
+      1.35
+    ],
+    "crime_sc": {
+      "drug_score": 4.16,
+      "gun_score": 5.43,
+      "murder_score": 1.72,
+      "perv_score": 1.75,
+      "theft_score": 39.69,
+      "violence_score": 26.3,
+      "property_d_score": 0.17
+    }
+  },
+  "96dgzs5": {
+    "source": "www.apartments.com",
+    "price": 1250.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/2632-w-23rd-pl-chicago-il/96dgzs5/",
+    "address": "2632 W 23rd Pl, Chicago, IL 60608",
+    "date_pulled": "08-29-2025_15-08-27",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 700.0,
+    "lat": 41.8494571,
+    "long": -87.6917911,
+    "L_dist": [
+      "California",
+      0.36
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 6.57,
+      "murder_score": 1.94,
+      "perv_score": 1.59,
+      "theft_score": 38.0,
+      "violence_score": 27.43,
+      "property_d_score": 0.16
+    }
+  },
+  "pt6ej3v": {
+    "source": "www.apartments.com",
+    "price": 2400.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/4817-w-jackson-blvd-chicago-il/pt6ej3v/",
+    "address": "4817 W Jackson Blvd, Chicago, IL 60644",
+    "date_pulled": "08-29-2025_15-08-27",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1700.0,
+    "lat": 41.8765477,
+    "long": -87.7458417,
+    "L_dist": [
+      "Cicero",
+      0.35
+    ],
+    "crime_sc": {
+      "drug_score": 4.46,
+      "gun_score": 6.19,
+      "murder_score": 1.83,
+      "perv_score": 1.87,
+      "theft_score": 37.38,
+      "violence_score": 27.51,
+      "property_d_score": 0.18
+    }
+  },
+  "j2zqvl6": {
+    "source": "www.apartments.com",
+    "price": 2350.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/926-e-43rd-st-chicago-il/j2zqvl6/",
+    "address": "926 E 43rd St, Chicago, IL 60653",
+    "date_pulled": "08-29-2025_15-08-27",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 41.816937,
+    "long": -87.6033091,
+    "L_dist": [
+      "43rd",
+      0.81
+    ],
+    "crime_sc": {
+      "drug_score": 2.0,
+      "gun_score": 6.97,
+      "murder_score": 1.98,
+      "perv_score": 1.38,
+      "theft_score": 38.45,
+      "violence_score": 28.26,
+      "property_d_score": 0.15
+    }
+  },
+  "2107278129": {
+    "source": "www.zillow.com",
+    "price": 1875.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/Chicago-IL-60625/2107278129_zpid/",
+    "address": "(undisclosed Address), Chicago, IL 60625",
+    "date_pulled": "08-29-2025_15-11-17",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 800.0,
+    "lat": null,
+    "long": null,
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "70458245": {
+    "source": "www.zillow.com",
+    "price": 1800.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4604-N-Monticello-Ave-APT-3E-Chicago-IL-60625/70458245_zpid/",
+    "address": "4604 N Monticello Ave APT 3E, Chicago, IL 60625",
+    "date_pulled": "08-29-2025_15-11-17",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.964996,
+    "long": -87.71973,
+    "L_dist": [
+      "Kimball",
+      0.4
+    ],
+    "crime_sc": {
+      "drug_score": 3.85,
+      "gun_score": 4.6,
+      "murder_score": 1.45,
+      "perv_score": 1.65,
+      "theft_score": 42.15,
+      "violence_score": 24.72,
+      "property_d_score": 0.14
+    }
   }
 }

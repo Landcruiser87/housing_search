@@ -377,7 +377,6 @@ def redraw_main_table(temp_list: list) -> Table:
 
     return main_table
 
-
 ################################# Rich Spinners ####################################
 #FUNCTION sleep progbar
 def sleepspinner():
@@ -467,7 +466,7 @@ class CustomEncoder(json.JSONEncoder):
 
 #FUNCTION Convert Date
 def date_convert(time_big:datetime)->datetime:
-    dateOb = datetime.datetime.strptime(time_big,'%Y-%m-%dT%H:%M:%S.%f')
+    dateOb = datetime.datetime.strptime(time_big,'%m-%d-%Y_%H-%M-%S')
     return dateOb
 
 #FUNCTION Save Data

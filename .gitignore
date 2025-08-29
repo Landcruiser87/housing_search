@@ -134,9 +134,12 @@ dmypy.json
 /.pytest_cache
 *.log
 *.xlsx
+*.zip
+*.shp
 # *.json
 .Rhistory
 .DS_Store
+/data/shapefiles
 
 /.vscode
 /.housing_venv
