@@ -3318,24 +3318,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/710-Bluffview-Dr-Angola-IN-46703/85724119_zpid/",
-    "price": 314900,
+    "price": 299900,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/694185ae7adb49fe07b80f2e66ab2a50-p_e.jpg",
-    "date_pulled": "08-20-2025_09-54-41",
-    "description": "Privacy fence",
+    "date_pulled": "08-29-2025_11-40-25",
+    "description": "Price cut: $15,000 (8/29)",
     "htype": "SINGLE_FAMILY",
     "beds": 3.0,
     "baths": 4.0,
     "lotsqft": "0.37 acres",
-    "sqft": 2352,
+    "sqft": "2352",
+    "price_sqft": 127,
     "lat": 41.624786,
     "long": -84.98862,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-29-2025": {
+        "price_ch_amt": -15000,
+        "last_price": 314900,
+        "price_c_dat": "08-29-2025",
+        "perc_change": -5.0
+      }
+    },
     "seller": "F.C. Tucker Fort Wayne",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -3346,9 +3354,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 4,
-    "zestimate": 305400,
-    "price_sqft": 133
+    "daysOnZillow": 13,
+    "zestimate": 305700
   },
   "2089945831": {
     "address": "60 Lane 101d Jimmerson Lk, Angola, IN 46703",
@@ -4426,27 +4433,41 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/710-Bluffview-Dr_Angola_IN_46703_M48610-20788",
-    "price": 314900,
+    "price": 299900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/3cb51418b774802a8bc329fa0d974abel-m118646247s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-20-2025_09-54-48",
+    "date_pulled": "08-29-2025_11-40-38",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.5,
     "lotsqft": null,
     "sqft": 2352,
+    "price_sqft": 127,
     "lat": 41.624789,
     "long": 41.624789,
     "zipc": "46703",
     "list_dt": "08-15-2025_20-15-06",
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": "08-15-2025_20-15-06",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-15-2025": {
+        "price_ch_amt": -15000,
+        "last_price": 314900,
+        "price_c_dat": "08-15-2025_20-15-06",
+        "perc_change": -4.76
+      },
+      "08-29-2025": {
+        "price_ch_amt": -15000,
+        "last_price": 314900,
+        "price_c_dat": "08-29-2025",
+        "perc_change": -5.0
+      }
+    },
     "seller": "F.C. TUcker Fort Wayne",
     "sellerinfo": {
       "advertisers": [
@@ -4473,7 +4494,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": true,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -4490,8 +4511,7 @@
       ]
     },
     "extras": {},
-    "year_built": 1981,
-    "price_sqft": 133
+    "year_built": 1981
   },
   "2985428697": {
     "address": "220 Lane 101FA Jimmerson Lk, Angola, IN 46703",
@@ -7052,28 +7072,35 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/710-Bluffview-Dr-46703/home/140556192",
-    "price": 314900,
+    "price": 299900,
     "source": "www.redfin.com",
-    "status": "for_sale",
+    "status": "offer",
     "img_url": null,
-    "date_pulled": "08-20-2025_09-57-08",
+    "date_pulled": "08-29-2025_11-40-17",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
-    "sqft": 2352,
+    "sqft": "2352",
+    "price_sqft": 127,
     "lat": 41.6248142,
     "long": -84.9886408,
     "zipc": "46703",
     "list_dt": null,
-    "price_ch_amt": null,
-    "last_price": null,
-    "price_c_dat": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "08-29-2025": {
+        "price_ch_amt": -15000,
+        "last_price": 314900,
+        "price_c_dat": "08-29-2025",
+        "perc_change": -5.0
+      }
+    },
     "seller": {},
     "sellerinfo": {},
-    "extras": {},
-    "price_sqft": 133
+    "extras": {}
   },
   "140436043": {
     "address": "316 S West St, Angola, IN 46703",
@@ -21466,5 +21493,590 @@
     },
     "extras": {},
     "year_built": 1995
+  },
+  "140509216": {
+    "address": "35 John Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Fremont/35-John-Ct-46737/home/140509216",
+    "price": 749000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-29-2025_11-40-17",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "2338",
+    "price_sqft": 320,
+    "lat": 41.7473219,
+    "long": -84.845272,
+    "zipc": "46737",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "175258879": {
+    "address": "6540 N Van Guilder Rd, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Fremont/6540-N-Van-Guilder-Rd-46737/home/175258879",
+    "price": 775000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-29-2025_11-40-17",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "4306",
+    "price_sqft": 179,
+    "lat": 41.7383124,
+    "long": -84.9803446,
+    "zipc": "46737",
+    "list_dt": null,
+    "sale_dt": null,
+    "saved": true,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "2985860901": {
+    "address": "171 W Chicago Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/171-W-Chicago-Rd_Coldwater_MI_49036_M38962-59984",
+    "price": 129900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/23c1cbd1853d6bc3270a23fb59a15515l-m3614226787s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-29-2025_11-40-59",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 1.0,
+    "lotsqft": null,
+    "sqft": 2046,
+    "price_sqft": 63,
+    "lat": 41.928038,
+    "long": 41.928038,
+    "zipc": "49036",
+    "list_dt": "08-29-2025_15-53-44",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Midwestern Realty Group",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3630801",
+          "name": "Randy Blonde",
+          "builder": null,
+          "email": "randyblonde22@hotmail.com",
+          "office": {
+            "name": "Midwestern Realty Group",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "5173982803",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Midwestern Realty Group",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1925
+  },
+  "0rn5rp99lq75g": {
+    "address": "102 Greenhurst Ct, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.homes.com/property/102-greenhurst-ct-auburn-in/0rn5rp99lq75g/",
+    "price": 664900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/9051370744-875801302/102-greenhurst-ct-auburn-in-primaryphoto.jpg",
+    "date_pulled": "08-29-2025_11-41-45",
+    "description": "Start Showing Date: 9/2/2025 Welcome to Your Private Oasis!This stunning home is built for relaxation and entertaining. Outdoors, enjoy a sparkling in-ground pool with auto cover, spacious patio, outdoor fireplace, covered deck with heaters, and beautiful landscaping. Inside, you\u2019ll love the floor-to-ceiling stone fireplace, granite countertops, stone backsplash, coffee bar, and a daylight",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": "3655",
+    "price_sqft": 181,
+    "lat": 41.3906891,
+    "long": -85.0490053,
+    "zipc": "46706",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Castle One Realty, Inc."
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "telephone": "(260) 925-5400",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Castle One Realty, Inc."
+      },
+      "name": "Kristin Blevins"
+    },
+    "extras": {}
+  },
+  "85179917": {
+    "address": "102 Greenhurst Ct, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/102-Greenhurst-Ct-Auburn-IN-46706/85179917_zpid/",
+    "price": 664900,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/28bcbe4abbaac0465dab0cfe8a5d4bf4-p_e.jpg",
+    "date_pulled": "08-29-2025_11-42-00",
+    "description": "37 minutes ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 3.0,
+    "baths": 4.0,
+    "lotsqft": "1.31 acres",
+    "sqft": "3655",
+    "price_sqft": 181,
+    "lat": 41.390694,
+    "long": -85.0482,
+    "zipc": "46706",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Castle One Realty, Inc.",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ComingSoon",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Kristin G Blevins",
+      "brokerName": "Castle One Realty, Inc.",
+      "marketingStatusSimplifiedCd": "Coming Soon"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 492800
+  },
+  "2985861517": {
+    "address": "102 Greenhurst Ct, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/102-Greenhurst-Ct_Auburn_IN_46706_M38262-96801",
+    "price": 664900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/34dc265c8e39581a3febce310ddd2cbel-m102865535s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-29-2025_11-42-04",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.5,
+    "lotsqft": null,
+    "sqft": 3655,
+    "price_sqft": 181,
+    "lat": 41.390881,
+    "long": 41.390881,
+    "zipc": "46706",
+    "list_dt": "08-29-2025_16-02-41",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Castle One Realty, Inc.",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2764623",
+          "name": "Kristin Blevins",
+          "builder": null,
+          "email": "blevinsbuilders@mchsi.com",
+          "office": {
+            "name": "Castle One Realty, Inc.",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2604132465",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": true,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Castle One Realty, Inc.",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1994
+  },
+  "120881883": {
+    "address": "102 Greenhurst Ct, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Auburn/102-Greenhurst-Ct-46706/home/120881883",
+    "price": 664900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-29-2025_11-42-16",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": "3655",
+    "price_sqft": 181,
+    "lat": 41.3906958,
+    "long": -85.0481899,
+    "zipc": "46706",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "qh9mp0rybgvyq": {
+    "address": "35 John Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.homes.com/property/35-john-ct-fremont-in/qh9mp0rybgvyq/",
+    "price": 749000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/0387540744-209790302/35-john-ct-fremont-in-primaryphoto.jpg",
+    "date_pulled": "08-29-2025_11-43-19",
+    "description": "Start Showing Date: 9/16/2025...Enjoy 123 feet of pristine lakefront on peaceful Round Lake, with direct access to the all-sport excitement of Clear Lake. For an exterior video of this property copy and paste this link:  This spacious 4-bedroom, 3-bathroom retreat offers the perfect blend of tranquility and recreation. Step into the expansive great room with soaring vaulted ceilings, a cozy gas",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 3,
+    "lotsqft": null,
+    "sqft": "2338",
+    "price_sqft": 320,
+    "lat": 41.7472889,
+    "long": -84.8453084,
+    "zipc": "46737",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Coldwell Banker Real Estate Group"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/iwcd5v0-fElH7qNGd4FovvgyAaY1_xrW3QpZ-lb0fnc/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 833-4698",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Coldwell Banker Real Estate Group"
+      },
+      "name": "Barbara Hendrick"
+    },
+    "extras": {}
+  },
+  "2056sz7qzl3p7": {
+    "address": "6540 N van Guilder Rd, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.homes.com/property/6540-n-van-guilder-rd-fremont-in/2056sz7qzl3p7/",
+    "price": 775000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/9951699644-028780302/6540-n-van-guilder-rd-fremont-in-primaryphoto.jpg",
+    "date_pulled": "08-29-2025_11-43-19",
+    "description": "Start Showing Date: 9/8/2025 Welcome to this exceptional, custom-designed 4-bedroom, 3.5-bathroom home, expertly crafted in 2020. The open-concept floor plan boasts vaulted ceiling and a floor-to-ceiling gas log stone fireplace, creating an atmosphere of elegance. The kitchen is a culinary masterpiece, showcasing custom knotty alder cabinets, granite countertops, and a rustic backsplash.",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": "4306",
+    "price_sqft": 179,
+    "lat": null,
+    "long": null,
+    "zipc": "46737",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Coldwell Banker Real Estate Group"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/tDxEy5Js-hWiNvoUSnj_w_4-agqCXkO3Jr4KZuBW0ME/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 668-1553",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Coldwell Banker Real Estate Group"
+      },
+      "name": "Alice Fitzpatrick-Welch"
+    },
+    "extras": {}
+  },
+  "2985854617": {
+    "address": "35 John Ct, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/35-John-Ct_Fremont_IN_46737_M40422-13500",
+    "price": 749000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/cf2dbdbee798ff26d4fcd768e7232ed6l-m3270653431s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-29-2025_11-43-36",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.0,
+    "lotsqft": null,
+    "sqft": 2338,
+    "price_sqft": 320,
+    "lat": 41.747311,
+    "long": 41.747311,
+    "zipc": "46737",
+    "list_dt": "08-29-2025_13-19-29",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Coldwell Banker Real Estate Group - Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "109421",
+          "name": "Barbara Hendrick",
+          "builder": null,
+          "email": "barbara.hendrick@gmail.com",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2608334698",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2608336334",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2608334698",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": true,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1985
+  },
+  "2985845048": {
+    "address": "6540 N Van Guilder Rd, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/6540-N-Van-Guilder-Rd_Fremont_IN_46737_M94720-01111",
+    "price": 775000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/1e00a923ccf1125e66ba1424b84f9a18l-m2671052690s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-29-2025_11-43-36",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 4306,
+    "price_sqft": 179,
+    "lat": 41.738601,
+    "long": 41.738601,
+    "zipc": "46737",
+    "list_dt": "08-29-2025_02-09-07",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Coldwell Banker Real Estate Group - Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "169323",
+          "name": "Alice Fitzpatrick-Welch",
+          "builder": null,
+          "email": "alice@ateam.email",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2606681553",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2606871007",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2603163202",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": true,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2020
+  },
+  "336819481": {
+    "address": "6540 N Van Guilder Rd, Fremont, IN 46737",
+    "city": "Fremont",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/6540-N-Van-Guilder-Rd-Fremont-IN-46737/336819481_zpid/",
+    "price": 775000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/17e3b1c540c64c9dd37dab5b6df4506d-p_e.jpg",
+    "date_pulled": "08-29-2025_11-43-48",
+    "description": "14 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "3.39 acres",
+    "sqft": "4306",
+    "price_sqft": 179,
+    "lat": 41.738293,
+    "long": -84.98034,
+    "zipc": "46737",
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Coldwell Banker Real Estate Group",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ComingSoon",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Alice Fitzpatrick-Welch",
+      "brokerName": "Coldwell Banker Real Estate Group",
+      "marketingStatusSimplifiedCd": "Coming Soon"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 834300
   }
 }
