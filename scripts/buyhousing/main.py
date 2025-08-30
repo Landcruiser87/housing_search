@@ -200,12 +200,15 @@ def check_ids(data:list)->list:
         #Check for if any property sold.
             #Right now it just logs if a home is sold.  Still not sure 
             #how to feed that data into the email reporting
+            # This is only running on the common id's.  
+            # Perhaps we want to check every id?  Which... would be alot of extra function calls
+
         if jsondata[ids].get("status").lower() not in ["for_sale", "offer"]:
             data[idx].sold = True
             data[idx].sale_dt = pulldate
-            data[idx].status = "sold"
+            data[idx].status = jsondata[ids].get("status").lower()
             sold_ids.add(ids)
-            logger.warning(f"Home sold {data[idx].id} and price changes {sold_ids} ")            
+            logger.warning(f"Home status changed {data[idx].id} to {data[idx].status} ")            
     
     if newids:
         # Filter the list of properties by id
