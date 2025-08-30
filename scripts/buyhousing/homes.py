@@ -28,6 +28,7 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
             k1 = "mainEntity"
             k2 = "itemListElement"
             if "@graph" not in listinginfo.keys():
+                logger.warning("no graph in keys")
                 continue
             listinginfo = listinginfo["@graph"][0]
             numlistings = listinginfo[k1]["numberOfItems"]
@@ -54,7 +55,7 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
                 listing.price        = int(listinginfo[k1][k2][idx]["offers"].get("price", defaultval))
                 if (listing.price !=None) & (listing.sqft != None):
-                    listing.price_sqft   = listing.price // int(listing.sqft)
+                    listing.price_sqft = listing.price // int(listing.sqft)
                 listing.description  = listinginfo[k1][k2][idx].get("description", defaultval)
                 listing.date_pulled  = get_time().strftime("%m-%d-%Y_%H-%M-%S")
                 listing.seller       = listinginfo[k1][k2][idx]["offers"].get("seller", defaultval)
@@ -94,7 +95,6 @@ def area_search(neigh:Union[str, int], source:str, Propertyinfo, srch_par)->list
             CITY = "-".join(neigh.lower().split(" "))
         url = f"https://www.homes.com/{CITY}-{STATE}/{MINBEDS}-{5}-bedroom/?property_type=1,2,32,8&bath-min={MINBATHS}&bath-max=5&price-max{MAXPRICE}"
             
-    
     #TODO - Update this for zip search
     #Searchby ZipCode
     elif isinstance(neigh, int):

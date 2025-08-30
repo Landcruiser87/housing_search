@@ -160,7 +160,6 @@ def check_ids(data:list)->list:
         data (list): List of only new Propertyinfo objects
     """
 
-
     j_ids = set(jsondata.keys())
     n_ids = set([data[x].id for x in range(len(data))])
     
@@ -204,11 +203,12 @@ def check_ids(data:list)->list:
             # Perhaps we want to check every id?  Which... would be alot of extra function calls
 
         if jsondata[ids].get("status").lower() not in ["for_sale", "offer"]:
-            data[idx].sold = True
-            data[idx].sale_dt = pulldate
+            # data[idx].sold = True
+            # data[idx].sale_dt = pulldate
+            
             data[idx].status = jsondata[ids].get("status").lower()
             sold_ids.add(ids)
-            logger.warning(f"Home status changed {data[idx].id} to {data[idx].status} ")            
+            logger.warning(f"Home {data[idx].id} {data[idx].address} status changed  to {data[idx].status} ")            
     
     if newids:
         # Filter the list of properties by id

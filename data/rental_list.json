@@ -76252,5 +76252,129 @@
       "violence_score": 24.72,
       "property_d_score": 0.14
     }
+  },
+  "b1nkf5v6v1ev0": {
+    "source": "www.homes.com",
+    "price": 2150.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2440-n-saint-louis-ave-chicago-il-unit-1/b1nkf5v6v1ev0/",
+    "address": "2440 N Saint Louis Ave Unit 1 Chicago, IL 60647",
+    "date_pulled": "08-30-2025_15-24-45",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1200.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "5pe3zwn": {
+    "source": "www.apartments.com",
+    "price": 2500.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/7926-s-kostner-ave-chicago-il/5pe3zwn/",
+    "address": "7926 S Kostner Ave, Chicago, IL 60652",
+    "date_pulled": "08-30-2025_15-25-16",
+    "bed": 4.0,
+    "bath": 3.0,
+    "sqft": 1400.0,
+    "lat": 41.7484375,
+    "long": -87.7318881,
+    "L_dist": [
+      "Midway",
+      2.65
+    ],
+    "crime_sc": {
+      "drug_score": 2.13,
+      "gun_score": 8.04,
+      "murder_score": 1.99,
+      "perv_score": 1.95,
+      "theft_score": 32.2,
+      "violence_score": 31.1,
+      "property_d_score": 0.23
+    }
+  },
+  "rdjfkc3": {
+    "source": "www.apartments.com",
+    "price": 2100.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/1800-s-ashland-ave-chicago-il/rdjfkc3/",
+    "address": "1800 S Ashland Ave, Chicago, IL 60608",
+    "date_pulled": "08-30-2025_15-25-16",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 750.0,
+    "lat": 41.8576308,
+    "long": -87.6665516,
+    "L_dist": [
+      "18th",
+      0.13
+    ],
+    "crime_sc": {
+      "drug_score": 3.88,
+      "gun_score": 6.48,
+      "murder_score": 1.86,
+      "perv_score": 1.56,
+      "theft_score": 38.56,
+      "violence_score": 27.09,
+      "property_d_score": 0.15
+    }
+  },
+  "0vrnw42": {
+    "source": "www.apartments.com",
+    "price": 1800.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/4604-n-monticello-ave-chicago-il/0vrnw42/",
+    "address": "4604 N Monticello Ave, Chicago, IL 60625",
+    "date_pulled": "08-30-2025_15-29-13",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9648831,
+    "long": -87.7194809,
+    "L_dist": [
+      "Kimball",
+      0.39
+    ],
+    "crime_sc": {
+      "drug_score": 3.86,
+      "gun_score": 4.6,
+      "murder_score": 1.47,
+      "perv_score": 1.64,
+      "theft_score": 42.14,
+      "violence_score": 24.72,
+      "property_d_score": 0.14
+    }
+  },
+  "456325551": {
+    "source": "www.zillow.com",
+    "price": 1850.0,
+    "neigh": "albany-park",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/4823-N-Sawyer-Ave-Chicago-IL-60625/456325551_zpid/",
+    "address": "4823 N Sawyer Ave, Chicago, IL 60625",
+    "date_pulled": "08-30-2025_15-29-41",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1250.0,
+    "lat": 41.96911,
+    "long": -87.709366,
+    "L_dist": [
+      "Kimball",
+      0.21
+    ],
+    "crime_sc": {
+      "drug_score": 3.63,
+      "gun_score": 4.5,
+      "murder_score": 1.42,
+      "perv_score": 1.61,
+      "theft_score": 42.5,
+      "violence_score": 24.56,
+      "property_d_score": 0.14
+    }
   }
 }

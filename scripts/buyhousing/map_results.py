@@ -49,6 +49,12 @@ def sir_plots_alot():
 
         IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
         MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+        ax_houses.scatter(
+            x=hdf.lat, 
+            y=hdf.long,
+            c='blue',
+            alpha=0.7,
+        )
         ax_houses.set_ylim()
         plt.tight_layout()
         plt.show()
