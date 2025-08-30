@@ -41,10 +41,10 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             listing.source       = source
             listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)
             listing.state        = listinginfo[0]["address"].get("addressRegion", defaultval)
-            listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
+            listing.zipc         = int(listinginfo[0]["address"].get("postalCode", defaultval))
             listing.address      = listinginfo[0].get("name", defaultval)
             listing.htype        = listinginfo[0].get("@type", defaultval)
-            listing.sqft         = "".join([x for x in str(listinginfo[0]["floorSize"].get("value", defaultval)) if x.isnumeric()])
+            listing.sqft         = int("".join([x for x in str(listinginfo[0]["floorSize"].get("value", defaultval)) if x.isnumeric()]))
             listing.price        = int(listinginfo[1]["offers"].get("price", 0))
             if (listing.price !=None) & (listing.sqft != None):
                 listing.price_sqft   = listing.price // int(listing.sqft)

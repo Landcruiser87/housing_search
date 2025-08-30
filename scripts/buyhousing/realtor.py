@@ -39,7 +39,7 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.source       = source
         listing.city         = search_result["location"]["address"].get("city", defaultval)
         listing.state        = search_result["location"]["address"].get("state_code", defaultval)
-        listing.zipc         = search_result["location"]["address"].get("postal_code", defaultval)
+        listing.zipc         = int(search_result["location"]["address"].get("postal_code", defaultval))
         listing.address      = search_result["location"]["address"]["line"] + ", " + listing.city + ", " + listing.state + " " + listing.zipc 
         listing.htype        = search_result["description"].get("type", defaultval)
         listing.baths        = bedbath_format(search_result["description"].get("baths_consolidated", defaultval))
