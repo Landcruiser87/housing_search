@@ -17,18 +17,14 @@ import support
 #Import logger and console from support
 from support import logger, console, log_time, get_time
 
-
-def date_convert():
-    pass
-
 def sir_plots_alot():
     global ax_houses, ax_time, gs, fig
-    # fig = plt.figure(figsize=(16, 10))
-    # gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[5, 1])
-    # plt.subplots_adjust(hspace=0.40)
-    # ax_houses = fig.add_subplot(gs[:2, 0], label="mainplot")
-    # ax_time = fig.add_subplot(gs[3, :2], label="timeline")
-    # ax_options = fig.add_subplot
+    fig = plt.figure(figsize=(14, 10))
+    gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[6, 1])
+    plt.subplots_adjust(wspace=0.1, hspace=0.1)
+    ax_houses = fig.add_subplot(gs[:2, :1], label="mainplot")
+    ax_time = fig.add_subplot(gs[2, :2], label="timeline")
+    ax_radio = fig.add_subplot(gs[:2, 1], label="radio")
     filtjson = {}
     lastweek = datetime.datetime.today() - datetime.timedelta(days=7)
     for key, val in jsondata.items():
@@ -42,7 +38,24 @@ def sir_plots_alot():
         geometry = gpd.points_from_xy(hdf.lat, hdf.long), 
         crs = "EPSG:4326"
     )
-    
+    try:
+        # IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
+        IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
+        # MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
+        MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
+
+        if IN_county_map.crs != MI_county_map.crs:
+            MI_county_map = MI_county_map.to_crs(IN_county_map.crs)
+
+        IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+        MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+        ax_houses.set_ylim()
+        plt.tight_layout()
+        plt.show()
+        plt.close()
+
+    except Exception as e:
+        print(f"{e}")
     #On load, do the following. 
         #1. Load up the last weeks worth of new houses. 
         #2. Include any saved homes and give them a separate icon 
@@ -56,7 +69,6 @@ def sir_plots_alot():
     # ax_ecg.legend(loc='upper left')
 
     #brokebarH plot for the background of the slider. 
-    ax_time = fig.add_subplot(gs[1, :2])
     # ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
     # ax_time.set_ylim(0, 1)
     # ax_time.set_xlim(0, valid_sect.shape[0])
@@ -69,11 +81,8 @@ def sir_plots_alot():
     #     valstep=1
     # )
 
-    #Add axis container for radio buttons
-    ax_radio = plt.axes([0.905, .33, 0.09, 0.32])
-
     #Radio buttons
-    radio = RadioButtons(ax_radio, ('Base Figure', 'Roll Median', 'Add Inter', 'Hide Leg', 'Show R Valid', 'Overlay Main', 'Overlay Inner', 'Frequency-Stem', 'Frequency-Spec', 'Stumpy Search'))
+    radio = RadioButtons(ax_radio, ('price','sqft','price_sqft', 'price_change','days', 'weeks', 'months'))
 
     #Set actions for GUI items. 
     # sect_slider.on_changed(update_plot)
