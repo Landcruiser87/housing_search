@@ -27,6 +27,8 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
             listinginfo = json.loads(search_results.text)
             k1 = "mainEntity"
             k2 = "itemListElement"
+            if "@graph" not in listinginfo.keys():
+                continue
             listinginfo = listinginfo["@graph"][0]
             numlistings = listinginfo[k1]["numberOfItems"]
             for idx in range(numlistings):

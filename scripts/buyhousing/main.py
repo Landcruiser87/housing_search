@@ -24,14 +24,15 @@ from support import logger, log_time, get_time
 # if doesn't have one, its a smaller targeted neighborhood.
 
 AREAS = [
-    ('Angola'   ,'IN'),
-    ('Auburn'   ,'IN'),
-    ('Fremont'  ,'IN'),
-    ('Orland'   ,'IN'),
-    ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!
-    ('Marshall' ,'MI'),
+    # ('Angola'   ,'IN'),
+    # ('Auburn'   ,'IN'),
+    # ('Fremont'  ,'IN'),
+    # ('Orland'   ,'IN'),
+    ('Mongo'    ,'IN'),
+    # ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!
+    # ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-    # ('Portage'  ,'MI'),
+    
 ]
 
 SOURCES = {
