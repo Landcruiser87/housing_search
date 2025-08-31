@@ -27,6 +27,7 @@ AREAS = [
     ('Angola'   ,'IN'),
     ('Auburn'   ,'IN'),
     ('Fremont'  ,'IN'),
+    ('LaGrange' ,'IN')
     ('Orland'   ,'IN'),
     ('Mongo'    ,'IN'),
     ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!

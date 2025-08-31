@@ -21,7 +21,7 @@ def sir_plots_alot():
     global ax_houses, ax_time, gs, fig
     fig = plt.figure(figsize=(14, 10))
     gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[6, 1])
-    plt.subplots_adjust(wspace=0.1, hspace=0.1)
+    plt.subplots_adjust(wspace=0.1, hspace=0.2)
     ax_houses = fig.add_subplot(gs[:2, :1], label="mainplot")
     ax_time = fig.add_subplot(gs[2, :2], label="timeline")
     ax_radio = fig.add_subplot(gs[:2, 1], label="radio")
@@ -39,24 +39,30 @@ def sir_plots_alot():
         crs = "EPSG:4326"
     )
     try:
-        # IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
+        IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
         IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
-        # MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
+        MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
         MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
 
-        if IN_county_map.crs != MI_county_map.crs:
-            MI_county_map = MI_county_map.to_crs(IN_county_map.crs)
+        MI_county_map = MI_county_map.to_crs(epsg=4326)
+        MI_city_map = MI_city_map.to_crs(epsg=4326)
+        IN_county_map = IN_county_map.to_crs(epsg=4326)
+        IN_city_map = IN_city_map.to_crs(epsg=4326)
 
         IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
         MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+        IN_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
+        MI_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
         ax_houses.scatter(
-            x=hdf.lat, 
-            y=hdf.long,
+            x=gdf.long,
+            y=gdf.lat,
             c='blue',
             alpha=0.7,
         )
-        ax_houses.set_ylim()
-        plt.tight_layout()
+        delta = 0.2
+        # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
+        # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
+        # plt.tight_layout()
         plt.show()
         plt.close()
 
