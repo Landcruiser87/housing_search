@@ -19090,5 +19090,777 @@
     },
     "extras": {},
     "daysOnZillow": 0
+  },
+  "29jkj6frxgdpe": {
+    "address": "415 W 060 N, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.homes.com/property/415-w-060-n-lagrange-in/29jkj6frxgdpe/",
+    "price": 529000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/9938149444-987021202/415-w-060-n-lagrange-in-primaryphoto.jpg",
+    "date_pulled": "08-31-2025_11-22-26",
+    "description": "Located on Heron Creek Golf Course, this home is a must-see! Welcome to this stunning 4-bedroom, 4-bath home nestled in a quiet neighborhood. Step inside to discover a spacious layout featuring an open concept with plenty of natural lighting that gives you a great view of the golf course. The main level has a large living room, kitchen, and dining area, all great for relaxing or entertaining. Off",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": 4236,
+    "price_sqft": 124,
+    "lat": null,
+    "long": null,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Right Key Realty"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/7ujgKJ7WfewkZynq9reZ8YAVVNHOoXsWN0AWKSIFPbk/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 350-0879",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Right Key Realty"
+      },
+      "name": "Coreen Miller"
+    },
+    "extras": {}
+  },
+  "6hhdqk7tnlvr0": {
+    "address": "11945 E 380 S Turkey Lake, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.homes.com/property/11945-e-380-s-turkey-lake-lagrange-in/6hhdqk7tnlvr0/",
+    "price": 1499900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1302098244-905906102/11945-e-380-s-turkey-lake-lagrange-in-primaryphoto.jpg",
+    "date_pulled": "08-31-2025_11-22-26",
+    "description": "There's an argument to be made for what is perhaps one of the few best lots on Big Turkey Lake - a 450 Acre all sports lake from sun-up to sundown. Approximately 550 feet of lake/channel water frontage combined at the end of your very own peninsula, leaving plenty of room for lifts and piers while maintaining the amazing view. Manicured lawn paired with extensive landscaping and hardscape",
+    "htype": "SingleFamilyResidence",
+    "beds": 5,
+    "baths": 4,
+    "lotsqft": null,
+    "sqft": 3417,
+    "price_sqft": 438,
+    "lat": null,
+    "long": null,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Mike Thomas Assoc., Inc"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/tyLq2H_5HGakeiqSyT-So6pBc0ffau8nm6_Uas381mo/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 413-9105",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Mike Thomas Assoc., Inc"
+      },
+      "name": "Justin Walborn"
+    },
+    "extras": {}
+  },
+  "z9pfmpypntvym": {
+    "address": "310 N 040 W, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.homes.com/property/310-n-040-w-lagrange-in/z9pfmpypntvym/",
+    "price": 289000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/7304518144-591731102/310-n-040-w-lagrange-in-primaryphoto.jpg",
+    "date_pulled": "08-31-2025_11-22-26",
+    "description": "Motivated Sellers! Newly remodeled home on a full unfinished basement with two car attached garage. Very clean and well maintained, located in beautiful Woodland Hills, just outside town, close to schools and shopping. Almost 3/4 acre lot with private backyard and patio area.",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 1736,
+    "price_sqft": 166,
+    "lat": 41.7495784,
+    "long": -85.4347824,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Lewis & Lambright Inc"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/wuI4oeEY26T3J2NWh7qJumuffRe3Doz5vr1MI6j6yHs/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 463-1850",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Lewis & Lambright Inc"
+      },
+      "name": "John Wainwright"
+    },
+    "extras": {}
+  },
+  "2984504222": {
+    "address": "322 Grant St, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/322-Grant-St_Lagrange_IN_46761_M40338-38293",
+    "price": 110000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/248b8557ce9e8edc2e569bda67f51f54l-m866370431s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-31-2025_11-22-49",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 1.0,
+    "lotsqft": null,
+    "sqft": 1205,
+    "price_sqft": 91,
+    "lat": 41.643079,
+    "long": -85.421886,
+    "zipc": 46761,
+    "list_dt": "07-21-2025_18-04-20",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "07-21-2025": {
+        "price_ch_amt": -15000,
+        "last_price": 125000,
+        "price_c_dat": "07-21-2025_18-04-20",
+        "perc_change": -12.0
+      }
+    },
+    "seller": "Berkshire Hathaway HomeServices Northern Indiana Real Estate - Elkhart",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "100605011",
+          "name": "Annie Eymer",
+          "builder": null,
+          "email": "annieeymer@bhhsni.com",
+          "office": {
+            "name": "Berkshire Hathaway HomeServices Northern Indiana Real Estate - Elkhart",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "(574) 293-1010",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": true,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Berkshire Hathaway HomeServices Northern Indiana Real Estate - Elkhart",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1900
+  },
+  "2984337510": {
+    "address": "310 N 040 W, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/310-N-040-W_Lagrange_IN_46761_M39532-32060",
+    "price": 289000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/d275abfdb294482e7b23d5c0d3a57930l-m1534229833s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-31-2025_11-22-49",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1736,
+    "price_sqft": 166,
+    "lat": 41.64538,
+    "long": -85.433067,
+    "zipc": 46761,
+    "list_dt": "07-16-2025_19-06-21",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "07-16-2025": {
+        "price_ch_amt": -6000,
+        "last_price": 295000,
+        "price_c_dat": "07-16-2025_19-06-21",
+        "perc_change": -2.03
+      }
+    },
+    "seller": "Lewis & Lambright Inc",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2899367",
+          "name": "John Wainwright",
+          "builder": null,
+          "email": "jwainwright01@gmail.com",
+          "office": {
+            "name": "Lewis & Lambright Inc",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2604632013",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": true,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Lewis & Lambright Inc",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1962
+  },
+  "2985385215": {
+    "address": "321 Grant St, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/321-Grant-St_Lagrange_IN_46761_M31778-71847",
+    "price": 195000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/ed39835d78b4afe19029ad3b41e60633l-b163813030s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-31-2025_11-22-49",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 2528,
+    "price_sqft": 77,
+    "lat": 41.64262,
+    "long": -85.421819,
+    "zipc": 46761,
+    "list_dt": "08-15-2025_16-26-38",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "RE MAX Results",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3108826",
+          "name": "Linda Mynhier",
+          "builder": null,
+          "email": "lindam1@remax.net",
+          "office": {
+            "name": "RE MAX Results",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603369090",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2603369090",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": true,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Results",
+          "photo": "https://ap.rdcpix.com/b18d4dd748b8ab7c961750874ee4aa0fo-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1900
+  },
+  "2985057240": {
+    "address": "415 W 060 N, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/415-W-060-N_Lagrange_IN_46761_M39463-75126",
+    "price": 529000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/33c504deb0bfd8b142a2b0ad57a436c8l-m3455918999s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-31-2025_11-22-49",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": null,
+    "sqft": 4236,
+    "price_sqft": 124,
+    "lat": 41.648795,
+    "long": -85.432614,
+    "zipc": 46761,
+    "list_dt": "08-06-2025_11-57-22",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Right Key Realty",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "0",
+          "name": "Coreen Miller",
+          "builder": null,
+          "email": "coreen.miller@outlook.com",
+          "office": {
+            "name": "Right Key Realty",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2603500879",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Right Key Realty",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 2005
+  },
+  "2979919616": {
+    "address": "418 Vine St, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/418-Vine-St_Lagrange_IN_46761_M40936-12865",
+    "price": 220000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/f6278bcbff76c8fbe83f197370572928l-m1247157333s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-31-2025_11-22-49",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 2728,
+    "price_sqft": 80,
+    "lat": 41.640686,
+    "long": -85.421102,
+    "zipc": 46761,
+    "list_dt": "03-28-2025_22-57-35",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "07-30-2025": {
+        "price_ch_amt": -5000,
+        "last_price": 225000,
+        "price_c_dat": "07-30-2025_15-17-33",
+        "perc_change": -2.22
+      }
+    },
+    "seller": "Assurance Property Management & Realty Inc",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "1252490",
+          "name": "TUCKER, MICHELLE",
+          "builder": null,
+          "email": "mtuckersd@aol.com",
+          "office": {
+            "name": "Assurance Property Management & Realty Inc",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "(574) 320-3300",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "5742642000",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": false,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": true,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Assurance Property Management & Realty Inc",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1897
+  },
+  "130935497": {
+    "address": "310 N 040 W, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Lagrange/310-N-040-W-46761/home/130935497",
+    "price": 289000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-31-2025_11-22-57",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1736,
+    "price_sqft": 166,
+    "lat": 41.64538,
+    "long": -85.433067,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "130964076": {
+    "address": "415 W 060 N, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Lagrange/415-W-060-N-46761/home/130964076",
+    "price": 529000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-31-2025_11-22-57",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 4236,
+    "price_sqft": 124,
+    "lat": 41.648795,
+    "long": -85.432614,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "130976115": {
+    "address": "10180 E 600 S Big Long Lk, Hudson, IN 46747",
+    "city": "Hudson",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Hudson/10180-E-600-S-46747/home/130976115",
+    "price": 739900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-31-2025_11-22-57",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2624,
+    "price_sqft": 281,
+    "lat": 41.5548666,
+    "long": -85.2296481,
+    "zipc": 46747,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "130875425": {
+    "address": "429 Jay St, Topeka, IN 46571",
+    "city": "Topeka",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Topeka/429-Jay-St-46571/home/130875425",
+    "price": 289900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "08-31-2025_11-22-57",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 6.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2755,
+    "price_sqft": 105,
+    "lat": 41.543367,
+    "long": -85.538527,
+    "zipc": 46571,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "85512267": {
+    "address": "321 Grant St, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/321-Grant-St-Lagrange-IN-46761/85512267_zpid/",
+    "price": 195000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/950ad3a634ee1784d0535302eb232dbf-p_e.jpg",
+    "date_pulled": "08-31-2025_11-23-07",
+    "description": "Detached garage",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 5.0,
+    "lotsqft": "10454.4 sqft",
+    "sqft": 2528,
+    "price_sqft": 77,
+    "lat": 41.64268,
+    "long": -85.42187,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "RE/MAX Results - Angola office",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Linda Mynhier",
+      "brokerName": "RE/MAX Results - Angola office",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 15,
+    "zestimate": 191100
+  },
+  "227997588": {
+    "address": "11945 E 380 S, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/11945-E-380-S-Lagrange-IN-46761/227997588_zpid/",
+    "price": 1499900,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/b0dd49b2a7a4aac2bac0722eb8ea634d-p_e.jpg",
+    "date_pulled": "08-31-2025_11-23-07",
+    "description": "Sandy beach",
+    "htype": "SINGLE_FAMILY",
+    "beds": 5.0,
+    "baths": 5.0,
+    "lotsqft": "0.81 acres",
+    "sqft": 3417,
+    "price_sqft": 438,
+    "lat": 41.587807,
+    "long": -85.195564,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Mike Thomas Assoc., Inc",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Justin M Walborn",
+      "brokerName": "Mike Thomas Assoc., Inc",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 37,
+    "zestimate": 1428400
+  },
+  "120236596": {
+    "address": "310 N 40 W, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/310-N-40-W-Lagrange-IN-46761/120236596_zpid/",
+    "price": 289000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/f5c45b8bdfbcd734c1a607d27f986b19-p_e.jpg",
+    "date_pulled": "08-31-2025_11-23-07",
+    "description": "Price cut: $6,000 (8/13)",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "0.69 acres",
+    "sqft": 1736,
+    "price_sqft": 166,
+    "lat": 41.64547,
+    "long": -85.43293,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Lewis & Lambright Inc",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "John Wainwright",
+      "brokerName": "Lewis & Lambright Inc",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 45,
+    "zestimate": 283200
+  },
+  "85515473": {
+    "address": "415 W 60 N, Lagrange, IN 46761",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/415-W-60-N-Lagrange-IN-46761/85515473_zpid/",
+    "price": 529000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/ab16c3268f39f26485177e0c06c3c658-p_e.jpg",
+    "date_pulled": "08-31-2025_11-23-07",
+    "description": "Finished basement",
+    "htype": "SINGLE_FAMILY",
+    "beds": 4.0,
+    "baths": 4.0,
+    "lotsqft": "0.39 acres",
+    "sqft": 4236,
+    "price_sqft": 124,
+    "lat": 41.64866,
+    "long": -85.43269,
+    "zipc": 46761,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Right Key Realty",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Coreen Miller",
+      "brokerName": "Right Key Realty",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 25,
+    "zestimate": 514600
   }
 }
