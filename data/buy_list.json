@@ -18982,5 +18982,113 @@
     "seller": {},
     "sellerinfo": {},
     "extras": {}
+  },
+  "2985897815": {
+    "address": "325 S Kalamazoo Ave, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/325-S-Kalamazoo-Ave_Marshall_MI_49068_M30199-84974",
+    "price": 279000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/8f0cd2aa537251381e672b1bd0313652l-m2878927886s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "08-30-2025_17-56-35",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 1.5,
+    "lotsqft": null,
+    "sqft": 1792,
+    "price_sqft": 155,
+    "lat": 42.268932,
+    "long": -84.963683,
+    "zipc": 49068,
+    "list_dt": "08-30-2025_18-26-34",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "2160976",
+          "name": "Brian Fazekas",
+          "builder": null,
+          "email": "fazekas_brian@yahoo.com",
+          "office": {
+            "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2692092286",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1875
+  },
+  "74669753": {
+    "address": "325 S Kalamazoo Ave, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/325-S-Kalamazoo-Ave-Marshall-MI-49068/74669753_zpid/",
+    "price": 279000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/375f4abd315ccc80bc56b54fd9295268-p_e.jpg",
+    "date_pulled": "08-30-2025_17-56-43",
+    "description": "4 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "0.4 acres",
+    "sqft": 1792,
+    "price_sqft": 155,
+    "lat": 42.268932,
+    "long": -84.96368,
+    "zipc": 49068,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "Berkshire Hathaway HomeServices Michigan Real Estate",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0
   }
 }
