@@ -51,8 +51,10 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.beds         = listinginfo[k1][k2][idx][k1].get("numberOfBedrooms", defaultval)
                 listing.baths        = listinginfo[k1][k2][idx][k1].get("numberOfBathroomsTotal", defaultval)
                 listing.sqft         = "".join([x for x in str(listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)) if x.isnumeric()])
-                if listing.sqft:
+                if (listing != None) and (len(listing.sqft) > 0):
                     listing.sqft     = int(listing.sqft)
+                else:
+                    listing.sqft     = None
                 listing.source       = source
                 listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
                 listing.price        = int(listinginfo[k1][k2][idx]["offers"].get("price", defaultval))

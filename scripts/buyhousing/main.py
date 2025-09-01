@@ -24,6 +24,7 @@ from support import logger, log_time, get_time
 # if doesn't have one, its a smaller targeted neighborhood.
 
 AREAS = [
+    ('Kalamazoo','MI'),
     ('Angola'   ,'IN'),
     ('Auburn'   ,'IN'),
     ('Fremont'  ,'IN'),
@@ -33,7 +34,6 @@ AREAS = [
     ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-    ('Kalamazoo','MI'),
 ]   
 
 SOURCES = {
@@ -43,7 +43,7 @@ SOURCES = {
     "zillow" :("www.zillow.com" , zillow),
 }
 
-SITES = ["realtor", "homes", "redfin", "zillow"] 
+SITES = ["redfin", "realtor", "homes", "zillow"] 
 P_LIST = ["price_ch_amt", "last_price", "price_c_dat", "perc_change"]
 
 #Define search parameters
@@ -247,7 +247,7 @@ def scrape(area:tuple|str, progbar:Progress, task:int, layout:Layout):
         area (str): City or or Zipcode
     # """	
     #Keep em guessin!
-    shuffle(SITES) 
+    # shuffle(SITES) 
     for source in SITES:
         site = SOURCES.get(source)
         if site:
@@ -318,7 +318,7 @@ def main():
         logger.warning("No historical data found")
 
     #Shuffle and search the neighborhoods/zips
-    shuffle(AREAS)
+    # shuffle(AREAS)
 
     with Live(layout, refresh_per_second=30, screen=True, transient=True):
         logger.addHandler(support.MainTableHandler(main_table, layout, logger.level))
