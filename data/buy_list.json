@@ -15432,25 +15432,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/15-Ln-200eb-Lake-James-Angola-IN-46703/118950286_zpid/",
-    "price": 1569900,
+    "price": 1495000,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/f5f3e36a44923d58e41d0ed338d4d816-p_e.jpg",
-    "date_pulled": "08-30-2025_11-55-07",
-    "description": "149 days on Zillow",
+    "date_pulled": "08-31-2025_23-43-46",
+    "description": "Price cut: $74,900 (8/31)",
     "htype": "SINGLE_FAMILY",
     "beds": 5.0,
     "baths": 5.0,
     "lotsqft": "6446.88 sqft",
     "sqft": 3746,
-    "price_sqft": 419,
+    "price_sqft": 399,
     "lat": 41.69213,
     "long": -85.018456,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "08-31-2025": {
+        "price_ch_amt": -74900,
+        "last_price": 1569900,
+        "price_c_dat": "08-31-2025",
+        "perc_change": -5.01
+      }
+    },
     "seller": "RE/MAX Results - Angola office",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -15461,8 +15468,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 149,
-    "zestimate": 1482300
+    "daysOnZillow": 150,
+    "zestimate": 1423200
   },
   "85722440": {
     "address": "180 W 300 N, Angola, IN 46703",
@@ -18559,25 +18566,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/15-ln-200eb-lake-james-angola-in/ple08444elyhb/",
-    "price": 1569900,
+    "price": 1495000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/9041558834-222847591/15-ln-200eb-lake-james-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-55-17",
+    "date_pulled": "08-31-2025_23-43-12",
     "description": "HUGE $100K DROP! LAKEFRONT Living with Sandy Beach.  Major Recent UPGRADE! A Brand-New energy-efficient furnace/AC system to be installed June 2025, adding comfort and long-term value to your investment.  Don\u2019t miss this incredible opportunity to own a beautiful lakefront home with its own sandy beachfront with plenty of dock space for your water toys\u2014perfect for swimming, sunbathing, and",
     "htype": "SingleFamilyResidence",
     "beds": 5,
     "baths": 4,
     "lotsqft": null,
     "sqft": 3746,
-    "price_sqft": 419,
+    "price_sqft": 399,
     "lat": null,
     "long": null,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "08-31-2025": {
+        "price_ch_amt": -74900,
+        "last_price": 1569900,
+        "price_c_dat": "08-31-2025",
+        "perc_change": -5.01
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "RE/MAX Results - Angola office"
