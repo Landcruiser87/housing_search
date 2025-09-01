@@ -39,7 +39,9 @@ def get_listings(result:list, neigh:str, source:str, Propertyinfo)->list:
         listing.zipc         = int(listinginfo.get("addressZipcode", defaultval))
         listing.address      = listinginfo.get("address", defaultval)
         listing.htype        = listinginfo["hdpData"]["homeInfo"].get("homeType", defaultval)
-        listing.sqft         = int("".join([x for x in str(listinginfo.get("area", defaultval)) if x.isnumeric()]))
+        listing.sqft         = "".join([x for x in str(listinginfo.get("area", defaultval)) if x.isnumeric()])
+        if listing.sqft:
+            listing.sqft     = int(listing.sqft)
         listing.price        = int(listinginfo.get("unformattedPrice", defaultval))
         if (listing.price !=None) & (listing.sqft != None):
             listing.price_sqft   = listing.price // int(listing.sqft)

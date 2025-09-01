@@ -44,7 +44,9 @@ def get_listings(resp_json:dict, neigh:Union[str, int], source:str, Propertyinfo
         listing.htype        = search_result["description"].get("type", defaultval)
         listing.baths        = bedbath_format(search_result["description"].get("baths_consolidated", defaultval))
         listing.beds         = bedbath_format(search_result["description"].get("beds", defaultval))
-        listing.sqft         = int("".join([x for x in str(search_result["description"].get("sqft", defaultval)) if x.isnumeric()]))
+        listing.sqft         = "".join([x for x in str(search_result["description"].get("sqft", defaultval)) if x.isnumeric()])
+        if listing.sqft:
+            listing.sqft     = int(listing.sqft)
         listing.lotsqft      = search_result["description"].get("lotsqft", defaultval)
         listing.year_built   = search_result["description"].get("year_built", defaultval)
         listing.price        = int(search_result.get("list_price", defaultval))

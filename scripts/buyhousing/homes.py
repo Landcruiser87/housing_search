@@ -50,7 +50,9 @@ def get_listings(result:BeautifulSoup, neigh:tuple, source:str, Propertyinfo)->l
                 listing.zipc         = int(listinginfo[k1][k2][idx][k1]["address"].get("postalCode", defaultval))
                 listing.beds         = listinginfo[k1][k2][idx][k1].get("numberOfBedrooms", defaultval)
                 listing.baths        = listinginfo[k1][k2][idx][k1].get("numberOfBathroomsTotal", defaultval)
-                listing.sqft         = int("".join([x for x in str(listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)) if x.isnumeric()]))
+                listing.sqft         = "".join([x for x in str(listinginfo[k1][k2][idx][k1]["floorSize"].get("value", defaultval)) if x.isnumeric()])
+                if listing.sqft:
+                    listing.sqft     = int(listing.sqft)
                 listing.source       = source
                 listing.status       = listinginfo[k1][k2][idx]["offers"].get("@type", defaultval)
                 listing.price        = int(listinginfo[k1][k2][idx]["offers"].get("price", defaultval))

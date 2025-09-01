@@ -33,7 +33,8 @@ AREAS = [
     ('Coldwater','MI'),  #guuuurl.  You gots lots of housing price cuts.  No bueno market!
     ('Marshall' ,'MI'),
     ('Tekonsha' ,'MI'),
-]
+    ('Kalamazoo','MI'),
+]   
 
 SOURCES = {
     "homes"  :("www.homes.com"  , homes),

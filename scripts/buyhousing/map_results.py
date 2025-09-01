@@ -17,6 +17,33 @@ import support
 #Import logger and console from support
 from support import logger, console, log_time, get_time
 
+# FUNCTION Update plot
+def update_plot(val):
+    # If the command is not to change to freq
+    global ax_ecg
+    command = radio.value_selected
+    #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
+    if command in ["Base Figure", "Roll Median", "Add Inter", "Hide Leg", "Show R Valid"]:
+        if check_axis("mainplot"):
+            ax_ecg.cla()
+        else:
+            ax_ecg = fig.add_subplot(gs[0, :2], label="mainplot")
+        update_main()
+
+    if configs["freq"]:
+        # logger.info(f'{check_axis("mainplot")}')
+        frequencytown()
+
+    elif configs["overlay"]:
+        if command == "Overlay Main":
+            overlay_r_peaks(True)
+        elif command == "Overlay Inner":
+            overlay_r_peaks()
+
+    elif configs["stump"]:
+        wavesearch()
+
+    fig.canvas.draw_idle()
 def sir_plots_alot():
     global ax_houses, ax_time, gs, fig
     fig = plt.figure(figsize=(14, 10))
@@ -38,36 +65,36 @@ def sir_plots_alot():
         geometry = gpd.points_from_xy(hdf.lat, hdf.long), 
         crs = "EPSG:4326"
     )
-    try:
-        IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
-        IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
-        MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
-        MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
+    # try:
+    IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
+    IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
+    MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
+    MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
 
-        MI_county_map = MI_county_map.to_crs(epsg=4326)
-        MI_city_map = MI_city_map.to_crs(epsg=4326)
-        IN_county_map = IN_county_map.to_crs(epsg=4326)
-        IN_city_map = IN_city_map.to_crs(epsg=4326)
+    MI_county_map = MI_county_map.to_crs(epsg=4326)
+    MI_city_map = MI_city_map.to_crs(epsg=4326)
+    IN_county_map = IN_county_map.to_crs(epsg=4326)
+    IN_city_map = IN_city_map.to_crs(epsg=4326)
 
-        IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
-        MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
-        IN_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
-        MI_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
-        ax_houses.scatter(
-            x=gdf.long,
-            y=gdf.lat,
-            c='blue',
-            alpha=0.7,
-        )
-        delta = 0.2
-        # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
-        # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
-        # plt.tight_layout()
-        plt.show()
-        plt.close()
+    IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+    MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
+    IN_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
+    MI_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
+    ax_houses.scatter(
+        x=gdf.long,
+        y=gdf.lat,
+        c='blue',
+        alpha=0.7,
+    )
+    delta = 0.2
+    # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
+    # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
+    # plt.tight_layout()
+    radio = RadioButtons(ax_radio, ('price','sqft','price_sqft', 'price_change', 'days', 'weeks', 'months', 'all'))
 
-    except Exception as e:
-        print(f"{e}")
+
+    # except Exception as e:
+    #     print(f"{e}")
     #On load, do the following. 
         #1. Load up the last weeks worth of new houses. 
         #2. Include any saved homes and give them a separate icon 
@@ -81,9 +108,11 @@ def sir_plots_alot():
     # ax_ecg.legend(loc='upper left')
 
     #brokebarH plot for the background of the slider. 
-    # ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
-    # ax_time.set_ylim(0, 1)
-    # ax_time.set_xlim(0, valid_sect.shape[0])
+    ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
+    ax_time.set_ylim(0, 1)
+    ax_time.set_xlim(gdf.date_pulled.min(), gdf.date_pulled.max())
+    plt.show()
+    plt.close()
 
     # sect_slider = Slider(ax_time, 
     #     label='days',
@@ -94,7 +123,6 @@ def sir_plots_alot():
     # )
 
     #Radio buttons
-    radio = RadioButtons(ax_radio, ('price','sqft','price_sqft', 'price_change','days', 'weeks', 'months'))
 
     #Set actions for GUI items. 
     # sect_slider.on_changed(update_plot)
@@ -106,7 +134,6 @@ def sir_plots_alot():
     # ]
     
     # ax_houses.legend(handles=legend_elements, loc='upper left')
-    plt.show()
 
 ################################# Start Program ####################################
 #Driver code
