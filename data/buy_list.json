@@ -396,25 +396,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/4537-W-Black-Oak-Cir-46703/home/140601765",
-    "price": 667500,
+    "price": 647500,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-45-41",
+    "date_pulled": "09-02-2025_17-59-36",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 5.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 3630,
-    "price_sqft": 183,
+    "price_sqft": 178,
     "lat": 41.6742811,
     "long": -85.0777061,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 667500,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -3.09
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -11362,21 +11369,21 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/5962-Deer-Hollow-Rd_Auburn_IN_46706_M32972-69754",
-    "price": 699900,
+    "price": 679900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/ef6a662066d5c6e0bd8cd476dcb64701l-m960044051s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-52-45",
+    "date_pulled": "09-02-2025_18-00-29",
     "description": null,
     "htype": "single_family",
     "beds": 5.0,
     "baths": 3.5,
     "lotsqft": null,
     "sqft": 4387,
-    "price_sqft": 159,
+    "price_sqft": 154,
     "lat": 41.25871,
     "long": -85.071502,
     "zipc": 46706,
@@ -11385,10 +11392,16 @@
     "sold": false,
     "price_hist": {
       "03-22-2025": {
-        "price_ch_amt": -10000,
-        "last_price": 709900,
+        "price_ch_amt": -20000,
+        "last_price": 699900,
         "price_c_dat": "03-22-2025_13-36-13",
-        "perc_change": -1.41
+        "perc_change": -2.86
+      },
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699900,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.94
       }
     },
     "seller": "Minear Real Estate",
@@ -11421,7 +11434,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": false,
-        "is_price_reduced": false,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -11598,21 +11611,21 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/1051-Morningstar-Rd_Auburn_IN_46706_M91290-93992",
-    "price": 699000,
+    "price": 679000,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/3ae224c366de1b1c052d3339f443b824l-m381944248s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-52-45",
+    "date_pulled": "09-02-2025_18-00-29",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.5,
     "lotsqft": null,
     "sqft": 3709,
-    "price_sqft": 188,
+    "price_sqft": 183,
     "lat": 41.381871,
     "long": -85.043327,
     "zipc": 46706,
@@ -11621,10 +11634,16 @@
     "sold": false,
     "price_hist": {
       "06-12-2025": {
-        "price_ch_amt": -40000,
-        "last_price": 739000,
+        "price_ch_amt": -20000,
+        "last_price": 699000,
         "price_c_dat": "06-12-2025_18-36-08",
-        "perc_change": -5.41
+        "perc_change": -2.86
+      },
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699000,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.95
       }
     },
     "seller": "Mink Realty",
@@ -11653,7 +11672,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": false,
-        "is_price_reduced": false,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -12392,25 +12411,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.homes.com/property/5962-deer-hollow-rd-auburn-in/6nn7q0rd6fkf7/",
-    "price": 699900,
+    "price": 679900,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/3630391444-939378491/5962-deer-hollow-rd-auburn-in-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-52-49",
-    "description": "Welcome to this custom-built residence by Wannemacher Homes located in the Leo School District, minutes from Leo, Grabill, Fort Wayne and Auburn. Seller is offering a $5,000 appliance allowance. Nestled on a partially wooded 0.64 acre lot, the home\u2019s inviting front and rear facades welcome you with timeless curb appeal. Enjoy your morning coffee on the covered front porch or spend evenings",
+    "date_pulled": "09-02-2025_18-00-02",
+    "description": "Open House Sunday! 1-3 PM! Welcome to this custom-built residence by Wannemacher Homes located in the Leo School District, minutes from Leo, Grabill, Fort Wayne and Auburn. Nestled on a partially wooded 0.64 acre lot, the home\u2019s inviting front and rear facades welcome you with timeless curb appeal. Enjoy your morning coffee on the covered front porch or spend evenings roasting marshmallows around",
     "htype": "SingleFamilyResidence",
     "beds": 5,
     "baths": 4,
     "lotsqft": null,
     "sqft": 4387,
-    "price_sqft": 159,
+    "price_sqft": 154,
     "lat": 41.2587844,
     "long": -85.0714314,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699900,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.94
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Minear Real Estate"
@@ -12467,25 +12493,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.homes.com/property/1051-morningstar-rd-auburn-in/v17jke6sthpsq/",
-    "price": 699000,
+    "price": 679000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/0023630734-566702991/1051-morningstar-rd-auburn-in-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-52-49",
+    "date_pulled": "09-02-2025_18-00-02",
     "description": "This completely remodeled 3 Bed, 2+1/2 bath home is situated on an unmatched 1.33 acre lot that is directly connected to trails in the Acres nature preserve.  1051 Morningstar is a quality built home with 6\" walls that are 16\" on center along with 10 ft ceilings and 9 ft basement walls.  The worry-free dry walk-out basement does not require a pit or pump.  The home is heated and cooled by an",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 2,
     "lotsqft": null,
     "sqft": 3709,
-    "price_sqft": 188,
+    "price_sqft": 183,
     "lat": 41.3856545,
     "long": -85.0318822,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699000,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.95
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Mink Realty"
@@ -13042,25 +13075,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Auburn/1051-Morningstar-Rd-46706/home/120899127",
-    "price": 699000,
+    "price": 679000,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-54-12",
+    "date_pulled": "09-02-2025_17-59-54",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 3709,
-    "price_sqft": 188,
+    "price_sqft": 183,
     "lat": 41.3821581,
     "long": -85.0433593,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699000,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.95
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -13154,25 +13194,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Auburn/5962-Deer-Hollow-Rd-46706/home/116321367",
-    "price": 699900,
+    "price": 679900,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-54-12",
+    "date_pulled": "09-02-2025_17-59-54",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 5.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 4387,
-    "price_sqft": 159,
+    "price_sqft": 154,
     "lat": 41.2588135,
     "long": -85.07151,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699900,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.94
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -13664,25 +13711,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/5962-Deer-Hollow-Rd-Auburn-IN-46706/180466373_zpid/",
-    "price": 699900,
+    "price": 679900,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/27e085fdf4b87397059d63d6b8420cc4-p_e.jpg",
-    "date_pulled": "08-30-2025_11-54-21",
-    "description": "Electric fireplace",
+    "date_pulled": "09-02-2025_18-00-25",
+    "description": "Open: Sun 1-3pm (9/7)",
     "htype": "SINGLE_FAMILY",
     "beds": 4.0,
     "baths": 5.0,
     "lotsqft": "0.64 acres",
     "sqft": 4387,
-    "price_sqft": 159,
+    "price_sqft": 154,
     "lat": 41.258816,
     "long": -85.07151,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699900,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.94
+      }
+    },
     "seller": "Minear Real Estate",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -13693,8 +13747,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 161,
-    "zestimate": 688200
+    "daysOnZillow": 164,
+    "zestimate": 670500
   },
   "85184890": {
     "address": "5936 County Road 427, Auburn, IN 46706",
@@ -13886,25 +13940,32 @@
     "city": "Auburn",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/1051-Morningstar-Rd-Auburn-IN-46706/119747353_zpid/",
-    "price": 699000,
+    "price": 679000,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/012e627ff7ebc2d3e5979e5853e7c3f3-p_e.jpg",
-    "date_pulled": "08-30-2025_11-54-21",
-    "description": "78 days on Zillow",
+    "date_pulled": "09-02-2025_18-00-25",
+    "description": "Price cut: $20,000 (9/2)",
     "htype": "SINGLE_FAMILY",
     "beds": 3.0,
     "baths": 4.0,
     "lotsqft": "1.33 acres",
     "sqft": 3709,
-    "price_sqft": 188,
+    "price_sqft": 183,
     "lat": 41.382175,
     "long": -85.0433,
     "zipc": 46706,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 699000,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -2.95
+      }
+    },
     "seller": "Mink Realty",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -13915,8 +13976,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 78,
-    "zestimate": 671700
+    "daysOnZillow": 82,
+    "zestimate": 673400
   },
   "2067082404": {
     "address": "2217 Golfview Dr, Auburn, IN 46706",
@@ -15144,25 +15205,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/4537-W-Black-Oak-Cir-Angola-IN-46703/85724244_zpid/",
-    "price": 667500,
+    "price": 647500,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/e238dbcab00950ab0c0387a313225026-p_e.jpg",
-    "date_pulled": "08-30-2025_11-55-07",
-    "description": "Theater room",
+    "date_pulled": "09-02-2025_18-01-52",
+    "description": "Price cut: $20,000 (9/2)",
     "htype": "SINGLE_FAMILY",
     "beds": 3.0,
     "baths": 5.0,
     "lotsqft": "6.45 acres",
     "sqft": 3630,
-    "price_sqft": 183,
+    "price_sqft": 178,
     "lat": 41.67429,
     "long": -85.07769,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 667500,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -3.09
+      }
+    },
     "seller": "Prestige Realty & Associates LLC",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -15173,8 +15241,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 43,
-    "zestimate": 637200
+    "daysOnZillow": 47,
+    "zestimate": 639400
   },
   "99223536": {
     "address": "501 W Fox Lake Rd, Angola, IN 46703",
@@ -17641,28 +17709,41 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/4537-W-Black-Oak-Cir_Angola_IN_46703_M30892-74712",
-    "price": 667500,
+    "price": 647500,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/6eb1e018a470f49521e468684bbbb219l-m12689082s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-55-12",
+    "date_pulled": "09-02-2025_18-01-58",
     "description": null,
     "htype": "single_family",
     "beds": 5.0,
     "baths": 3.0,
     "lotsqft": null,
     "sqft": 3630,
-    "price_sqft": 183,
+    "price_sqft": 178,
     "lat": 41.673553,
     "long": -85.077651,
     "zipc": 46703,
     "list_dt": "07-17-2025_20-45-17",
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "07-17-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 667500,
+        "price_c_dat": "07-17-2025_20-45-17",
+        "perc_change": -3.0
+      },
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 667500,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -3.09
+      }
+    },
     "seller": "Prestige Realty & Associates Llc",
     "sellerinfo": {
       "advertisers": [
@@ -17689,7 +17770,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": false,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -18000,25 +18081,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/4537-w-black-oak-cir-angola-in/r40t654gs3xpe/",
-    "price": 667500,
+    "price": 647500,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/1261000244-729691102/4537-w-black-oak-cir-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-55-17",
-    "description": "OPEN HOUSE SAT. JULY 5TH & SUN JULY 6TH 10:00 to 12:00!  DEEDED LAKE ACCESS to sought after Crooked Lake! Enjoy this summer owning this amazing home situated on a 6.45 Acre Estate!  This home features a gorgeous great room offering awesome views, a cathedral ceiling, built-ins, and a cozy fireplace. The walk-out basement is complete with a wet bar, theater room, and full bath, and your very own",
+    "date_pulled": "09-02-2025_18-02-02",
+    "description": "DEEDED LAKE ACCESS to sought after Crooked Lake! Enjoy this summer owning this amazing home situated on a 6.45 Acre Estate!  This home features a gorgeous great room offering awesome views, a cathedral ceiling, built-ins, and a cozy fireplace. The walk-out basement is complete with a wet bar, theater room, and full bath, and your very own workshop or 3rd car garage storage. You will have plenty",
     "htype": "SingleFamilyResidence",
     "beds": 5,
     "baths": 3,
     "lotsqft": null,
     "sqft": 3630,
-    "price_sqft": 183,
+    "price_sqft": 178,
     "lat": null,
     "long": null,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-02-2025": {
+        "price_ch_amt": -20000,
+        "last_price": 667500,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -3.09
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Prestige Realty & Associates LLC"
