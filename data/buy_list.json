@@ -8377,14 +8377,14 @@
     "city": "Marshall",
     "state": "MI",
     "url": "https://www.realtor.com/realestateandhomes-detail/18011-20-Mile-Rd_Marshall_MI_49068_M43621-66532",
-    "price": 260000,
+    "price": 259900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/2f2cf1e1097f016d74a9b2a75808dfe2l-m1806719188s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-49-52",
+    "date_pulled": "09-02-2025_11-37-59",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
@@ -8400,10 +8400,16 @@
     "sold": false,
     "price_hist": {
       "07-09-2025": {
-        "price_ch_amt": -5000,
-        "last_price": 265000,
+        "price_ch_amt": -100,
+        "last_price": 260000,
         "price_c_dat": "07-09-2025_14-45-51",
-        "perc_change": -1.89
+        "perc_change": -0.04
+      },
+      "09-02-2025": {
+        "price_ch_amt": -100,
+        "last_price": 260000,
+        "price_c_dat": "09-02-2025",
+        "perc_change": -0.04
       }
     },
     "seller": "BEYCOME BROKERAGE REALTY LLC",
@@ -19897,6 +19903,187 @@
     "lat": 41.3622325,
     "long": -85.0627771,
     "zipc": 46706,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "456343857": {
+    "address": "1630 S 485 E, Wolcottville, IN 46795",
+    "city": "Wolcottville",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/1630-S-485-E-Wolcottville-IN-46795/456343857_zpid/",
+    "price": 474900,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/395098d24b92e86494822ba491f19018-p_e.jpg",
+    "date_pulled": "09-02-2025_11-37-08",
+    "description": "4 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "2.04 acres",
+    "sqft": 1824,
+    "price_sqft": 260,
+    "lat": 41.618294,
+    "long": -85.33252,
+    "zipc": 46795,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Mike Thomas Associates",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Daniel R Orlando",
+      "brokerName": "Mike Thomas Associates",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0
+  },
+  "r9qvknqftqf7c": {
+    "address": "1630 S 485 E Fish Lake, Lagrange, IN 46795",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.homes.com/property/1630-s-485-e-fish-lake-lagrange-in/r9qvknqftqf7c/",
+    "price": 474900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/4619206744-800522302/1630-s-485-e-fish-lake-lagrange-in-primaryphoto.jpg",
+    "date_pulled": "09-02-2025_11-37-12",
+    "description": "Waterfront, small acreage, and privacy define YOUR new home  in Lakeland School District, set in a park like setting with mature trees on approximately 2.04 acres and about 51 feet on the Fish and Royer natural glacial lake chain. The home offers four bedrooms and two full baths, plus a main level flex room that opens by sliding door to an expansive composite deck and could also function as a",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 1824,
+    "price_sqft": 260,
+    "lat": null,
+    "long": null,
+    "zipc": 46795,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Mike Thomas Associates"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/qv_-J7iXHiAVEznW-S-Uue9ysG55uS2fpXjP93rk2VE/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 463-2881",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Mike Thomas Associates"
+      },
+      "name": "Daniel Orlando"
+    },
+    "extras": {}
+  },
+  "2985933380": {
+    "address": "1630 S 485 E Fish Lk, Lagrange, IN 46795",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/1630-S-485-E-Fish-Lk_Lagrange_IN_46795_M96064-12536",
+    "price": 474900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/8ad3f83de52200dd97b55b19cae15d33l-m1275319001s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-02-2025_11-37-21",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1824,
+    "price_sqft": 260,
+    "lat": 41.618305,
+    "long": -85.332527,
+    "zipc": 46795,
+    "list_dt": "09-02-2025_11-39-14",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Mike Thomas Associates LaGrange",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "1939549",
+          "name": "Daniel Orlando with The Anchor and Arbor Team",
+          "builder": null,
+          "email": "daniel@danielrorlando.com",
+          "office": {
+            "name": "Mike Thomas Associates LaGrange",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2609932577",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2605856768",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Mike Thomas Associates LaGrange",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1989
+  },
+  "131023074": {
+    "address": "1630 S 485 E Fish Lk, Lagrange, IN 46795",
+    "city": "Lagrange",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Lagrange/1630-S-485-E-46761/home/131023074",
+    "price": 474900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-02-2025_11-37-30",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1824,
+    "price_sqft": 260,
+    "lat": 41.6183103,
+    "long": -85.3325006,
+    "zipc": 46795,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,

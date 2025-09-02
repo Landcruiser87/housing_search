@@ -8,43 +8,126 @@ import datetime
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+import matplotlib.dates as mdates
+import matplotlib.gridspec as gridspec
 from matplotlib.patches import Rectangle, Arrow
 from matplotlib.widgets import Slider, Button, RadioButtons, TextBox, SpanSelector
-from matplotlib.lines import Line2D
-import matplotlib.gridspec as gridspec
-import support
 
 #Import logger and console from support
 from support import logger, console, log_time, get_time
+import support
 
-# FUNCTION Update plot
-def update_plot(val):
-    # If the command is not to change to freq
-    global ax_ecg
-    command = radio.value_selected
-    #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
-    if command in ["Base Figure", "Roll Median", "Add Inter", "Hide Leg", "Show R Valid"]:
-        if check_axis("mainplot"):
-            ax_ecg.cla()
-        else:
-            ax_ecg = fig.add_subplot(gs[0, :2], label="mainplot")
-        update_main()
+BUTTON_VALS = ['price','sqft','price_sqft', 'price_change', 'saved', 'days', 'weeks', 'months', 'all']
 
-    if configs["freq"]:
-        # logger.info(f'{check_axis("mainplot")}')
-        frequencytown()
+def format_date(val):
+    """
+    Formats a timestamp to a "Month Day, Year" string.
+    """
+    date_obj = datetime.date.fromordinal(int(val))
+    return date_obj.strftime('%B %d, %Y')
 
-    elif configs["overlay"]:
-        if command == "Overlay Main":
-            overlay_r_peaks(True)
-        elif command == "Overlay Inner":
-            overlay_r_peaks()
-
-    elif configs["stump"]:
-        wavesearch()
-
-    fig.canvas.draw_idle()
 def sir_plots_alot():
+# FUNCTION Update plot
+    def update_plot(val):
+        # Handles the plot updating
+        global ax_ecg
+        
+        #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
+        # BUTTON_VALS = ['price','sqft','price_sqft', 'price_change', 'saved', 'days', 'weeks', 'months', 'all']
+        command = radio.value_selected
+        if command:
+            match command:
+                case [*BUTTON_VALS] if command in [BUTTON_VALS[:3]]:
+                    logger.info("first 3")
+                    # if check_axis("mainplot"):
+                    #     ax_ecg.cla()
+                    # else:
+                    #     ax_ecg = fig.add_subplot(gs[0, :2], label="mainplot")
+                    # update_main()
+
+                case 'saved':
+                    logger.info("saved")
+
+                case [*BUTTON_VALS] if command in [BUTTON_VALS[:-3]]:
+                    logger.info("last 3")
+        
+        date_slider.valfmt = format_date(date_slider.val)
+        fig.canvas.draw_idle()
+
+#     #FUNCTION Radio Button Actions
+#     def radiob_action(val):
+#         sect = sect_slider.val
+#         start_w = ecg_data['section_info'][sect]['start_point']
+#         end_w = ecg_data['section_info'][sect]['end_point']
+
+#         if val in ["Base Figure", "Roll Median", "Add Inter", "Hide Leg", "Show R Valid"]:
+#             #When selecting various functions.
+#             #This is to make sure you remove the appropriate axis' before redrawing the main chart
+#             if configs["freq"] and check_axis("freq_list"):
+#                 remove_axis(["freq_list", "ecg_small"])
+#                 configs["freq"] = False
+#                 update_plot(val)
+                
+#             if configs["overlay"] and check_axis("overlays"):
+#                 remove_axis(["overlays", "ecg_small"])
+#                 configs["overlay"] = False
+#                 update_plot(val)
+                
+#             if configs["stump"] and check_axis("stumpy"):
+#                 remove_axis(["stumpy", "dist_locs", "ecg_small"])
+#                 configs["stump"] = False
+#                 update_plot(val)
+
+#         if val == 'Roll Median':	
+#             ax_ecg.plot(range(start_w, end_w), utils.roll_med(wave[start_w:end_w]), color='orange', label='Rolling Median')
+#             ax_ecg.legend(loc='upper left')
+
+#         elif val == 'Add Inter':
+#             inners = ecg_data['interior_peaks'][(ecg_data['interior_peaks'][:, 2] >= start_w) & (ecg_data['interior_peaks'][:, 2] <= end_w), :]
+#             for key, val in PEAKDICT_EXT.items():
+#                 if inners[np.nonzero(inners[:, key])[0], key].size > 0:
+#                     ax_ecg.scatter(inners[:, key], wave[inners[:, key]], label=val[0], color=val[1], alpha=0.8)
+#             ax_ecg.set_title(f'All interior peaks for section {sect} ', size=14)
+#             ax_ecg.legend(loc='upper left')
+
+#         elif val == 'Hide Leg':
+#             ax_ecg.get_legend().remove()
+
+#         elif val == 'Show R Valid':
+#             Rpeaks = ecg_data['peaks'][(ecg_data['peaks'][:, 0] >= start_w) & (ecg_data['peaks'][:, 0] <= end_w), :]
+#             for peak in range(Rpeaks.shape[0]):
+#                 if Rpeaks[peak, 1] == 0:
+#                     band_color = 'red'
+#                 else:
+#                     band_color = 'lightgreen'
+#                 rect = Rectangle(
+#                     xy=((Rpeaks[peak, 0] - 10), (wave[Rpeaks[peak,0]] + wave[Rpeaks[peak,0]]*(0.05)).item()), 
+#                     width=np.mean(np.diff(Rpeaks[:, 0])) // 6, 
+#                     height=wave[Rpeaks[peak, 0]].item() / 10,
+#                 facecolor=band_color,
+#                 edgecolor="grey",
+#                 alpha=0.7)
+#                 ax_ecg.add_patch(rect)
+
+#         elif 'Frequency' in val:
+#             configs["freq"] = True
+#             frequencytown()
+
+#         elif val == 'Overlay Main':
+#             configs["overlay"] = True
+#             overlay_r_peaks(True)
+
+#         elif val == 'Overlay Inner':
+#             configs["overlay"] = True
+#             overlay_r_peaks()
+
+#         elif val == 'Stumpy Search':
+#             configs["stump"] = True
+#             wavesearch()
+
+#         fig.canvas.draw_idle()    
+
     global ax_houses, ax_time, gs, fig
     fig = plt.figure(figsize=(14, 10))
     gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[6, 1])
@@ -65,6 +148,7 @@ def sir_plots_alot():
         geometry = gpd.points_from_xy(hdf.lat, hdf.long), 
         crs = "EPSG:4326"
     )
+    dates = []
     # try:
     IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
     IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
@@ -90,43 +174,33 @@ def sir_plots_alot():
     # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
     # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
     # plt.tight_layout()
-    radio = RadioButtons(ax_radio, ('price','sqft','price_sqft', 'price_change', 'days', 'weeks', 'months', 'all'))
-
+    radio = RadioButtons(ax_radio, tuple(BUTTON_VALS))
 
     # except Exception as e:
     #     print(f"{e}")
-    #On load, do the following. 
-        #1. Load up the last weeks worth of new houses. 
-        #2. Include any saved homes and give them a separate icon 
-    # days = filter(
-    # start_w = ecg_data['section_info'][first_sect]['start_point']
-    # end_w = ecg_data['section_info'][first_sect]['end_point']
-    # ax_ecg.plot(range(start_w, end_w), wave[start_w:end_w], color='dodgerblue', label='mainECG')
-    # ax_ecg.set_xlim(start_w, end_w)
-    # ax_ecg.set_ylabel('Voltage (mV)')
-    # ax_ecg.set_xlabel('ECG index')
-    # ax_ecg.legend(loc='upper left')
-
+    timestamps = sorted(np.unique([x.toordinal() for x in gdf.date_pulled]))
     #brokebarH plot for the background of the slider. 
-    ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
-    ax_time.set_ylim(0, 1)
-    ax_time.set_xlim(gdf.date_pulled.min(), gdf.date_pulled.max())
-    plt.show()
-    plt.close()
-
-    # sect_slider = Slider(ax_time, 
-    #     label='days',
-    #     valmin=first_sect, 
-    #     valmax=len(valid_sect), 
-    #     valinit=first_sect, 
-    #     valstep=1
-    # )
+    # ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
+    date_slider = Slider(ax_time, 
+        label='days',
+        valmin=timestamps[0], 
+        valmax=timestamps[-1], 
+        valinit=timestamps[0],
+    )
+    date_slider.valfmt = format_date(date_slider.val)
+    # ax_time.set_ylim(0, 1)
+    # ax_time.set_xlim(timestamps[0], timestamps[-1])
 
     #Radio buttons
 
     #Set actions for GUI items. 
-    # sect_slider.on_changed(update_plot)
+    date_slider.on_changed(update_plot)
     # radio.on_clicked(radiob_action)
+
+
+    plt.show()
+    plt.close()
+
 
     #Make a custom legend. 
     # legend_elements = [
@@ -194,4 +268,7 @@ if __name__ == "__main__":
     # Historical Weather, going back a few years maybe
     # Crime Data
     # Public Transit (This one might not work)
-    # Sales for the last 5 years in the same zarea/
+    # Sales for the last 5 years in the same area?
+    # Water reports
+    # Soil reports. 
+    # Could an LLM find all this?  meh
