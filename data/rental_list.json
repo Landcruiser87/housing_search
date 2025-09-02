@@ -76376,5 +76376,32 @@
       "violence_score": 24.56,
       "property_d_score": 0.14
     }
+  },
+  "tpgg9q9": {
+    "source": "www.apartments.com",
+    "price": 2300.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/512-w-37th-st-chicago-il/tpgg9q9/",
+    "address": "512 W 37th St, Chicago, IL 60609",
+    "date_pulled": "09-02-2025_15-08-18",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": 1800.0,
+    "lat": 41.8273776,
+    "long": -87.6393357,
+    "L_dist": [
+      "Sox-35th",
+      0.52
+    ],
+    "crime_sc": {
+      "drug_score": 3.49,
+      "gun_score": 7.07,
+      "murder_score": 2.08,
+      "perv_score": 1.44,
+      "theft_score": 37.11,
+      "violence_score": 28.36,
+      "property_d_score": 0.16
+    }
   }
 }
