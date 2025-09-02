@@ -19876,5 +19876,33 @@
     "extras": {},
     "daysOnZillow": 25,
     "zestimate": 514600
+  },
+  "120898785": {
+    "address": "415 W 15th St, Auburn, IN 46706",
+    "city": "Auburn",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Auburn/415-W-15th-St-46706/home/120898785",
+    "price": 130000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-01-2025_21-11-35",
+    "description": null,
+    "htype": "Accommodation",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1760,
+    "price_sqft": 73,
+    "lat": 41.3622325,
+    "long": -85.0627771,
+    "zipc": 46706,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
   }
 }

@@ -189,8 +189,9 @@ if __name__ == "__main__":
         # - time on market
         # - Sold?
 # Possible supplimental datasets (Census.gov and BLS.gov)
-    # Property Sales
+    # Property Sales surrounding?  Not sure how to find that
     # Census Demographics
-    # Historical Weather
+    # Historical Weather, going back a few years maybe
     # Crime Data
     # Public Transit (This one might not work)
+    # Sales for the last 5 years in the same zarea/
