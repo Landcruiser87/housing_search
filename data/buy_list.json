@@ -14131,25 +14131,32 @@
     "city": "Tekonsha",
     "state": "MI",
     "url": "https://www.redfin.com/MI/Tekonsha/395-Hyannis-Hills-Dr-49092/home/99866400",
-    "price": 279900,
+    "price": 269900,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-54-39",
+    "date_pulled": "09-03-2025_11-57-33",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 3282,
-    "price_sqft": 85,
+    "price_sqft": 82,
     "lat": 42.0661209,
     "long": -85.00335,
     "zipc": 49092,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 279900,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -3.71
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -14159,21 +14166,21 @@
     "city": "Tekonsha",
     "state": "MI",
     "url": "https://www.realtor.com/realestateandhomes-detail/395-Hyannis-Hills-Dr_Tekonsha_MI_49092_M39895-73904",
-    "price": 279900,
+    "price": 269900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/a5a5f039723b36224cb921b252547868l-m1074728111s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-54-47",
+    "date_pulled": "09-03-2025_11-57-22",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.5,
     "lotsqft": null,
     "sqft": 3282,
-    "price_sqft": 85,
+    "price_sqft": 82,
     "lat": 42.06606,
     "long": -85.003233,
     "zipc": 49092,
@@ -14183,9 +14190,15 @@
     "price_hist": {
       "08-11-2025": {
         "price_ch_amt": -10000,
-        "last_price": 289900,
+        "last_price": 279900,
         "price_c_dat": "08-11-2025_09-41-32",
-        "perc_change": -3.45
+        "perc_change": -3.57
+      },
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 279900,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -3.71
       }
     },
     "seller": "Remerica United Realty-Brighton",
@@ -14318,25 +14331,32 @@
     "city": "Tekonsha",
     "state": "MI",
     "url": "https://www.homes.com/property/395-hyannis-hills-dr-tekonsha-mi/dwfnjzgtkx9je/",
-    "price": 279900,
+    "price": 269900,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/9357691834-669755991/395-hyannis-hills-dr-tekonsha-mi-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-54-51",
+    "date_pulled": "09-03-2025_11-57-49",
     "description": "Buyer backed out on day of closing due to health issues. This home is a perfect fit for a buyer to consider the FHA 203k mortgage.  Update your kitchen, baths, flooring, anything about the house, including the walkout basement, just the way ''you want it'' and it happens within 90 days after you close! 1.43 acres, approx. 26 x 150 ft on the canal with immediate access on Vincent Lake.  Very",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 4,
     "lotsqft": null,
     "sqft": 3282,
-    "price_sqft": 85,
+    "price_sqft": 82,
     "lat": null,
     "long": null,
     "zipc": 49092,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 279900,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -3.71
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Remerica United Realty"
@@ -14433,25 +14453,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.zillow.com/homedetails/102-Chaudoin-Dr-Angola-IN-46703/85723915_zpid/",
-    "price": 415000,
+    "price": 405000,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/536241185f31d072e3e4f86c6ebc9525-p_e.jpg",
-    "date_pulled": "08-30-2025_11-55-07",
-    "description": "Open: Sat 1-3pm (8/30)",
+    "date_pulled": "09-03-2025_12-00-10",
+    "description": "Price cut: $10,000 (9/3)",
     "htype": "SINGLE_FAMILY",
     "beds": 4.0,
     "baths": 4.0,
     "lotsqft": "0.49 acres",
     "sqft": 3538,
-    "price_sqft": 117,
+    "price_sqft": 114,
     "lat": 41.6231,
     "long": -84.99849,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 415000,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -2.47
+      }
+    },
     "seller": "RE/MAX Results - Angola office",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -14462,8 +14489,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 4,
-    "zestimate": 402000
+    "daysOnZillow": 8,
+    "zestimate": 394100
   },
   "85723348": {
     "address": "312 W Pleasant St, Angola, IN 46703",
@@ -16074,28 +16101,41 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.realtor.com/realestateandhomes-detail/102-Chaudoin-Dr_Angola_IN_46703_M48671-69669",
-    "price": 415000,
+    "price": 405000,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/9e30edf5ccf71f3211bf63cf15c61587l-b601296782s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-55-12",
+    "date_pulled": "09-03-2025_11-59-34",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 2.5,
     "lotsqft": null,
     "sqft": 3538,
-    "price_sqft": 117,
+    "price_sqft": 114,
     "lat": 41.62291,
     "long": -84.998536,
     "zipc": 46703,
     "list_dt": "08-25-2025_19-51-35",
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "08-25-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 415000,
+        "price_c_dat": "08-25-2025_19-51-35",
+        "perc_change": -2.41
+      },
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 415000,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -2.47
+      }
+    },
     "seller": "RE MAX Results",
     "sellerinfo": {
       "advertisers": [
@@ -16126,7 +16166,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": true,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -18211,25 +18251,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.homes.com/property/102-chaudoin-dr-angola-in/rt136vvftmw91/",
-    "price": 415000,
+    "price": 405000,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/4751475644-875908202/102-chaudoin-dr-angola-in-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-55-17",
+    "date_pulled": "09-03-2025_11-59-53",
     "description": "OPEN HOUSE THIS SATURDAY 1:00-3:00    Check out this 4 bedroom 4 bath beauty just south of Angola in an upscale neighborhood on the south side of Angola.  As you walk in you are greeted with a vaulted grand entrance.  The main floor boasts a  kitchen with island seating and overlooks the back yard plus a formal dining room, half bath  and living room with gas fireplace to cozy up to. Upstairs",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 4,
     "lotsqft": null,
     "sqft": 3538,
-    "price_sqft": 117,
+    "price_sqft": 114,
     "lat": 41.6236681,
     "long": -84.9982121,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 415000,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -2.47
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "RE/MAX Results - Angola office"
@@ -18788,25 +18835,32 @@
     "city": "Angola",
     "state": "IN",
     "url": "https://www.redfin.com/IN/Angola/102-Chaudoin-Dr-46703/home/140512791",
-    "price": 415000,
+    "price": 405000,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-57-54",
+    "date_pulled": "09-03-2025_11-59-45",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 3538,
-    "price_sqft": 117,
+    "price_sqft": 114,
     "lat": 41.6231231,
     "long": -84.9984979,
     "zipc": 46703,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-03-2025": {
+        "price_ch_amt": -10000,
+        "last_price": 415000,
+        "price_c_dat": "09-03-2025",
+        "perc_change": -2.47
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
