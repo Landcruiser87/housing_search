@@ -31,8 +31,6 @@ def sir_plots_alot():
 # FUNCTION Update plot
     def update_plot(val):
         # Handles the plot updating
-        global ax_ecg
-        
         #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
         # BUTTON_VALS = ['price','sqft','price_sqft', 'price_change', 'saved', 'days', 'weeks', 'months', 'all']
         command = radio.value_selected

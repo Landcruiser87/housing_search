@@ -41,7 +41,13 @@ def get_listings(result:BeautifulSoup, neigh:str, source:str, Propertyinfo)->lis
             listing.source       = source
             listing.city         = listinginfo[0]["address"].get("addressLocality", defaultval)
             listing.state        = listinginfo[0]["address"].get("addressRegion", defaultval)
-            listing.zipc         = int(listinginfo[0]["address"].get("postalCode", defaultval))
+            listing.zipc         = listinginfo[0]["address"].get("postalCode", defaultval)
+            if listing.zipc != None:
+                if " " in listing.zipc:
+                    listing.zipc = int(listing.zipc[:4])
+                else:
+                    listing.zipc = int(listing.zipc)
+            
             listing.address      = listinginfo[0].get("name", defaultval)
             listing.htype        = listinginfo[0].get("@type", defaultval)
             listing.sqft         = "".join([x for x in str(listinginfo[0]["floorSize"].get("value", defaultval)) if x.isnumeric()])

@@ -3126,25 +3126,32 @@
     "city": "Coldwater",
     "state": "MI",
     "url": "https://www.redfin.com/MI/Coldwater/44-Candlewood-Ct-49036/home/99876410",
-    "price": 549900,
+    "price": 524900,
     "source": "www.redfin.com",
     "status": "offer",
     "img_url": null,
-    "date_pulled": "08-30-2025_11-49-32",
+    "date_pulled": "09-04-2025_11-50-06",
     "description": null,
     "htype": "SingleFamilyResidence",
     "beds": 4.0,
     "baths": null,
     "lotsqft": null,
     "sqft": 3829,
-    "price_sqft": 143,
+    "price_sqft": 137,
     "lat": 41.9520635,
     "long": -85.0276294,
     "zipc": 49036,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-04-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 549900,
+        "price_c_dat": "09-04-2025",
+        "perc_change": -4.76
+      }
+    },
     "seller": {},
     "sellerinfo": {},
     "extras": {}
@@ -4064,25 +4071,32 @@
     "city": "Coldwater",
     "state": "MI",
     "url": "https://www.zillow.com/homedetails/44-Candlewood-Ct-Coldwater-MI-49036/106257196_zpid/",
-    "price": 549900,
+    "price": 524900,
     "source": "www.zillow.com",
     "status": "for_sale",
     "img_url": "https://photos.zillowstatic.com/fp/392179c49ebdf98519b260690af6a4cc-p_e.jpg",
-    "date_pulled": "08-30-2025_11-49-40",
-    "description": "Solid oak floors",
+    "date_pulled": "09-04-2025_11-50-25",
+    "description": "Price cut: $25,000 (9/4)",
     "htype": "SINGLE_FAMILY",
     "beds": 4.0,
     "baths": 4.0,
     "lotsqft": "0.49 acres",
     "sqft": 3829,
-    "price_sqft": 143,
+    "price_sqft": 137,
     "lat": 41.95207,
     "long": -85.0277,
     "zipc": 49036,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-04-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 549900,
+        "price_c_dat": "09-04-2025",
+        "perc_change": -4.76
+      }
+    },
     "seller": "Berkshire Hathaway HomeServices Michigan Real Estate",
     "sellerinfo": {
       "isZillowOwned": false,
@@ -4093,8 +4107,8 @@
       "marketingStatusSimplifiedCd": "For Sale by Agent"
     },
     "extras": {},
-    "daysOnZillow": 7,
-    "zestimate": 528500
+    "daysOnZillow": 12,
+    "zestimate": 530600
   },
   "106258009": {
     "address": "85 Arrowhead Dr, Coldwater, MI 49036",
@@ -5743,28 +5757,41 @@
     "city": "Coldwater",
     "state": "MI",
     "url": "https://www.realtor.com/realestateandhomes-detail/44-Candlewood-Ct_Coldwater_MI_49036_M43896-23797",
-    "price": 549900,
+    "price": 524900,
     "source": "www.realtor.com",
     "status": "for_sale",
     "img_url": {
       "href": "https://ap.rdcpix.com/ab37c5eeb7db7b3ee3d3e3e08712bdcfl-m930156631s.jpg",
       "__typename": "HomePhoto"
     },
-    "date_pulled": "08-30-2025_11-49-48",
+    "date_pulled": "09-04-2025_11-50-14",
     "description": null,
     "htype": "single_family",
     "beds": 4.0,
     "baths": 3.5,
     "lotsqft": null,
     "sqft": 3829,
-    "price_sqft": 143,
+    "price_sqft": 137,
     "lat": 41.952005,
     "long": -85.027651,
     "zipc": 49036,
     "list_dt": "08-22-2025_17-53-47",
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "08-22-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 549900,
+        "price_c_dat": "08-22-2025_17-53-47",
+        "perc_change": -4.55
+      },
+      "09-04-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 549900,
+        "price_c_dat": "09-04-2025",
+        "perc_change": -4.76
+      }
+    },
     "seller": "Berkshire Hathaway HomeServices Michigan Real Estate - Marshall",
     "sellerinfo": {
       "advertisers": [
@@ -5791,7 +5818,7 @@
       "flags": {
         "is_coming_soon": null,
         "is_new_listing": true,
-        "is_price_reduced": null,
+        "is_price_reduced": true,
         "is_foreclosure": null,
         "is_new_construction": null,
         "is_pending": null,
@@ -20693,5 +20720,218 @@
     "seller": {},
     "sellerinfo": {},
     "extras": {}
+  },
+  "96438673": {
+    "address": "20020 T Dr S, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Tekonsha/20020-T-Dr-S-49092/home/96438673",
+    "price": 265000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_11-49-39",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1740,
+    "price_sqft": 152,
+    "lat": 42.1010851,
+    "long": -84.9040905,
+    "zipc": 49092,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "130914731": {
+    "address": "310 Todd St, Topeka, IN 46571",
+    "city": "Topeka",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Topeka/310-Todd-St-46571/home/130914731",
+    "price": 399900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_11-50-38",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1923,
+    "price_sqft": 207,
+    "lat": 41.544268,
+    "long": -85.536617,
+    "zipc": 46571,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "122605615": {
+    "address": "20020 T Dr S, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.zillow.com/homedetails/20020-T-Dr-S-Tekonsha-MI-49092/122605615_zpid/",
+    "price": 265000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/4804fb0278f2a869fd03ab3bfe1077e4-p_e.jpg",
+    "date_pulled": "09-04-2025_11-52-16",
+    "description": "16 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "2.0 acres",
+    "sqft": 1740,
+    "price_sqft": 152,
+    "lat": 42.101074,
+    "long": -84.90408,
+    "zipc": 49092,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "EXP Realty",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": null,
+      "info6String": null,
+      "brokerName": "EXP Realty",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 260300
+  },
+  "48tk74rzp20q1": {
+    "address": "20020 T Dr S, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.homes.com/property/20020-t-dr-s-tekonsha-mi/48tk74rzp20q1/",
+    "price": 265000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1089770934-661408991/20020-t-dr-s-tekonsha-mi-primaryphoto.jpg",
+    "date_pulled": "09-04-2025_11-52-33",
+    "description": "Brand New and installed August 2025 septic 1500 gallon and drain field 30X30 <br><br>Charming 4-Bedroom Farmhouse on 2 Acres - Fully Remodeled<br><br>Step into timeless charm with all the modern comforts in this beautifully remodeled 4-bedroom, 2-bath farmhouse. Originally built in 1900, this home has been thoughtfully updated throughout, blending historic character with contemporary",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 1740,
+    "price_sqft": 152,
+    "lat": 42.1015357,
+    "long": -84.9040338,
+    "zipc": 49092,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "EXP Realty"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/alpxy4FGg3hy5R2m0catqAVmwr7XyKugHGpfSsAam5w/105/image.jpg?t=p&p=1",
+      "telephone": "(269) 317-9919",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "EXP Realty"
+      },
+      "name": "Joscelyn Brady"
+    },
+    "extras": {}
+  },
+  "2983564959": {
+    "address": "20020 T Dr S, Tekonsha, MI 49092",
+    "city": "Tekonsha",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/20020-T-Dr-S_Tekonsha_MI_49092_M96189-93483",
+    "price": 265000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/f223e1081a353b1210644da087fa9157l-m2070399051s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-04-2025_11-52-45",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1740,
+    "price_sqft": 152,
+    "lat": 42.096275,
+    "long": -84.902072,
+    "zipc": 49092,
+    "list_dt": "06-26-2025_16-23-43",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {
+      "09-04-2025": {
+        "price_ch_amt": 10000,
+        "last_price": 255000,
+        "price_c_dat": "09-04-2025_00-17-44",
+        "perc_change": 3.92
+      }
+    },
+    "seller": "Exp Realty, LLC",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "100523723",
+          "name": "Joscelyn Mitchell",
+          "builder": null,
+          "email": "olemissluke2017@gmail.com",
+          "office": {
+            "name": "Exp Realty, LLC",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "(269) 317-9919",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": false,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Exp Realty, LLC",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1900
   }
 }

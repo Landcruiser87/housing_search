@@ -76537,5 +76537,199 @@
     "long": "",
     "L_dist": "",
     "crime_sc": {}
+  },
+  "dt02ly9yjh0fd": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.homes.com/property/6051-n-paulina-st-chicago-il/dt02ly9yjh0fd/",
+    "address": "6051 N Paulina St Chicago, IL 60660",
+    "date_pulled": "09-04-2025_15-04-48",
+    "bed": 3.0,
+    "bath": 1.5,
+    "sqft": 1250.0,
+    "lat": 41.9921761,
+    "long": -87.6713406,
+    "L_dist": [
+      "Granville",
+      0.63
+    ],
+    "crime_sc": {
+      "drug_score": 2.64,
+      "gun_score": 3.98,
+      "murder_score": 1.05,
+      "perv_score": 1.6,
+      "theft_score": 44.58,
+      "violence_score": 23.85,
+      "property_d_score": 0.14
+    }
+  },
+  "yyp3d4t": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/5711-n-kimball-ave-chicago-il/yyp3d4t/",
+    "address": "5711 N Kimball Ave, Chicago, IL 60659",
+    "date_pulled": "09-04-2025_15-05-35",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.9852634,
+    "long": -87.7134508,
+    "L_dist": [
+      "Kimball",
+      1.2
+    ],
+    "crime_sc": {
+      "drug_score": 2.95,
+      "gun_score": 4.0,
+      "murder_score": 1.16,
+      "perv_score": 1.56,
+      "theft_score": 43.94,
+      "violence_score": 23.84,
+      "property_d_score": 0.14
+    }
+  },
+  "nymkm5m": {
+    "source": "www.apartments.com",
+    "price": 2600.0,
+    "neigh": "north-park",
+    "dogs": true,
+    "link": "https://www.apartments.com/5851-n-virginia-ave-chicago-il/nymkm5m/",
+    "address": "5851 N Virginia Ave, Chicago, IL 60659",
+    "date_pulled": "09-04-2025_15-05-35",
+    "bed": 3.0,
+    "bath": 2.0,
+    "sqft": 1300.0,
+    "lat": 41.9882221,
+    "long": -87.7063147,
+    "L_dist": [
+      "Kimball",
+      1.45
+    ],
+    "crime_sc": {
+      "drug_score": 2.77,
+      "gun_score": 3.96,
+      "murder_score": 1.14,
+      "perv_score": 1.6,
+      "theft_score": 44.18,
+      "violence_score": 23.81,
+      "property_d_score": 0.14
+    }
+  },
+  "456393256": {
+    "source": "www.zillow.com",
+    "price": 2600.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3648-N-Bell-Ave-1-Chicago-IL-60618/456393256_zpid/",
+    "address": "3648 N Bell Ave #1, Chicago, IL 60618",
+    "date_pulled": "09-04-2025_15-08-26",
+    "bed": 3.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": 41.948223,
+    "long": -87.68502,
+    "L_dist": [
+      "Addison",
+      0.54
+    ],
+    "crime_sc": {
+      "drug_score": 4.22,
+      "gun_score": 4.87,
+      "murder_score": 1.62,
+      "perv_score": 1.59,
+      "theft_score": 41.16,
+      "violence_score": 25.28,
+      "property_d_score": 0.14
+    }
+  },
+  "7td2krfs6d0qw": {
+    "source": "www.homes.com",
+    "price": 2500.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2300-burr-oak-ave-riverside-il/7td2krfs6d0qw/",
+    "address": "2300 Burr Oak Ave Riverside, IL 60546 Chicago",
+    "date_pulled": "09-04-2025_15-08-48",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "87719535": {
+    "source": "www.zillow.com",
+    "price": 1850.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/Chicago-IL-60618/87719535_zpid/",
+    "address": "(undisclosed Address), Chicago, IL 60618",
+    "date_pulled": "09-04-2025_15-11-24",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": null,
+    "long": null,
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "2083396808": {
+    "source": "www.zillow.com",
+    "price": 1700.0,
+    "neigh": "ravenswood",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/5020-N-Washtenaw-Ave-APT-1S-Chicago-IL-60625/2083396808_zpid/",
+    "address": "5020 N Washtenaw Ave APT 1S, Chicago, IL 60625",
+    "date_pulled": "09-04-2025_15-12-23",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 900.0,
+    "lat": 41.972843,
+    "long": -87.69659,
+    "L_dist": [
+      "Rockwell",
+      0.48
+    ],
+    "crime_sc": {
+      "drug_score": 3.47,
+      "gun_score": 4.42,
+      "murder_score": 1.43,
+      "perv_score": 1.49,
+      "theft_score": 43.0,
+      "violence_score": 24.49,
+      "property_d_score": 0.14
+    }
+  },
+  "bb4q8c9": {
+    "source": "www.apartments.com",
+    "price": 2265.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/825-e-61st-st-chicago-il/bb4q8c9/",
+    "address": "825 E 61st St, Chicago, IL 60637",
+    "date_pulled": "09-04-2025_15-13-53",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": null,
+    "lat": 41.7838552,
+    "long": -87.6048541,
+    "L_dist": [
+      "Cottage Grove",
+      0.25
+    ],
+    "crime_sc": {
+      "drug_score": 2.11,
+      "gun_score": 7.68,
+      "murder_score": 2.17,
+      "perv_score": 1.48,
+      "theft_score": 35.18,
+      "violence_score": 30.28,
+      "property_d_score": 0.17
+    }
   }
 }
