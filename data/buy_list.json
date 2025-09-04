@@ -2212,25 +2212,32 @@
     "city": "Coldwater",
     "state": "MI",
     "url": "https://www.homes.com/property/44-candlewood-ct-coldwater-mi/jsmk4gcnfvbvm/",
-    "price": 549900,
+    "price": 524900,
     "source": "www.homes.com",
     "status": "Offer",
     "img_url": "https://images.homes.com/listings/111/7231933644-149737202/44-candlewood-ct-coldwater-mi-primaryphoto.jpg",
-    "date_pulled": "08-30-2025_11-47-12",
+    "date_pulled": "09-04-2025_17-58-56",
     "description": "CALL LORI STURDEVANT 269-579-3626 FOR YOUR OPPORTUNITY TO TOUR THIS CUSTOM BUILT 4 BEDROOM, 4 BATH HOME FEATURING SUPERIOR QUALITY. Prime location near the North Chain of Lakes and walking distance to Heritage Park with ball fields, Rec Center, Aquatic Center, and Coldwater Schools. In 2022, a 4-season sun-room was added with a new deck and sunshade, expanding year-round living space. Inside, the",
     "htype": "SingleFamilyResidence",
     "beds": 4,
     "baths": 4,
     "lotsqft": null,
     "sqft": 3829,
-    "price_sqft": 143,
+    "price_sqft": 137,
     "lat": 41.9523359,
     "long": -85.0271531,
     "zipc": 49036,
     "list_dt": null,
     "sale_dt": null,
     "sold": false,
-    "price_hist": {},
+    "price_hist": {
+      "09-04-2025": {
+        "price_ch_amt": -25000,
+        "last_price": 549900,
+        "price_c_dat": "09-04-2025",
+        "perc_change": -4.76
+      }
+    },
     "seller": {
       "@type": "Organization",
       "name": "Berkshire Hathaway HomeServices Michigan Real Estate"
@@ -20933,5 +20940,711 @@
     },
     "extras": {},
     "year_built": 1900
+  },
+  "96288912": {
+    "address": "983 Moore Rd, Quincy, MI 49082",
+    "city": "Quincy",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Quincy/983-Moore-Rd-49082/home/96288912",
+    "price": 399900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_17-57-07",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 5.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 4000,
+    "price_sqft": 99,
+    "lat": 42.0470074,
+    "long": -84.8882135,
+    "zipc": 49082,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "96257086": {
+    "address": "435 E Girard Rd, Coldwater, MI 49036 9642",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Coldwater/435-E-Girard-Rd-49036/home/96257086",
+    "price": 249900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_17-57-07",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2532,
+    "price_sqft": 98,
+    "lat": 42.0289617,
+    "long": -84.9938533,
+    "zipc": 4903,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "y0w2rn684m8qf": {
+    "address": "126 W Hanover St, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.homes.com/property/126-w-hanover-st-marshall-mi/y0w2rn684m8qf/",
+    "price": 275000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/3212040844-558353302/126-w-hanover-st-marshall-mi-primaryphoto.jpg",
+    "date_pulled": "09-04-2025_17-57-52",
+    "description": "MARSHALL, MI - HISTORIC GOTHIC REVIVAL in the heart of downtown Marshall. Stately sugar maples & willowy spirea frame this beautiful home on a large lot. One of a kind and unique property. There have been two extensive renovations & the sweeping Queen Anne style porch is the perfect place to enjoy life. Wood floors throughout include restored oak, pine, curly & birdseye maple floors. Signed",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 2134,
+    "price_sqft": 128,
+    "lat": 42.2700383,
+    "long": -84.9594395,
+    "zipc": 49068,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "RE/MAX Platinum"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "telephone": "(248) 207-7222",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "RE/MAX Platinum"
+      },
+      "name": "Kathie Crowley"
+    },
+    "extras": {}
+  },
+  "2986050533": {
+    "address": "126 W Hanover St, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/126-W-Hanover-St_Marshall_MI_49068_M30180-84411",
+    "price": 275000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/abcbbedf877da043a92f4a13c4ff5f9al-m136342083s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-04-2025_17-58-04",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 2134,
+    "price_sqft": 128,
+    "lat": 42.270282,
+    "long": -84.960151,
+    "zipc": 49068,
+    "list_dt": "09-04-2025_21-23-43",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "RE MAX Platinum",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "588523",
+          "name": "KATHIE CROWLEY",
+          "builder": null,
+          "email": "kathie.crowley@yahoo.com",
+          "office": {
+            "name": "RE MAX Platinum",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2482077222",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2482077222",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "8102274600",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "RE MAX Platinum",
+          "photo": "https://ap.rdcpix.com/ea5710d7495a68502af6ceb98a791935o-b2274465705s.jpg",
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1860
+  },
+  "96216246": {
+    "address": "126 W Hanover St, Marshall, MI 49068",
+    "city": "Marshall",
+    "state": "MI",
+    "url": "https://www.redfin.com/MI/Marshall/126-W-Hanover-St-49068/home/96216246",
+    "price": 275000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_17-58-15",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 2134,
+    "price_sqft": 128,
+    "lat": 42.2701639,
+    "long": -84.9601699,
+    "zipc": 49068,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "140467141": {
+    "address": "1000 N 330 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Angola/1000-N-330-W-46703/home/140467141",
+    "price": 825000,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_17-58-42",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 5.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 4893,
+    "price_sqft": 168,
+    "lat": 41.6572538,
+    "long": -85.05356,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "z022j8r0hd36p": {
+    "address": "435 E Girard Rd, Coldwater, MI 49036",
+    "city": "Coldwater",
+    "state": "MI",
+    "url": "https://www.homes.com/property/435-e-girard-rd-coldwater-mi/z022j8r0hd36p/",
+    "price": 249900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/1189700844-316443302/435-e-girard-rd-coldwater-mi-primaryphoto.jpg",
+    "date_pulled": "09-04-2025_17-58-56",
+    "description": "Peaceful country Living at its finest! Spacious 4-generously sized bedrooms, 2-full bath home now available in Coldwater. This property offers the tranquility of country living on 2.07 acres, surrounded by farmland, while still providing convenient access to city amenities. The home features a popular open floor plan, a beautifully updated and bright kitchen with a large island perfect for",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 2532,
+    "price_sqft": 98,
+    "lat": null,
+    "long": null,
+    "zipc": 49036,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "KW Professionals"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/V5FcBmAREGZLEWoVwJeS9pH-cLzYBR_moqXY_EfomrE/105/image.jpg?t=p&p=1",
+      "telephone": "(855) 533-3735",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "KW Professionals"
+      },
+      "name": "Jeff Glover"
+    },
+    "extras": {}
+  },
+  "2986042091": {
+    "address": "435 E Girard Rd, Girard Township, MI 49036",
+    "city": "Girard Township",
+    "state": "MI",
+    "url": "https://www.realtor.com/realestateandhomes-detail/435-E-Girard-Rd_Coldwater_MI_49036_M31272-03922",
+    "price": 249900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/33c0208212186926b2e5c540fded22c9l-m2336603855s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-04-2025_17-59-09",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 2532,
+    "price_sqft": 98,
+    "lat": 42.028901,
+    "long": -84.993667,
+    "zipc": 49036,
+    "list_dt": "09-04-2025_19-24-58",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Keller Williams Professionals",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "166608",
+          "name": "Jeff Glover",
+          "builder": null,
+          "email": "adminteam@gloveragency.com",
+          "office": {
+            "name": "Keller Williams Professionals",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2489961100",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "6165941000",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "7342591100",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        },
+        {
+          "type": "co_seller",
+          "fulfillment_id": "425935",
+          "name": "Sandy & Frank Frederick",
+          "builder": null,
+          "email": "sandysellzhomes@gmail.com",
+          "office": {
+            "name": "Keller Williams Professionals",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "7345367997",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": true,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Keller Williams Professionals",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1900
+  },
+  "140428113": {
+    "address": "730 E 50 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.redfin.com/IN/Angola/730-E-50-N-46703/home/140428113",
+    "price": 239900,
+    "source": "www.redfin.com",
+    "status": "offer",
+    "img_url": null,
+    "date_pulled": "09-04-2025_18-00-22",
+    "description": null,
+    "htype": "SingleFamilyResidence",
+    "beds": 4.0,
+    "baths": null,
+    "lotsqft": null,
+    "sqft": 1716,
+    "price_sqft": 139,
+    "lat": 41.6503743,
+    "long": -84.9758277,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {},
+    "sellerinfo": {},
+    "extras": {}
+  },
+  "hen9t4j85tqpe": {
+    "address": "1000 N 330 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/1000-n-330-w-angola-in/hen9t4j85tqpe/",
+    "price": 825000,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/8178520844-992053302/1000-n-330-w-angola-in-primaryphoto.jpg",
+    "date_pulled": "09-04-2025_18-00-30",
+    "description": "Nestled in a sought-after neighborhood, this exceptional two-story home with a full walkout basement offers the perfect blend of luxury, comfort, and functionality. Boasting 5 spacious bedrooms, 3 full bathrooms, and 2 half baths, this residence is designed to accommodate both everyday living and grand entertaining. Step into the chef\u2019s kitchen, a culinary dream featuring custom cabinetry, a",
+    "htype": "SingleFamilyResidence",
+    "beds": 5,
+    "baths": 5,
+    "lotsqft": null,
+    "sqft": 4893,
+    "price_sqft": 168,
+    "lat": null,
+    "long": null,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Coldwell Banker Real Estate Group"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/-UBoYoWXSKADSxbBtSSe29iZWaMYaNlFn-pkj8sEmyM/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 833-6334",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Coldwell Banker Real Estate Group"
+      },
+      "name": "Craig Walker"
+    },
+    "extras": {}
+  },
+  "qr2new86vespr": {
+    "address": "730 E 50 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.homes.com/property/730-e-50-n-angola-in/qr2new86vespr/",
+    "price": 239900,
+    "source": "www.homes.com",
+    "status": "Offer",
+    "img_url": "https://images.homes.com/listings/111/8521489744-712833302/730-e-50-n-angola-in-primaryphoto.jpg",
+    "date_pulled": "09-04-2025_18-00-30",
+    "description": "Open House Saturday, September 06, 2025 11:00AM-1:00PM Enjoy the best of both worlds with this spacious 4-bedroom, 2-bathroom home nestled on 1.3 acres just outside of town. Offering a peaceful country setting with easy access to local amenities, this property is ideal for those seeking space, privacy, and functionality. The home features a main-level primary suite with private en suite bath,",
+    "htype": "SingleFamilyResidence",
+    "beds": 4,
+    "baths": 2,
+    "lotsqft": null,
+    "sqft": 1716,
+    "price_sqft": 139,
+    "lat": 41.6502101,
+    "long": -84.975626,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": {
+      "@type": "Organization",
+      "name": "Century 21 Bradley-Angola"
+    },
+    "sellerinfo": {
+      "@type": "Person",
+      "image": "https://imagescdn.homes.com/i2/WVQb_eh5fcqznTDnlgXNqPzp7k56oeb0OauN83Uftyo/105/image.jpg?t=p&p=1",
+      "telephone": "(260) 200-0210",
+      "jobTitle": "Listing Agent",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Century 21 Bradley-Angola"
+      },
+      "name": "Erika Wise"
+    },
+    "extras": {}
+  },
+  "85722787": {
+    "address": "730 E 50 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/730-E-50-N-Angola-IN-46703/85722787_zpid/",
+    "price": 239900,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/066c0cabcb8f68fa31bfe4e01e7b9ecc-p_e.jpg",
+    "date_pulled": "09-04-2025_18-00-51",
+    "description": "5 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 2.0,
+    "baths": 4.0,
+    "lotsqft": "1.3 acres",
+    "sqft": 1716,
+    "price_sqft": 139,
+    "lat": 41.650364,
+    "long": -84.97579,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Erika Gaetz",
+      "brokerName": "Century 21 Bradley-Angola",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0,
+    "zestimate": 232200
+  },
+  "126944760": {
+    "address": "1000 N 330 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.zillow.com/homedetails/1000-N-330-W-Angola-IN-46703/126944760_zpid/",
+    "price": 825000,
+    "source": "www.zillow.com",
+    "status": "for_sale",
+    "img_url": "https://photos.zillowstatic.com/fp/d6164d076e897a230d71c70a855dd6b2-p_e.jpg",
+    "date_pulled": "09-04-2025_18-00-51",
+    "description": "2 hours ago",
+    "htype": "SINGLE_FAMILY",
+    "beds": 5.0,
+    "baths": 5.0,
+    "lotsqft": "2.57 acres",
+    "sqft": 4893,
+    "price_sqft": 168,
+    "lat": 41.657246,
+    "long": -85.05354,
+    "zipc": 46703,
+    "list_dt": null,
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Coldwell Banker Real Estate Group",
+    "sellerinfo": {
+      "isZillowOwned": false,
+      "pgapt": "ForSale",
+      "info2String": "Listing provided by IRMLS",
+      "info6String": "Craig A Walker",
+      "brokerName": "Coldwell Banker Real Estate Group",
+      "marketingStatusSimplifiedCd": "For Sale by Agent"
+    },
+    "extras": {},
+    "daysOnZillow": 0
+  },
+  "2986036671": {
+    "address": "730 E 50 N, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/730-E-50-N_Angola_IN_46703_M45397-88364",
+    "price": 239900,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/153e341ca1beda47186bd3b8da307e08l-b1332762s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-04-2025_18-00-55",
+    "description": null,
+    "htype": "single_family",
+    "beds": 4.0,
+    "baths": 2.0,
+    "lotsqft": null,
+    "sqft": 1716,
+    "price_sqft": 139,
+    "lat": 41.650806,
+    "long": -84.975935,
+    "zipc": 46703,
+    "list_dt": "09-04-2025_17-35-53",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Century 21 Bradley-Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "3118796",
+          "name": "Erika Wise",
+          "builder": null,
+          "email": "erika@christythomson.com",
+          "office": {
+            "name": "Century 21 Bradley-Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2602000210",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Century 21 Bradley-Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1975
+  },
+  "2986047068": {
+    "address": "1000 N 330 W, Angola, IN 46703",
+    "city": "Angola",
+    "state": "IN",
+    "url": "https://www.realtor.com/realestateandhomes-detail/1000-N-330-W_Angola_IN_46703_M46661-19909",
+    "price": 825000,
+    "source": "www.realtor.com",
+    "status": "for_sale",
+    "img_url": {
+      "href": "https://ap.rdcpix.com/83d59794fe9a63997e8e206a3535c7d3l-m3166986749s.jpg",
+      "__typename": "HomePhoto"
+    },
+    "date_pulled": "09-04-2025_18-00-55",
+    "description": null,
+    "htype": "single_family",
+    "beds": 5.0,
+    "baths": 3.5,
+    "lotsqft": null,
+    "sqft": 4893,
+    "price_sqft": 168,
+    "lat": 41.657173,
+    "long": -85.053191,
+    "zipc": 46703,
+    "list_dt": "09-04-2025_20-21-38",
+    "sale_dt": null,
+    "sold": false,
+    "price_hist": {},
+    "seller": "Coldwell Banker Real Estate Group - Angola",
+    "sellerinfo": {
+      "advertisers": [
+        {
+          "type": "seller",
+          "fulfillment_id": "109420",
+          "name": "Craig A Walker",
+          "builder": null,
+          "email": "craigwalker.realtor@gmail.com",
+          "office": {
+            "name": "Coldwell Banker Real Estate Group - Angola",
+            "__typename": "HomeAdvertiserOffice"
+          },
+          "phones": [
+            {
+              "number": "2608336334",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2606657797",
+              "__typename": "AdvertiserPhone"
+            },
+            {
+              "number": "2608336334",
+              "__typename": "AdvertiserPhone"
+            }
+          ],
+          "__typename": "HomeAdvertiser"
+        }
+      ],
+      "offeredBy": null,
+      "flags": {
+        "is_coming_soon": null,
+        "is_new_listing": true,
+        "is_price_reduced": null,
+        "is_foreclosure": null,
+        "is_new_construction": null,
+        "is_pending": null,
+        "is_contingent": null,
+        "__typename": "SearchHomeFlags"
+      },
+      "branding": [
+        {
+          "type": "Office",
+          "name": "Coldwell Banker Real Estate Group - Angola",
+          "photo": null,
+          "__typename": "Branding"
+        }
+      ]
+    },
+    "extras": {},
+    "year_built": 1994
   }
 }
