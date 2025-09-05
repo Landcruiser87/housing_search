@@ -76731,5 +76731,156 @@
       "violence_score": 30.28,
       "property_d_score": 0.17
     }
+  },
+  "9mmeb4rxxjd8p": {
+    "source": "www.homes.com",
+    "price": 2600.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.homes.com/property/4941-w-drummond-place-chicago-il/9mmeb4rxxjd8p/",
+    "address": "4941 W Drummond Place Chicago, IL 60639",
+    "date_pulled": "09-05-2025_15-22-12",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 1350.0,
+    "lat": 41.9285777,
+    "long": -87.750542,
+    "L_dist": [
+      "Irving Park",
+      2.01
+    ],
+    "crime_sc": {
+      "drug_score": 4.72,
+      "gun_score": 5.49,
+      "murder_score": 1.87,
+      "perv_score": 1.82,
+      "theft_score": 38.18,
+      "violence_score": 27.13,
+      "property_d_score": 0.17
+    }
+  },
+  "bl71b4b": {
+    "source": "www.apartments.com",
+    "price": 2150.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.apartments.com/3238-n-whipple-st-chicago-il/bl71b4b/",
+    "address": "3238 N Whipple St, Chicago, IL 60618",
+    "date_pulled": "09-05-2025_15-22-36",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 900.0,
+    "lat": 41.9405254,
+    "long": -87.704271,
+    "L_dist": [
+      "Belmont",
+      0.45
+    ],
+    "crime_sc": {
+      "drug_score": 4.12,
+      "gun_score": 4.89,
+      "murder_score": 1.65,
+      "perv_score": 1.62,
+      "theft_score": 41.02,
+      "violence_score": 25.39,
+      "property_d_score": 0.14
+    }
+  },
+  "113959414": {
+    "source": "www.zillow.com",
+    "price": 2290.0,
+    "neigh": "avondale",
+    "dogs": true,
+    "link": "https://www.zillow.com/homedetails/3963-W-Belmont-Ave-UNIT-422-Chicago-IL-60618/113959414_zpid/",
+    "address": "3963 W Belmont Ave UNIT 422, Chicago, IL 60618",
+    "date_pulled": "09-05-2025_15-23-13",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": 1000.0,
+    "lat": 41.93887,
+    "long": -87.72653,
+    "L_dist": [
+      "Addison",
+      0.7
+    ],
+    "crime_sc": {
+      "drug_score": 4.24,
+      "gun_score": 4.97,
+      "murder_score": 1.72,
+      "perv_score": 1.67,
+      "theft_score": 40.51,
+      "violence_score": 25.73,
+      "property_d_score": 0.15
+    }
+  },
+  "qh6bwe1bf3c3s": {
+    "source": "www.homes.com",
+    "price": 2495.0,
+    "neigh": "north-center",
+    "dogs": true,
+    "link": "https://www.homes.com/property/2327-northgate-ave-riverside-il/qh6bwe1bf3c3s/",
+    "address": "2327 Northgate Ave Riverside, IL 60546 Chicago",
+    "date_pulled": "09-05-2025_15-25-03",
+    "bed": 2.0,
+    "bath": 1.0,
+    "sqft": null,
+    "lat": "",
+    "long": "",
+    "L_dist": "",
+    "crime_sc": {}
+  },
+  "kh8s96c": {
+    "source": "www.apartments.com",
+    "price": 2200.0,
+    "neigh": "mayfair",
+    "dogs": true,
+    "link": "https://www.apartments.com/10005-s-calhoun-ave-chicago-il/kh8s96c/",
+    "address": "10005 S Calhoun Ave, Chicago, IL 60617",
+    "date_pulled": "09-05-2025_15-25-37",
+    "bed": 2.0,
+    "bath": 2.0,
+    "sqft": 792.0,
+    "lat": 41.7132743,
+    "long": -87.5618965,
+    "L_dist": [
+      "95th/Dan Ryan",
+      3.28
+    ],
+    "crime_sc": {
+      "drug_score": 1.65,
+      "gun_score": 8.56,
+      "murder_score": 2.61,
+      "perv_score": 1.58,
+      "theft_score": 33.28,
+      "violence_score": 31.65,
+      "property_d_score": 0.2
+    }
+  },
+  "9591294097": {
+    "source": "www.realtor.com",
+    "price": 2095,
+    "neigh": "irving-park",
+    "dogs": true,
+    "link": "https://www.realtor.com/rentals/details/3673-N-Elston-Ave-CH2_Chicago_IL_60618_M95912-94097",
+    "address": "3673 N Elston Ave # CH2, Chicago, IL 60618",
+    "date_pulled": "09-05-2025_15-30-06",
+    "bed": 2.0,
+    "bath": null,
+    "sqft": 0.0,
+    "lat": 41.94825,
+    "long": -87.710693,
+    "L_dist": [
+      "Addison",
+      0.43
+    ],
+    "crime_sc": {
+      "drug_score": 4.13,
+      "gun_score": 4.81,
+      "murder_score": 1.59,
+      "perv_score": 1.61,
+      "theft_score": 41.2,
+      "violence_score": 25.24,
+      "property_d_score": 0.14
+    }
   }
 }

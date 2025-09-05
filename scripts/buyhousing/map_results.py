@@ -24,8 +24,13 @@ def format_date(val):
     """
     Formats a timestamp to a "Month Day, Year" string.
     """
-    date_obj = datetime.date.fromordinal(int(val))
+    date_obj = datetime.date.fromordinal(val)
     return date_obj.strftime('%B %d, %Y')
+
+def convert_dates(jsondata):
+    for key in jsondata.keys():
+        jsondata[key]["date_pulled"] = support.date_convert(jsondata[key]["date_pulled"])
+    return jsondata
 
 #NOTE Might need a days to months dict.
 
@@ -38,29 +43,37 @@ class PlotFun:
         self.fig      :plt.figure       = plt.figure(figsize=(14, 10))
         self.ax_houses:plt.axes         = self.fig.add_subplot(self.gs[:2, :1], label="mainplot")
         self.ax_radio :plt.axes         = self.fig.add_subplot(self.gs[:2, 1], label="radio")
-        self.ax_time  :plt.axes         = self.fig.add_subplot(self.gs[2, :2], label="timeline")
+        self.ax_time  :plt.axes         = self.fig.add_subplot(self.gs[2, :1], label="timeline")
         plt.subplots_adjust(wspace=0.1, hspace=0.2)
         self.radio    :RadioButtons     = RadioButtons(self.ax_radio, tuple(BUTTON_VALS))
-        self.initial_plot()
+        
         self.timestamps = sorted(np.unique([x.toordinal() for x in self.gdf.date_pulled]))
         self.date_slider = Slider(
             self.ax_time, 
             label='days',
-            valmin=self.timestamps[0], 
-            valmax=self.timestamps[-1], 
-            valinit=self.timestamps[0],
+            valmin=min(self.timestamps), 
+            valmax=max(self.timestamps), 
+            valinit=min(self.timestamps),
+            orientation="horizontal"
         )
-        self.date_slider.valfmt = format_date(self.date_slider.val)
-        self.date_slider.on_changed(self.update_plot)
+        
+        self.plot_update(initial=True)
+        self.date_slider.on_changed(self.time_update)
+        self.radio.on_clicked(self.radio_update)
 
-    def load_data(self, timespan:int=7):
+        #TODO - Still need a way to load/interact with map data hover points
+
+# FUNCTION Loading functions
+    def load_data(self, timespan:int|str = 7):
         filtjson = {}
-        timeperiod = datetime.datetime.today() - datetime.timedelta(days=timespan)
-        for key, val in self.jsondata.items():
-            self.jsondata[key]["date_pulled"] = support.date_convert(val["date_pulled"])
-            if val["date_pulled"] > timeperiod:
-                filtjson[key] = val
-
+        if isinstance(timespan, int):
+            timeperiod = datetime.datetime.today() - datetime.timedelta(days=timespan)
+            for key, val in self.jsondata.items():
+                if val["date_pulled"] > timeperiod:
+                    filtjson[key] = val
+        else:
+            filtjson = jsondata
+        
         hdf = pd.DataFrame.from_dict(data=filtjson, orient='index')
         gdf = gpd.GeoDataFrame(
             data = hdf, 
@@ -80,145 +93,104 @@ class PlotFun:
         IN_city_map = IN_city_map.to_crs(epsg=4326)
         return (IN_county_map, MI_county_map, IN_city_map, MI_city_map)
 
-    def initial_plot(self):
-        self.maps[0].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #IN_county_map
-        self.maps[1].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #MI_county_map
-        self.maps[2].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #IN_city_map
-        self.maps[3].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #MI_city_map
+# FUNCTION Update plot
+    def time_update(self, val):
+        #Need to update listings found on that day in this routine
+        self.date_slider.valfmt = format_date(self.date_slider.val)
+        self.clear_listings()
+        self.plot_update()
+        
+        self.fig.canvas.draw_idle()
+    
+    def radio_update(self, val):
+        # Handles the radio button updates
+        command = self.radio.value_selected
+        if command:
+            selected = self.date_slider.val
+            match command:
+                case "days":
+                    #Load the last week
+                    self.clear_listings()
+                    self.gdf = self.load_data(timespan=7)
+                    self.plot_update()
+                case "weeks":
+                    #Load 4 weeks
+                    self.clear_listings()
+                    self.gdf = self.load_data(timespan=30)
+                    self.plot_update()
+                case "months":
+                    #Load 3 months
+                    self.clear_listings()
+                    self.gdf = self.load_data(timespan=90)
+                    self.plot_update()
+                case "all":
+                    #Load all data
+                    self.clear_listings()
+                    self.gdf = self.load_data(timespan="all")
+                    self.plot_update()
+            
+            self.timestamps = sorted(np.unique([x.toordinal() for x in self.gdf.date_pulled]))
+            self.date_slider.valmax = max(self.timestamps)
+            self.date_slider.valmin = min(self.timestamps)
+            self.date_slider.val = selected
+        self.fig.canvas.draw_idle()
+
+    def plot_update(self, initial:bool=False):
+        
+        if initial:
+            self.maps[0].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #IN_county_map
+            self.maps[1].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #MI_county_map
+            self.maps[2].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #IN_city_map
+            self.maps[3].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #MI_city_map
+            selected_date = self.date_slider.val
+            self.date_slider.valfmt = format_date(selected_date)
+        else:
+            selected_date = self.date_slider.val
+
         self.ax_houses.scatter(
             x=self.gdf.long,
             y=self.gdf.lat,
-            c='blue',
-            alpha=0.7,
+            c='green',
+            alpha=0.3,
+            label='listings'
         )
+        
+        condition = (self.gdf.date_pulled.apply(lambda x:x.strftime("%B %d, %Y")) == format_date(selected_date))
+        mask = np.where(condition)[0]
+        idxs = self.gdf.index[mask]
+        temp_df = self.gdf.loc[idxs]
+        self.ax_houses.scatter(
+            x=temp_df.long,
+            y=temp_df.lat,
+            c='blue',
+            alpha=0.6,
+            label='dayselected'
+        )        
+
         # delta = 0.2
         # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
         # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
-        
+
+    def clear_listings(self):
+        remove = []
+        for artist in self.ax_houses.get_children():
+            if hasattr(artist, "get_label") and artist.get_label() in ("listings", "dayselected"):
+                remove.append(artist)
+
+        for artist in remove:
+            artist.remove()
+
     def show_plot(self):
+        #Make a custom legend. 
+            # legend_elements = [
+            #     Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
+            # ]
+            
+            # ax_houses.legend(handles=legend_elements, loc='upper left')
+
         plt.tight_layout()
         plt.show()
-        plt.close()
-
-
-# FUNCTION Update plot
-    def update_plot(self):
-        # Handles the plot updating
-        #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
-        # BUTTON_VALS = ['price','sqft','price_sqft', 'price_change', 'saved', 'days', 'weeks', 'months', 'all']
-        command = self.radio.value_selected
-        if command:
-            match command:
-                case "days":
-                    pass
-                case "weeks":
-                    pass
-                case "months":
-                    pass
-                case "all":
-                    pass
-            self.gdf
-
-        self.date_slider.valfmt = format_date(self.date_slider.val)
-        self.fig.canvas.draw_idle()
-
-#     #FUNCTION Radio Button Actions
-#     def radiob_action(val):
-#         sect = sect_slider.val
-#         start_w = ecg_data['section_info'][sect]['start_point']
-#         end_w = ecg_data['section_info'][sect]['end_point']
-
-#         if val in ["Base Figure", "Roll Median", "Add Inter", "Hide Leg", "Show R Valid"]:
-#             #When selecting various functions.
-#             #This is to make sure you remove the appropriate axis' before redrawing the main chart
-#             if configs["freq"] and check_axis("freq_list"):
-#                 remove_axis(["freq_list", "ecg_small"])
-#                 configs["freq"] = False
-#                 update_plot(val)
-                
-#             if configs["overlay"] and check_axis("overlays"):
-#                 remove_axis(["overlays", "ecg_small"])
-#                 configs["overlay"] = False
-#                 update_plot(val)
-                
-#             if configs["stump"] and check_axis("stumpy"):
-#                 remove_axis(["stumpy", "dist_locs", "ecg_small"])
-#                 configs["stump"] = False
-#                 update_plot(val)
-
-#         if val == 'Roll Median':	
-#             ax_ecg.plot(range(start_w, end_w), utils.roll_med(wave[start_w:end_w]), color='orange', label='Rolling Median')
-#             ax_ecg.legend(loc='upper left')
-
-#         elif val == 'Add Inter':
-#             inners = ecg_data['interior_peaks'][(ecg_data['interior_peaks'][:, 2] >= start_w) & (ecg_data['interior_peaks'][:, 2] <= end_w), :]
-#             for key, val in PEAKDICT_EXT.items():
-#                 if inners[np.nonzero(inners[:, key])[0], key].size > 0:
-#                     ax_ecg.scatter(inners[:, key], wave[inners[:, key]], label=val[0], color=val[1], alpha=0.8)
-#             ax_ecg.set_title(f'All interior peaks for section {sect} ', size=14)
-#             ax_ecg.legend(loc='upper left')
-
-#         elif val == 'Hide Leg':
-#             ax_ecg.get_legend().remove()
-
-#         elif val == 'Show R Valid':
-#             Rpeaks = ecg_data['peaks'][(ecg_data['peaks'][:, 0] >= start_w) & (ecg_data['peaks'][:, 0] <= end_w), :]
-#             for peak in range(Rpeaks.shape[0]):
-#                 if Rpeaks[peak, 1] == 0:
-#                     band_color = 'red'
-#                 else:
-#                     band_color = 'lightgreen'
-#                 rect = Rectangle(
-#                     xy=((Rpeaks[peak, 0] - 10), (wave[Rpeaks[peak,0]] + wave[Rpeaks[peak,0]]*(0.05)).item()), 
-#                     width=np.mean(np.diff(Rpeaks[:, 0])) // 6, 
-#                     height=wave[Rpeaks[peak, 0]].item() / 10,
-#                 facecolor=band_color,
-#                 edgecolor="grey",
-#                 alpha=0.7)
-#                 ax_ecg.add_patch(rect)
-
-#         elif 'Frequency' in val:
-#             configs["freq"] = True
-#             frequencytown()
-
-#         elif val == 'Overlay Main':
-#             configs["overlay"] = True
-#             overlay_r_peaks(True)
-
-#         elif val == 'Overlay Inner':
-#             configs["overlay"] = True
-#             overlay_r_peaks()
-
-#         elif val == 'Stumpy Search':
-#             configs["stump"] = True
-#             wavesearch()
-
-#         fig.canvas.draw_idle()    
-
-    
-
-    # except Exception as e:
-    #     print(f"{e}")
-    
-    #brokebarH plot for the background of the slider. 
-    # ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
-
-    # ax_time.set_ylim(0, 1)
-    # ax_time.set_xlim(timestamps[0], timestamps[-1])
-
-    #Radio buttons
-
-    #Set actions for GUI items. 
-    # radio.on_clicked(radiob_action)
-
-
-
-    #Make a custom legend. 
-    # legend_elements = [
-    #     Line2D([0], [0], marker='o', color='w', label=val[0], markerfacecolor=val[1], markersize=10) for val in PEAKDICT.values()
-    # ]
-    
-    # ax_houses.legend(handles=legend_elements, loc='upper left')
+        print("yay")
 
 ################################# Start Program ####################################
 #Driver code
@@ -232,6 +204,7 @@ def main():
     #Load rental_list.json
     if exists(fp):
         jsondata = support.load_historical(fp)
+        jsondata = convert_dates(jsondata)
         logger.info("historical data loaded")
     else:
         logger.warning("No historical data found")
