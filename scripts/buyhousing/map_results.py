@@ -27,31 +27,100 @@ def format_date(val):
     date_obj = datetime.date.fromordinal(int(val))
     return date_obj.strftime('%B %d, %Y')
 
-def sir_plots_alot():
+#NOTE Might need a days to months dict.
+
+class PlotFun:
+    def __init__(self, jsondata:dict):
+        self.jsondata :dict             = jsondata
+        self.gdf      :gpd.GeoDataFrame = self.load_data()
+        self.maps     :tuple            = self.load_maps()
+        self.gs       :gridspec         = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[6, 1])
+        self.fig      :plt.figure       = plt.figure(figsize=(14, 10))
+        self.ax_houses:plt.axes         = self.fig.add_subplot(self.gs[:2, :1], label="mainplot")
+        self.ax_radio :plt.axes         = self.fig.add_subplot(self.gs[:2, 1], label="radio")
+        self.ax_time  :plt.axes         = self.fig.add_subplot(self.gs[2, :2], label="timeline")
+        plt.subplots_adjust(wspace=0.1, hspace=0.2)
+        self.radio    :RadioButtons     = RadioButtons(self.ax_radio, tuple(BUTTON_VALS))
+        self.initial_plot()
+        self.timestamps = sorted(np.unique([x.toordinal() for x in self.gdf.date_pulled]))
+        self.date_slider = Slider(
+            self.ax_time, 
+            label='days',
+            valmin=self.timestamps[0], 
+            valmax=self.timestamps[-1], 
+            valinit=self.timestamps[0],
+        )
+        self.date_slider.valfmt = format_date(self.date_slider.val)
+        self.date_slider.on_changed(self.update_plot)
+
+    def load_data(self, timespan:int=7):
+        filtjson = {}
+        timeperiod = datetime.datetime.today() - datetime.timedelta(days=timespan)
+        for key, val in self.jsondata.items():
+            self.jsondata[key]["date_pulled"] = support.date_convert(val["date_pulled"])
+            if val["date_pulled"] > timeperiod:
+                filtjson[key] = val
+
+        hdf = pd.DataFrame.from_dict(data=filtjson, orient='index')
+        gdf = gpd.GeoDataFrame(
+            data = hdf, 
+            geometry = gpd.points_from_xy(hdf.lat, hdf.long), 
+            crs = "EPSG:4326"
+        )
+        return gdf
+    
+    def load_maps(self):
+        IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
+        IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
+        MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
+        MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
+        MI_county_map = MI_county_map.to_crs(epsg=4326)
+        MI_city_map = MI_city_map.to_crs(epsg=4326)
+        IN_county_map = IN_county_map.to_crs(epsg=4326)
+        IN_city_map = IN_city_map.to_crs(epsg=4326)
+        return (IN_county_map, MI_county_map, IN_city_map, MI_city_map)
+
+    def initial_plot(self):
+        self.maps[0].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #IN_county_map
+        self.maps[1].plot(ax=self.ax_houses, color="lightgray", edgecolor="black")         #MI_county_map
+        self.maps[2].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #IN_city_map
+        self.maps[3].plot(ax=self.ax_houses, color="magenta", edgecolor="black", alpha=0.6)  #MI_city_map
+        self.ax_houses.scatter(
+            x=self.gdf.long,
+            y=self.gdf.lat,
+            c='blue',
+            alpha=0.7,
+        )
+        # delta = 0.2
+        # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
+        # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
+        
+    def show_plot(self):
+        plt.tight_layout()
+        plt.show()
+        plt.close()
+
+
 # FUNCTION Update plot
-    def update_plot(val):
+    def update_plot(self):
         # Handles the plot updating
         #If you chose anything except frequency or stumpy, clear main axis and redraw it in its original form
         # BUTTON_VALS = ['price','sqft','price_sqft', 'price_change', 'saved', 'days', 'weeks', 'months', 'all']
-        command = radio.value_selected
+        command = self.radio.value_selected
         if command:
             match command:
-                case [*BUTTON_VALS] if command in [BUTTON_VALS[:3]]:
-                    logger.info("first 3")
-                    # if check_axis("mainplot"):
-                    #     ax_ecg.cla()
-                    # else:
-                    #     ax_ecg = fig.add_subplot(gs[0, :2], label="mainplot")
-                    # update_main()
+                case "days":
+                    pass
+                case "weeks":
+                    pass
+                case "months":
+                    pass
+                case "all":
+                    pass
+            self.gdf
 
-                case 'saved':
-                    logger.info("saved")
-
-                case [*BUTTON_VALS] if command in [BUTTON_VALS[:-3]]:
-                    logger.info("last 3")
-        
-        date_slider.valfmt = format_date(date_slider.val)
-        fig.canvas.draw_idle()
+        self.date_slider.valfmt = format_date(self.date_slider.val)
+        self.fig.canvas.draw_idle()
 
 #     #FUNCTION Radio Button Actions
 #     def radiob_action(val):
@@ -126,78 +195,22 @@ def sir_plots_alot():
 
 #         fig.canvas.draw_idle()    
 
-    global ax_houses, ax_time, gs, fig
-    fig = plt.figure(figsize=(14, 10))
-    gs = gridspec.GridSpec(nrows=3, ncols=2, height_ratios=[3, 3, 1], width_ratios=[6, 1])
-    plt.subplots_adjust(wspace=0.1, hspace=0.2)
-    ax_houses = fig.add_subplot(gs[:2, :1], label="mainplot")
-    ax_time = fig.add_subplot(gs[2, :2], label="timeline")
-    ax_radio = fig.add_subplot(gs[:2, 1], label="radio")
-    filtjson = {}
-    lastweek = datetime.datetime.today() - datetime.timedelta(days=7)
-    for key, val in jsondata.items():
-        jsondata[key]["date_pulled"] = support.date_convert(val["date_pulled"])
-        if val["date_pulled"] > lastweek:
-            filtjson[key] = val
-
-    hdf = pd.DataFrame.from_dict(data=filtjson, orient='index')
-    gdf = gpd.GeoDataFrame(
-        data = hdf, 
-        geometry = gpd.points_from_xy(hdf.lat, hdf.long), 
-        crs = "EPSG:4326"
-    )
-    dates = []
-    # try:
-    IN_city_map = gpd.read_file("./data/shapefiles/IN_cities/City_and_Town_Hall_Locations_2023.shp")
-    IN_county_map = gpd.read_file("./data/shapefiles/IN_counties/County_Boundaries_of_Indiana_2023.shp")
-    MI_city_map = gpd.read_file("./data/shapefiles/MI_cities/City.shp")
-    MI_county_map = gpd.read_file("./data/shapefiles/MI_counties/Michigan_Counties.shp")
-
-    MI_county_map = MI_county_map.to_crs(epsg=4326)
-    MI_city_map = MI_city_map.to_crs(epsg=4326)
-    IN_county_map = IN_county_map.to_crs(epsg=4326)
-    IN_city_map = IN_city_map.to_crs(epsg=4326)
-
-    IN_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
-    MI_county_map.plot(ax=ax_houses, color="lightgray", edgecolor="black")
-    IN_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
-    MI_city_map.plot(ax=ax_houses, color="magenta", edgecolor="black", alpha=0.6)
-    ax_houses.scatter(
-        x=gdf.long,
-        y=gdf.lat,
-        c='blue',
-        alpha=0.7,
-    )
-    delta = 0.2
-    # ax_houses.set_ylim(ymin=gdf.lat.min() - delta, ymax=gdf.lat.max() + delta)
-    # ax_houses.set_xlim(xmin=gdf.long.min() - delta, xmax=gdf.long.max() + delta)
-    # plt.tight_layout()
-    radio = RadioButtons(ax_radio, tuple(BUTTON_VALS))
+    
 
     # except Exception as e:
     #     print(f"{e}")
-    timestamps = sorted(np.unique([x.toordinal() for x in gdf.date_pulled]))
+    
     #brokebarH plot for the background of the slider. 
     # ax_time.broken_barh(valid_grouper(valid_sect), (0,1), facecolors=('tab:blue'))
-    date_slider = Slider(ax_time, 
-        label='days',
-        valmin=timestamps[0], 
-        valmax=timestamps[-1], 
-        valinit=timestamps[0],
-    )
-    date_slider.valfmt = format_date(date_slider.val)
+
     # ax_time.set_ylim(0, 1)
     # ax_time.set_xlim(timestamps[0], timestamps[-1])
 
     #Radio buttons
 
     #Set actions for GUI items. 
-    date_slider.on_changed(update_plot)
     # radio.on_clicked(radiob_action)
 
-
-    plt.show()
-    plt.close()
 
 
     #Make a custom legend. 
@@ -224,7 +237,8 @@ def main():
         logger.warning("No historical data found")
         raise ValueError("Data source not found")
 
-    sir_plots_alot()
+    plots = PlotFun(jsondata)
+    plots.show_plot()
 
 if __name__ == "__main__":
     main()
